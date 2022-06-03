@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title>Maps</title>
-	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--Css-->
+    <link rel="stylesheet" href="view/css/inicioBusqueda.css">
+    <!--<link rel="icon" href="./favicon.ico">-->
+    <title>Inicio - Profesional By Proximity</title>
 </head>
 <body>
-	hola
-	<div style="width: 1000px; height: 1000px" id="map"></div>
+	<div class="card" style="width: 18rem;">
+		<div style="width: 100%; height: 250px" id="map"></div>
+		<div class="card-body">
+		  <h5 class="card-title">Card title</h5>
+		  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		  <a href="#" class="btn btn-primary">Go somewhere</a>
+		</div>
+	  </div>
+	
 </body>
 	<script>
 		function iniciarMap(){
@@ -23,4 +38,5 @@
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-LQb-h3KxqyChhqkf8sK3UqlIXFQwmLo&callback=iniciarMap"></script>
 	<script src="../controller/js/inicioBusqueda.js"></script>
+
 </html>
