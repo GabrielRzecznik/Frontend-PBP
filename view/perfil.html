@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Perfil - Profesional By Proximity</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="https://parcial-edi-front.herokuapp.com/inicio.html">
+                    <img src="./img/Logo_Blanco.png" width="35" height="35" class="d-inline-block align-top" alt="No se encontro logo">
+                    Profesional By Proximity
+                </a>
+                <!--Imagen de Perfil-->
+                <a href="https://parcial-edi-front.herokuapp.com/perfil.html">
+                    <img src="./img/GabrielRzecznik.jpg" class="d-inline-block align-top fotoPerfil" alt="No se encontro foto de perfil">
+                </a>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-md-8 colorear1">
+                <br>
+                <div class="row">
+                    <div class="col-md-3 centrado">
+                        <!--Foto-->
+                        <img src="./img/GabrielRzecznik.jpg" class="d-inline-block align-top fotoPerfil2" alt="No se encontro logo">
+                        <br><br>
+                    </div>
+                    <div class="col-md-9">
+                        <!--Usuario-->
+                        <span class="texto nombreYApellido" id="mostrarNombre"></span>&nbsp;<span class="texto nombreYApellido" id="mostrarApellido"></span>
+                        <br>
+                        <i class="bi bi-envelope-fill"></i>
+                        <span class="texto" id="mostrarCorreo"></span>
+                        <br>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span class="texto" id="mostrarProvincia"></span>
+                    </div>
+                </div>
+                <br>
+                <!--Menu Pestañas-->
+                <div class="menu">
+                    <p class="texto btn btn-outline-light" data-target="#pestaña-publicaciones"><button class="decoracionBoton" id="misPublicaciones">Mis publicaciones <i class="bi bi-table iconoEditar"></i></button></p>
+                    <p class="texto btn btn-outline-light" data-target="#pestaña-editar"><button class="decoracionBoton">Editar cuenta <i class="bi bi-pencil-square iconoEditar"></i></button></p>
+                    <p class="texto btn btn-outline-light" data-target="#pestaña-eliminar"><button class="decoracionBoton">Eliminar cuenta <i class="bi bi-person-x iconoEditar"></i></button></p>
+                </div>
+            
+                <div class="content">
+                    <!--Editar Cuenta-->
+                    <div data-content id="pestaña-editar">
+                        <span class="texto nombreYApellido">Editar Usuario</span>
+                        <br><br>
+                        <form onsubmit="event.preventDefault()" action="#" method="post" id="editarPerfil">
+                            <!--Nombre-->
+                            <span class="texto">Nombre </span><i class="bi bi-x-circle-fill iconos validado" id="iconoNombre"></i>
+                            <input type="text" class="form-control inputs" name="nombre" id="nombre">
+                            <!--Apellido-->
+                            <span class="texto">Apellido </span><i class="bi bi-x-circle-fill iconos validado" id="iconoApellido"></i>
+                            <input type="text" class="form-control inputs" name="apellido" id="apellido">
+                            <!--Contraseña-->
+                            <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoContraseña"></i>
+                            <input type="password" class="form-control inputs" name="contraseña" id="contraseña">
+                            <!--Confirma Contraseña-->
+                            <span class="texto">Confirme Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoConfirmeContraseña"></i>
+                            <input type="password" class="form-control inputs" name="confirmeContraseña" id="confirmeContraseña">
+                            <!--Provincia-->
+                            <span class="texto">Provincia </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvincia"></i>
+                            <select class="form-control" name="provincia" id="provincia">
+                                <option value="0" selected>Seleccione su provincia...</option>
+                                <option value="Buenos Aires">Buenos Aires</option>
+                                <option value="Catamarca">Catamarca</option>
+                                <option value="Chaco">Chaco</option>
+                                <option value="Chubut">Chubut</option>
+                                <option value="Córdoba">Córdoba</option>
+                                <option value="Corrientes">Corrientes</option>
+                                <option value="Entre Ríos">Entre Ríos</option>
+                                <option value="Formosa">Formosa</option>
+                                <option value="Jujuy">Jujuy</option>
+                                <option value="La Pampa">La Pampa</option>
+                                <option value="La Rioja">La Rioja</option>
+                                <option value="Mendoza">Mendoza</option>
+                                <option value="Misiones">Misiones</option>
+                                <option value="Neuquén">Neuquén</option>
+                                <option value="Río Negro">Río Negro</option>
+                                <option value="Salta">Salta</option>
+                                <option value="San Juan">San Juan</option>
+                                <option value="San Luis">San Luis</option>
+                                <option value="Santa Cruz">Santa Cruz</option>
+                                <option value="Santa Fe">Santa Fe</option>
+                                <option value="Santiago del Estero">Santiago del Estero</option>
+                                <option value="Tierra del Fuego">Tierra del Fuego</option>
+                                <option value="Tucumán">Tucumán</option>    
+                            </select>
+                            <!--Edad-->
+                            <span class="texto">Edad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoEdad"></i><span class="mensajeEdad"></span>
+                            <select class="form-control" name="edad" id="edad">
+                                <option value="0" selected>Seleccione su edad...</option>
+                                <option value="2">≤ 16 años o ≥ 17 años</option>
+                                <option value="3">≤ 18 años</option>
+                            </select>
+                            <br>
+                            <!--Boton Editar-->
+                            <input type="submit" class="editar btn btn-warning" name="botonEditar" id="botonEditar" value="Editar cuenta">
+                        </form>
+                    </div>
+                    <!--Eliminar Cuenta-->
+                    <div data-content id="pestaña-eliminar">
+                        <span class="texto nombreYApellido">Eliminar Usuario</span>
+                        <br><br>
+                        <span class="texto">
+                            Al eliminar la cuenta se borran todos tus datos personales de forma permanente sin pusibilidad de recuperarlos mas tarde.<br>Esta seguro que quiere continuar?
+                        </span>
+                        <br>
+                        <br>
+                        <input type="button" class="btn btn-danger" id="eliminar" value="Eliminar cuenta">
+                    </div>
+                </div>
+                <!--Menu-->
+            </div>
+            <div class="col-md-4 colorear3">
+            </div>
+        </div>
+        <!--Alerta Nombre-->
+        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombre">
+            <i class="bi bi-info-circle-fill"></i>
+            <strong>Nombre:</strong>
+            El nombre debe tener de 4 a 24 caracteres.
+            <br>Solamente admite letras en "mayuscula" y "minuscula".
+            <br>No permite caracteres especiales ni digitos.
+        </div>
+        <!--Alerta Apellido-->
+        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertApellido">
+            <i class="bi bi-info-circle-fill"></i>
+            <strong>Apellido:</strong>
+            El apellido debe tener de 4 a 24 caracteres.
+            <br>Solamente admite letras en "mayuscula" y "minuscula".
+            <br>No permite caracteres especiales ni digitos.
+        </div>
+        <!--Alerta Contraseña-->
+        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertContraseña">
+            <i class="bi bi-info-circle-fill"></i>
+            <strong>Contraseña:</strong>
+            La contraseña debe tener de 8 a 16 caracteres.
+            <br>Debe contener al menos una "mayuscula" y un "digito".
+        </div>
+        <!--Alerta Confirma Contraseña-->
+        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertConfirmeContraseña">
+            <i class="bi bi-info-circle-fill"></i>
+            <strong>Confirmación de Contraseña:</strong>
+            Las contraseña no coinciden.
+        </div> 
+        <!--Alerta Provincia-->
+        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertProvincia">
+            <i class="bi bi-info-circle-fill"></i>
+            <strong>Provincia:</strong>
+            La opción seleccionada no es
+            <br>valida, seleccione una provincia!
+        </div>
+        <!--Alerta Edad-->
+        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertEdad">
+            <i class="bi bi-info-circle-fill"></i>
+            <strong>Edad:</strong>
+            La opción seleccionada no es
+            <br>valida, seleccione una edad!
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show alerta" role="alert" id="alertEdad2">
+            <i class="bi bi-info-circle-fill"></i>
+            <strong>Edad:</strong>
+            Debes tener por lo menos 16 años para
+            <br>registrarte y utilizar nuestros servicios.
+        </div>
+    </div>
+    <script src="js/ajaxDatosCuenta.js"></script>
+    <script src="js/ajaxEliminarUsuario.js"></script>
+    <script src="js/ajaxEditarUsuario.js"></script>
+    <script src="js/ajaxMisPublicaciones.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

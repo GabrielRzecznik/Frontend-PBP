@@ -1,0 +1,15 @@
+
+
+#nombreOpcion{
+    display: none;
+}    
+
+@media (max-width: 768px) {
+    #nombreOpcion{
+        display: block;
+    }
+}
+
+.centrado{
+    text-align: center;
+}

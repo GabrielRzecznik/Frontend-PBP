@@ -1,0 +1,250 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: url('https://fondosmil.com/fondo/6749.jpg');
+    width: auto;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.colorear1{
+  margin-top: 15%;
+  background-color: rgb(240, 240, 240);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.colorear2{
+  margin-top: 15%;
+  background: url('https://plustatic.com/1069/conversions/tipos-medicos-large.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+.colorear3{
+  background: url('../img/fondo3.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.colorear4{
+  background: url('../img/ferrari2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.registro{
+  color: rgb(255, 185, 93);
+  text-decoration: none;
+}
+
+.registro:hover{
+  color: rgb(255, 156, 25);
+}
+
+.espaciado{
+    padding-top: 10%;
+}
+
+.titulo{
+    color: rgb(50, 50, 50);
+    text-align: center;
+}
+
+.texto{
+    color: rgb(50, 50, 50);
+}
+
+.iconos{
+  visibility: hidden;
+  color: rgb(255, 93, 93);
+}
+
+.mensajeC{
+  visibility: hidden;
+  color: rgb(252, 251, 195);
+}
+
+.validado{
+  visibility: hidden;
+  color: rgb(158, 255, 93);
+}
+
+.error{
+  visibility: visible;
+}
+
+.signo{
+  visibility: visible;
+  color: rgb(255, 185, 93);
+}
+
+.inputs{
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(63, 63, 63);
+    border-color: rgb(210, 210, 210);
+}
+
+.logo{
+    width: 19%;
+    height: 19%;
+    float: right;
+}
+
+.invisible{
+  visibility: hidden;
+  position: absolute;
+}
+
+.sk-cube-grid {
+  width: 20px;
+  height: 20px;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: rgb(255, 185, 93);
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
+
+.alerta{
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
+  visibility: hidden;
+}
+
+.alertaError{
+  visibility: visible;
+}
+
+.boton{
+  height: 40px;
+}
+
+.fotoPerfil{
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border-style: inset;
+  border-color: rgb(216, 216, 216);
+}
+
+.fotoPerfil2{
+  width: 90%;
+  height: 90%;
+  border-radius: 3%;
+}
+
+.derecha{
+  text-align: right;
+}
+
+.suavizar{
+  border-radius: 5px;
+}
+
+.nombreYApellido{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.editarPerfil{
+  all: unset;
+}
+
+.iconoEditar{
+  color: rgb(255, 185, 93);
+}
+
+.decoracion{
+  text-decoration: none;
+}
+
+.menu {
+	display: flex;
+}
+
+.menu p {
+	margin-right: 2rem;
+	cursor: pointer;
+}
+
+.content {
+	margin-top: 2rem;
+}
+
+[data-content] {
+	display: none;
+}
+
+.active[data-content] {
+	display: block;
+}
+
+.decoracionBoton{
+  all: unset;
+}
+
+.centrarTexto{
+  text-align: center;
+}

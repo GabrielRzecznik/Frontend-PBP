@@ -1,0 +1,17 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.maximo{
+    position: fixed;
+    height: 100px;
+    height: 100px;
+}
+
+scroll-container {
+    display: block;
+    height: 75%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
