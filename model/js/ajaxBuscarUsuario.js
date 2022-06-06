@@ -22,7 +22,7 @@ function buscarUsuario(formulario){
                 localStorage.setItem("correo", data[0]["correo"]);//Me guarda el correo de la bd
                 
                 //Me redirige a la pagina principal
-                window.location.href = "./view/grilla.html";
+                window.location.href = "https://frontend-pbp.herokuapp.com/view/inicioBusqueda.html";
             }if (xmlhttp.status == 401) {
                 alert("No se encontro el usuario!");
                 //document.querySelector('#loguearse').classList.remove('invisible');
