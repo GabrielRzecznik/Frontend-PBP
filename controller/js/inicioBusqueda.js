@@ -12,7 +12,7 @@ if (navigator.geolocation) {
     alert("No se pudo obtener su ubicación");
 }
 
-var coord = {lat:latitud ,lng: longitud};//
+var coord = {latitud ,longitud};//
 var map = new google.maps.Map(document.getElementById('map'),{
 zoom: 20,
 center: coord
