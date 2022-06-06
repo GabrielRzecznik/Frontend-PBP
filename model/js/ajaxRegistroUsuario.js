@@ -9,7 +9,7 @@ function registrarUsuario(formulario){
             if (xmlhttp.status == 200) {
                 var respuestaResivida = xmlhttp.responseText;
                 alert(respuestaResivida);
-                window.location.href = "https://parcial-edi-front.herokuapp.com/index.html";
+                window.location.href = "http://localhost/phpapp/Profesional%20By%20Proximity/Frontend/";
             }else if (xmlhttp.status == 500) {
                 alert("El correo ingresado ya corresponde a una cuenta existente");
                 //Marcar Correo
