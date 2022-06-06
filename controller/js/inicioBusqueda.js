@@ -14,7 +14,7 @@ if (navigator.geolocation) {
 
 var coord = {latitud ,longitud};//
 var map = new google.maps.Map(document.getElementById('map'),{
-zoom: 20,
+zoom: 10,
 center: coord
 });
 var marker = new google.maps.Marker({
