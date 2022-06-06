@@ -16,7 +16,7 @@
 	<div class="card" style="width: 18rem;">
 		<div style="width: 100%; height: 1250px" id="map"></div>
 		<div class="card-body">
-		  <h5 class="card-title">Gabriel Rzecznik</h5>
+		  <h5 class="card-title">Card title</h5>
 		  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 		  <a href="#" class="btn btn-primary">Go somewhere</a>
 		</div>
@@ -30,6 +30,19 @@
 		</div>
 	  </div>
 </body>
+	<script>
+		function iniciarMap(){
+			var coord = {lat:-34.66046564264369 ,lng: -58.354401278160445};
+			var map = new google.maps.Map(document.getElementById('map'),{
+			zoom: 30,
+			center: coord
+			});
+			var marker = new google.maps.Marker({
+			position: coord,
+			map: map
+			});
+		}
+	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-LQb-h3KxqyChhqkf8sK3UqlIXFQwmLo&callback=iniciarMap"></script>
 	<script src="../controller/js/inicioBusqueda.js"></script>
 
