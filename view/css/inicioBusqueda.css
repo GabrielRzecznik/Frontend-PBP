@@ -1,4 +1,24 @@
 #map {
-	height: 500px;
+	height: 100%;
 	width: 100%;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.carta{
+	width: 100%;
+}
+
+.fotoProfesional{
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background-color: gray;
+	padding-top: 0.75rem;
+	text-align: center;
+}
+
+.botonProfesional{
+	margin-top: 4%;
+	width: 110%;
 }
