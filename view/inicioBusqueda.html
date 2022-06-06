@@ -9,14 +9,47 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!--Css-->
     <link rel="stylesheet" href="../view/css/inicioBusqueda.css">
+	<link rel="stylesheet" href="../view/css/navegador.css">
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Inicio - Profesional By Proximity</title>
 </head>
 <body>
+	<!--Navegador-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Profesional By Proximity</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse centrado" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-fill"></i><span id="nombreOpcion">Inicio</span></a><!--Icono Inicio-->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../view/chat.html"><i class="bi bi-chat-square-text-fill"></i><span id="nombreOpcion">Chat</span></a><!--Icono Chat-->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../view/notificaciones.html"><i class="bi bi-bell-fill"></i><span id="nombreOpcion">Notificaciones</span></a><!--Icono Notificaciones-->
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle"></i>&nbsp;<span id="nombreUsuario"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Perfil</a></li>
+                  <li><a class="dropdown-item" href="#">Mi Grilla</a></li>
+                  <li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesion</a></li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+    </nav>
+	<br>
 	<div class="container">
 		<div class="row">
 			<div class="col-1"></div>
-
 			<div class="col-md-5">
 				<!--Cartas de bootstrap-->
 				<div class="card bg-light carta">
@@ -73,7 +106,7 @@
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-LQb-h3KxqyChhqkf8sK3UqlIXFQwmLo&callback=iniciarMap"></script>
 	<script src="../controller/js/inicioBusqueda.js"></script>
-
+	<script src="../controller/js/navegador.js"></script>
 </html>
 
 <!--https://programacion.net/articulo/google_maps_con_multiples_marcadores_y_ventana_de_informacion_mediante_la_api_v3_1738-->
