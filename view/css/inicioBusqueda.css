@@ -10,11 +10,11 @@
 }
 
 .fotoProfesional{
-	width: 50px;
-	height: 50px;
+	width: 55px;
+	height: 55px;
 	border-radius: 100%;
 	background-color: rgb(215, 215, 215);
-	padding-top: 0.75rem;
+	padding-top: 0.90rem;
 	text-align: center;
 	margin-bottom: 10%;
 }
