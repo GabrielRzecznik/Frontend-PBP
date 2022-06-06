@@ -5,6 +5,8 @@ if (navigator.geolocation) {
         //console.log(geoLocalizacion);
         var latitud = geoLocalizacion.coords.latitude;
         var longitud = geoLocalizacion.coords.longitude;
+        console.log(latitud);
+        console.log(longitud);
         
         var coord = {lat:latitud ,lng: longitud};//
         var map = new google.maps.Map(document.getElementById('map'),{
