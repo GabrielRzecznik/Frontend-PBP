@@ -67,10 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
       slotMinTime: '07:00',//Día desde
       slotMaxTime: '21:00',//Día hasta
       titleFormat: {//Texto parte superior
-        month: 'long',
+        month: 'numeric',
         year: 'numeric',
-        //day: 'numeric',
-        //weekday: 'long'
+        day: 'numeric',
+        weekday: 'long'
       },
       headerToolbar: {
         left: "prev,next,today",
