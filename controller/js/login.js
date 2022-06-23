@@ -11,7 +11,7 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
     //correo: /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, //entre 4 y 24 caracteres, permitido caracteres y _ - solamente
-    usuario: /^(?=\w*\d)(?=\w*[A-Z])\S{6,16}$/, //entre 6 y 16 caracteres
+    usuario: /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, //entre 6 y 16 caracteres
     password: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/ //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
 };
 
