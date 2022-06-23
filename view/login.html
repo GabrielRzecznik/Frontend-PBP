@@ -20,9 +20,9 @@
                 <h5 class="titulo">Inicio de Sesión</h5>
                 <br>
                 <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
-                    <span class="texto">Usuario o Correo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCorreo"></i>
+                    <span class="texto">Usuario o Correo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoUsuario"></i>
                     <br>
-                    <input type="text" class="form-control inputs" name="correo" id="correo">
+                    <input type="text" class="form-control inputs" name="usuario" id="usuario">
                     <br>
                     <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoC"></i>
                     <br>
@@ -42,11 +42,10 @@
                         </div>
                     </div>   
                     <!--Alerta Usuario-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertUsuario">
                         <i class="bi bi-info-circle-fill"></i>
-                        <strong>Correo:</strong>
-                        El correo ingresado no corresponde
-                        <br>a una dirección valida.
+                        <strong>Correo o Nombre de usuario:</strong>
+                        El correo o nombre de usuario ingresado no es valido.
                         <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
                     </div>
                     <!--Alerta Contraseña-->

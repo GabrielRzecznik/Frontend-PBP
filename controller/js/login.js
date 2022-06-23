@@ -2,7 +2,7 @@
 window.addEventListener('load',load);
 
 function load(){
-    correo.focus();
+    usuario.focus();
 }
 //#endregion
 
@@ -10,34 +10,35 @@ function load(){
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-    correo: /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, //entre 4 y 24 caracteres, permitido caracteres y _ - solamente
+    //correo: /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, //entre 4 y 24 caracteres, permitido caracteres y _ - solamente
+    usuario: /^(?=\w*\d)(?=\w*[A-Z])\S{6,16}$/, //entre 6 y 16 caracteres
     password: /^(?=\w*\d)(?=\w*[A-Z])\S{8,16}$/ //entre 8 y 16 caracteres, al menos un dígito, almenos una mayúscula
 };
 
 const campos = {
-    correo: false,
+    usuario: false,
     password: false
 };
 
 const validarFormulario = (e) => {
    switch (e.target.name) {//identifica el nombre del input manipulado
-        case 'correo':
-            if (expresiones.correo.test(e.target.value)) {
-                document.getElementById('iconoCorreo').classList.add('validado');
-                document.querySelector('#iconoCorreo').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoCorreo').classList.add('bi-check-circle-fill');
-                //Mensaje de error correo
-                document.getElementById('alertCorreo').classList.remove('alertaError');
-                //Validar correo
-                campos['correo'] = true;
+        case 'usuario':
+            if (expresiones.usuario.test(e.target.value)) {
+                document.getElementById('iconoUsuario').classList.add('validado');
+                document.querySelector('#iconoUsuario').classList.remove('bi-x-circle-fill');
+                document.querySelector('#iconoUsuario').classList.add('bi-check-circle-fill');
+                //Mensaje de error usuario
+                document.getElementById('alertUsuario').classList.remove('alertaError');
+                //Validar usuario
+                campos['usuario'] = true;
             }else{
-                document.getElementById('iconoCorreo').classList.add('error');
-                document.getElementById('iconoCorreo').classList.remove('validado');
-                document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
-                //Mensaje de error correo
-                document.getElementById('alertCorreo').classList.add('alertaError');
-                campos['correo'] = false;
+                document.getElementById('iconoUsuario').classList.add('error');
+                document.getElementById('iconoUsuario').classList.remove('validado');
+                document.querySelector('#iconoUsuario').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoUsuario').classList.remove('bi-check-circle-fill');
+                //Mensaje de error usuario
+                document.getElementById('alertUsuario').classList.add('alertaError');
+                campos['usuario'] = false;
             }
             break;
         case 'password':
@@ -72,18 +73,18 @@ inputs.forEach((input) => {
 const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
-    const correoValue = correo.value.trim();
+    const usuarioValue = usuario.value.trim();
     const contraseñaValue = password.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    if (correoValue === "") {
-        alert("Correo vacio");
+    if (usuarioValue === "") {
+        alert("Usuario vacio");
     }if (contraseñaValue === "") {
         alert("Contraseña vacia")
     }
     
-    if (campos.correo && campos.password) {
+    if (campos.usuario && campos.password) {
         //Enviar AJAX
         buscarUsuario(formulario);
 
