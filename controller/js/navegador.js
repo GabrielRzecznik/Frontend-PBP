@@ -1,4 +1,10 @@
-//document.getElementById('session').classList.add(localStorage);
+function load(){
+    if (!localStorage["nombreUsuario"]) {
+        window.location.href = "https://frontend-pbp.herokuapp.com/";
+    }
+    usuario.focus();
+}
+
 function cerrarSesion() {
     localStorage.clear();
     sessionStorage.clear();

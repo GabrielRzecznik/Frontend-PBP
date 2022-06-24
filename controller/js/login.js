@@ -2,8 +2,8 @@
 window.addEventListener('load',load);
 
 function load(){
-    if (!localStorage["nombreUsuario"]) {
-        console.log("SIN SESION");
+    if (localStorage["nombreUsuario"]) {
+        window.location.href = "https://frontend-pbp.herokuapp.com/view/inicioBusqueda.html";
     }
     usuario.focus();
 }
