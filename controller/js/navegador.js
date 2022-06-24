@@ -1,9 +1,9 @@
-function load(){
-    if (!localStorage["nombreUsuario"]) {
-        window.location.href = "https://frontend-pbp.herokuapp.com/";
-    }
-    usuario.focus();
+window.addEventListener('load',load);
+
+if (!localStorage["nombreUsuario"]) {
+    window.location.href = "https://frontend-pbp.herokuapp.com/";
 }
+
 
 function cerrarSesion() {
     localStorage.clear();
