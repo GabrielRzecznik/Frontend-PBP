@@ -45,10 +45,6 @@ const validarFormulario = (e) => {
                 document.getElementById('alertPassword').classList.remove('alertaError');
                 document.getElementById('alertPassword2').classList.remove('alertaError');
                 campos['nombreUsuario'] = false;
-                setTimeout(borrarMensajeNombreUsuario, 5000);
-                function borrarMensajeNombreUsuario() {
-                    document.getElementById('alertNombreUsuario').classList.remove('alertaError');
-                }
             }
             break;
         case 'correo':
@@ -71,10 +67,6 @@ const validarFormulario = (e) => {
                 document.getElementById('alertPassword').classList.remove('alertaError');
                 document.getElementById('alertPassword2').classList.remove('alertaError');
                 campos['correo'] = false;
-                setTimeout(borrarMensajeCorreo, 5000);
-                function borrarMensajeCorreo() {
-                    document.getElementById('alertCorreo').classList.remove('alertaError');
-                }
             }
             break;
         case 'password':
@@ -97,10 +89,6 @@ const validarFormulario = (e) => {
                 document.getElementById('alertCorreo').classList.remove('alertaError');
                 document.getElementById('alertPassword2').classList.remove('alertaError');
                 campos['password'] = false;
-                setTimeout(borrarMensajeContraseña, 5000);
-                function borrarMensajeContraseña() {
-                    document.getElementById('alertPassword').classList.remove('alertaError');
-                }
             }
             break;
         case 'password2':
@@ -123,10 +111,6 @@ const validarFormulario = (e) => {
                 document.getElementById('alertCorreo').classList.remove('alertaError');
                 document.getElementById('alertPassword').classList.remove('alertaError');
                 campos['password2'] = false;
-                setTimeout(borrarMensajeContraseña2, 5000);
-                function borrarMensajeContraseña2() {
-                    document.getElementById('alertPassword2').classList.remove('alertaError');
-                }
             }
             break;
    } 
