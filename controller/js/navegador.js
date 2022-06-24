@@ -2,7 +2,7 @@
 function cerrarSesion() {
     localStorage.clear();
     sessionStorage.clear();
-    window.location.href = "http://localhost/phpapp/Profesional%20By%20Proximity/Frontend/";
+    window.location.href = "https://frontend-pbp.herokuapp.com/view/";
 }
 
 document.getElementById('nombreUsuario').innerHTML = localStorage["nombreUsuario"];
