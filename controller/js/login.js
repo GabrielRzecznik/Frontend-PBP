@@ -39,7 +39,12 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoUsuario').classList.remove('bi-check-circle-fill');
                 //Mensaje de error usuario
                 document.getElementById('alertUsuario').classList.add('alertaError');
+                document.getElementById('alertCont').classList.remove('alertaError');
                 campos['usuario'] = false;
+                setTimeout(borrarMensajeUsuario, 5000);
+                function borrarMensajeUsuario() {
+                    document.getElementById('alertUsuario').classList.remove('alertaError');
+                }
             }
             break;
         case 'password':
@@ -58,7 +63,12 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoC').classList.remove('bi-check-circle-fill');
                 //Mensaje de error contraseña
                 document.getElementById('alertCont').classList.add('alertaError');
+                document.getElementById('alertUsuario').classList.remove('alertaError');
                 campos['password'] = false;
+                setTimeout(borrarMensajeContraseña, 5000);
+                function borrarMensajeContraseña() {
+                    document.getElementById('alertCont').classList.remove('alertaError');
+                }
             }
             break;
    } 

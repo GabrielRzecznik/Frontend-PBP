@@ -41,7 +41,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoNombreUsuario').classList.remove('bi-check-circle-fill');
                 //Mensaje de error correo
                 document.getElementById('alertNombreUsuario').classList.add('alertaError');
+                document.getElementById('alertCorreo').classList.remove('alertaError');
+                document.getElementById('alertPassword').classList.remove('alertaError');
+                document.getElementById('alertPassword2').classList.remove('alertaError');
                 campos['nombreUsuario'] = false;
+                setTimeout(borrarMensajeNombreUsuario, 5000);
+                function borrarMensajeNombreUsuario() {
+                    document.getElementById('alertNombreUsuario').classList.remove('alertaError');
+                }
             }
             break;
         case 'correo':
@@ -60,7 +67,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
                 //Mensaje de error correo
                 document.getElementById('alertCorreo').classList.add('alertaError');
+                document.getElementById('alertNombreUsuario').classList.remove('alertaError');
+                document.getElementById('alertPassword').classList.remove('alertaError');
+                document.getElementById('alertPassword2').classList.remove('alertaError');
                 campos['correo'] = false;
+                setTimeout(borrarMensajeCorreo, 5000);
+                function borrarMensajeCorreo() {
+                    document.getElementById('alertCorreo').classList.remove('alertaError');
+                }
             }
             break;
         case 'password':
@@ -79,7 +93,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoPassword').classList.remove('bi-check-circle-fill');
                 //Mensaje de error contraseña
                 document.getElementById('alertPassword').classList.add('alertaError');
+                document.getElementById('alertNombreUsuario').classList.remove('alertaError');
+                document.getElementById('alertCorreo').classList.remove('alertaError');
+                document.getElementById('alertPassword2').classList.remove('alertaError');
                 campos['password'] = false;
+                setTimeout(borrarMensajeContraseña, 5000);
+                function borrarMensajeContraseña() {
+                    document.getElementById('alertPassword').classList.remove('alertaError');
+                }
             }
             break;
         case 'password2':
@@ -98,7 +119,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoPassword2').classList.remove('bi-check-circle-fill');
                 //Mensaje de error contraseña
                 document.getElementById('alertPassword2').classList.add('alertaError');
+                document.getElementById('alertNombreUsuario').classList.remove('alertaError');
+                document.getElementById('alertCorreo').classList.remove('alertaError');
+                document.getElementById('alertPassword').classList.remove('alertaError');
                 campos['password2'] = false;
+                setTimeout(borrarMensajeContraseña2, 5000);
+                function borrarMensajeContraseña2() {
+                    document.getElementById('alertPassword2').classList.remove('alertaError');
+                }
             }
             break;
    } 

@@ -12,7 +12,7 @@ function buscarUsuario(formulario){
                 var data=JSON.parse(xmlhttp.responseText);
 
                 console.log(data);
-                console.log(data[0]["correo"]);
+                console.log(data[0]["usuario"]);
 
                 localStorage.setItem("id_usuario", data[0]["id_usuario"]);//Me guarda el id_usuario de la bd
                 localStorage.setItem("id_paciente", data[0]["id_paciente"]);//Me guarda el id_usuario de la bd
