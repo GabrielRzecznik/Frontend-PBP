@@ -11,7 +11,7 @@ function registrarUsuario(formulario){
                 alert(respuestaResivida);
                 window.location.href = "http://localhost/phpapp/Profesional%20By%20Proximity/Frontend/";
             }else if (xmlhttp.status == 500) {
-                alert("El correo ingresado ya corresponde a una cuenta existente");
+                alert("Ocurrio un error inesperado con el correo ingresado");
                 //Marcar Correo
                 document.getElementById('iconoCorreo').classList.remove('validado');
                 document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');

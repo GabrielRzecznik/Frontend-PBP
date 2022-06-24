@@ -11,9 +11,6 @@ function buscarUsuario(formulario){
                 //Tranforma la información que ataja en un JSON que puede ser leido mediante el data[][""]
                 var data=JSON.parse(xmlhttp.responseText);
 
-                console.log(data);
-                console.log(data[0]["usuario"]);
-
                 localStorage.setItem("id_usuario", data[0]["id_usuario"]);//Me guarda el id_usuario de la bd
                 localStorage.setItem("id_paciente", data[0]["id_paciente"]);//Me guarda el id_usuario de la bd
                 localStorage.setItem("id_profesional", data[0]["id_profesional"]);//Me guarda el id_usuario de la bd

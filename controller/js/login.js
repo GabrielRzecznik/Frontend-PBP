@@ -2,6 +2,9 @@
 window.addEventListener('load',load);
 
 function load(){
+    if (localStorage["nombreUsuario"]) {
+        console.log("SIN SESION");
+    }
     usuario.focus();
 }
 //#endregion
