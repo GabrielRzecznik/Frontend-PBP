@@ -1,7 +1,7 @@
-
-    if (!localStorage["nombreUsuario"]) {
-        window.location.href = "https://frontend-pbp.herokuapp.com/";
-    }
+//Mejor vulnerable
+if (!localStorage["nombreUsuario"]) {
+    window.location.href = "https://frontend-pbp.herokuapp.com/";
+}
 
 
 function cerrarSesion() {
