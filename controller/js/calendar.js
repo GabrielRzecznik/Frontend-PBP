@@ -171,7 +171,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Ejecutar Modal - Crear Solicitud
           ModalFormularioSolicitud();
         }
-        /*var manejoDeInfo = info.dateStr;
+        /*
+        var manejoDeInfo = info.dateStr;
         //Guardar datos
         
         //Tomamos solamente la fecha del día
