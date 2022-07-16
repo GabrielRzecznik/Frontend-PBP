@@ -139,13 +139,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (fecha >= fechaActual) {
           console.log(horaActual);
           
-          if (horaActual <= (horaDesde)) {
+          if (horaActual <= infoDesde) {
             console.log("Correcto");
           }
 
-          console.log(infoDesde);
-          console.log(fecha);
-          console.log(fechaActual);
+
           //Enviar Info - Campos Modal - Crear Solicitud
           document.getElementById("fecha").value = fecha;
           document.getElementById("horaDesdeSolicitud").value = horaDesde;
