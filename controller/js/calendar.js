@@ -139,7 +139,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (fecha >= fechaActual) {
           console.log(horaActual);
           
-          
+          if (horaActual <= (horaDesde)) {
+            console.log("Correcto");
+          }
 
           console.log(infoDesde);
           console.log(fecha);
