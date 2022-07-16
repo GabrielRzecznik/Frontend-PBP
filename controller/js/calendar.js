@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var horaHasta = infoHasta.substring(16,24);
 
         if (fecha >= fechaActual) {
-          console.log(horaActual);
+
           
           console.log(fecha);
           console.log(fechaActual);
