@@ -1,6 +1,5 @@
 function crearSolicitud(seleccionConsulta, obraSocialSolicitud, horaDesdeSolicitud, horaHastaSolicitud){
     var formJSON=JSON.stringify({"seleccionConsulta":seleccionConsulta, "obraSocialSolicitud":obraSocialSolicitud, "horaDesdeSolicitud":horaDesdeSolicitud, "horaHastaSolicitud":horaHastaSolicitud});
-    console.log(formData.value);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
