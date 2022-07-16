@@ -1,6 +1,6 @@
 function crearSolicitud(solicitud){
 
-    console.log(formData.value);
+    console.log(solicitud.value);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
