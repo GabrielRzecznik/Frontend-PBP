@@ -129,11 +129,11 @@ document.addEventListener("DOMContentLoaded", function () {
         var fecha = año + "-" + mes + "-" + dia;
 
         var h = new Date();
-        var hora = h.getMinutes();
+        var hora = h.getHours();
         if(hora < 10){
           hora = "0" + hora;
         }
-        var minutos = h.getHours();
+        var minutos = h.getMinutes();
         if(minutos < 10){
           minutos = "0" + minutos;
         }
@@ -145,29 +145,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (fecha >= fechaActual) {
 
-          
           console.log("Hora desde: "+horaDesde);
           console.log("tres Horas Antes: "+tresHorasAntes);
 
           if (fecha == fechaActual) {
             if(tresHorasAntes <= horaDesde){
-              
+              ejecutarModalFormularioSolicitud();
             }else{
               alert("No puedes enviar una solicitud sin una anterioridad mayor de 3 horas.");
             }
           }else{
-            //Enviar Info - Campos Modal - Crear Solicitud
-            document.getElementById("fecha").value = fecha;
-            document.getElementById("horaDesdeSolicitud").value = horaDesde;
-            document.getElementById("horaHastaSolicitud").value = horaHasta;
-            
-            //Ejecutar Modal - Crear Solicitud
-            ModalFormularioSolicitud();
+            ejecutarModalFormularioSolicitud();
           }
         }else{
           alert("No se puede enviar solicitud a una fecha anterior a la actual");
         }
-       
+        
+        function ejecutarModalFormularioSolicitud() {
+          //Enviar Info - Campos Modal - Crear Solicitud
+          document.getElementById("fecha").value = fecha;
+          document.getElementById("horaDesdeSolicitud").value = horaDesde;
+          document.getElementById("horaHastaSolicitud").value = horaHasta;
+          
+          //Ejecutar Modal - Crear Solicitud
+          ModalFormularioSolicitud();
+        }
         /*var manejoDeInfo = info.dateStr;
         //Guardar datos
         
