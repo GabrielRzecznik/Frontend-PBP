@@ -7,15 +7,8 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    //JSON
-    var Solicitud = {};
-    Solicitud.seleccionConsulta = seleccionConsulta.value;
-    Solicitud.obraSocialSolicitud =  obraSocialSolicitud.value;
-    Solicitud.horaDesdeSolicitud = fecha.value + " " + horaDesdeSolicitud.value;
-    Solicitud.horaHastaSolicitud = fecha.value + " " + horaHastaSolicitud.value;
-    
     //Enviar AJAX
-    crearSolicitud(Solicitud);
+    crearSolicitud(seleccionConsulta.value, obraSocialSolicitud.value, (fecha.value + " " + horaDesdeSolicitud.value), (fecha.value + " " + horaHastaSolicitud.value));
     
 }); 
 //#endregion

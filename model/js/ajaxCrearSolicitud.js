@@ -1,6 +1,5 @@
-function crearSolicitud(solicitud){
-    var solicitudJSON = JSON.stringify(Object.fromEntries(solicitud));
-
+function crearSolicitud(seleccionConsulta, obraSocialSolicitud, horaDesdeSolicitud, horaHastaSolicitud){
+    var formJSON=JSON.stringify({"seleccionConsulta":seleccionConsulta, "obraSocialSolicitud":obraSocialSolicitud, "horaDesdeSolicitud":horaDesdeSolicitud, "horaHastaSolicitud":horaHastaSolicitud});
     console.log(formData.value);
 
     xmlhttp = new XMLHttpRequest();
@@ -17,5 +16,5 @@ function crearSolicitud(solicitud){
         }
     }
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Solicitudes/crearSolicitud',true);
-    xmlhttp.send(solicitudJSON);
+    xmlhttp.send(formJSON);
 }
