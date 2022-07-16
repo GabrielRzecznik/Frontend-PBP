@@ -10,8 +10,8 @@ formulario.addEventListener('submit', (e) => {
            
     //Enviar AJAX
     
-    var horaDesdeS = horaDesdeSolicitud.value + " " + fecha.value;
-    var horaHastaS =  horaHastaSolicitud.value + " " + fecha.value;
+    var horaDesdeS =  fecha.value + " " + horaDesdeSolicitud.value;
+    var horaHastaS =  fecha.value + " " + horaHastaSolicitud.value;
     
     console.log(horaDesdeS);
     console.log(horaHastaS);
