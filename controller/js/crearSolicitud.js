@@ -9,6 +9,6 @@ formulario.addEventListener('submit', (e) => {
     
     //Enviar AJAX
     crearSolicitud(seleccionConsulta.value, obraSocialSolicitud.value, (fecha.value + " " + horaDesdeSolicitud.value), (fecha.value + " " + horaHastaSolicitud.value));
-    
+    ConfirmaciónModal.hide();
 }); 
 //#endregion

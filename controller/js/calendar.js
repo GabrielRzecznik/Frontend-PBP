@@ -245,8 +245,4 @@ function ModalConfirmación(){
   document.getElementById("cancelarConfirmación").addEventListener("click", function () {
       ConfirmaciónModal.hide();
   });
-
-  document.getElementById("enviar").addEventListener("click", function () {
-    ConfirmaciónModal.hide();
-});
 }
