@@ -128,10 +128,10 @@ document.addEventListener("DOMContentLoaded", function () {
         
         var fecha = año + "-" + mes + "-" + dia;
 
-        horaActual = new Date();
-        hora = horaActual.getHours();
-        minutos = horaActual.getMinutes();
-        segundos = horaActual.getSeconds();
+        var hora = getHours();
+        var minutos = getMinutes();
+        var segundos = getSeconds();
+        var horaActual = hora + ":" + minutos + ":" + segundos;
 
         var horaDesde = infoDesde.substring(16,24);
         var horaHasta = infoHasta.substring(16,24);
@@ -139,21 +139,23 @@ document.addEventListener("DOMContentLoaded", function () {
         if (fecha >= fechaActual) {
 
           
-          console.log(fecha);
-          console.log(fechaActual);
+          console.log("Hora desde: "+horaDesde);
+          console.log("Hora actual: "+horaActual);
 
           if (fecha == fechaActual) {
-            console.log("Iguales");
+            if(horaActual <= horaDesde){
+            
+              
+            }
+          }else{
+            //Enviar Info - Campos Modal - Crear Solicitud
+            document.getElementById("fecha").value = fecha;
+            document.getElementById("horaDesdeSolicitud").value = horaDesde;
+            document.getElementById("horaHastaSolicitud").value = horaHasta;
+            
+            //Ejecutar Modal - Crear Solicitud
+            ModalFormularioSolicitud();
           }
-
-
-          //Enviar Info - Campos Modal - Crear Solicitud
-          document.getElementById("fecha").value = fecha;
-          document.getElementById("horaDesdeSolicitud").value = horaDesde;
-          document.getElementById("horaHastaSolicitud").value = horaHasta;
-          
-          //Ejecutar Modal - Crear Solicitud
-          ModalFormularioSolicitud();
         }else{
           alert("No se puede enviar solicitud a una fecha anterior a la actual");
         }
