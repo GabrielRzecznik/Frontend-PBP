@@ -130,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var h = new Date();
         var hora = h.getHours();
+        var hora = (hora-3)
         if(hora < 10){
           hora = "0" + hora;
         }
@@ -138,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
           minutos = "0" + minutos;
         }
 
-        var tresHorasAntes = (hora-3) + ":" + minutos + ":00";
+        var tresHorasAntes = hora + ":" + minutos + ":00";
 
         var horaDesde = infoDesde.substring(16,24);
         var horaHasta = infoHasta.substring(16,24);
