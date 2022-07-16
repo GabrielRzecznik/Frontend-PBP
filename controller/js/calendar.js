@@ -129,10 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var fecha = año + "-" + mes + "-" + dia;
 
         var h = new Date();
-        var hora = h.getHours();
-        var minutos = h.getMinutes();
-        var segundos = h.getSeconds();
-        var horaActual = hora + ":" + minutos + ":" + segundos;
+        var horaActual = ((h.getHours() < 10)?"0":"") + ":" + ((h.getMinutes() < 10)?"0":"") + ":00";
 
         var horaDesde = infoDesde.substring(16,24);
         var horaHasta = infoHasta.substring(16,24);
