@@ -151,8 +151,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
           if (fecha == fechaActual) {
             if(tresHorasAntes <= horaDesde){
-            
               
+            }else{
+              alert("No puedes enviar una solicitud sin una anterioridad mayor de 3 horas.");
             }
           }else{
             //Enviar Info - Campos Modal - Crear Solicitud
