@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var horaDesde = infoDesde.substring(16,24);
         var horaHasta = infoHasta.substring(16,24);
 
-        if (fecha <= fechaActual) {
+        if (fecha >= fechaActual) {
           console.log(fecha);
           console.log(fechaActual);
           //Enviar Info - Campos Modal - Crear Solicitud
