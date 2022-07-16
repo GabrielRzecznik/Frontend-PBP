@@ -1,6 +1,4 @@
-function crearSolicitud(formulario){
-    var formData = new FormData(formulario);
-    var formJSON = JSON.stringify(Object.fromEntries(formData));
+function crearSolicitud(solicitud){
 
     console.log(formData.value);
 
@@ -18,5 +16,5 @@ function crearSolicitud(formulario){
         }
     }
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Solicitudes/crearSolicitud',true);
-    xmlhttp.send(formJSON);
+    xmlhttp.send(solicitud);
 }
