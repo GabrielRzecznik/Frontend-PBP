@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
           case "Jun":
             mes = "06";
             break;
-          case "Jun":
+          case "Jul":
             mes = "07";
               break;
           case "Aug":
