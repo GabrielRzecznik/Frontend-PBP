@@ -128,15 +128,19 @@ document.addEventListener("DOMContentLoaded", function () {
         
         var fecha = año + "-" + mes + "-" + dia;
 
-        var horaActual = new Date().toDateString();
+        var hora = myDate.getHours();
+        var minutos = myDate.getMinutes();
+        var segundos = myDate.getSeconds();
+        var horaActual = hora + ":" + minutos + ":" + segundos;
 
         var horaDesde = infoDesde.substring(16,24);
         var horaHasta = infoHasta.substring(16,24);
 
         if (fecha >= fechaActual) {
-        //if (horaActual) {
           console.log(horaActual);
-        //}
+          
+          
+
           console.log(infoDesde);
           console.log(fecha);
           console.log(fechaActual);
