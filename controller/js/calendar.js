@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         var dia = infoDesde.substring(8, 10);
         
-        var fecha = año + "-" + dia + "-" + mes;
+        var fecha = año + "-" + mes + "-" + dia;
 
         var horaDesde = infoDesde.substring(16,24);
         var horaHasta = infoHasta.substring(16,24);
