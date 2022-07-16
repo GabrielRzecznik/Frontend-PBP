@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Solicitud
           id: 'solicitud',
           title: 'Solicitud Enviada!',
-          start: '2022-07-03 10:00:00',
-          end: '2022-07-03 10:45:00',
+          start: '2022-07-29 10:00:00',
+          end: '2022-07-29 10:45:00',
           backgroundColor: '#72a400',
           borderColor: '#649000'
         },
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Turno
           id: 'turno',
           title: 'Turno Confirmado!',
-          start: '2022-07-03 09:00:00',
-          end: '2022-07-03 09:45:00',
+          start: '2022-07-29 09:00:00',
+          end: '2022-07-29 09:45:00',
           backgroundColor: '#CC8400',
           borderColor: '#b77600'
         },
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Horario
           id: 'horarioDisponible',
           title: 'Horario Disponible',
-          start: '2022-07-03 08:00:00',
-          end: '2022-07-03 08:45:00',
+          start: '2022-07-29 08:00:00',
+          end: '2022-07-29 08:45:00',
           backgroundColor: '#3264c1',
           borderColor: '#003eb2'
         },
@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Horario No Disponible
           id: 'horarioNoDisponible',
           title: 'Horario No Disponible',
-          start: '2022-07-03 07:00:00',
-          end: '2022-07-03 07:45:00',
+          start: '2022-07-29 07:00:00',
+          end: '2022-07-29 07:45:00',
           backgroundColor: '#838383',
           borderColor: '#707070'
         }
@@ -132,6 +132,9 @@ document.addEventListener("DOMContentLoaded", function () {
         var horaHasta = infoHasta.substring(16,24);
 
         if (fecha >= fechaActual) {
+          if (condition) {
+            
+          }
           console.log(fecha);
           console.log(fechaActual);
           //Enviar Info - Campos Modal - Crear Solicitud
