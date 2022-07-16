@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
           minutos = "0" + minutos;
         }
 
-        var horaActual = hora + ":" + minutos + ":00";
+        var tresHorasAntes = (hora-3) + ":" + minutos + ":00";
 
         var horaDesde = infoDesde.substring(16,24);
         var horaHasta = infoHasta.substring(16,24);
@@ -147,10 +147,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
           
           console.log("Hora desde: "+horaDesde);
-          console.log("Hora actual: "+horaActual);
+          console.log("tres Horas Antes: "+tresHorasAntes);
 
           if (fecha == fechaActual) {
-            if(horaActual <= horaDesde){
+            if(tresHorasAntes <= horaDesde){
             
               
             }
