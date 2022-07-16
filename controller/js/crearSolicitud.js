@@ -9,9 +9,14 @@ formulario.addEventListener('submit', (e) => {
     
            
     //Enviar AJAX
-    console.log(horaDesdeSolicitud.value);
-    console.log(horaHastaSolicitud.value);
-    crearSolicitud(formulario);
+    
+    var horaDesdeS = horaDesdeSolicitud.value + fecha.value;
+    var horaHastaS =  horaHastaSolicitud.value + fecha.value;
+    
+    console.log(horaDesdeS);
+    console.log(horaHastaS);
+   
+    crearSolicitud();
     
 
 }); 
