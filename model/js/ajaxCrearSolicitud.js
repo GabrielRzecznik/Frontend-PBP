@@ -1,6 +1,7 @@
 function crearSolicitud(solicitud){
+    var solicitudJSON = JSON.stringify(Object.fromEntries(solicitud));
 
-    console.log(solicitud.value);
+    console.log(formData.value);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
@@ -16,5 +17,5 @@ function crearSolicitud(solicitud){
         }
     }
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Solicitudes/crearSolicitud',true);
-    xmlhttp.send(solicitud);
+    xmlhttp.send(solicitudJSON);
 }
