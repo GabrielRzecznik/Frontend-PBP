@@ -2,7 +2,7 @@ tipoVista = "paciente";
 
 if (tipoVista == "paciente") {
     //Enviar AJAX según tipoVista = Paciente
-    console.log(localStorage.getItem("id_paciente"));
+    var id_paciente = localStorage.getItem("id_paciente");
     mostrarSolicitudes(id_paciente);
     //mostrarTurnos(id_paciente);
 }else if (tipoVista == "paciente_a_profesional") {
