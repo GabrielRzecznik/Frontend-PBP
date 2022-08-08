@@ -9,10 +9,6 @@ function crearSolicitud(seleccionConsulta, obraSocialSolicitud, horaDesdeSolicit
             if (xmlhttp.status == 200) {//Volvio Bien
                 alert("Solicitud enviada con exito!");
                 location.reload();
-            }if (xmlhttp.status == 401) {
-                alert("No se pudo crear la solicitud");
-            }if (xmlhttp.status == 500) {
-                alert("No se pudo crear la solicitud");
             }
         }
     }
