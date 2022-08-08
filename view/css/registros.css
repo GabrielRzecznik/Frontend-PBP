@@ -151,18 +151,20 @@ body{
 
 .contenedorPaciente{
   text-align: center;
+  padding: 5px;
   padding-top: 30px;
   border-radius: 2px;
-  width: 96%;
+  width: 100%;
   height: 250px;
   background-color: #D1F2EB;
 }
 
 .contenedorProfesional{
+  padding: 5px;
   text-align: center;
   padding-top: 30px;
   border-radius: 2px;
-  width: 96%;
+  width: 100%;
   height: 250px;
   background-color: #D6EAF8;
 }
