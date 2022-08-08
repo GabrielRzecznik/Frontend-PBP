@@ -127,13 +127,15 @@ body{
 
 .paciente{
   text-align: center;
-  height: 300px;
+  padding-top: 20%;
+  height: 400px;
   background-color: #F5B041;
 }
 
 .profesional{
   text-align: center;
-  height: 300px;
+  padding-top: 20%;
+  height: 400px;
   background-color: #3498DB;
 }
 
