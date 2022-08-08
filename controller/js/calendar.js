@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Horario
           id: 'horarioDisponible',
           title: 'Horario Disponible',
-          start: '2022-07-29 08:00:00',
-          end: '2022-07-29 08:45:00',
+          start: '2022-08-08 14:00:00',
+          end: '2022-08-08 14:45:00',
           backgroundColor: '#3264c1',
           borderColor: '#003eb2'
         },
