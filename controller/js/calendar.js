@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Solicitud
           id: 'solicitud',
           title: 'Solicitud Enviada!',
-          start: '2022-07-29 10:00:00',
-          end: '2022-07-29 10:45:00',
+          start: '2022-08-08 13:00:00',
+          end: '2022-08-08 13:45:00',
           backgroundColor: '#72a400',
           borderColor: '#649000'
         },
