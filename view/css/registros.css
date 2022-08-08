@@ -150,13 +150,17 @@ body{
 }
 
 .contenedorPaciente{
+  text-align: center;
+  padding-top: 30px;
   border-radius: 2px;
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 250px;
   background-color: #D1F2EB;
 }
 
 .contenedorProfesional{
+  text-align: center;
+  padding-top: 30px;
   border-radius: 2px;
   width: 250px;
   height: 250px;
