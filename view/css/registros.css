@@ -152,12 +152,14 @@ body{
 }
 
 .contenedorPaciente{
+  border-radius: 2px;
   width: 150px;
   height: 150px;
   background-color: #D1F2EB;
 }
 
 .contenedorProfesional{
+  border-radius: 2px;
   width: 150px;
   height: 150px;
   background-color: #D6EAF8;
