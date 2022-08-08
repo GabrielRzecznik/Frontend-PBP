@@ -12,6 +12,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 .panel1{
   margin-top: 10%;
   background-color: rgb(240, 240, 240);
@@ -28,6 +29,17 @@ body{
   background-image: url("https://www.otamendi.com.ar/img/serviciosMedicos/380x528_clinicamedica.jpg");
   background-position: center;
   background-size: cover;
+  border-top-right-radius: 2%;
+  border-bottom-right-radius: 2%;
+}
+
+.panel3{
+  margin-top: 10%;
+  background-color: rgb(240, 240, 240);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   border-top-right-radius: 2%;
   border-bottom-right-radius: 2%;
 }
