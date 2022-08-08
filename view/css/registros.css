@@ -52,8 +52,12 @@ body{
 
 .botonLogin{
     width: 100%;
-    margin-top: 10%;
-    margin-bottom: 4%;
+}
+
+.botonPerfil{
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 4%;
 }
 
 .botonesSecundarios{
