@@ -28,35 +28,65 @@
                     <!--Campo Apellido-->
                     <span class="texto">Apellido </span><i class="bi bi-x-circle-fill iconos validado" id="iconoApellido"></i>
                     <br>
-                    <input type="texto" class="form-control inputs" name="apellido" id="apellido">
+                    <input type="text" class="form-control inputs" name="apellido" id="apellido">
                     <br>
                     <!--Campo Fecha de Nacimiento-->
                     <span class="texto">Fecha de nacimiento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFechaNacimiento"></i>
                     <br>
-                    <input type="data" class="form-control inputs" name="fechaNacimiento" id="fechaNacimiento">
+                    <input type="date" class="form-control inputs" name="fechaNacimiento" id="fechaNacimiento">
                     <br>
                     <!--Campo Sexo-->
                     <span class="texto">Sexo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoSexo"></i>
                     <br>
                     <select class="form-select" id="sexo" aria-label="Floating label select example">
-                        <!--<option selected>Igual que en su dni</option>-->
+                        <option selected>Como figura en su dni</option>
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
                         <option value="X">X</option>
                     </select>
                     <br>
+                    <!--Campo Foto-->
+                    <span class="texto">Foto </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFoto"></i>
+                    <br>
+                    <input type="file" class="form-control inputs" name="departamento" id="foto">
+                    <br>
+                    <!--Campo Telefono-->
+                    <span class="texto">Télefono </span><i class="bi bi-x-circle-fill iconos validado" id="iconoTelefono"></i>
+                    <br>
+                    <input type="file" class="form-control inputs" name="telefono" id="telefono">
+                    <br>
 
+
+                    <!--Campo Provincia-->
+                    <span class="texto">Provincia </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvincia"></i>
+                    <br>
+                    <input type="text" class="form-control inputs" name="provincia" id="provincia">
+                    <br>
+                    <!--Campo Localidad-->
+                    <span class="texto">Localidad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoLocalidad"></i>
+                    <br>
+                    <input type="text" class="form-control inputs" name="calle" id="localidad">
+                    <br>
+                    <!--Campo Calle-->
+                    <span class="texto">Nombre de Calle/Avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCalle"></i>
+                    <br>
+                    <input type="text" class="form-control inputs" name="calle" id="calle">
+                    <br>
+                    <!--Campo Número-->
+                    <span class="texto">Altura de Calle/Avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAltura"></i>
+                    <br>
+                    <input type="text" class="form-control inputs" name="altura" id="altura">
+                    <br>
+                    <!--Campo Departamento-->
+                    <span class="texto">Departamento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoDepartamento"></i>
+                    <br>
+                    <input type="text" class="form-control inputs" name="departamento" id="departamento">
+                    <br>
+
+                    <!--Latitud y Longitud se calcularan más adelante-->
                     
                     
-                    <!--Campo Contraseña-->
-                    <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPassword"></i>
-                    <br>
-                    <input type="password" class="form-control inputs" name="password" id="password">
-                    <br>
-                    <!--Campo Validar Contraseña-->
-                    <span class="texto">Repita su Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPassword2"></i>
-                    <br>
-                    <input type="password" class="form-control inputs" name="password2" id="password2">
+                    
                     <button type="submit" class="btn btn-warning botonLogin" name="boton" id="boton">
                         <span id="loguearse">Crear Usuario</span>
                     </button>
