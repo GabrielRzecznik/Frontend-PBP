@@ -126,9 +126,8 @@ body{
 }
 
 .paciente{
-  margin: 20%;
   text-align: center;
-  padding-top: 15%;
+  padding: 15%;
   height: 400px;
   border-top-left-radius: 2%;
   border-bottom-left-radius: 2%;
@@ -136,9 +135,8 @@ body{
 }
 
 .profesional{
-  margin: 20%;
   text-align: center;
-  padding-top: 15%;
+  padding: 15%;
   height: 400px;
   border-top-right-radius: 2%;
   border-bottom-right-radius: 2%;
