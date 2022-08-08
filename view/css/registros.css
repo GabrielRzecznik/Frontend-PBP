@@ -92,18 +92,9 @@ body{
         padding-bottom: 25px;
       }
 
-      .panel3{
-        margin-top: 10%;
-        background-color: rgb(240, 240, 240);
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 25px;
-        padding-bottom: 25px;
-      }
-
       .botonPerfil{
         width: 100%;
-        margin-top: 5%;
+        margin-top: 10%;
       }
 }
   
