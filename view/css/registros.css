@@ -126,10 +126,14 @@ body{
 }
 
 .paciente{
+  text-align: center;
+  width: 300px;
   background-color: #F5B041;
 }
 
 .profesional{
+  text-align: center;
+  width: 300px;
   background-color: #3498DB;
 }
 
