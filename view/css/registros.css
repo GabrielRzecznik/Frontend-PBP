@@ -149,18 +149,3 @@ body{
   height: 100px;
 }
 
-.contenedorPaciente{
-  padding-top: 30px;
-  border-radius: 2px;
-  width: 250px;
-  height: 250px;
-  background-color: #D1F2EB;
-}
-
-.contenedorProfesional{
-  padding-top: 30px;
-  border-radius: 2px;
-  width: 250px;
-  height: 250px;
-  background-color: #D6EAF8;
-}
