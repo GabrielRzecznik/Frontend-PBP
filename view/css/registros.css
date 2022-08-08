@@ -110,3 +110,7 @@ body{
   visibility: visible;
   color: rgb(255, 185, 93);
 }
+
+.espaciar{
+  padding-top: 10%;
+}
