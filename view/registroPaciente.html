@@ -16,117 +16,114 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-4 panel1">
+            <div class="col-md-4 panel3">
                 <h5 class="titulo">Datos Personales</h5>
-                <br>
                 <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
-                    <!--Campo Nombre-->
-                    <span class="texto">Nombre </span><i class="bi bi-x-circle-fill iconos validado" id="iconoNombre"></i>
-                    <br>
-                    <input type="text" class="form-control inputs" name="nombre" id="nombre">
-                    <br>
-                    <!--Campo Apellido-->
-                    <span class="texto">Apellido </span><i class="bi bi-x-circle-fill iconos validado" id="iconoApellido"></i>
-                    <br>
-                    <input type="text" class="form-control inputs" name="apellido" id="apellido">
-                    <br>
-                    <!--Campo Fecha de Nacimiento-->
-                    <span class="texto">Fecha de nacimiento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFechaNacimiento"></i>
-                    <br>
-                    <input type="date" class="form-control inputs" name="fechaNacimiento" id="fechaNacimiento">
-                    <br>
-                    <!--Campo Sexo-->
-                    <span class="texto">Sexo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoSexo"></i>
-                    <br>
-                    <select class="form-select" id="sexo" aria-label="Floating label select example">
-                        <option selected>Como figura en su DNI</option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Femenino">Femenino</option>
-                        <option value="X">X</option>
-                    </select>
-                    <br>
-                    <!--Campo Foto-->
-                    <span class="texto">Foto </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFoto"></i>
-                    <br>
-                    <input type="file" class="form-control inputs" name="departamento" id="foto">
-                    <br>
-                    <!--Campo Telefono-->
-                    <span class="texto">Télefono </span><i class="bi bi-x-circle-fill iconos validado" id="iconoTelefono"></i>
-                    <br>
-                    <input type="text" class="form-control inputs" name="telefono" id="telefono">
-                    <br>
-                   
-                    <!--<a href="./view/grilla.html" class="btn btn-warning botonLogin" name="boton" id="boton">
-                        <span id="loguearse">Iniciar Sesión</span>
-                    </a>-->
-                    
-                    <!--Alerta Nombre Usuario-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <strong>Nombre de Usuario:</strong>
-                        El nombre de usuario ingresado no es valido
-                        <br>a una dirección valida.
-                        <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
-                    </div>   
-                    <!--Alerta Correo-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <strong>Correo:</strong>
-                        El correo ingresado no corresponde
-                        <br>a una dirección valida.
-                        <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
+                    <div class="col-md-4"> 
+                        <!--Campo Nombre-->
+                        <span class="texto">Nombre </span><i class="bi bi-x-circle-fill iconos validado" id="iconoNombre"></i>
+                        <br>
+                        <input type="text" class="form-control inputs" name="nombre" id="nombre">
+                        <br>
+                        <!--Campo Apellido-->
+                        <span class="texto">Apellido </span><i class="bi bi-x-circle-fill iconos validado" id="iconoApellido"></i>
+                        <br>
+                        <input type="text" class="form-control inputs" name="apellido" id="apellido">
+                        <br>
+                        <!--Campo Fecha de Nacimiento-->
+                        <span class="texto">Fecha de nacimiento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFechaNacimiento"></i>
+                        <br>
+                        <input type="date" class="form-control inputs" name="fechaNacimiento" id="fechaNacimiento">
+                        <br>
+                        <!--Campo Sexo-->
+                        <span class="texto">Sexo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoSexo"></i>
+                        <br>
+                        <select class="form-select" id="sexo" aria-label="Floating label select example">
+                            <option selected>Como figura en su DNI</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="X">X</option>
+                        </select>
+                        <br>
+                        <!--Campo Foto-->
+                        <span class="texto">Foto </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFoto"></i>
+                        <br>
+                        <input type="file" class="form-control inputs" name="departamento" id="foto">
+                        <br>
+                        <!--Campo Telefono-->
+                        <span class="texto">Télefono </span><i class="bi bi-x-circle-fill iconos validado" id="iconoTelefono"></i>
+                        <br>
+                        <input type="text" class="form-control inputs" name="telefono" id="telefono">
+                        <br>
+                        <!--<a href="./view/grilla.html" class="btn btn-warning botonLogin" name="boton" id="boton">
+                            <span id="loguearse">Iniciar Sesión</span>
+                        </a>-->
+                        <!--Alerta Nombre Usuario-->
+                        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <strong>Nombre de Usuario:</strong>
+                            El nombre de usuario ingresado no es valido
+                            <br>a una dirección valida.
+                            <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
+                        </div>   
+                        <!--Alerta Correo-->
+                        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <strong>Correo:</strong>
+                            El correo ingresado no corresponde
+                            <br>a una dirección valida.
+                            <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
+                        </div>
+                        <!--Alerta Contraseña-->
+                        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <strong>Contraseña:</strong>
+                            La contraseña debe tener de 8 a 16 caracteres.
+                            <br>Debe contener al menos una "mayuscula" y un "digito".
+                        </div>
+                        <!--Alerta Contraseña-->
+                        <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword2">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <strong>Validación Contraseña:</strong>
+                            La validación de contraseña debe tener de 8 a 16 caracteres, 
+                            <br>Debe contener al menos una "mayuscula" y un "digito"
+                            <br>y coincidir con la contraseña.
+                        </div>
                     </div>
-                    <!--Alerta Contraseña-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <strong>Contraseña:</strong>
-                        La contraseña debe tener de 8 a 16 caracteres.
-                        <br>Debe contener al menos una "mayuscula" y un "digito".
-                    </div>
-                    <!--Alerta Contraseña-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword2">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <strong>Validación Contraseña:</strong>
-                        La validación de contraseña debe tener de 8 a 16 caracteres, 
-                        <br>Debe contener al menos una "mayuscula" y un "digito"
-                        <br>y coincidir con la contraseña.
+                    <div class="col-md-4">
+                        <!--Campo Provincia-->
+                        <span class="texto">Provincia </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvincia"></i>
+                        <br>
+                        <input type="text" class="form-control inputs" name="provincia" id="provincia">
+                        <br>
+                        <!--Campo Localidad-->
+                        <span class="texto">Localidad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoLocalidad"></i>
+                        <br>
+                        <input type="text" class="form-control inputs" name="calle" id="localidad">
+                        <br>
+                        <!--Campo Calle-->
+                        <span class="texto">Nombre de Calle/Avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCalle"></i>
+                        <br>
+                        <input type="text" class="form-control inputs" name="calle" id="calle">
+                        <br>
+                        <!--Campo Número-->
+                        <span class="texto">Altura de Calle/Avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAltura"></i>
+                        <br>
+                        <input type="text" class="form-control inputs" name="altura" id="altura">
+                        <br>
+                        <!--Campo Departamento-->
+                        <span class="texto">Departamento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoDepartamento"></i>
+                        <br>
+                        <input type="text" class="form-control inputs" name="departamento" id="departamento">
+
+                        <!--Latitud y Longitud se calcularan más adelante-->
+                        
+                        <button type="submit" class="btn btn-warning botonLogin" name="boton" id="boton">
+                            <span id="loguearse">Crear Perfil</span>
+                        </button>     
                     </div>
                 </div>
-                <div class="col-md-4 panel3">
-                    <h5 class="titulo">Datos de Ubicación</h5>
-                    <br>
-                    <!--Campo Provincia-->
-                    <span class="texto">Provincia </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvincia"></i>
-                    <br>
-                    <input type="text" class="form-control inputs" name="provincia" id="provincia">
-                    <br>
-                    <!--Campo Localidad-->
-                    <span class="texto">Localidad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoLocalidad"></i>
-                    <br>
-                    <input type="text" class="form-control inputs" name="calle" id="localidad">
-                    <br>
-                    <!--Campo Calle-->
-                    <span class="texto">Nombre de Calle/Avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCalle"></i>
-                    <br>
-                    <input type="text" class="form-control inputs" name="calle" id="calle">
-                    <br>
-                    <!--Campo Número-->
-                    <span class="texto">Altura de Calle/Avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAltura"></i>
-                    <br>
-                    <input type="text" class="form-control inputs" name="altura" id="altura">
-                    <br>
-                    <!--Campo Departamento-->
-                    <span class="texto">Departamento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoDepartamento"></i>
-                    <br>
-                    <input type="text" class="form-control inputs" name="departamento" id="departamento">
-
-                    <!--Latitud y Longitud se calcularan más adelante-->
-                    
-                    <button type="submit" class="btn btn-warning botonLogin" name="boton" id="boton">
-                        <span id="loguearse">Crear Perfil</span>
-                    </button>     
-                </form> 
-            </div>
+            </form> 
             <div class="col-md-2"></div>
         </div>
     </div>

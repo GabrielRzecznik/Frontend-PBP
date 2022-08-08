@@ -42,6 +42,8 @@ body{
   padding-bottom: 25px;
   border-top-right-radius: 2%;
   border-bottom-right-radius: 2%;
+  border-top-left-radius: 2%;
+  border-bottom-left-radius: 2%;
 }
 
 .titulo{
