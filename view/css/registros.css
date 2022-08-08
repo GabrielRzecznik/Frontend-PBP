@@ -152,9 +152,13 @@ body{
 }
 
 .contenedorPaciente{
+  width: 150px;
+  height: 150px;
   background-color: #D1F2EB;
 }
 
 .contenedorProfesional{
+  width: 150px;
+  height: 150px;
   background-color: #D6EAF8;
 }
