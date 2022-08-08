@@ -10,14 +10,14 @@
     <!--Css-->
     <link rel="stylesheet" href="./css/registros.css"><!--UNIFICAR NOMBRES DE ESTILO REGISTRO-->
     <!--<link rel="icon" href="./favicon.ico">-->
-    <title>Registro Usuario - Profesional By Proximity</title>
+    <title>Registro Perfil - Profesional By Proximity</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-4 panel1">
-                <h5 class="titulo">Complete sus datos personales</h5>
+                <h5 class="titulo">Datos Personales</h5>
                 <br>
                 <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
                     <!--Campo Nombre-->
@@ -55,8 +55,6 @@
                     <br>
                     <input type="text" class="form-control inputs" name="telefono" id="telefono">
                     <br>
-
-
                    
                     <!--<a href="./view/grilla.html" class="btn btn-warning botonLogin" name="boton" id="boton">
                         <span id="loguearse">Iniciar Sesión</span>
@@ -95,6 +93,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 panel3">
+                    <h5 class="titulo">Datos de Ubicación</h5>
+                    <br>
                     <!--Campo Provincia-->
                     <span class="texto">Provincia </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvincia"></i>
                     <br>
@@ -123,17 +123,8 @@
                     <!--Latitud y Longitud se calcularan más adelante-->
                     
                     <button type="submit" class="btn btn-warning botonLogin" name="boton" id="boton">
-                        <span id="loguearse">Crear Usuario</span>
-                    </button>
-                    
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="btn btn-secondary botonesSecundarios" href="#">Restablecer</a>  
-                        </div>
-                        <div class="col-md-6">
-                            <a class="btn btn-secondary botonesSecundarios" href="../">Iniciar Sesión</a>
-                        </div>
-                    </div>        
+                        <span id="loguearse">Crear Perfil</span>
+                    </button>     
                 </form> 
             </div>
             <div class="col-md-2"></div>
