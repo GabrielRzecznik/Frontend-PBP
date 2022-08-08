@@ -124,3 +124,21 @@ body{
 .espaciar{
   color: rgba(255, 255, 255, 0);
 }
+
+.paciente{
+  background-color: #F5B041;
+}
+
+.profesional{
+  background-color: #3498DB;
+}
+
+.iconoPaciente{
+  width: 100px;
+  height: 100px;
+}
+
+.iconoProfesional{
+  width: 100px;
+  height: 100px;
+}
