@@ -151,8 +151,8 @@ body{
 
 .contenedorPaciente{
   border-radius: 2px;
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   background-color: #D1F2EB;
 }
 
