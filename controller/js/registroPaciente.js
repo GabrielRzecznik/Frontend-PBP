@@ -24,7 +24,7 @@ const expresiones = {
     localidad: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     calle: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü 0-9\s]{2,35}$/,
     altura: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{1,6}$/,
-    departamento: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{1,4}$/
+    departamento: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{1,10}$/
 };
 
 const campos = {
@@ -397,13 +397,13 @@ formulario.addEventListener('submit', (e) => {
     const apellidoValue = apellido.value.trim();
     //const fechaNacimientoValue = fechaNacimiento.value.trim();
     const sexoValue = sexo.value.trim();
-    const fotoValue = foto.value.trim();
+    //const fotoValue = foto.value.trim();
     const telefonoValue = telefono.value.trim();
     const provinciaValue = provincia.value.trim();
     const localidadValue = localidad.value.trim();
     const calleValue = calle.value.trim();
     const alturaValue = altura.value.trim();
-    const departamentoValue = departamento.value.trim();
+    //const departamentoValue = departamento.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
@@ -427,7 +427,7 @@ formulario.addEventListener('submit', (e) => {
         alert("Complete el campo altura");
     }
     
-    if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
+    if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura) {
         //Enviar AJAX
         registrarPaciente(formulario);
         //AGREGAR Animación de cargando
