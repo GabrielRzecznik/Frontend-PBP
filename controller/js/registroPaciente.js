@@ -17,7 +17,6 @@ function load(){
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-    //VALIDAR TODAS!!
     nombre: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,30}$/,
     apellido: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,30}$/,
     telefono: /^[0-9]\S{5,15}$/,
