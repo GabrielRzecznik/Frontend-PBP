@@ -42,7 +42,7 @@
                             <span class="texto">Sexo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoSexo"></i>
                             <br>
                             <select class="form-select" id="sexo" aria-label="Floating label select example">
-                                <option selected>Como figura en su DNI</option>
+                                <option value="0" selected>Como figura en su DNI</option>
                                 <option value="Masculino">Masculino</option>
                                 <option value="Femenino">Femenino</option>
                                 <option value="X">X</option>
@@ -51,47 +51,13 @@
                             <!--Campo Foto-->
                             <span class="texto">Foto </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFoto"></i>
                             <br>
-                            <input type="file" class="form-control inputs" name="departamento" id="foto">
+                            <input type="file" class="form-control inputs" name="foto" id="foto">
                             <br>
                             <!--Campo Telefono-->
                             <span class="texto">Télefono </span><i class="bi bi-x-circle-fill iconos validado" id="iconoTelefono"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="telefono" id="telefono">
                             <br>
-                            <!--<a href="./view/grilla.html" class="btn btn-warning botonLogin" name="boton" id="boton">
-                                <span id="loguearse">Iniciar Sesión</span>
-                            </a>-->
-                            <!--Alerta Nombre Usuario-->
-                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
-                                <i class="bi bi-info-circle-fill"></i>
-                                <strong>Nombre de Usuario:</strong>
-                                El nombre de usuario ingresado no es valido
-                                <br>a una dirección valida.
-                                <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
-                            </div>   
-                            <!--Alerta Correo-->
-                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
-                                <i class="bi bi-info-circle-fill"></i>
-                                <strong>Correo:</strong>
-                                El correo ingresado no corresponde
-                                <br>a una dirección valida.
-                                <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
-                            </div>
-                            <!--Alerta Contraseña-->
-                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
-                                <i class="bi bi-info-circle-fill"></i>
-                                <strong>Contraseña:</strong>
-                                La contraseña debe tener de 8 a 16 caracteres.
-                                <br>Debe contener al menos una "mayuscula" y un "digito".
-                            </div>
-                            <!--Alerta Contraseña-->
-                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword2">
-                                <i class="bi bi-info-circle-fill"></i>
-                                <strong>Validación Contraseña:</strong>
-                                La validación de contraseña debe tener de 8 a 16 caracteres, 
-                                <br>Debe contener al menos una "mayuscula" y un "digito"
-                                <br>y coincidir con la contraseña.
-                            </div>
                         </div>
                         <div class="col-md-6">
                             <!--Campo Provincia-->
@@ -102,7 +68,7 @@
                             <!--Campo Localidad-->
                             <span class="texto">Localidad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoLocalidad"></i>
                             <br>
-                            <input type="text" class="form-control inputs" name="calle" id="localidad">
+                            <input type="text" class="form-control inputs" name="localidad" id="localidad">
                             <br>
                             <!--Campo Calle-->
                             <span class="texto">Nombre de Calle/Avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCalle"></i>
@@ -119,6 +85,72 @@
                             <br>
                             <input type="text" class="form-control inputs" name="departamento" id="departamento">
                             <!--Latitud y Longitud se calcularan más adelante-->
+
+                            <!--Alerta Nombre-->
+                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombre">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Nombre: </strong>
+                                El nombre ingresado no es valido!
+                                <br>Debe tener de 2 a 30 caracteres los cuales no 
+                                <br>puede ser numeros ni caracteres especiales.
+                            </div>   
+                            <!--Alerta Apellido-->
+                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertApellido">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Apellido: </strong>
+                                El apellido ingresado no es valido!
+                                <br>Debe tener de 2 a 30 caracteres los cuales no 
+                                <br>puede ser numeros ni caracteres especiales.
+                            </div>
+                            <!--Alerta Fecha Nacimiento-->
+                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertFechaNacimiento">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Fecha de nacimiento: </strong>
+                                Debes ser mayor de 16 años para utilizar
+                                <br>nuestros servicios!
+                            </div>
+                            <!--Alerta Sexo-->
+                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertSexo">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Sexo: </strong>
+                                El campo sexo es obligatorio!
+                            </div>
+                             <!--Alerta Télefno-->
+                             <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertTelefono">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Télefono: </strong>
+                                El télefono ingresado no es valido!
+                            </div> 
+                             <!--Alerta Provincia-->
+                             <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertProvincia">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Provincia</strong>
+                                La provincia ingresada no es valida!
+                            </div> 
+                             <!--Alerta Localidad-->
+                             <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertLocalidad">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Localidad: </strong>
+                                La localidad ingresada no es valida!
+                            </div> 
+                             <!--Alerta Calle/Avenida-->
+                             <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCalle">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Calle/Avenida: </strong>
+                                La calle o avenida ingresada no es valida!
+                            </div> 
+                             <!--Alerta Altura-->
+                             <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertAltura">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Altura: </strong>
+                                La altura ingresada no es vailida!
+                            </div> 
+                             <!--Alerta -->
+                             <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDepartamento">
+                                <i class="bi bi-info-circle-fill"></i>
+                                <strong>Departamento: </strong>
+                                El departamento ingresado no es valido!
+                            </div> 
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning botonPerfil" name="boton" id="boton">
