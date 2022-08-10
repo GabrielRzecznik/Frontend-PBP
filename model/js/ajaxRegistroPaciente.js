@@ -12,7 +12,7 @@ function registrarPaciente(formulario){
                 //var respuestaResivida = xmlhttp.responseText;
                 //alert(respuestaResivida);
                 
-                //window.location.href = "https://frontend-pbp.herokuapp.com/view/seleccionRol.html";   ESTE
+                window.location.href = "https://frontend-pbp.herokuapp.com/view/seleccionRol.html";   ESTE
                 
             }else if (xmlhttp.status == 500) {
                 alert("Ocurrio un error inesperado con el correo ingresado");
