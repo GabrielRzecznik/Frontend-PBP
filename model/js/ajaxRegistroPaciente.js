@@ -1,7 +1,7 @@
-function registrarPaciente(formulario, id_usuario){
-    var formData= new FormData(formulario + id_usuario); //Las keys corresponden al atributo name de cada elemento  
-    var formJSON=JSON.stringify(Object.fromEntries(formData));
-
+function registrarPaciente(formulario){
+    var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
+    var formJSON=JSON.stringify(Object.fromEntries(formData), localStorage.getItem("id_usuario"));
+    console.log(formJSON);
     xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
@@ -9,7 +9,8 @@ function registrarPaciente(formulario, id_usuario){
             if (xmlhttp.status == 200) {
                 //var respuestaResivida = xmlhttp.responseText;
                 //alert(respuestaResivida);
-                window.location.href = "https://frontend-pbp.herokuapp.com/view/seleccionRol.html";
+                
+                //window.location.href = "https://frontend-pbp.herokuapp.com/view/seleccionRol.html";   ESTE
                 
             }else if (xmlhttp.status == 500) {
                 alert("Ocurrio un error inesperado con el correo ingresado");
