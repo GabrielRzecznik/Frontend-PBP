@@ -146,8 +146,6 @@ formulario.addEventListener('submit', (e) => {
     if (campos.correo && campos.password && (passwordValue === password2Value)) {
         //Enviar AJAX
         registrarUsuario(formulario);
-
-        buscarUsuario(formulario);
         //Cargando
         //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
         //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
