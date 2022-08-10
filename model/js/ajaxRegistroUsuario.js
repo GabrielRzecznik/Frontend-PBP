@@ -9,7 +9,8 @@ function registrarUsuario(formulario){
             if (xmlhttp.status == 200) {
                 //var respuestaResivida = xmlhttp.responseText;
                 //alert(respuestaResivida);
-                //window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPaciente.html";
+                localStorage.setItem("id_usuario", data[0]["id_usuario"]);//Me guarda el id_usuario de la bd
+                window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPaciente.html";
             }else if (xmlhttp.status == 500) {
                 alert("Ocurrio un error inesperado con el correo ingresado");
                 //Marcar Correo
