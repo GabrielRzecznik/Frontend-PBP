@@ -147,7 +147,7 @@ formulario.addEventListener('submit', (e) => {
         //Enviar AJAX
         registrarUsuario(formulario);
 
-        buscarUsuario(correoValue, passwordValue);
+        buscarUsuario(formulario);
         //Cargando
         //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
         //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
