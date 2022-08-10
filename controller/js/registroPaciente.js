@@ -431,6 +431,7 @@ formulario.addEventListener('submit', (e) => {
         //Enviar AJAX
         registrarPaciente(formulario);
         //AGREGAR Animación de cargando
+
     }
 
 }); 
