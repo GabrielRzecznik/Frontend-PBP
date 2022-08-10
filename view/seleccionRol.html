@@ -19,28 +19,26 @@
             <div class="col-md-8 panel3">
                 <h5 class="titulo">Usted es?</h5>
                 <br>
-                <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
-                    <div class="row">
-                        <div class="col-md-6 paciente">
-                            <div class="contenedorPaciente">
-                                <img class="iconoPaciente" src="../view/img/paciente.png" alt="Error al cargar imagen de paciente'">
-                                <h5 class="titulo">Solo Paciente</h5>
-                            </div>
+                <div class="row">
+                    <div class="col-md-6 paciente">
+                        <div class="contenedorP opciones" id="paciente">
+                            <img class="iconoPaciente" src="../view/img/paciente.png" alt="Error al cargar imagen de paciente'">
+                            <h5 class="titulo">Solo Paciente</h5>
                         </div>
-                        <div class="col-md-6 profesional">
-                            <div class="contenedorProfesional">
-                                <img class="iconoProfesional" src="../view/img/profesional.png" alt="Error al cargar imagen de profesional'">
-                                <h5 class="titulo">Profesional</h5>
-                                <span>(Tambien puede ser paciente)</span>
-                            </div>
-                        </div>  
-                    </div> 
-                </form> 
+                    </div>
+                    <div class="col-md-6 profesional">
+                        <div class="contenedorP opciones" id="profesional">
+                            <img class="iconoProfesional" src="../view/img/profesional.png" alt="Error al cargar imagen de profesional'">
+                            <h5 class="titulo">Profesional</h5>
+                            <span>(Tambien puede ser paciente)</span>
+                        </div>
+                    </div>  
+                </div> 
             <div class="col-md-2"></div>
             </div>
         </div>
     </div>
-    <script src="../controller/js/registroPaciente.js"></script>
-    <script src="../model/js/ajaxRegistroPaciente.js"></script>
+    <script src="../controller/js/seleccionRol.js"></script>
+    <script src="../model/js/ajaxSeleccionRol.js"></script>
 </body>
 </html>
