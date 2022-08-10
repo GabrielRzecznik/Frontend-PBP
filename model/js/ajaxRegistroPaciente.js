@@ -1,6 +1,6 @@
 function registrarPaciente(formulario){
     var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
-    var formJSON=JSON.stringify(Object.fromEntries(formData), localStorage.getItem("id_usuario"));
+    var formJSON=JSON.stringify(Object.fromEntries(formData)+ localStorage.getItem("id_usuario"));
     console.log(formJSON);
     xmlhttp = new XMLHttpRequest();
 
