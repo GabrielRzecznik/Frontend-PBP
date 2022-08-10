@@ -429,7 +429,7 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura) {
         //Enviar AJAX
-        registrarPaciente(formulario);
+        registrarPaciente(formulario, localStorage.setItem("id_usuario"));
         //AGREGAR Animación de cargando
 
     }

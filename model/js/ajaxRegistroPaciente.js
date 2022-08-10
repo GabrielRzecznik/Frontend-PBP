@@ -1,5 +1,5 @@
-function registrarPaciente(formulario){
-    var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
+function registrarPaciente(formulario, id_usuario){
+    var formData= new FormData(formulario + id_usuario); //Las keys corresponden al atributo name de cada elemento  
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
@@ -9,7 +9,6 @@ function registrarPaciente(formulario){
             if (xmlhttp.status == 200) {
                 //var respuestaResivida = xmlhttp.responseText;
                 //alert(respuestaResivida);
-                localStorage.setItem("id_paciente", data[0]["id_paciente"]);//Me guarda el id_usuario de la bd
                 window.location.href = "https://frontend-pbp.herokuapp.com/view/seleccionRol.html";
                 
             }else if (xmlhttp.status == 500) {
