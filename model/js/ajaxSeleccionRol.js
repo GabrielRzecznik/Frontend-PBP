@@ -1,6 +1,7 @@
 function seleccionRol(respuesta){
     var formData= new FormData();
-    formData.append("id_usuario", localStorage.getItem("id_usuario"), "estadoPerfil", respuesta);
+    formData.append("id_usuario", localStorage.getItem("id_usuario"));
+    formData.append("estadoPerfil", respuesta);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
