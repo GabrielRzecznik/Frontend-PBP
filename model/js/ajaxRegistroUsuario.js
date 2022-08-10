@@ -9,8 +9,6 @@ function registrarUsuario(formulario){
             if (xmlhttp.status == 200) {
                 //var respuestaResivida = xmlhttp.responseText;
                 //alert(respuestaResivida);
-                xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/buscarUsuario',true);
-                xmlhttp.send(formJSON);
                 //window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPaciente.html";
             }else if (xmlhttp.status == 500) {
                 alert("Ocurrio un error inesperado con el correo ingresado");
