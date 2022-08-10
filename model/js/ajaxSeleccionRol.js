@@ -3,6 +3,7 @@ function seleccionRol(respuesta){
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
     formData.append("estadoPerfil", respuesta);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
+    console.log(formJSON)
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
