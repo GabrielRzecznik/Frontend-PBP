@@ -1,15 +1,13 @@
-
-
-#nombreOpcion{
-    display: none;
-}    
-
-@media (max-width: 768px) {
-    #nombreOpcion{
-        display: block;
-    }
+.seleccionado{
+    color: #191919;
 }
 
-.centrado{
-    text-align: center;
+.ulNav{
+    color: #7f7f7f;
+    list-style-type: none;
+}
+
+.liNav{
+    float: right;
+    width: 1.9em;
 }

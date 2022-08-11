@@ -14,39 +14,47 @@
     <title>Inicio - Profesional By Proximity</title>
 </head>
 <body>
-	<!--Navegador-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Profesional By Proximity</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse centrado" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-fill"></i><span id="nombreOpcion">Inicio</span></a><!--Icono Inicio-->
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://frontend-pbp.herokuapp.com/view/chats.html"><i class="bi bi-chat-square-text-fill"></i><span id="nombreOpcion">Chat</span></a><!--Icono Chat-->
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://frontend-pbp.herokuapp.com/view/notificaciones.html"><i class="bi bi-bell-fill"></i><span id="nombreOpcion">Notificaciones</span></a><!--Icono Notificaciones-->
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-person-circle"></i>&nbsp;<span id="nombreUsuario"></span>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="https://frontend-pbp.herokuapp.com/view/perfil.html">Perfil</a></li>
-                  <li><a class="dropdown-item" href="https://frontend-pbp.herokuapp.com/view/grilla.html">Mi Grilla</a></li>
-				  <li><a class="dropdown-item" href="#">Configuración</a></li>
-                  <li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesion</a></li>
-                </ul>
-              </li>
-            </ul>
-        </div>
-    </nav>
+	<!--Encabezado - Nav-->
+	<header class="py-3 mb-3 border-bottom bg-light"><!--bg-light se utiliza para cambiarle el color!-->
+		<div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+			<div class="dropdown">
+				<a class="navbar-brand" href="#">Profesional By Proximity</a>
+			</div>
+
+			<div class="d-flex align-items-center">
+				<span class="w-100 me-3 derecha">
+					<ul class="ulNav">
+						<li class="liNav">
+							<a class="nav-link" href="https://frontend-pbp.herokuapp.com/view/notificaciones.html"><i class="bi bi-bell-fill"></i></a><!--Icono Notificaciones-->
+						</li>
+						<li class="liNav">
+							<a class="nav-link" href="https://frontend-pbp.herokuapp.com/view/chats.html"><i class="bi bi-chat-square-text-fill"></i></a><!--Icono Chat-->
+						</li>
+						<li class="liNav">
+							<a class="nav-link seleccionado" aria-current="page" href="#"><i class="bi bi-house-fill"></i></a><!--Icono Inicio-->
+						</li>
+					</ul>
+				</span>
+
+
+				<div class="flex-shrink-0 dropdown">
+
+					<a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+						<img src="https://media-exp2.licdn.com/dms/image/C4E03AQFqnYkF8f8G5Q/profile-displayphoto-shrink_200_200/0/1568049257107?e=2147483647&v=beta&t=og95w95IygkAS2sp8neNYvmMtcGhSgzsNv8rwWtrFLM" alt="mdo" width="32" height="32" class="rounded-circle">
+						<span id="nombreUsuario"></span>
+					</a>
+					
+					<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+						<li><a class="dropdown-item" href="https://frontend-pbp.herokuapp.com/view/perfil.html">Perfil</a></li>
+						<li><a class="dropdown-item" href="https://frontend-pbp.herokuapp.com/view/grilla.html">Mi Grilla</a></li>
+						<li><a class="dropdown-item" href="#">Configuración</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesion</a></li>
+					</ul>
+				</div>
+		  	</div>
+		</div>
+	</header>
 	<br>
 	<div class="container">
 		<div class="row">
