@@ -15,6 +15,6 @@ function seleccionRol(respuesta){
             }   
         }
     }
-    xmlhttp.open("PUT",'https://parcial-edi-backend.herokuapp.com/Pacientes/estadoPaciente',true);
+    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Pacientes/estadoPaciente',true);
     xmlhttp.send(formJSON);
 }
