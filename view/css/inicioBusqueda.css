@@ -23,3 +23,21 @@
 	margin-top: 4%;
 	width: 110%;
 }
+
+.campos{
+	margin-top: 3%;
+}
+
+.contenedores{
+	padding: 1%;
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.centrado{
+	display: flex;
+	justify-content: center;
+	/*align-items: center; -- centrado vertical*/
+}
+

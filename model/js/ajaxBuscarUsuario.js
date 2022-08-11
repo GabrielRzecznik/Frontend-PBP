@@ -21,6 +21,8 @@ function buscarUsuario(formulario){
                 window.location.href = "https://frontend-pbp.herokuapp.com/view/inicioBusqueda.html";
             }if (xmlhttp.status == 401) {
                 alert("No se encontro el usuario!");
+                document.getElementById('cargando').style.display = 'none';
+                document.getElementById('loguearse').style.display = 'block';
                 //document.querySelector('#loguearse').classList.remove('invisible');
                 //document.querySelector('#cargando').classList.add('invisible');
             }

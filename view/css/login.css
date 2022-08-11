@@ -38,8 +38,10 @@ body{
 
 .botonLogin{
     width: 100%;
+    height: 38px;
     margin-top: 10%;
     margin-bottom: 4%;
+    text-align: center;
 }
 
 .botonesSecundarios{
@@ -95,4 +97,17 @@ body{
   .signo{
     visibility: visible;
     color: rgb(255, 185, 93);
+  }
+
+  .cargando{
+    display: none;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    margin: 0 auto;
+  }
+
+  .loguearse{
+    text-align: center;
+    display: block;
   }

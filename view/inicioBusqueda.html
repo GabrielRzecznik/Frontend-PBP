@@ -20,7 +20,6 @@
 			<div class="dropdown">
 				<a class="navbar-brand" href="#">Profesional By Proximity</a>
 			</div>
-
 			<div class="d-flex align-items-center">
 				<span class="w-100 me-3 derecha">
 					<ul class="ulNav">
@@ -35,8 +34,6 @@
 						</li>
 					</ul>
 				</span>
-
-
 				<div class="flex-shrink-0 dropdown">
 
 					<a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,7 +44,7 @@
 					<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
 						<li><a class="dropdown-item" href="https://frontend-pbp.herokuapp.com/view/perfil.html">Perfil</a></li>
 						<li><a class="dropdown-item" href="https://frontend-pbp.herokuapp.com/view/grilla.html">Mi Grilla</a></li>
-						<li><a class="dropdown-item" href="#">Configuración</a></li>
+						<li><a class="dropdown-item" href="#" id="conf">Configuración</a></li>
 						<li><hr class="dropdown-divider"></li>
 						<li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesion</a></li>
 					</ul>
@@ -55,112 +52,237 @@
 		  	</div>
 		</div>
 	</header>
-	<br>
-	<div class="container">
-		<div class="row">
-			<div class="col-1"></div>
-			<div class="col-md-5">
-				<!--Cartas de bootstrap-->
-				<div class="card bg-light carta">
-					<div class="row">
-						<div class="col-7">
-							<div class="card-body">
-								<div class="row">
-									<div class="col-3">
-										<div class="fotoProfesional">
-											<i class="bi bi-person-fill"></i>
-										</div>
-									</div>
-									<div class="col-9">
-										<h5>
-											<span id="mostrarNombreProfesional">Gabriel</span>
-											<span id="mostrarApellidoProfesional">Rzecznik</span>
-										</h5>
-										<h6 id="mostrarProfesion">Psiquiatra</h6>										
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-6">
-										<span id="mostrarProvinciaProfesional">Buenos Aires</span>
-										<br>
-										<span id="mostrarLocalidadProfesional">Avellaneda</span>
-										<br>
-										<span id="mostrarSexoProfesional">Masculino</span>
-										<br>
-										<span id="mostrarEdadProfesional">23 años</span>
-									</div>
-									<div class="col-6">
-										<span class="badge rounded-pill bg-secondary">Osde</span>
-										<br>
-										<span class="badge rounded-pill bg-secondary">10 km</span>
-									</div>
-								</div>
-								<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>
-							</div>
-						</div>
-						<div class="col-5">
-							<div id="map"></div>
-						</div>
-					</div>
-				</div>
+	<div class="container-fluid">
+		<div class="row centrado">
+			<div class="col-md-3 bg-light border rounded-3 contenedores">
+				
+				<select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example">
+					<option value="0" selected>Especialidad</option>
+					<option value="Alergia e inmunologia infantil">Alergología e inmunología</option>
+					<option value="Alergia e inmunologia">Alergología e inmunología</option>
+					<option value="Anatomia patologica">Anatomía patológica</option>
+					<option value="Anestesiología">Anestesiología</option>
+					<option value="Angiologia general y hemodinamia">Angiologia general y hemodinamia</option>
+					<option value="Cardiologia infantil">Cardiologia infantil</option>
+					<option value="Cardiologia">Cardiologia</option>
+					<option value="Cirugia cardiovascular infantil">Cirugia cardiovascular infantil</option>
+					<option value="Cirugia cardiovascular">Cirugia cardiovascular</option>
+					<option value="Cirugia de cabeza y cuello">Cirugia de cabeza y cuello</option>
+					<option value="Cirugia toracica">Cirugia toracica</option>
+					<option value="Cirugia general">Cirugia general</option>
+					<option value="Cirugia infantil">Cirugia infantil</option>
+					<option value="Cirugia plastica y reparadora">Cirugia plastica y reparadora</option>
+					<option value="Cirugia vascular periferica">Cirugia vascular periferica</option>
+					<option value="Clinica">Clinica</option>
+					<option value="Coloproctologia">Coloproctologia</option>
+					<option value="Dermatologia infantil">Dermatologia infantil</option>
+					<option value="Dermatologia">Dermatologia</option>
+					<option value="Diagnostico por imagenes">Diagnostico por imagenes</option>
+					<option value="Electro fisiologia cardiaca">Electro fisiologia cardiaca</option>
+					<option value="Emergentologia">Emergentologia</option>
+					<option value="Endocrinologia infantil">Endocrinologia infantil</option>
+					<option value="Endocrinologia">Endocrinologia</option>
+					<option value="Farmacologia clinica">Farmacologia clinica</option>
+					<option value="Fisiatria">Fisiatria</option>
+					<option value="Gastroenterologia infantil">Gastroenterologia infantil</option>
+					<option value="Gastroenterologia">Gastroenterologia</option>
+					<option value="Genetrica">Genetrica</option>
+					<option value="Geriatria">Geriatria</option>
+					<option value="Ginecologia">Ginecologia</option>
+					<option value="Hematologia">Hematologia</option>
+					<option value="Hemato-oncologia infantil">Hemato-oncologia infantil</option>
+					<option value="Hemoterapia e inmunohematologia">Hemoterapia e inmunohematologia</option>
+					<option value="Hepatologia infantil">Hepatologia infantil</option>
+					<option value="Hepatologia">Hepatologia</option>
+					<option value="Infectologia infantil">Infectologia infantil</option>
+					<option value="Infectologia">Infectologia</option>
+					<option value="Medicina del deporte">Medicina del deporte</option>
+					<option value="Medicina del trabajo">Medicina del trabajo</option>
+					<option value="Medicina general y/o familia">Medicina general</option>
+					<option value="Medicina legal">Medicina legal</option>
+					<option value="Medicina nuclear">Medicina nuclear</option>
+					<option value="Medicina palitativa">Medicina palitativa</option>
+					<option value="Nefrologia infantil">Nefrologia infantil</option>
+					<option value="Nefrologia">Nefrologia</option>
+					<option value="Neonatologia">Neonatologia</option>
+					<option value="Neumonologia infantil">Neumonologia infantil</option>
+					<option value="Neumonologia">Neumonologia</option>
+					<option value="Neurocirugia">Neurocirugia infantil</option>
+					<option value="Neurocirugia">Neurocirugia</option>
+					<option value="Nutricion">Nutricion</option>
+					<option value="Obstetricia">Obstetricia</option>
+					<option value="Oftalmologia">Oftalmologia</option>
+					<option value="Oncologia">Oncologia</option>
+					<option value="Ortopedia y traumatologia infantil">Ortopedia y traumatologia infantil</option>
+					<option value="Ortopedia y traumatologia">Ortopedia y traumatologia</option>
+					<option value="Ortopedia y traumatologia otorrinolaringologia infantil">Ortopedia y traumatologia otorrinolaringologia infantil</option>
+					<option value="Ortopedia y traumatologia otorrinolaringologia">Ortopedia y traumatologia otorrinolaringologia</option>
+					<option value="Psiquiatria infanto juvenil">Psiquiatria infanto juvenil</option>
+					<option value="Psiquiatria">Psiquiatria</option>
+					<option value="Radioterapia">Radioterapia</option>
+					<option value="Reumatologia infantil">Reumatologia infantil</option>
+					<option value="Reumatologia">Reumatologia</option>
+					<option value="Terapia intensiva">Terapia intensiv</option>
+					<option value="Terapista intensivo infantil">Terapista intensivo infantil</option>
+					<option value="Tocoginecologia">Tocoginecologia</option>
+					<option value="Toxicologia">Toxicologia</option>
+					<option value="Urologia">Urologia</option>
+				</select>
+			
+				<select class="form-select campos" name="sexo" id="sexo" aria-label="Floating label select example">
+					<option value="0" selected>Sexo</option>
+					<option value="Masculino">Masculino</option>
+					<option value="Femenino">Femenino</option>
+					<option value="X">X</option>
+				</select>
+			
+				<input type="text" class="form-control campos" name="obraSocial" id="obraSocial" placeholder="Obra social" aria-label="Obra social" aria-describedby="basic-addon1">
+			
+				<select class="form-select campos" name="ubicacion" id="ubicacion" aria-label="Floating label select example">
+					<option value="0" selected>Cambiar ubicación</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+
+				<button type="button" class="btn btn-primary campos"><i class="bi bi-search"></i></button>
 			</div>
 
-			<div class="col-md-5">
-				<!--Cartas de bootstrap-->
-				<div class="card bg-light carta">
-					<div class="row">
-						<div class="col-7">
-							<div class="card-body">
-								<div class="row">
-									<div class="col-3">
-										<div class="fotoProfesional">
-											<i class="bi bi-person-fill"></i>
+			<div class="col-md-8 bg-light border rounded-3 contenedores">
+				<div class="row">
+					<div class="col-1"></div>
+					<div class="col-md-5">
+						<!--Cartas de bootstrap-->
+						<div class="card bg-light carta">
+							<div class="row">
+								<div class="col-7">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-3">
+												<div class="fotoProfesional">
+													<i class="bi bi-person-fill"></i>
+												</div>
+											</div>
+											<div class="col-9">
+												<h5>
+													<span id="mostrarNombreProfesional">Gabriel</span>
+													<span id="mostrarApellidoProfesional">Rzecznik</span>
+												</h5>
+												<h6 id="mostrarProfesion">Psiquiatra</h6>										
+											</div>
 										</div>
-									</div>
-									<div class="col-9">
-										<h5>
-											<span id="mostrarNombreProfesional">Gabriel</span>
-											<span id="mostrarApellidoProfesional">Rzecznik</span>
-										</h5>
-										<h6 id="mostrarProfesion">Psiquiatra</h6>										
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-6">
-										<span id="mostrarProvinciaProfesional">Buenos Aires</span>
-										<br>
-										<span id="mostrarLocalidadProfesional">Avellaneda</span>
-										<br>
-										<span id="mostrarSexoProfesional">Masculino</span>
-										<br>
-										<span id="mostrarEdadProfesional">23 años</span>
-									</div>
-									<div class="col-6">
-										<span class="badge rounded-pill bg-secondary">Osde</span>
-										<br>
-										<span class="badge rounded-pill bg-secondary">10 km</span>
+										<div class="row">
+											<div class="col-6">
+												<span id="mostrarProvinciaProfesional">Buenos Aires</span>
+												<br>
+												<span id="mostrarLocalidadProfesional">Avellaneda</span>
+												<br>
+												<span id="mostrarSexoProfesional">Masculino</span>
+												<br>
+												<span id="mostrarEdadProfesional">23 años</span>
+											</div>
+											<div class="col-6">
+												<span class="badge rounded-pill bg-secondary">Osde</span>
+												<br>
+												<span class="badge rounded-pill bg-secondary">10 km</span>
+											</div>
+										</div>
+										<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>
 									</div>
 								</div>
-								<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>
+								<div class="col-5">
+									<div id="map"></div>
+								</div>
 							</div>
 						</div>
-						<div class="col-5">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105013.19386564016!2d-58.450681078428154!3d-34.66323027721879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33348525b8105%3A0x688c2224c9769fa1!2sInstituto%20Tecnol%C3%B3gico%20Beltr%C3%A1n!5e0!3m2!1ses-419!2sar!4v1654496080028!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+		
+					<div class="col-md-5">
+						<!--Cartas de bootstrap-->
+						<div class="card bg-light carta">
+							<div class="row">
+								<div class="col-7">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-3">
+												<div class="fotoProfesional">
+													<i class="bi bi-person-fill"></i>
+												</div>
+											</div>
+											<div class="col-9">
+												<h5>
+													<span id="mostrarNombreProfesional">Gabriel</span>
+													<span id="mostrarApellidoProfesional">Rzecznik</span>
+												</h5>
+												<h6 id="mostrarProfesion">Psiquiatra</h6>										
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-6">
+												<span id="mostrarProvinciaProfesional">Buenos Aires</span>
+												<br>
+												<span id="mostrarLocalidadProfesional">Avellaneda</span>
+												<br>
+												<span id="mostrarSexoProfesional">Masculino</span>
+												<br>
+												<span id="mostrarEdadProfesional">23 años</span>
+											</div>
+											<div class="col-6">
+												<span class="badge rounded-pill bg-secondary">Osde</span>
+												<br>
+												<span class="badge rounded-pill bg-secondary">10 km</span>
+											</div>
+										</div>
+										<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>
+									</div>
+								</div>
+								<div class="col-5">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105013.19386564016!2d-58.450681078428154!3d-34.66323027721879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33348525b8105%3A0x688c2224c9769fa1!2sInstituto%20Tecnol%C3%B3gico%20Beltr%C3%A1n!5e0!3m2!1ses-419!2sar!4v1654496080028!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								</div>
+							</div>
 						</div>
 					</div>
+					<div class="col-1"></div>
 				</div>
 			</div>
-			<div class="col-1"></div>
-			</div>
+		</div>
+		
+
+
+
+
+
+
+
 			<br>
 			<span>Nota: se podran guardar ubicaciones oprimiendo un boton, al igual que la dirección del consultorio</span>
 			<button class="btn">Guardar Ubicación</button>
+	</div>
+
+	<!--Modal - Configuración-->
+	<div class="modal fade" id="confirmación-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Configuración <i class="bi bi-gear-fill"></i></h5>
+					<button id="cerrar" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+				</div>
+
+				<div class="modal-body">
+					En desarrollo...
+				</div>
+			   
+		  </div>
 		</div>
-	</body>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-LQb-h3KxqyChhqkf8sK3UqlIXFQwmLo&callback=iniciarMap"></script>
-	<script src="../controller/js/inicioBusqueda.js"></script>
-	<script src="../controller/js/navegador.js"></script>
+	</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-LQb-h3KxqyChhqkf8sK3UqlIXFQwmLo&callback=iniciarMap"></script>
+<script src="../controller/js/inicioBusqueda.js"></script>
+<script src="../controller/js/navegador.js"></script>
 </html>
 
 <!--https://programacion.net/articulo/google_maps_con_multiples_marcadores_y_ventana_de_informacion_mediante_la_api_v3_1738-->

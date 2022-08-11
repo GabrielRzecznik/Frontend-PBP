@@ -9,3 +9,17 @@ function cerrarSesion() {
 document.getElementById('nombreUsuario').innerHTML = localStorage["nombreUsuario"];
 
 //console.log(localStorage);
+
+document.getElementById("conf").addEventListener("click", function() {
+        //Abrir Modal
+        var configuracion = new bootstrap.Modal(
+            document.getElementById("confirmación-modal")
+          );
+          configuracion.toggle();
+          //Cerrar Modal
+          document.getElementById("cerrar").addEventListener("click", function () {
+              configuracion.hide();
+              //Tenia algo de solicitud, controlar despues
+        });
+});
+

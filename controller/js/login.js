@@ -89,6 +89,8 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.usuario && campos.password) {
         //Enviar AJAX
+        document.getElementById('cargando').style.display = 'block';
+        document.getElementById('loguearse').style.display = 'none';
         buscarUsuario(formulario);
 
         //Cargando
