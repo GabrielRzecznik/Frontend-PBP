@@ -2,8 +2,11 @@
     color: #191919;
 }
 
-.ulNav{
+.noSeleccionado{
     color: #7f7f7f;
+}
+
+.ulNav{
     list-style-type: none;
 }
 
