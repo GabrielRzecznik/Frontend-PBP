@@ -1,4 +1,4 @@
-function BuscarUsuarioPorCorreo(correo){
+function buscarUsuarioDeshabilitado(correo){
     var formData= new FormData();
     formData.append("correo", correo);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
@@ -21,6 +21,6 @@ function BuscarUsuarioPorCorreo(correo){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/buscarUsuarioPorCorreo',true);
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/buscarUsuarioDeshabilitado',true);
     xmlhttp.send(formJSON);
 }

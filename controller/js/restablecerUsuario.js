@@ -61,7 +61,7 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.correo) {
         //Enviar AJAX
-        BuscarUsuarioPorCorreo(correoValue);
+        buscarUsuarioDeshabilitado(correoValue);
         //Cargando
         //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
         //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
