@@ -1,13 +1,4 @@
-<html>
-  <head>
-  </head>
-  <body>
-    <form action="correo.php" method="post">
-    <input type="text" placeholder="name" name="name">
-    <input type="email" placeholder="email" name="email">
-    <input type="text" placeholder="asunto" name="asunto">
-      <textarea placeholder="mensaje" name="msg"></textarea>
-      <input type="submit" name="enviar">
-</form>
-  </body>
-</html>
+<link rel="icon" href="./view/img/icono.png">
+<?php
+    include_once('./view/login.html');  
+?>
