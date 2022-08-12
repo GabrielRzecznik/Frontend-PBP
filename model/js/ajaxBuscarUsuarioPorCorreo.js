@@ -3,6 +3,7 @@ function BuscarUsuarioPorCorreo(correo){
     formData.append("correo", correo);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
         
+    xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
