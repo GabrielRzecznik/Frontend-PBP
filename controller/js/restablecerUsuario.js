@@ -78,7 +78,7 @@ const expresiones2 = {
 };
 
 const campos2 = {
-    codigo: false,
+    codigo: false
 };
 
 const validarFormulario2 = (e) => {
@@ -111,7 +111,7 @@ inputs2.forEach((input) => {
 });
 //#endregion
 
-//#region Envia Formulario
+//#region Envia Formulario 2
 const formulario2 = document.getElementById('form2');
 
 formulario2.addEventListener('submit', (e) => {
@@ -139,7 +139,7 @@ formulario2.addEventListener('submit', (e) => {
 }); 
 //#endregion
 
-//Funcionalidades de botones auxiliares
+//#region Funcionalidades de botones auxiliares 2
 document.getElementById("atras").addEventListener("click", function() {
     document.getElementById('form1').style.display = 'block';
     document.getElementById('form2').style.display = 'none';
@@ -148,4 +148,96 @@ document.getElementById("atras").addEventListener("click", function() {
 document.getElementById("reenviar").addEventListener("click", function() {
     enviarCorreo();
 });
+//#endregion
 
+//#region Validación formulario 3
+
+const inputs3 = document.querySelectorAll('#form3 input');
+
+const expresiones3 = {
+    password: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/, //entre 8 y 24 caracteres, al menos un dígito, almenos una mayúscula
+    password2: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/ //entre 8 y 24 caracteres, al menos un dígito, almenos una mayúscula
+};
+
+const campos3 = {
+    password: false,
+    password2: false
+};
+
+const validarFormulario3 = (e) => {
+    switch (e.target.name) {
+        case 'password':
+            if (expresiones3.password.test(e.target.value)) {
+                document.getElementById('iconoPassword').classList.add('validado');
+                document.querySelector('#iconoPassword').classList.remove('bi-x-circle-fill');
+                document.querySelector('#iconoPassword').classList.add('bi-check-circle-fill');
+                //Mensaje de error contraseña
+                document.getElementById('alertPassword').classList.remove('alertaError');
+                //Validar contraseña
+                campos3['password'] = true;
+            }else{
+                document.getElementById('iconoPassword').classList.add('error');
+                document.getElementById('iconoPassword').classList.remove('validado');
+                document.querySelector('#iconoPassword').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoPassword').classList.remove('bi-check-circle-fill');
+                //Mensaje de error contraseña
+                document.getElementById('alertPassword').classList.add('alertaError');
+                document.getElementById('alertPassword2').classList.remove('alertaError');
+                campos['password'] = false;
+            }
+            break;
+        case 'password2':
+            if (expresiones3.password2.test(e.target.value)) {
+                document.getElementById('iconoPassword2').classList.add('validado');
+                document.querySelector('#iconoPassword2').classList.remove('bi-x-circle-fill');
+                document.querySelector('#iconoPassword2').classList.add('bi-check-circle-fill');
+                //Mensaje de error contraseña
+                document.getElementById('alertPassword2').classList.remove('alertaError');
+                //Validar contraseña
+                campos3['password2'] = true;
+            }else{
+                document.getElementById('iconoPassword2').classList.add('error');
+                document.getElementById('iconoPassword2').classList.remove('validado');
+                document.querySelector('#iconoPassword2').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoPassword2').classList.remove('bi-check-circle-fill');
+                //Mensaje de error contraseña
+                document.getElementById('alertPassword2').classList.add('alertaError');
+                document.getElementById('alertPassword').classList.remove('alertaError');
+                campos['password2'] = false;
+            }
+            break;
+    } 
+};
+
+inputs3.forEach((input) => {
+    input.addEventListener('keyup' , validarFormulario3);//cuando levanto la tecla se ejecuta un codigo
+    input.addEventListener('blur' , validarFormulario3);//cuando me salgo y preciono fuera del input
+});
+//#endregion
+
+//#region Envia Formulario 3
+const formulario3 = document.getElementById('form3');
+
+formulario3.addEventListener('submit', (e) => {
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
+    
+    e.preventDefault();//evita que se envien los datos y se refresque la pagina
+    
+    if (passwordValue === "") {
+        alert("Complete el campo contraseña")
+    }if (password2Value === "") {
+        alert("Complete el campo confirmación de contraseña")
+    }else if (passwordValue !== password2Value) {
+        alert("Las contraseñas no coinciden")
+    }
+
+    if (campos3.password && (passwordValue === password2Value)) {
+        //Enviar AJAX
+        cambiarContraseña("todo correcto");
+        //Cargando
+        //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
+        //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
+    }
+}); 
+//#endregion
