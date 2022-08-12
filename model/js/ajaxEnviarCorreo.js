@@ -3,6 +3,7 @@ function random(min, max) {
 }
 
 function enviarCorreo(){
+    //var correo = localStorage.getItem("correo");
     var codigo = random(1000, 9999);
 
     var formData= new FormData();
