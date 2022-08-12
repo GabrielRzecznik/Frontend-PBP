@@ -1,6 +1,6 @@
 function enviarCorreo(){
     $codigo = rand(0001, 9999);
-    //"form_data": { "name": "Devro LABS", "email": " hello@devrolabs.com ", "message": "¡hola! ahí"
+    
     var formJSON=JSON.stringify({"Confirmación&nbsp;de&nbsp;mail":"Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un codigo de 4 digitos. Usted debe copiarlo e ingresarlo dentro de la página web y podra seguir con su registro, muchas gracias!"});
     var formJSON=JSON.stringify({"Su&nbsp;código&nbsp;es":$codigo});
 
