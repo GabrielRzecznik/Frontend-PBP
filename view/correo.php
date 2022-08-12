@@ -1,6 +1,6 @@
 <?php
     // Varios destinatarios
-    $para  = 'rzecznike@gmail.com' . ', '; // atención a la coma
+    $para  = 'rzecz99@gmail.com'; // atención a la coma
     //$para .= 'wez@example.com';
     
     $codigo = rand(1000, 9999);
