@@ -1,4 +1,4 @@
-function buscarUsuario(correo){
+function BuscarUsuarioPorCorreo(correo){
     var formData= new FormData();
     formData.append("correo", correo);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
