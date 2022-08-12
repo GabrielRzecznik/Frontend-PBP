@@ -21,7 +21,7 @@ function enviarCorreo(){
             }   
         }
     }
-    xmlhttp.open("POST",'https://formsubmit.co/ajax/gabriel.e.gaymer@gmail.com',true);
+    xmlhttp.open("POST",'https://formsubmit.co/ajax/rzecznike@gmail.com',true);
     xmlhttp.send(formData);
 }
 
