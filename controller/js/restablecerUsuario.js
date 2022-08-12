@@ -234,7 +234,7 @@ formulario3.addEventListener('submit', (e) => {
 
     if (campos3.password && (passwordValue === password2Value)) {
         //Enviar AJAX
-        cambiarContraseña("todo correcto");
+        restablecerUsuario(correo.value.trim());
         //Cargando
         //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
         //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton

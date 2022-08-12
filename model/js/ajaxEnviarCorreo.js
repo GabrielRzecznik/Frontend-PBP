@@ -4,7 +4,7 @@ function random(min, max) {
 
 var codigoGenerado = random(1000, 9999);
 
-function enviarCorreo(){
+function enviarCorreo(correo){
     //var correo = localStorage.getItem("correo");
 
     var formData= new FormData();
