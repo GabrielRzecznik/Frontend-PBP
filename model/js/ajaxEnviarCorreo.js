@@ -21,7 +21,7 @@ function enviarCorreo(correo){
             }   
         }
     }
-    xmlhttp.open("POST",'https://formsubmit.co/ajax/'+correo,false);//Concatenarle cualquier correo
+    xmlhttp.open("POST",'https://formsubmit.co/ajax/'+correo,true);//Concatenarle cualquier correo
     xmlhttp.send(formData);
 }
 
