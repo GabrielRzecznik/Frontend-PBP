@@ -126,7 +126,8 @@ formulario2.addEventListener('submit', (e) => {
     if (campos2.codigo) {
         //Enviar AJAX
         if (codigoGenerado == codigoValue) {
-            alert("Correocto!");
+            document.getElementById('form2').style.display = 'none';
+            document.getElementById('form3').style.display = 'block';
         }else{
             alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
         }
