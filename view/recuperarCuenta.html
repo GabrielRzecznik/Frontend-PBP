@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--Css-->
+    <link rel="stylesheet" href="view/css/login.css">
+    <!--<link rel="icon" href="./favicon.ico">-->
+    <title>Reestablecer Cuenta - Profesional By Proximity</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4 panel1">
+                <h5 class="titulo">Reestablecer Cuenta</h5>
+                <br>
+                <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
+                    <span class="texto">Correo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCorreo"></i>
+                    <br>
+                    <input type="text" class="form-control inputs" name="correo" id="correo">
+                    <button type="submit" class="btn btn-warning botonLogin" name="boton" id="boton">
+                        <span class="loguearse" id="loguearse">Reestablecer</span>
+                        <div class="spinner-border text-secondary cargando" id="cargando" role="status"></div>
+                    </button>
+                    <!--<a href="./view/grilla.html" class="btn btn-warning botonLogin" name="boton" id="boton">
+                        <span id="loguearse">Iniciar Sesión</span>
+                    </a>-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="btn btn-secondary botonesSecundarios" href="./view/login.html">Iniciar sesión</a>  
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-secondary botonesSecundarios" href="./view/registroUsuario.html">Registrarse</a>
+                        </div>
+                    </div>   
+                    <!--Alerta Usuario-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertUsuario">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Correo o Nombre de usuario:</strong>
+                        El correo o nombre de usuario ingresado no es valido.
+                        <br>Recuerde que no puede dejar espacios en blanco.
+                        <br>Correo: "ejemplo@gmail.com"
+                        <br>Nombre de usuario: "Ejemplo1234"<!--Corregir con java-->
+                    </div>
+                    <!--Alerta Contraseña-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCont">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Contraseña:</strong>
+                        La contraseña debe tener de 8 a 16 caracteres.
+                        <br>Debe contener al menos una "mayuscula" y un "digito".
+                    </div>
+                </form> 
+            </div>
+            <div class="col-md-4 panel2"></div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./controller/js/login.js"></script>
+    <script src="./model/js/ajaxBuscarUsuario.js"></script>
+    
+</body>
+</html>
