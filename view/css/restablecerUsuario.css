@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: url('https://fondosmil.com/fondo/6749.jpg');
+    width: auto;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.panel1{
+  margin-top: 15%;
+  background-color: rgb(240, 240, 240);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top-left-radius: 2%;
+  border-bottom-left-radius: 2%;
+}
+
+.panel2{
+  margin-top: 15%;
+  background: url('https://eunamed.com/wp-content/uploads/2021/02/medico-especialista-en-chile-650x650-1.jpg');
+  background-position: center;
+  background-size: cover;
+  border-top-right-radius: 2%;
+  border-bottom-right-radius: 2%;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.botonLogin{
+    width: 100%;
+    height: 38px;
+    margin-top: 10%;
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+.botonesSecundarios{
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.alerta{
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .alerta {
+        position: fixed;
+        left: 5%;
+        right: 5%;
+        bottom: 0%;
+        visibility: hidden;
+    }
+
+    .panel1{
+        border-radius: 2%;
+        margin-top: 15%;
+        background-color: rgb(240, 240, 240);
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+}
+  
+  .alertaError{
+    visibility: visible;
+  }
+  
+  .iconos{
+    visibility: hidden;
+    color: rgb(255, 93, 93);
+  }
+  
+  .validado{
+    visibility: hidden;
+    color: rgb(105, 189, 50);
+  }
+
+  .error{
+    visibility: visible;
+  }
+  
+  .signo{
+    visibility: visible;
+    color: rgb(255, 185, 93);
+  }
+
+  .cargando{
+    display: none;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    margin: 0 auto;
+  }
+
+  .loguearse{
+    text-align: center;
+    display: block;
+  }
