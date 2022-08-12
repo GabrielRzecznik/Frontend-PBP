@@ -5,8 +5,6 @@ function random(min, max) {
 var codigoGenerado = random(1000, 9999);
 
 function enviarCorreo(correo){
-    //var correo = localStorage.getItem("correo");
-
     var formData= new FormData();
     formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 digitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar, muchas gracias!");
     formData.append("Código",codigoGenerado);
@@ -23,7 +21,7 @@ function enviarCorreo(correo){
             }   
         }
     }
-    xmlhttp.open("POST",'https://formsubmit.co/ajax/rzecznike@gmail.com',true);//Concatenarle cualquier correo
+    xmlhttp.open("POST",'https://formsubmit.co/ajax/'+correo,true);//Concatenarle cualquier correo
     xmlhttp.send(formData);
 }
 
