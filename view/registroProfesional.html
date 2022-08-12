@@ -10,14 +10,14 @@
     <!--Css-->
     <link rel="stylesheet" href="./css/registros.css"><!--UNIFICAR NOMBRES DE ESTILO REGISTRO-->
     <!--<link rel="icon" href="./favicon.ico">-->
-    <title>Registro Perfil - Profesional By Proximity</title>
+    <title>Registro Profesional - Profesional By Proximity</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8 panel3">
-                <h5 class="titulo">Datos Personales</h5>
+                <h5 class="titulo">Registro Profesional</h5>
                 <br>
                 <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
                     <div class="row">
@@ -25,13 +25,89 @@
                         <div class="col-md-6"> 
                             <!--Campo Especialidad-->
                             <span class="texto">Especialidad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoEspecialidad"></i>
-                            <br>
-                            <input type="text" class="form-control inputs" name="especialidad" id="especialidad">
+                            <select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example">
+                                <option value="0" selected></option>
+                                <option value="Alergia e inmunologia infantil">Alergología e inmunología</option>
+                                <option value="Alergia e inmunologia">Alergología e inmunología</option>
+                                <option value="Anatomia patologica">Anatomía patológica</option>
+                                <option value="Anestesiología">Anestesiología</option>
+                                <option value="Angiologia general y hemodinamia">Angiologia general y hemodinamia</option>
+                                <option value="Cardiologia infantil">Cardiologia infantil</option>
+                                <option value="Cardiologia">Cardiologia</option>
+                                <option value="Cirugia cardiovascular infantil">Cirugia cardiovascular infantil</option>
+                                <option value="Cirugia cardiovascular">Cirugia cardiovascular</option>
+                                <option value="Cirugia de cabeza y cuello">Cirugia de cabeza y cuello</option>
+                                <option value="Cirugia toracica">Cirugia toracica</option>
+                                <option value="Cirugia general">Cirugia general</option>
+                                <option value="Cirugia infantil">Cirugia infantil</option>
+                                <option value="Cirugia plastica y reparadora">Cirugia plastica y reparadora</option>
+                                <option value="Cirugia vascular periferica">Cirugia vascular periferica</option>
+                                <option value="Clinica">Clinica</option>
+                                <option value="Coloproctologia">Coloproctologia</option>
+                                <option value="Dermatologia infantil">Dermatologia infantil</option>
+                                <option value="Dermatologia">Dermatologia</option>
+                                <option value="Diagnostico por imagenes">Diagnostico por imagenes</option>
+                                <option value="Electro fisiologia cardiaca">Electro fisiologia cardiaca</option>
+                                <option value="Emergentologia">Emergentologia</option>
+                                <option value="Endocrinologia infantil">Endocrinologia infantil</option>
+                                <option value="Endocrinologia">Endocrinologia</option>
+                                <option value="Farmacologia clinica">Farmacologia clinica</option>
+                                <option value="Fisiatria">Fisiatria</option>
+                                <option value="Gastroenterologia infantil">Gastroenterologia infantil</option>
+                                <option value="Gastroenterologia">Gastroenterologia</option>
+                                <option value="Genetrica">Genetrica</option>
+                                <option value="Geriatria">Geriatria</option>
+                                <option value="Ginecologia">Ginecologia</option>
+                                <option value="Hematologia">Hematologia</option>
+                                <option value="Hemato-oncologia infantil">Hemato-oncologia infantil</option>
+                                <option value="Hemoterapia e inmunohematologia">Hemoterapia e inmunohematologia</option>
+                                <option value="Hepatologia infantil">Hepatologia infantil</option>
+                                <option value="Hepatologia">Hepatologia</option>
+                                <option value="Infectologia infantil">Infectologia infantil</option>
+                                <option value="Infectologia">Infectologia</option>
+                                <option value="Medicina del deporte">Medicina del deporte</option>
+                                <option value="Medicina del trabajo">Medicina del trabajo</option>
+                                <option value="Medicina general y/o familia">Medicina general</option>
+                                <option value="Medicina legal">Medicina legal</option>
+                                <option value="Medicina nuclear">Medicina nuclear</option>
+                                <option value="Medicina palitativa">Medicina palitativa</option>
+                                <option value="Nefrologia infantil">Nefrologia infantil</option>
+                                <option value="Nefrologia">Nefrologia</option>
+                                <option value="Neonatologia">Neonatologia</option>
+                                <option value="Neumonologia infantil">Neumonologia infantil</option>
+                                <option value="Neumonologia">Neumonologia</option>
+                                <option value="Neurocirugia">Neurocirugia infantil</option>
+                                <option value="Neurocirugia">Neurocirugia</option>
+                                <option value="Nutricion">Nutricion</option>
+                                <option value="Obstetricia">Obstetricia</option>
+                                <option value="Oftalmologia">Oftalmologia</option>
+                                <option value="Oncologia">Oncologia</option>
+                                <option value="Ortopedia y traumatologia infantil">Ortopedia y traumatologia infantil</option>
+                                <option value="Ortopedia y traumatologia">Ortopedia y traumatologia</option>
+                                <option value="Ortopedia y traumatologia otorrinolaringologia infantil">Ortopedia y traumatologia otorrinolaringologia infantil</option>
+                                <option value="Ortopedia y traumatologia otorrinolaringologia">Ortopedia y traumatologia otorrinolaringologia</option>
+                                <option value="Psiquiatria infanto juvenil">Psiquiatria infanto juvenil</option>
+                                <option value="Psiquiatria">Psiquiatria</option>
+                                <option value="Radioterapia">Radioterapia</option>
+                                <option value="Reumatologia infantil">Reumatologia infantil</option>
+                                <option value="Reumatologia">Reumatologia</option>
+                                <option value="Terapia intensiva">Terapia intensiv</option>
+                                <option value="Terapista intensivo infantil">Terapista intensivo infantil</option>
+                                <option value="Tocoginecologia">Tocoginecologia</option>
+                                <option value="Toxicologia">Toxicologia</option>
+                                <option value="Urologia">Urologia</option>
+                            </select>
                             <br>
                             <!--Campo Matricula-->
                             <span class="texto">Matricula </span><i class="bi bi-x-circle-fill iconos validado" id="iconoMatricula"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="matricula" id="matricula">
+                            <br>
+                            <!--Campo Obra Social-->
+                            <span class="texto">Obras Sociales de Atención </span><i class="bi bi-x-circle-fill iconos validado" id="iconoObraSocial"></i>
+                            <br>
+                            <input type="text" class="form-control inputs" name="obraSocial" id="obraSocial">
+                            <span class="badge bg-secondary" id="1">Osde <button type="button" class="btn-close btn-close-white" aria-label="Close"></button></span>
                             <br>
                             <!--Campo Tipo Consulta-->
                             <span class="texto">Formato de Consultas </span><i class="bi bi-x-circle-fill iconos validado" id="iconoTipoConsulta"></i>
@@ -55,52 +131,6 @@
                                 </label>
                             </div>
                             <br>
-                            <!--Campo Obra Social-->
-                            <span class="texto">Obras Sociales de Atención </span><i class="bi bi-x-circle-fill iconos validado" id="iconoObraSocial"></i>
-                            <br>
-                            <input type="text" class="form-control inputs" name="obraSocial" id="obraSocial">
-                            <span class="badge bg-secondary" id="1">Osde <button type="button" class="btn-close btn-close-white" aria-label="Close"></button></span>
-                            <br>
-                            
-
-
-
-
-
-
-                            <!--Campo Apellido-->
-                            <span class="texto">Apellido </span><i class="bi bi-x-circle-fill iconos validado" id="iconoApellido"></i>
-                            <br>
-                            <input type="text" class="form-control inputs" name="apellido" id="apellido">
-                            <br>
-                            <!--Campo Fecha de Nacimiento-->
-                            <span class="texto">Fecha de nacimiento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFechaNacimiento"></i>
-                            <br>
-                            <input type="date" class="form-control inputs" name="fechaNacimiento" id="fechaNacimiento">
-                            <br>
-                            <!--Campo Sexo-->
-                            <span class="texto">Sexo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoSexo"></i>
-                            <br>
-                            <select class="form-select" id="sexo" aria-label="Floating label select example">
-                                <option selected>Como figura en su DNI</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="X">X</option>
-                            </select>
-                            <br>
-                            <!--Campo Foto-->
-                            <span class="texto">Foto </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFoto"></i>
-                            <br>
-                            <input type="file" class="form-control inputs" name="departamento" id="foto">
-                            <br>
-                            <!--Campo Telefono-->
-                            <span class="texto">Télefono </span><i class="bi bi-x-circle-fill iconos validado" id="iconoTelefono"></i>
-                            <br>
-                            <input type="text" class="form-control inputs" name="telefono" id="telefono">
-                            <br>
-                            <!--<a href="./view/grilla.html" class="btn btn-warning botonLogin" name="boton" id="boton">
-                                <span id="loguearse">Iniciar Sesión</span>
-                            </a>-->
                             <!--Alerta Nombre Usuario-->
                             <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
                                 <i class="bi bi-info-circle-fill"></i>
@@ -109,60 +139,38 @@
                                 <br>a una dirección valida.
                                 <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
                             </div>   
-                            <!--Alerta Correo-->
-                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
-                                <i class="bi bi-info-circle-fill"></i>
-                                <strong>Correo:</strong>
-                                El correo ingresado no corresponde
-                                <br>a una dirección valida.
-                                <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
-                            </div>
-                            <!--Alerta Contraseña-->
-                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
-                                <i class="bi bi-info-circle-fill"></i>
-                                <strong>Contraseña:</strong>
-                                La contraseña debe tener de 8 a 16 caracteres.
-                                <br>Debe contener al menos una "mayuscula" y un "digito".
-                            </div>
-                            <!--Alerta Contraseña-->
-                            <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword2">
-                                <i class="bi bi-info-circle-fill"></i>
-                                <strong>Validación Contraseña:</strong>
-                                La validación de contraseña debe tener de 8 a 16 caracteres, 
-                                <br>Debe contener al menos una "mayuscula" y un "digito"
-                                <br>y coincidir con la contraseña.
-                            </div>
                         </div>
                         <div class="col-md-6">
                             <!--Campo Provincia-->
-                            <span class="texto">Provincia </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvincia"></i>
+                            <span class="texto">Provincia consultorio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvinciaConsultorio"></i>
                             <br>
-                            <input type="text" class="form-control inputs" name="provincia" id="provincia">
+                            <input type="text" class="form-control inputs" name="provinciaConsultorio" id="provinciaConsultorio">
                             <br>
                             <!--Campo Localidad-->
-                            <span class="texto">Localidad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoLocalidad"></i>
+                            <span class="texto">Localidad consultorio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoLocalidadConsultorio"></i>
                             <br>
-                            <input type="text" class="form-control inputs" name="calle" id="localidad">
+                            <input type="text" class="form-control inputs" name="localidadConsultorio" id="localidadConsultorio">
                             <br>
                             <!--Campo Calle-->
-                            <span class="texto">Nombre de Calle/Avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCalle"></i>
+                            <span class="texto">Nombre de calle/avenida consultorio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCalleConsultorio"></i>
                             <br>
-                            <input type="text" class="form-control inputs" name="calle" id="calle">
+                            <input type="text" class="form-control inputs" name="calleConsultorio" id="calleConsultorio">
                             <br>
                             <!--Campo Número-->
-                            <span class="texto">Altura de Calle/Avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAltura"></i>
+                            <span class="texto">Altura de calle/avenida consultorio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAlturaConsultorio"></i>
                             <br>
-                            <input type="text" class="form-control inputs" name="altura" id="altura">
+                            <input type="text" class="form-control inputs" name="alturaConsultorio" id="alturaConsultorio">
                             <br>
                             <!--Campo Departamento-->
-                            <span class="texto">Departamento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoDepartamento"></i>
+                            <span class="texto">Departamento consultorio</span><i class="bi bi-x-circle-fill iconos validado" id="iconoDepartamentoConsultorio"></i>
                             <br>
-                            <input type="text" class="form-control inputs" name="departamento" id="departamento">
+                            <input type="text" class="form-control inputs" name="departamentoConsultorio" id="departamentoConsultorio">
+                            <br>
                             <!--Latitud y Longitud se calcularan más adelante-->
                         </div>
                     </div>
                     <button type="submit" class="btn btn-warning botonPerfil" name="boton" id="boton">
-                        <span id="loguearse">Crear Perfil</span>
+                        <span id="loguearse">Crear perfil profesional</span>
                     </button>     
                 </form> 
             <div class="col-md-2"></div>

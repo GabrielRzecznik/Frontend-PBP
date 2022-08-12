@@ -11,7 +11,7 @@ function registrarUsuario(formulario){
                 //alert(respuestaResivida);
                 var data=JSON.parse(xmlhttp.responseText);
                 localStorage.setItem("id_usuario", data[0]["id_usuario"]);//Me guarda el id_usuario de la bd
-                window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPaciente.html";
+                window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPerfil.html";
             }else if (xmlhttp.status == 500) {
                 alert("Ocurrio un error inesperado con el correo ingresado");
                 //Marcar Correo
