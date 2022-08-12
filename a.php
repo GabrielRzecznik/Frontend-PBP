@@ -10,7 +10,6 @@
       <input type="submit" name="enviar">
 </form>
 <?php
-echo phpversion();
 include("correo.php");
 ?>
   </body>
