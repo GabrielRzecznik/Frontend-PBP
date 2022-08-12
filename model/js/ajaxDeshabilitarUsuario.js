@@ -2,7 +2,6 @@ function deshabilitarUsuario(){
     var formData= new FormData();
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-    console.log(formJSON)
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
