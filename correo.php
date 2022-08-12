@@ -18,6 +18,9 @@
                 }
             }
         }
-    }finally{
+    } catch(Exception $e)
+    {
+       
+    } finally{
         header("Location:../a.php");
     }
