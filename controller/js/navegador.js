@@ -23,3 +23,7 @@ document.getElementById("conf").addEventListener("click", function() {
         });
 });
 
+//Deshabilitar cuenta Usuario
+document.getElementById("deshabilitarUsuario").addEventListener("click", function(){
+    deshabilitarUsuario();
+});
