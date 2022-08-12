@@ -1,4 +1,4 @@
-<?php
+Enviar correo<?php
     // Varios destinatarios
     $para  = 'rzecz99@gmail.com'; // atención a la coma
     //$para .= 'wez@example.com';
