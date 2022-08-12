@@ -234,6 +234,7 @@ formulario3.addEventListener('submit', (e) => {
 
     if (campos3.password && (passwordValue === password2Value)) {
         //Enviar AJAX
+
         restablecerUsuario(correo.value.trim());
         //Cargando
         //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga

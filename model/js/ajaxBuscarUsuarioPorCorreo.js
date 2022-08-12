@@ -9,7 +9,7 @@ function BuscarUsuarioPorCorreo(correo){
             if (xmlhttp.status == 200) {//Volvio Bien
                 //console.log("Usuario encontrado");
                 //Enviar correo
-                enviarCorreo();
+                enviarCorreo(correo);
                 //Cambiar formulario
                 document.getElementById('form1').style.display = 'none';
                 document.getElementById('form2').style.display = 'block';
