@@ -7,7 +7,7 @@ function enviarCorreo(){
     var codigo = random(1000, 9999);
 
     var formData= new FormData();
-    formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un codigo de 4 digitos. Usted debe copiarlo e ingresarlo dentro de la página web y podra seguir con su registro, muchas gracias!");
+    formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 digitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar, muchas gracias!");
     formData.append("Código",codigo);
     //var formJSON=JSON.stringify(Object.fromEntries(formData));
     //console.log(formJSON)
