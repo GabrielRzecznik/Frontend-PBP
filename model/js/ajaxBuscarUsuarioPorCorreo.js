@@ -2,14 +2,12 @@ function BuscarUsuarioPorCorreo(correo){
     var formData= new FormData();
     formData.append("correo", correo);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-        
-    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                console.log("Usuario encontrado");
+                //console.log("Usuario encontrado");
                 //Enviar correo
                 enviarCorreo();
                 //Cambiar formulario

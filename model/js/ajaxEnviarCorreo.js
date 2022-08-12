@@ -2,13 +2,14 @@ function random(min, max) {
     return Math.floor((Math.random() * (max - min + 1)) + min);
 }
 
+var codigoGenerado = random(1000, 9999);
+
 function enviarCorreo(){
     //var correo = localStorage.getItem("correo");
-    var codigo = random(1000, 9999);
 
     var formData= new FormData();
     formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 digitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar, muchas gracias!");
-    formData.append("Código",codigo);
+    formData.append("Código",codigoGenerado);
     //var formJSON=JSON.stringify(Object.fromEntries(formData));
     //console.log(formJSON)
 
@@ -22,7 +23,7 @@ function enviarCorreo(){
             }   
         }
     }
-    xmlhttp.open("POST",'https://formsubmit.co/ajax/rzecznike@gmail.com',true);
+    xmlhttp.open("POST",'https://formsubmit.co/ajax/rzecznike@gmail.com',true);//Concatenarle cualquier correo
     xmlhttp.send(formData);
 }
 
