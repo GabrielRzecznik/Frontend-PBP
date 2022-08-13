@@ -61,8 +61,8 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.correo) {
         //Cargando
-        document.getElementById('tituloBuscar').style.display = 'block';
-        document.getElementById('cargandoBuscar').style.display = 'none';
+        document.getElementById('tituloBuscar').style.display = 'none';
+        document.getElementById('cargandoBuscar').style.display = 'block';
         //Enviar AJAX
         buscarUsuarioDeshabilitado(correoValue);
     }
