@@ -142,8 +142,9 @@ formulario2.addEventListener('submit', (e) => {
 
 //#region Funcionalidades de botones auxiliares 2
 document.getElementById("atras").addEventListener("click", function() {
-    document.getElementById('form1').style.display = 'block';
-    document.getElementById('form2').style.display = 'none';
+    //Eliminar Cargando
+    document.getElementById('tituloBuscar').style.display = 'block';
+    document.getElementById('cargandoBuscar').style.display = 'none';
 });
   
 document.getElementById("reenviar").addEventListener("click", function() {
