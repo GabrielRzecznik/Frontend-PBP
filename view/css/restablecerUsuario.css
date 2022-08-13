@@ -107,14 +107,6 @@ body{
   margin: 0 auto;
 }
 
-.cargandoValidar{
-  display: none;
-  width: 15px;
-  height: 15px;
-  font-size: 10px;
-  margin: 0 auto;
-}
-
 .cargandoRestablecer{
   display: none;
   width: 15px;
@@ -136,10 +128,6 @@ body{
   display: block;
 }
 
-.tituloValidar{
-  text-align: center;
-  display: block;
-}
 
 .tituloRestablecer{
   text-align: center;
