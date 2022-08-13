@@ -60,17 +60,17 @@ formulario.addEventListener('submit', (e) => {
     }
     
     if (campos.correo) {
+        //Cargando
+        document.getElementById('tituloBuscar').style.display = 'block';
+        document.getElementById('cargandoBuscar').style.display = 'none';
         //Enviar AJAX
         buscarUsuarioDeshabilitado(correoValue);
-        //Cargando
-        //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
-        //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
     }
 
 }); 
 //#endregion
 
-//#region Validación formulario 2
+//#region Validación Formulario 2
 const inputs2 = document.querySelectorAll('#form2 input');
 
 const expresiones2 = {

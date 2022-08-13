@@ -99,7 +99,7 @@ body{
   color: rgb(255, 185, 93);
 }
 
-.cargando{
+.cargandoBuscar{
   display: none;
   width: 15px;
   height: 15px;
@@ -107,7 +107,46 @@ body{
   margin: 0 auto;
 }
 
-.tituloBoton{
+.cargandoValidar{
+  display: none;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.cargandoRestablecer{
+  display: none;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.cargandoConfirmar{
+  display: none;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.tituloBuscar{
+  text-align: center;
+  display: block;
+}
+
+.tituloValidar{
+  text-align: center;
+  display: block;
+}
+
+.tituloRestablecer{
+  text-align: center;
+  display: block;
+}
+
+.tituloConfirmar{
   text-align: center;
   display: block;
 }
