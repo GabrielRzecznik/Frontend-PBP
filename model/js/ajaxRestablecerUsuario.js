@@ -17,6 +17,6 @@ function restablecerUsuario(){
             }   
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Usuario/restablecerUsuario',true);
+    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Usuarios/restablecerUsuario',true);
     xmlhttp.send(formJSON);
 }
