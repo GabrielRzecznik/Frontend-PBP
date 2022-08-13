@@ -14,3 +14,12 @@
     float: right;
     width: 1.9em;
 }
+
+.opcionConfiguracion{
+    width: 100%;
+    text-align: left;
+}
+
+.derecha{
+    float: right;
+}
