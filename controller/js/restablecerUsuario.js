@@ -126,6 +126,10 @@ formulario2.addEventListener('submit', (e) => {
     if (campos2.codigo) {
         //Enviar AJAX
         if (codigoGenerado == codigoValue) {
+            //Cargando
+            document.getElementById('tituloBuscar').style.display = 'none';
+            document.getElementById('cargandoBuscar').style.display = 'block';
+            //Cambio de Formulario 2 por Formulario 3
             document.getElementById('form2').style.display = 'none';
             document.getElementById('form3').style.display = 'block';
         }else{
