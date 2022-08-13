@@ -216,6 +216,22 @@ inputs3.forEach((input) => {
 //#endregion
 
 //#region Envia Formulario 3
+
+//Modal confirmación
+document.getElementById("confirmacion-restablecer").addEventListener("click", function() {
+    //Abrir Modal
+    var confirmacionRestablecer = new bootstrap.Modal(
+        document.getElementById("confirmacion-restablecer-modal")
+      );
+      confirmacionRestablecer.toggle();
+    
+    //Cerrar Modal
+    document.getElementById("cerrar").addEventListener("click", function () {
+        confirmacionRestablecer.hide();
+        //Tenia algo de solicitud, controlar despues
+    });
+});
+
 const formulario3 = document.getElementById('form3');
 
 formulario3.addEventListener('submit', (e) => {

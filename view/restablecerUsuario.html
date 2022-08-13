@@ -88,10 +88,10 @@
                     <span class="texto">Repetir Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPassword2"></i>
                     <br>
                     <input type="password" class="form-control inputs" name="password2" id="password2">
-                    <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
-                        <span class="tituloBoton" id="tituloBoton">Restablecer</span>
+                    <a href="#" class="btn btn-warning botonSubmit" name="boton" id="boton">
+                        <span class="tituloBoton" id="confirmacion-restablecer">Restablecer</span>
                         <div class="spinner-border text-secondary cargando" id="cargando" role="status"></div>
-                    </button>
+                    </a>
                     <!--Alerta Contraseña-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
                         <i class="bi bi-info-circle-fill"></i>
@@ -106,6 +106,28 @@
                         La validación de contraseña debe tener de 8 a 16 caracteres, 
                         <br>Debe contener al menos una "mayuscula" y un "digito"
                         <br>y coincidir con la contraseña.
+                    </div>
+                    <!--Modal Confirmación-->
+                    <div class="modal fade" id="restablecer-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    Aviso!
+                                    <button id="cancelarConfirmación" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Está seguro que desea restablecer su cuenta junto con su nueva contraseña?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
+                                        <span class="tituloBoton" id="tituloBoton">Restablecer</span>
+                                        <div class="spinner-border text-secondary cargando" id="cargando" role="status"></div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
