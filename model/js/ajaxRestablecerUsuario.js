@@ -1,7 +1,8 @@
-function restablecerUsuario(formulario){
+function restablecerUsuario(){
     //Obtener correo primero
-    var formData= new FormData(formulario);
+    var formData= new FormData();
     formData.append("correo", correo.value);
+    formData.append("password", password.value);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON)
 
