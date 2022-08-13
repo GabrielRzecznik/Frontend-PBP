@@ -216,22 +216,6 @@ inputs3.forEach((input) => {
 //#endregion
 
 //#region Envia Formulario 3
-
-//Modal confirmación
-document.getElementById("confirmacion-restablecer").addEventListener("click", function() {
-    //Abrir Modal
-    var confirmacionRestablecer = new bootstrap.Modal(
-        document.getElementById("confirmacion-restablecer-modal")
-      );
-      confirmacionRestablecer.toggle();
-    
-    //Cerrar Modal
-    document.getElementById("cerrar").addEventListener("click", function () {
-        confirmacionRestablecer.hide();
-        //Tenia algo de solicitud, controlar despues
-    });
-});
-
 const formulario3 = document.getElementById('form3');
 
 formulario3.addEventListener('submit', (e) => {
@@ -249,9 +233,24 @@ formulario3.addEventListener('submit', (e) => {
     }
 
     if (campos3.password && (passwordValue === password2Value)) {
+        //Modal confirmación
+        
+        //Abrir Modal
+        var confirmacionRestablecer = new bootstrap.Modal(
+            document.getElementById("confirmacion-restablecer-modal")
+        );
+        confirmacionRestablecer.toggle();
+        
         //Enviar AJAX
+        document.getElementById("confirmar-envio").addEventListener("click", function(){
+            restablecerUsuario(formulario3);
+        });
 
-        restablecerUsuario(formulario3);
+        //Cerrar Modal
+        document.getElementById("cerrar").addEventListener("click", function () {
+            confirmacionRestablecer.hide();
+        });
+    
         //Cargando
         //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
         //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
