@@ -140,3 +140,8 @@ body{
 .botonRestablecer{
   width: 100%;
 }
+
+.botonConfirmar{
+  width: 100px;
+  height: 38px;
+}
