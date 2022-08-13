@@ -109,7 +109,9 @@ body{
 
 .cargandoConfirmar{
   display: none;
-  font-size: 11px;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
   margin: 0 auto;
 }
 
@@ -140,6 +142,6 @@ body{
 }
 
 .botonConfirmar{
-  width: 100px;
+  width: 150px;
 }
 
