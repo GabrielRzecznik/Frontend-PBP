@@ -143,6 +143,13 @@ document.getElementById("atras").addEventListener("click", function() {
     //Cambiar Formulario 2 por Formulario 1
     document.getElementById('form1').style.display = 'block';
     document.getElementById('form2').style.display = 'none';
+    //Borrar contenido input código
+    document.getElementById("codigo").value = "";
+    document.querySelector('#iconoCodigo').classList.remove('bi-x-circle-fill');
+    document.querySelector('#iconoCodigo').classList.remove('bi-check-circle-fill');
+    //Cancelar Cargando
+    document.getElementById('tituloBuscar').style.display = 'block';
+    document.getElementById('cargandoBuscar').style.display = 'none';
 });
   
 document.getElementById("reenviar").addEventListener("click", function() {
