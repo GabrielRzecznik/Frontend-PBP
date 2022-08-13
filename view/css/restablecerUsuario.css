@@ -107,14 +107,6 @@ body{
   margin: 0 auto;
 }
 
-.cargandoRestablecer{
-  display: none;
-  width: 15px;
-  height: 15px;
-  font-size: 10px;
-  margin: 0 auto;
-}
-
 .cargandoConfirmar{
   display: none;
   width: 15px;
@@ -124,12 +116,6 @@ body{
 }
 
 .tituloBuscar{
-  text-align: center;
-  display: block;
-}
-
-
-.tituloRestablecer{
   text-align: center;
   display: block;
 }

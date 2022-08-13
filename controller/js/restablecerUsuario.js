@@ -126,9 +126,6 @@ formulario2.addEventListener('submit', (e) => {
     if (campos2.codigo) {
         //Enviar AJAX
         if (codigoGenerado == codigoValue) {
-            //Cargando
-            document.getElementById('tituloBuscar').style.display = 'none';
-            document.getElementById('cargandoBuscar').style.display = 'block';
             //Cambio de Formulario 2 por Formulario 3
             document.getElementById('form2').style.display = 'none';
             document.getElementById('form3').style.display = 'block';
@@ -146,9 +143,6 @@ document.getElementById("atras").addEventListener("click", function() {
     //Cambiar Formulario 2 por Formulario 1
     document.getElementById('form1').style.display = 'block';
     document.getElementById('form2').style.display = 'none';
-    //Borrar Carga
-    document.getElementById('tituloBuscar').style.display = 'block';
-    document.getElementById('cargandoBuscar').style.display = 'none';
 });
   
 document.getElementById("reenviar").addEventListener("click", function() {
