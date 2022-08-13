@@ -13,6 +13,9 @@ function restablecerUsuario(){
                 alert("Usuario restablecido con exito!")
                 window.location.href = "https://frontend-pbp.herokuapp.com/";
             }else{
+                //Cargando
+                document.getElementById('tituloConfirmar').style.display = 'block';
+                document.getElementById('cargandoConfirmar').style.display = 'none';
                 alert("Ocurrio un error inesperado!");
             }   
         }

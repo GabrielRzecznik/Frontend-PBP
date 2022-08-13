@@ -241,10 +241,6 @@ formulario3.addEventListener('submit', (e) => {
 
     if (campos3.password && (passwordValue === password2Value)) {
         //Modal confirmación
-        
-        //Cargando
-        document.getElementById('tituloRestablecer').style.display = 'none';
-        document.getElementById('cargandoRestablecer').style.display = 'block';
 
         //Abrir Modal
         var confirmacionRestablecer = new bootstrap.Modal(
@@ -254,14 +250,14 @@ formulario3.addEventListener('submit', (e) => {
         
         //Enviar AJAX
         document.getElementById("confirmar-envio").addEventListener("click", function(){
+            //Cargando
+            document.getElementById('tituloConfirmar').style.display = 'none';
+            document.getElementById('cargandoConfirmar').style.display = 'block';
             restablecerUsuario(formulario3);
         });
 
         //Cerrar Modal
         document.getElementById("cerrar").addEventListener("click", function () {
-            //Cancelar carga
-            document.getElementById('tituloRestablecer').style.display = 'block';
-            document.getElementById('cargandoRestablecer').style.display = 'none';
             confirmacionRestablecer.hide();
         });
     }
