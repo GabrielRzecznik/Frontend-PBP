@@ -130,6 +130,7 @@ formulario2.addEventListener('submit', (e) => {
             document.getElementById('form3').style.display = 'block';
         }else{
             alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
+            document.getElementById("codigo").value = "";
         }
         //Cargando
         //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
