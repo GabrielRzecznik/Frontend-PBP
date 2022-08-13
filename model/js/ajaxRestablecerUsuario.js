@@ -4,7 +4,6 @@ function restablecerUsuario(){
     formData.append("correo", correo.value);
     formData.append("password", password.value);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-    console.log(formJSON)
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
