@@ -244,6 +244,10 @@ formulario3.addEventListener('submit', (e) => {
     if (campos3.password && (passwordValue === password2Value)) {
         //Modal confirmación
         
+        //Cargando
+        document.getElementById('tituloRestablecer').style.display = 'none';
+        document.getElementById('cargandoRestablecer').style.display = 'block';
+
         //Abrir Modal
         var confirmacionRestablecer = new bootstrap.Modal(
             document.getElementById("confirmacion-restablecer-modal")
@@ -257,12 +261,11 @@ formulario3.addEventListener('submit', (e) => {
 
         //Cerrar Modal
         document.getElementById("cerrar").addEventListener("click", function () {
+            //Cancelar carga
+            document.getElementById('tituloRestablecer').style.display = 'block';
+            document.getElementById('cargandoRestablecer').style.display = 'none';
             confirmacionRestablecer.hide();
         });
-    
-        //Cargando
-        //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
-        //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
     }
 }); 
 //#endregion
