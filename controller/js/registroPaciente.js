@@ -274,6 +274,10 @@ const validarFormulario = (e) => {
                 document.getElementById('alertDepartamento').classList.add('alertaError');
                 campos['departamento'] = false;
             }
+
+            if (campos.departamento == "") {
+                campos['departamento'] = true;
+            }
             break;
    } 
 };
