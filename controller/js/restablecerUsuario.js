@@ -56,7 +56,7 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
     if (correoValue === "") {
-        alert("Complete el campo correo");
+        alert("Complete el campo correo.");
     }
     
     if (campos.correo) {
@@ -191,7 +191,7 @@ const validarFormulario3 = (e) => {
                 //Mensaje de error contraseña
                 document.getElementById('alertPassword').classList.add('alertaError');
                 document.getElementById('alertPassword2').classList.remove('alertaError');
-                campos['password'] = false;
+                campos3['password'] = false;
             }
             break;
         case 'password2':
@@ -211,7 +211,7 @@ const validarFormulario3 = (e) => {
                 //Mensaje de error contraseña
                 document.getElementById('alertPassword2').classList.add('alertaError');
                 document.getElementById('alertPassword').classList.remove('alertaError');
-                campos['password2'] = false;
+                campos3['password2'] = false;
             }
             break;
     } 
@@ -232,13 +232,18 @@ formulario3.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    if (passwordValue === "") {
-        alert("Complete el campo contraseña")
-    }if (password2Value === "") {
-        alert("Complete el campo confirmación de contraseña")
-    }else if (passwordValue !== password2Value) {
-        alert("Las contraseñas no coinciden")
+    if (passwordValue === "" && password2Value === "") {
+        alert("Debe completar todos los campos!");
+    }else{
+        if (passwordValue === "") {
+            alert("Complete el campo contraseña!");
+        }if (password2Value === "") {
+            alert("Complete el campo confirmación de contraseña!");
+        }else if (passwordValue !== password2Value) {
+            alert("Las contraseñas no coinciden!");
+        }
     }
+    
 
     if (campos3.password && (passwordValue === password2Value)) {
         //Modal confirmación

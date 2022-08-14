@@ -4,7 +4,18 @@ function random(min, max) {
 
 var codigoGenerado = random(1000, 9999);
 
+function tipoValidezCodigo() {
+    tiempo = setTimeout(anularCodigo, 600000);
+}
+
+function anularCodigo() {
+    alert("Código vencido! Han pasado 10 minutos!");
+    codigoGenerado = "";
+}
+
 function enviarCorreo(correo){
+    tipoValidezCodigo();//10 Minutos de validez
+
     var formData= new FormData();
     formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 digitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar, muchas gracias!");
     formData.append("Código",codigoGenerado);
@@ -15,9 +26,9 @@ function enviarCorreo(correo){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                //alert("El correo se envio con exito");
+                clearTimeout(tiempo);
             }else{
-                //alert("No se pudo enviar el correo");
+                
             }   
         }
     }
