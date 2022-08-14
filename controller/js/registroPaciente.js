@@ -24,7 +24,7 @@ const expresiones = {
     localidad: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     calle: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü 0-9\s]{2,35}$/,
     altura: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{1,6}$/,
-    departamento: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{1,10}$/
+    departamento: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{0,10}$/
 };
 
 const campos = {
@@ -273,10 +273,6 @@ const validarFormulario = (e) => {
                 document.getElementById('alertAltura').classList.remove('alertaError');
                 document.getElementById('alertDepartamento').classList.add('alertaError');
                 campos['departamento'] = false;
-            }
-
-            if (campos.departamento == "") {
-                campos['departamento'] = true;
             }
             break;
    } 
