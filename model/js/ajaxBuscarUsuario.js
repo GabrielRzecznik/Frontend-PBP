@@ -26,6 +26,9 @@ function buscarUsuario(formulario){
                 }if (data[0]["estadoUsuario"] == "Oculto") {
                     //Estado Usuario Oculto
                     alert("No se encontro el usuario!");
+                    //Cancelar carga
+                    document.getElementById('cargando').style.display = 'none';
+                    document.getElementById('loguearse').style.display = 'block';
                 }   
             }if (xmlhttp.status == 401) {
                 alert("No se encontro el usuario!");
