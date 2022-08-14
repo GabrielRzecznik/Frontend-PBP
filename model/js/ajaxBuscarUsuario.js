@@ -32,10 +32,9 @@ function buscarUsuario(formulario){
                 }   
             }if (xmlhttp.status == 401) {
                 alert("No se encontro el usuario!");
+                //Cancelar carga
                 document.getElementById('cargando').style.display = 'none';
                 document.getElementById('loguearse').style.display = 'block';
-                //document.querySelector('#loguearse').classList.remove('invisible');
-                //document.querySelector('#cargando').classList.add('invisible');
             }
         }
     }
