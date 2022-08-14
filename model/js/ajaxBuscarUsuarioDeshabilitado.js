@@ -16,8 +16,8 @@ function buscarUsuarioDeshabilitado(correo){
             }if (xmlhttp.status == 401) {
                 alert("No se encontro el usuario!");
                 //Corregir error sppiner
-                document.getElementById('cargando').style.display = 'none';
-                document.getElementById('loguearse').style.display = 'block';
+                document.getElementById('cargandoBuscar').style.display = 'none';
+                document.getElementById('tituloBuscar').style.display = 'block';
             }
         }
     }
