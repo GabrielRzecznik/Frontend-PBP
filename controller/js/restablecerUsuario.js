@@ -132,6 +132,7 @@ formulario2.addEventListener('submit', (e) => {
         }else{
             alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
             document.getElementById("codigo").value = "";
+            document.querySelector('#iconoCodigo').classList.remove('bi-check-circle-fill');
         }
     }
 
