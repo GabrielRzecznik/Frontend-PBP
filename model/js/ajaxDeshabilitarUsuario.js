@@ -8,6 +8,7 @@ function deshabilitarUsuario(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 localStorage.clear();
+                alert("Esperemos volvernos a encontrar y lamentamos no poder haber satisfecho sus necesidades, muchas gracias por utilizarnos! 😞");
                 window.location.href = "https://frontend-pbp.herokuapp.com/";
             }else{
                 alert("Error inesperado!");
