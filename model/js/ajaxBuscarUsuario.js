@@ -25,7 +25,7 @@ function buscarUsuario(formulario){
                     window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPerfil.html";
                 }if (data[0]["estadoUsuario"] == "Oculto") {
                     //Estado Usuario Oculto
-                    alert("No se encontro el usuario!");
+                    alert("No se encontró el usuario!");
                     //Cancelar carga
                     document.getElementById('cargando').style.display = 'none';
                     document.getElementById('loguearse').style.display = 'block';
