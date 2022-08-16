@@ -1,6 +1,6 @@
 //Verificar si hay logueo
 console.log(localStorage.getItem("id_usuario"));
-if (localStorage.getItem("id_usuario") == "") {
+if (localStorage.getItem("id_usuario") == "null") {
     window.location.href = "https://frontend-pbp.herokuapp.com/";
 }
 
