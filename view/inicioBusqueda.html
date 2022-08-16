@@ -280,11 +280,11 @@
 						  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 							<div class="accordion-body">
 								<p>
-									<button class="btn bg-light opcionConfiguracion" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<button class="btn bg-light opcionConfiguracion" data-bs-toggle="collapse" href="#desUsu" role="button" aria-expanded="false" aria-controls="collapseExample">
 										Deshabilitar cuenta usuario <i class="bi bi-person-x-fill derecha"></i>
 									</button>
 								</p>
-								<div class="collapse" id="collapseExample">
+								<div class="collapse" id="desUsu">
 									<div class="card card-body">
 										<b>¿Esta seguro que desea deshabilitar su cuenta usuario? </b>
 										<br>
@@ -293,8 +293,50 @@
 										<br>
 										<button class="btn btn-danger" id="deshabilitarUsuario">Desabilitar cuenta</button>
 									</div>
-								</div>	
+									<br>
+								</div>
+								<p>
+									<button class="btn bg-light opcionConfiguracion" data-bs-toggle="collapse" href="#ediUsu" role="button" aria-expanded="false" aria-controls="collapseExample">
+										Editar cuenta usuario <i class="bi bi-person-lines-fill derecha"></i>
+									</button>
+								</p>
+								<div class="collapse" id="ediUsu">
+									<div class="card card-body">
+										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarUsuario">
+											<span class="texto">Nombre de Usuario </span><i class="bi bi-x-circle-fill iconos validado" id="iconoUsuario"></i>
+											<br>
+											<input type="text" class="form-control inputs" name="usuario" id="usuario">
+											<br>
+											<span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoC"></i>
+											<br>
+											<input type="password" class="form-control inputs" name="password" id="password">
+											<button type="submit" class="btn btn-warning botonEditar" name="boton" id="boton">
+												<span class="editarUsuario" id="editarUsuario">Editar usuario</span>
+												<div class="spinner-border text-secondary cargandoEditar" id="cargandoEditar" role="status"></div>
+											</button>
+											<!--Alerta Nombre de Usuario-->
+											<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertUsuario">
+												<i class="bi bi-info-circle-fill"></i>
+												<strong>Nombre de usuario:</strong>
+												El nombre de usuario ingresado no es válido. Recuerde que no puede dejar espacios en blanco. 
+												<br>Nombre de usuario: "Ejemplo1234"
+											</div>
+											<!--Alerta Contraseña-->
+											<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
+												<i class="bi bi-info-circle-fill"></i>
+												<strong>Contraseña:</strong>
+												La contraseña ingresada no es valida. Debe contener al menos una "mayuscula" y un "digito".
+											</div>
+										</form>
+									</div>
+								</div>		
 							</div>
+							
+
+
+
+
+
 						  </div>
 						</div>
 						<div class="accordion-item">

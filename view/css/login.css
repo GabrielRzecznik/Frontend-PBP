@@ -76,38 +76,38 @@ body{
       }
 }
   
-  .alertaError{
-    visibility: visible;
-  }
-  
-  .iconos{
-    visibility: hidden;
-    color: rgb(255, 93, 93);
-  }
-  
-  .validado{
-    visibility: hidden;
-    color: rgb(105, 189, 50);
-  }
+.alertaError{
+  visibility: visible;
+}
 
-  .error{
-    visibility: visible;
-  }
-  
-  .signo{
-    visibility: visible;
-    color: rgb(255, 185, 93);
-  }
+.iconos{
+  visibility: hidden;
+  color: rgb(255, 93, 93);
+}
 
-  .cargando{
-    display: none;
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-    margin: 0 auto;
-  }
+.validado{
+  visibility: hidden;
+  color: rgb(105, 189, 50);
+}
 
-  .loguearse{
-    text-align: center;
-    display: block;
-  }
+.error{
+  visibility: visible;
+}
+
+.signo{
+  visibility: visible;
+  color: rgb(255, 185, 93);
+}
+
+.cargando{
+  display: none;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.loguearse{
+  text-align: center;
+  display: block;
+}
