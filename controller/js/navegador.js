@@ -1,5 +1,5 @@
 //Verificar si hay logueo
-if (!localStorage.getItem("id_usuario")) {
+if (localStorage.getItem("id_usuario") == "") {
     window.location.href = "https://parcial-edi-front.herokuapp.com/inicioBusqueda.html";
 }
 
