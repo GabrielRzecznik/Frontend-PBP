@@ -1,13 +1,17 @@
-//document.getElementById('session').classList.add(localStorage);
+//Verificar si hay logueo
+if (localStorage.getItem("id_usuario") != "") {
+    window.location.href = "https://parcial-edi-front.herokuapp.com/inicioBusqueda.html";
+}
+
+//Mostrar Usuario
+document.getElementById('nombreUsuario').innerHTML = localStorage["nombreUsuario"];
+
+//Cerrar sesión
 function cerrarSesion() {
     localStorage.clear();
     sessionStorage.clear();
     window.location.href = "https://frontend-pbp.herokuapp.com/";
 }
-
-document.getElementById('nombreUsuario').innerHTML = localStorage["nombreUsuario"];
-
-
 
 //Modal configuración
 document.getElementById("conf").addEventListener("click", function() {
@@ -23,8 +27,6 @@ document.getElementById("conf").addEventListener("click", function() {
             //Tenia algo de solicitud, controlar despues
         });
 });
-
-
 
 //Deshabilitar cuenta Usuario
 document.getElementById("deshabilitarUsuario").addEventListener("click", function(){

@@ -2,6 +2,10 @@
 window.addEventListener('load',load);
 
 function load(){
+    //Verificar si hay logueo
+    if (localStorage.getItem("id_usuario") != "") {
+        window.location.href = "https://parcial-edi-front.herokuapp.com/inicioBusqueda.html";
+    }
     usuario.focus();
 }
 //#endregion
