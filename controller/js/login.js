@@ -5,8 +5,6 @@ function load(){
     //Verificar si hay logueo
     if (localStorage.getItem("id_usuario")) {
         window.location.href = "https://frontend-pbp.herokuapp.com/view/inicioBusqueda.html";
-    }else{
-        document.getElementById('mostrar').style.display = 'block';
     }
     usuario.focus();
 }
