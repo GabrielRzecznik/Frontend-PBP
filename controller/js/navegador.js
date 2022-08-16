@@ -1,6 +1,8 @@
 //Verificar si hay logueo
 if (!localStorage.getItem("id_usuario")) {
     window.location.href = "https://parcial-edi-front.herokuapp.com/inicioBusqueda.html";
+}else{
+    document.getElementById('mostrar').style.display = 'block';
 }
 
 //Mostrar Usuario
