@@ -1,3 +1,7 @@
+.mostrar{
+    display: none;
+}
+
 .seleccionado{
     color: #191919;
 }
