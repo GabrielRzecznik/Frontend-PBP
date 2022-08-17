@@ -109,8 +109,6 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    console.log(nombreUsuarioValue);
-    console.log(contraseñaValue);
     if (nombreUsuarioValue === "") {
         alert("Usuario vacio");
     }if (contraseñaValue === "") {
