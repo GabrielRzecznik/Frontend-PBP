@@ -18,7 +18,7 @@ function buscarUsuario(formulario){
                     localStorage.setItem("correo", data[0]["correo"]);
                     //Redirigir
                     window.location.href = "https://frontend-pbp.herokuapp.com/view/inicioBusqueda.html";
-                }if (data[0]["estadoUsuario"] == "En creación") {
+                }if (data[0]["estadoUsuario"] == "En Creación") {
                     //Estado Usuario En creación
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
                     //Redirigir
