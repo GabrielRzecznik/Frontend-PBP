@@ -145,7 +145,7 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.correo && campos.password && (passwordValue === password2Value)) {
         //Enviar AJAX
-        buscarUsuarioExistente(correo.value.trim());
+        buscarUsuarioExistente(correo.value.trim(), nombreUsuario.value.trim());
     }
 });
 //#endregion

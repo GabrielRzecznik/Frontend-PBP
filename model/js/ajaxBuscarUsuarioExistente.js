@@ -1,6 +1,7 @@
-function buscarUsuarioExistente(correo){
+function buscarUsuarioExistente(correo, nombreUsuario){
     var formData= new FormData();
     formData.append("correo", correo);
+    formData.append("nombreUsuario", nombreUsuario);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
