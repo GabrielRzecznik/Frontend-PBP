@@ -23,7 +23,6 @@ function registrarUsuario(formulario){
             }
         }
     }
-    //xmlhttp.open("GET",'https://tp-final-pp-liv-ferz-backend.herokuapp.com/Usuarios/registro'+'/'+nombre+'/'+apellido,true);
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/crearUsuario',true);
     xmlhttp.send(formJSON);
 }

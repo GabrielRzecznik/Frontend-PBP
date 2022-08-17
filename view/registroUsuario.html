@@ -84,7 +84,55 @@
                         <br>Debe contener al menos una "mayuscula" y un "digito"
                         <br>y coincidir con la contraseña.
                     </div>
-                </form> 
+                </form>
+                <!--Activar Formulario de Correo-->
+                <div class="activador" id="activador">
+                    <h5 class="titulo">Activación de Correo</h5>
+                    <br>
+                    <span>
+                        Hemos enviado un correo a su dirección ingresada el cual cuenta con un bóton "Active Form", Debé cliquearlo para poder recibir posteriormente un código de verificación.
+                    </span>
+                    <a href="#" class="btn btn-warning botonLogin" name="botonActivar" id="botonActivar">
+                        <span id="loguearse">Ya cliquié el botón</span>
+                    </a>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="btn btn-secondary botonesSecundarios" href="#" id="volverAtras">Volver atrás</a>  
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-secondary botonesSecundarios" href="../index.php">Iniciar sesión</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Formulario de validación-->
+                <form class="formularioValidar" onsubmit="event.preventDefault()" action="#" method="post" id="formularioValidar">
+                    <span>
+                        Se ha enviado un correo electrónico de validación a su dirección ingresada con un código de 4 caracteres!<br>
+                        Ingréselo dentro del campo código para continuar!<br>
+                        El mismo tiene una validez de 10 minutos<br>
+                    </span>
+                    <br>
+                    <span class="texto">Código </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCodigo"></i>
+                    <br>
+                    <input type="text" class="form-control inputs" name="codigo" id="codigo">
+                    <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
+                        <span>Validar</span>
+                    </button>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn btn-secondary botonesSecundarios" id="reenviar" href="#">Reenviar código<span id="temporizador"></span></button>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-secondary botonesSecundarios" id="atras" href="#">Volver atrás</a>  
+                        </div>
+                    </div>
+                    <!--Alerta Código-->
+                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCodigo">
+                        <i class="bi bi-info-circle-fill"></i>
+                        <strong>Código:</strong>
+                        El código ingresado no es valido!
+                    </div>
+                </form>
             </div>
             <div class="col-md-4 panel2"></div>
             <div class="col-md-2"></div>
@@ -93,5 +141,6 @@
     <script src="../controller/js/registroUsuario.js"></script>
     <script src="../model/js/ajaxRegistroUsuario.js"></script>
     <script src="../model/js/ajaxBuscarUsuario.js"></script>
+    <script src="../model/js/ajaxEnviarCorreo.js"></script>
 </body>
 </html>

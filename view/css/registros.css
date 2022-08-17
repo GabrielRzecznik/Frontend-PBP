@@ -189,3 +189,11 @@ body{
   background-color: #b2b2b2;
   border-radius: 5px;
 }
+
+.activador{
+  display: none;
+}
+
+.formularioValidar{
+  display: none;
+}

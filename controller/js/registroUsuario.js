@@ -145,13 +145,81 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.correo && campos.password && (passwordValue === password2Value)) {
         //Enviar AJAX
-        registrarUsuario(formulario);
-        //Cargando
-        //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
-        //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
+        document.getElementById('formulario').style.display = 'none';
+        document.getElementById('activador').style.display = 'block';
+        enviarCorreo(correo.value.trim());
+    }
+});
+//#endregion
+
+document.getElementById("volverAtras").addEventListener("click", function() {
+    document.getElementById('activador').style.display = 'none';
+    document.getElementById('formularioValidar').style.display = 'block';
+});
+
+//#region Validación Formulario Validar
+const inputs2 = document.querySelectorAll('#formularioValidar input');
+
+const expresiones2 = {
+    codigo: /^[0-9]{4}$/ // maximo 24 caracteres, permitido caracteres y _ - solamente
+};
+
+const campos2 = {
+    codigo: false
+};
+
+const validarFormulario2 = (e) => {
+   switch (e.target.name) {
+        case 'codigo':
+            if (expresiones2.codigo.test(e.target.value)) {
+                document.getElementById('iconoCodigo').classList.add('validado');
+                document.querySelector('#iconoCodigo').classList.remove('bi-x-circle-fill');
+                document.querySelector('#iconoCodigo').classList.add('bi-check-circle-fill');
+                //Mensaje de error codigo
+                document.getElementById('alertCodigo').classList.remove('alertaError');
+                //Validar codigo
+                campos2['codigo'] = true;
+            }else{
+                document.getElementById('iconoCodigo').classList.add('error');
+                document.getElementById('iconoCodigo').classList.remove('validado');
+                document.querySelector('#iconoCodigo').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoCodigo').classList.remove('bi-check-circle-fill');
+                //Mensaje de error codigo
+                document.getElementById('alertCodigo').classList.add('alertaError');
+                campos2['codigo'] = false;
+            }
+            break;
+    } 
+};
+
+inputs2.forEach((input) => {
+    input.addEventListener('keyup' , validarFormulario2);//cuando levanto la tecla se ejecuta un codigo
+    input.addEventListener('blur' , validarFormulario2);//cuando me salgo y preciono fuera del input
+});
+//#endregion
+  
+//#region Envia Formulario Validar
+const formulario2 = document.getElementById('formularioValidar');
+
+formulario2.addEventListener('submit', (e) => {
+    const codigoValue = codigo.value.trim();
+    
+    e.preventDefault();//evita que se envien los datos y se refresque la pagina
+    
+    if (codigoValue === "") {
+        alert("Complete el campo código");
+    }
+    
+    if (campos2.codigo) {
+        //Enviar AJAX
+        if (codigoGenerado == codigoValue) {
+            registrarUsuario(formulario);
+        }else{
+            alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
+            document.getElementById("codigo").value = "";
+            document.querySelector('#iconoCodigo').classList.remove('bi-check-circle-fill');
+        }
     }
 
 }); 
 //#endregion
-    
-  
