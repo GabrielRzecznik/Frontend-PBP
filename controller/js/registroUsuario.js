@@ -152,10 +152,17 @@ formulario.addEventListener('submit', (e) => {
 });
 //#endregion
 
-document.getElementById("volverAtras").addEventListener("click", function() {
+//#region Funcionalidades de botónes "Activar"
+document.getElementById("activar").addEventListener("click", function() {
     document.getElementById('activador').style.display = 'none';
     document.getElementById('formularioValidar').style.display = 'block';
 });
+
+document.getElementById("volverAtras").addEventListener("click", function() {
+    document.getElementById('activador').style.display = 'none';
+    document.getElementById('formulario').style.display = 'block';
+});
+//#endregion
 
 //#region Validación Formulario Validar
 const inputs2 = document.querySelectorAll('#formularioValidar input');
