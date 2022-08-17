@@ -153,8 +153,15 @@ document.getElementById("atras").addEventListener("click", function() {
     document.getElementById('cargandoBuscar').style.display = 'none';
 });
   
+//Reenviar Código
 document.getElementById("reenviar").addEventListener("click", function() {
-    enviarCorreo();
+    enviarCorreo(correo.value.trim());
+    //Bloquear bóton por 20 segundos
+    document.getElementById('reenviar').disabled = false;
+    bloqueadoTemporal = setTimeout(activarBoton, 20000);
+    function activarBoton() {
+        document.getElementById('reenviar').disabled = false;
+    }
 });
 //#endregion
 
