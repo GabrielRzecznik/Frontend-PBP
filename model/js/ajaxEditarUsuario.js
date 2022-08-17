@@ -13,6 +13,6 @@ function editarUsuario(formulario){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/editarUsuario',true);
+    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Usuarios/editarUsuario',true);
     xmlhttp.send(formJSON);
 }
