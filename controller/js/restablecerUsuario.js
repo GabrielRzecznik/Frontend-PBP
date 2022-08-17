@@ -160,7 +160,7 @@ document.getElementById("reenviar").addEventListener("click", function() {
     const botonReenviar = document.getElementById('reenviar');
     botonReenviar.disabled = true;
     var minutos = 20;
-    t = setInterval(mostrarTemporizador, 1000);
+    let t = setInterval(mostrarTemporizador, 1000);
     
     function mostrarTemporizador() {
         console.log(minutos);
