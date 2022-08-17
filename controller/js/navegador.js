@@ -6,8 +6,8 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 }
 
 //Mostrar Usuario
-document.getElementById('nombreUsuario').innerHTML = localStorage["nombreUsuario"];
-document.getElementById('usuario').value = localStorage["nombreUsuario"];
+document.getElementById('usuario').innerHTML = localStorage["nombreUsuario"];
+document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 
 //Cerrar sesión
 function cerrarSesion() {
