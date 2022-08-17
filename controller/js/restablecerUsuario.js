@@ -158,7 +158,7 @@ document.getElementById("reenviar").addEventListener("click", function() {
     enviarCorreo(correo.value.trim());
     //Bloquear bóton por 20 segundos
     const botonReenviar = document.getElementById('reenviar');
-    botonReenviar.disabled = false;
+    botonReenviar.disabled = true;
     bloqueadoTemporal = setTimeout(activarBoton, 20000);
     function activarBoton() {
         botonReenviar.disabled = false;
