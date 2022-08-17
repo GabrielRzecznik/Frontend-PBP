@@ -67,7 +67,7 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoUsuario').classList.remove('bi-check-circle-fill');
                 //Mensaje de error usuario
                 document.getElementById('alertUsuario').classList.add('alertaError');
-                document.getElementById('alertUsuario').classList.remove('alertaError');
+                document.getElementById('alertPassword').classList.remove('alertaError');
                 campos['nombreUsuario'] = false;
             }
             break;
