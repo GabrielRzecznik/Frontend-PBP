@@ -40,26 +40,26 @@ document.getElementById("deshabilitarUsuario").addEventListener("click", functio
 const inputs = document.querySelectorAll('#formEditarUsuario input');
 
 const expresiones = {
-    usuario: /^(?=\w*\d*)(\S)\S{8,40}$/,
+    nombreUsuario: /^(?=\w*\d*)(\S)\S{8,40}$/,
     password: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
 };
 
 const campos = {
-    usuario: false,
+    nombreUsuario: false,
     password: false
 };
 
 const validarFormulario = (e) => {
    switch (e.target.name) {
         case 'usuario':
-            if (expresiones.usuario.test(e.target.value)) {
+            if (expresiones.nombreUsuario.test(e.target.value)) {
                 document.getElementById('iconoUsuario').classList.add('validado');
                 document.querySelector('#iconoUsuario').classList.remove('bi-x-circle-fill');
                 document.querySelector('#iconoUsuario').classList.add('bi-check-circle-fill');
                 //Mensaje de error usuario
                 document.getElementById('alertUsuario').classList.remove('alertaError');
                 //Validar usuario
-                campos['usuario'] = true;
+                campos['nombreUsuario'] = true;
             }else{
                 document.getElementById('iconoUsuario').classList.add('error');
                 document.getElementById('iconoUsuario').classList.remove('validado');
@@ -68,7 +68,7 @@ const validarFormulario = (e) => {
                 //Mensaje de error usuario
                 document.getElementById('alertUsuario').classList.add('alertaError');
                 document.getElementById('alertCont').classList.remove('alertaError');
-                campos['usuario'] = false;
+                campos['nombreUsuario'] = false;
             }
             break;
         case 'password':
@@ -104,12 +104,12 @@ inputs.forEach((input) => {
 const formulario = document.getElementById('formEditarUsuario');
 
 formulario.addEventListener('submit', (e) => {
-    const usuarioValue = usuario.value.trim();
+    const nombreUsuarioValue = nombreUsuario.value.trim();
     const contraseñaValue = password.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    if (usuarioValue === "") {
+    if (nombreUsuarioValue === "") {
         alert("Usuario vacio");
     }if (contraseñaValue === "") {
         alert("Contraseña vacia")
