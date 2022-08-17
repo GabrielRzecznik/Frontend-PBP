@@ -161,11 +161,11 @@ document.getElementById("reenviar").addEventListener("click", function() {
     botonReenviar.disabled = true;
     var minutos = 20;
     for (let i = 0; i < 19; i++) {
+        document.getElementById('temporizador').innerHTML='(00:'+minutos+')';
         minutos--;
         if (minutos < 10) {
             minutos = "0" + minutos;
         }
-        document.getElementById('temporizador').innerHTML='(00:'+minutos+')';
     }
     bloqueadoTemporal = setTimeout(activarBoton, 20000);
     function activarBoton() {
