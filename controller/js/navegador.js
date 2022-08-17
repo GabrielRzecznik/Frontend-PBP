@@ -51,7 +51,7 @@ const campos = {
 
 const validarFormulario = (e) => {
    switch (e.target.name) {
-        case 'usuario':
+        case 'nombreUsuario':
             if (expresiones.nombreUsuario.test(e.target.value)) {
                 document.getElementById('iconoUsuario').classList.add('validado');
                 document.querySelector('#iconoUsuario').classList.remove('bi-x-circle-fill');
