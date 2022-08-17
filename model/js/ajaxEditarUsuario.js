@@ -1,5 +1,6 @@
 function editarUsuario(formulario){
     var formData = new FormData(formulario);
+    formData.append("id_usuario", localStorage.getItem("id_usuario"));
     var formJSON = JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
