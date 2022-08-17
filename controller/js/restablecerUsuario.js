@@ -155,23 +155,24 @@ document.getElementById("atras").addEventListener("click", function() {
   
 //Reenviar Código
 document.getElementById("reenviar").addEventListener("click", function() {
-    enviarCorreo(correo.value.trim());
+    
     //Bloquear bóton por 20 segundos
     const botonReenviar = document.getElementById('reenviar');
     botonReenviar.disabled = true;
     var minutos = 20;
 
-    if (minutos == "00") {  
+    if (minutos != "00") {  
         t = setInterval(mostrarTemporizador, 1000);
     }
       
     function mostrarTemporizador() {
-        document.getElementById('temporizador').innerHTML='(00:'+minutos+')';
+        document.getElementById('temporizador').innerHTML=' (00:'+minutos+')';
         minutos--;
         if (minutos < 10) {
             minutos = "0" + minutos;
         }
     }
+    enviarCorreo(correo.value.trim());
     
     bloqueadoTemporal = setTimeout(activarBoton, 20000);
     function activarBoton() {
