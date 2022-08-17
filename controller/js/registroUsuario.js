@@ -218,8 +218,8 @@ formulario2.addEventListener('submit', (e) => {
     if (campos2.codigo) {
         //Enviar AJAX
         if (codigoGenerado == codigoValue) {
-            document.getElementById('tituloConfirmar').style.display = 'none';
-            document.getElementById('cargandoConfirmar').style.display = 'block';
+            document.getElementById('tituloRegistrar').style.display = 'none';
+            document.getElementById('cargandoRegistrar').style.display = 'block';
             registrarUsuario(formulario);
         }else{
             alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
