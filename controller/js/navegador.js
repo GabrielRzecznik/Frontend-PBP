@@ -77,7 +77,7 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoC').classList.remove('bi-x-circle-fill');
                 document.querySelector('#iconoC').classList.add('bi-check-circle-fill');
                 //Mensaje de error contraseña
-                document.getElementById('alertCont').classList.remove('alertaError');
+                document.getElementById('alertPassword').classList.remove('alertaError');
                 //Validar contraseña
                 campos['password'] = true;
             }else{
@@ -86,7 +86,7 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoC').classList.add('bi-x-circle-fill');
                 document.querySelector('#iconoC').classList.remove('bi-check-circle-fill');
                 //Mensaje de error contraseña
-                document.getElementById('alertCont').classList.add('alertaError');
+                document.getElementById('alertPassword').classList.add('alertaError');
                 document.getElementById('alertUsuario').classList.remove('alertaError');
                 campos['password'] = false;
             }
