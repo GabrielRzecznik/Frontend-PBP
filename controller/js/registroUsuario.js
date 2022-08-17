@@ -145,9 +145,7 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.correo && campos.password && (passwordValue === password2Value)) {
         //Enviar AJAX
-        document.getElementById('formulario').style.display = 'none';
-        document.getElementById('activador').style.display = 'block';
-        enviarCorreo(correo.value.trim());
+        buscarUsuarioExistente(correo.value.trim());
     }
 });
 //#endregion
