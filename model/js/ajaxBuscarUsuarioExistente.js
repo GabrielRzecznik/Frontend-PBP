@@ -7,13 +7,13 @@ function buscarUsuarioExistente(correo){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                alert("El correo o el usuario ya se encuentra registrado");
-            }if (xmlhttp.status == 401) {
                 //Cambia de Formulario
                 document.getElementById('formulario').style.display = 'none';
                 document.getElementById('activador').style.display = 'block';
                 //Envia Correo
                 enviarCorreo(correo.value.trim());
+            }if (xmlhttp.status == 401) {
+                alert("El correo o el usuario ya se encuentra registrado");
             }
         }
     }
