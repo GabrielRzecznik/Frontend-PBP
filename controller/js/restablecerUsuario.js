@@ -160,14 +160,19 @@ document.getElementById("reenviar").addEventListener("click", function() {
     const botonReenviar = document.getElementById('reenviar');
     botonReenviar.disabled = true;
     var minutos = 20;
-    for (let i = 0; i < 20; i++) {
-        console.log(minutos);
+
+    if (minutos == "00") {  
+        t = setInterval(mostrarTemporizador, 1000);
+    }
+      
+    function mostrarTemporizador() {
         document.getElementById('temporizador').innerHTML='(00:'+minutos+')';
         minutos--;
         if (minutos < 10) {
             minutos = "0" + minutos;
         }
     }
+    
     bloqueadoTemporal = setTimeout(activarBoton, 20000);
     function activarBoton() {
         document.getElementById('temporizador').innerHTML='';
