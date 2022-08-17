@@ -159,17 +159,16 @@ document.getElementById("reenviar").addEventListener("click", function() {
     //Bloquear bóton por 20 segundos
     const botonReenviar = document.getElementById('reenviar');
     botonReenviar.disabled = true;
-    var minutos = 20;
-    let t = setInterval(mostrarTemporizador, 100);
+    var minutos = 19;
+    let t = setInterval(mostrarTemporizador, 1000);
     
     function mostrarTemporizador() {
-        console.log(minutos);
         document.getElementById('temporizador').innerHTML=' (00:'+minutos+')';
         minutos--;
         if (minutos < 10) {
             minutos = "0" + minutos;
         }
-        if (minutos == "01") {
+        if (minutos == "00") {
             clearInterval(t);  
         }
     }
