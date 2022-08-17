@@ -120,10 +120,6 @@ formulario.addEventListener('submit', (e) => {
         document.getElementById('cargandoEditar').style.display = 'block';
         document.getElementById('editarUsuario').style.display = 'none';
         editarUsuario(formulario);
-
-        //Cargando
-        //document.querySelector('#cargando').classList.remove('invisible');//Logo de carga
-        //document.querySelector('#loguearse').classList.add('invisible');//Esconde el texto del boton
     }
 
 }); 

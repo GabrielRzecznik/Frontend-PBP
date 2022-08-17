@@ -7,9 +7,11 @@ function editarUsuario(formulario){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                
+                document.getElementById('cargandoEditar').style.display = 'none';
+                document.getElementById('editarUsuario').style.display = 'block';
+                alert("Se guardaron los cambios!");
             }if (xmlhttp.status == 401) {
-               
+               alert("Ocurrio un error inesperado");
             }
         }
     }
