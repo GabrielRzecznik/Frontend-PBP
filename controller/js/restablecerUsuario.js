@@ -157,10 +157,11 @@ document.getElementById("atras").addEventListener("click", function() {
 document.getElementById("reenviar").addEventListener("click", function() {
     enviarCorreo(correo.value.trim());
     //Bloquear bóton por 20 segundos
-    document.getElementById('reenviar').disabled = false;
+    const botonReenviar = document.getElementById('reenviar');
+    botonReenviar.disabled = false;
     bloqueadoTemporal = setTimeout(activarBoton, 20000);
     function activarBoton() {
-        document.getElementById('reenviar').disabled = false;
+        botonReenviar.disabled = false;
     }
 });
 //#endregion
