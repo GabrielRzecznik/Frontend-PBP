@@ -12,7 +12,7 @@ function buscarUsuarioExistente(correo, nombreUsuario){
                 document.getElementById('formulario').style.display = 'none';
                 document.getElementById('activador').style.display = 'block';
                 //Envia Correo
-                enviarCorreo(correo.value.trim());
+                enviarCorreo(correo);
             }if (xmlhttp.status == 401) {
                 alert("El correo o el usuario ya se encuentra registrado");
             }
