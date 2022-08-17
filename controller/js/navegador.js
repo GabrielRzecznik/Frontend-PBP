@@ -40,7 +40,7 @@ document.getElementById("deshabilitarUsuario").addEventListener("click", functio
 const inputs = document.querySelectorAll('#formEditarUsuario input');
 
 const expresiones = {
-    nombreUsuario: /^(?=\w*\d*)(\S)\S{8,40}$/,
+    nombreUsuario: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/, //entre 8 y 24 caractere
     password: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
 };
 
@@ -53,41 +53,41 @@ const validarFormulario = (e) => {
    switch (e.target.name) {
         case 'nombreUsuario':
             if (expresiones.nombreUsuario.test(e.target.value)) {
-                document.getElementById('iconoUsuario').classList.add('validado');
-                document.querySelector('#iconoUsuario').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoUsuario').classList.add('bi-check-circle-fill');
-                //Mensaje de error usuario
-                document.getElementById('alertUsuario').classList.remove('alertaError');
-                //Validar usuario
+                document.getElementById('iconoNombreUsuario').classList.add('validado');
+                document.querySelector('#iconoNombreUsuario').classList.remove('bi-x-circle-fill');
+                document.querySelector('#iconoNombreUsuario').classList.add('bi-check-circle-fill');
+                //Mensaje de error
+                document.getElementById('alertNombreUsuario').classList.remove('alertaError');
+                //Validar
                 campos['nombreUsuario'] = true;
             }else{
-                document.getElementById('iconoUsuario').classList.add('error');
-                document.getElementById('iconoUsuario').classList.remove('validado');
-                document.querySelector('#iconoUsuario').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoUsuario').classList.remove('bi-check-circle-fill');
-                //Mensaje de error usuario
-                document.getElementById('alertUsuario').classList.add('alertaError');
+                document.getElementById('iconoNombreUsuario').classList.add('error');
+                document.getElementById('iconoNombreUsuario').classList.remove('validado');
+                document.querySelector('#iconoNombreUsuario').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoNombreUsuario').classList.remove('bi-check-circle-fill');
+                //Mensaje de error correo
+                document.getElementById('alertNombreUsuario').classList.add('alertaError');
                 document.getElementById('alertPassword').classList.remove('alertaError');
                 campos['nombreUsuario'] = false;
             }
             break;
         case 'password':
             if (expresiones.password.test(e.target.value)) {
-                document.getElementById('iconoC').classList.add('validado');
-                document.querySelector('#iconoC').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoC').classList.add('bi-check-circle-fill');
+                document.getElementById('iconoPassword').classList.add('validado');
+                document.querySelector('#iconoPassword').classList.remove('bi-x-circle-fill');
+                document.querySelector('#iconoPassword').classList.add('bi-check-circle-fill');
                 //Mensaje de error contraseña
                 document.getElementById('alertPassword').classList.remove('alertaError');
                 //Validar contraseña
                 campos['password'] = true;
             }else{
-                document.getElementById('iconoC').classList.add('error');
-                document.getElementById('iconoC').classList.remove('validado');
-                document.querySelector('#iconoC').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoC').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoPassword').classList.add('error');
+                document.getElementById('iconoPassword').classList.remove('validado');
+                document.querySelector('#iconoPassword').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoPassword').classList.remove('bi-check-circle-fill');
                 //Mensaje de error contraseña
                 document.getElementById('alertPassword').classList.add('alertaError');
-                document.getElementById('alertUsuario').classList.remove('alertaError');
+                document.getElementById('alertNombreUsuario').classList.remove('alertaError');
                 campos['password'] = false;
             }
             break;
