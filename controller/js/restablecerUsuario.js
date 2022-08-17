@@ -169,6 +169,7 @@ document.getElementById("reenviar").addEventListener("click", function() {
     }
     bloqueadoTemporal = setTimeout(activarBoton, 20000);
     function activarBoton() {
+        document.getElementById('temporizador').innerHTML='';
         botonReenviar.disabled = false;
     }
 });
