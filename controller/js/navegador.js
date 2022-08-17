@@ -117,7 +117,7 @@ formulario.addEventListener('submit', (e) => {
         alert("Contraseña vacia")
     }
     
-    if (campos.usuario && campos.password) {
+    if (campos.nombreUsuario && campos.password) {
         //Enviar AJAX
         document.getElementById('cargandoEditar').style.display = 'block';
         document.getElementById('editarUsuario').style.display = 'none';
