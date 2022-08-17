@@ -160,7 +160,7 @@ document.getElementById("reenviar").addEventListener("click", function() {
     const botonReenviar = document.getElementById('reenviar');
     botonReenviar.disabled = true;
     var minutos = 20;
-    for (let i = 0; i < 19; i++) {
+    for (let i = 0; i < 20; i++) {
         console.log(minutos);
         document.getElementById('temporizador').innerHTML='(00:'+minutos+')';
         minutos--;
