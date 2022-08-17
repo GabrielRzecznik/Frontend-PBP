@@ -160,7 +160,7 @@ document.getElementById("reenviar").addEventListener("click", function() {
     const botonReenviar = document.getElementById('reenviar');
     botonReenviar.disabled = true;
     var minutos = 20;
-    let t = setInterval(mostrarTemporizador, 1000);
+    let t = setInterval(mostrarTemporizador, 100);
     
     function mostrarTemporizador() {
         console.log(minutos);
@@ -169,9 +169,9 @@ document.getElementById("reenviar").addEventListener("click", function() {
         if (minutos < 10) {
             minutos = "0" + minutos;
         }
-    }
-    if (minutos == "01") {
-        clearInterval(t);  
+        if (minutos == "01") {
+            clearInterval(t);  
+        }
     }
     
     bloqueadoTemporal = setTimeout(activarBoton, 20000);
