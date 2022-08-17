@@ -197,3 +197,29 @@ body{
 .formularioValidar{
   display: none;
 }
+
+.tituloRegistrar{
+  text-align: center;
+  display: block;
+}
+
+.cargandoRegistrar{
+  display: none;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  margin: 0 auto;
+}
+
+.tituloBuscar{
+  text-align: center;
+  display: block;
+}
+
+.cargandoBuscar{
+  display: none;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  margin: 0 auto;
+}

@@ -6,7 +6,7 @@ function load(){
 }
 //#endregion
 
-//#region Validación de Campos
+//#region Validación Formulario
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
@@ -218,6 +218,8 @@ formulario2.addEventListener('submit', (e) => {
     if (campos2.codigo) {
         //Enviar AJAX
         if (codigoGenerado == codigoValue) {
+            document.getElementById('tituloConfirmar').style.display = 'none';
+            document.getElementById('cargandoConfirmar').style.display = 'block';
             registrarUsuario(formulario);
         }else{
             alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
@@ -227,4 +229,46 @@ formulario2.addEventListener('submit', (e) => {
     }
 
 }); 
+//#endregion
+
+//#region Funcionalidades de botónes Formulario Validar
+document.getElementById("atras").addEventListener("click", function() {
+    //Cambiar Formulario Validar por Formulario
+    document.getElementById('formulario').style.display = 'block';
+    document.getElementById('formularioValidar').style.display = 'none';
+    //Borrar contenido input código
+    document.getElementById("codigo").value = "";
+    document.querySelector('#iconoCodigo').classList.remove('bi-x-circle-fill');
+    document.querySelector('#iconoCodigo').classList.remove('bi-check-circle-fill');
+    //Cancelar Cargando
+    document.getElementById('tituloBuscar').style.display = 'block';
+    document.getElementById('cargandoBuscar').style.display = 'none';
+});
+  
+//Reenviar Código
+document.getElementById("reenviar").addEventListener("click", function() {
+    enviarCorreo(correo.value.trim());
+    //Bloquear bóton por 20 segundos
+    const botonReenviar = document.getElementById('reenviar');
+    botonReenviar.disabled = true;
+    var minutos = 19;
+    let t = setInterval(mostrarTemporizador, 1000);
+    
+    function mostrarTemporizador() {
+        document.getElementById('temporizador').innerHTML=' (00:'+minutos+')';
+        minutos--;
+        if (minutos < 10) {
+            minutos = "0" + minutos;
+        }
+        if (minutos == "00") {
+            clearInterval(t);  
+        }
+    }
+    
+    bloqueadoTemporal = setTimeout(activarBoton, 20000);
+    function activarBoton() {
+        document.getElementById('temporizador').innerHTML='';
+        botonReenviar.disabled = false;
+    }
+});
 //#endregion
