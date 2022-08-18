@@ -52,6 +52,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoMatricula').classList.remove('bi-check-circle-fill');
                 //Mensaje de error Matricula
                 document.getElementById('alertMatricula').classList.add('alertaError');
+                //Limpiar mensaje
+                document.getElementById('alertObraSocial').classList.remove('alertaError');
+                document.getElementById('alertTipoConsulta').classList.remove('alertaError');
+                document.getElementById('alertProvinciaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertLocalidadConsultorio').classList.remove('alertaError');
+                document.getElementById('alertCalleConsultorio').classList.remove('alertaError');
+                document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
                 campos['matricula'] = false;
             }
             break;
@@ -71,6 +79,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoProvinciaConsultorio').classList.remove('bi-check-circle-fill');
                 //Mensaje de error Provincia Consultorio
                 document.getElementById('alertProvinciaConsultorio').classList.add('alertaError');
+                //Limpiar mensaje
+                document.getElementById('alertMatricula').classList.remove('alertaError');
+                document.getElementById('alertObraSocial').classList.remove('alertaError');
+                document.getElementById('alertTipoConsulta').classList.remove('alertaError');
+                document.getElementById('alertLocalidadConsultorio').classList.remove('alertaError');
+                document.getElementById('alertCalleConsultorio').classList.remove('alertaError');
+                document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
                 campos['provinciaConsultorio'] = false;
             }
             break;
@@ -90,6 +106,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoLocalidadConsultorio').classList.remove('bi-check-circle-fill');
                 //Mensaje de error Localidad Consultorio
                 document.getElementById('alertLocalidadConsultorio').classList.add('alertaError');
+                //Limpiar mensaje
+                document.getElementById('alertMatricula').classList.remove('alertaError');
+                document.getElementById('alertObraSocial').classList.remove('alertaError');
+                document.getElementById('alertTipoConsulta').classList.remove('alertaError');
+                document.getElementById('alertProvinciaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertCalleConsultorio').classList.remove('alertaError');
+                document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
                 campos['localidadConsultorio'] = false;
             }
             break;
@@ -109,6 +133,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoCalleConsultorio').classList.remove('bi-check-circle-fill');
                 //Mensaje de error Calle Consultorio
                 document.getElementById('alertCalleConsultorio').classList.add('alertaError');
+                //Limpiar mensaje
+                document.getElementById('alertMatricula').classList.remove('alertaError');
+                document.getElementById('alertObraSocial').classList.remove('alertaError');
+                document.getElementById('alertTipoConsulta').classList.remove('alertaError');
+                document.getElementById('alertProvinciaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertLocalidadConsultorio').classList.remove('alertaError');
+                document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
                 campos['calleConsultorio'] = false;
             }
             break;
@@ -128,6 +160,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoAlturaConsultorio').classList.remove('bi-check-circle-fill');
                 //Mensaje de error Altura Consultorio
                 document.getElementById('alertAlturaConsultorio').classList.add('alertaError');
+                //Limpiar mensaje
+                document.getElementById('alertMatricula').classList.remove('alertaError');
+                document.getElementById('alertObraSocial').classList.remove('alertaError');
+                document.getElementById('alertTipoConsulta').classList.remove('alertaError');
+                document.getElementById('alertProvinciaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertLocalidadConsultorio').classList.remove('alertaError');
+                document.getElementById('alertCalleConsultorio').classList.remove('alertaError');
+                document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
                 campos['alturaConsultorio'] = false;
             }
             break;
@@ -147,6 +187,14 @@ const validarFormulario = (e) => {
                 document.querySelector('#iconoDepartamentoConsultorio').classList.remove('bi-check-circle-fill');
                 //Mensaje de error Departamento Consultorio
                 document.getElementById('alertDepartamentoConsultorio').classList.add('alertaError');
+                //Limpiar mensaje
+                document.getElementById('alertMatricula').classList.remove('alertaError');
+                document.getElementById('alertObraSocial').classList.remove('alertaError');
+                document.getElementById('alertTipoConsulta').classList.remove('alertaError');
+                document.getElementById('alertProvinciaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertLocalidadConsultorio').classList.remove('alertaError');
+                document.getElementById('alertCalleConsultorio').classList.remove('alertaError');
+                document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
                 campos['departamentoConsultorio'] = false;
             }
             break;
