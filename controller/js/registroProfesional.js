@@ -345,10 +345,10 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    if (matriculaValue === "") {
-        alert("Complete el campo matricula");
-    }if (especialidadValue === "0") {
+    if (especialidadValue === "0") {
         alert("Complete el campo especialidad");
+    }if (matriculaValue === "") {
+        alert("Complete el campo matricula");
     }
 
     if (checkConsultorio.checked == true) {
