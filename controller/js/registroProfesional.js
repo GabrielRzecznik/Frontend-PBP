@@ -243,12 +243,15 @@ if (especialidad.value == 0) {
 
 //Validar y Agregar Obras Sociales
 //Botón Agregar
-document.getElementById("agregar").addEventListener("click", function() {
-    document.getElementById('contenido').innerHTML='<span class="badge bg-secondary" id="1">Osde <button type="button" class="btn-close btn-close-white" aria-label="Close" id="borrar"></button></span>';
-    //Botón Borrar
-    document.getElementById("cerrar").addEventListener("click", function() {
-        document.getElementById('contenido').innerHTML='';
-    });
+var $cantidadDeOS = 0;
+var $obraSocialIngresada = "";
+document.getElementById("agregar").addEventListener("click", function($obraSocialIngresada) {
+    $cantidadDeOS++;
+    for (let index = 0; index < $cantidadDeOS; index++) {
+        $agregarSO = '<span class="badge bg-secondary" id="'+index+'">'+$obraSocialIngresada+'<button type="button" class="btn-close btn-close-white" aria-label="Close" id="borrar"></button></span>';
+        $escribirHTML = $escribirHTML + $agregar;
+    }
+    document.getElementById('contenido').innerHTML = $escribirHTML;
 });
 
 
