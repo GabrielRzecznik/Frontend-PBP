@@ -1,5 +1,7 @@
-function registrarPaciente(formulario){
+function registrarProfesional(formulario, tc, os){
     var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
+    formData.append("tipoConsulta", tc);
+    formData.append("obraSocial", os);
     formData.append("id_paciente", localStorage.getItem("id_usuario"));
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
