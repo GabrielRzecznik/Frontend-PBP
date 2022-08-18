@@ -247,7 +247,7 @@ document.getElementById("agregar").addEventListener("click", function() {
     document.getElementById('contenido').innerHTML='<span class="badge bg-secondary" id="1">Osde <button type="button" class="btn-close btn-close-white" aria-label="Close" id="borrar"></button></span>';
 });
 //Botón Borrar
-document.getElementById("calleConsultorio").addEventListener("click", function() {
+document.getElementById("cerrar").addEventListener("click", function() {
     document.getElementById('contenido').innerHTML='';
 });
 
