@@ -244,6 +244,7 @@ if (especialidad.value == 0) {
 //Validar y Agregar Obras Sociales
 //Botón Agregar
 var $cantidadDeOS = 0;
+var $escribirHTML = "";
 document.getElementById("agregar").addEventListener("click", function() {
     $obraSocialIngresada = obraSocial.value.trim();
     $cantidadDeOS++;
