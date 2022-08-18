@@ -11,6 +11,7 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
     matricula: /^[0-9/\s]{5,6}$/,//Ejemplo de Cordoba: 35887/1; Bs As: 208845, 236163
+    obraSocial: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{0,40}/,
     provinciaConsultorio: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     localidadConsultorio: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     calleConsultorio: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü 0-9\s]{2,35}$/,
@@ -19,14 +20,17 @@ const expresiones = {
 };
 
 const campos = {
-    especilidad: false,
+    especialidad: false,
     matricula: false,
+    obraSocial: false,
     tipoConsulta: false,
     provinciaConsultorio: true,
     localidadConsultorio: true,
     calleConsultorio: true,
     alturaConsultorio: true,
-    departamentoConsultorio: true
+    departamentoConsultorio: true,
+    //Check
+    consultorio: false,
 };
 
 const validarFormulario = (e) => {
@@ -56,6 +60,33 @@ const validarFormulario = (e) => {
                 document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
                 document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
                 campos['matricula'] = false;
+            }
+            break;
+        case 'obraSocial':
+            if (expresiones.obraSocial.test(e.target.value)) {
+                document.getElementById('iconoObraSocial').classList.add('validado');
+                document.querySelector('#iconoObraSocial').classList.remove('bi-x-circle-fill');
+                document.querySelector('#iconoObraSocial').classList.add('bi-check-circle-fill');
+                //Mensaje de error Obra Social
+                document.getElementById('alertObraSocial').classList.remove('alertaError');
+                //Validar Obra Social
+                campos['obraSocial'] = true;
+            }else{
+                document.getElementById('iconoObraSocial').classList.add('error');
+                document.getElementById('iconoObraSocial').classList.remove('validado');
+                document.querySelector('#iconoObraSocial').classList.add('bi-x-circle-fill');
+                document.querySelector('#iconoObraSocial').classList.remove('bi-check-circle-fill');
+                //Mensaje de error Obra Social
+                document.getElementById('alertObraSocial').classList.add('alertaError');
+                //Limpiar mensaje
+                document.getElementById('alertMatricula').classList.remove('alertaError');
+                document.getElementById('alertTipoConsulta').classList.remove('alertaError');
+                document.getElementById('alertProvinciaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertLocalidadConsultorio').classList.remove('alertaError');
+                document.getElementById('alertCalleConsultorio').classList.remove('alertaError');
+                document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
+                document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
+                campos['obraSocial'] = false;
             }
             break;
         case 'provinciaConsultorio':
@@ -251,7 +282,7 @@ var $cantidadDeOS = 0;
 var $escribirHTML = "";
 document.getElementById("agregar").addEventListener("click", function() {
     $obraSocialIngresada = obraSocial.value.trim();
-    if (!($obraSocialIngresada == "")) {
+    if (!($obraSocialIngresada == "" || campos.obraSocial == false)) {
         if ($cantidadDeOS < 3) {
             if ($cantidadDeOS == 2) {
                 botonAgregar.disabled = true;
@@ -303,11 +334,13 @@ document.getElementById("consultorio").addEventListener("click", function() {
         inputCalleConsultorio.disabled = false;
         inputAlturaConsultorio.disabled = false;
         inputDepartamentoConsultorio.disabled = false;
+        campos['consultorio'] = true;
         campos['provinciaConsultorio'] = false;
         campos['localidadConsultorio'] = false;
         campos['calleConsultorio'] = false;
         campos['alturaConsultorio'] = false;
     }else{
+        campos['consultorio'] = false;
         campos['provinciaConsultorio'] = true;
         campos['localidadConsultorio'] = true;
         campos['calleConsultorio'] = true;
@@ -351,7 +384,7 @@ formulario.addEventListener('submit', (e) => {
         alert("Complete el campo matricula");
     }
 
-    if (checkConsultorio.checked == true) {//No sirve
+    if (campos.consultorio == true) {
         if (provinciaConsultorioValue === "") {
             alert("Complete el campo provincia consultorio");
         }if (localidadConsultorioValue === "") {
@@ -363,7 +396,8 @@ formulario.addEventListener('submit', (e) => {
         }
     }
     
-    if (campos.especilidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
+    console.log(campos.tipoConsulta);
+    if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
         //Enviar AJAX
         console.log("Todo Bien!");
         //registrarProfesional(formulario);
