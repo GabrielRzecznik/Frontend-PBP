@@ -244,7 +244,7 @@ if (especialidad.value == 0) {
 //Validar y Agregar Obras Sociales
 //Botón Agregar
 document.getElementById("agregar").addEventListener("click", function() {
-    document.getElementById('contenido').innerHTML='<span class="badge bg-secondary" id="1">Osde <button type="button" class="btn-close btn-close-white" aria-label="Close"></button></span>';
+    document.getElementById('contenido').innerHTML='<span class="badge bg-secondary" id="1">Osde <button type="button" class="btn-close btn-close-white" aria-label="Close" id="borrar"></button></span>';
 });
 //Botón Borrar
 document.getElementById("borrar").addEventListener("click", function() {
