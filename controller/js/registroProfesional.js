@@ -336,6 +336,7 @@ inputs.forEach((input) => {
 const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
+    const especialidadValue = especialidad.value.trim();
     const matriculaValue = matricula.value.trim();
     const provinciaConsultorioValue = provinciaConsultorio.value.trim();
     const localidadConsultorioValue = localidadConsultorio.value.trim();
@@ -345,15 +346,21 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
     if (matriculaValue === "") {
-        alert("Complete el campo nombre");
-    }if (provinciaConsultorioValue === "") {
-        alert("Complete el campo provincia");
-    }if (localidadConsultorioValue === "") {
-        alert("Complete el campo localidad");
-    }if (calleConsultorioValue === "") {
-        alert("Complete el campo calle");
-    }if (alturaConsultorioValue === "") {
-        alert("Complete el campo altura");
+        alert("Complete el campo matricula");
+    }if (especialidadValue === "0") {
+        alert("Complete el campo especialidad");
+    }
+
+    if (checkConsultorio.checked == true) {
+        if (provinciaConsultorioValue === "") {
+            alert("Complete el campo provincia consultorio");
+        }if (localidadConsultorioValue === "") {
+            alert("Complete el campo localidad consultorio");
+        }if (calleConsultorioValue === "") {
+            alert("Complete el campo calle consultorio");
+        }if (alturaConsultorioValue === "") {
+            alert("Complete el campo altura consultorio");
+        }
     }
     
     if (campos.especilidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
