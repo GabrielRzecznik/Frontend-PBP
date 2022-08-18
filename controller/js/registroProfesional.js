@@ -4,10 +4,6 @@ window.addEventListener('load',load);
 function load(){
     //Agregar obra social
 }
-
-document.getElementById("agregar").addEventListener("click", function( event ) {
-    document.getElementById('contenido').innerHTML='Párrafo de texto';
-});
 //#endregion
 
 //#region Validación formulario
@@ -246,6 +242,11 @@ if (especialidad.value == 0) {
 }
 
 //Validar y Agregar Obras Sociales
+
+document.getElementById("agregar").addEventListener("click", function( event ) {
+    document.getElementById('contenido').innerHTML='<span class="badge bg-secondary" id="1">Osde <button type="button" class="btn-close btn-close-white" aria-label="Close"></button></span>';
+});
+
 
 
 inputs.forEach((input) => {
