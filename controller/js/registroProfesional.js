@@ -313,44 +313,19 @@ $tiposConsultas = [];
 function validarTipoConsulta() {
     if (checkConsultorio.checked == true || checkDomicilio.checked == true || checkVirtual.checked == true) {
         $tiposConsultas = [];//Vaciar
-
         if (checkConsultorio.checked == true) {
-            
-            $tiposConsultas.push('Consultorio'); 
+            $tiposConsultas.push('Consultorio');
         }if (checkDomicilio.checked == true) {
-            
-            $tiposConsultas.push('Domicilio'); 
+            $tiposConsultas.push('Domicilio');
         }if (checkVirtual.checked == true) {
-            
             $tiposConsultas.push('Virtual'); 
         }
 
-        if ($tiposConsultas != "") {
-            document.getElementById('iconoMatricula').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-            document.getElementById('iconoMatricula').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-        }else{
-            document.getElementById('iconoMatricula').classList.add('mostrar','bi-x-circle-fill','noValidado');//Borrar !,x
-            document.getElementById('iconoMatricula').classList.remove('bi-exclamation-circle-fill','signo','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-        }
-
-        //$tiposConsultas = $consultorio + $domicilio + $virtual;
-        
-        document.querySelector('#iconoTipoConsulta').classList.remove('signo');
-        document.querySelector('#iconoTipoConsulta').classList.remove('bi-exclamation-circle-fill');
-        document.getElementById('iconoTipoConsulta').classList.add('validado');
-        document.querySelector('#iconoTipoConsulta').classList.remove('bi-x-circle-fill');
-        document.querySelector('#iconoTipoConsulta').classList.add('bi-check-circle-fill');
         //Mensaje de error
         document.getElementById('alertTipoConsulta').classList.remove('alertaError');
         //Validar
         campos['tipoConsulta'] = true;
     }else{
-        document.querySelector('#iconoTipoConsulta').classList.remove('signo');
-        document.getElementById('iconoTipoConsulta').classList.add('iconos', 'validado');
-        document.querySelector('#iconoTipoConsulta').classList.remove('bi-exclamation-circle-fill');
-        document.getElementById('iconoTipoConsulta').classList.remove('validado');
-        document.querySelector('#iconoTipoConsulta').classList.add('bi-x-circle-fill');
-        document.querySelector('#iconoTipoConsulta').classList.remove('bi-check-circle-fill');
         //Mensaje de error
         document.getElementById('alertTipoConsulta').classList.add('alertaError');
         //Limpiar mensaje
@@ -365,6 +340,15 @@ function validarTipoConsulta() {
     }
 }
 
+//DONDE LO PONGO?
+if () {
+    document.getElementById('iconoTipoConsulta').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+    document.getElementById('iconoTipoConsulta').classList.add('mostrar','bi-check-circle-fill','validado');
+
+}else{
+    document.getElementById('iconoTipoConsulta').classList.remove('bi-exclamation-circle-fill','signo','bi-check-circle-fill','validado');
+    document.getElementById('iconoTipoConsulta').classList.add('mostrar','bi-x-circle-fill','noValidado');
+}
 
 const inputProvinciaConsultorio = document.getElementById('provinciaConsultorio');
 const inputLocalidadConsultorio = document.getElementById('localidadConsultorio');
@@ -387,10 +371,10 @@ document.getElementById("consultorio").addEventListener("click", function() {
         campos['calleConsultorio'] = false;
         campos['alturaConsultorio'] = false;
         //Mostrar Iconos !
-        document.querySelector('#iconoProvinciaConsultorio').classList.add('bi-exclamation-circle-fill','signo');
-        document.querySelector('#iconoLocalidadConsultorio').classList.add('bi-exclamation-circle-fill','signo');
-        document.querySelector('#iconoCalleConsultorio').classList.add('bi-exclamation-circle-fill','signo');
-        document.querySelector('#iconoAlturaConsultorio').classList.add('bi-exclamation-circle-fill','signo');
+        document.getElementById('iconoProvinciaConsultorio').classList.add('bi-exclamation-circle-fill','signo');
+        document.getElementById('iconoLocalidadConsultorio').classList.add('bi-exclamation-circle-fill','signo');
+        document.getElementById('iconoCalleConsultorio').classList.add('bi-exclamation-circle-fill','signo');
+        document.getElementById('iconoAlturaConsultorio').classList.add('bi-exclamation-circle-fill','signo');
     }else{
         //Desactivar Inputs
         inputProvinciaConsultorio.disabled = true;
