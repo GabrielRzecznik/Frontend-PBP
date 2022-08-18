@@ -14,7 +14,7 @@ document.getElementById("agregar").addEventListener("click", function( event ) {
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-    matricula: /^[0-9/]\S{5,6}$/,//Ejemplo de Cordoba: 35887/1; Bs As: 208845, 236163
+    matricula: /^[0-9/\s]{5,6}$/,//Ejemplo de Cordoba: 35887/1; Bs As: 208845, 236163
     provinciaConsultorio: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     localidadConsultorio: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     calleConsultorio: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü 0-9\s]{2,35}$/,
