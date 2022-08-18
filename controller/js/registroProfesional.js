@@ -351,7 +351,7 @@ formulario.addEventListener('submit', (e) => {
         alert("Complete el campo matricula");
     }
 
-    if (checkConsultorio.checked == true) {
+    if (checkConsultorio.checked == true) {//No sirve
         if (provinciaConsultorioValue === "") {
             alert("Complete el campo provincia consultorio");
         }if (localidadConsultorioValue === "") {
