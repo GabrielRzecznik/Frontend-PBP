@@ -434,7 +434,7 @@ formulario.addEventListener('submit', (e) => {
         alert("Complete el campo altura");
     }
     
-    if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura) {
+    if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
         //Enviar AJAX
         registrarPaciente(formulario);
         //AGREGAR Animación de cargando

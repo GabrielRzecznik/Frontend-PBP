@@ -21,13 +21,12 @@ const expresiones = {
 const campos = {
     especilidad: false,
     matricula: false,
-    obraSocial: false,
     tipoConsulta: false,
-    provinciaConsultorio: false,
-    localidadConsultorio: false,
-    calleConsultorio: false,
-    alturaConsultorio: false,
-    departamentoConsultorio: false
+    provinciaConsultorio: true,
+    localidadConsultorio: true,
+    calleConsultorio: true,
+    alturaConsultorio: true,
+    departamentoConsultorio: true
 };
 
 const validarFormulario = (e) => {
@@ -243,22 +242,125 @@ if (especialidad.value == 0) {
 
 //Validar y Agregar Obras Sociales
 //Botón Agregar
+const botonAgregar = document.getElementById('agregar');
+
+var $ObrasSocialesIngresadas = "";
+
+var $idSpan = 0;
 var $cantidadDeOS = 0;
 var $escribirHTML = "";
 document.getElementById("agregar").addEventListener("click", function() {
     $obraSocialIngresada = obraSocial.value.trim();
-    $cantidadDeOS++;
-    for (let index = 0; index < $cantidadDeOS; index++) {
-        $agregarSO = '<span class="badge bg-secondary" id="'+$cantidadDeOS+'">'+$obraSocialIngresada+'<button type="button" class="btn-close btn-close-white" aria-label="Close" id="borrar"></button></span>';
-        $escribirHTML = $escribirHTML + $agregarSO;
+    if (!($obraSocialIngresada == "")) {
+        if ($cantidadDeOS < 3) {
+            if ($cantidadDeOS == 2) {
+                botonAgregar.disabled = true;
+            }
+            siguientesLetras = $obraSocialIngresada.slice(1).toLowerCase();//Pasar a minusculas
+            primerLetra = $obraSocialIngresada[0].toUpperCase();//Primer letra a mayuscula
+            $obraSocialIngresada = primerLetra + siguientesLetras;
+        
+            if ($ObrasSocialesIngresadas == "") {
+                $ObrasSocialesIngresadas += $obraSocialIngresada;
+            }else{
+                $ObrasSocialesIngresadas += ";"+$obraSocialIngresada;
+            }
+        
+            $cantidadDeOS++;
+            
+            $agregarSO = '<span class="badge bg-secondary etiquetasOS" id="etiquetaOS'+$cantidadDeOS+'">'+$obraSocialIngresada+'</span>';
+            
+            $escribirHTML = $escribirHTML + $agregarSO;
+            document.getElementById('contenido').innerHTML = $escribirHTML;
+            console.log($ObrasSocialesIngresadas);//FALTA GUARDAR
+
+            //Identificar Etiquetas y Borrarlas
+        }
     }
-    document.getElementById('contenido').innerHTML = $escribirHTML;
+    document.getElementById("obraSocial").value = "";
 });
 
+document.getElementById("borrar").addEventListener("click", function() {
+    $cantidadDeOS = 0;
+    $ObrasSocialesIngresadas = "";
+    $escribirHTML = "";
+    document.getElementById('contenido').innerHTML = $escribirHTML;
+    botonAgregar.disabled = false;
+});
 
+//Validar Tipo de Consulta
+const inputProvinciaConsultorio = document.getElementById('provinciaConsultorio');
+const inputLocalidadConsultorio = document.getElementById('localidadConsultorio');
+const inputCalleConsultorio = document.getElementById('calleConsultorio');
+const inputAlturaConsultorio = document.getElementById('alturaConsultorio');
+const inputDepartamentoConsultorio = document.getElementById('departamentoConsultorio');
+
+document.getElementById("consultorio").addEventListener("click", function() {
+    var checkConsultorio = document.getElementById("consultorio");
+    if (checkConsultorio.checked == true) {
+        inputProvinciaConsultorio.disabled = false;
+        inputLocalidadConsultorio.disabled = false;
+        inputCalleConsultorio.disabled = false;
+        inputAlturaConsultorio.disabled = false;
+        inputDepartamentoConsultorio.disabled = false;
+        campos['provinciaConsultorio'] = false;
+        campos['localidadConsultorio'] = false;
+        campos['calleConsultorio'] = false;
+        campos['alturaConsultorio'] = false;
+    }else{
+        campos['provinciaConsultorio'] = true;
+        campos['localidadConsultorio'] = true;
+        campos['calleConsultorio'] = true;
+        campos['alturaConsultorio'] = true;
+        campos['departamentoConsultorio'] = true;
+        inputProvinciaConsultorio.disabled = true;
+        inputProvinciaConsultorio.value = "";
+        inputLocalidadConsultorio.disabled = true;
+        inputLocalidadConsultorio.value = "";
+        inputCalleConsultorio.disabled = true;
+        inputCalleConsultorio.value = "";
+        inputAlturaConsultorio.disabled = true;
+        inputAlturaConsultorio.value = "";
+        inputDepartamentoConsultorio.disabled = true;
+        inputDepartamentoConsultorio.value = "";
+    }
+});
 
 inputs.forEach((input) => {
     input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
     input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
 });
+
+//#endregion Enviar Formulario
+
+const formulario = document.getElementById('formulario');
+
+formulario.addEventListener('submit', (e) => {
+    const matriculaValue = matricula.value.trim();
+    const provinciaConsultorioValue = provinciaConsultorio.value.trim();
+    const localidadConsultorioValue = localidadConsultorio.value.trim();
+    const calleConsultorioValue = calleConsultorio.value.trim();
+    const alturaConsultorioValue = alturaConsultorio.value.trim();
+    
+    e.preventDefault();//evita que se envien los datos y se refresque la pagina
+    
+    if (matriculaValue === "") {
+        alert("Complete el campo nombre");
+    }if (provinciaConsultorioValue === "") {
+        alert("Complete el campo provincia");
+    }if (localidadConsultorioValue === "") {
+        alert("Complete el campo localidad");
+    }if (calleConsultorioValue === "") {
+        alert("Complete el campo calle");
+    }if (alturaConsultorioValue === "") {
+        alert("Complete el campo altura");
+    }
+    
+    if (campos.especilidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
+        //Enviar AJAX
+        console.log("Todo Bien!");
+        //registrarProfesional(formulario);
+    }
+
+}); 
 //#endregion

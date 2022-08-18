@@ -223,3 +223,13 @@ body{
   font-size: 10px;
   margin: 0 auto;
 }
+
+.etiquetasOS{
+  position: relative;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.contenedorEtiquetasOS{
+  height: 25px;
+}
