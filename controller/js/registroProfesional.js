@@ -249,7 +249,7 @@ document.getElementById("agregar").addEventListener("click", function() {
     $cantidadDeOS++;
     for (let index = 0; index < $cantidadDeOS; index++) {
         $agregarSO = '<span class="badge bg-secondary" id="'+index+'">'+$obraSocialIngresada+'<button type="button" class="btn-close btn-close-white" aria-label="Close" id="borrar"></button></span>';
-        $escribirHTML = $escribirHTML + $agregar;
+        $escribirHTML = $escribirHTML + $agregarSO;
     }
     document.getElementById('contenido').innerHTML = $escribirHTML;
 });
