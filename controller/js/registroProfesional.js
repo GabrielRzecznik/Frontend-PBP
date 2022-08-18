@@ -245,10 +245,10 @@ if (especialidad.value == 0) {
 //Botón Agregar
 document.getElementById("agregar").addEventListener("click", function() {
     document.getElementById('contenido').innerHTML='<span class="badge bg-secondary" id="1">Osde <button type="button" class="btn-close btn-close-white" aria-label="Close" id="borrar"></button></span>';
-});
-//Botón Borrar
-document.getElementById("cerrar").addEventListener("click", function() {
-    document.getElementById('contenido').innerHTML='';
+    //Botón Borrar
+    document.getElementById("cerrar").addEventListener("click", function() {
+        document.getElementById('contenido').innerHTML='';
+    });
 });
 
 
