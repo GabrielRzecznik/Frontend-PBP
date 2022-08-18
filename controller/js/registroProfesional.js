@@ -244,15 +244,15 @@ if (especialidad.value == 0) {
 //Validar y Agregar Obras Sociales
 //Botón Agregar
 var $cantidadDeOS = 0;
-var $obraSocialIngresada = "";
-document.getElementById("agregar").addEventListener("click", function($obraSocialIngresada) {
+document.getElementById("agregar").addEventListener("click", function() {
+    $obraSocialIngresada = obraSocial.value.trim();
     $cantidadDeOS++;
     for (let index = 0; index < $cantidadDeOS; index++) {
         $agregarSO = '<span class="badge bg-secondary" id="'+index+'">'+$obraSocialIngresada+'<button type="button" class="btn-close btn-close-white" aria-label="Close" id="borrar"></button></span>';
         $escribirHTML = $escribirHTML + $agregar;
     }
-    document.getElementById('contenido').innerHTML = $escribirHTML;
 });
+document.getElementById('contenido').innerHTML = $escribirHTML;
 
 
 
