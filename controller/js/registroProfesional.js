@@ -245,6 +245,9 @@ if (especialidad.value == 0) {
     campos['especialidad'] = false;
 }
 
+//Validar y Agregar Obras Sociales
+
+
 inputs.forEach((input) => {
     input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
     input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
