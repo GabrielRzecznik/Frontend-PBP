@@ -251,8 +251,8 @@ document.getElementById("agregar").addEventListener("click", function() {
         $agregarSO = '<span class="badge bg-secondary" id="'+index+'">'+$obraSocialIngresada+'<button type="button" class="btn-close btn-close-white" aria-label="Close" id="borrar"></button></span>';
         $escribirHTML = $escribirHTML + $agregar;
     }
+    document.getElementById('contenido').innerHTML = $escribirHTML;
 });
-document.getElementById('contenido').innerHTML = $escribirHTML;
 
 
 
