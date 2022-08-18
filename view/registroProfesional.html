@@ -23,7 +23,7 @@
                     <div class="row">
                         <div class="col-md-6"> 
                             <!--Campo Especialidad-->
-                            <span class="texto">Especialidad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoEspecialidad"></i>
+                            <span class="texto">Especialidad </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoEspecialidad" title="Campo Obligatorio"></i>
                             <select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example">
                                 <option value="0" selected></option>
                                 <option value="Alergia e inmunologia infantil">Alergología e inmunología</option>
@@ -98,12 +98,12 @@
                             </select>
                             <br>
                             <!--Campo Matricula-->
-                            <span class="texto">Matricula (Sin el punto) </span><i class="bi bi-x-circle-fill iconos validado" id="iconoMatricula"></i>
+                            <span class="texto">Matricula </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoMatricula" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
                             <input type="text" class="form-control inputs" name="matricula" id="matricula">
                             <br>
                             <!--Campo Obra Social-->
-                            <span class="texto">Obras Sociales de Atención </span><i class="bi bi-x-circle-fill iconos validado" id="iconoObraSocial"></i>
+                            <span class="texto">Obras Sociales de Atención </span><i class="bi" id="iconoObraSocial"></i><!--Campo no obligatorio-->
                             <div class="input-group">
                                 <input type="text" class="form-control inputs" name="obraSocial" id="obraSocial" aria-describedby="agregar">
                                 <button class="btn btn-outline-secondary" type="button" id="agregar"><i class="bi bi-plus-lg"></i></button>
@@ -112,7 +112,7 @@
                             <div class="contenedorEtiquetasOS" id="contenido"></div>
                             <br>
                             <!--Campo Tipo Consulta-->
-                            <span class="texto">Formato de Consultas </span><i class="bi bi-x-circle-fill iconos validado" id="iconoTipoConsulta"></i>
+                            <span class="texto">Formato de Consultas </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoEspecialidad" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="consultorio" id="consultorio">
@@ -136,27 +136,27 @@
                         </div>
                         <div class="col-md-6">
                             <!--Campo Provincia-->
-                            <span class="texto">Provincia consultorio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvinciaConsultorio"></i>
+                            <span class="texto">Provincia consultorio </span><i class="bi bi-exclamation-circle-fill noValidado" id="iconoProvinciaConsultorio" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
                             <input type="text" class="form-control inputs" name="provinciaConsultorio" id="provinciaConsultorio" disabled>
                             <br>
                             <!--Campo Localidad-->
-                            <span class="texto">Localidad consultorio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoLocalidadConsultorio"></i>
+                            <span class="texto">Localidad consultorio </span><i class="bi bi-exclamation-circle-fill noValidado" id="iconoLocalidadConsultorio" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
                             <input type="text" class="form-control inputs" name="localidadConsultorio" id="localidadConsultorio" disabled>
                             <br>
                             <!--Campo Calle-->
-                            <span class="texto">Nombre de calle/avenida consultorio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCalleConsultorio" ></i>
+                            <span class="texto">Nombre de calle/avenida consultorio </span><i class="bi bi-exclamation-circle-fill noValidado" id="iconoCalleConsultorio" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
                             <input type="text" class="form-control inputs" name="calleConsultorio" id="calleConsultorio" disabled>
                             <br>
                             <!--Campo Número-->
-                            <span class="texto">Altura de calle/avenida consultorio </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAlturaConsultorio"></i>
+                            <span class="texto">Altura de calle/avenida consultorio </span><i class="bi bi-exclamation-circle-fill noValidado" id="iconoAlturaConsultorio" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
                             <input type="text" class="form-control inputs" name="alturaConsultorio" id="alturaConsultorio" disabled>
                             <br>
                             <!--Campo Departamento-->
-                            <span class="texto">Departamento consultorio</span><i class="bi bi-x-circle-fill iconos validado" id="iconoDepartamentoConsultorio"></i>
+                            <span class="texto">Departamento consultorio </span><i class="bi" id="iconoDepartamentoConsultorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="departamentoConsultorio" id="departamentoConsultorio" disabled>
                             <br>
