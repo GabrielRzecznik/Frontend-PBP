@@ -77,10 +77,13 @@ body{
 @media (max-width: 768px) {
     .alerta {
         position: fixed;
+        top: 1%;
+        bottom: auto;
         left: 5%;
         right: 5%;
-        bottom: 0%;
+        font-size: small;
         visibility: hidden;
+        box-sizing: border-box;
     }
 
     .panel1{
