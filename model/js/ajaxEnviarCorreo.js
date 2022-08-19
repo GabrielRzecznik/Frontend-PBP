@@ -5,7 +5,7 @@ function random(min, max) {
 var codigoGenerado = random(1000, 9999);
 
 function tipoValidezCodigo() {
-    tiempo = setTimeout(anularCodigo, 600000);
+    tiempo = setTimeout(anularCodigo, 10000);//10 minutos = 600000
 }
 
 function anularCodigo() {
