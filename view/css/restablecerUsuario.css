@@ -59,7 +59,7 @@ body{
 
 @media (max-width: 768px) {
     .alerta {
-      position: relative;
+      position: fixed;
       top: 1%;
       bottom: auto;
       left: 5%;
