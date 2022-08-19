@@ -7,8 +7,6 @@ function registrarUsuario(formulario){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {
-                //var respuestaResivida = xmlhttp.responseText;
-                //alert(respuestaResivida);
                 var data=JSON.parse(xmlhttp.responseText);
                 localStorage.setItem("id_usuario", data[0]["id_usuario"]);//Me guarda el id_usuario de la bd
                 window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPerfil.html";

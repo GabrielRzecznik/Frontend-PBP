@@ -121,13 +121,9 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    if (nombreUsuarioValue === "") {
-        alert("Complete el campo nombre de usuario");
-    }if (correoValue === "") {
-        alert("Complete el campo correo");
-    }if (passwordValue === "") {
-        alert("Complete el campo contraseña")
-    }if (passwordValue !== password2Value) {
+    if (nombreUsuarioValue === "" || correoValue === "" || passwordValue === "" || password2Value === "") {
+        alert("Debe completar todos los campos!");
+    }else if (passwordValue !== password2Value) {
         alert("Las contraseñas no coinciden")
     }
     

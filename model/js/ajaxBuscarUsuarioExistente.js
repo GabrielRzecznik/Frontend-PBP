@@ -18,7 +18,7 @@ function buscarUsuarioExistente(correo, nombreUsuario){
             }if (xmlhttp.status == 401) {
                 document.getElementById('tituloBuscar').style.display = 'block';
                 document.getElementById('cargandoBuscar').style.display = 'none';
-                alert("El correo o el usuario ya se encuentra registrado");
+                alert("El correo o el usuario ya se encuentra en uso");
             }
         }
     }

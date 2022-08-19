@@ -57,32 +57,25 @@
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
                         <i class="bi bi-info-circle-fill"></i>
                         <strong>Nombre de Usuario:</strong>
-                        El nombre de usuario ingresado no es valido
-                        <br>a una dirección valida.
-                        <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
+                        El nombre de usuario ingresado no es validó. Solamente admite letras en "minúscula".
                     </div>   
                     <!--Alerta Correo-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
                         <i class="bi bi-info-circle-fill"></i>
                         <strong>Correo:</strong>
-                        El correo ingresado no corresponde
-                        <br>a una dirección valida.
-                        <br>Solamente admite letras en "minuscula".<!--Corregir con java-->
+                        El correo ingresado no corresponde a una dirección valida. Solamente admite letras en "minúscula".<!--Corregir con java-->
                     </div>
                     <!--Alerta Contraseña-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
                         <i class="bi bi-info-circle-fill"></i>
                         <strong>Contraseña:</strong>
-                        La contraseña debe tener de 8 a 16 caracteres.
-                        <br>Debe contener al menos una "mayuscula" y un "digito".
+                        La contraseña debe tener de 8 a 16 caracteres. Debe contener al menos una "mayúscula" y un "digito".
                     </div>
                     <!--Alerta Contraseña-->
                     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword2">
                         <i class="bi bi-info-circle-fill"></i>
                         <strong>Validación Contraseña:</strong>
-                        La validación de contraseña debe tener de 8 a 16 caracteres, 
-                        <br>Debe contener al menos una "mayuscula" y un "digito"
-                        <br>y coincidir con la contraseña.
+                        La validación de contraseña debe tener de 8 a 16 caracteres, Debe contener al menos una "mayúscula" y un "digito" y coincidir con la contraseña.
                     </div>
                 </form>
                 <!--Activar Formulario de Correo-->
@@ -90,10 +83,10 @@
                     <h7 class="titulo">Activación de Correo</h7>
                     <br>
                     <span>
-                        Hemos enviado un correo a su dirección ingresada el cual cuenta con un bóton "Active Form", Debé cliquearlo para poder recibir posteriormente un código de verificación.
+                        Hemos enviado un correo a su dirección ingresada el cual cuenta con un botón "Active Form", Debe cliquearlo para poder recibir posteriormente un código de verificación.
                     </span>
                     <a href="#" class="btn btn-warning botonSubmit" name="activar" id="activar">
-                        <span id="loguearse">Ya cliquié el botón</span>
+                        <span id="loguearse">Ya oprimí el botón</span>
                     </a>
                     <div class="row">
                         <div class="col-md-6">
@@ -107,9 +100,9 @@
                 <!--Formulario de validación-->
                 <form class="formularioValidar" onsubmit="event.preventDefault()" action="#" method="post" id="formularioValidar">
                     <span>
-                        Se ha enviado un correo electrónico de validación a su dirección ingresada con un código de 4 caracteres!<br>
-                        Ingréselo dentro del campo código para continuar!<br>
-                        El mismo tiene una validez de 10 minutos<br>
+                        Se ha enviado un correo electrónico de validación a su dirección ingresada con un código de 4 caracteres!
+                        Ingréselo dentro del campo código para continuar!
+                        El mismo tiene una validez de 10 minutos
                     </span>
                     <br>
                     <span class="texto">Código </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoCodigo" title="Campo Obligatorio"></i>

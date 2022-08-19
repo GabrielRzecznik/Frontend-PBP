@@ -17,7 +17,7 @@ function enviarCorreo(correo){
     tipoValidezCodigo();//10 Minutos de validez
 
     var formData= new FormData();
-    formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 digitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar, muchas gracias!");
+    formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 dígitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar, muchas gracias!");
     formData.append("Código",codigoGenerado);
     //var formJSON=JSON.stringify(Object.fromEntries(formData));
     //console.log(formJSON)
