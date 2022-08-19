@@ -81,7 +81,7 @@ body{
   visibility: visible;
 }
 
-.iconos{
+.noValidado{
   visibility: hidden;
   color: rgb(255, 93, 93);
 }
@@ -91,13 +91,13 @@ body{
   color: rgb(105, 189, 50);
 }
 
-.error{
-  visibility: visible;
-}
-
 .signo{
   visibility: visible;
   color: rgb(255, 185, 93);
+}
+
+.mostrar{
+  visibility: visible;
 }
 
 .cargando{
