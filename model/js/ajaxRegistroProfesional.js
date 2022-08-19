@@ -15,8 +15,12 @@ function registrarProfesional(formulario, tc, os){
                 localStorage.clear();
                 window.location.href = "https://frontend-pbp.herokuapp.com/";
             }else if (xmlhttp.status == 500) {
+                document.getElementById('tituloRegistrar').style.display = 'block';
+                document.getElementById('cargandoRegistrar').style.display = 'none';
                 alert("Ocurrio un error inesperado!");
             }else{
+                document.getElementById('tituloRegistrar').style.display = 'block';
+                document.getElementById('cargandoRegistrar').style.display = 'none';
                 alert("Fallo la conexión con el servidor!!");
             }
         }
