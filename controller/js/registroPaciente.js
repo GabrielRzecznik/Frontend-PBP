@@ -398,8 +398,8 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
         //Enviar AJAX
-        document.getElementById('tituloBuscar').style.display = 'none';
-        document.getElementById('cargandoBuscar').style.display = 'block';
+        document.getElementById('tituloRegistrar').style.display = 'none';
+        document.getElementById('cargandoRegistrar').style.display = 'block';
         registrarPaciente(formulario);
         //AGREGAR Animación de cargando
 
