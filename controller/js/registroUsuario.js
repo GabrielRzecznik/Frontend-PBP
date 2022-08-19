@@ -133,6 +133,8 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.correo && campos.password && (passwordValue === password2Value)) {
         //Enviar AJAX
+        document.getElementById('tituloBuscar').style.display = 'none';
+        document.getElementById('cargandoBuscar').style.display = 'block';
         buscarUsuarioExistente(correo.value.trim(), nombreUsuario.value.trim());
     }
 });
@@ -170,7 +172,7 @@ const validarFormulario2 = (e) => {
                 //Alerta de error
                 document.getElementById('alertCodigo').classList.remove('alertaError');
                 //Validar
-                campos['codigo'] = true;
+                campos2['codigo'] = true;
             }else{
                 document.getElementById('iconoCodigo').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
                 document.getElementById('iconoCodigo').classList.add('mostrar','bi-x-circle-fill','noValidado');
@@ -199,7 +201,7 @@ formulario2.addEventListener('submit', (e) => {
     if (codigoValue === "") {
         alert("Complete el campo código");
     }
-    
+
     if (campos2.codigo) {
         //Enviar AJAX
         if (codigoGenerado == codigoValue) {
@@ -209,7 +211,7 @@ formulario2.addEventListener('submit', (e) => {
         }else{
             alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
             document.getElementById("codigo").value = "";
-            document.querySelector('#iconoCodigo').classList.remove('bi-check-circle-fill');
+            document.getElementById('iconoCodigo').classList.remove('bi-check-circle-fill');
         }
     }
 

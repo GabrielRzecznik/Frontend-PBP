@@ -9,11 +9,13 @@ function buscarUsuarioExistente(correo, nombreUsuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 //Cambia de Formulario
-                document.getElementById('formulario').style.display = 'none';
-                document.getElementById('activador').style.display = 'block';
+                document.getElementById('tituloBuscar').style.display = 'block';
+                document.getElementById('cargandoBuscar').style.display = 'none';
                 //Envia Correo
                 enviarCorreo(correo);
             }if (xmlhttp.status == 401) {
+                document.getElementById('tituloBuscar').style.display = 'block';
+                document.getElementById('cargandoBuscar').style.display = 'none';
                 alert("El correo o el usuario ya se encuentra registrado");
             }
         }
