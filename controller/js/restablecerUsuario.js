@@ -21,18 +21,15 @@ const validarFormulario = (e) => {
    switch (e.target.name) {
         case 'correo':
             if (expresiones.correo.test(e.target.value)) {
-                document.getElementById('iconoCorreo').classList.add('validado');
-                document.querySelector('#iconoCorreo').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoCorreo').classList.add('bi-check-circle-fill');
-                //Mensaje de error correo
+                document.getElementById('iconoCorreo').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoCorreo').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertCorreo').classList.remove('alertaError');
-                //Validar correo
+                //Validar campo
                 campos['correo'] = true;
             }else{
-                document.getElementById('iconoCorreo').classList.add('error');
-                document.getElementById('iconoCorreo').classList.remove('validado');
-                document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoCorreo').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoCorreo').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Mensaje de error correo
                 document.getElementById('alertCorreo').classList.add('alertaError');
                 campos['correo'] = false;
