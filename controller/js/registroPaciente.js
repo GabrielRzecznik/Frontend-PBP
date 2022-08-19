@@ -52,18 +52,15 @@ const validarFormulario = (e) => {
    switch (e.target.name) {//identifica el nombre del input manipulado
         case 'nombre':
             if (expresiones.nombre.test(e.target.value)) {
-                document.getElementById('iconoNombre').classList.add('validado');
-                document.querySelector('#iconoNombre').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoNombre').classList.add('bi-check-circle-fill');
-                //Mensaje de error
+                document.getElementById('iconoNombre').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoNombre').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertNombre').classList.remove('alertaError');
-                //Validar
+                //Validar campo
                 campos['nombre'] = true;
             }else{
-                document.getElementById('iconoNombre').classList.add('error');
-                document.getElementById('iconoNombre').classList.remove('validado');
-                document.querySelector('#iconoNombre').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoNombre').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoNombre').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoNombre').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Limpiar mensaje
                 document.getElementById('alertNombre').classList.add('alertaError');
                 document.getElementById('alertApellido').classList.remove('alertaError');
