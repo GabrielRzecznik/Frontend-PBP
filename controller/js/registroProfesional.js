@@ -320,7 +320,10 @@ function validarTipoConsulta() {
         }if (checkVirtual.checked == true) {
             $tiposConsultas.push('Virtual'); 
         }
-
+        
+        document.getElementById('iconoTipoConsulta').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+        document.getElementById('iconoTipoConsulta').classList.add('mostrar','bi-check-circle-fill','validado');
+        
         //Mensaje de error
         document.getElementById('alertTipoConsulta').classList.remove('alertaError');
         //Validar
@@ -337,17 +340,10 @@ function validarTipoConsulta() {
         document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
         document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
         campos["tipoConsulta"] = false;
-    }
-}
 
-//DONDE LO PONGO?
-if () {
-    document.getElementById('iconoTipoConsulta').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
-    document.getElementById('iconoTipoConsulta').classList.add('mostrar','bi-check-circle-fill','validado');
-
-}else{
-    document.getElementById('iconoTipoConsulta').classList.remove('bi-exclamation-circle-fill','signo','bi-check-circle-fill','validado');
-    document.getElementById('iconoTipoConsulta').classList.add('mostrar','bi-x-circle-fill','noValidado');
+        document.getElementById('iconoTipoConsulta').classList.remove('bi-exclamation-circle-fill','signo','bi-check-circle-fill','validado');
+        document.getElementById('iconoTipoConsulta').classList.add('mostrar','bi-x-circle-fill','noValidado');
+    }   
 }
 
 const inputProvinciaConsultorio = document.getElementById('provinciaConsultorio');
