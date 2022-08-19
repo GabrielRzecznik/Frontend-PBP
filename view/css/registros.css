@@ -201,12 +201,13 @@ body{
 .tituloRegistrar{
   text-align: center;
   display: block;
+  font-size: small;
 }
 
 .cargandoRegistrar{
   display: none;
-  width: 15px;
-  height: 15px;
+  width: 19.5px;
+  height: 19.5px;
   font-size: 10px;
   margin: 0 auto;
 }
@@ -214,13 +215,13 @@ body{
 .tituloBuscar{
   text-align: center;
   display: block;
-  font-size: 15px;
+  font-size: small;
 }
 
 .cargandoBuscar{
   display: none;
-  width: 22.5px;
-  height: 22.5px;
+  width: 19.5px;
+  height: 19.5px;
   font-size: 10px;
   margin: 0 auto;
 }
