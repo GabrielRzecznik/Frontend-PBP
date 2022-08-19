@@ -246,12 +246,10 @@ formulario3.addEventListener('submit', (e) => {
     if (passwordValue === "" && password2Value === "") {
         alert("Debe completar todos los campos!");
     }else{
-        if (passwordValue === "") {
-            alert("Complete el campo contraseña!");
-        }if (password2Value === "") {
-            alert("Complete el campo confirmación de contraseña!");
+        if (passwordValue === "" || password2Value === "") {
+            alert("¡Debe completar todos los campos!");
         }else if (passwordValue !== password2Value) {
-            alert("Las contraseñas no coinciden!");
+            alert("¡Las contraseñas no coinciden!");
         }
     }
     
