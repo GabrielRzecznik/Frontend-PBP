@@ -165,18 +165,15 @@ const validarFormulario2 = (e) => {
    switch (e.target.name) {
         case 'codigo':
             if (expresiones2.codigo.test(e.target.value)) {
-                document.getElementById('iconoCodigo').classList.add('validado');
-                document.querySelector('#iconoCodigo').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoCodigo').classList.add('bi-check-circle-fill');
-                //Mensaje de error codigo
+                document.getElementById('iconoCodigo').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoCodigo').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertCodigo').classList.remove('alertaError');
-                //Validar codigo
-                campos2['codigo'] = true;
+                //Validar
+                campos['codigo'] = true;
             }else{
-                document.getElementById('iconoCodigo').classList.add('error');
-                document.getElementById('iconoCodigo').classList.remove('validado');
-                document.querySelector('#iconoCodigo').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoCodigo').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoCodigo').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoCodigo').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Mensaje de error codigo
                 document.getElementById('alertCodigo').classList.add('alertaError');
                 campos2['codigo'] = false;
