@@ -7,8 +7,8 @@ function seleccionRol(rol){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                localStorage.clear();
                 if (rol == "Paciente") {
+                    localStorage.clear();
                     window.location.href = "https://frontend-pbp.herokuapp.com/";
                 }else if(rol == "Profesional") {
                     window.location.href = "https://frontend-pbp.herokuapp.com/view/registroProfesional.html";
