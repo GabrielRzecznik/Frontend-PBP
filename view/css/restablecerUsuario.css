@@ -96,6 +96,10 @@ body{
   color: rgb(255, 185, 93);
 }
 
+.mostrar{
+  visibility: visible;
+}
+
 .cargandoBuscar{
   display: none;
   width: 15px;
