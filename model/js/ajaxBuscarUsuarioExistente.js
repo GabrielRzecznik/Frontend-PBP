@@ -8,9 +8,11 @@ function buscarUsuarioExistente(correo, nombreUsuario){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                //Cambia de Formulario
                 document.getElementById('tituloBuscar').style.display = 'block';
                 document.getElementById('cargandoBuscar').style.display = 'none';
+                //Cambia de Formulario
+                document.getElementById('formulario').style.display = 'none';
+                document.getElementById('activador').style.display = 'block';
                 //Envia Correo
                 enviarCorreo(correo);
             }if (xmlhttp.status == 401) {

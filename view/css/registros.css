@@ -214,12 +214,13 @@ body{
 .tituloBuscar{
   text-align: center;
   display: block;
+  font-size: 15px;
 }
 
 .cargandoBuscar{
   display: none;
-  width: 15px;
-  height: 15px;
+  width: 22.5px;
+  height: 22.5px;
   font-size: 10px;
   margin: 0 auto;
 }
