@@ -78,6 +78,10 @@ body{
         padding-top: 25px;
         padding-bottom: 25px;
       }
+
+      #container{
+        margin-top: 15%;
+      }
 }
   
 .alertaError{
