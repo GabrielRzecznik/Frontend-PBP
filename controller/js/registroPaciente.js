@@ -376,24 +376,8 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    if (nombreValue === "") {
-        alert("Complete el campo nombre");
-    }if (apellidoValue === "") {
-        alert("Complete el campo apellido");
-    }if (fechaNacimiento = false) {
-        alert("Complete el campo fecha nacimiento");
-    }if (sexoValue === "0") {
-        alert("Complete el campo sexo");
-    }if (telefonoValue === "") {
-        alert("Complete el campo telefono");
-    }if (provinciaValue === "") {
-        alert("Complete el campo provincia");
-    }if (localidadValue === "") {
-        alert("Complete el campo localidad");
-    }if (calleValue === "") {
-        alert("Complete el campo calle");
-    }if (alturaValue === "") {
-        alert("Complete el campo altura");
+    if (nombreValue === "" || apellidoValue === "" || fechaNacimiento === false || sexoValue === "0" || telefonoValue === "" || provinciaValue === "" || localidadValue === "" || calleValue === "" || alturaValue === "") {
+        alert("Debe completar todos los campos obligatorios");
     }
     
     if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
