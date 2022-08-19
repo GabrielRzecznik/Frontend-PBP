@@ -12,7 +12,7 @@
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Registro Perfil - Profesional By Proximity</title>
 </head>
-<body>
+<body id="mostrar">
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
@@ -24,22 +24,22 @@
 
                         <div class="col-md-6"> 
                             <!--Campo Nombre-->
-                            <span class="texto">Nombre </span><i class="bi bi-x-circle-fill iconos validado" id="iconoNombre"></i>
+                            <span class="texto">Nombre </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoNombre" title="Campo Obligatorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="nombre" id="nombre">
                             <br>
                             <!--Campo Apellido-->
-                            <span class="texto">Apellido </span><i class="bi bi-x-circle-fill iconos validado" id="iconoApellido"></i>
+                            <span class="texto">Apellido </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoApellido" title="Campo Obligatorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="apellido" id="apellido">
                             <br>
                             <!--Campo Fecha de Nacimiento-->
-                            <span class="texto">Fecha de nacimiento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFechaNacimiento"></i>
+                            <span class="texto">Fecha de nacimiento </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoFechaNacimiento" title="Campo Obligatorio"></i>
                             <br>
                             <input type="date" class="form-control inputs" name="fechaNacimiento" id="fechaNacimiento">
                             <br>
                             <!--Campo Sexo-->
-                            <span class="texto">Sexo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoSexo"></i>
+                            <span class="texto">Sexo </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoSexo" title="Campo Obligatorio"></i>
                             <br>
                             <select class="form-select" name="sexo" id="sexo" aria-label="Floating label select example">
                                 <option value="0" selected>Como figura en su DNI</option>
@@ -54,34 +54,34 @@
                             <input type="file" class="form-control inputs" name="foto" id="foto">
                             <br>
                             <!--Campo Telefono-->
-                            <span class="texto">Télefono </span><i class="bi bi-x-circle-fill iconos validado" id="iconoTelefono"></i>
+                            <span class="texto">Télefono </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoTelefono" title="Campo Obligatorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="telefono" id="telefono">
                             <br>
                         </div>
                         <div class="col-md-6">
                             <!--Campo Provincia-->
-                            <span class="texto">Provincia </span><i class="bi bi-x-circle-fill iconos validado" id="iconoProvincia"></i>
+                            <span class="texto">Provincia </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoProvincia" title="Campo Obligatorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="provincia" id="provincia">
                             <br>
                             <!--Campo Localidad-->
-                            <span class="texto">Localidad </span><i class="bi bi-x-circle-fill iconos validado" id="iconoLocalidad"></i>
+                            <span class="texto">Localidad </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoLocalidad" title="Campo Obligatorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="localidad" id="localidad">
                             <br>
                             <!--Campo Calle-->
-                            <span class="texto">Nombre de calle/avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCalle"></i>
+                            <span class="texto">Nombre de calle/avenida </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoCalle" title="Campo Obligatorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="calle" id="calle">
                             <br>
                             <!--Campo Número-->
-                            <span class="texto">Altura de calle/avenida </span><i class="bi bi-x-circle-fill iconos validado" id="iconoAltura"></i>
+                            <span class="texto">Altura de calle/avenida </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoAltura" title="Campo Obligatorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="altura" id="altura">
                             <br>
                             <!--Campo Departamento-->
-                            <span class="texto">Departamento </span><i class="bi bi-x-circle-fill iconos validado" id="iconoDepartamento"></i>
+                            <span class="texto">Departamento </span><i class="bi" id="iconoDepartamento" title="Campo Obligatorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="departamento" id="departamento">
                             <!--Latitud y Longitud se calcularan más adelante-->

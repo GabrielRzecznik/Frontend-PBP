@@ -31,7 +31,7 @@ const expresiones = {
     localidad: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     calle: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü 0-9\s]{2,35}$/,
     altura: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{1,6}$/,
-    departamento: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{0,10}$/
+    departamento: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{2,5}$/
 };
 
 const campos = {
@@ -78,18 +78,15 @@ const validarFormulario = (e) => {
             break;
         case 'apellido':
             if (expresiones.apellido.test(e.target.value)) {
-                document.getElementById('iconoApellido').classList.add('validado');
-                document.querySelector('#iconoApellido').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoApellido').classList.add('bi-check-circle-fill');
-                //Mensaje de error
+                document.getElementById('iconoApellido').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoApellido').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertApellido').classList.remove('alertaError');
-                //Validar
+                //Validar campo
                 campos['apellido'] = true;
             }else{
-                document.getElementById('iconoApellido').classList.add('error');
-                document.getElementById('iconoApellido').classList.remove('validado');
-                document.querySelector('#iconoApellido').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoApellido').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoApellido').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoApellido').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Limpiar mensaje
                 document.getElementById('alertNombre').classList.remove('alertaError');
                 document.getElementById('alertApellido').classList.add('alertaError');
@@ -107,18 +104,15 @@ const validarFormulario = (e) => {
             break;
         case 'telefono':
             if (expresiones.telefono.test(e.target.value)) {
-                document.getElementById('iconoTelefono').classList.add('validado');
-                document.querySelector('#iconoTelefono').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoTelefono').classList.add('bi-check-circle-fill');
-                //Mensaje de error
+                document.getElementById('iconoTelefono').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoTelefono').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertTelefono').classList.remove('alertaError');
-                //Validar
+                //Validar campo
                 campos['telefono'] = true;
             }else{
-                document.getElementById('iconoTelefono').classList.add('error');
-                document.getElementById('iconoTelefono').classList.remove('validado');
-                document.querySelector('#iconoTelefono').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoTelefono').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoTelefono').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoTelefono').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Limpiar mensaje
                 document.getElementById('alertNombre').classList.remove('alertaError');
                 document.getElementById('alertApellido').classList.remove('alertaError');
@@ -136,18 +130,15 @@ const validarFormulario = (e) => {
             break;
         case 'provincia':
             if (expresiones.provincia.test(e.target.value)) {
-                document.getElementById('iconoProvincia').classList.add('validado');
-                document.querySelector('#iconoProvincia').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoProvincia').classList.add('bi-check-circle-fill');
-                //Mensaje de error
+                document.getElementById('iconoProvincia').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoProvincia').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertProvincia').classList.remove('alertaError');
-                //Validar
+                //Validar campo
                 campos['provincia'] = true;
             }else{
-                document.getElementById('iconoProvincia').classList.add('error');
-                document.getElementById('iconoProvincia').classList.remove('validado');
-                document.querySelector('#iconoProvincia').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoProvincia').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoProvincia').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoProvincia').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Limpiar mensaje
                 document.getElementById('alertNombre').classList.remove('alertaError');
                 document.getElementById('alertApellido').classList.remove('alertaError');
@@ -165,18 +156,15 @@ const validarFormulario = (e) => {
             break;
         case 'localidad':
             if (expresiones.localidad.test(e.target.value)) {
-                document.getElementById('iconoLocalidad').classList.add('validado');
-                document.querySelector('#iconoLocalidad').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoLocalidad').classList.add('bi-check-circle-fill');
-                //Mensaje de error
+                document.getElementById('iconoLocalidad').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoLocalidad').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertLocalidad').classList.remove('alertaError');
-                //Validar
+                //Validar campo
                 campos['localidad'] = true;
             }else{
-                document.getElementById('iconoLocalidad').classList.add('error');
-                document.getElementById('iconoLocalidad').classList.remove('validado');
-                document.querySelector('#iconoLocalidad').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoLocalidad').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoLocalidad').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoLocalidad').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Limpiar mensaje
                 document.getElementById('alertNombre').classList.remove('alertaError');
                 document.getElementById('alertApellido').classList.remove('alertaError');
@@ -194,18 +182,15 @@ const validarFormulario = (e) => {
             break;
         case 'calle':
             if (expresiones.calle.test(e.target.value)) {
-                document.getElementById('iconoCalle').classList.add('validado');
-                document.querySelector('#iconoCalle').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoCalle').classList.add('bi-check-circle-fill');
-                //Mensaje de error
+                document.getElementById('iconoCalle').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoCalle').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertCalle').classList.remove('alertaError');
-                //Validar
+                //Validar campo
                 campos['calle'] = true;
             }else{
-                document.getElementById('iconoCalle').classList.add('error');
-                document.getElementById('iconoCalle').classList.remove('validado');
-                document.querySelector('#iconoCalle').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoCalle').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoCalle').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoCalle').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Limpiar mensaje
                 document.getElementById('alertNombre').classList.remove('alertaError');
                 document.getElementById('alertApellido').classList.remove('alertaError');
@@ -223,18 +208,15 @@ const validarFormulario = (e) => {
             break;
         case 'altura':
             if (expresiones.altura.test(e.target.value)) {
-                document.getElementById('iconoAltura').classList.add('validado');
-                document.querySelector('#iconoAltura').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoAltura').classList.add('bi-check-circle-fill');
-                //Mensaje de error
+                document.getElementById('iconoAltura').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoAltura').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertAltura').classList.remove('alertaError');
-                //Validar
+                //Validar campo
                 campos['altura'] = true;
             }else{
-                document.getElementById('iconoAltura').classList.add('error');
-                document.getElementById('iconoAltura').classList.remove('validado');
-                document.querySelector('#iconoAltura').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoAltura').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoAltura').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoAltura').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Limpiar mensaje
                 document.getElementById('alertNombre').classList.remove('alertaError');
                 document.getElementById('alertApellido').classList.remove('alertaError');
@@ -252,18 +234,19 @@ const validarFormulario = (e) => {
             break;
         case 'departamento':
             if (expresiones.departamento.test(e.target.value)) {
-                document.getElementById('iconoDepartamento').classList.add('validado');
-                document.querySelector('#iconoDepartamento').classList.remove('bi-x-circle-fill');
-                document.querySelector('#iconoDepartamento').classList.add('bi-check-circle-fill');
-                //Mensaje de error
+                document.getElementById('iconoDepartamento').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoDepartamento').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
                 document.getElementById('alertDepartamento').classList.remove('alertaError');
-                //Validar
+                //Validar campo
                 campos['departamento'] = true;
+            }else if(departamento.value.trim() == ""){
+                document.getElementById('iconoDepartamento').classList.remove('mostrar','bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                //Limpiar 
+                document.getElementById('alertDepartamento').classList.remove('alertaError');
             }else{
-                document.getElementById('iconoDepartamento').classList.add('error');
-                document.getElementById('iconoDepartamento').classList.remove('validado');
-                document.querySelector('#iconoDepartamento').classList.add('bi-x-circle-fill');
-                document.querySelector('#iconoDepartamento').classList.remove('bi-check-circle-fill');
+                document.getElementById('iconoDepartamento').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoDepartamento').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Limpiar mensaje
                 document.getElementById('alertNombre').classList.remove('alertaError');
                 document.getElementById('alertApellido').classList.remove('alertaError');
@@ -285,24 +268,15 @@ const validarFormulario = (e) => {
 //Validar sexo
 document.getElementById("sexo").addEventListener('change', (event) => {
     if (event.target.value != 0) {
-        document.querySelector('#iconoSexo').classList.remove('signo');
-        document.querySelector('#iconoSexo').classList.remove('bi-exclamation-circle-fill');
-        document.getElementById('iconoSexo').classList.add('error');
-        document.getElementById('iconoSexo').classList.add('validado');
-        document.querySelector('#iconoSexo').classList.remove('bi-x-circle-fill');
-        document.querySelector('#iconoSexo').classList.add('bi-check-circle-fill');
+        document.getElementById('iconoSexo').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
+        document.getElementById('iconoSexo').classList.add('validado','bi-check-circle-fill');
         //Mensaje de error
         document.getElementById('alertSexo').classList.remove('alertaError');
         //Validar
         campos['sexo'] = true;
     }else{
-        document.querySelector('#iconoSexo').classList.remove('signo');
-        document.getElementById('iconoSexo').classList.add('iconos', 'validado');
-        document.querySelector('#iconoSexo').classList.remove('bi-exclamation-circle-fill');
-        document.getElementById('iconoSexo').classList.add('error');
-        document.getElementById('iconoSexo').classList.remove('validado');
-        document.querySelector('#iconoSexo').classList.add('bi-x-circle-fill');
-        document.querySelector('#iconoSexo').classList.remove('bi-check-circle-fill');
+        document.getElementById('iconoSexo').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
+        document.getElementById('iconoSexo').classList.add('noValidado','bi-x-circle-fill');
         //Mensaje de error
         document.getElementById('alertSexo').classList.add('alertaError');
         //Limpiar mensaje
@@ -321,10 +295,8 @@ document.getElementById("sexo").addEventListener('change', (event) => {
 });
 
 if (sexo.value == 0) {
-    document.querySelector('#iconoSexo').classList.remove('bi-x-circle-fill');
-    document.querySelector('#iconoSexo').classList.add('signo');
-    document.querySelector('#iconoSexo').classList.add('bi-exclamation-circle-fill');
-    document.getElementById('iconoSexo').classList.remove('iconos', 'validado');
+    document.getElementById('iconoSexo').classList.add('mostrar');//Agregar
+    document.getElementById('iconoSexo').classList.remove('bi-check-circle-fill');//Borrar
     campos['sexo'] = false;
 }
 
@@ -354,22 +326,15 @@ document.getElementById("fechaNacimiento").addEventListener('change', (event) =>
     }
 
     if (edad > 16 && edad < 120) {
-        document.querySelector('#iconoFechaNacimiento').classList.remove('signo');
-        document.getElementById('iconoFechaNacimiento').classList.add('error');
-        document.getElementById('iconoFechaNacimiento').classList.add('validado');
-        document.querySelector('#iconoFechaNacimiento').classList.remove('bi-x-circle-fill');
-        document.querySelector('#iconoFechaNacimiento').classList.add('bi-check-circle-fill');
+        document.getElementById('iconoFechaNacimiento').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+        document.getElementById('iconoFechaNacimiento').classList.add('mostrar','bi-check-circle-fill','validado');
         //Mensaje de error
         document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
         //Validar
         campos['fechaNacimiento'] = true;
     }else{
-        document.querySelector('#iconoFechaNacimiento').classList.remove('signo');
-        document.getElementById('iconoFechaNacimiento').classList.add('iconos', 'validado');
-        document.getElementById('iconoFechaNacimiento').classList.add('error');
-        document.getElementById('iconoFechaNacimiento').classList.remove('validado');
-        document.querySelector('#iconoFechaNacimiento').classList.add('bi-x-circle-fill');
-        document.querySelector('#iconoFechaNacimiento').classList.remove('bi-check-circle-fill');
+        document.getElementById('iconoFechaNacimiento').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
+        document.getElementById('iconoFechaNacimiento').classList.add('mostrar','noValidado','bi-x-circle-fill');
         //Mensaje de error
         document.getElementById('alertFechaNacimiento').classList.add('alertaError');
         //Limpiar mensaje
