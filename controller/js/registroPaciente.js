@@ -412,7 +412,7 @@ const APP = {
     },
     doSearch: (ev) => {
       ev.preventDefault();
-      let q = document.getElementById('keyword').value.trim();
+      let q = $ubicacion;
       if (!q) return false;
       let url = `${APP.SEARCHURL}key=${APP.TOKEN}&q=${q}`;
       //MI MENSAJE
