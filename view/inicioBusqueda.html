@@ -37,7 +37,7 @@
 				<div class="flex-shrink-0 dropdown">
 
 					<a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-						<img src="https://media-exp2.licdn.com/dms/image/C4E03AQFqnYkF8f8G5Q/profile-displayphoto-shrink_200_200/0/1568049257107?e=2147483647&v=beta&t=og95w95IygkAS2sp8neNYvmMtcGhSgzsNv8rwWtrFLM" alt="mdo" width="32" height="32" class="rounded-circle">
+						<i class="bi bi-person-circle fotoPerfil"></i>
 						<span id="usuario"></span>
 					</a>
 					
@@ -150,124 +150,54 @@
 
 			<div class="col-md-8 bg-light border rounded-3 contenedores">
 				<div class="row">
-					<div class="col-1"></div>
-					<div class="col-md-5">
-						<!--Cartas de bootstrap-->
-						<div class="card bg-light carta">
-							<div class="row">
-								<div class="col-7">
-									<div class="card-body">
-										<div class="row">
-											<div class="col-3">
-												<div class="fotoProfesional">
-													<i class="bi bi-person-fill"></i>
+					<div class="col-md-6">
+												<!--Cartas de bootstrap-->
+												<div class="card bg-light carta">
+													<div class="row">
+														<div class="col-6">
+															<div class="card-body">
+																<div class="row">
+																	<div class="col-2 textoCentrado">
+																		<i class="bi bi-person-circle fotoProfesional"></i>
+																	</div>
+																	<div class="col-10">
+																		<h5>
+																			<span id="mostrarNombreProfesional">Gabriel</span>
+																			<span id="mostrarApellidoProfesional">Rzecznik</span>
+																			<h6 id="mostrarProfesion col12">Psiquiatra</h6>
+																		</h5>									
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-6">
+																		<span id="mostrarProvinciaProfesional">Buenos Aires</span>
+																		<br>
+																		<span id="mostrarLocalidadProfesional">Avellaneda</span>
+																		<br>
+																		<span id="mostrarSexoProfesional">Masculino</span>
+																		<br>
+																		<span id="mostrarEdadProfesional">23 años</span>
+																	</div>
+																	<div class="col-6">
+																		<span class="badge rounded-pill bg-secondary">Osde</span>
+																		<br>
+																		<span class="badge rounded-pill bg-secondary">10 km</span>
+																	</div>
+																</div>
+																<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>
+															</div>
+														</div>
+														<div class="col-6">
+															<span class="card-img-right" id="visualizarMapa"></span>
+														</div>
+													</div>
 												</div>
-											</div>
-											<div class="col-9">
-												<h5>
-													<span id="mostrarNombreProfesional">Gabriel</span>
-													<span id="mostrarApellidoProfesional">Rzecznik</span>
-												</h5>
-												<h6 id="mostrarProfesion">Psiquiatra</h6>										
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-6">
-												<span id="mostrarProvinciaProfesional">Buenos Aires</span>
-												<br>
-												<span id="mostrarLocalidadProfesional">Avellaneda</span>
-												<br>
-												<span id="mostrarSexoProfesional">Masculino</span>
-												<br>
-												<span id="mostrarEdadProfesional">23 años</span>
-											</div>
-											<div class="col-6">
-												<span class="badge rounded-pill bg-secondary">Osde</span>
-												<br>
-												<span class="badge rounded-pill bg-secondary">10 km</span>
-											</div>
-										</div>
-										<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>
-									</div>
-								</div>
-								<div class="col-5">
-									<div id="map"></div>
-								</div>
-							</div>
-						</div>
 					</div>
-		
-					<div class="col-md-5">
-						<!--Cartas de bootstrap-->
-						<div class="card bg-light carta">
-							<div class="row">
-								<div class="col-7">
-									<div class="card-body">
-										<div class="row">
-											<div class="col-3">
-												<div class="fotoProfesional">
-													<i class="bi bi-person-fill"></i>
-												</div>
-											</div>
-											<div class="col-9">
-												<h5>
-													<span id="mostrarNombreProfesional">Gabriel</span>
-													<span id="mostrarApellidoProfesional">Rzecznik</span>
-												</h5>
-												<h6 id="mostrarProfesion">Psiquiatra</h6>										
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-6">
-												<span id="mostrarProvinciaProfesional">Buenos Aires</span>
-												<br>
-												<span id="mostrarLocalidadProfesional">Avellaneda</span>
-												<br>
-												<span id="mostrarSexoProfesional">Masculino</span>
-												<br>
-												<span id="mostrarEdadProfesional">23 años</span>
-											</div>
-											<div class="col-6">
-												<span class="badge rounded-pill bg-secondary">Osde</span>
-												<br>
-												<span class="badge rounded-pill bg-secondary">10 km</span>
-											</div>
-										</div>
-										<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>
-									</div>
-								</div>
-								<div class="col-5">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105013.19386564016!2d-58.450681078428154!3d-34.66323027721879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33348525b8105%3A0x688c2224c9769fa1!2sInstituto%20Tecnol%C3%B3gico%20Beltr%C3%A1n!5e0!3m2!1ses-419!2sar!4v1654496080028!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-								</div>
-							</div>
-						</div>
+					<div class="col-md-6">
+
 					</div>
-					<div class="col-1"></div>
 				</div>
 			</div>
-		</div>
-		
-
-
-
-
-
-
-
-			<br>
-			<span>Nota: se podran guardar ubicaciones oprimiendo un boton, al igual que la dirección del consultorio</span>
-			<button class="btn">Guardar Ubicación</button>
-			<br>
-			<button type="button" class="btn btn-dark" id="mostrarMapa">Mostrar mapa</button>
-			<span id="visualizarMapa"></span>
-			<!--Datos recuperados -> 1640.8724279365922 - no ; -58.354048612043975 - si ; -34.66114596650525 - si -->
-			<!--Datos recuperados -> 821.0453398298213 ; -58.37037582470343 ; -34.599575234865995 -->Lamadrid%20540%2C%20B1871DSF%20Crucecita%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar
-			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d                  !2d                   !3d                  !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33344a0818201%3A0x8499100d4daae3f5!2sLamadrid%20540%2C%20B1871DSF%20Crucecita%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1660919613213!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.8724279365922!2d-58.354048612043975!3d-34.66114596650525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a33344a0818201%3A0x8499100d4daae3f5!2s	                                                                              !5e0!3m2!1ses-419!2sar!4v1660919613213!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.8724279365922!2d-58.354048612043975!3d-34.66114596650525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2sLamadrid%20540%2C%20B1871DSF%20Crucecita%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d                  !2d                   !3d                  !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3353361954f7d%3A0x24f5afe6f5ef56ca!2sAv.%20Eduardo%20Madero%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1661020389269!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d                  !2d				   !3d                  !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298897acf4045%3A0x17bc204fecfcfbd1!2sProvidencia%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1661020389269!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-			
 		</div>
 
 	<!--Modal - Configuración-->
@@ -380,7 +310,6 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-LQb-h3KxqyChhqkf8sK3UqlIXFQwmLo&callback=iniciarMap"></script>
 <script src="../controller/js/inicioBusqueda.js"></script>
 <script src="../controller/js/navegador.js"></script>
 <script src="../model/js/ajaxDeshabilitarUsuario.js"></script>

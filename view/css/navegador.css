@@ -77,3 +77,8 @@ visibility: visible;
 visibility: visible;
 color: rgb(255, 185, 93);
 }
+
+.fotoPerfil{
+    width: 100%;
+    height: 100%;
+}
