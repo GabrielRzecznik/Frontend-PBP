@@ -384,12 +384,61 @@ formulario.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('tituloRegistrar').style.display = 'none';
         document.getElementById('cargandoRegistrar').style.display = 'block';
-        registrarPaciente(formulario);
-        //AGREGAR Animación de cargando
+        $ubicacion = provincia.value.trim() +" "+ localidad.value.trim() +" "+ calle.value.trim() +" "+ altura.value.trim();
+        console.log($ubicacion);
+        //registrarPaciente(formulario);
 
     }
 
 }); 
 //#endregion
     
+
+//Obtener localización - keyword
+const APP = {
+    TOKEN: 'pk.890591643afa7bba7e01f73847cf87dc',
+    SEARCHURL: `https://us1.locationiq.com/v1/search.php?format=json&`,
+    REVERSEURL: `https://us1.locationiq.com/v1/reverse.php?format=json&`,
+    MAPURL: `https://maps.locationiq.com/v3/staticmap?`,
+    data: null,
+    init: () => {
+      document
+        .getElementById('btnSearch')
+        .addEventListener('click', APP.doSearch);
+      document
+        .getElementById('btnReverse')
+        .addEventListener('click', APP.doReverse);
+      document.getElementById('btnMap').addEventListener('click', APP.getMap);
+    },
+    doSearch: (ev) => {
+      ev.preventDefault();
+      let q = document.getElementById('keyword').value.trim();
+      if (!q) return false;
+      let url = `${APP.SEARCHURL}key=${APP.TOKEN}&q=${q}`;
+      //MI MENSAJE
+      fetch(url)
+        .then((resp) => {
+          if (!resp.ok) throw new Error(resp.statusText);
+          return resp.json();
+        })
+        .then((data) => {
+          APP.data = data[0];
+          APP.showSearchResults();
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    },
+    showSearchResults: () => {
+      console.log(APP.data);
+      let section = document.querySelector('.results');
+      let pre = section.querySelector('pre');
+      if (!pre) {
+        pre = document.createElement('pre');
+        section.append(pre);
+      }
+      pre.textContent = JSON.stringify(APP.data, null, 2);
+    },
+  };
   
+  document.addEventListener('DOMContentLoaded', APP.init);
