@@ -36,6 +36,14 @@
 	/*align-items: center; -- centrado vertical*/
 }
 
+@media (max-width: 768px) {
+    .textoCentrado{
+		text-align: center;
+		/*align-items: center; -- centrado vertical*/
+	}
+}
+  
+
 .mapa{
 	border-bottom-right-radius: 5px;
 	border-top-right-radius: 5px;
