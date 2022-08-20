@@ -37,9 +37,8 @@
 }
 
 @media (max-width: 768px) {
-    .textoCentrado{
-		text-align: center;
-		/*align-items: center; -- centrado vertical*/
+    .infoProfesional{
+		font-size: small;
 	}
 }
   
