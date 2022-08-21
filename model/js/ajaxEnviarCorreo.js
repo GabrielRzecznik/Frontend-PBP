@@ -24,7 +24,7 @@ function enviarCorreo(correo, asignarDuracion){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                clearTimeout($tiempo);
+                clearTimeout(timeoutId);
             }else{
                 
             }   
