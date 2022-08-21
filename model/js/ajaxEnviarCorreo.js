@@ -4,8 +4,8 @@ function random(min, max) {
 
 var codigoGenerado = random(1000, 9999);
 
-function tipoValidezCodigo() {
-    $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
+function saludos(){
+    console.log("Hola Mundo");
 }
 
 function anularCodigo() {
@@ -15,7 +15,7 @@ function anularCodigo() {
 
 function enviarCorreo(correo, asignarDuracion){
     if (asignarDuracion) {
-        tipoValidezCodigo();//10 Minutos de validez
+        $tiempo = setTimeout(anularCodigo, 3000);//10 minutos = 600000
     }
 
     var formData= new FormData();
