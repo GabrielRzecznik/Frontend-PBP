@@ -1,10 +1,10 @@
 function registrarPaciente(formulario, $latitud, $longitud){
     var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
-    formData.append("latitud", localStorage.getItem($latitud));
-    formData.append("longitud", localStorage.getItem($longitud));
+    formData.append("latitud", $latitud);
+    formData.append("longitud", $longitud);
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-    
+
     xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
