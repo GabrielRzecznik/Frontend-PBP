@@ -85,8 +85,8 @@ document.getElementById("especialidad").addEventListener('change', (event) => {
 });
 
 if (especialidad.value == 0) {
-    document.getElementById('iconoEspecialidad').classList.add('mostrar');//Agregar
-    document.getElementById('iconoEspecialidad').classList.remove('bi-check-circle-fill');//Borrar
+    //document.getElementById('iconoEspecialidad').classList.add('mostrar');//Agregar
+    //document.getElementById('iconoEspecialidad').classList.remove('bi-check-circle-fill');//Borrar
     campos['especialidad'] = false;
 }
 //#endregion
