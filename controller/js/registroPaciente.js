@@ -405,7 +405,7 @@ const APP = {
     doSearch: () => {
       //ev.preventDefault();
       $ubicacion = provincia.value.trim() +" "+ localidad.value.trim() +" "+ calle.value.trim() +" "+ altura.value.trim();
-      console.log($ubicacion);
+
       let q = $ubicacion;//Ingreso ubicación
       if (!q) return false;
       let url = `${APP.SEARCHURL}key=${APP.TOKEN}&q=${q}`;
