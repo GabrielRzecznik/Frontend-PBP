@@ -55,100 +55,101 @@
 	<div class="container-fluid">
 		<div class="row centrado">
 			<div class="col-md-3 bg-light border rounded-3 contenedores">
+				<form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
+					<select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example">
+						<option value="0" selected>Especialidad</option>
+						<option value="Alergia e inmunologia infantil">Alergología e inmunología</option>
+						<option value="Alergia e inmunologia">Alergología e inmunología</option>
+						<option value="Anatomia patologica">Anatomía patológica</option>
+						<option value="Anestesiología">Anestesiología</option>
+						<option value="Angiologia general y hemodinamia">Angiologia general y hemodinamia</option>
+						<option value="Cardiologia infantil">Cardiologia infantil</option>
+						<option value="Cardiologia">Cardiologia</option>
+						<option value="Cirugia cardiovascular infantil">Cirugia cardiovascular infantil</option>
+						<option value="Cirugia cardiovascular">Cirugia cardiovascular</option>
+						<option value="Cirugia de cabeza y cuello">Cirugia de cabeza y cuello</option>
+						<option value="Cirugia toracica">Cirugia toracica</option>
+						<option value="Cirugia general">Cirugia general</option>
+						<option value="Cirugia infantil">Cirugia infantil</option>
+						<option value="Cirugia plastica y reparadora">Cirugia plastica y reparadora</option>
+						<option value="Cirugia vascular periferica">Cirugia vascular periferica</option>
+						<option value="Clinica">Clinica</option>
+						<option value="Coloproctologia">Coloproctologia</option>
+						<option value="Dermatologia infantil">Dermatologia infantil</option>
+						<option value="Dermatologia">Dermatologia</option>
+						<option value="Diagnostico por imagenes">Diagnostico por imagenes</option>
+						<option value="Electro fisiologia cardiaca">Electro fisiologia cardiaca</option>
+						<option value="Emergentologia">Emergentologia</option>
+						<option value="Endocrinologia infantil">Endocrinologia infantil</option>
+						<option value="Endocrinologia">Endocrinologia</option>
+						<option value="Farmacologia clinica">Farmacologia clinica</option>
+						<option value="Fisiatria">Fisiatria</option>
+						<option value="Gastroenterologia infantil">Gastroenterologia infantil</option>
+						<option value="Gastroenterologia">Gastroenterologia</option>
+						<option value="Genetrica">Genetrica</option>
+						<option value="Geriatria">Geriatria</option>
+						<option value="Ginecologia">Ginecologia</option>
+						<option value="Hematologia">Hematologia</option>
+						<option value="Hemato-oncologia infantil">Hemato-oncologia infantil</option>
+						<option value="Hemoterapia e inmunohematologia">Hemoterapia e inmunohematologia</option>
+						<option value="Hepatologia infantil">Hepatologia infantil</option>
+						<option value="Hepatologia">Hepatologia</option>
+						<option value="Infectologia infantil">Infectologia infantil</option>
+						<option value="Infectologia">Infectologia</option>
+						<option value="Medicina del deporte">Medicina del deporte</option>
+						<option value="Medicina del trabajo">Medicina del trabajo</option>
+						<option value="Medicina general y/o familia">Medicina general</option>
+						<option value="Medicina legal">Medicina legal</option>
+						<option value="Medicina nuclear">Medicina nuclear</option>
+						<option value="Medicina palitativa">Medicina palitativa</option>
+						<option value="Nefrologia infantil">Nefrologia infantil</option>
+						<option value="Nefrologia">Nefrologia</option>
+						<option value="Neonatologia">Neonatologia</option>
+						<option value="Neumonologia infantil">Neumonologia infantil</option>
+						<option value="Neumonologia">Neumonologia</option>
+						<option value="Neurocirugia">Neurocirugia infantil</option>
+						<option value="Neurocirugia">Neurocirugia</option>
+						<option value="Nutricion">Nutricion</option>
+						<option value="Obstetricia">Obstetricia</option>
+						<option value="Odontologia">Odontologia</option>
+						<option value="Oftalmologia">Oftalmologia</option>
+						<option value="Oncologia">Oncologia</option>
+						<option value="Ortopedia y traumatologia infantil">Ortopedia y traumatologia infantil</option>
+						<option value="Ortopedia y traumatologia">Ortopedia y traumatologia</option>
+						<option value="Ortopedia y traumatologia otorrinolaringologia infantil">Ortopedia y traumatologia otorrinolaringologia infantil</option>
+						<option value="Ortopedia y traumatologia otorrinolaringologia">Ortopedia y traumatologia otorrinolaringologia</option>
+						<option value="Psicologia">Psicologia</option>
+						<option value="Psiquiatria infanto juvenil">Psiquiatria infanto juvenil</option>
+						<option value="Psiquiatria">Psiquiatria</option>
+						<option value="Radioterapia">Radioterapia</option>
+						<option value="Reumatologia infantil">Reumatologia infantil</option>
+						<option value="Reumatologia">Reumatologia</option>
+						<option value="Terapia intensiva">Terapia intensiv</option>
+						<option value="Terapista intensivo infantil">Terapista intensivo infantil</option>
+						<option value="Tocoginecologia">Tocoginecologia</option>
+						<option value="Toxicologia">Toxicologia</option>
+						<option value="Urologia">Urologia</option>
+					</select>
 				
-				<select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example">
-					<option value="0" selected>Especialidad</option>
-					<option value="Alergia e inmunologia infantil">Alergología e inmunología</option>
-					<option value="Alergia e inmunologia">Alergología e inmunología</option>
-					<option value="Anatomia patologica">Anatomía patológica</option>
-					<option value="Anestesiología">Anestesiología</option>
-					<option value="Angiologia general y hemodinamia">Angiologia general y hemodinamia</option>
-					<option value="Cardiologia infantil">Cardiologia infantil</option>
-					<option value="Cardiologia">Cardiologia</option>
-					<option value="Cirugia cardiovascular infantil">Cirugia cardiovascular infantil</option>
-					<option value="Cirugia cardiovascular">Cirugia cardiovascular</option>
-					<option value="Cirugia de cabeza y cuello">Cirugia de cabeza y cuello</option>
-					<option value="Cirugia toracica">Cirugia toracica</option>
-					<option value="Cirugia general">Cirugia general</option>
-					<option value="Cirugia infantil">Cirugia infantil</option>
-					<option value="Cirugia plastica y reparadora">Cirugia plastica y reparadora</option>
-					<option value="Cirugia vascular periferica">Cirugia vascular periferica</option>
-					<option value="Clinica">Clinica</option>
-					<option value="Coloproctologia">Coloproctologia</option>
-					<option value="Dermatologia infantil">Dermatologia infantil</option>
-					<option value="Dermatologia">Dermatologia</option>
-					<option value="Diagnostico por imagenes">Diagnostico por imagenes</option>
-					<option value="Electro fisiologia cardiaca">Electro fisiologia cardiaca</option>
-					<option value="Emergentologia">Emergentologia</option>
-					<option value="Endocrinologia infantil">Endocrinologia infantil</option>
-					<option value="Endocrinologia">Endocrinologia</option>
-					<option value="Farmacologia clinica">Farmacologia clinica</option>
-					<option value="Fisiatria">Fisiatria</option>
-					<option value="Gastroenterologia infantil">Gastroenterologia infantil</option>
-					<option value="Gastroenterologia">Gastroenterologia</option>
-					<option value="Genetrica">Genetrica</option>
-					<option value="Geriatria">Geriatria</option>
-					<option value="Ginecologia">Ginecologia</option>
-					<option value="Hematologia">Hematologia</option>
-					<option value="Hemato-oncologia infantil">Hemato-oncologia infantil</option>
-					<option value="Hemoterapia e inmunohematologia">Hemoterapia e inmunohematologia</option>
-					<option value="Hepatologia infantil">Hepatologia infantil</option>
-					<option value="Hepatologia">Hepatologia</option>
-					<option value="Infectologia infantil">Infectologia infantil</option>
-					<option value="Infectologia">Infectologia</option>
-					<option value="Medicina del deporte">Medicina del deporte</option>
-					<option value="Medicina del trabajo">Medicina del trabajo</option>
-					<option value="Medicina general y/o familia">Medicina general</option>
-					<option value="Medicina legal">Medicina legal</option>
-					<option value="Medicina nuclear">Medicina nuclear</option>
-					<option value="Medicina palitativa">Medicina palitativa</option>
-					<option value="Nefrologia infantil">Nefrologia infantil</option>
-					<option value="Nefrologia">Nefrologia</option>
-					<option value="Neonatologia">Neonatologia</option>
-					<option value="Neumonologia infantil">Neumonologia infantil</option>
-					<option value="Neumonologia">Neumonologia</option>
-					<option value="Neurocirugia">Neurocirugia infantil</option>
-					<option value="Neurocirugia">Neurocirugia</option>
-					<option value="Nutricion">Nutricion</option>
-					<option value="Obstetricia">Obstetricia</option>
-					<option value="Odontologia">Odontologia</option>
-					<option value="Oftalmologia">Oftalmologia</option>
-					<option value="Oncologia">Oncologia</option>
-					<option value="Ortopedia y traumatologia infantil">Ortopedia y traumatologia infantil</option>
-					<option value="Ortopedia y traumatologia">Ortopedia y traumatologia</option>
-					<option value="Ortopedia y traumatologia otorrinolaringologia infantil">Ortopedia y traumatologia otorrinolaringologia infantil</option>
-					<option value="Ortopedia y traumatologia otorrinolaringologia">Ortopedia y traumatologia otorrinolaringologia</option>
-					<option value="Psicologia">Psicologia</option>
-					<option value="Psiquiatria infanto juvenil">Psiquiatria infanto juvenil</option>
-					<option value="Psiquiatria">Psiquiatria</option>
-					<option value="Radioterapia">Radioterapia</option>
-					<option value="Reumatologia infantil">Reumatologia infantil</option>
-					<option value="Reumatologia">Reumatologia</option>
-					<option value="Terapia intensiva">Terapia intensiv</option>
-					<option value="Terapista intensivo infantil">Terapista intensivo infantil</option>
-					<option value="Tocoginecologia">Tocoginecologia</option>
-					<option value="Toxicologia">Toxicologia</option>
-					<option value="Urologia">Urologia</option>
-				</select>
-			
-				<select class="form-select campos" name="sexo" id="sexo" aria-label="Floating label select example">
-					<option value="0" selected>Sexo</option>
-					<option value="Masculino">Masculino</option>
-					<option value="Femenino">Femenino</option>
-					<option value="X">X</option>
-				</select>
-			
-				<input type="text" class="form-control campos" name="obraSocial" id="obraSocial" placeholder="Obra social" aria-label="Obra social" aria-describedby="basic-addon1">
-			
-				<select class="form-select campos" name="ubicacion" id="ubicacion" aria-label="Floating label select example">
-					<option value="0">Ubicación actual</option>
-					<option value="1">Ubicación de mi casa</option><!--Pensar mejor nombre-->
-				</select>
-
-				<button type="button" class="btn btn-primary campos">
-					<i class="bi bi-search tituloBuscar" id="tituloBuscar"></i>
-					<div class="spinner-border text-secondary cargandoBuscar" id="cargandoBuscar" role="status"></div>
-				</button>
+					<select class="form-select campos" name="sexo" id="sexo" aria-label="Floating label select example">
+						<option value="0" selected>Sexo</option>
+						<option value="Masculino">Masculino</option>
+						<option value="Femenino">Femenino</option>
+						<option value="X">X</option>
+					</select>
+				
+					<input type="text" class="form-control campos" name="obraSocial" id="obraSocial" placeholder="Obra social" aria-label="Obra social" aria-describedby="basic-addon1">
+				
+					<select class="form-select campos" name="ubicacion" id="ubicacion" aria-label="Floating label select example">
+						<option value="0">Ubicación actual</option>
+						<option value="1">Ubicación de mi casa</option><!--Pensar mejor nombre-->
+					</select>
+	
+					<button type="button" class="btn btn-primary campos">
+						<i class="bi bi-search tituloBuscar" id="tituloBuscar"></i>
+						<div class="spinner-border text-secondary cargandoBuscar" id="cargandoBuscar" role="status"></div>
+					</button>
+				</form>
 			</div>
 
 			<div class="col-md-8 bg-light border rounded-3 contenedores">
