@@ -3,21 +3,15 @@ function random(min, max) {
 }
 
 var codigoGenerado = random(1000, 9999);
-var tiempo;
-
-function tipoValidezCodigo() {
-    tiempo = setTimeout(anularCodigo, 6000);//10 minutos = 600000
-}
-
-function anularCodigo() {
-    alert("Código vencido! Han pasado 10 minutos!");
-    codigoGenerado = "";
-}
 
 function enviarCorreo(correo, asignarDuracion){
     if (asignarDuracion) {
         console.log("Tiempo correiendo");
-        tipoValidezCodigo();//10 Minutos de validez
+       
+        const timeoutId = setTimeout(function(){
+            alert("Código vencido! Han pasado 10 minutos!");
+            codigoGenerado = "";
+        }, 5000);//600000
     }
 
     var formData= new FormData();
@@ -30,7 +24,7 @@ function enviarCorreo(correo, asignarDuracion){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                clearTimeout(tiempo);
+                clearTimeout($tiempo);
             }else{
                 
             }   
