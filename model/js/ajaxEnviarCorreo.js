@@ -4,18 +4,19 @@ function random(min, max) {
 
 var codigoGenerado = random(1000, 9999);
 
-function saludos(){
-    console.log("Hola Mundo");
-}
-
-function anularCodigo() {
-    alert("Código vencido! Han pasado 10 minutos!");
-    codigoGenerado = "";
-}
-
 function enviarCorreo(correo, asignarDuracion){
     if (asignarDuracion) {
-        var tiempo = setTimeout(anularCodigo, 3000);//10 minutos = 600000
+        console.log("Tiempo Corriendo");
+        const tiempo = setTimeout(anularCodigo, 3000);//10 minutos = 600000
+
+        function anularCodigo() {
+            alert("Código vencido! Han pasado 10 minutos!");
+            codigoGenerado = "";
+        }
+
+        function detenerSetTimeOut() {
+            clearTimeout(tiempo);
+        }
     }
 
     var formData= new FormData();
@@ -28,7 +29,7 @@ function enviarCorreo(correo, asignarDuracion){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                clearTimeout(tiempo);
+                detenerSetTimeOut();
             }else{
                 
             }   
