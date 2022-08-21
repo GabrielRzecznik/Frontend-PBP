@@ -14,7 +14,7 @@ function enviarCorreo(correo, asignarDuracion){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (asignarDuracion) {
-                    const tiempo = setTimeout(anularCodigo, 5000);//10 minutos = 600000
+                    const tiempo = setTimeout(anularCodigo, 150000);//10 minutos = 600000
             
                     function anularCodigo() {
                         alert("Código vencido! Han pasado 10 minutos!");
