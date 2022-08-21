@@ -384,6 +384,7 @@ formulario.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('tituloRegistrar').style.display = 'none';
         document.getElementById('cargandoRegistrar').style.display = 'block';
+        APP.doSearch();
         //registrarPaciente(formulario);
 
     }
@@ -399,7 +400,7 @@ const APP = {
     MAPURL: `https://maps.locationiq.com/v3/staticmap?`,
     data: null,
     init: () => {
-      document.getElementById('boton').addEventListener('click', APP.doSearch);
+      //document.getElementById('boton').addEventListener('click', APP.doSearch);
     },
     doSearch: (ev) => {
       ev.preventDefault();
