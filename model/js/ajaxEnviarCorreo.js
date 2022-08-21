@@ -21,7 +21,7 @@ function enviarCorreo(correo, asignarDuracion){
                         alert("Código vencido! Han pasado 10 minutos!");
                         codigoGenerado = "";
                     }
-                    clearTimeout(tiempo);
+                    //clearTimeout(tiempo);
                 }
             }else{
                 alert("ocurrio un error inesperado");   
