@@ -402,20 +402,15 @@ const APP = {
     MAPURL: `https://maps.locationiq.com/v3/staticmap?`,
     data: null,
     init: () => {
-      document
-        .getElementById('btnSearch')
-        .addEventListener('click', APP.doSearch);
-      document
-        .getElementById('btnReverse')
-        .addEventListener('click', APP.doReverse);
+      document.getElementById('boton').addEventListener('click', APP.doSearch);
+      document.getElementById('btnReverse').addEventListener('click', APP.doReverse);
       document.getElementById('btnMap').addEventListener('click', APP.getMap);
     },
     doSearch: (ev) => {
       ev.preventDefault();
-      let q = $ubicacion;
+      let q = $ubicacion;//Ingreso ubicación
       if (!q) return false;
       let url = `${APP.SEARCHURL}key=${APP.TOKEN}&q=${q}`;
-      //MI MENSAJE
       fetch(url)
         .then((resp) => {
           if (!resp.ok) throw new Error(resp.statusText);
