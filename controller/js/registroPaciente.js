@@ -386,13 +386,12 @@ formulario.addEventListener('submit', (e) => {
         document.getElementById('cargandoRegistrar').style.display = 'block';
         APP.doSearch();
         //registrarPaciente(formulario);
-
     }
 
 }); 
 //#endregion
 
-//Obtener localización - keyword
+//Obtener localización - Enviar
 const APP = {
     TOKEN: 'pk.890591643afa7bba7e01f73847cf87dc',
     SEARCHURL: `https://us1.locationiq.com/v1/search.php?format=json&`,
@@ -420,7 +419,9 @@ const APP = {
         })
     },
     showSearchResults: () => {
-      //console.log(APP.data['display_name']); - por si despues agregamos codigo posta
+      //console.log(APP.data['display_name']); - por si despues agregamos codigo postal
+
+      //Enviar Ajax
       registrarPaciente(formulario, APP.data['lat'], APP.data['lon']);
     },
   };
