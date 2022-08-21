@@ -4,7 +4,7 @@ function random(min, max) {
 
 var codigoGenerado = random(1000, 9999);
 
-$timeoutId;
+$timeoutId = null;
 function enviarCorreo(correo, asignarDuracion){
     if (asignarDuracion) {
         console.log("Tiempo correiendo");
