@@ -97,3 +97,26 @@ inputs.forEach((input) => {
 });
 
 //#endregion
+
+//#region Enviar Formulario
+
+const formulario = document.getElementById('formulario');
+
+formulario.addEventListener('submit', (e) => {
+    const especialidadValue = especialidad.value.trim();
+    
+    e.preventDefault();//evita que se envien los datos y se refresque la pagina
+    
+    if (especialidadValue === "0") {
+        alert("Complete el campo especialidad");
+    }
+    
+    if (campos.especialidad) {
+        //Enviar AJAX
+        document.getElementById('tituloRegistrar').style.display = 'none';
+        document.getElementById('cargandoRegistrar').style.display = 'block';
+        
+    }
+
+}); 
+//#endregion

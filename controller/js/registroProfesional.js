@@ -411,7 +411,7 @@ inputs.forEach((input) => {
     input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
 });
 
-//#endregion Enviar Formulario
+//#region Enviar Formulario
 
 const formulario = document.getElementById('formulario');
 
@@ -424,23 +424,9 @@ formulario.addEventListener('submit', (e) => {
     const alturaConsultorioValue = alturaConsultorio.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
-    
-    if (especialidadValue === "0") {
-        alert("Complete el campo especialidad");
-    }if (matriculaValue === "") {
-        alert("Complete el campo matricula");
-    }
 
-    if (campos.consultorio == true) {
-        if (provinciaConsultorioValue === "") {
-            alert("Complete el campo provincia consultorio");
-        }if (localidadConsultorioValue === "") {
-            alert("Complete el campo localidad consultorio");
-        }if (calleConsultorioValue === "") {
-            alert("Complete el campo calle consultorio");
-        }if (alturaConsultorioValue === "") {
-            alert("Complete el campo altura consultorio");
-        }
+    if (especialidadValue === "0" || matriculaValue === "" || campos.consultorio == true || provinciaConsultorioValue === "" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
+        alert("debe completar todos los campos obligatorios");
     }
     
     if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
