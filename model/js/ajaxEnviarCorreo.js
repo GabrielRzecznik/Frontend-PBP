@@ -14,14 +14,12 @@ function enviarCorreo(correo, asignarDuracion){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (asignarDuracion) {
-                    console.log("Tiempo Corriendo");
                     const tiempo = setTimeout(anularCodigo, 5000);//10 minutos = 600000
             
                     function anularCodigo() {
                         alert("Código vencido! Han pasado 10 minutos!");
                         codigoGenerado = "";
                     }
-                    //clearTimeout(tiempo);
                 }
             }else{
                 alert("ocurrio un error inesperado");   
