@@ -416,12 +416,11 @@ formulario.addEventListener('submit', (e) => {
             //APP.data['display_name'] - por si despues agregamos codigo postal
             $longitud = APP.data['lat'];
             $latitud = APP.data['lon'];
+            registrarPaciente(formulario, $latitud, $longitud);
             },
         };
         document.addEventListener('DOMContentLoaded', APP.init);
         //#endregion
-
-        registrarPaciente(formulario, $latitud, $longitud);
     }
 
 }); 
