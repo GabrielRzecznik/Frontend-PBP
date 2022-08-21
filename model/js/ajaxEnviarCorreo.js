@@ -5,7 +5,7 @@ function random(min, max) {
 var codigoGenerado = random(1000, 9999);
 
 function tipoValidezCodigo() {
-    tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
+    $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
 }
 
 function anularCodigo() {
@@ -28,7 +28,7 @@ function enviarCorreo(correo, asignarDuracion){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                clearTimeout(tiempo);
+                clearTimeout($tiempo);
             }else{
                 
             }   
