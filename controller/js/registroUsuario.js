@@ -137,9 +137,11 @@ formulario.addEventListener('submit', (e) => {
 //#endregion
 
 //#region Funcionalidades de botónes "Activar"
-document.getElementById("activar").addEventListener("click", function() {
+document.getElementById("activado").addEventListener("click", function() {
     document.getElementById('activador').style.display = 'none';
     document.getElementById('formularioValidar').style.display = 'block';
+    $asignarDuracion = true;
+    enviarCorreo(correo.value.trim(), $asignarDuracion);
 });
 
 document.getElementById("volverAtras").addEventListener("click", function() {
