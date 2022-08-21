@@ -1,5 +1,7 @@
-function registrarPaciente(formulario){
+function registrarPaciente(formulario, $latitud, $longitud){
     var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
+    formData.append("latitud", localStorage.getItem($latitud));
+    formData.append("longitud", localStorage.getItem($longitud));
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     
