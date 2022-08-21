@@ -3,6 +3,7 @@ function random(min, max) {
 }
 
 var codigoGenerado = random(1000, 9999);
+var tiempo;
 
 function tipoValidezCodigo() {
     tiempo = setTimeout(anularCodigo, 6000);//10 minutos = 600000
