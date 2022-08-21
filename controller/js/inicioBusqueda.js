@@ -1,5 +1,5 @@
 var mostrarMapa = document.getElementById("visualizarMapa");
-var mostrarMapa = document.getElementById("visualizarMapa2");
+var mostrarMapa2 = document.getElementById("visualizarMapa2");
 $calleAvenida = "Varela";
 $altura = "0096";//0540
 $codigoPostal = "B2756";//B1871
