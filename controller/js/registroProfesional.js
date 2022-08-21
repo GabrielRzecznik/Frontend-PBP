@@ -197,6 +197,7 @@ const validarFormulario = (e) => {
                 document.getElementById('iconoDepartamentoConsultorio').classList.remove('mostrar','bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
                 //Limpiar 
                 document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
+                campos['departamentoConsultorio'] = true;
             }else{
                 document.getElementById('iconoDepartamentoConsultorio').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
                 document.getElementById('iconoDepartamentoConsultorio').classList.add('mostrar','bi-x-circle-fill','noValidado');
