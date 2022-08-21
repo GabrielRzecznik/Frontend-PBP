@@ -2,8 +2,8 @@ function registrarProfesional(formulario, tc, os, $latitud, $longitud){
     var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
     formData.append("tipoConsulta", tc);
     formData.append("obraSocial", os);
-    formData.append("latitud", $latitud);
-    formData.append("longitud", $longitud);
+    formData.append("latitudConsultorio", $latitud);
+    formData.append("longitudConsultorio", $longitud);
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);

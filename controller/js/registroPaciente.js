@@ -391,7 +391,7 @@ formulario.addEventListener('submit', (e) => {
 }); 
 //#endregion
 
-//Obtener localización - Enviar
+//#region Localización - Enviar
 const APP = {
     TOKEN: 'pk.890591643afa7bba7e01f73847cf87dc',
     SEARCHURL: `https://us1.locationiq.com/v1/search.php?format=json&`,
@@ -427,3 +427,4 @@ const APP = {
   };
   
   document.addEventListener('DOMContentLoaded', APP.init);
+  //#endregion
