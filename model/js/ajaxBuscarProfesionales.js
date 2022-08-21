@@ -1,6 +1,7 @@
 function buscarProfesionales(formulario){
     var formData= new FormData(formulario);
     //Agregar id_profesional para que no se muestre el mismo profesional que realiza la busqueda - agregar en el login
+    //var id_profesional = localStorage["id_profesional"];
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
@@ -20,6 +21,6 @@ function buscarProfesionales(formulario){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Profesional/buscarProfesionales',true);
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Profesionales/buscarProfesionales',true);
     xmlhttp.send(formJSON);
 }
