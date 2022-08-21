@@ -8,7 +8,7 @@ function enviarCorreo(correo, asignarDuracion){
     if (asignarDuracion) {
         console.log("Tiempo correiendo");
        
-        const timeoutId = setTimeout(function(){
+        var timeoutId = setTimeout(function(){
             alert("Código vencido! Han pasado 10 minutos!");
             codigoGenerado = "";
         }, 5000);//600000
