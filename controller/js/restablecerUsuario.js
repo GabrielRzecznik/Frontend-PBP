@@ -268,7 +268,8 @@ formulario3.addEventListener('submit', (e) => {
             //Cargando
             document.getElementById('tituloConfirmar').style.display = 'none';
             document.getElementById('cargandoConfirmar').style.display = 'block';
-            restablecerUsuario(formulario3);
+            $asignarDuracion = true;
+            restablecerUsuario(formulario3, $asignarDuracion);
         });
 
         //Cerrar Modal

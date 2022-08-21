@@ -230,7 +230,8 @@ document.getElementById("atras").addEventListener("click", function() {
   
 //Reenviar Código
 document.getElementById("reenviar").addEventListener("click", function() {
-    enviarCorreo(correo.value.trim());
+    asignarDuracion = true;
+    enviarCorreo(correo.value.trim(), $asignarDuracion);
     //Bloquear bóton por 20 segundos
     const botonReenviar = document.getElementById('reenviar');
     botonReenviar.disabled = true;

@@ -5,7 +5,7 @@ function random(min, max) {
 var codigoGenerado = random(1000, 9999);
 
 function tipoValidezCodigo() {
-    tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
+    tiempo = setTimeout(anularCodigo, 6000);//10 minutos = 600000
 }
 
 function anularCodigo() {
@@ -13,8 +13,11 @@ function anularCodigo() {
     codigoGenerado = "";
 }
 
-function enviarCorreo(correo){
-    tipoValidezCodigo();//10 Minutos de validez
+function enviarCorreo(correo, asignarDuracion){
+    if (asignarDuracion) {
+        console.log("Tiempo correiendo");
+        tipoValidezCodigo();//10 Minutos de validez
+    }
 
     var formData= new FormData();
     formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 dígitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar, muchas gracias!");
