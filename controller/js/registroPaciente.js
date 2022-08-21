@@ -402,8 +402,8 @@ const APP = {
     init: () => {
       //document.getElementById('boton').addEventListener('click', APP.doSearch);
     },
-    doSearch: (ev) => {
-      ev.preventDefault();
+    doSearch: () => {
+      //ev.preventDefault();
       $ubicacion = provincia.value.trim() +" "+ localidad.value.trim() +" "+ calle.value.trim() +" "+ altura.value.trim();
       console.log($ubicacion);
       let q = $ubicacion;//Ingreso ubicación
