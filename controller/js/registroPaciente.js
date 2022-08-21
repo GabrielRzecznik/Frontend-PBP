@@ -384,46 +384,44 @@ formulario.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('tituloRegistrar').style.display = 'none';
         document.getElementById('cargandoRegistrar').style.display = 'block';
-        
-        //#region Obtener geo cordenadas
-        const APP = {
-            TOKEN: 'pk.890591643afa7bba7e01f73847cf87dc',
-            SEARCHURL: `https://us1.locationiq.com/v1/search.php?format=json&`,
-            REVERSEURL: `https://us1.locationiq.com/v1/reverse.php?format=json&`,
-            MAPURL: `https://maps.locationiq.com/v3/staticmap?`,
-            data: null,
-            init: () => {
-            document.getElementById('boton').addEventListener('click', APP.doSearch);
-            },
-            doSearch: (ev) => {
-                ev.preventDefault();
-                $ubicacion = provincia.value.trim() +" "+ localidad.value.trim() +" "+ calle.value.trim() +" "+ altura.value.trim();
-                console.log($ubicacion);
-                let q = $ubicacion;//Ingreso ubicación
-                if (!q) return false;
-                let url = `${APP.SEARCHURL}key=${APP.TOKEN}&q=${q}`;
-                fetch(url)
-                    .then((resp) => {
-                        if (!resp.ok) throw new Error(resp.statusText);
-                        return resp.json();
-                    })
-                    .then((data) => {
-                        APP.data = data[0];
-                        APP.showSearchResults();
-                    })
-            },
-            showSearchResults: () => {
-            //APP.data['display_name'] - por si despues agregamos codigo postal
-            $longitud = APP.data['lat'];
-            $latitud = APP.data['lon'];
-            registrarPaciente(formulario, $latitud, $longitud);
-            },
-        };
-        document.addEventListener('DOMContentLoaded', APP.init);
-        //#endregion
+        //registrarPaciente(formulario);
+
     }
 
 }); 
 //#endregion
-    
 
+//Obtener localización - keyword
+const APP = {
+    TOKEN: 'pk.890591643afa7bba7e01f73847cf87dc',
+    SEARCHURL: `https://us1.locationiq.com/v1/search.php?format=json&`,
+    REVERSEURL: `https://us1.locationiq.com/v1/reverse.php?format=json&`,
+    MAPURL: `https://maps.locationiq.com/v3/staticmap?`,
+    data: null,
+    init: () => {
+      document.getElementById('boton').addEventListener('click', APP.doSearch);
+    },
+    doSearch: (ev) => {
+      ev.preventDefault();
+      $ubicacion = provincia.value.trim() +" "+ localidad.value.trim() +" "+ calle.value.trim() +" "+ altura.value.trim();
+      console.log($ubicacion);
+      let q = $ubicacion;//Ingreso ubicación
+      if (!q) return false;
+      let url = `${APP.SEARCHURL}key=${APP.TOKEN}&q=${q}`;
+      fetch(url)
+        .then((resp) => {
+          if (!resp.ok) throw new Error(resp.statusText);
+          return resp.json();
+        })
+        .then((data) => {
+          APP.data = data[0];
+          APP.showSearchResults();
+        })
+    },
+    showSearchResults: () => {
+      //console.log(APP.data['display_name']); - por si despues agregamos codigo posta
+      registrarPaciente(formulario, APP.data['lat'], APP.data['lon']);
+    },
+  };
+  
+  document.addEventListener('DOMContentLoaded', APP.init);
