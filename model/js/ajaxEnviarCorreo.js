@@ -24,6 +24,7 @@ function enviarCorreo(correo, asignarDuracion){
                     function anularCodigo() {
                         alert("Código vencido! Han pasado 10 minutos!");
                         codigoGenerado = "";
+                        location.reload();
                     }
 
                     function codigoVerificado() {
