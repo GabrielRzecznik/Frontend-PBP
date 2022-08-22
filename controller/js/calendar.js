@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           //Estilo Solicitud
           id: 'solicitud',
-          title: 'Solicitud Enviada!',
+          title: 'Solicitud Enviada',
           start: '2022-08-08 13:00:00',
           end: '2022-08-08 13:45:00',
           backgroundColor: '#72a400',
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           //Estilo Turno
           id: 'turno',
-          title: 'Turno Confirmado!',
+          title: 'Turno Confirmado',
           start: '2022-07-29 09:00:00',
           end: '2022-07-29 09:45:00',
           backgroundColor: '#CC8400',
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
             mes = "12";
             break;
           default:
-            console.log("Error en el switch del armado de mes del evento");
+            console.log("Ocurrio un error inesperado");
             break;
         }
         var dia = infoDesde.substring(8, 10);
@@ -146,8 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (fecha >= fechaActual) {
 
-          console.log("Hora desde: "+horaDesde);
-          console.log("tres Horas Antes: "+tresHorasAntes);
+          //console.log("Hora desde: "+horaDesde);
+          //console.log("tres Horas Antes: "+tresHorasAntes);
 
           if (fecha == fechaActual) {
             if(tresHorasAntes <= horaDesde){

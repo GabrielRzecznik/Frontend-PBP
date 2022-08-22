@@ -31,7 +31,7 @@ function buscarUsuario(formulario){
                     document.getElementById('loguearse').style.display = 'block';
                 }   
             }if (xmlhttp.status == 401) {
-                alert("No se encontro el usuario!");
+                alert("¡No se encontro el usuario!");
                 //Cancelar carga
                 document.getElementById('cargando').style.display = 'none';
                 document.getElementById('loguearse').style.display = 'block';

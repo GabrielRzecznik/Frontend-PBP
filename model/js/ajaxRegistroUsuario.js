@@ -11,13 +11,13 @@ function registrarUsuario(formulario){
                 localStorage.setItem("id_usuario", data[0]["id_usuario"]);//Me guarda el id_usuario de la bd
                 window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPerfil.html";
             }else if (xmlhttp.status == 500) {
-                alert("Ocurrio un error inesperado con el correo ingresado");
+                alert("¡Ocurrio un error inesperado con el correo ingresado!");
                 //Marcar Correo
                 document.getElementById('iconoCorreo').classList.remove('validado');
                 document.querySelector('#iconoCorreo').classList.add('bi-x-circle-fill');
                 document.querySelector('#iconoCorreo').classList.remove('bi-check-circle-fill');
             }else{
-                alert("Fallo la conexión con el servidor!!");
+                alert("¡Fallo la conexión con el servidor!");
             }
         }
     }

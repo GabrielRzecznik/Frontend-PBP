@@ -5,13 +5,13 @@ function random(min, max) {
 var codigoGenerado = random(1000, 9999);
 
 function codigoVerificado() {
-    console.log("Codigo correcto");
+    console.log("¡Codigo correcto!");
     clearTimeout($tiempo);
 }
 
 function enviarCorreo(correo, asignarDuracion){
     var formData= new FormData();
-    formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 dígitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar, muchas gracias!");
+    formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 dígitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar. ¡Muchas gracias!");
     formData.append("Código",codigoGenerado);
 
     xmlhttp = new XMLHttpRequest();
@@ -19,21 +19,20 @@ function enviarCorreo(correo, asignarDuracion){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (asignarDuracion) {
-                    $tiempo = setTimeout(anularCodigo, 15000);//10 minutos = 600000
+                    $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
             
                     function anularCodigo() {
-                        alert("Código vencido! Han pasado 10 minutos!");
+                        alert("¡Código vencido!. Han pasado 10 minutos!");
                         codigoGenerado = "";
                         location.reload();
                     }
 
                     function codigoVerificado() {
-                        console.log("Codigo correcto");
                         clearTimeout($tiempo);
                     }
                 }
             }else{
-                alert("ocurrio un error inesperado");   
+                alert("¡ocurrio un error inesperado!");   
             }   
         }
     }

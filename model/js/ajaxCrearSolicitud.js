@@ -7,7 +7,7 @@ function crearSolicitud(seleccionConsulta, obraSocialSolicitud, horaDesdeSolicit
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                alert("Solicitud enviada con exito!");
+                alert("¡Solicitud enviada con exito!");
                 location.reload();
             }
         }

@@ -14,7 +14,7 @@ function buscarProfesionales(formulario){
                 document.getElementById('cargandoBuscar').style.display = 'none';
                 document.getElementById('tituloBuscar').style.display = 'block';
             }if (xmlhttp.status == 401) {
-                alert("!No se encontron profesionales!");
+                alert("¡No se encontron profesionales!");
                 //Corregir error sppiner
                 document.getElementById('cargandoBuscar').style.display = 'none';
                 document.getElementById('tituloBuscar').style.display = 'block';

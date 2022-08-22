@@ -12,17 +12,17 @@ function registrarProfesional(formulario, tc, os, $latitud, $longitud){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {
-                alert("Perfil profesional creado con existo!")
+                alert("¡Perfil profesional creado con existo!")
                 localStorage.clear();
                 window.location.href = "https://frontend-pbp.herokuapp.com/";
             }else if (xmlhttp.status == 500) {
                 document.getElementById('tituloRegistrar').style.display = 'block';
                 document.getElementById('cargandoRegistrar').style.display = 'none';
-                alert("Ocurrio un error inesperado!");
+                alert("¡Ocurrio un error inesperado!");
             }else{
                 document.getElementById('tituloRegistrar').style.display = 'block';
                 document.getElementById('cargandoRegistrar').style.display = 'none';
-                alert("Fallo la conexión con el servidor!!");
+                alert("¡Fallo la conexión con el servidor!");
             }
         }
     }

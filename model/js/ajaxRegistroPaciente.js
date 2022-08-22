@@ -16,11 +16,11 @@ function registrarPaciente(formulario, $latitud, $longitud){
             }else if (xmlhttp.status == 500) {
                 document.getElementById('tituloRegistrar').style.display = 'block';
                 document.getElementById('cargandoRegistrar').style.display = 'none';
-                alert("Ocurrio un error inesperado con el correo ingresado");
+                alert("¡Ocurrio un error inesperado con el correo ingresado!");
             }else{
                 document.getElementById('tituloRegistrar').style.display = 'block';
                 document.getElementById('cargandoRegistrar').style.display = 'none';
-                alert("Fallo la conexión con el servidor!!");
+                alert("¡Fallo la conexión con el servidor!");
             }
         }
     }

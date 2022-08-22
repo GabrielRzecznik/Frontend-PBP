@@ -109,10 +109,8 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    if (nombreUsuarioValue === "") {
-        alert("Usuario vacio");
-    }if (contraseñaValue === "") {
-        alert("Contraseña vacia")
+    if (nombreUsuarioValue === "" || contraseñaValue === "") {
+        alert("¡Debe completar todos los campos!");
     }
     
     if (campos.nombreUsuario && campos.password) {

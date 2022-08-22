@@ -53,7 +53,7 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
     if (correoValue === "") {
-        alert("Complete el campo correo.");
+        alert("¡Complete el campo correo!");
     }
     
     if (campos.correo) {
@@ -114,7 +114,7 @@ formulario2.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
     if (codigoValue === "") {
-        alert("Complete el campo código");
+        alert("¡Complete el campo código!");
     }
     
     if (campos2.codigo) {
@@ -125,7 +125,7 @@ formulario2.addEventListener('submit', (e) => {
             document.getElementById('form3').style.display = 'block';
             codigoVerificado();
         }else{
-            alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
+            alert("¡El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
             document.getElementById("codigo").value = "";
             document.querySelector('#iconoCodigo').classList.remove('bi-check-circle-fill');
         }
@@ -245,7 +245,7 @@ formulario3.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
     if (passwordValue === "" && password2Value === "") {
-        alert("Debe completar todos los campos!");
+        alert("¡Debe completar todos los campos!");
     }else{
         if (passwordValue === "" || password2Value === "") {
             alert("¡Debe completar todos los campos!");

@@ -80,7 +80,7 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
     if (usuarioValue === "" || contraseñaValue === "") {
-        alert("Debe completar todos los campos!");
+        alert("¡Debe completar todos los campos!");
     }
     
     if (campos.usuario && campos.password) {

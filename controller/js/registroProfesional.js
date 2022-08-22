@@ -426,7 +426,7 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
 
     if (especialidadValue === "0" || matriculaValue === "" || campos.consultorio == true || provinciaConsultorioValue === "" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
-        alert("debe completar todos los campos obligatorios");
+        alert("¡Debe completar todos los campos obligatorios!");
     }
     
     if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {

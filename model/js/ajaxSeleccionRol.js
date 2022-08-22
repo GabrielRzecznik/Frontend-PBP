@@ -14,7 +14,7 @@ function seleccionRol(rol){
                     window.location.href = "https://frontend-pbp.herokuapp.com/view/registroProfesional.html";
                 }
             }else{
-                alert("Error inesperado!");
+                alert("¡Error inesperado!");
             }   
         }
     }

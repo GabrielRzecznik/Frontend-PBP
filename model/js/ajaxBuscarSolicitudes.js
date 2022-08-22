@@ -21,7 +21,7 @@ function buscarSolicitudes(){
                 });
 
             }if (xmlhttp.status == 401) {
-                alert("No se encontraron solicitudes ni turnos");
+                alert("¡No se encontraron solicitudes ni turnos!");
             }
         }
     }

@@ -8,7 +8,7 @@ function eliminarUsuario(){
                 alert("Usuario eliminado!");
                 window.location.href = "https://parcial-edi-front.herokuapp.com/index.html";
             }else{
-                alert("No se pudo eliminar el usuario!");
+                alert("¡No se pudo eliminar el usuario!");
             }   
         }
     }

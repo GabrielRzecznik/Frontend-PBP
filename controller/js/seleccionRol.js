@@ -7,5 +7,5 @@ document.getElementById("paciente").addEventListener("click", function() {
 //Click en profesional
 document.getElementById("profesional").addEventListener("click", function() {
     var rol = "Profesional";
-    seleccionRol(rol);
+    seleccionRol(rol);//Poner el perfil en edición
 });

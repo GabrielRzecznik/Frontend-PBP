@@ -16,7 +16,7 @@ function mostrarDatosUsuario(usuario, contraseña){
                 mostrarCorreo.innerHTML = data[0]["correo"];
                 mostrarProvincia.innerHTML = data[0]["provincia"];
             }else{
-                alert("No se pudieron traer los datos del usuario!");
+                alert("¡No se pudieron traer los datos del usuario!");
             }   
         }
     }

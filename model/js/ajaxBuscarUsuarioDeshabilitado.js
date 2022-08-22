@@ -15,7 +15,7 @@ function buscarUsuarioDeshabilitado(correo){
                 document.getElementById('form1').style.display = 'none';
                 document.getElementById('form2').style.display = 'block';
             }if (xmlhttp.status == 401) {
-                alert("!No se encontro el usuario!");
+                alert("¡No se encontro el usuario!");
                 //Corregir error sppiner
                 document.getElementById('cargandoBuscar').style.display = 'none';
                 document.getElementById('tituloBuscar').style.display = 'block';

@@ -122,9 +122,9 @@ formulario.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
     if (nombreUsuarioValue === "" || correoValue === "" || passwordValue === "" || password2Value === "") {
-        alert("Debe completar todos los campos!");
+        alert("¡Debe completar todos los campos!");
     }else if (passwordValue !== password2Value) {
-        alert("Las contraseñas no coinciden")
+        alert("¡Las contraseñas no coinciden!")
     }
     
     if (campos.correo && campos.password && (passwordValue === password2Value)) {
@@ -197,7 +197,7 @@ formulario2.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
     if (codigoValue === "") {
-        alert("Complete el campo código");
+        alert("¡Complete el campo código!");
     }
 
     if (campos2.codigo) {
