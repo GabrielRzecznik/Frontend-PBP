@@ -52,7 +52,7 @@ body{
 
 .alerta{
     left: 50%;
-    transform: translate(-5%);
+    transform: translate(-50%);
     position: fixed;
     font-size: small;
     top: 1%;
