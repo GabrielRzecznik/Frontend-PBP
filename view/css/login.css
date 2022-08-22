@@ -66,8 +66,6 @@ body{
         position: fixed;
         top: 1%;
         bottom: auto;
-        margin-left: 5%;
-        margin-right: 5%;
         font-size: small;
         visibility: hidden;
         box-sizing: border-box;
