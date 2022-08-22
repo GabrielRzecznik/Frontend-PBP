@@ -38,12 +38,6 @@
                             <a class="btn btn-secondary botonesSecundarios" href="https://frontend-pbp.herokuapp.com/">Iniciar sesión</a>
                         </div>
                     </div>
-                    <!--Alerta Correo-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <strong>Correo:</strong>
-                        El correo ingresado no corresponde a una dirección valida.
-                    </div>
                 </form>
                 <!--Formulario de validación-->
                 <form class="form2" onsubmit="event.preventDefault()" action="#" method="post" id="form2">
@@ -65,12 +59,6 @@
                             <a class="btn btn-secondary botonesSecundarios" id="atras" href="#">Volver atrás</a>  
                         </div>
                     </div>
-                    <!--Alerta Código-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCodigo">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <strong>Código:</strong>
-                        El código ingresado no es valido!
-                    </div>
                 </form>
                 <!--Formulario de cambio de contraseña-->
                 <form class="form3" onsubmit="event.preventDefault()" action="#" method="post" id="form3">
@@ -90,21 +78,6 @@
                     <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
                         <span>Restablecer</span>
                     </button>
-                    <!--Alerta Contraseña-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <strong>Contraseña:</strong>
-                        La contraseña debe tener de 8 a 16 caracteres.
-                        <br>Debe contener al menos una "mayúscula" y un "digito".
-                    </div>
-                    <!--Alerta Contraseña-->
-                    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword2">
-                        <i class="bi bi-info-circle-fill"></i>
-                        <strong>Validación Contraseña:</strong>
-                        La validación de contraseña debe tener de 8 a 16 caracteres. 
-                        <br>Debe contener al menos una "mayúscula" y un "digito"
-                        <br>y coincidir con la contraseña.
-                    </div>
                     <!--Modal Confirmación-->
                     <div class="modal fade" id="confirmacion-restablecer-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -132,6 +105,33 @@
             <div class="col-md-4 panel2"></div>
             <div class="col-md-2"></div>
         </div>
+    </div>
+    <!--Alerta Correo-->
+    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
+        <i class="bi bi-info-circle-fill"></i>
+        <strong>Correo:</strong>
+        El correo ingresado no corresponde a una dirección valida.
+    </div>
+    <!--Alerta Contraseña-->
+    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
+        <i class="bi bi-info-circle-fill"></i>
+        <strong>Contraseña:</strong>
+        La contraseña debe tener de 8 a 16 caracteres.
+        <br>Debe contener al menos una "mayúscula" y un "digito".
+    </div>
+    <!--Alerta Contraseña-->
+    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword2">
+        <i class="bi bi-info-circle-fill"></i>
+        <strong>Validación Contraseña:</strong>
+        La validación de contraseña debe tener de 8 a 16 caracteres. 
+        <br>Debe contener al menos una "mayúscula" y un "digito"
+        <br>y coincidir con la contraseña.
+    </div>
+    <!--Alerta Código-->
+    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCodigo">
+        <i class="bi bi-info-circle-fill"></i>
+        <strong>Código:</strong>
+        ¡El código ingresado no es valido!
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="../controller/js/restablecerUsuario.js"></script>
