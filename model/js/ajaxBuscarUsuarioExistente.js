@@ -15,7 +15,6 @@ function buscarUsuarioExistente(correo, nombreUsuario){
                 document.getElementById('activador').style.display = 'block';
                 //Envia Correo
                 $asignarDuracion = false; 
-                console.log("Tiempo sin limite");
                 enviarCorreo(correo, $asignarDuracion);
             }if (xmlhttp.status == 401) {
                 document.getElementById('tituloBuscar').style.display = 'block';
