@@ -63,12 +63,14 @@ body{
 
 @media (max-width: 768px) {
     .alerta {
-        position: fixed;
-        top: 1%;
-        bottom: auto;
-        font-size: small;
-        visibility: hidden;
-        box-sizing: border-box;
+      left: 50%;
+    transform: translate(-50%);
+    position: fixed;
+    font-size: small;
+    top: 1%;
+    bottom: auto;
+    visibility: hidden;
+    box-sizing: border-box;
     }
 
     .panel1{
