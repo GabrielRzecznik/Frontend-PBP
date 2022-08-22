@@ -52,9 +52,13 @@ body{
 
 .alerta{
     position: fixed;
-    right: 0%;
-    bottom: 0%;
+    top: 1%;
+    bottom: auto;
+    left: 5%;
+    right: 5%;
+    font-size: small;
     visibility: hidden;
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
