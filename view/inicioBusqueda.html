@@ -259,7 +259,7 @@
 									</button>
 								</p>
 								<div class="collapse" id="desUsu">
-									<div class="card card-body">
+									<div class="card card-body">type
 										<b>¿Esta seguro que desea deshabilitar su cuenta usuario? </b>
 										<br>
 										Si deshabilitas tu cuenta usuario ya no podrás acceder a ella, tampoco perfil será visible por otros usuarios.<br>
@@ -288,19 +288,6 @@
 												<span class="editarUsuario" id="editarUsuario">Editar usuario</span>
 												<div class="spinner-border text-secondary cargandoEditar" id="cargandoEditar" role="status"></div>
 											</button>
-											<!--Alerta Nombre de Usuario-->
-											<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
-												<i class="bi bi-info-circle-fill"></i>
-												<strong>Nombre de usuario:</strong>
-												El nombre de usuario ingresado no es válido. Recuerde que no puede dejar espacios en blanco. 
-												<br>Nombre de usuario: "Ejemplo1234"
-											</div>
-											<!--Alerta Contraseña-->
-											<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
-												<i class="bi bi-info-circle-fill"></i>
-												<strong>Contraseña:</strong>
-												La contraseña ingresada no es valida. Debe contener al menos una "mayuscula" y un "digito".
-											</div>
 										</form>
 									</div>
 								</div>		
@@ -340,13 +327,25 @@
 		  </div>
 		</div>
 	</div>
-
+	<!--Alerta Nombre de Usuario-->
+	<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
+		<i class="bi bi-info-circle-fill"></i>
+		<strong>Nombre de usuario:</strong>
+		El nombre de usuario ingresado no es válido. Recuerde que no puede dejar espacios en blanco. 
+		<br>Nombre de usuario: "Ejemplo1234"
+	</div>
+	<!--Alerta Contraseña-->
+	<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
+		<i class="bi bi-info-circle-fill"></i>
+		<strong>Contraseña:</strong>
+		La contraseña ingresada no es valida. Debe contener al menos una "mayuscula" y un "digito".
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="../controller/js/inicioBusqueda.js"></script>
+	<script src="../controller/js/navegador.js"></script>
+	<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
+	<script src="../model/js/ajaxEditarUsuario.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="../controller/js/inicioBusqueda.js"></script>
-<script src="../controller/js/navegador.js"></script>
-<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
-<script src="../model/js/ajaxEditarUsuario.js"></script>
 </html>
 
 <!--https://programacion.net/articulo/google_maps_con_multiples_marcadores_y_ventana_de_informacion_mediante_la_api_v3_1738-->
