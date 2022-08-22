@@ -123,7 +123,7 @@ formulario2.addEventListener('submit', (e) => {
             //Cambio de Formulario 2 por Formulario 3
             document.getElementById('form2').style.display = 'none';
             document.getElementById('form3').style.display = 'block';
-            clearTimeout(tiempo);
+            codigoVerificado();
         }else{
             alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
             document.getElementById("codigo").value = "";
