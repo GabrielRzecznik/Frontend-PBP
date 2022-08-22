@@ -63,7 +63,7 @@ body{
 
 @media (max-width: 768px) {
     .alerta {
-      left: 50%;
+      left: 5%;
     transform: translate(-5%, -5%, -5%);
     position: fixed;
     font-size: small;
