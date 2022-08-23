@@ -1,7 +1,7 @@
 function registrarProfesional(formulario, tc, os, $latitud, $longitud){
     var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
     formData.append("tipoConsulta", tc);
-    formData.append("obraSocial", os);
+    formData.append("obraSocial", {os});
     formData.append("latitudConsultorio", $latitud);
     formData.append("longitudConsultorio", $longitud);
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
