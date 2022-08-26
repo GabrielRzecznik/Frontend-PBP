@@ -42,7 +42,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         '<span>' + data[i].sexo + '</span>'
                 }
 
-                //Cambiar formulario
                 document.getElementById('tituloCargando').style.display = 'block';
                 document.getElementById('botonCargando').style.display = 'none';
             }if (xmlhttp.status == 401) {
