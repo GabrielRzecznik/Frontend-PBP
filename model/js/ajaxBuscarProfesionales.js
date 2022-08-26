@@ -3,6 +3,7 @@ function buscarProfesionales(formulario){
     //Agregar id_profesional para que no se muestre el mismo profesional que realiza la busqueda - agregar en el login
     //var id_profesional = localStorage["id_profesional"];
     var formJSON=JSON.stringify(Object.fromEntries(formData));
+    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
@@ -21,7 +22,6 @@ function buscarProfesionales(formulario){
                     + '<span>' + data[i].especialidad + '</span>'
                     + '<span>' + data[i].sexo + '</span>'
                 }
-
 
                 //Cambiar formulario
                 document.getElementById('cargandoBuscar').style.display = 'none';
