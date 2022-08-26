@@ -11,7 +11,6 @@ mostrarMapa2.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m1
 //Lamadrid%20540%2C%20B1871DSF%20Crucecita%2C%20Provincia%20de%20Buenos%20Aires - DATOS SENSIBLES
 //Av.%20Eduardo%20Madero%2C%20Buenos%20Aires - DATOS SENSIBLES
 
-/*
 //#region Validación de Campos
 const inputs = document.querySelectorAll('#formulario input');
 
@@ -20,7 +19,49 @@ const expresiones = {
 };
 
 const campos = {
-    obraSocial: false
+    especialidad: false,
+    obraSocial: true
 };
 //#endregion
-*/
+
+//#region Select Especialidad
+document.getElementById("especialidad").addEventListener('change', (event) => {
+    if (event.target.value != 0) {
+        campos['especialidad'] = true;
+    }else{
+        campos['especialidad'] = false;
+    }
+});
+
+if (especialidad.value == 0) {
+    campos['especialidad'] = false;
+}
+//#endregion
+
+//#region Enviar Formulario
+
+const formulario = document.getElementById('formulario');
+
+formulario.addEventListener('submit', (e) => {
+    const especialidadValue = especialidad.value.trim();
+    const matriculaValue = matricula.value.trim();
+    const provinciaConsultorioValue = provinciaConsultorio.value.trim();
+    const localidadConsultorioValue = localidadConsultorio.value.trim();
+    const calleConsultorioValue = calleConsultorio.value.trim();
+    const alturaConsultorioValue = alturaConsultorio.value.trim();
+    
+    e.preventDefault();//evita que se envien los datos y se refresque la pagina
+
+    if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
+        alert("¡Debe completar todos los campos obligatorios!");
+    }
+    
+    if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
+        //Enviar AJAX
+        document.getElementById('tituloRegistrar').style.display = 'none';
+        document.getElementById('cargandoRegistrar').style.display = 'block';
+        APP.doSearch();
+    }
+
+}); 
+//#endregion
