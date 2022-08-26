@@ -1,7 +1,7 @@
 function buscarProfesionales(formulario){
     var formData= new FormData(formulario);
-    //Agregar id_profesional para que no se muestre el mismo profesional que realiza la busqueda - agregar en el login
-    //var id_profesional = localStorage["id_profesional"];
+    formData.append("latitud", "-34.58310719305979");//Buscar datos o guardarlos en el local
+    formData.append("longitud", "-58.422003249894956");
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
 
