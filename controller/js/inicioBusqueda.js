@@ -44,10 +44,6 @@ const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
     const especialidadValue = especialidad.value.trim();
-    const tipoConsultaValue = tipoConsulta.value.trim();
-    const sexoValue = sexo.value.trim();
-    const obraSocialValue = obraSocial.value.trim();
-    const ubicacionValue = ubicacion.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
 
@@ -55,7 +51,7 @@ formulario.addEventListener('submit', (e) => {
         alert("¡Debe completar el campo especialidad!");
     }
     
-    if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
+    if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.sexo && campos.obraSocial && campos.ubicacion) {
         //Enviar AJAX
         document.getElementById('tituloCargando').style.display = 'none';
         document.getElementById('botonCargando').style.display = 'block';
