@@ -87,7 +87,6 @@ const validarFormulario = (e) => {
                 document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
                 campos['obraSocial'] = false;
             }
-            
             break;
         case 'provinciaConsultorio':
             if (expresiones.provinciaConsultorio.test(e.target.value)) {

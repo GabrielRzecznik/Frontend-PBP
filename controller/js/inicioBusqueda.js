@@ -23,15 +23,19 @@ const campos = {
     obraSocial: true
 };
 
-document.getElementById("obraSocial").addEventListener('change', (event) => {
-    if (expresiones.obraSocial.test(event.target.value)) {
-        campos['obraSocial'] = true;
-    }else if(obraSocial.value.trim() == ""){
-        campos['obraSocial'] = true;
-    }else{
-        campos['obraSocial'] = false;
+const validarFormulario = (e) => {
+    switch (e.target.name) {
+        case 'obraSocial':
+            if (expresiones.obraSocial.test(e.target.value)) {
+                campos['obraSocial'] = true;
+            }else if(obraSocial.value.trim() == ""){
+                campos['obraSocial'] = true;
+            }else{
+                campos['obraSocial'] = false;
+            }
+        break;
     }
-});
+}
 
 document.getElementById("especialidad").addEventListener('change', (event) => {
     if (event.target.value != 0) {
