@@ -61,7 +61,7 @@ const formularioP = document.getElementById('formularioP');
 
 formularioP.addEventListener('submit', (e) => {
     const especialidadValue = especialidad.value.trim();
-    alert("Hola");
+
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
 
     if (especialidadValue === "0") {
