@@ -32,6 +32,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 var data = JSON.parse(xmlhttp.responseText);
 
                 //colum.innerHTML = colum.innerHTML + '<th scope="col">Editar</th>' + '<th scope="col">Borrar</th>' + '<th scope="col">Actualizar</th>';
+                let con = document.getElementById('con');
 
                 for (var i = 0; i < data.length; i++) {
                     con.innerHTML = con.innerHTML    
