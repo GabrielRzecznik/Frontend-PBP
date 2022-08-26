@@ -4,10 +4,20 @@ function buscarProfesionales(formulario){
         formData.append("latitud", "-34.58310719305979");//Buscar datos o guardarlos en el local
         formData.append("longitud", "-58.422003249894956");    
     }else{
-        formData.append("latitud", "-34.58310719305979");//Buscar datos o guardarlos en el local
-        formData.append("longitud", "-58.422003249894956");    
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success);
+
+            function success(geolocationPosition) {
+                $coords = geolocationPosition.coords;
+                $lat = $coords.latitude;
+                $lon = $coords.longitude;
+                formData.append("latitud", $lat);
+                formData.append("longitud", $lon);  
+                console.log($lat);
+                console.log($lon);
+            }
+        }
     }
-    console.log(Geolocation.getCurrentPosition());
     
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
