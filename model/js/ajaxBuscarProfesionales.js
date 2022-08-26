@@ -1,3 +1,5 @@
+let con = document.getElementById('con');
+
 function buscarProfesionales(formulario, $valorUbicacion){
     var formData= new FormData(formulario);
     if ($valorUbicacion = 0) {
@@ -32,10 +34,9 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 var data = JSON.parse(xmlhttp.responseText);
 
                 //colum.innerHTML = colum.innerHTML + '<th scope="col">Editar</th>' + '<th scope="col">Borrar</th>' + '<th scope="col">Actualizar</th>';
-                let con = document.getElementById('con');
-
                 for (var i = 0; i < data.length; i++) {
-                    con.innerHTML =  '<span>' + data[i].nombre + '</span>' 
+                    con.innerHTML = con.innerHTML    
+                    + '<span>' + data[i].nombre + '</span>' 
                     + '<span>' + data[i].apellido + '</span>'
                     + '<span>' + data[i].especialidad + '</span>'
                     + '<span>' + data[i].sexo + '</span>'
