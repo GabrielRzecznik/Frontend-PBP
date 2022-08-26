@@ -35,7 +35,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
 
                 //colum.innerHTML = colum.innerHTML + '<th scope="col">Editar</th>' + '<th scope="col">Borrar</th>' + '<th scope="col">Actualizar</th>';
                 for (var i = 0; i < data.length; i++) {
-                    con.innerHTML = 
+                    con.innerHTML = con.innerHTML +
                         '<span>' + data[i].nombre + '</span>' +
                         '<span>' + data[i].apellido + '</span>' + 
                         '<span>' + data[i].especialidad + '</span>' + 
