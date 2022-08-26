@@ -61,7 +61,7 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.especialidad && campos.obraSocial) {
         //Enviar AJAX
-        registrarProfesional();
+        buscarProfesional();
         document.getElementById('tituloCargando').style.display = 'none';
         document.getElementById('botonCargando').style.display = 'block';
     }
