@@ -23,7 +23,7 @@ const camposs = {
     obraSocial: true
 };
 
-const validarFormulario = (e) => {
+const validarFormularioP = (e) => {
     switch (e.target.name) {
         case 'obraSocial':
             if (expresioness.obraSocial.test(e.target.value)) {
@@ -50,8 +50,8 @@ if (especialidad.value == 0) {
 }
 
 inputss.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+    input.addEventListener('keyup' , validarFormularioP);//cuando levanto la tecla se ejecuta un codigo
+    input.addEventListener('blur' , validarFormularioP);//cuando me salgo y preciono fuera del input
 });
 //#endregion
 
