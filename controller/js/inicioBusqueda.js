@@ -71,9 +71,9 @@ formularioP.addEventListener('submit', (e) => {
     if (camposs.especialidad && camposs.obraSocial) {
         //Enviar AJAX
         $valorUbicacion = ubicacion.value.trim();
-        buscarProfesionales(formularioP, $valorUbicacion);
         document.getElementById('tituloCargando').style.display = 'none';
         document.getElementById('botonCargando').style.display = 'block';
+        buscarProfesionales(formularioP, $valorUbicacion);
     }
 
 }); 

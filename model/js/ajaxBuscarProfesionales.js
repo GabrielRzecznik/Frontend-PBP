@@ -43,13 +43,13 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 }
 
                 //Cambiar formulario
-                document.getElementById('cargandoBuscar').style.display = 'none';
-                document.getElementById('tituloBuscar').style.display = 'block';
+                document.getElementById('tituloCargando').style.display = 'block';
+                document.getElementById('botonCargando').style.display = 'none';
             }if (xmlhttp.status == 401) {
                 alert("¡No se encontron profesionales!");
                 //Corregir error sppiner
-                document.getElementById('cargandoBuscar').style.display = 'none';
-                document.getElementById('tituloBuscar').style.display = 'block';
+                document.getElementById('tituloCargando').style.display = 'block';
+                document.getElementById('botonCargando').style.display = 'none';
             }
         }
     }
