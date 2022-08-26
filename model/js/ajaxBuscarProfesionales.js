@@ -17,18 +17,10 @@ function buscarProfesionales(formulario){
 
                 for (var i = 0; i < data.length; i++) {
                     con.innerHTML = con.innerHTML    
-                    + '<span>' + data[i].especialidad + '</span>' 
-                    + '<span>' + data[i].matricula + '</span>'
-                    + '<span>' + data[i].calleConsultorio + '</span>'
-                    + '<span>' + data[i].alturaConsultorio + '</span>'
-                    + '<span>' + data[i].color + '</span>'
-                    + '<span>' + data[i].estado + '</span>'
-                    + '<span>' + data[i].cambio + '</span>'
-                    + '<span>' + data[i].combustible + '</span>'
-                    + '<span>' + data[i].valor + '</span>'
-                    + '<span>' + data[i].kilometraje + '</span>'
-                    + '<span>' + data[i].anio + '</span>'
-                    + '<span>' + data[i].propietario + '</span>'                                    
+                    + '<span>' + data[i].nombre + '</span>' 
+                    + '<span>' + data[i].apellido + '</span>'
+                    + '<span>' + data[i].especialidad + '</span>'
+                    + '<span>' + data[i].sexo + '</span>'
                 }
 
 
