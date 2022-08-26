@@ -1,7 +1,14 @@
 function buscarProfesionales(formulario){
     var formData= new FormData(formulario);
-    formData.append("latitud", "-34.58310719305979");//Buscar datos o guardarlos en el local
-    formData.append("longitud", "-58.422003249894956");
+    if (ubicacion.value.trim() = 0) {
+        formData.append("latitud", "-34.58310719305979");//Buscar datos o guardarlos en el local
+        formData.append("longitud", "-58.422003249894956");    
+    }else{
+        formData.append("latitud", "-34.58310719305979");//Buscar datos o guardarlos en el local
+        formData.append("longitud", "-58.422003249894956");    
+    }
+    console.log(Geolocation.getCurrentPosition());
+    
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
 
