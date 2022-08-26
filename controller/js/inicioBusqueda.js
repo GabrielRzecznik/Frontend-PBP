@@ -44,23 +44,22 @@ const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
     const especialidadValue = especialidad.value.trim();
-    const matriculaValue = matricula.value.trim();
-    const provinciaConsultorioValue = provinciaConsultorio.value.trim();
-    const localidadConsultorioValue = localidadConsultorio.value.trim();
-    const calleConsultorioValue = calleConsultorio.value.trim();
-    const alturaConsultorioValue = alturaConsultorio.value.trim();
+    const tipoConsultaValue = tipoConsulta.value.trim();
+    const sexoValue = sexo.value.trim();
+    const obraSocialValue = obraSocial.value.trim();
+    const ubicacionValue = ubicacion.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
 
-    if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
-        alert("¡Debe completar todos los campos obligatorios!");
+    if (especialidadValue === "0") {
+        alert("¡Debe completar el campo especialidad!");
     }
     
     if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
         //Enviar AJAX
-        document.getElementById('tituloRegistrar').style.display = 'none';
-        document.getElementById('cargandoRegistrar').style.display = 'block';
-        APP.doSearch();
+        document.getElementById('tituloCargando').style.display = 'none';
+        document.getElementById('botonCargando').style.display = 'block';
+        
     }
 
 }); 
