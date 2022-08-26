@@ -44,6 +44,11 @@ document.getElementById("especialidad").addEventListener('change', (event) => {
 if (especialidad.value == 0) {
     campos['especialidad'] = false;
 }
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
+    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+});
 //#endregion
 
 //#region Enviar Formulario
