@@ -11,7 +11,6 @@ function buscarProfesionales(formulario){
                 //Creación de cartas profesionales
 
                 var data = JSON.parse(xmlhttp.responseText);
-                var nombre_columnas = Object.keys(data[0]);
 
                 //colum.innerHTML = colum.innerHTML + '<th scope="col">Editar</th>' + '<th scope="col">Borrar</th>' + '<th scope="col">Actualizar</th>';
 
