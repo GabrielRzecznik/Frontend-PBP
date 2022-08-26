@@ -34,8 +34,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 var data = JSON.parse(xmlhttp.responseText);
 
                 //colum.innerHTML = colum.innerHTML + '<th scope="col">Editar</th>' + '<th scope="col">Borrar</th>' + '<th scope="col">Actualizar</th>';
-                console.log(data.length);
-                for (var i = 0; i < data.length; i++) {
+                console.log(data);
+                for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
                     con.innerHTML = "<span>Hola</span>"
                     //con.innerHTML +
                         //'!<span>' + data[i].nombre + '</span>' +
