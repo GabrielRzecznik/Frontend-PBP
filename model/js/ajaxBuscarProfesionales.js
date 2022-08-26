@@ -19,6 +19,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
         }
     }
     formData.delete('ubicacion');
+    formData.append("id_profesional", 98);//Tomarla del localstorage
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
 
