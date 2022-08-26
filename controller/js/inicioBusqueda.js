@@ -12,7 +12,7 @@ mostrarMapa2.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m1
 //Av.%20Eduardo%20Madero%2C%20Buenos%20Aires - DATOS SENSIBLES
 
 //#region Validación de Campos
-const inputss = document.querySelectorAll('#formulario input');
+const inputss = document.querySelectorAll('#formularioP input');
 
 const expresioness = {
     obraSocial: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{2,40}$/
