@@ -14,11 +14,11 @@ mostrarMapa2.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m1
 //#region Validación de Campos
 const inputss = document.querySelectorAll('#formulario input');
 
-const expresiones = {
+const expresioness = {
     obraSocial: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{2,40}$/
 };
 
-const campos = {
+const camposs = {
     especialidad: false,
     obraSocial: true
 };
@@ -26,7 +26,7 @@ const campos = {
 const validarFormulario = (e) => {
     switch (e.target.name) {
         case 'obraSocial':
-            if (expresiones.obraSocial.test(e.target.value)) {
+            if (expresioness.obraSocial.test(e.target.value)) {
                 campos['obraSocial'] = true;
             }else if(obraSocial.value.trim() == ""){
                 campos['obraSocial'] = true;
@@ -39,14 +39,14 @@ const validarFormulario = (e) => {
 
 document.getElementById("especialidad").addEventListener('change', (event) => {
     if (event.target.value != 0) {
-        campos['especialidad'] = true;
+        camposs['especialidad'] = true;
     }else{
-        campos['especialidad'] = false;
+        camposs['especialidad'] = false;
     }
 });
 
 if (especialidad.value == 0) {
-    campos['especialidad'] = false;
+    camposs['especialidad'] = false;
 }
 
 inputss.forEach((input) => {
@@ -68,7 +68,7 @@ formulario.addEventListener('submit', (e) => {
         alert("¡Debe completar el campo especialidad!");
     }
     
-    if (campos.especialidad && campos.obraSocial) {
+    if (camposs.especialidad && camposs.obraSocial) {
         //Enviar AJAX
         buscarProfesional();
         document.getElementById('tituloCargando').style.display = 'none';
