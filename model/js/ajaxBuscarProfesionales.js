@@ -2,7 +2,7 @@ let con = document.getElementById('con');
 
 function buscarProfesionales(formulario, $valorUbicacion){
     var formData= new FormData(formulario);
-    if ($valorUbicacion = 0) {
+    if ($valorUbicacion == 0) {
         formData.append("latitud", "-34.58310719305979");//Buscar datos o guardarlos en el local
         formData.append("longitud", "-58.422003249894956");    
     }else{
