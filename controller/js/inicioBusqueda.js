@@ -58,7 +58,7 @@ inputss.forEach((input) => {
 //#region Enviar Formulario
 
 const formularioP = document.getElementById('formularioP');
-
+alert("Hola");
 formularioP.addEventListener('submit', (e) => {
     const especialidadValue = especialidad.value.trim();
     
