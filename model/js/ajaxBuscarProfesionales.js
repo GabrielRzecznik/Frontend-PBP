@@ -13,10 +13,6 @@ function buscarProfesionales(formulario){
                 var data = JSON.parse(xmlhttp.responseText);
                 var nombre_columnas = Object.keys(data[0]);
 
-                for (var i = 0; i < nombre_columnas.length; i++) {
-                    colum.innerHTML = colum.innerHTML + '<th scope="col">' + nombre_columnas[i] + '</th>';
-                }
-
                 //colum.innerHTML = colum.innerHTML + '<th scope="col">Editar</th>' + '<th scope="col">Borrar</th>' + '<th scope="col">Actualizar</th>';
 
                 for (var i = 0; i < data.length; i++) {
