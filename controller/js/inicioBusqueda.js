@@ -12,7 +12,7 @@ mostrarMapa2.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m1
 //Av.%20Eduardo%20Madero%2C%20Buenos%20Aires - DATOS SENSIBLES
 
 //#region Validación de Campos
-const inputs = document.querySelectorAll('#formulario input');
+const inputs2 = document.querySelectorAll('#formulario input');
 
 const expresiones = {
     obraSocial: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{2,40}$/
@@ -49,7 +49,7 @@ if (especialidad.value == 0) {
     campos['especialidad'] = false;
 }
 
-inputs.forEach((input) => {
+inputs2.forEach((input) => {
     input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
     input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
 });
