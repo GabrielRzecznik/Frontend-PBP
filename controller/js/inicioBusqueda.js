@@ -22,9 +22,17 @@ const campos = {
     especialidad: false,
     obraSocial: true
 };
-//#endregion
 
-//#region Select Especialidad
+document.getElementById("obraSocial").addEventListener('change', (event) => {
+    if (expresiones.obraSocial.test(event.target.value)) {
+        campos['obraSocial'] = true;
+    }else if(obraSocial.value.trim() == ""){
+        campos['obraSocial'] = true;
+    }else{
+        campos['obraSocial'] = false;
+    }
+});
+
 document.getElementById("especialidad").addEventListener('change', (event) => {
     if (event.target.value != 0) {
         campos['especialidad'] = true;
@@ -51,12 +59,12 @@ formulario.addEventListener('submit', (e) => {
         alert("¡Debe completar el campo especialidad!");
     }
     
-    if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.sexo && campos.obraSocial && campos.ubicacion) {
+    if (campos.especialidad && campos.obraSocial) {
         //Enviar AJAX
         document.getElementById('tituloCargando').style.display = 'none';
         document.getElementById('botonCargando').style.display = 'block';
-        
     }
 
 }); 
 //#endregion
+
