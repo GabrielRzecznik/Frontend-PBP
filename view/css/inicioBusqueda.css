@@ -53,3 +53,17 @@
 .fotoProfesional{
 	font-size: 35px;
 }
+
+.botonCargando{
+	display: none;
+	width: 15px;
+	height: 15px;
+	font-size: 10px;
+	margin: 0 auto;
+  }
+  
+  .tituloCargando{
+	text-align: center;
+	display: block;
+  }
+  
