@@ -35,8 +35,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 let con = document.getElementById('con');
 
                 for (var i = 0; i < data.length; i++) {
-                    con.innerHTML = con.innerHTML    
-                    + '<span>' + data[i].nombre + '</span>' 
+                    con.innerHTML =  '<span>' + data[i].nombre + '</span>' 
                     + '<span>' + data[i].apellido + '</span>'
                     + '<span>' + data[i].especialidad + '</span>'
                     + '<span>' + data[i].sexo + '</span>'
