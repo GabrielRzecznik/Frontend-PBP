@@ -70,7 +70,7 @@ formularioP.addEventListener('submit', (e) => {
     
     if (camposs.especialidad && camposs.obraSocial) {
         //Enviar AJAX
-        buscarProfesional();
+        buscarProfesionales();
         document.getElementById('tituloCargando').style.display = 'none';
         document.getElementById('botonCargando').style.display = 'block';
     }
