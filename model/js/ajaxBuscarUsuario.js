@@ -14,6 +14,8 @@ function buscarUsuario(formulario){
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
                     localStorage.setItem("id_paciente", data[0]["id_paciente"]);
                     localStorage.setItem("id_profesional", data[0]["id_profesional"]);
+                    localStorage.setItem("latitud", data[0]["latitud"]);
+                    localStorage.setItem("longitud", data[0]["longitud"]);
                     localStorage.setItem("nombreUsuario", data[0]["nombreUsuario"]);
                     localStorage.setItem("correo", data[0]["correo"]);
                     //Redirigir
