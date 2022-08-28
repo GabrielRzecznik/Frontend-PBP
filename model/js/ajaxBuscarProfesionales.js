@@ -36,12 +36,11 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 //colum.innerHTML = colum.innerHTML + '<th scope="col">Editar</th>' + '<th scope="col">Borrar</th>' + '<th scope="col">Actualizar</th>';
                 console.log(data);
                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
-                    con.innerHTML = "<span>Hola</span>"
-                    //con.innerHTML +
-                        //'!<span>' + data[i].nombre + '</span>' +
-                        //'<span>' + data[i].apellido + '</span>' + 
-                        //'<span>' + data[i].especialidad + '</span>' + 
-                        //'<span>' + data[i].sexo + '</span>'
+                    con.innerHTML = con.innerHTML +
+                        '<span>' + data[i].nombre + '</span>' +
+                        '<span>' + data[i].apellido + '</span>' + 
+                        '<span>' + data[i].especialidad + '</span>' + 
+                        '<span>' + data[i].sexo + '</span>'
                 }
 
                 document.getElementById('tituloCargando').style.display = 'block';
