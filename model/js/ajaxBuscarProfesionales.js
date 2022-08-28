@@ -67,8 +67,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         }
                     }
 
-                    console.log(edad);
-
                     //Carta Profesional
                     con.innerHTML = con.innerHTML +
                     '<div class="col-md-6">' +
@@ -90,7 +88,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '<br>' +
                                                 '<span id="mostrarSexoProfesional">' + data[i].sexo + '</span>' +
                                                 '<br>' +
-                                                '<span id="mostrarEdadProfesional">' + data[i].fechaNacimiento + '</span>' +//Pasar a años
+                                                '<span id="mostrarEdadProfesional">' + edad + '</span>' +//Pasar a años
                                             '</div>' +
                                             '<div class="col-6">' +
                                                 '<span class="badge rounded-pill bg-secondary">' + data[i].obraSocial +'</span>' +//Analizar
