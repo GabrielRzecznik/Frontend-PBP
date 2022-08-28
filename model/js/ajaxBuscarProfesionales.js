@@ -65,7 +65,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     $transformarArray = $transformarArray.replace(/{/,'');
                     $transformarArray = $transformarArray.replace(/}/,'');
                     
-                    $transformarArray = transformarArray.split(/,/).join('","');
+                    $transformarArray = $transformarArray.split(/,/).join('","');
                     $transformarArray = '["'+$transformarArray+'"]';
 
                     
@@ -117,7 +117,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     $calleAvenida = $calleAvenida.replace(/Calle/,'C.');
                     $calleAvenida = $calleAvenida.replace(/avenida/,'Av.');
                     $calleAvenida = $calleAvenida.replace(/Avenida/,'Av.');
-                    $calleAvenida = $calleAvenida.replace(/ /,'%20');
+                    $calleAvenida = $calleAvenida.split(/ /).join('%20');
 
                     $altura = data[i].alturaConsultorio;//0540
                     if ($altura < 10000) {
