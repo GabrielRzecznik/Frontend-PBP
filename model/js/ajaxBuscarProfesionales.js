@@ -26,10 +26,11 @@ function buscarProfesionales(formulario, $valorUbicacion){
         }
     }
     formData.delete('ubicacion');
-        console.log(localStorage.getItem("id_profesional"))
     if (localStorage.getItem("id_profesional") == null) {
+        console.log("dentro");
         formData.append("id_profesional", 0);
     }else{
+        console.log("afuera");
         formData.append("id_profesional", localStorage.getItem("id_profesional"));
     }
     var formJSON=JSON.stringify(Object.fromEntries(formData));
