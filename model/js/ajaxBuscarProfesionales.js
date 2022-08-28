@@ -74,6 +74,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
 
                     //Carta Profesional
                     con.innerHTML = con.innerHTML +
+                    '<div style="padding: 1px">'+
+
                     '<div class="col-md-6" style = "float: left">' +
                         '<div class="card bg-light carta">' +
                             '<div class="row">' +
@@ -108,6 +110,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                     '<span id="visualizarMapa'+i+'"></span>' + 
                                 '</div>' +
                             '</div>' +
+                        '</div>' +
                         '</div>' +
                     '</div>';
                     //Mostrar Mapa
