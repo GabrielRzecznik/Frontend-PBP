@@ -44,7 +44,9 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     var mesNacimiento = parseInt(String(data[i].fechaNacimiento).substring(5,7));
                     var diaNacimiento = parseInt(String(data[i].fechaNacimiento).substring(5,7));
                     
-                    console.log(añoNacimiento + mesNacimiento +diaNacimiento);
+                    console.log(añoNacimiento);
+                    console.log(mesNacimiento);
+                    console.log(diaNacimiento);
 
                     //Carta Profesional
                     con.innerHTML = con.innerHTML +
