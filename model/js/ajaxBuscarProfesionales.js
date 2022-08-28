@@ -69,7 +69,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     
                     $obrasSociales = "";
                     $arrayOS.forEach(function(elemento) {
-                        $obrasSociales += '<span class="badge rounded-pill bg-secondary">' + elemento + '</span>';
+                        $obrasSociales += '<span class="badge rounded-pill bg-secondary margenSO">' + elemento + '</span>';
                     })
 
                     //Carta Profesional
