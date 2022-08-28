@@ -37,10 +37,42 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 console.log(data);
                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
                     con.innerHTML = con.innerHTML +
-                        '<span>' + data[i].nombre + '</span>' +
-                        '<span>' + data[i].apellido + '</span>' + 
-                        '<span>' + data[i].especialidad + '</span>' + 
-                        '<span>' + data[i].sexo + '</span>'
+                    '<div class="col-md-6">' +
+                        '<div class="card bg-light carta">' +
+                            '<div class="row">' +
+                                '<div class="col-6">' +
+                                    '<div class="card-body">' +
+                                                '<h5>' +
+                                                    '<span id="mostrarNombreProfesional">' + data[i].nombre + '</span>' +
+                                                    '<span id="mostrarApellidoProfesional">' + data[i].apellido + '</span>' +
+                                                    '<h6 id="mostrarProfesion col12">' + data[i].especialidad + '</h6>' +
+                                                '</h5>' +		
+                                                '<hr>' +							
+                                        '<div class="row">' +
+                                            '<div class="col-6 infoProfesional">' +
+                                                '<span id="mostrarProvinciaProfesional">' + data[i].provinciaConsultorio + '</span>' +
+                                                '<br>' +
+                                                '<span id="mostrarLocalidadProfesional">' + data[i].localidadConsultorio + '</span>' +
+                                                '<br>' +
+                                                '<span id="mostrarSexoProfesional">' + data[i].sexo + '</span>' +
+                                                '<br>' +
+                                                '<span id="mostrarEdadProfesional">' + data[i].fechaDeNacimiento + '</span>' +//Pasar a años
+                                            '</div>' +
+                                            '<div class="col-6">' +
+                                                '<span class="badge rounded-pill bg-secondary">' + data[i].obraSocial +'</span>' +//Analizar
+                                                '<br>' +
+                                                '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km </span>' +
+                                            '</div>' +
+                                        '</div>' +
+                                        '<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="col-6">' +
+                                    '<span id="visualizarMapa2"></span>' + //Iterar id
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>'
                 }
 
                 document.getElementById('tituloCargando').style.display = 'block';
