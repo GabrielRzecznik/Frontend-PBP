@@ -22,8 +22,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 $lon = $coords.longitude;
                 formData.append("latitud", $lat);
                 formData.append("longitud", $lon);  
-                console.log($lat);
-                console.log($lon);
             }
         }
     }
@@ -33,19 +31,16 @@ function buscarProfesionales(formulario, $valorUbicacion){
     }
     formData.append("id_profesional", 0);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                //Creación de cartas profesionales
-
                 var data = JSON.parse(xmlhttp.responseText);
-
-                //colum.innerHTML = colum.innerHTML + '<th scope="col">Editar</th>' + '<th scope="col">Borrar</th>' + '<th scope="col">Actualizar</th>';
-                console.log(data);
+                
+                //Creación de cartas profesionales
                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
+                    
                     //Calcular edad
                     var añoNacimiento = parseInt(String(data[i].fechaNacimiento).substring(0,4));
                     var mesNacimiento = parseInt(String(data[i].fechaNacimiento).substring(5,7));
@@ -56,15 +51,18 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     if(diaNacimiento < 10){
                         diaNacimiento = "0" + diaNacimiento;
                     }
-
                     var edad = año - añoNacimiento;
-
                     if (mes < mesNacimiento) {
                         edad--;
                     }else if (mes == mesNacimiento) {
                         if (dia < diaNacimiento) {
                             edad--;
                         }
+                    }
+
+                    //Mostrar obras sociales
+                    for (var x = 0; x < data[x].obraSocial.length; x++) {
+                        obrasSociales += '<span class="badge rounded-pill bg-secondary">'+ data[x].obraSocial + '<span>';
                     }
 
                     //Carta Profesional
@@ -91,7 +89,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '<span id="mostrarEdadProfesional">' + edad + ' años</span>' +//Pasar a años
                                             '</div>' +
                                             '<div class="col-6">' +
-                                                '<span class="badge rounded-pill bg-secondary">' + data[i].obraSocial +'</span>' +//Analizar
+                                                obrasSociales +
                                                 '<br>' +
                                                 '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km</span>' +
                                             '</div>' +
