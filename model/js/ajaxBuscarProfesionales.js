@@ -40,8 +40,11 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 console.log(data);
                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
                     //Calcular edad
-                    console.log(data[i].fechaNacimiento);
-
+                    var añoNacimiento = parseInt(String(data[i].fechaNacimiento).substring(0,4));
+                    var mesNacimiento = parseInt(String(data[i].fechaNacimiento).substring(5,7));
+                    var diaNacimiento = parseInt(String(data[i].fechaNacimiento).substring(5,7));
+                    
+                    console.log(añoNacimiento + mesNacimiento +diaNacimiento);
 
                     //Carta Profesional
                     con.innerHTML = con.innerHTML +
