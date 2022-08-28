@@ -68,7 +68,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     $transformarArray = '["'+$transformarArray+'"]';
 
                     
-                    $transformarArray.forEach(function(elemento) {
+                    Array($transformarArray).forEach(function(elemento) {
                         console.log(elemento);
                     })
 
