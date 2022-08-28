@@ -77,6 +77,13 @@ function buscarProfesionales(formulario, $valorUbicacion){
                             '</div>' +
                         '</div>' +
                     '</div>';
+                    /*
+                    $calleAvenida = "C.%2045";
+                    $altura = "0986";//0540
+                    $codigoPostal = "B1871";//B1871
+                    $localidad = "La%20Plata";
+                    $provincia = "Provincia%20Buenos%20Aires";
+                    */
                     //Mostrar Mapa
                     $calleAvenida = data[i].calleConsultorio;
                     $calleAvenida = $calleAvenida.replace(/calle/,'AEM%2C%20C.');
