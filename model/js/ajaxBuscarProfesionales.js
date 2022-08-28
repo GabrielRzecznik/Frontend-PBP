@@ -61,6 +61,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     }
 
                     //Mostrar obras sociales
+                    var obrasSociales;
                     for (var x = 0; x < data[x].obraSocial.length; x++) {
                         obrasSociales += '<span class="badge rounded-pill bg-secondary">'+ data[x].obraSocial + '<span>';
                     }
