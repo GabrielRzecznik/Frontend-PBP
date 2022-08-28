@@ -1,3 +1,10 @@
+//Obtener fecha actual
+let date = new Date();
+let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
+let dia = date.getDate();
+let mes = date.getMonth()+1;
+let año = date.getFullYear();
+
 let con = document.getElementById('con');
 
 function buscarProfesionales(formulario, $valorUbicacion){
@@ -50,9 +57,17 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         diaNacimiento = "0" + diaNacimiento;
                     }
 
-                    console.log(añoNacimiento);
-                    console.log(mesNacimiento);
-                    console.log(diaNacimiento);
+                    var edad = año - añoNacimiento;
+
+                    if (mes < mesNacimiento) {
+                        edad--;
+                    }else if (mes == mesNacimiento) {
+                        if (dia < diaNacimiento) {
+                            edad--;
+                        }
+                    }
+
+                    console.log(edad);
 
                     //Carta Profesional
                     con.innerHTML = con.innerHTML +
