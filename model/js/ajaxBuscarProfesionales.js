@@ -88,12 +88,12 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '<br>' +
                                                 '<span id="mostrarSexoProfesional">' + data[i].sexo + '</span>' +
                                                 '<br>' +
-                                                '<span id="mostrarEdadProfesional">' + edad + '</span>' +//Pasar a años
+                                                '<span id="mostrarEdadProfesional">' + edad + ' años</span>' +//Pasar a años
                                             '</div>' +
                                             '<div class="col-6">' +
                                                 '<span class="badge rounded-pill bg-secondary">' + data[i].obraSocial +'</span>' +//Analizar
                                                 '<br>' +
-                                                '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km </span>' +
+                                                '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km</span>' +
                                             '</div>' +
                                         '</div>' +
                                         '<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
