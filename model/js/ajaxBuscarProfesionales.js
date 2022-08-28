@@ -66,11 +66,11 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     $transformarArray = $transformarArray.replace(/}/,'');
                     
                     $transformarArray = $transformarArray.split(/,/).join('","');
-                    $transformarArray = '["'+$transformarArray+'"]';
 
-                    $arrayOS = [...$transformarArray];
                     
-                    arrayOS.forEach(function(elemento) {
+                    $arrayOS =  $transformarArray.split(','); 
+                    
+                    $arrayOS.forEach(function(elemento) {
                         console.log(elemento);
                     })
 
