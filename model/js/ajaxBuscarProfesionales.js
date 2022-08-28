@@ -45,7 +45,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     if(mesNacimiento < 10){
                         mesNacimiento = "0" + mesNacimiento;
                     }
-                    var diaNacimiento = parseInt(String(data[i].fechaNacimiento).substring(9,11));
+                    var diaNacimiento = parseInt(String(data[i].fechaNacimiento).substring(8,10));
                     if(diaNacimiento < 10){
                         diaNacimiento = "0" + diaNacimiento;
                     }
