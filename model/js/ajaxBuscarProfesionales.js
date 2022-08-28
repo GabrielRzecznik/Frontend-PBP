@@ -62,8 +62,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
 
                     //Mostrar obras sociales
                     $transformarArray = data[i].obraSocial;
-                    $transformarArray = $transformarArray.replace(/{/,'[');
-                    $transformarArray = $transformarArray.replace(/}/,']');
+                    $transformarArray = $transformarArray.replace(/{/,'');
+                    $transformarArray = $transformarArray.replace(/}/,'');
 
                     
                     Array($transformarArray).forEach(function(elemento) {
