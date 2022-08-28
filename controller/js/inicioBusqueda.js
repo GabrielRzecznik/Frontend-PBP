@@ -2,7 +2,7 @@ var mostrarMapa = document.getElementById("visualizarMapa");
 var mostrarMapa2 = document.getElementById("visualizarMapa2");
 $calleAvenida = "C.%2045";
 $altura = "0986";//0540
-$codigoPostal = "B2756";//B1871
+$codigoPostal = "B1871";//B1871
 $localidad = "La%20Plata";
 $provincia = "Provincia%20Buenos%20Aires";
 
