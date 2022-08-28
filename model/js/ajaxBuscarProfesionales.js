@@ -37,7 +37,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data = JSON.parse(xmlhttp.responseText);
-                
+                con.innerHTML = "";
                 //Creación de cartas profesionales
                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
                     
