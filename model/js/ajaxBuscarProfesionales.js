@@ -96,7 +96,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '<span id="mostrarEdadProfesional">' + edad + ' años</span>' +//Pasar a años
                                             '</div>' +
                                             '<div class="col-6">' +
-                                                obrasSociales +
+                                                $obrasSociales +
                                                 '<br>' +
                                                 '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km</span>' +
                                             '</div>' +
