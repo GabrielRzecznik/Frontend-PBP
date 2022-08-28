@@ -68,6 +68,10 @@
   }
   
   .margenSO{
+	margin-right: 3px;
+  }
+
+  .margenCarta{
 	margin-top: 1%;
 	margin-bottom: 1%;
   }
