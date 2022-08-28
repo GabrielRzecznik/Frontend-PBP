@@ -67,6 +67,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     
                     $arrayOS =  $transformarArray.split(','); 
                     
+                    $obrasSociales = "";
                     $arrayOS.forEach(function(elemento) {
                         $obrasSociales += '<span class="badge rounded-pill bg-secondary">' + elemento + ' años</span>';
                     })
