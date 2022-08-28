@@ -72,7 +72,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                     '</div>' +
                                 '</div>' +
                                 '<div class="col-6">' +
-                                    '<span id="visualizarMapa'+i+'"></span>' + //Iterar id
+                                    '<span id="visualizarMapa'+i+'"></span>' + 
                                 '</div>' +
                             '</div>' +
                         '</div>' +
