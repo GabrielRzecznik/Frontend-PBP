@@ -86,6 +86,15 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     $calleAvenida = $calleAvenida.replace(/ /,'%20');
 
                     $altura = data[i].alturaConsultorio;//0540
+                    if ($altura < 1000) {
+                        if ($altura < 10) {
+                            $altura = '000'+$altura;
+                        }else if ($altura <100) {
+                            $altura = '00'+$altura;
+                        }else{
+                            $altura = '0'+$altura;
+                        }
+                    }
                     $altura = $altura.replace(/ /,'%20');
 
                     $codigoPostal = "B1871";//B1871 Analizar si vale la pena incorporar segun el impacto
