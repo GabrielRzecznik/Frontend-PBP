@@ -68,7 +68,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     $arrayOS =  $transformarArray.split(','); 
                     
                     $arrayOS.forEach(function(elemento) {
-                        console.log(elemento);
+                        obrasSociales += '<span id="elemento">' + edad + ' años</span>';
                     })
 
                     //Carta Profesional
