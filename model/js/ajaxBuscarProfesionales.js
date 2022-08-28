@@ -39,6 +39,10 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 //colum.innerHTML = colum.innerHTML + '<th scope="col">Editar</th>' + '<th scope="col">Borrar</th>' + '<th scope="col">Actualizar</th>';
                 console.log(data);
                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
+                    //Calcular edad
+                    console.log(data[i].fechaDeNacimiento);
+
+
                     //Carta Profesional
                     con.innerHTML = con.innerHTML +
                     '<div class="col-md-6">' +
@@ -77,13 +81,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
                             '</div>' +
                         '</div>' +
                     '</div>';
-                    /*
-                    $calleAvenida = "C.%2045";
-                    $altura = "0986";//0540
-                    $codigoPostal = "B1871";//B1871
-                    $localidad = "La%20Plata";
-                    $provincia = "Provincia%20Buenos%20Aires";
-                    */
                     //Mostrar Mapa
                     $calleAvenida = data[i].calleConsultorio;
                     $calleAvenida = $calleAvenida.replace(/calle/,'C.');
