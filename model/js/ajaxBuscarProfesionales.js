@@ -76,11 +76,16 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     '</div>';
                     //Mostrar Mapa
                     $calleAvenida = data[i].calleConsultorio;
+                    $calleAvenida = $calleAvenida.replace(/ /,'%20');
+
                     $altura = data[i].alturaConsultorio;//0540
+                    $altura = $altura.replace(/ /,'%20');
+
                     $codigoPostal = "B1871";//B1871 Analizar si vale la pena incorporar segun el impacto
                     
                     $localidad = data[i].localidadConsultorio;
                     $localidad = $localidad.replace(/ /,'%20');
+                    
                     $provincia = data[i].provinciaConsultorio;//"Provincia%20Buenos%20Aires"
                     $provincia = $provincia.replace(/ /,'%20');
 
