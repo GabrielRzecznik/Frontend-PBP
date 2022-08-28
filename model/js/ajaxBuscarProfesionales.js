@@ -79,8 +79,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     '</div>';
                     //Mostrar Mapa
                     $calleAvenida = data[i].calleConsultorio;
-                    $calleAvenida = $calleAvenida.replace(/calle/,'C.AEM%2C');
-                    $calleAvenida = $calleAvenida.replace(/Calle/,'C.AEM%2C');
+                    $calleAvenida = $calleAvenida.replace(/calle/,'AEM%2C%20C.');
+                    $calleAvenida = $calleAvenida.replace(/Calle/,'AEM%2C%20C.');
                     $calleAvenida = $calleAvenida.replace(/avenida/,'Av.');
                     $calleAvenida = $calleAvenida.replace(/Avenida/,'Av.');
                     $calleAvenida = $calleAvenida.replace(/ /,'%20');
