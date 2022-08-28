@@ -75,3 +75,8 @@
 	margin-top: 1%;
 	margin-bottom: 1%;
   }
+
+  .centrarMensaje{
+	margin-top: 10%;
+	text-align: center;
+  }
