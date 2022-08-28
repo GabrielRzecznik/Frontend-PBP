@@ -28,10 +28,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
     formData.delete('ubicacion');
     $esProf = localStorage.getItem("id_profesional")
     if ($esProf != null) {
-        console.log("dentro");
         formData.append("id_profesional", 0);
     }else{
-        console.log("afuera");
         formData.append("id_profesional", localStorage.getItem("id_profesional"));
     }
     var formJSON=JSON.stringify(Object.fromEntries(formData));
