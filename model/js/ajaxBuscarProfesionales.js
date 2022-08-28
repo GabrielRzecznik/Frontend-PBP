@@ -74,7 +74,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
 
                     //Carta Profesional
                     con.innerHTML = con.innerHTML +
-                    '<div class="col-md-5">' +
+                    '<div class="col-md-6">' +
                         '<div class="card bg-light carta">' +
                             '<div class="row">' +
                                 '<div class="col-6">' +
