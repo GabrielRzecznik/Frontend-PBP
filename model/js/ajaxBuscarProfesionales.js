@@ -43,7 +43,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                 '<div class="col-6">' +
                                     '<div class="card-body">' +
                                                 '<h5>' +
-                                                    '<span id="mostrarNombreProfesional">' + data[i].nombre + '</span>' +
+                                                    '<span id="mostrarNombreProfesional">' + data[i].nombre + ' </span>' +
                                                     '<span id="mostrarApellidoProfesional">' + data[i].apellido + '</span>' +
                                                     '<h6 id="mostrarProfesion col12">' + data[i].especialidad + '</h6>' +
                                                 '</h5>' +		
