@@ -65,7 +65,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     $transformarArray = $transformarArray.replace(/{/,'[');
                     $transformarArray = $transformarArray.replace(/}/,']');
 
-                    $transformarArray.forEach(function(elemento) {
+                    
+                    Array($transformarArray).forEach(function(elemento) {
                         console.log(elemento);
                     })
 
