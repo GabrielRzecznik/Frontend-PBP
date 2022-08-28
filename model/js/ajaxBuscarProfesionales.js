@@ -26,7 +26,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
         }
     }
     formData.delete('ubicacion');
-    $esProf = localStorage.getItem("id_profesional")
+    $esProf = localStorage.getItem("id_profesional");
     if ($esProf != null) {
         formData.append("id_profesional", 0);
     }else{
