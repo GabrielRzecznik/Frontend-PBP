@@ -61,9 +61,9 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     }
 
                     //Mostrar obras sociales
-                    var obrasSociales;
+                    var os =  data[i].obraSocial;
                     
-                    data[i].obraSocial.forEach(element => console.log(element));
+                    os.forEach(element => console.log(element));
 
                     //Carta Profesional
                     con.innerHTML = con.innerHTML +
