@@ -42,8 +42,14 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     //Calcular edad
                     var añoNacimiento = parseInt(String(data[i].fechaNacimiento).substring(0,4));
                     var mesNacimiento = parseInt(String(data[i].fechaNacimiento).substring(5,7));
+                    if(mesNacimiento < 10){
+                        mesNacimiento = "0" + mesNacimiento;
+                    }
                     var diaNacimiento = parseInt(String(data[i].fechaNacimiento).substring(5,7));
-                    
+                    if(diaNacimiento < 10){
+                        diaNacimiento = "0" + diaNacimiento;
+                    }
+
                     console.log(añoNacimiento);
                     console.log(mesNacimiento);
                     console.log(diaNacimiento);
