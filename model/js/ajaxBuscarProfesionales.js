@@ -15,15 +15,17 @@ function buscarProfesionales(formulario, $valorUbicacion){
     }if($valorUbicacion == 0){ 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(verificar);
+            var latitud;
+            var longitud;
             function verificar(geoLocalizacion) {
                 //console.log(geoLocalizacion);
-                var latitud = geoLocalizacion.coords.latitude;
-                var longitud = geoLocalizacion.coords.longitude;
+                latitud = geoLocalizacion.coords.latitude;
+                longitud = geoLocalizacion.coords.longitude;
                 console.log(latitud);
                 console.log(longitud);
-                formData.append("latitud", latitud);
-                formData.append("longitud", longitud);  
             }
+            formData.append("latitud", latitud);
+            formData.append("longitud", longitud);  
         }else{
             alert("No se pudo obtener su ubicación");
         }
