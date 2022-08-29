@@ -6,7 +6,7 @@ function buscarProvincias(){
                 var data=JSON.parse(xmlhttp.responseText);
                 console.log(data);
             }if (xmlhttp.status == 401) {
-                
+                alert("Ocurrio un error inesperado al traer las provincias")
             }
         }
     }
