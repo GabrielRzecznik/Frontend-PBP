@@ -1,19 +1,3 @@
-let latitud;
-let longitud;
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(verificar);
-    function verificar(geoLocalizacion) {
-        //console.log(geoLocalizacion);
-        var latitud = geoLocalizacion.coords.latitude;
-        var longitud = geoLocalizacion.coords.longitude;
-        console.log(latitud);
-        console.log(longitud);
-    }
-}else{
-    alert("No se pudo obtener su ubicación");
-}
-
-
 //Obtener fecha actual
 let date = new Date();
 let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
@@ -28,9 +12,19 @@ function buscarProfesionales(formulario, $valorUbicacion){
     if ($valorUbicacion == 1) {
         formData.append("latitud", localStorage.getItem("latitud"));
         formData.append("longitud", localStorage.getItem("longitud"));    
-    }if($valorUbicacion == 0){
-            formData.append("latitud", latitud);
-            formData.append("longitud", longitud);  
+    }if($valorUbicacion == 0){ 
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(verificar);
+            function verificar(geoLocalizacion) {
+                //console.log(geoLocalizacion);
+                var latitud = geoLocalizacion.coords.latitude;
+                var longitud = geoLocalizacion.coords.longitude;
+                formData.append("latitud", latitud);
+                formData.append("longitud", longitud);  
+            }
+        }else{
+            alert("No se pudo obtener su ubicación");
+        }
     }
     formData.delete('ubicacion');
     $esProf = localStorage.getItem("id_profesional");
