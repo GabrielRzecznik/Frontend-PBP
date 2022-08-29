@@ -23,8 +23,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
         }else{
             alert("No se pudo obtener su ubicación");
         }
-        formData.append("latitud", navigator.geolocation.coords.lat);
-        formData.append("longitud", navigator.geolocation.coords.long);
+        formData.append("latitud", navigator.geolocation.coords.latitude);
+        formData.append("longitud", navigator.geolocation.coords.longitude);
     }
     formData.delete('ubicacion');
     $esProf = localStorage.getItem("id_profesional");
