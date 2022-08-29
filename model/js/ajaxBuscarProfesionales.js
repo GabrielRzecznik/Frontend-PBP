@@ -28,6 +28,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     lat: latitude,
                     long: longitude
                 };
+                var formData= new FormData(formulario);
                 formData.append("latitud", coords.lat);
                 formData.append("longitud", coords.long);
             });
