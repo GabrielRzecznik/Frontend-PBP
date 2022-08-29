@@ -12,7 +12,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
     if ($valorUbicacion == 1) {
         formData.append("latitud", localStorage.getItem("latitud"));
         formData.append("longitud", localStorage.getItem("longitud"));    
-    }if($valorUbicacion == 0){ 
+    }else($valorUbicacion == 0){ 
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(verificar);
             function verificar(geoLocalizacion) {
