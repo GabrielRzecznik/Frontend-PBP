@@ -70,24 +70,33 @@ body{
 	height: 15px;
 	font-size: 10px;
 	margin: 0 auto;
-  }
+}
   
-  .tituloCargando{
+.tituloCargando{
 	text-align: center;
 	display: block;
-  }
+}
   
-  .margenSO{
+.margenSO{
 	margin-right: 3px;
-  }
+}
 
-  .margenCarta{
+.margenCarta{
 	margin-top: 1%;
 	margin-bottom: 1%;
-  }
+}
 
-  .centrarMensaje{
+.centrarMensaje{
 	margin-top: 10%;
 	margin-bottom: 10%;
 	text-align: center;
-  }
+}
+
+.alto{
+	height: min-content;
+}
+
+.botonBuscar{
+	width: 100%;
+	height: 42px;
+}
