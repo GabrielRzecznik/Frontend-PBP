@@ -20,6 +20,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 longitud = geoLocalizacion.coords.longitude;
                 formData.append("latitud", latitud);
                 formData.append("longitud", longitud);
+                console.log(formData);
             }
         }else{
             alert("No se pudo obtener su ubicación");
