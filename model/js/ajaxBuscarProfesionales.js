@@ -14,8 +14,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
         formData.append("longitud", localStorage.getItem("longitud"));    
     }if($valorUbicacion == 0){ 
         if (navigator.geolocation) {
-            let latitud;
-            let longitud;
+            let latitud = geoLocalizacion.coords.latitude;
+            let longitud = geoLocalizacion.coords.longitude;
             navigator.geolocation.getCurrentPosition(geo);
             function geo(geoLocalizacion) {
                 latitud = geoLocalizacion.coords.latitude;
