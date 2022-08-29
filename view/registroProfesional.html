@@ -141,10 +141,12 @@
                             <span class="texto">Provincia consultorio </span><i class="bi bi-exclamation-circle-fill noValidado" id="iconoProvinciaConsultorio" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
 
-                            <section id="con"></section>
+                            <!--Campo Especialidad-->
+                            <select class="form-select campos" name="provinciaConsultorio" id="provinciaConsultorio" aria-label="Floating label select example" disabled>
+                                
+                            </select>
 
-
-                            <input type="text" class="form-control inputs" name="provinciaConsultorio" id="provinciaConsultorio" disabled>
+                            <!--<input type="text" class="form-control inputs" name="provinciaConsultorio" id="provinciaConsultorio" disabled>-->
                             <br>
                             <!--Campo Localidad-->
                             <span class="texto">Localidad consultorio </span><i class="bi bi-exclamation-circle-fill noValidado" id="iconoLocalidadConsultorio" title="Campo Obligatorio"></i><!--Campo obligatorio-->
@@ -232,6 +234,7 @@
         ¡El departamento ingresada no es valida!
     </div>
     <script src="../model/js/ajaxBuscarProvincias.js"></script>
+    <script src="../model/js/ajaxBuscarLocalidades.js"></script>
     <script src="../controller/js/registroProfesional.js"></script>
     <script src="../model/js/ajaxRegistroProfesional.js"></script>
 </body>
