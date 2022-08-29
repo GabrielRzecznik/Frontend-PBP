@@ -10,6 +10,6 @@ function buscarProvincias(){
             }
         }
     }
-    xmlhttp.open("POST",'https://apis.datos.gob.ar/georef/api/provincias',true);
+    xmlhttp.open("GET",'https://apis.datos.gob.ar/georef/api/provincias',true);
     xmlhttp.send();
 }
