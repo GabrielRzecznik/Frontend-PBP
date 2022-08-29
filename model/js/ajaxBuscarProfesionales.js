@@ -18,7 +18,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
             var latitud;
             var longitud;
             function verificar(geoLocalizacion) {
-                //console.log(geoLocalizacion);
                 latitud = geoLocalizacion.coords.latitude;
                 longitud = geoLocalizacion.coords.longitude;
                 console.log(latitud);
