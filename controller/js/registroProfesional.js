@@ -477,7 +477,8 @@ document.addEventListener('DOMContentLoaded', APP.init);
 //#endregion
 
 //#region Select Provincia
-buscarProvincias();
+//buscarProvincias();
+//buscarLocalidades();
 //#endregion
 
 

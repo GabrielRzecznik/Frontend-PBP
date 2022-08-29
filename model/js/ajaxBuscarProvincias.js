@@ -1,4 +1,4 @@
-let prov = document.getElementById('prov');
+let con = document.getElementById('con');
 
 function buscarProvincias(){
     xmlhttp = new XMLHttpRequest();
@@ -8,10 +8,19 @@ function buscarProvincias(){
                 var data=JSON.parse(xmlhttp.responseText);
                 console.log(data["provincias"][0]["nombre"]);
                 console.log(data["provincias"].length);
-                prov.innerHTML = "";
-                for (var i = 0; i < data["provincias"].length; i++) {
-                    prov.innerHTML += '<option value="'+ data["provincias"][i]["nombre"]+'">'+data["provincias"][i]["nombre"]+'</option>';
+                function opciones() {
+                    $provinciasArgentinas = [];
+                    for (var i = 0; i < data["provincias"].length; i++) {
+                        $provinciasArgentinas.push(data["provincias"][i]["nombre"]);
+                    }
+                    $provinciasArgentinas.sort();
+                    for (var i = 0; i < data["provincias"].length; i++) {
+                        con.innerHTML += '<option value="'+ $provinciasArgentinas[i] +'">'+ $provinciasArgentinas[i] +'</option>';
+                    }
+                    return con.innerHTML
                 }
+                con.innerHTML = '<select class="form-select campos" name="provinciaConsultorio" id="provinciaConsultorio" aria-label="Floating label select example">'+//disabled
+                    opciones() + '</select>';
             }if (xmlhttp.status == 401) {
                 alert("Ocurrio un error inesperado al traer las provincias")
             }
