@@ -30,8 +30,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 };
                 var latitud = coords.lat;
                 var longitud = coords.long;
-                $cordenadas[latitud, longitud];
-                return cordenadas;
             });
         }else{
             alert("No se pudo obtener su ubicación");
