@@ -9,6 +9,7 @@ function buscarProvincias(){
                 console.log(data["provincias"].length);
                 let prov = document.getElementById('prov');
                 for (var i = 0; i < data["provincias"].length; i++) {
+                    prov.innerHTML = "";
                     prov.innerHTML += '<option value="'+ data["provincias"][i]["nombre"]+'">'+data["provincias"][i]["nombre"]+'</option>';
                 }
             }if (xmlhttp.status == 401) {
