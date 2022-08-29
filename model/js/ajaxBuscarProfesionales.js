@@ -1,3 +1,5 @@
+let latitud;
+let longitud;
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(verificar);
     function verificar(geoLocalizacion) {
