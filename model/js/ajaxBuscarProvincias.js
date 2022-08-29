@@ -1,5 +1,4 @@
 
-
 function buscarProvincias(){
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
