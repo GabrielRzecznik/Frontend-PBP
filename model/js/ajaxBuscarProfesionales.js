@@ -9,6 +9,15 @@ let con = document.getElementById('con');
 
 function buscarProfesionales(formulario, $valorUbicacion){
     var formData= new FormData(formulario);
+    formData.delete('ubicacion');
+    //¿Es profesional?
+    $esProf = localStorage.getItem("id_profesional");
+    if ($esProf != null) {
+        formData.append("id_profesional", 0);
+    }else{
+        formData.append("id_profesional", localStorage.getItem("id_profesional"));
+    }
+    //Según ubicación
     if ($valorUbicacion == 1) {
         formData.append("latitud", localStorage.getItem("latitud"));
         formData.append("longitud", localStorage.getItem("longitud"));    
@@ -19,19 +28,12 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     lat: latitude,
                     long: longitude
                 };
+                formData.append("latitud", coords.lat);
+                formData.append("longitud", coords.long);
             });
         }else{
             alert("No se pudo obtener su ubicación");
         }
-        formData.append("latitud", navigator.geolocation.coords.latitude);
-        formData.append("longitud", navigator.geolocation.coords.longitude);
-    }
-    formData.delete('ubicacion');
-    $esProf = localStorage.getItem("id_profesional");
-    if ($esProf != null) {
-        formData.append("id_profesional", 0);
-    }else{
-        formData.append("id_profesional", localStorage.getItem("id_profesional"));
     }
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
