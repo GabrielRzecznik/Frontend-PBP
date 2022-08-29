@@ -9,10 +9,10 @@ let con = document.getElementById('con');
 
 function buscarProfesionales(formulario, $valorUbicacion){
     var formData= new FormData(formulario);
-    if ($valorUbicacion == 0) {
+    if ($valorUbicacion == 1) {
         formData.append("latitud", localStorage.getItem("latitud"));
         formData.append("longitud", localStorage.getItem("longitud"));    
-    }else{
+    }if($valorUbicacion == 0){
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(success);
 
