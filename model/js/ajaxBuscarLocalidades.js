@@ -1,6 +1,6 @@
-let con = document.getElementById('provinciaConsultorio');
+let con = document.getElementById('localidadConsultorio');
 
-function buscarProvincias(){
+function buscarLocalidades(){
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
@@ -10,7 +10,7 @@ function buscarProvincias(){
                 console.log(data["provincias"][0]["nombre"]);
                 console.log(data["provincias"].length);
                 
-                $provinciasArgentinas = [];
+                /*$localidadesArgentinas = [];
                 for (var i = 0; i < data["provincias"].length; i++) {
                     $provinciasArgentinas.push(data["provincias"][i]["nombre"]);
                 }
@@ -19,12 +19,12 @@ function buscarProvincias(){
                     con.innerHTML += '<option value="'+ $provinciasArgentinas[i] +'">'+ $provinciasArgentinas[i] +'</option>';
                 }
                       
-                con.innerHTML += '</select>';
+                con.innerHTML += '</select>';*/
             }if (xmlhttp.status == 401) {
                 alert("Ocurrio un error inesperado al traer las provincias")
             }
         }
     }
-    xmlhttp.open("GET",'https://apis.datos.gob.ar/georef/api/provincias',true);
+    xmlhttp.open("GET",'https://infra.datos.gob.ar/catalog/modernizacion/dataset/7/distribution/7.5/download/localidades.json',true);
     xmlhttp.send();
 }
