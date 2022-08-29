@@ -13,19 +13,16 @@ function buscarProfesionales(formulario, $valorUbicacion){
         formData.append("latitud", localStorage.getItem("latitud"));
         formData.append("longitud", localStorage.getItem("longitud"));    
     }if($valorUbicacion == 0){ 
+        //Obtener ubicación
         if (navigator.geolocation) {
-            let latitud = geoLocalizacion.coords.latitude;
-            let longitud = geoLocalizacion.coords.longitude;
-            navigator.geolocation.getCurrentPosition(geo);
-            function geo(geoLocalizacion) {
-                latitud = geoLocalizacion.coords.latitude;
-                longitud = geoLocalizacion.coords.longitude;
-            }
+            navigator.geolocation.getCurrentPosition(showPosition);
+            latitud = geoLocalizacion.coords.latitude;
+            longitud = geoLocalizacion.coords.longitude;
             formData.append("latitud", latitud);
             formData.append("longitud", longitud);
-        }else{
-            alert("No se pudo obtener su ubicación");
-        }
+          } else {
+            alert("No se pudo obtener la ubicación actual");
+          }
     }
     formData.delete('ubicacion');
     $esProf = localStorage.getItem("id_profesional");
