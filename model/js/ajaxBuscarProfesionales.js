@@ -22,18 +22,22 @@ function buscarProfesionales(formulario, $valorUbicacion){
         formData.append("latitud", localStorage.getItem("latitud"));
         formData.append("longitud", localStorage.getItem("longitud"));    
     }if($valorUbicacion == 0){
+        let latitud;
+        let longitud;
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}})=>{
                 const coords = {
                     lat: latitude,
                     long: longitude
                 };
-                formData.append("latitud", coords.lat);
-                formData.append("longitud", coords.long);
+                latitud = coords.lat;
+                longitud = coords.long;
             });
         }else{
             alert("No se pudo obtener su ubicación");
         }
+        formData.append("latitud", latitud);
+        formData.append("longitud", longitud);
     }
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
