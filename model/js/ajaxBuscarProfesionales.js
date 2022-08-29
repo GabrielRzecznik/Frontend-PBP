@@ -32,7 +32,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
             $lon = longitud
             formData.append("latitud", $lat);
             formData.append("longitud", $lon);  
-        }
     }
     formData.delete('ubicacion');
     $esProf = localStorage.getItem("id_profesional");
