@@ -1,3 +1,17 @@
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(verificar);
+    function verificar(geoLocalizacion) {
+        //console.log(geoLocalizacion);
+        var latitud = geoLocalizacion.coords.latitude;
+        var longitud = geoLocalizacion.coords.longitude;
+        console.log(latitud);
+        console.log(longitud);
+    }
+}else{
+    alert("No se pudo obtener su ubicación");
+}
+
+
 //Obtener fecha actual
 let date = new Date();
 let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
@@ -14,12 +28,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
         formData.append("longitud", localStorage.getItem("longitud"));    
     }if($valorUbicacion == 0){
         alert("hola");
-        navigator.geolocation.getCurrentPosition(success);
-
-        function success(geolocationPosition) {
-            $coords = geolocationPosition.coords;
-            $lat = $coords.latitude;
-            $lon = $coords.longitude;
+            $lat = latitud
+            $lon = longitud
             formData.append("latitud", $lat);
             formData.append("longitud", $lon);  
         }
