@@ -40,8 +40,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
         } 
     }
     
-    console.log(formJSON);
-    
     function realizarBusqueda(formJSON) {
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
