@@ -479,9 +479,7 @@ document.addEventListener('DOMContentLoaded', APP.init);
 //#region Select Provincia
 const provinciaConsultorioSelect = document.getElementById('provinciaConsultorio');
 
-function provincia() {
-    
-}
+buscarProvincias();
 //#endregion
 
 
