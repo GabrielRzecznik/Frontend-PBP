@@ -28,14 +28,13 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     lat: latitude,
                     long: longitude
                 };
-                var latitud = coords.lat;
-                var longitud = coords.long;
+                formData.append("latitud", coords.lat);
+                formData.append("longitud", coords.long);
             });
         }else{
             alert("No se pudo obtener su ubicación");
         }
-        formData.append("latitud", latitud);
-        formData.append("longitud", longitud);
+        
     }
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
