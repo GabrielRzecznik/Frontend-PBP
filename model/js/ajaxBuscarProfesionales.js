@@ -33,7 +33,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
         formData.append("id_profesional", localStorage.getItem("id_profesional"));
     }
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-
+    console.log(formJSON);
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
