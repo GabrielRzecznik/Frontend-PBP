@@ -19,12 +19,12 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     lat: latitude,
                     long: longitude
                 };
-                formData.append("latitud", coords.lat);
-                formData.append("longitud", coords.long);
             });
         }else{
             alert("No se pudo obtener su ubicación");
         }
+        formData.append("latitud", coords.lat);
+        formData.append("longitud", coords.long);
     }
     formData.delete('ubicacion');
     $esProf = localStorage.getItem("id_profesional");
