@@ -363,7 +363,6 @@ const inputDepartamentoConsultorio = document.getElementById('departamentoConsul
 
 document.getElementById("consultorio").addEventListener("click", function() {
     if (checkConsultorio.checked == true) {
-        buscarProvincias();
         //Activar Inputs
         inputProvinciaConsultorio.disabled = false;
         inputLocalidadConsultorio.disabled = false;
@@ -487,7 +486,7 @@ document.addEventListener('DOMContentLoaded', APP.init);
 //#endregion
 
 //#region Select Provincia
-
+buscarProvincias();
 //buscarLocalidades();
 //#endregion
 
