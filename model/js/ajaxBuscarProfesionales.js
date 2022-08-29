@@ -12,15 +12,16 @@ function buscarProfesionales(formulario, $valorUbicacion){
     if ($valorUbicacion == 1) {
         formData.append("latitud", localStorage.getItem("latitud"));
         formData.append("longitud", localStorage.getItem("longitud"));    
-    }if($valorUbicacion == 0){ 
+    }if($valorUbicacion == 0){
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(geo);
-            function geo(geoLocalizacion) {
-                latitud = geoLocalizacion.coords.latitude;
-                longitud = geoLocalizacion.coords.longitude;
-            }
-            formData.append("latitud", latitud);
-            formData.append("longitud", longitud);
+            navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}})=>{
+                const coords = {
+                    lat: latitude,
+                    long: longitude
+                };
+                formData.append("latitud", coords.lat);
+                formData.append("longitud", coords.long);
+            });
         }else{
             alert("No se pudo obtener su ubicación");
         }
