@@ -3,7 +3,8 @@ function buscarProvincias(){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                
+                var data=JSON.parse(xmlhttp.responseText);
+                console.log(data);
             }if (xmlhttp.status == 401) {
                 
             }
