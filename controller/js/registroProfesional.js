@@ -471,7 +471,17 @@ const APP = {
       //Enviar Ajax
       registrarProfesional(formulario, $tiposConsultas, $ObrasSocialesIngresadas, APP.data['lat'], APP.data['lon']);
     },
-  };
+};
   
-  document.addEventListener('DOMContentLoaded', APP.init);
-  //#endregion
+document.addEventListener('DOMContentLoaded', APP.init);
+//#endregion
+
+//#region Select Provincia
+const provinciaConsultorioSelect = document.getElementById('provinciaConsultorio');
+
+function provincia() {
+    
+}
+//#endregion
+
+
