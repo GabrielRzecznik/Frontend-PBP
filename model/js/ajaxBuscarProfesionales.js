@@ -41,7 +41,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 var data = JSON.parse(xmlhttp.responseText);
                 con.innerHTML = "";
 
-                console.log(data)
                 if (data == "") {
                     con.innerHTML = '<i class="bi bi-file-earmark-medical centrarMensaje"> No se encontraron profesionales por su zona.</i>';
                 }
