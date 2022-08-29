@@ -2,6 +2,8 @@
 window.addEventListener('load',load);
 
 function load(){
+    inputProvinciaConsultorio.value = "";
+    inputLocalidadConsultorio.value = "";
     //Agregar obra social
 }
 //#endregion
