@@ -1,3 +1,4 @@
+let prov = document.getElementById('prov');
 
 function buscarProvincias(){
     xmlhttp = new XMLHttpRequest();
@@ -7,7 +8,6 @@ function buscarProvincias(){
                 var data=JSON.parse(xmlhttp.responseText);
                 console.log(data["provincias"][0]["nombre"]);
                 console.log(data["provincias"].length);
-                let prov = document.getElementById('prov');
                 prov.innerHTML = "";
                 for (var i = 0; i < data["provincias"].length; i++) {
                     prov.innerHTML += '<option value="'+ data["provincias"][i]["nombre"]+'">'+data["provincias"][i]["nombre"]+'</option>';
