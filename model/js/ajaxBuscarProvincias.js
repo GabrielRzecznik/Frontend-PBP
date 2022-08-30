@@ -7,8 +7,6 @@ function buscarProvincias(){
             if (xmlhttp.status == 200) {
                 //provCon.innerHTML = '<option value="0"></option>';
                 var data=JSON.parse(xmlhttp.responseText);
-                console.log(data["provincias"][0]["nombre"]);
-                console.log(data["provincias"].length);
                 
                 $provinciasArgentinas = [];
                 for (var i = 0; i < data["provincias"].length; i++) {
