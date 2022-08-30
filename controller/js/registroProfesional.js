@@ -408,11 +408,11 @@ document.getElementById("consultorio").addEventListener("click", function() {
         document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
         document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
         //Limpiar Iconos
-        document.getElementById('iconoProvinciaConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill');
-        document.getElementById('iconoLocalidadConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill');
-        document.getElementById('iconoCalleConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill');
-        document.getElementById('iconoAlturaConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill');
-        document.getElementById('iconoDepartamentoConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill');
+        document.getElementById('iconoProvinciaConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill','bi-exclamation-circle-fill');
+        document.getElementById('iconoLocalidadConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill','bi-exclamation-circle-fill');
+        document.getElementById('iconoCalleConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill','bi-exclamation-circle-fill');
+        document.getElementById('iconoAlturaConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill','bi-exclamation-circle-fill');
+        document.getElementById('iconoDepartamentoConsultorio').classList.remove('signo','mostrar','validado','bi-check-circle-fill','bi-x-circle-fill','bi-exclamation-circle-fill');
     }
 });
 
