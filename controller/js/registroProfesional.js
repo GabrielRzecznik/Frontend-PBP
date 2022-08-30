@@ -1,3 +1,5 @@
+const selectE = document.getElementById("especialidad");
+selectE.value = "";
 //#region Metodo Load
 window.addEventListener('load',load);
 
@@ -253,10 +255,10 @@ document.getElementById("provinciaConsultorio").addEventListener('change', (even
     }
 });
 
-if (especialidad.value == 0) {
-    document.getElementById('iconoEspecialidad').classList.add('mostrar');//Agregar
-    document.getElementById('iconoEspecialidad').classList.remove('bi-check-circle-fill');//Borrar
-    campos['especialidad'] = false;
+if (provinciaConsultorio.value == 0) {
+    document.getElementById('iconoProvinciaConsultorio').classList.add('mostrar');//Agregar
+    document.getElementById('iconoProvinciaConsultorio').classList.remove('bi-check-circle-fill');//Borrar
+    campos['provinciaConsultorio'] = false;
 }
 //#endregion
 

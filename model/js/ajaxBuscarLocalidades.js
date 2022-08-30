@@ -7,8 +7,7 @@ function buscarLocalidades(){
             if (xmlhttp.status == 200) {
                 con.innerHTML = '<option value="0"></option>';
                 var data=JSON.parse(xmlhttp.responseText);
-                console.log(data["provincias"][0]["nombre"]);
-                console.log(data["provincias"].length);
+                console.log(data.length);
                 
                 /*$localidadesArgentinas = [];
                 for (var i = 0; i < data["provincias"].length; i++) {
@@ -21,7 +20,7 @@ function buscarLocalidades(){
                       
                 con.innerHTML += '</select>';*/
             }if (xmlhttp.status == 401) {
-                alert("Ocurrio un error inesperado al traer las provincias")
+                alert("Ocurrio un error inesperado al traer las localidades.")
             }
         }
     }
