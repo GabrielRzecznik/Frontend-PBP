@@ -231,8 +231,8 @@ if (especialidad.value == 0) {
 //#region Select Provincia
 document.getElementById("provinciaConsultorio").addEventListener('change', (event) => {
     if (event.target.value != 0) {
-        document.getElementById('iconoProvinciaConsultorio').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill', 'true');
-        document.getElementById('iconoProvinciaConsultorio').classList.add('validado','bi-check-circle-fill');
+        document.getElementById('iconoProvinciaConsultorio').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
+        document.getElementById('iconoProvinciaConsultorio').classList.add('validado','bi-check-circle-fill', 'true');
         //Mensaje de error
         document.getElementById('alertProvinciaConsultorio').classList.remove('alertaError');
         //Validar
