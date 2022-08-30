@@ -239,9 +239,9 @@ document.getElementById("provinciaConsultorio").addEventListener('change', (even
         document.getElementById('iconoProvinciaConsultorio').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
         document.getElementById('iconoProvinciaConsultorio').classList.add('noValidado','bi-x-circle-fill');
         //Mensaje de error
-        document.getElementById('alertProvinciaConsultorio').classList.remove('alertaError');
+        document.getElementById('alertProvinciaConsultorio').classList.add('alertaError');
         //Limpiar mensaje
-        document.getElementById('alertEspecialidad').classList.add('alertaError');
+        document.getElementById('alertEspecialidad').classList.remove('alertaError');
         document.getElementById('alertMatricula').classList.remove('alertaError');
         document.getElementById('alertObraSocial').classList.remove('alertaError');
         document.getElementById('alertTipoConsulta').classList.remove('alertaError');
