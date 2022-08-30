@@ -1,5 +1,3 @@
-const selectE = document.getElementById("especialidad");
-selectE.value = "";
 //#region Metodo Load
 window.addEventListener('load',load);
 
