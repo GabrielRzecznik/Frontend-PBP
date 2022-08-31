@@ -386,7 +386,7 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    if (nombreValue === "" || apellidoValue === "" || fechaNacimiento === false || sexoValue === "0" || telefonoValue === "" || provinciaValue === "" || localidadValue === "" || calleValue === "" || alturaValue === "") {
+    if (nombreValue === "" || apellidoValue === "" || fechaNacimiento === false || sexoValue === "0" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
         alert("¡Debe completar todos los campos obligatorios!");
     }
     
