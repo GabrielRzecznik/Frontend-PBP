@@ -364,7 +364,7 @@ const inputDepartamentoConsultorio = document.getElementById('departamentoConsul
 document.getElementById("consultorio").addEventListener("click", function() {
     if (checkConsultorio.checked == true) {
         let pc = document.getElementById('provinciaConsultorio');
-        pc = '<option value="0">Seleccione su provincia</option>';
+        pc.innerHTML = '<option value="0" selected>Seleccione su provincia</option>';
         //Activar Inputs
         inputProvinciaConsultorio.disabled = false;
         inputLocalidadConsultorio.disabled = false;
