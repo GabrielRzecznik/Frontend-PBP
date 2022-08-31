@@ -31,6 +31,7 @@ function buscarProvincias(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 let provCon = document.getElementById('provincia');
+                provCon.innerHTML += '<option value="0">Seleccione su provincia</option>';
                 //provCon.innerHTML = '<option value="0"></option>';
                 var data=JSON.parse(xmlhttp.responseText);
                 $provinciasArgentinas = [];
