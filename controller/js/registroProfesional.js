@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', APP.init);
 //#endregion
 
 //#region Select Provincia
-buscarProvincias();
+buscarProvinciasConsultorio();
 //buscarLocalidades();
 //#endregion
 
