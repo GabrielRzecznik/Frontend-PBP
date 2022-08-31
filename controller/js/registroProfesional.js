@@ -434,7 +434,7 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
 
-    if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
+    if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "0" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
         alert("¡Debe completar todos los campos obligatorios!");
     }
     
