@@ -341,14 +341,16 @@ document.getElementById("provincia").addEventListener('change', (event) => {
         //Mensaje de error
         document.getElementById('alertProvincia').classList.add('alertaError');
         //Limpiar mensaje
-        document.getElementById('alertEspecialidad').classList.remove('alertaError');
-        document.getElementById('alertMatricula').classList.remove('alertaError');
-        document.getElementById('alertObraSocial').classList.remove('alertaError');
-        document.getElementById('alertTipoConsulta').classList.remove('alertaError');
-        document.getElementById('alertLocalidadConsultorio').classList.remove('alertaError');
-        document.getElementById('alertCalleConsultorio').classList.remove('alertaError');
-        document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
-        document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
+        document.getElementById('alertNombre').classList.remove('alertaError');
+        document.getElementById('alertApellido').classList.remove('alertaError');
+        document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
+        document.getElementById('alertSexo').classList.remove('alertaError');
+        //document.getElementById('alertFoto').classList.remove('alertaError');
+        document.getElementById('alertTelefono').classList.remove('alertaError');
+        document.getElementById('alertLocalidad').classList.remove('alertaError');
+        document.getElementById('alertCalle').classList.remove('alertaError');
+        document.getElementById('alertAltura').classList.remove('alertaError');
+        document.getElementById('alertDepartamento').classList.remove('alertaError');
         campos['provincia'] = false;
     }
 });
