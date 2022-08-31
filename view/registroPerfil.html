@@ -63,9 +63,9 @@
                         </div>
                         <div class="col-md-6">
                             <!--Campo Provincia-->
-                            <span class="texto">Provincia </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoProvincia" title="Campo Obligatorio"></i>
+                            <span class="texto">Provincia </span><i class="bi noValidado" id="iconoProvincia" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
-                            <input type="text" class="form-control inputs" name="provincia" id="provincia">
+                            <select class="form-select campos" name="provincia" id="provincia" aria-label="Floating label select example" disabled></select>
                             <br>
                             <!--Campo Localidad-->
                             <span class="texto">Localidad </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoLocalidad" title="Campo Obligatorio"></i>
@@ -160,7 +160,8 @@
         <i class="bi bi-info-circle-fill"></i>
         <strong>Departamento: </strong>
         ¡El departamento ingresado no es valido!
-    </div> 
+    </div>
+    <script src="../model/js/ajaxBuscarProvincias.js"></script>
     <script src="../controller/js/registroPaciente.js"></script>
     <script src="../model/js/ajaxRegistroPaciente.js"></script>
 </body>

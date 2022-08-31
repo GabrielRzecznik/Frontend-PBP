@@ -27,7 +27,6 @@ const expresiones = {
     nombre: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,30}$/,
     apellido: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,30}$/,
     telefono: /^[0-9]\S{5,15}$/,
-    provincia: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     localidad: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     calle: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü 0-9\s]{2,35}$/,
     altura: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{1,6}$/,
@@ -126,32 +125,6 @@ const validarFormulario = (e) => {
                 document.getElementById('alertAltura').classList.remove('alertaError');
                 document.getElementById('alertDepartamento').classList.remove('alertaError');
                 campos['telefono'] = false;
-            }
-            break;
-        case 'provincia':
-            if (expresiones.provincia.test(e.target.value)) {
-                document.getElementById('iconoProvincia').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoProvincia').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertProvincia').classList.remove('alertaError');
-                //Validar campo
-                campos['provincia'] = true;
-            }else{
-                document.getElementById('iconoProvincia').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoProvincia').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Limpiar mensaje
-                document.getElementById('alertNombre').classList.remove('alertaError');
-                document.getElementById('alertApellido').classList.remove('alertaError');
-                document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-                document.getElementById('alertSexo').classList.remove('alertaError');
-                //document.getElementById('alertFoto').classList.remove('alertaError');
-                document.getElementById('alertTelefono').classList.remove('alertaError');
-                document.getElementById('alertProvincia').classList.add('alertaError');
-                document.getElementById('alertLocalidad').classList.remove('alertaError');
-                document.getElementById('alertCalle').classList.remove('alertaError');
-                document.getElementById('alertAltura').classList.remove('alertaError');
-                document.getElementById('alertDepartamento').classList.remove('alertaError');
-                campos['provincia'] = false;
             }
             break;
         case 'localidad':
@@ -353,6 +326,40 @@ document.getElementById("fechaNacimiento").addEventListener('change', (event) =>
     }
 });
 
+//#region Select Provincia
+document.getElementById("provincia").addEventListener('change', (event) => {
+    if (event.target.value != 0) {
+        document.getElementById('iconoProvincia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
+        document.getElementById('iconoProvincia').classList.add('validado','bi-check-circle-fill', 'mostrar');
+        //Mensaje de error
+        document.getElementById('alertProvincia').classList.remove('alertaError');
+        //Validar
+        campos['provincia'] = true;
+    }else{
+        document.getElementById('iconoProvincia').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
+        document.getElementById('iconoProvincia').classList.add('noValidado','bi-x-circle-fill');
+        //Mensaje de error
+        document.getElementById('alertProvincia').classList.add('alertaError');
+        //Limpiar mensaje
+        document.getElementById('alertEspecialidad').classList.remove('alertaError');
+        document.getElementById('alertMatricula').classList.remove('alertaError');
+        document.getElementById('alertObraSocial').classList.remove('alertaError');
+        document.getElementById('alertTipoConsulta').classList.remove('alertaError');
+        document.getElementById('alertLocalidadConsultorio').classList.remove('alertaError');
+        document.getElementById('alertCalleConsultorio').classList.remove('alertaError');
+        document.getElementById('alertAlturaConsultorio').classList.remove('alertaError');
+        document.getElementById('alertDepartamentoConsultorio').classList.remove('alertaError');
+        campos['provincia'] = false;
+    }
+});
+
+if (provincia.value == 0) {
+    document.getElementById('iconoProvincia').classList.add('mostrar');//Agregar
+    document.getElementById('iconoProvincia').classList.remove('bi-check-circle-fill');//Borrar
+    campos['provincia'] = false;
+}
+//#endregion
+
 inputs.forEach((input) => {
     input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
     input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
@@ -429,3 +436,5 @@ const APP = {
   
   document.addEventListener('DOMContentLoaded', APP.init);
   //#endregion
+
+  buscarProvincias();
