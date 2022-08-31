@@ -16,7 +16,6 @@ function buscarProvinciasConsultorio(){
                     provCon.innerHTML += '<option value="'+ $provinciasArgentinas[i] +'">'+ $provinciasArgentinas[i] +'</option>';
                 }
                 const selectPC = document.getElementById('provinciaConsultorio');
-                selectPC.value = "";
             }if (xmlhttp.status == 401) {
                 alert("Ocurrio un error inesperado al traer las provincias")
             }
