@@ -4,7 +4,7 @@ function buscarProvinciasConsultorio(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 let provCon = document.getElementById('provinciaConsultorio');
-                provCon.innerHTML = '<option value="0" selected>Seleccione su provincia</option>';
+                provCon.innerHTML = '<option value="0" select>Seleccione su provincia</option>';
                 //provCon.innerHTML = '<option value="0"></option>';
                 var data=JSON.parse(xmlhttp.responseText);
                 $provinciasArgentinas = [];
