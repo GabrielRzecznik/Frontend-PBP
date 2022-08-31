@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Icono Página-->
+    <link rel="icon" href="./img/icono.png">
+	<!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--Css-->
+    <link rel="stylesheet" href="../view/css/inicioBusqueda.css">
+	<link rel="stylesheet" href="../view/css/navegador.css">
+    <!--<link rel="icon" href="./favicon.ico">-->
+    <title>Inicio - Profesional By Proximity</title>
+</head>
+<body class="mostrar" id="mostrar">
+	<!--Encabezado - Nav-->
+	<header class="py-3 mb-3 border-bottom bg-light"><!--bg-light se utiliza para cambiarle el color!-->
+		<div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
+			<div class="dropdown">
+				<a class="navbar-brand" href="#">PBP</a>
+			</div>
+			<div class="d-flex align-items-center">
+				<span class="w-100 me-3 derecha">
+					<ul class="ulNav">
+						<li class="liNav">
+							<a class="nav-link noSeleccionado" href="https://frontend-pbp.herokuapp.com/view/notificaciones.html"><i class="bi bi-bell-fill"></i></a><!--Icono Notificaciones-->
+						</li>
+						<li class="liNav">
+							<a class="nav-link noSeleccionado" href="https://frontend-pbp.herokuapp.com/view/chats.html"><i class="bi bi-chat-square-text-fill"></i></a><!--Icono Chat-->
+						</li>
+						<li class="liNav">
+							<a class="nav-link seleccionado" aria-current="page" href="#"><i class="bi bi-house-fill"></i></a><!--Icono Inicio-->
+						</li>
+					</ul>
+				</span>
+				<div class="flex-shrink-0 dropdown">
+
+					<a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="bi bi-person-circle fotoPerfil"></i>
+						<span id="usuario"></span>
+					</a>
+					
+					<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+						<li><a class="dropdown-item" href="https://frontend-pbp.herokuapp.com/view/perfil.html">Perfil</a></li>
+						<li><a class="dropdown-item" href="https://frontend-pbp.herokuapp.com/view/grilla.html">Mi Grilla</a></li>
+						<li><a class="dropdown-item" href="#" id="conf">Configuración</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#" onclick="cerrarSesion()">Cerrar Sesion</a></li>
+					</ul>
+				</div>
+		  	</div>
+		</div>
+	</header>
+
+
+	
+
+	<!--Modal - Configuración-->
+	<div class="modal fade" id="configuracion-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Configuración <i class="bi bi-gear-fill"></i></h5>
+					<button id="cerrar" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+				</div>
+				<div class="modal-body">
+					<div class="accordion accordion-flush" id="accordionFlushExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingOne">
+							<button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+								Configuración cuenta usuario
+							</button>
+						  </h2>
+						  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								<p>
+									<button class="btn bg-light opcionConfiguracion" data-bs-toggle="collapse" href="#desUsu" role="button" aria-expanded="false" aria-controls="collapseExample">
+										Deshabilitar cuenta usuario <i class="bi bi-person-x-fill derecha"></i>
+									</button>
+								</p>
+								<div class="collapse" id="desUsu">
+									<div class="card card-body">
+										<b>¿Esta seguro que desea deshabilitar su cuenta usuario? </b>
+										<br>
+										Si deshabilitas tu cuenta usuario ya no podrás acceder a ella, tampoco perfil será visible por otros usuarios.<br>
+										Podrás restablecer tu cuenta usuario en cualquier momento desde la opción "Restablecer" en el inicio de sesión.<br>
+										<br>
+										<button class="btn btn-danger" id="deshabilitarUsuario">Deshabilitar cuenta</button>
+									</div>
+									<br>
+								</div>
+								<p>
+									<button class="btn bg-light opcionConfiguracion" data-bs-toggle="collapse" href="#ediUsu" role="button" aria-expanded="false" aria-controls="collapseExample">
+										Editar cuenta usuario <span class="badge rounded-pill bg-success">Proximamente...</span><i class="bi bi-person-lines-fill derecha"></i>
+									</button>
+								</p>
+								<div class="collapse" id="ediUsu">
+									<div class="card card-body">
+										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarUsuario">
+											<span class="texto">Cambiar Nombre de Usuario </span><i class="bi bi-x-circle-fill iconos validado" id="iconoNombreUsuario"></i>
+											<br>
+											<input type="text" class="form-control inputs" name="nombreUsuario" id="nombreUsuario">
+											<br>
+											<span class="texto">Cambiar Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPassword"></i>
+											<br>
+											<input type="password" class="form-control inputs" name="password" id="password">
+											<button type="submit" class="btn btn-warning botonEditar" name="boton" id="boton">
+												<span class="editarUsuario" id="editarUsuario">Editar usuario</span>
+												<div class="spinner-border text-secondary cargandoEditar" id="cargandoEditar" role="status"></div>
+											</button>
+										</form>
+									</div>
+								</div>		
+							</div>
+							
+
+
+
+
+
+						  </div>
+						</div>
+						<div class="accordion-item">
+						  <h2 class="accordion-header" id="flush-headingTwo">
+							<button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+								Configuración perfil paciente
+							</button>
+						  </h2>
+						  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+						  </div>
+						</div>
+						<div class="accordion-item mostrar">
+						  <h2 class="accordion-header" id="flush-headingThree">
+							<button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+								Configuración perfil profesional
+							</button>
+						  </h2>
+						  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+						  </div>
+						</div>
+					  </div>
+					
+			
+				</div>
+		  </div>
+		</div>
+	</div>
+
+	<!--Alerta Nombre de Usuario-->
+	<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
+		<i class="bi bi-info-circle-fill"></i>
+		<strong>Nombre de usuario:</strong>
+		El nombre de usuario ingresado no es válido. Recuerde que no puede dejar espacios en blanco. 
+		<br>Nombre de usuario: "Ejemplo1234"
+	</div>
+	<!--Alerta Contraseña-->
+	<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
+		<i class="bi bi-info-circle-fill"></i>
+		<strong>Contraseña:</strong>
+		La contraseña ingresada no es valida. Debe contener al menos una "mayuscula" y un "digito".
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="../controller/js/navegador.js"></script>
+	<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
+	<script src="../model/js/ajaxEditarUsuario.js"></script>
+</body>
+</html>
