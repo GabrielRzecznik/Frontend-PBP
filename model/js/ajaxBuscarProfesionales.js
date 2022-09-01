@@ -39,8 +39,9 @@ function buscarProfesionales(formulario, $valorUbicacion){
             alert("No se pudo obtener su ubicación");
         } 
     }
-    console.log(formJson);
+    
     function realizarBusqueda(formJSON) {
+        console.log(formJson);
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
             if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
