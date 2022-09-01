@@ -361,9 +361,11 @@ const inputCalleConsultorio = document.getElementById('calleConsultorio');
 const inputAlturaConsultorio = document.getElementById('alturaConsultorio');
 const inputDepartamentoConsultorio = document.getElementById('departamentoConsultorio');
 
+$conConsultorio = false;
+
 document.getElementById("consultorio").addEventListener("click", function() {
     if (checkConsultorio.checked == true) {
-        conConsultorio = true;
+        $conConsultorio = true;
         buscarProvinciasConsultorio();
         //Activar Inputs
         inputProvinciaConsultorio.disabled = false;
@@ -383,7 +385,7 @@ document.getElementById("consultorio").addEventListener("click", function() {
         document.getElementById('iconoCalleConsultorio').classList.add('bi-exclamation-circle-fill','signo');
         document.getElementById('iconoAlturaConsultorio').classList.add('bi-exclamation-circle-fill','signo');
     }else{
-        conConsultorio = false;
+        $conConsultorio = false;
         //Desactivar Inputs
         inputProvinciaConsultorio.disabled = true;
         inputProvinciaConsultorio.value = "";
@@ -436,7 +438,7 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
 
-    if (conConsultorio) {
+    if ($conConsultorio) {
         if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "0" || provinciaConsultorioValue === "" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
             alert("¡Debe completar todos los campos obligatorios!");
         }
