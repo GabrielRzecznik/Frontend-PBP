@@ -93,7 +93,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         $tiposConsulta = $transformarArray2.split(/,/).join(', ');
 
                         if (data[i].localidadConsultorio != "") {
-                            //Carta Profesional
+                            //Carta Profesional Con Consultorio
                             con.innerHTML = con.innerHTML +
                             '<div class="col-md-6 margenCarta">' +
                                 '<div class="card bg-light carta">' +
@@ -122,7 +122,9 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                         '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
-                                                       $tiposConsulta +
+                                                '<span class="infoProfesional">' +
+                                                    $tiposConsulta +
+                                                '</span>' +
                                                 '<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
                                             '</div>' +
                                         '</div>' +
@@ -133,7 +135,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                 '</div>' +
                             '</div>';
                         }else{
-                            //Carta Profesional
+                            //Carta Profesional Sin Consultorio
                             con.innerHTML = con.innerHTML +
                             '<div class="col-md-6 margenCarta">' +
                                 '<div class="card bg-light carta">' +
@@ -158,15 +160,18 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                     '</div>' +
                                                     '<div class="col-6">' +
                                                         $obrasSociales +
-                                                        '<br>' +
-                                                        '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
+                                                '<span class="infoProfesional">' +
+                                                    $tiposConsulta +
+                                                '</span>'
                                                 '<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
-                                            '</div>' +
+                                            '</div>' + data[i].password +
                                         '</div>' +
                                         '<div class="col-6">' +
-                                            '<span id="visualizarMapa'+i+'"></span>' + 
+                                            '<span>' +
+                                            '<i class="bi bi-house-door-fill"></i>' +
+                                            '</span>' + 
                                         '</div>' +
                                     '</div>' +
                                 '</div>' +
