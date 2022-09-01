@@ -91,13 +91,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         $transformarArray2 = $transformarArray2.replace(/{/,'');
                         $transformarArray2 = $transformarArray2.replace(/}/,'');
 
-                        $arrayTC =  $transformarArray2.split(','); 
-
-                        $tiposConsulta  = "";
-                        $arrayTC.forEach(function(elemento2) {
-                            $tiposConsulta  += elemento2 + ' ';
-                        })
-
+                        $tiposConsulta  = $transformarArray2;
+                        
                         if (data[i].localidadConsultorio != "") {
                             //Carta Profesional
                             con.innerHTML = con.innerHTML +
@@ -128,9 +123,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                         '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
-                                                    '<span class="badge rounded-pill bg-secondary margenSO">' +
                                                         $tiposConsulta +
-                                                    '</span>' +
                                                 '<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
                                             '</div>' +
                                         '</div>' +
