@@ -455,7 +455,9 @@ formulario.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('tituloRegistrar').style.display = 'none';
         document.getElementById('cargandoRegistrar').style.display = 'block';
-        APP.doSearch();
+        if ($conConsultorio) {
+            APP.doSearch();
+        }
     }
 
 }); 
