@@ -95,7 +95,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
 
                         $tiposConsulta  = "";
                         $arrayTC.forEach(function(elemento2) {
-                            $tiposConsulta  += '<span class="badge rounded-pill bg-secondary margenSO">' + elemento2 + '</span>';
+                            $tiposConsulta  += elemento2 + ' ';
                         })
 
                         if (data[i].localidadConsultorio != "") {
@@ -128,6 +128,9 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                         '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
+                                                    '<span class="badge rounded-pill bg-secondary margenSO">' +
+                                                        $tiposConsulta +
+                                                    '</span>' +
                                                 '<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
                                             '</div>' +
                                         '</div>' +
