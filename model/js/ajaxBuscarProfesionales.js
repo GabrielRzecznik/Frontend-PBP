@@ -124,8 +124,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '</div>' +
                                                 '<span class="infoProfesional">' +
                                                     $tiposConsulta +
-                                                '</span>' +
-                                                '<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
+                                                '</span><button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
                                             '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +
@@ -164,9 +163,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '</div>' +
                                                 '<span class="infoProfesional">' +
                                                     $tiposConsulta +
-                                                '</span>'
-                                                '<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
-                                            '</div>' + data[i].password +
+                                                '</span><button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
+                                            '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +
                                             '<span>' +
