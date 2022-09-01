@@ -122,7 +122,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                         '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
-                                                        $tiposConsulta +
+                                                       $tiposConsulta +
                                                 '<button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
                                             '</div>' +
                                         '</div>' +
