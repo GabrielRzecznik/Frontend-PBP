@@ -363,6 +363,7 @@ const inputDepartamentoConsultorio = document.getElementById('departamentoConsul
 
 document.getElementById("consultorio").addEventListener("click", function() {
     if (checkConsultorio.checked == true) {
+        conConsultorio = true;
         buscarProvinciasConsultorio();
         //Activar Inputs
         inputProvinciaConsultorio.disabled = false;
@@ -382,6 +383,7 @@ document.getElementById("consultorio").addEventListener("click", function() {
         document.getElementById('iconoCalleConsultorio').classList.add('bi-exclamation-circle-fill','signo');
         document.getElementById('iconoAlturaConsultorio').classList.add('bi-exclamation-circle-fill','signo');
     }else{
+        conConsultorio = false;
         //Desactivar Inputs
         inputProvinciaConsultorio.disabled = true;
         inputProvinciaConsultorio.value = "";
@@ -434,15 +436,19 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
 
-    console.log(provinciaConsultorioValue);
-    console.log(campos.provinciaConsultorio);
-    if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "0" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
-        alert("¡Debe completar todos los campos obligatorios!");
+    if (conConsultorio) {
+        if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "0" || provinciaConsultorioValue === "" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
+            alert("¡Debe completar todos los campos obligatorios!");
+        }
+    }else{
+        if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "0") {
+            alert("¡Debe completar todos los campos obligatorios!");
+        }
     }
+
     
     if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
         //Enviar AJAX
-        console.log("Testeando");
         document.getElementById('tituloRegistrar').style.display = 'none';
         document.getElementById('cargandoRegistrar').style.display = 'block';
         APP.doSearch();
