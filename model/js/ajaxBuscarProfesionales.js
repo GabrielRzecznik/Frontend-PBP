@@ -90,7 +90,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         $transformarArray2 = data[i].tipoConsulta;
                         $transformarArray2 = $transformarArray2.replace(/{/,'');
                         $transformarArray2 = $transformarArray2.replace(/}/,'');
-                        $tiposConsulta = $transformarArray2.split(/,/).join(/, /);
+                        $tiposConsulta = $transformarArray2.split(/,/).join(', ');
 
                         if (data[i].localidadConsultorio != "") {
                             //Carta Profesional
