@@ -440,6 +440,7 @@ formulario.addEventListener('submit', (e) => {
     
     if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
         //Enviar AJAX
+        console.log("Testeando");
         document.getElementById('tituloRegistrar').style.display = 'none';
         document.getElementById('cargandoRegistrar').style.display = 'block';
         APP.doSearch();
