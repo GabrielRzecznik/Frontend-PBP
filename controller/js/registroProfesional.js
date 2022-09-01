@@ -457,6 +457,10 @@ formulario.addEventListener('submit', (e) => {
         document.getElementById('cargandoRegistrar').style.display = 'block';
         if ($conConsultorio) {
             APP.doSearch();
+        }else{
+            $latitud = "";
+            $longitud = "";
+            registrarProfesional(formulario, $tiposConsultas, $ObrasSocialesIngresadas, $latitud, $longitud);
         }
     }
 
