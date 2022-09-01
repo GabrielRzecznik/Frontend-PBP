@@ -122,3 +122,16 @@ formulario.addEventListener('submit', (e) => {
 
 }); 
 //#endregion
+
+//#region Traer contraseña
+document.getElementById("editarCuentaUsuario").addEventListener("click", function() {
+    traerContraseña();
+});
+//#endregion
+
+//#region Configuración profesional
+if (localStorage.getItem("id_profesional") != "null") {
+    document.getElementById('confProf').classList.remove('mostrar');
+}
+//#endregion
+
