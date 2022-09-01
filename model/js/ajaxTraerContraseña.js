@@ -10,6 +10,6 @@ function traerContraseña(){
             }   
         }
     }
-    xmlhttp.open("post",'https://parcial-edi-backend.herokuapp.com/Usuarios/traerContraseña',true);
+    xmlhttp.open("post",'https://backend-pbp.herokuapp.com/Usuarios/traerContraseña',true);
     xmlhttp.send(formJSON);
 }
