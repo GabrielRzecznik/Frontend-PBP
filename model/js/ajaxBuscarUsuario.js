@@ -12,7 +12,7 @@ function buscarUsuario(formulario){
                 if (data[0]["estadoUsuario"] == "Activo") {
                     //Estado Usuario Activo
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
-                    localStorage.setItem("password", date[0]["password"]);
+                    localStorage.setItem("password", data[0]["password"]);//Borrar
                     localStorage.setItem("id_paciente", data[0]["id_paciente"]);
                     localStorage.setItem("id_profesional", data[0]["id_profesional"]);
                     localStorage.setItem("correo", data[0]["correo"]);
