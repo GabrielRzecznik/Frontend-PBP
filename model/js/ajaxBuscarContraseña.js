@@ -1,4 +1,4 @@
-function traerContraseña(){
+function buscarContraseña(){
     var formJSON=JSON.stringify({"id_usuario":localStorage.getItem("id_usuario")});
 
     xmlhttp = new XMLHttpRequest();
@@ -10,6 +10,6 @@ function traerContraseña(){
             }   
         }
     }
-    xmlhttp.open("post",'https://backend-pbp.herokuapp.com/Usuarios/traerContraseña',true);
+    xmlhttp.open("post",'https://backend-pbp.herokuapp.com/Usuarios/buscarContraseña',true);
     xmlhttp.send(formJSON);
 }
