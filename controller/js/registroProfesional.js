@@ -445,7 +445,6 @@ formulario.addEventListener('submit', (e) => {
     }else{
         if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "0") {
             alert("¡Debe completar todos los campos obligatorios!");
-            campos['provinciaConsultorio'] = true;
         }
     }
 
