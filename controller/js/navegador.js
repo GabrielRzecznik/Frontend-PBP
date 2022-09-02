@@ -156,8 +156,8 @@ const validarContraseña = (e) => {
 };
 
 inputsValidarContraseña.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);
-    input.addEventListener('blur' , validarFormulario);
+    input.addEventListener('keyup' , validarContraseña);
+    input.addEventListener('blur' , validarContraseña);
 });
 
 const formEditarUsuarioPreValidacion = document.getElementById('formEditarUsuarioPreValidacion');
