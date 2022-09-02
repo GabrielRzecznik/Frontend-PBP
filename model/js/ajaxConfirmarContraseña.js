@@ -9,7 +9,7 @@ function confirmarContraseña(formulario, ingreso){
             if (xmlhttp.status == 200) {
                 if (ingreso == "Editar") {
                     document.getElementById('cargandoPreValidacionEditar').style.display = 'none';
-                    document.getElementById('texoPreValidacionEditar').style.display = 'block';
+                    document.getElementById('textoPreValidacionEditar').style.display = 'block';
                     //Cambiar de formulario
                     document.getElementById('formEditarUsuarioPreValidacion').style.display = 'none';
                     document.getElementById('formularioEditarUsuario').style.display = 'block';
@@ -21,7 +21,7 @@ function confirmarContraseña(formulario, ingreso){
                     alert("¡La contraseña no coincide con la actual!");
                     //Cancelar carga
                     document.getElementById('cargandoPreValidacionEditar').style.display = 'none';
-                    document.getElementById('texoPreValidacionEditar').style.display = 'block';
+                    document.getElementById('textoPreValidacionEditar').style.display = 'block';
                 }if(ingreso == "Deshabilitar"){
 
                 }
