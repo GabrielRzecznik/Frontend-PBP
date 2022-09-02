@@ -175,7 +175,7 @@ formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('cargandoPreValidacionEditar').style.display = 'block';
         document.getElementById('textoPreValidacionEditar').style.display = 'none';
-        buscarUsuario(formEditarUsuarioPreValidacion);
+        validarContraseña(formEditarUsuarioPreValidacion);
     }
 }); 
 
