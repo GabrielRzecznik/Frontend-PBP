@@ -127,29 +127,29 @@ formulario.addEventListener('submit', (e) => {
 const inputsValidarContraseña = document.querySelectorAll('#formEditarUsuarioPreValidacion input');
 
 const expresionValidarContraseña = {
-    password: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
+    passwordValidar: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
 };
 
 const campoValidarContraseña = {
-    password: false
+    passwordValidar: false
 };
 
 const validarContraseña = (e) => {
     switch (e.target.name) {
-        case 'password':
-            if (expresionValidarContraseña.password.test(e.target.value)) {
+        case 'passwordValidar':
+            if (expresionValidarContraseña.passwordValidar.test(e.target.value)) {
                 document.getElementById('iconoPasswordValidar').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
                 document.getElementById('iconoPasswordValidar').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
                 //Alerta de error
                 document.getElementById('alertPasswordValidar').classList.remove('alertaError');
                 //Validar
-                campoValidarContraseña['password'] = true;
+                campoValidarContraseña['passwordValidar'] = true;
             }else{
                 document.getElementById('iconoPasswordValidar').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
                 document.getElementById('iconoPasswordValidar').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Mensaje de error
                 document.getElementById('alertPasswordValidar').classList.add('alertaError');
-                campoValidarContraseña['password'] = false;
+                campoValidarContraseña['passwordValidar'] = false;
             }
         break;
     }
@@ -163,15 +163,15 @@ inputsValidarContraseña.forEach((input) => {
 const formEditarUsuarioPreValidacion = document.getElementById('formEditarUsuarioPreValidacion');
 
 formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
-    const contraseñaValue = password.value.trim();
+    const passwordValidarValue = passwordValidar.value.trim();
     
     e.preventDefault();
     
-    if (contraseñaValue === "") {
+    if (passwordValidarValue === "") {
         alert("¡Debe completar el campo contraseña actual!");
     }
     
-    if (campoValidarContraseña.password) {
+    if (campoValidarContraseña.passwordValidar) {
         //Enviar AJAX
         document.getElementById('cargandoPreValidacionEditar').style.display = 'block';
         document.getElementById('textoPreValidacionEditar').style.display = 'none';
