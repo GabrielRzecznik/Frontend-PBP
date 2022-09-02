@@ -1,6 +1,6 @@
 function buscarUsuario(formulario){
     var formData = new FormData(formulario);
-    if (localStorage.getItem("id_usuario") == "") {
+    if (localStorage.getItem("id_usuario") != "") {
         formData.append("correo", localStorage.getItem("correo"));
     }
     var formJSON = JSON.stringify(Object.fromEntries(formData));
@@ -14,7 +14,7 @@ function buscarUsuario(formulario){
                 
                 if (data[0]["estadoUsuario"] == "Activo") {
                     //Estado Usuario Activo
-                    if (localStorage.getItem("id_usuario") == "") {
+                    if (localStorage.getItem("id_usuario") != "") {
                         localStorage.setItem("id_usuario", data[0]["id_usuario"]);
                         localStorage.setItem("id_paciente", data[0]["id_paciente"]);
                         localStorage.setItem("id_profesional", data[0]["id_profesional"]);
