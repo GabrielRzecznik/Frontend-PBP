@@ -215,7 +215,7 @@
 										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarUsuarioPreValidacion">
 											<b>Para continuar ingrese su contraseña actual.</b>
 											<br><br>
-											<span class="texto">Contraseña actual </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPasswordValidar" title="Campo Obligatorio"></i>
+											<span class="texto">Contraseña actual </span><i class="signo bi bi-exclamation-circle-fill vailida" id="iconoPasswordValidar" title="Campo Obligatorio"></i>
 											<br>
 											<input type="password" class="form-control inputs" name="passwordValidar" id="passwordValidar">
 											<button type="submit" class="btn btn-warning botonPreValidacionEditar" name="boton" id="boton">
@@ -229,11 +229,11 @@
 										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarUsuario">
 											<b>Editar Usuario</b>
 											<br><br>
-											<span class="texto">Cambiar Nombre de Usuario </span><i class="bi bi-x-circle-fill iconos validado" id="iconoNombreUsuario"></i>
+											<span class="texto">Nombre de Usuario </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoNombreUsuario"></i>
 											<br>
 											<input type="text" class="form-control inputs" name="nombreUsuario" id="nombreUsuario">
 											<br>
-											<span class="texto">Cambiar Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPassword"></i>
+											<span class="texto">Contraseña </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoPassword"></i>
 											<br>
 											<input type="password" class="form-control inputs" name="password" id="password">
 											<button type="submit" class="btn btn-warning botonEditar" name="boton" id="boton">
@@ -607,7 +607,13 @@
 		El nombre de usuario ingresado no es válido. Recuerde que no puede dejar espacios en blanco. 
 		<br>Nombre de usuario: "Ejemplo1234"
 	</div>
-	<!--Alerta Contraseña-->
+	<!--Alerta Contraseña Editar-->
+    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
+        <i class="bi bi-info-circle-fill"></i>
+        <strong>Contraseña:</strong>
+        La contraseña debe tener de 8 a 16 caracteres. Debe contener al menos una "mayúscula" y un "digito".
+    </div>
+	<!--Alerta Contraseña Validar-->
 	<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPasswordValidar">
 		<i class="bi bi-info-circle-fill"></i>
 		<strong>Contraseña:</strong>
