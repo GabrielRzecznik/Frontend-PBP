@@ -1,5 +1,7 @@
 function confirmarContraseña(formulario, ingreso){
-    var formData = new FormData(formulario);
+    console.log(formulario);
+    var formData = new FormData();
+    formData.append("password", formulario);
     formData.append("correo", localStorage.getItem("correo"));
     var formJSON = JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
