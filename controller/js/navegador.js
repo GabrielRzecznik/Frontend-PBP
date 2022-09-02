@@ -137,7 +137,7 @@ const campoValidarContraseña = {
 const validarContraseña = (e) => {
     switch (e.target.name) {
         case 'password':
-            if (expresionValidarContraseña.passwordValidar.test(e.target.value)) {
+            if (expresionValidarContraseña.password.test(e.target.value)) {
                 document.getElementById('iconoPasswordValidar').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
                 document.getElementById('iconoPasswordValidar').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
                 //Alerta de error
