@@ -169,7 +169,7 @@ formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
     e.preventDefault();
     
     if (contraseñaValue === "") {
-        alert("¡Debe el campo contraseña actual!");
+        alert("¡Debe completar el campo contraseña actual!");
     }
     
     if (campoValidarContraseña.password) {
