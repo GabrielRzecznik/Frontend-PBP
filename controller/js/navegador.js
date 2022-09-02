@@ -127,29 +127,29 @@ formulario.addEventListener('submit', (e) => {
 const inputsValidarContraseña = document.querySelectorAll('#formEditarUsuarioPreValidacion input');
 
 const expresionValidarContraseña = {
-    passwordValidar: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
+    password: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
 };
 
 const campoValidarContraseña = {
-    passwordValidar: false
+    password: false
 };
 
 const validarContraseña = (e) => {
     switch (e.target.name) {
-        case 'passwordValidar':
+        case 'password':
             if (expresionValidarContraseña.passwordValidar.test(e.target.value)) {
                 document.getElementById('iconoPasswordValidar').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
                 document.getElementById('iconoPasswordValidar').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
                 //Alerta de error
                 document.getElementById('alertPasswordValidar').classList.remove('alertaError');
                 //Validar
-                campoValidarContraseña['passwordValidar'] = true;
+                campoValidarContraseña['password'] = true;
             }else{
                 document.getElementById('iconoPasswordValidar').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
                 document.getElementById('iconoPasswordValidar').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Mensaje de error
                 document.getElementById('alertPasswordValidar').classList.add('alertaError');
-                campoValidarContraseña['passwordValidar'] = false;
+                campoValidarContraseña['password'] = false;
             }
         break;
     }
@@ -163,7 +163,7 @@ inputsValidarContraseña.forEach((input) => {
 const formEditarUsuarioPreValidacion = document.getElementById('formEditarUsuarioPreValidacion');
 
 formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
-    const passwordValidarValue = passwordValidar.value.trim();
+    const passwordValidarValue = password.value.trim();
     
     e.preventDefault();
     
