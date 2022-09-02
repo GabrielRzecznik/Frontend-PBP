@@ -1,6 +1,6 @@
 function buscarUsuario(formulario){
     var formData = new FormData(formulario);
-    if (localStorage.getItem("id_usuario") != "") {
+    if (localStorage.getItem("id_usuario") == "") {
         formData.append("correo", localStorage.getItem("correo"));
     }
     var formJSON = JSON.stringify(Object.fromEntries(formData));
