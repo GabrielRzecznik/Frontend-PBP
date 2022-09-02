@@ -96,11 +96,11 @@ color: rgb(255, 185, 93);
     margin: 0 auto;
 }
 
-.formEditarUsuario{
+.formularioEditarUsuario{
     display: none;
 }
 
-.formEditarUsuarioPreValidacion{
+.formularioEditarUsuarioPreValidacion{
     display: block;
 }
 
