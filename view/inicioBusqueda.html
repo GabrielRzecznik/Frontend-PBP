@@ -15,7 +15,7 @@
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Inicio - Profesional By Proximity</title>
 </head>
-<body class="mostrar" id="mostrar">
+<body class="mostrarPagina" id="mostrar">
 	<!--Encabezado - Nav-->
 	<header class="py-3 mb-3 border-bottom bg-light"><!--bg-light se utiliza para cambiarle el color!-->
 		<div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
@@ -215,7 +215,7 @@
 										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarUsuarioPreValidacion">
 											<b>Para continuar ingrese su contraseña actual.</b>
 											<br><br>
-											<span class="texto">Contraseña actual </span><i class="bi" id="iconoPasswordValidar" title="Campo Obligatorio"></i>
+											<span class="texto">Contraseña actual </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPasswordValidar" title="Campo Obligatorio"></i>
 											<br>
 											<input type="password" class="form-control inputs" name="passwordValidar" id="passwordValidar">
 											<button type="submit" class="btn btn-warning botonPreValidacionEditar" name="boton" id="boton">

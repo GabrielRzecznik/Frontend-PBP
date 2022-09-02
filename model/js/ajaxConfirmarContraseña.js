@@ -14,6 +14,9 @@ function confirmarContraseña(formulario, ingreso){
                     //Cambiar de formulario
                     document.getElementById('formularioEditarUsuarioPreValidacion').style.display = 'none';
                     document.getElementById('formularioEditarUsuario').style.display = 'block';
+                    
+                    $mostrarContraseña = document.getElementById(password);
+                    $mostrarContraseña.value = formulario.passwordValidar.value;
                 }if(ingreso == "Deshabilitar"){
 
                 }       
