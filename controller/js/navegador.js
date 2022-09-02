@@ -163,7 +163,7 @@ inputsValidarContraseña.forEach((input) => {
 const formEditarUsuarioPreValidacion = document.getElementById('formEditarUsuarioPreValidacion');
 
 formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
-    const passwordValidarValue = passwordValidar.value.trim();
+    const passwordValidarValue = password.value.trim();
     
     e.preventDefault();
     
@@ -171,7 +171,7 @@ formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
         alert("¡Debe completar el campo contraseña actual!");
     }
     
-    if (campoValidarContraseña.passwordValidar) {
+    if (campoValidarContraseña.password) {
         //Enviar AJAX
         document.getElementById('cargandoPreValidacionEditar').style.display = 'block';
         document.getElementById('textoPreValidacionEditar').style.display = 'none';
