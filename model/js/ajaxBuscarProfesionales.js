@@ -159,6 +159,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                     '</div>' +
                                                     '<div class="col-6">' +
                                                         $obrasSociales +
+                                                        '<br>' +
+                                                        '<span class="badge rounded-pill bg-secondary">' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
                                                 '<span class="infoProfesional">' +
@@ -167,9 +169,12 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                             '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +
-                                            '<span>' +
-                                            '<i class="bi bi-house-door-fill"></i>' +
-                                            '</span>' + 
+                                            '<div class="sinMapa">' +
+                                                '<span class="textoSinMapa">' +
+                                                    'El profesional no cuenta<br>con consultorio. ' +
+                                                    '<i class="bi bi-geo-alt-fill"></i>' +
+                                                '<span>' +        
+                                            '</div>' + 
                                         '</div>' +
                                     '</div>' +
                                 '</div>' +

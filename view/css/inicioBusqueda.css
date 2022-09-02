@@ -105,3 +105,28 @@ body{
 .bi-search{
 	text-decoration: none;
 }
+
+.sinMapa{
+	padding-top: 40%;
+	color: rgb(110, 110, 110);
+	text-align: center;
+	background-color: rgb(235, 235, 235);
+	height: 100%;
+	width: 100%;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .sinMapa{
+		padding-top: 45%;
+		color: rgb(110, 110, 110);
+		text-align: center;
+		background-color: rgb(235, 235, 235);
+		height: 100%;
+		width: 100%;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+}
+  
