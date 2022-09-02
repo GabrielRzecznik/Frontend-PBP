@@ -12,8 +12,8 @@ function confirmarContraseña(formulario, ingreso){
                     document.getElementById('cargandoPreValidacionEditar').style.display = 'none';
                     document.getElementById('textoPreValidacionEditar').style.display = 'block';
                     //Cambiar de formulario
-                    document.getElementById('formEditarUsuarioPreValidacion').style.display = 'none';
-                    document.getElementById('formEditarUsuario').style.display = 'block';
+                    document.getElementById('formularioEditarUsuarioPreValidacion').style.display = 'none';
+                    document.getElementById('formularioEditarUsuario').style.display = 'block';
                 }if(ingreso == "Deshabilitar"){
 
                 }       
