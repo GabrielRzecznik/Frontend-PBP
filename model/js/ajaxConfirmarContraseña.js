@@ -1,6 +1,6 @@
 function confirmarContraseña(formulario, ingreso){
     var formData = new FormData();
-    formData.append("correo", localStorage.getItem("correo"));
+    formData.append("usuario", localStorage.getItem("correo"));
     formData.append("password", formulario.passwordValidar.value);
     var formJSON = JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
@@ -13,7 +13,7 @@ function confirmarContraseña(formulario, ingreso){
                     document.getElementById('textoPreValidacionEditar').style.display = 'block';
                     //Cambiar de formulario
                     document.getElementById('formEditarUsuarioPreValidacion').style.display = 'none';
-                    document.getElementById('formularioEditarUsuario').style.display = 'block';
+                    document.getElementById('formEditarUsuario').style.display = 'block';
                 }if(ingreso == "Deshabilitar"){
 
                 }       
