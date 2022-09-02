@@ -15,9 +15,9 @@ function confirmarContraseña(formulario, ingreso){
                     document.getElementById('formularioEditarUsuarioPreValidacion').style.display = 'none';
                     document.getElementById('formularioEditarUsuario').style.display = 'block';
                     //Mostrar contraseña dentro del input contraseña
-                    $guardarContraseña = document.getElementById(passwordValidar);
-                    $mostrarContraseña = document.getElementById(password);
-                    $mostrarContraseña.value = $guardarContraseña.value;
+                    $guardarContraseña = document.getElementById("passwordValidar").value;
+                    $mostrarContraseña = document.getElementById("password");
+                    $mostrarContraseña.value = $guardarContraseña;
                 }if(ingreso == "Deshabilitar"){
 
                 }       
