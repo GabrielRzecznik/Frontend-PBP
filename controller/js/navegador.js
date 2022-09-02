@@ -138,18 +138,17 @@ const validarContraseña = (e) => {
     switch (e.target.name) {
         case 'password':
             if (expresionValidarContraseña.password.test(e.target.value)) {
-                document.getElementById('iconoPassword').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoPassword').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                document.getElementById('iconoPasswordValidar').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoPasswordValidar').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
                 //Alerta de error
-                document.getElementById('alertPassword').classList.remove('alertaError');
+                document.getElementById('alertPasswordValidar').classList.remove('alertaError');
                 //Validar
                 campoValidarContraseña['password'] = true;
             }else{
-                document.getElementById('iconoPassword').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoPassword').classList.add('mostrar','bi-x-circle-fill','noValidado');
+                document.getElementById('iconoPasswordValidar').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoPasswordValidar').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Mensaje de error
-                document.getElementById('alertPassword').classList.add('alertaError');
-                document.getElementById('alertUsuario').classList.remove('alertaError');
+                document.getElementById('alertPasswordValidar').classList.add('alertaError');
                 campoValidarContraseña['password'] = false;
             }
         break;
