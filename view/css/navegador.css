@@ -49,35 +49,56 @@
     margin: 0 auto;
 }
 
+
+
+
+
+
+
 .alerta{
     position: fixed;
     right: 0%;
     bottom: 0%;
     visibility: hidden;
 }
+
+@media (max-width: 768px) {
+    .alerta {
+      left: 50%;
+      transform: translate(-5%, -5%, -5%);
+      width: 95%;
+      position: fixed;
+      font-size: small;
+      top: 1%;
+      bottom: auto;
+      visibility: hidden;
+      box-sizing: border-box;
+    }
+}
+
 .alertaError{
     visibility: visible;
-}
+  }
   
-.iconos{
-visibility: hidden;
-color: rgb(255, 93, 93);
-}
-
-.validado{
-visibility: hidden;
-color: rgb(105, 189, 50);
-}
-
-.error{
-visibility: visible;
-}
-
-.signo{
-visibility: visible;
-color: rgb(255, 185, 93);
-}
-
+  .noValidado{
+    visibility: hidden;
+    color: rgb(255, 93, 93);
+  }
+  
+  .validado{
+    visibility: hidden;
+    color: rgb(105, 189, 50);
+  }
+  
+  .signo{
+    visibility: visible;
+    color: rgb(255, 185, 93);
+  }
+  
+  .mostrar{
+    visibility: visible;
+  }
+  
 .fotoPerfil{
     width: 100%;
     height: 100%;
@@ -124,3 +145,4 @@ color: rgb(255, 185, 93);
     font-size: 10px;
     margin: 0 auto;
 }
+
