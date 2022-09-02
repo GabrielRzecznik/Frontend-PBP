@@ -210,6 +210,21 @@
 									</button>
 								</p>
 								<div class="collapse" id="ediUsu">
+									<!--Validar Contraseña-->
+									<div class="card card-body formEditarUsuarioPreValidacion">
+										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarUsuarioPreValidacion">
+											<b>Para continuar ingrese su contraseña actual.</b>
+											<br><br>
+											<span class="texto">Contraseña actual </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPasswordValidar"></i>
+											<br>
+											<input type="password" class="form-control inputs" name="passwordValidar" id="passwordValidar">
+											<button type="submit" class="btn btn-warning botonPreValidacionEditar" name="boton" id="boton">
+												<span>Editar usuario</span>
+												<div class="spinner-border text-secondary cargandoPreValidacionEditar" id="cargandoPreValidacionEditar" role="status"></div>
+											</button>
+										</form>
+									</div>
+									<!--Formulario Editar Usuario-->
 									<div class="card card-body formularioEditarUsuario">
 										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarUsuario">
 											<b>Editar Usuario</b>

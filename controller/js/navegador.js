@@ -124,9 +124,7 @@ formulario.addEventListener('submit', (e) => {
 //#endregion
 
 //#region Traer contraseña
-document.getElementById("editarCuentaUsuario").addEventListener("click", function() {
-    buscarContraseña();
-});
+
 //#endregion
 
 //#region Configuración profesional

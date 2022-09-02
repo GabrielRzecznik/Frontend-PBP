@@ -99,3 +99,7 @@ color: rgb(255, 185, 93);
 .formularioEditarUsuario{
     display: none;
 }
+
+.formEditarUsuarioPreValidacion{
+    display: block;
+}
