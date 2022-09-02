@@ -95,3 +95,7 @@ color: rgb(255, 185, 93);
     font-size: 10px;
     margin: 0 auto;
 }
+
+.formularioEditarUsuario{
+    display: none;
+}
