@@ -176,7 +176,7 @@ formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
         document.getElementById('cargandoPreValidacionEditar').style.display = 'block';
         document.getElementById('textoPreValidacionEditar').style.display = 'none';
         $ingreso = "Editar";
-        validarContraseña(formEditarUsuarioPreValidacion, $ingreso);
+        confirmarContraseña(formEditarUsuarioPreValidacion, $ingreso);
     }
 }); 
 

@@ -1,4 +1,4 @@
-function validarContraseña(formulario, ingreso){
+function confirmarContraseña(formulario, ingreso){
     var formData = new FormData(formulario);
     formData.append("correo", localStorage.getItem("correo"));
     var formJSON = JSON.stringify(Object.fromEntries(formData));
@@ -8,23 +8,23 @@ function validarContraseña(formulario, ingreso){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (ingreso == "Editar") {
-                    
-                }
-                
-                
-                
-                
-            document.getElementById('cargando').style.display = 'none';
-            document.getElementById('loguearse').style.display = 'block';
-                   
+                    document.getElementById('cargandoPreValidacionEditar').style.display = 'none';
+                    document.getElementById('texoPreValidacionEditar').style.display = 'block';
+                    //Cambiar de formulario
+                    document.getElementById('').style.display = 'none';
+                    document.getElementById('').style.display = 'block';
+                }if(ingreso == "Deshabilitar"){
+
+                }       
             }if (xmlhttp.status == 401) {
                 if (ingreso == "Editar") {
-                    alert("¡No se encontro el usuario!");
+                    alert("¡La contraseña no coincide con la actual!");
                     //Cancelar carga
-                    document.getElementById('cargando').style.display = 'none';
-                    document.getElementById('loguearse').style.display = 'block';
+                    document.getElementById('cargandoPreValidacionEditar').style.display = 'none';
+                    document.getElementById('texoPreValidacionEditar').style.display = 'block';
+                }if(ingreso == "Deshabilitar"){
+
                 }
-                
             }
         }
     }
