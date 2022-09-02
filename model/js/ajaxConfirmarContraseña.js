@@ -3,7 +3,7 @@ function confirmarContraseña(formulario, ingreso){
     formData.append("usuario", localStorage.getItem("correo"));
     formData.append("password", formulario.passwordValidar.value);
     var formJSON = JSON.stringify(Object.fromEntries(formData));
-    console.log(formJSON);
+
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
