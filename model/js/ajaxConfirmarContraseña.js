@@ -20,7 +20,8 @@ function confirmarContraseña(formulario, ingreso){
                     $mostrarContraseña.value = $guardarContraseña;
                 }if(ingreso == "Deshabilitar"){
 
-                }       
+                }
+                window.location.reload()
             }if (xmlhttp.status == 401) {
                 if (ingreso == "Editar") {
                     alert("¡La contraseña no coincide con la actual!");
