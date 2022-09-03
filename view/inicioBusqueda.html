@@ -189,37 +189,6 @@
 						  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 							<div class="accordion-body">
 								<p>
-									<button class="btn bg-light opcionConfiguracion" data-bs-toggle="collapse" href="#desUsu" role="button" aria-expanded="false" aria-controls="collapseExample">
-										Deshabilitar cuenta usuario <i class="bi bi-person-x-fill derecha"></i>
-									</button>
-								</p>
-								<div class="collapse" id="desUsu">
-									<!--Validar Contraseña-->
-									<div class="card card-body formularioDeshabilitarUsuarioPreValidacion" id="formularioDeshabilitarUsuarioPreValidacion">
-										<form onsubmit="event.preventDefault()" action="#" method="post" id="formDeshabilitarUsuarioPreValidacion">
-											<b>Para deshabilitar su cuenta usuario ingrese su contraseña actual.</b>
-											<br><br>
-											<span class="texto">Contraseña actual </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPasswordValidar2" title="Campo Obligatorio"></i>
-											<br>
-											<input type="password" class="form-control inputs" name="passwordValidar2" id="passwordValidar2">
-											<button type="submit" class="btn btn-warning botonPreValidacionDeshabilitar" name="boton" id="boton">
-												<span class="textoPreValidacionDeshabilitar" id="textoPreValidacionDeshabilitar">Validar</span>
-												<div class="spinner-border text-secondary cargandoPreValidacionDeshabilitar" id="cargandoPreValidacionDeshabilitar" role="status"></div>
-											</button>
-										</form>
-									</div>
-									<!--Deshabilitar Cuenta Usuario-->
-									<div class="card card-body cardDeshabilitarUsuario" id="cardDeshabilitarUsuario">
-										<b>¿Esta seguro que desea deshabilitar su cuenta usuario? </b>
-										<br>
-										Si deshabilitas tu cuenta usuario ya no podrás acceder a ella, tampoco perfil será visible por otros usuarios.<br>
-										Podrás restablecer tu cuenta usuario en cualquier momento desde la opción "Restablecer" en el inicio de sesión.<br>
-										<br>
-										<button class="btn btn-danger" id="deshabilitarUsuario">Deshabilitar cuenta</button>
-									</div>
-									<br>
-								</div>
-								<p>
 									<button class="btn bg-light opcionConfiguracion" id="editarCuentaUsuario" data-bs-toggle="collapse" href="#ediUsu" role="button" aria-expanded="false" aria-controls="collapseExample">
 										Editar cuenta usuario<i class="bi bi-person-lines-fill derecha"></i>
 									</button>
@@ -257,7 +226,38 @@
 											</button>
 										</form>
 									</div>
-								</div>		
+								</div>
+								<p>
+									<button class="btn bg-light opcionConfiguracion" data-bs-toggle="collapse" href="#desUsu" role="button" aria-expanded="false" aria-controls="collapseExample">
+										Deshabilitar cuenta usuario <i class="bi bi-person-x-fill derecha"></i>
+									</button>
+								</p>
+								<div class="collapse" id="desUsu">
+									<!--Validar Contraseña-->
+									<div class="card card-body formularioDeshabilitarUsuarioPreValidacion" id="formularioDeshabilitarUsuarioPreValidacion">
+										<form onsubmit="event.preventDefault()" action="#" method="post" id="formDeshabilitarUsuarioPreValidacion">
+											<b>Para deshabilitar su cuenta usuario ingrese su contraseña actual.</b>
+											<br><br>
+											<span class="texto">Contraseña actual </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPasswordValidar2" title="Campo Obligatorio"></i>
+											<br>
+											<input type="password" class="form-control inputs" name="passwordValidar2" id="passwordValidar2">
+											<button type="submit" class="btn btn-warning botonPreValidacionDeshabilitar" name="boton" id="boton">
+												<span class="textoPreValidacionDeshabilitar" id="textoPreValidacionDeshabilitar">Validar</span>
+												<div class="spinner-border text-secondary cargandoPreValidacionDeshabilitar" id="cargandoPreValidacionDeshabilitar" role="status"></div>
+											</button>
+										</form>
+									</div>
+									<!--Deshabilitar Cuenta Usuario-->
+									<div class="card card-body cardDeshabilitarUsuario" id="cardDeshabilitarUsuario">
+										<b>¿Esta seguro que desea deshabilitar su cuenta usuario? </b>
+										<br>
+										Si deshabilitas tu cuenta usuario ya no podrás acceder a ella, tampoco perfil será visible por otros usuarios.<br>
+										Podrás restablecer tu cuenta usuario en cualquier momento desde la opción "Restablecer" en el inicio de sesión.<br>
+										<br>
+										<button class="btn btn-danger" id="deshabilitarUsuario">Deshabilitar cuenta</button>
+									</div>
+									<br>
+								</div>
 							</div>
 						  </div>
 						</div>
