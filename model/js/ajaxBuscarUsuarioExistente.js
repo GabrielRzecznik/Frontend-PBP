@@ -17,9 +17,15 @@ function buscarUsuarioExistente(correo, nombreUsuario){
                 $asignarDuracion = false; 
                 enviarCorreo(correo, $asignarDuracion);
             }if (xmlhttp.status == 401) {
-                document.getElementById('tituloBuscar').style.display = 'block';
-                document.getElementById('cargandoBuscar').style.display = 'none';
-                alert("¡El correo o el usuario ya se encuentra en uso!");
+                if (correo == "No buscar") {
+                    document.getElementById('editarUsuario').style.display = 'block';
+                    document.getElementById('cargandoEditar').style.display = 'none';
+                    alert("¡El nombre de usuario ingresado ya se encuentra en uso!");
+                }else{
+                    document.getElementById('tituloBuscar').style.display = 'block';
+                    document.getElementById('cargandoBuscar').style.display = 'none';
+                    alert("¡El correo o el usuario ya se encuentra en uso!");
+                }
             }
         }
     }
