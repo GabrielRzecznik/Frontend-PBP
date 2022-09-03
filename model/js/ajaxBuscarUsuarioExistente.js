@@ -24,6 +24,11 @@ function buscarUsuarioExistente(correo, nombreUsuario){
                 if (correo == "No buscar") {
                     document.getElementById('editarUsuario').style.display = 'block';
                     document.getElementById('cargandoEditar').style.display = 'none';
+                    document.getElementById('iconoNombreUsuario').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                    document.getElementById('iconoNombreUsuario').classList.add('mostrar','bi-x-circle-fill','noValidado');
+                    //Mensaje de error
+                    document.getElementById('alertPassword').classList.add('alertaError');
+                    camposEditar['nombreUsuario'] = false;
                     alert("¡El nombre de usuario ingresado ya se encuentra en uso!");
                 }else{
                     document.getElementById('tituloBuscar').style.display = 'block';
