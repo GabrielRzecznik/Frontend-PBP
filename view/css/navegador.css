@@ -142,6 +142,10 @@
 }
 
 /*Deshabilitar Usuario*/
+.cardDeshabilitarUsuario{
+    display: none;
+ }
+
 .formularioDeshabilitarUsuarioPreValidacion{
    display: block;
 }
