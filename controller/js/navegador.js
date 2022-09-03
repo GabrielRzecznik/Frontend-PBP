@@ -106,17 +106,19 @@ formularioEditar.addEventListener('submit', (e) => {
     }
     
     if (camposEditar.nombreUsuario && camposEditar.password) {
+        console.log(passwordValidar.value.trim());
         if (nombreUsuarioValue == localStorage.getItem("nombreUsuario") && contraseñaValue ==  passwordValidar.value.trim()) {
             
-        }
-        //Enviar AJAX
-        document.getElementById('cargandoEditar').style.display = 'block';
-        document.getElementById('editarUsuario').style.display = 'none';
-        const correo = "No buscar";
-        if (nombreUsuarioValue == localStorage.getItem("nombreUsuario")) {
-            editarUsuario(formularioEditar);
         }else{
-            buscarUsuarioExistente(correo, nombreUsuarioValue);
+            //Enviar AJAX
+            document.getElementById('cargandoEditar').style.display = 'block';
+            document.getElementById('editarUsuario').style.display = 'none';
+            const correo = "No buscar";
+            if (nombreUsuarioValue == localStorage.getItem("nombreUsuario")) {
+                editarUsuario(formularioEditar);
+            }else{
+                buscarUsuarioExistente(correo, nombreUsuarioValue);
+            }
         }
     }
 
