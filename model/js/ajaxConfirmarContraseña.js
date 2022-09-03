@@ -21,7 +21,6 @@ function confirmarContraseña(formulario, ingreso){
                 }if(ingreso == "Deshabilitar"){
 
                 }
-                window.location.reload()
             }if (xmlhttp.status == 401) {
                 if (ingreso == "Editar") {
                     alert("¡La contraseña no coincide con la actual!");
