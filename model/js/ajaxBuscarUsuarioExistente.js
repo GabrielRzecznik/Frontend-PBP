@@ -9,7 +9,7 @@ function buscarUsuarioExistente(correo, nombreUsuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (correo == "No buscar") {
-                    
+                    editarUsuario(formularioEditar);
                 }else{
                     document.getElementById('tituloBuscar').style.display = 'block';
                     document.getElementById('cargandoBuscar').style.display = 'none';
