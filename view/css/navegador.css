@@ -49,30 +49,6 @@
     margin: 0 auto;
 }
 
-
-.botonDeshabilitar{
-    width: 100%;
-    height: 38px;
-    margin-top: 10%;
-    margin-bottom: 4%;
-    text-align: center;
-}
-
-.deshabilitarUsuario{
-    text-align: center;
-    display: block;
-}
-
-.cargandoDeshabilitar{
-    display: none;
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-    margin: 0 auto;
-}
-
-
-
 .alerta{
     position: fixed;
     right: 0%;
@@ -96,73 +72,73 @@
 
 .alertaError{
     visibility: visible;
-  }
+}
   
-  .noValidado{
-    visibility: hidden;
-    color: rgb(255, 93, 93);
-  }
+.noValidado{
+   visibility: hidden;
+   color: rgb(255, 93, 93);
+}
   
-  .validado{
-    visibility: hidden;
-    color: rgb(105, 189, 50);
-  }
+.validado{
+   visibility: hidden;
+   color: rgb(105, 189, 50);
+ }
 
 
   
-  .signo{
-    visibility: visible;
-    color: rgb(255, 185, 93);
-  }
+.signo{
+   visibility: visible;
+   color: rgb(255, 185, 93);
+}
   
-  .mostrar{
-    visibility: visible;
-  }
+.mostrar{
+  visibility: visible;
+}
   
 .fotoPerfil{
-    width: 100%;
-    height: 100%;
+   width: 100%;
+   height: 100%;
 }
 
 .botonConfProf{
-    text-align: center;
-    display: block;
+   text-align: center;
+   display: block;
 }
 
 .cargandoConfiguracionGrilla{
-    display: none;
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-    margin: 0 auto;
+   display: none;
+   width: 15px;
+   height: 15px;
+   font-size: 10px;
+   margin: 0 auto;
 }
 
 .formularioEditarUsuario{
-    display: none;
+   display: none;
 }
 
 .formularioEditarUsuarioPreValidacion{
-    display: block;
+   display: block;
 }
 
 .botonPreValidacionEditar{
-    width: 100%;
-    height: 38px;
-    margin-top: 10%;
-    margin-bottom: 4%;
-    text-align: center;
+   width: 100%;
+   height: 38px;
+   margin-top: 10%;
+   margin-bottom: 4%;
+   text-align: center;
 }
 
 .textoPreValidacionEditar{
-    text-align: center;
-    display: block;
+   text-align: center;
+   display: block;
 }
 
 .cargandoPreValidacionEditar{
-    display: none;
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-    margin: 0 auto;
+   display: none;
+   width: 15px;
+   height: 15px;
+   font-size: 10px;
+   margin: 0 auto;
 }
 
