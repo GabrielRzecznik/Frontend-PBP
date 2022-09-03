@@ -8,14 +8,18 @@ function buscarUsuarioExistente(correo, nombreUsuario){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                document.getElementById('tituloBuscar').style.display = 'block';
-                document.getElementById('cargandoBuscar').style.display = 'none';
-                //Cambia de Formulario
-                document.getElementById('formulario').style.display = 'none';
-                document.getElementById('activador').style.display = 'block';
-                //Envia Correo
-                $asignarDuracion = false; 
-                enviarCorreo(correo, $asignarDuracion);
+                if (correo == "No buscar") {
+                    
+                }else{
+                    document.getElementById('tituloBuscar').style.display = 'block';
+                    document.getElementById('cargandoBuscar').style.display = 'none';
+                    //Cambia de Formulario
+                    document.getElementById('formulario').style.display = 'none';
+                    document.getElementById('activador').style.display = 'block';
+                    //Envia Correo
+                    $asignarDuracion = false; 
+                    enviarCorreo(correo, $asignarDuracion);
+                }
             }if (xmlhttp.status == 401) {
                 if (correo == "No buscar") {
                     document.getElementById('editarUsuario').style.display = 'block';
