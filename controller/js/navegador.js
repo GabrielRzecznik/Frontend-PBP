@@ -109,7 +109,9 @@ formularioEditar.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('cargandoEditar').style.display = 'block';
         document.getElementById('editarUsuario').style.display = 'none';
-        editarUsuario(formularioEditar);
+        const correo = "No buscar";
+        buscarUsuarioExistente(correo, nombreUsuarioValue);
+        //editarUsuario(formularioEditar);
     }
 
 }); 
