@@ -39,7 +39,7 @@ document.getElementById("deshabilitarUsuario").addEventListener("click", functio
 //#region Validar Formulario Editar Cuenta Usuario
 const inputs = document.querySelectorAll('#formEditarUsuario input');
 
-const expresiones = {
+const expresionesEditar = {
     nombreUsuario: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/, //entre 8 y 24 caractere
     password: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
 };
@@ -52,7 +52,7 @@ const camposEditar = {
 const validarFormulario = (e) => {
    switch (e.target.name) {
         case 'nombreUsuario':
-            if (expresiones.nombreUsuario.test(e.target.value)) {
+            if (expresionesEditar.nombreUsuario.test(e.target.value)) {
                 document.getElementById('iconoNombreUsuario').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
                 document.getElementById('iconoNombreUsuario').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
                 //Alerta de error
@@ -68,7 +68,7 @@ const validarFormulario = (e) => {
             }
             break;
         case 'password':
-            if (expresiones.password.test(e.target.value)) {
+            if (expresionesEditar.password.test(e.target.value)) {
                 document.getElementById('iconoPassword').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
                 document.getElementById('iconoPassword').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
                 //Alerta de error
@@ -93,9 +93,9 @@ inputs.forEach((input) => {
 //#endregion
 
 //#region Envia Formulario Editar Cuenta Usuario
-const formulario = document.getElementById('formEditarUsuario');
+const formularioEditar = document.getElementById('formEditarUsuario');
 
-formulario.addEventListener('submit', (e) => {
+formularioEditar.addEventListener('submit', (e) => {
     const nombreUsuarioValue = nombreUsuario.value.trim();
     const contraseñaValue = password.value.trim();
     
@@ -109,7 +109,7 @@ formulario.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('cargandoEditar').style.display = 'block';
         document.getElementById('editarUsuario').style.display = 'none';
-        editarUsuario(formulario);
+        editarUsuario(formularioEditar);
     }
 
 }); 
