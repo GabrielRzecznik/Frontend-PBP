@@ -110,8 +110,11 @@ formularioEditar.addEventListener('submit', (e) => {
         document.getElementById('cargandoEditar').style.display = 'block';
         document.getElementById('editarUsuario').style.display = 'none';
         const correo = "No buscar";
-        buscarUsuarioExistente(correo, nombreUsuarioValue);
-        //editarUsuario(formularioEditar);
+        if (nombreUsuarioValue == localStorage.getItem("nombreUsuario")) {
+            editarUsuario(formularioEditar);
+        }else{
+            buscarUsuarioExistente(correo, nombreUsuarioValue);
+        }
     }
 
 }); 
