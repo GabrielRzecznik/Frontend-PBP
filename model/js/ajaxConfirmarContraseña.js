@@ -24,7 +24,11 @@ function confirmarContraseña(formulario, ingreso){
                     $mostrarContraseña = document.getElementById("password");
                     $mostrarContraseña.value = $guardarContraseña;
                 }if(ingreso == "Deshabilitar"){
-
+                    document.getElementById('cargandoPreValidacionDeshabilitar').style.display = 'none';
+                    document.getElementById('textoPreValidacionDeshabilitar').style.display = 'block';
+                    //Cambiar de formulario
+                    document.getElementById('formularioDeshabilitarUsuarioPreValidacion').style.display = 'none';
+                    document.getElementById('cardDeshabilitarUsuario').style.display = 'block';
                 }
             }if (xmlhttp.status == 401) {
                 if (ingreso == "Editar") {
