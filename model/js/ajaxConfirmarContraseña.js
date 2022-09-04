@@ -3,7 +3,7 @@ function confirmarContraseña(formulario, ingreso){
     formData.append("usuario", localStorage.getItem("correo"));
     if(ingreso == "Editar"){
         formData.append("password", formulario.passwordValidar.value);
-    }if (condition == "Deshabilitar") {
+    }if (ingreso == "Deshabilitar") {
         formData.append("password", formulario.passwordValidarDeshabilitar.value);
     }
     
