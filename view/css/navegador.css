@@ -67,14 +67,18 @@
 
 
 .alerta{
-    position: fixed;
-    right: 0%;
-    bottom: 0%;
-    visibility: hidden;
+   left: 50%;
+   transform: translate(-50%);
+   position: fixed;
+   font-size: small;
+   top: 1%;
+   bottom: auto;
+   visibility: hidden;
+   box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
-    .alerta {
+   .alerta {
       left: 50%;
       transform: translate(-5%, -5%, -5%);
       width: 95%;
