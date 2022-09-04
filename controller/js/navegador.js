@@ -181,6 +181,64 @@ formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
 
 //#endregion
 
+//#region Validar Contraseña en Deshabilitar Usuario
+const inputsValidarContraseñaDeshabilitar = document.querySelectorAll('#formDeshabilitarUsuarioPreValidacion input');
+
+const expresionValidarContraseñaDeshabilitar = {
+    passwordValidarDeshabilitar: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
+};
+
+const campoValidarContraseñaDeshabilitar = {
+    passwordValidarDeshabilitar: false
+};
+
+const validarContraseñaDeshabilitar = (e) => {
+    switch (e.target.name) {
+        case 'passwordValidarDeshabilitar':
+            if (expresionValidarContraseñaDeshabilitar.passwordValidarDeshabilitar.test(e.target.value)) {
+                document.getElementById('iconoPasswordValidarDeshabilitar').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                document.getElementById('iconoPasswordValidarDeshabilitar').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                //Alerta de error
+                document.getElementById('alertPasswordValidar').classList.remove('alertaError');
+                //Validar
+                campoValidarContraseñaDeshabilitar['passwordValidarDeshabilitar'] = true;
+            }else{
+                document.getElementById('iconoPasswordValidarDeshabilitar').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                document.getElementById('iconoPasswordValidarDeshabilitar').classList.add('mostrar','bi-x-circle-fill','noValidado');
+                //Mensaje de error
+                document.getElementById('alertPasswordValidar').classList.add('alertaError');
+                campoValidarContraseñaDeshabilitar['passwordValidar'] = false;
+            }
+        break;
+    }
+};
+
+inputsValidarContraseñaDeshabilitar.forEach((input) => {
+    input.addEventListener('keyup' , validarContraseñaDeshabilitar);
+    input.addEventListener('blur' , validarContraseñaDeshabilitar);
+});
+
+const formDeshabilitarUsuarioPreValidacion = document.getElementById('formDeshabilitarUsuarioPreValidacion');
+
+formDeshabilitarUsuarioPreValidacion.addEventListener('submit', (e) => {
+    const passwordValidarDeshabilitarValue = passwordValidarDeshabilitar.value.trim();
+    
+    e.preventDefault();
+    
+    if (passwordValidarDeshabilitarValue === "") {
+        alert("¡Debe completar el campo contraseña actual!");
+    }
+    
+    if (campoValidarContraseñaDeshabilitar.passwordValidarDeshabilitar) {
+        //Enviar AJAX
+        document.getElementById('cargandoPreValidacionDeshabilitar').style.display = 'block';
+        document.getElementById('textoPreValidacionDeshabilitar').style.display = 'none';
+        $ingreso = "Deshabilitar";
+        confirmarContraseña(formDeshabilitarUsuarioPreValidacion, $ingreso);
+    }
+}); 
+//#endregion
+
 //#region Configuración profesional
 if (localStorage.getItem("id_profesional") != "null") {
     document.getElementById('confProf').classList.remove('mostrar');
