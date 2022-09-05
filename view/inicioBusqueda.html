@@ -287,31 +287,31 @@
 									<form onsubmit="event.preventDefault()" action="#" method="post" id="formConfProf">
 										<b>Configuración grilla profesional</b>
 										<br><br>
-										<span class="texto">Días de atención </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoDias" title="Campo Obligatorio"></i><!--Campo obligatorio-->
+										<span class="texto">Días de atención </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoDiasAtencion" title="Campo Obligatorio"></i><!--Campo obligatorio-->
 										<br>
 										<div class="card card-body">	
 											<div class="row">
 												<div class="col-6">
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" value="Lunes" id="Lunes">
+														<input class="form-check-input" type="checkbox" value="lunes" id="lunes">
 														<label class="form-check-label" for="Lunes">
 															Lunes
 														</label>
 													</div>
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" value="Martes" id="Martes">
+														<input class="form-check-input" type="checkbox" value="martes" id="martes">
 														<label class="form-check-label" for="Martes">
 															Martes
 														</label>
 													</div>
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" value="Miercoles" id="Miercoles">
-														<label class="form-check-label" for="Miercoles">
-															Miercoles
+														<input class="form-check-input" type="checkbox" value="miercoles" id="miercoles">
+														<label class="form-check-label" for="miércoles">
+															Miércoles
 														</label>
 													</div>
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" value="Jueves" id="Jueves">
+														<input class="form-check-input" type="checkbox" value="jueves" id="jueves">
 														<label class="form-check-label" for="Jueves">
 															Jueves
 														</label>
@@ -319,19 +319,19 @@
 												</div>
 												<div class="col-6">
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" value="Viernes" id="Viernes">
+														<input class="form-check-input" type="checkbox" value="viernes" id="viernes">
 														<label class="form-check-label" for="Viernes">
 															Viernes
 														</label>
 													</div>
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" value="Sabado" id="Sabado">
+														<input class="form-check-input" type="checkbox" value="sabado" id="sabado">
 														<label class="form-check-label" for="Sabado">
 															Sabado
 														</label>
 													</div>
 													<div class="form-check">
-														<input class="form-check-input" type="checkbox" value="Domingo" id="Domingo">
+														<input class="form-check-input" type="checkbox" value="domingo" id="domingo">
 														<label class="form-check-label" for="Domingo">
 															Domingo
 														</label>
@@ -636,6 +636,12 @@
 						<strong>Contraseña:</strong>
 						La contraseña debe tener de 8 a 16 caracteres.
 						<br>Debe contener al menos una "mayúscula" y un "digito".
+					</div>
+					<!--Alerta Días de Atención-->
+					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDiasAtencion">
+						<i class="bi bi-info-circle-fill"></i>
+						<strong>Días de atención:</strong>
+						Debes seleccionar minimo 1 día de atención a la semana.
 					</div>
 				</div>
 		  	</div>

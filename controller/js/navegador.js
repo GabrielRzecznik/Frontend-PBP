@@ -239,9 +239,91 @@ formDeshabilitarUsuarioPreValidacion.addEventListener('submit', (e) => {
 }); 
 //#endregion
 
-//#region Configuración profesional
+//#region Opción Configuración profesional
 if (localStorage.getItem("id_profesional") != "null") {
     document.getElementById('confProf').classList.remove('mostrar');
 }
 //#endregion
 
+//#region Configuración profesional
+const campoConfiguracionProfesional = {
+    diasAtencion: false
+};
+
+var checkLunes = document.getElementById("lunes");
+var checkMartes = document.getElementById("martes");
+var checkMiercoles = document.getElementById("miercoles");
+var checkJueves = document.getElementById("jueves");
+var checkViernes = document.getElementById("viernes");
+var checkSabado = document.getElementById("sabado");
+var checkDomingo = document.getElementById("domingo");
+
+document.getElementById("lunes").addEventListener("click", function() {
+    validarDiasAtencion();
+});
+
+document.getElementById("martes").addEventListener("click", function() {
+    validarDiasAtencion();
+});
+
+document.getElementById("miercoles").addEventListener("click", function() {
+    validarDiasAtencion();
+});
+
+document.getElementById("jueves").addEventListener("click", function() {
+    validarDiasAtencion();
+});
+
+document.getElementById("viernes").addEventListener("click", function() {
+    validarDiasAtencion();
+});
+
+document.getElementById("sabado").addEventListener("click", function() {
+    validarDiasAtencion();
+});
+
+document.getElementById("domingo").addEventListener("click", function() {
+    validarDiasAtencion();
+});
+
+
+$dias = [];
+function validarDiasAtencion() {
+    if (checkLunes.checked == true || checkMartes.checked == true || checkMiercoles.checked == true || checkJueves.checked == true || checkViernes.checked == true ||  checkSabado.checked == true ||  checkDomingo.checked == true ) {
+        $dias = [];//Vaciar
+        if (checkLunes.checked == true) {
+            $dias.push('Lunes');
+        }if (checkMartes.checked == true) {
+            $dias.push('Martes');
+        }if (checkMiercoles.checked == true) {
+            $dias.push('Miércoles'); 
+        }if (checkJueves.checked == true) {
+            $dias.push('Jueves');
+        }if (checkViernes.checked == true) {
+            $dias.push('Viernes');
+        }if (checkSabado.checked == true) {
+            $dias.push('Sábado'); 
+        }if (checkDomingo.checked == true) {
+            $dias.push('Domingo'); 
+        }
+        
+        document.getElementById('iconoDias').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+        document.getElementById('iconoDias').classList.add('mostrar','bi-check-circle-fill','validado');
+        
+        //Mensaje de error
+        document.getElementById('alertDiasAtencion').classList.remove('alertaError');
+        //Validar
+        campoConfiguracionProfesional['diasAtencion'] = true;
+    }else{
+        //Mensaje de error
+        document.getElementById('alertDiasAtencion').classList.add('alertaError');
+        //Limpiar mensaje
+        //document.getElementById('x').classList.remove('alertaError');
+        campoConfiguracionProfesional["diasAtencion"] = false;
+
+        document.getElementById('iconoDias').classList.remove('bi-exclamation-circle-fill','signo','bi-check-circle-fill','validado');
+        document.getElementById('iconoDias').classList.add('mostrar','bi-x-circle-fill','noValidado');
+    }   
+}
+
+//#endregion
