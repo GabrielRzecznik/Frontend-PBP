@@ -252,8 +252,8 @@
 									<!--Deshabilitar Cuenta Usuario-->
 									<div class="card card-body cardDeshabilitarUsuario" id="cardDeshabilitarUsuario">
 										<b>¿Esta seguro que desea deshabilitar su cuenta usuario? </b>
-										<br>
-										Si deshabilitas tu cuenta usuario ya no podrás acceder a ella, tampoco perfil será visible por otros usuarios.<br>
+										<br><br>
+										Si deshabilitas tu cuenta usuario ya no podrás acceder a ella, tambien tus perfiles de paciente y profesional de ser el caso, dejaran de ser visibles por otros usuarios.<br>
 										Podrás restablecer tu cuenta usuario en cualquier momento desde la opción "Restablecer" en el inicio de sesión.<br>
 										<button class="btn btn-danger botonDeshabilitar" id="deshabilitarUsuario">
 											<span class="textoPreValidacionDeshabilitar" id="textoBotonDeshabilitar">Deshabilitar cuenta</span>
@@ -601,6 +601,11 @@
 													<option value="23:45">23:45 hs</option>
 												</select>
 											</div>
+										</div>
+										<br>
+										<span class="texto">Deshabilitar Horarios </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoDeshabilitarHorarios" title="Campo Obligatorio"></i>
+										<div class="card card-body">
+											<span>¡Complete los campos anteriores previamente!</span>
 										</div>
 										<button type="submit" class="btn btn-warning botonEditar" name="botonConfProf" id="botonConfProf">
 											<span class="editarUsuario" id="configurarGrilla">Guardar configuración</span>
