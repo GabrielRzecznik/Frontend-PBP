@@ -307,8 +307,8 @@ function validarDiasAtencion() {
             $dias.push('Domingo'); 
         }
         
-        document.getElementById('iconoDias').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
-        document.getElementById('iconoDias').classList.add('mostrar','bi-check-circle-fill','validado');
+        document.getElementById('iconoDiasAtencion').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+        document.getElementById('iconoDiasAtencion').classList.add('mostrar','bi-check-circle-fill','validado');
         
         //Mensaje de error
         document.getElementById('alertDiasAtencion').classList.remove('alertaError');
@@ -321,8 +321,8 @@ function validarDiasAtencion() {
         //document.getElementById('x').classList.remove('alertaError');
         campoConfiguracionProfesional["diasAtencion"] = false;
 
-        document.getElementById('iconoDias').classList.remove('bi-exclamation-circle-fill','signo','bi-check-circle-fill','validado');
-        document.getElementById('iconoDias').classList.add('mostrar','bi-x-circle-fill','noValidado');
+        document.getElementById('iconoDiasAtencion').classList.remove('bi-exclamation-circle-fill','signo','bi-check-circle-fill','validado');
+        document.getElementById('iconoDiasAtencion').classList.add('mostrar','bi-x-circle-fill','noValidado');
     }   
 }
 
