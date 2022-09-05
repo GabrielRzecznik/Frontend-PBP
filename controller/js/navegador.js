@@ -64,6 +64,9 @@ const validarFormulario = (e) => {
                 document.getElementById('iconoNombreUsuario').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Mensaje de error
                 document.getElementById('alertNombreUsuario').classList.add('alertaError');
+                //Limpiar mensaje
+                document.getElementById('alertPassword').classList.remove('alertaError');
+                document.getElementById('alertPasswordValidar').classList.remove('alertaError');
                 camposEditar['nombreUsuario'] = false;
             }
             break;
