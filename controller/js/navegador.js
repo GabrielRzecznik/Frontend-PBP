@@ -345,16 +345,7 @@ document.getElementById("duracionConsulta").addEventListener('change', (event) =
         //Mensaje de error
         document.getElementById('alertDuracionConsulta').classList.add('alertaError');
         //Limpiar mensaje
-        document.getElementById('alertNombre').classList.remove('alertaError');
-        document.getElementById('alertApellido').classList.remove('alertaError');
-        document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-        //document.getElementById('alertFoto').classList.remove('alertaError');
-        document.getElementById('alertTelefono').classList.remove('alertaError');
-        document.getElementById('alertProvincia').classList.remove('alertaError');
-        document.getElementById('alertLocalidad').classList.remove('alertaError');
-        document.getElementById('alertCalle').classList.remove('alertaError');
-        document.getElementById('alertAltura').classList.remove('alertaError');
-        document.getElementById('alertDepartamento').classList.remove('alertaError');
+        document.getElementById('alertDiasAtencion').classList.remove('alertaError');
         campoConfiguracionProfesional['duracionConsulta'] = false;
     }
 });
