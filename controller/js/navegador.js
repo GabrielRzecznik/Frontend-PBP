@@ -247,9 +247,11 @@ if (localStorage.getItem("id_profesional") != "null") {
 
 //#region Configuración profesional
 const campoConfiguracionProfesional = {
-    diasAtencion: false
+    diasAtencion: false,
+    duracionConsulta: false,
 };
 
+//Validar Días de Atención
 var checkLunes = document.getElementById("lunes");
 var checkMartes = document.getElementById("martes");
 var checkMiercoles = document.getElementById("miercoles");
@@ -306,6 +308,8 @@ function validarDiasAtencion() {
         }if (checkDomingo.checked == true) {
             $dias.push('Domingo'); 
         }
+
+        console.log($dias);
         
         document.getElementById('iconoDiasAtencion').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
         document.getElementById('iconoDiasAtencion').classList.add('mostrar','bi-check-circle-fill','validado');
@@ -324,6 +328,41 @@ function validarDiasAtencion() {
         document.getElementById('iconoDiasAtencion').classList.remove('bi-exclamation-circle-fill','signo','bi-check-circle-fill','validado');
         document.getElementById('iconoDiasAtencion').classList.add('mostrar','bi-x-circle-fill','noValidado');
     }   
+}
+
+//Validar Duración de Consulta
+document.getElementById("duracionConsulta").addEventListener('change', (event) => {
+    if (event.target.value != 0) {
+        document.getElementById('iconoDuracionConsulta').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
+        document.getElementById('iconoDuracionConsulta').classList.add('validado','bi-check-circle-fill');
+        //Mensaje de error
+        document.getElementById('alertDuracionConsulta').classList.remove('alertaError');
+        //Validar
+        campoConfiguracionProfesional['duracionConsulta'] = true;
+    }else{
+        document.getElementById('iconoDuracionConsulta').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
+        document.getElementById('iconoDuracionConsulta').classList.add('noValidado','bi-x-circle-fill');
+        //Mensaje de error
+        document.getElementById('alertDuracionConsulta').classList.add('alertaError');
+        //Limpiar mensaje
+        document.getElementById('alertNombre').classList.remove('alertaError');
+        document.getElementById('alertApellido').classList.remove('alertaError');
+        document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
+        //document.getElementById('alertFoto').classList.remove('alertaError');
+        document.getElementById('alertTelefono').classList.remove('alertaError');
+        document.getElementById('alertProvincia').classList.remove('alertaError');
+        document.getElementById('alertLocalidad').classList.remove('alertaError');
+        document.getElementById('alertCalle').classList.remove('alertaError');
+        document.getElementById('alertAltura').classList.remove('alertaError');
+        document.getElementById('alertDepartamento').classList.remove('alertaError');
+        campoConfiguracionProfesional['duracionConsulta'] = false;
+    }
+});
+
+if (duracionConsulta.value == 0) {
+    document.getElementById('iconoDuracionConsulta').classList.add('mostrar');//Agregar
+    document.getElementById('iconoDuracionConsulta').classList.remove('bi-check-circle-fill');//Borrar
+    campoConfiguracionProfesional['duracionConsulta'] = false;
 }
 
 //#endregion
