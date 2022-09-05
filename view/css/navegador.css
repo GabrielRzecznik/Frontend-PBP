@@ -17,10 +17,10 @@
    font-weight: bold;
 }
 
-@media (max-width: 350px) { 
+@media (max-width: 550px) { 
    .textoLogo{
       color: #329DC6;
-      font-size: 10px;
+      font-size: 13px;
       font-family: 'Poppins', sans-serif;
       font-weight: bold;
    }
