@@ -95,7 +95,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         if (data[i].localidadConsultorio != "") {
                             //Carta Profesional Con Consultorio
                             con.innerHTML = con.innerHTML +
-                            '<div class="col-md-6 margenCarta">' +
+                            '<div class="col-lg-6 margenCarta">' +
                                 '<div class="card bg-light carta">' +
                                     '<div class="row">' +
                                         '<div class="col-6">' +
@@ -136,7 +136,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         }else{
                             //Carta Profesional Sin Consultorio
                             con.innerHTML = con.innerHTML +
-                            '<div class="col-md-6 margenCarta">' +
+                            '<div class="col-lg-6 margenCarta">' +
                                 '<div class="card bg-light carta">' +
                                     '<div class="row">' +
                                         '<div class="col-6">' +

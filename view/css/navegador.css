@@ -1,5 +1,26 @@
+/*Tipografias*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+
 .mostrarPagina{
     display: none;
+}
+
+.logo{
+   width: 25px;
+   height: 25px;
+}
+
+.textoLogo{
+   color: #329DC6;
+   font-size: 15px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+   .logoUsuario {
+      display: none;
+    }
 }
 
 .seleccionado{
