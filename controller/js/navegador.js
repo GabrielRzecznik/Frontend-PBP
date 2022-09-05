@@ -63,7 +63,7 @@ const validarFormulario = (e) => {
                 document.getElementById('iconoNombreUsuario').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
                 document.getElementById('iconoNombreUsuario').classList.add('mostrar','bi-x-circle-fill','noValidado');
                 //Mensaje de error
-                document.getElementById('alertPassword').classList.add('alertaError');
+                document.getElementById('alertNombreUsuario').classList.add('alertaError');
                 camposEditar['nombreUsuario'] = false;
             }
             break;
