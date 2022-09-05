@@ -322,7 +322,7 @@ function validarDiasAtencion() {
         //Mensaje de error
         document.getElementById('alertDiasAtencion').classList.add('alertaError');
         //Limpiar mensaje
-        //document.getElementById('x').classList.remove('alertaError');
+        document.getElementById('alertDuracionConsulta').classList.remove('alertaError');
         campoConfiguracionProfesional["diasAtencion"] = false;
 
         document.getElementById('iconoDiasAtencion').classList.remove('bi-exclamation-circle-fill','signo','bi-check-circle-fill','validado');
