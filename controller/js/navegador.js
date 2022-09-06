@@ -731,8 +731,8 @@ formularioEditarPaciente.addEventListener('submit', (e) => {
     
     if (camposEditarPaciente.nombre && camposEditarPaciente.apellido && camposEditarPaciente.fechaNacimiento && camposEditarPaciente.sexoPaciente && camposEditarPaciente.telefono && camposEditarPaciente.provincia && camposEditarPaciente.localidad && camposEditarPaciente.calle && camposEditarPaciente.altura && camposEditarPaciente.departamento) {
         //Enviar AJAX
-        document.getElementById('tituloRegistrar').style.display = 'none';
-        document.getElementById('cargandoRegistrar').style.display = 'block';
+        document.getElementById('textoEditarPaciente').style.display = 'none';
+        document.getElementById('cargandoEditarPaciente').style.display = 'block';
         APP.doSearch();
         //registrarPaciente(formulario);
     }
@@ -771,7 +771,7 @@ const APP = {
       //console.log(APP.data['display_name']); - por si despues agregamos codigo postal
 
       //Enviar Ajax
-      editarPaciente(formulario, APP.data['lat'], APP.data['lon']);
+      editarPaciente(formularioEditarPaciente, APP.data['lat'], APP.data['lon']);
     },
 };
 
