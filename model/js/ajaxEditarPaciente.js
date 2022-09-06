@@ -1,5 +1,7 @@
 function editarPaciente(formulario, $latitud, $longitud){
     var formData = new FormData(formulario);
+    formData.append("sexo", formulario.sexoPaciente.value);
+    formData.delete("sexoPaciente");
     formData.append("latitud", $latitud);
     formData.append("longitud", $longitud);
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
