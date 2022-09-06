@@ -434,9 +434,9 @@ const APP = {
       //Enviar Ajax
       registrarPaciente(formulario, APP.data['lat'], APP.data['lon']);
     },
-  };
-  
-  document.addEventListener('DOMContentLoaded', APP.init);
-  //#endregion
+};
 
-  buscarProvincias();
+document.addEventListener('DOMContentLoaded', APP.init);
+//#endregion
+
+buscarProvincias();
