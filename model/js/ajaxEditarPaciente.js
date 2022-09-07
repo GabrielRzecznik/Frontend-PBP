@@ -6,7 +6,6 @@ function editarPaciente(formulario, $latitud, $longitud){
     formData.append("longitud", $longitud);
     formData.append("id_usu", localStorage.getItem("id_usuario"));
     var formJSON = JSON.stringify(Object.fromEntries(formData));
-    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {

@@ -728,15 +728,15 @@ const formularioEditarPaciente = document.getElementById('formEditarPaciente');
 formularioEditarPaciente.addEventListener('submit', (e) => {
     const nombreValue = nombre.value.trim();
     const apellidoValue = apellido.value.trim();
-    //const fechaNacimientoValue = fechaNacimiento.value.trim();
+    const fechaNacimientoValue = fechaNacimiento.value.trim();
     const sexoPacienteValue = sexoPaciente.value.trim();
-    //const fotoValue = foto.value.trim();
+    const fotoValue = foto.value.trim();
     const telefonoValue = telefono.value.trim();
     const provinciaValue = provincia.value.trim();
     const localidadValue = localidad.value.trim();
     const calleValue = calle.value.trim();
     const alturaValue = altura.value.trim();
-    //const departamentoValue = departamento.value.trim();
+    const departamentoValue = departamento.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
@@ -745,11 +745,12 @@ formularioEditarPaciente.addEventListener('submit', (e) => {
     }
     
     if (camposEditarPaciente.nombre && camposEditarPaciente.apellido && camposEditarPaciente.fechaNacimiento && camposEditarPaciente.sexoPaciente && camposEditarPaciente.telefono && camposEditarPaciente.provincia && camposEditarPaciente.localidad && camposEditarPaciente.calle && camposEditarPaciente.altura && camposEditarPaciente.departamento) {
-        //Enviar AJAX
-        document.getElementById('textoEditarPaciente').style.display = 'none';
-        document.getElementById('cargandoEditarPaciente').style.display = 'block';
-        APP.doSearch();
-        //registrarPaciente(formulario);
+        if (nombreValue != localStorage.getItem("nombre") || apellidoValue != localStorage.getItem("apellido") || fechaNacimientoValue != localStorage.getItem("fechaNacimiento") || sexoPacienteValue != localStorage.getItem("sexo") || fotoValue != localStorage.getItem("foto") || telefonoValue != localStorage.getItem("telefono") || provinciaValue != localStorage.getItem("provincia") || localidadValue != localStorage.getItem("localidad") || calleValue != localStorage.getItem("calle") || alturaValue != localStorage.getItem("altura") || departamentoValue != localStorage.getItem("departamento")) {
+            //Enviar AJAX
+            document.getElementById('textoEditarPaciente').style.display = 'none';
+            document.getElementById('cargandoEditarPaciente').style.display = 'block';
+            APP.doSearch();
+        }
     }
 
 }); 
