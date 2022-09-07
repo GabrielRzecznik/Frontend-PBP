@@ -432,9 +432,6 @@ if (rangoHorarioDiaDesde.value == 0) {
 }
 //#endregion
 
-//Calcular y Armar Rango Horario Dia Hasta
-
-
 //Validar Rango Horario Dia Hasta
 document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (event) => {
     if (event.target.value != 0) {
