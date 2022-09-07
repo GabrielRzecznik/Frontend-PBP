@@ -15,6 +15,7 @@ document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 buscarProvincias();
 if (localStorage["departamento"] != "") {
     
+    document.getElementById('departamento').value = localStorage["departamento"];
 }
 document.getElementById('nombre').value = localStorage["nombre"];
 document.getElementById('apellido').value = localStorage["apellido"];
@@ -24,7 +25,7 @@ document.getElementById('telefono').value = localStorage["telefono"];
 document.getElementById('localidad').value = localStorage["localidad"];
 document.getElementById('calle').value = localStorage["calle"];
 document.getElementById('altura').value = localStorage["altura"];
-document.getElementById('departamento').value = localStorage["departamento"];
+
 
 //Cerrar sesión
 function cerrarSesion() {
