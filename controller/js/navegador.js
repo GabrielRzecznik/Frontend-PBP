@@ -12,11 +12,10 @@ document.getElementById('usuario').innerHTML = localStorage["nombreUsuario"];
 document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 
 //Setear inputs - Editar Paciente/Perfil
-document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 document.getElementById('nombre').value = localStorage["nombre"];
 document.getElementById('apellido').value = localStorage["apellido"];
 document.getElementById('fechaNacimiento').value = localStorage["fechaNacimiento"];
-document.getElementById('sexo').value = localStorage["sexo"];
+document.getElementById('sexoPaciente').value = localStorage["sexo"];
 document.getElementById('telefono').value = localStorage["telefono"];
 document.getElementById('provincia').value = localStorage["provincia"];
 document.getElementById('localidad').value = localStorage["localidad"];
