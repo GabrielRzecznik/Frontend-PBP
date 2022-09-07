@@ -14,7 +14,7 @@ document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 //Setear inputs - Editar Paciente/Perfil
 buscarProvincias();
 if (localStorage["departamento"] != "") {
-    
+    document.getElementById('iconoDepartamento').classList.add('signo','bi-check-circle-fill','noValidado');
     document.getElementById('departamento').value = localStorage["departamento"];
 }
 document.getElementById('nombre').value = localStorage["nombre"];
