@@ -787,7 +787,7 @@ const APP = {
     },
     showSearchResults: () => {
       //console.log(APP.data['display_name']); - por si despues agregamos codigo postal
-
+    console.log(formularioEditarPaciente);
       //Enviar Ajax
       editarPaciente(formularioEditarPaciente, APP.data['lat'], APP.data['lon']);
     },
