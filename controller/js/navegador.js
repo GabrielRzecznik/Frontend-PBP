@@ -378,6 +378,33 @@ if (duracionConsulta.value == 0) {
 }
 //#endregion
 
+//Validar Duración de Consulta
+document.getElementById("descanso").addEventListener('change', (event) => {
+    if (event.target.value != 0) {
+        document.getElementById('iconoDescanso').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
+        document.getElementById('iconoDescanso').classList.add('validado','bi-check-circle-fill');
+        //Mensaje de error
+        document.getElementById('alertDescanso').classList.remove('alertaError');
+        //Validar
+        campoConfiguracionProfesional['descanso'] = true;
+    }else{
+        document.getElementById('iconoDescanso').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
+        document.getElementById('iconoDescanso').classList.add('noValidado','bi-x-circle-fill');
+        //Mensaje de error
+        document.getElementById('alertDescanso').classList.add('alertaError');
+        //Limpiar mensaje
+        document.getElementById('alertDiasAtencion').classList.remove('alertaError');
+        campoConfiguracionProfesional['descanso'] = false;
+    }
+});
+
+if (descanso.value == 0) {
+    document.getElementById('iconoDescanso').classList.add('mostrar');//Agregar
+    document.getElementById('iconoDescanso').classList.remove('bi-check-circle-fill');//Borrar
+    campoConfiguracionProfesional['descanso'] = false;
+}
+//#endregion
+
 //#region Validación de Campos
 const inputsEditarPaciente = document.querySelectorAll('#formEditarPaciente input');
 
