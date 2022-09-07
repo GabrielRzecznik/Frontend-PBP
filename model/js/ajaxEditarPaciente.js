@@ -22,7 +22,7 @@ function editarPaciente(formulario, $latitud, $longitud){
                 localStorage.setItem("localidad", localidad.value.trim());
                 localStorage.setItem("calle", calle.value.trim());
                 localStorage.setItem("altura", altura.value.trim());
-                localStorage.setItem("departamento", apellido.value.trim());
+                localStorage.setItem("departamento", departamento.value.trim());
                 localStorage.setItem("latitud", $latitud);
                 localStorage.setItem("longitud", $longitud);
                 
