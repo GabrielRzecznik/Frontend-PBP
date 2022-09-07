@@ -378,7 +378,7 @@ if (duracionConsulta.value == 0) {
 }
 //#endregion
 
-//Validar Duración de Consulta
+//Validar Duración de Descanso entre Consultas
 document.getElementById("descanso").addEventListener('change', (event) => {
     if (event.target.value != 0) {
         document.getElementById('iconoDescanso').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
@@ -402,6 +402,33 @@ if (descanso.value == 0) {
     document.getElementById('iconoDescanso').classList.add('mostrar');//Agregar
     document.getElementById('iconoDescanso').classList.remove('bi-check-circle-fill');//Borrar
     campoConfiguracionProfesional['descanso'] = false;
+}
+//#endregion
+
+//Validar Duración de Consulta
+document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (event) => {
+    if (event.target.value != 0) {
+        document.getElementById('iconoRangoHorarioDiaDesde').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
+        document.getElementById('iconoRangoHorarioDiaDesde').classList.add('validado','bi-check-circle-fill');
+        //Mensaje de error
+        document.getElementById('alertRangoHorarioDiaDesde').classList.remove('alertaError');
+        //Validar
+        campoConfiguracionProfesional['rangoHorarioDiaDesde'] = true;
+    }else{
+        document.getElementById('iconoRangoHorarioDiaDesde').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
+        document.getElementById('iconoRangoHorarioDiaDesde').classList.add('noValidado','bi-x-circle-fill');
+        //Mensaje de error
+        document.getElementById('alertRangoHorarioDiaDesde').classList.add('alertaError');
+        //Limpiar mensaje
+        document.getElementById('alertDiasAtencion').classList.remove('alertaError');
+        campoConfiguracionProfesional['rangoHorarioDiaDesde'] = false;
+    }
+});
+
+if (rangoHorarioDiaDesde.value == 0) {
+    document.getElementById('iconoRangoHorarioDiaDesde').classList.add('mostrar');//Agregar
+    document.getElementById('iconoRangoHorarioDiaDesde').classList.remove('bi-check-circle-fill');//Borrar
+    campoConfiguracionProfesional['rangoHorarioDiaDesde'] = false;
 }
 //#endregion
 

@@ -474,10 +474,10 @@
 											<option value="01:55">02:00 hs.</option>
 										</select>
 										<br>
-										<span class="texto">Rango horario de atención por día </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoRango" title="Campo Obligatorio"></i>
+										<span class="texto">Rango horario de atención por día </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoRangoHorarioDiaDesde" title="Campo Obligatorio"></i>
 										<div class="row">
 											<div class="col-6">
-												<select class="form-select" name="rangoInicio" id="rangoInicio">
+												<select class="form-select" id="rangoHorarioDiaDesde">
 													<option value="0">Hora de inicio</option>
 													<option value="00:00">00:00 hs</option>
 													<option value="00:15">00:15 hs</option>
@@ -731,6 +731,12 @@
 					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDescanso">
 						<i class="bi bi-info-circle-fill"></i>
 						<strong>Descanso entre consultas:</strong>
+						Debes seleccionar la duración de tus descansos entre consultas.
+					</div>
+					<!--Alerta Rango Horario Dia Desde-->
+					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertRangoHorarioDiaDesde">
+						<i class="bi bi-info-circle-fill"></i>
+						<strong>Rango horario de atención por día:</strong>
 						Debes seleccionar la duración de tus descansos entre consultas.
 					</div>
 					<!--Alerta Nombre-->
