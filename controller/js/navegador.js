@@ -17,6 +17,7 @@ document.getElementById('apellido').value = localStorage["apellido"];
 document.getElementById('fechaNacimiento').value = localStorage["fechaNacimiento"];
 document.getElementById('sexoPaciente').value = localStorage["sexo"];
 document.getElementById('telefono').value = localStorage["telefono"];
+buscarProvincias();
 document.getElementById('provincia').value = localStorage["provincia"];
 document.getElementById('localidad').value = localStorage["localidad"];
 document.getElementById('calle').value = localStorage["calle"];
@@ -792,4 +793,3 @@ const APP = {
 document.addEventListener('DOMContentLoaded', APP.init);
 //#endregion
 
-buscarProvincias();
