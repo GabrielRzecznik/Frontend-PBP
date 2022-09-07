@@ -392,16 +392,16 @@ const expresionesEditarPaciente = {
 };
 
 const camposEditarPaciente = {
-    nombre: false,
-    apellido: false,
-    fechaNacimiento: false,
-    Paciente: false,
+    nombre: true,
+    apellido: true,
+    fechaNacimiento: true,
+    //Paciente: false,
     //foto: false,
-    telefono: false,
-    provincia: false,
-    localidad: false,
-    calle: false,
-    altura: false,
+    telefono: true,
+    provincia: true,
+    localidad: true,
+    calle: true,
+    altura: true,
     departamento: true
 };
 
