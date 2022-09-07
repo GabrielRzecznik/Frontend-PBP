@@ -5,3 +5,8 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
     document.getElementById('mostrar').style.display = 'block';
 }
 
+//Mostrar datos perfil
+document.getElementById('mostrarNombrePerfil').innerHTML = localStorage["nombre"];
+document.getElementById('mostrarApellidoPerfil').innerHTML = localStorage["apellido"];
+
+
