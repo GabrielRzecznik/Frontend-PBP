@@ -11,6 +11,21 @@ function editarPaciente(formulario, $latitud, $longitud){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
+                
+                localStorage.setItem("nombre", nombre.value.trim());
+                localStorage.setItem("apellido", apellido.value.trim());
+                localStorage.setItem("fechaNacimiento", fechaNacimiento.value.trim());
+                localStorage.setItem("sexo", sexo.value.trim());
+                localStorage.setItem("foto", foto.value.trim());
+                localStorage.setItem("telefono", telefono.value.trim());
+                localStorage.setItem("provincia", provincia.value.trim());
+                localStorage.setItem("localidad", localidad.value.trim());
+                localStorage.setItem("calle", calle.value.trim());
+                localStorage.setItem("altura", altura.value.trim());
+                localStorage.setItem("departamento", apellido.value.trim());
+                localStorage.setItem("latitud", );
+                localStorage.setItem("longitud", );
+                
                 document.getElementById('cargandoEditarPaciente').style.display = 'none';
                 document.getElementById('textoEditarPaciente').style.display = 'block';
                 alert("¡Se guardaron los cambios!");
