@@ -43,6 +43,9 @@ function buscarProvincias(){
                     provCon.innerHTML += '<option value="'+ $provinciasArgentinas[i] +'">'+ $provinciasArgentinas[i] +'</option>';
                 }
                 const selectP = document.getElementById('provincia');
+                if (localStorage["provincia"] != "") {
+                    document.getElementById('provincia').value = localStorage["provincia"];
+                }
             }if (xmlhttp.status == 401) {
                 alert("Ocurrio un error inesperado al traer las provincias")
             }
