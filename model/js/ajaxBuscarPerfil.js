@@ -40,6 +40,6 @@ function buscarPerfil($nombreUsuario){
             }   
         }
     }
-    xmlhttp.open("GET",'https://backend-pbp.herokuapp.com/Usuarios/buscarPerfil'+$nombreUsuario,false);
+    xmlhttp.open("GET",'https://backend-pbp.herokuapp.com/Usuarios/buscarPerfil/'+$nombreUsuario,false);
     xmlhttp.send();//No le mando
 }
