@@ -7,7 +7,20 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 
 //Mostrar Usuario
 document.getElementById('usuario').innerHTML = localStorage["nombreUsuario"];
+
+//Setear inputs - Editar Usuario
 document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
+
+//Setear inputs - Editar Paciente/Perfil
+document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
+document.getElementById('nombre').value = localStorage["nombre"];
+document.getElementById('apellido').value = localStorage["apellido"];
+document.getElementById('fechaNacimiento').value = localStorage["fechaNacimiento"];
+document.getElementById('provincia').value = localStorage["provincia"];
+document.getElementById('localidad').value = localStorage["localidad"];
+document.getElementById('calle').value = localStorage["calle"];
+document.getElementById('altura').value = localStorage["altura"];
+document.getElementById('departamento').value = localStorage["departamento"];
 
 //Cerrar sesión
 function cerrarSesion() {
