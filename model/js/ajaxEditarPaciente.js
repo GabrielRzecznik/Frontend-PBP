@@ -4,7 +4,7 @@ function editarPaciente(formulario, $latitud, $longitud){
     formData.delete("sexoPaciente");
     formData.append("latitud", $latitud);
     formData.append("longitud", $longitud);
-    formData.append("id_usuario", localStorage.getItem("id_usuario"));
+    formData.append("id_usu", localStorage.getItem("id_usuario"));
     var formJSON = JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
 
