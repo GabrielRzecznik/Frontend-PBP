@@ -15,7 +15,7 @@ function editarPaciente(formulario, $latitud, $longitud){
                 localStorage.setItem("nombre", nombre.value.trim());
                 localStorage.setItem("apellido", apellido.value.trim());
                 localStorage.setItem("fechaNacimiento", fechaNacimiento.value.trim());
-                localStorage.setItem("sexo", sexo.value.trim());
+                localStorage.setItem("sexo", sexoPaciente.value.trim());
                 localStorage.setItem("foto", foto.value.trim());
                 localStorage.setItem("telefono", telefono.value.trim());
                 localStorage.setItem("provincia", provincia.value.trim());
