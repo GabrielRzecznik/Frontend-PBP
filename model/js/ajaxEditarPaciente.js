@@ -18,6 +18,8 @@ function editarPaciente(formulario, $latitud, $longitud){
                 window.location.reload();
             }if (xmlhttp.status == 401) {
                alert("¡Ocurrio un error inesperado!");
+               document.getElementById('cargandoEditarPaciente').style.display = 'none';
+               document.getElementById('textoEditarPaciente').style.display = 'block';
             }
         }
     }
