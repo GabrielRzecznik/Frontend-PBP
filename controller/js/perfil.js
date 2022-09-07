@@ -4,3 +4,4 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 }else{
     document.getElementById('mostrar').style.display = 'block';
 }
+
