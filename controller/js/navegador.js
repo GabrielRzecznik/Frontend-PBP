@@ -395,7 +395,7 @@ const camposEditarPaciente = {
     nombre: true,
     apellido: true,
     fechaNacimiento: true,
-    //Paciente: false,
+    sexoPaciente: true,
     //foto: false,
     telefono: true,
     provincia: true,
@@ -628,7 +628,6 @@ document.getElementById("sexoPaciente").addEventListener('change', (event) => {
 
 if (sexoPaciente.value == 0) {
     document.getElementById('iconoSexoPaciente').classList.add('mostrar');//Agregar
-    document.getElementById('iconoSexoPaciente').classList.remove('bi-check-circle-fill');//Borrar
     camposEditarPaciente['sexoPaciente'] = false;
 }
 
@@ -715,8 +714,6 @@ document.getElementById("provincia").addEventListener('change', (event) => {
 
 if (provincia.value == 0) {
     document.getElementById('iconoProvincia').classList.add('mostrar');//Agregar
-    document.getElementById('iconoProvincia').classList.remove('bi-check-circle-fill');//Borrar
-    camposEditarPaciente['provincia'] = false;
 }
 
 inputsEditarPaciente.forEach((input) => {
