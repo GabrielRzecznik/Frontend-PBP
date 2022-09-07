@@ -13,6 +13,9 @@ document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 
 //Setear inputs - Editar Paciente/Perfil
 buscarProvincias();
+if (localStorage["departamento"] != "") {
+    
+}
 document.getElementById('nombre').value = localStorage["nombre"];
 document.getElementById('apellido').value = localStorage["apellido"];
 document.getElementById('fechaNacimiento').value = localStorage["fechaNacimiento"];
