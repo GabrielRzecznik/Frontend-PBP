@@ -435,8 +435,10 @@ if (rangoHorarioDiaDesde.value == 0) {
 //Validar Rango Horario Dia Hasta
 document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (event) => {
     if (event.target.value != 0) {
-        document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
-        document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
+        if(campoConfiguracionProfesional.rangoHorarioDiaHasta == true){
+            document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
+            document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
+        }
         //Mensaje de error
         document.getElementById('alertRangoHorarioDiaHasta').classList.remove('alertaError');
         //Validar
@@ -457,11 +459,33 @@ if (rangoHorarioDiaHasta.value == 0) {
     document.getElementById('iconoRangoHorarioDia').classList.remove('bi-check-circle-fill');//Borrar
     campoConfiguracionProfesional['rangoHorarioDiaHasta'] = false;
 }
+
+//Validar Rango Horario Día Hasta
+document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (event) => {
+    if (event.target.value != 0) {
+        document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
+        document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
+        //Mensaje de error
+        document.getElementById('alertDiasAtencion').classList.remove('alertaError');
+        //Validar
+        campoConfiguracionProfesional['rangoHorarioDiaHasta'] = true;
+    }else{
+        document.getElementById('iconoRangoHorarioDia').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
+        document.getElementById('iconoRangoHorarioDia').classList.add('noValidado','bi-x-circle-fill');
+        //Mensaje de error
+        document.getElementById('alertDiasAtencion').classList.add('alertaError');
+        //Limpiar mensaje
+       
+        campoConfiguracionProfesional['rangoHorarioDiaHasta'] = false;
+    }
+});
 //#endregion
+
+
 
 //#region Envia Formulario Configuración Grilla Profesional
 const formConfProf = document.getElementById('formConfProf');
-
+//ESTOY AQUI
 formConfProf.addEventListener('submit', (e) => {
     
 }); 
