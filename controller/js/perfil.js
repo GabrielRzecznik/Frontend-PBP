@@ -9,3 +9,5 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 document.getElementById('mostrarNombrePerfil').innerHTML = localStorage["nombre"];
 document.getElementById('mostrarApellidoPerfil').innerHTML = localStorage["apellido"];
 
+let url = location.href;
+console.log(url);
