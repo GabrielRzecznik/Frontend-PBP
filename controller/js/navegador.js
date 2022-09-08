@@ -459,6 +459,14 @@ if (rangoHorarioDiaHasta.value == 0) {
 }
 //#endregion
 
+//#region Envia Formulario Configuración Grilla Profesional
+const formConfProf = document.getElementById('formConfProf');
+
+formConfProf.addEventListener('submit', (e) => {
+    
+}); 
+//#endregion
+
 //#region Validación de Campos
 const inputsEditarPaciente = document.querySelectorAll('#formEditarPaciente input');
 
