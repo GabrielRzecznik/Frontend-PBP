@@ -181,7 +181,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         }
 
                         var funciones;
-                        funciones = funciones + document.getElementById('verPerfil'+i).addEventListener("click", function() {
+                        funciones = funciones + "" + document.getElementById('verPerfil'+i).addEventListener("click", function() {
                             alert("hola");
                         });
 
