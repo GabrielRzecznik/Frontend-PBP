@@ -123,7 +123,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '</div>' +
                                                 '<span class="infoProfesional">' +
                                                     $tiposConsulta +
-                                                '</span><button type="button" class="btn btn-primary botonProfesional" id="verPerfil'+i+'">Ver perfil</button>' +
+                                                '</span><button type="submit" class="btn btn-primary botonProfesional" id="verPerfil'+i+'">Ver perfil</button>' +
                                             '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +
@@ -164,7 +164,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '</div>' +
                                                 '<span class="infoProfesional">' +
                                                     $tiposConsulta +
-                                                '</span><button type="button" class="btn btn-primary botonProfesional" id="verPerfil'+i+'">Ver perfil</button>' +
+                                                '</span><button type="submit" class="btn btn-primary botonProfesional" id="verPerfil'+i+'">Ver perfil</button>' +
                                             '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +
@@ -179,12 +179,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                 '</div>' +
                             '</div>';
                         }
-                        
-                        $nombreUsuario = data[i].nombreUsuario;
-                        document.getElementById('verPerfil'+i).addEventListener("click", function($nombreUsuario) {
-                            alert($nombreUsuario);
-                        });
-
 
                         if (data[i].localidadConsultorio != "") {
                             //Mostrar Mapa
