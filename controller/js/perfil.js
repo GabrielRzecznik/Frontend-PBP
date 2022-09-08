@@ -6,11 +6,15 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 }
 
 //Obtener Url Actual
-let profesional = location.pathname;
+let profesional = location.search;
+profesional = profesional.slice(1);
 
-console.log(profesional);
+if (profesional == "") {
+    //Mostrar datos perfil
+    document.getElementById('mostrarNombrePerfil').innerHTML = localStorage["nombre"];
+    document.getElementById('mostrarApellidoPerfil').innerHTML = localStorage["apellido"];
+}else{
 
-//Mostrar datos perfil
-document.getElementById('mostrarNombrePerfil').innerHTML = localStorage["nombre"];
-document.getElementById('mostrarApellidoPerfil').innerHTML = localStorage["apellido"];
+}
+
 
