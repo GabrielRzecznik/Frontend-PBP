@@ -4,7 +4,7 @@ window.addEventListener('load',load);
 function load(){
     //Verificar si hay logueo
     if (localStorage.getItem("id_usuario") && localStorage.getItem("nombreUsuario")) {
-        window.location.href = "https://frontend-pbp.herokuapp.com/view/inicioBusqueda.html";
+        window.location.href = "../view/inicioBusqueda.php";
     }
     usuario.focus();
 }
