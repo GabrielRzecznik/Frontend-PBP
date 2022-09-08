@@ -53,7 +53,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     }
                     //Creación de cartas profesionales
                     for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
-                        
+
                         //Calcular edad
                         var añoNacimiento = parseInt(String(data[i].fechaNacimiento).substring(0,4));
                         var mesNacimiento = parseInt(String(data[i].fechaNacimiento).substring(5,7));
@@ -164,7 +164,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '</div>' +
                                                 '<span class="infoProfesional">' +
                                                     $tiposConsulta +
-                                                '</span><button type="button" class="btn btn-primary botonProfesional">Ver perfil</button>' +
+                                                '</span><button type="button" class="btn btn-primary botonProfesional" id="verPerfil'+i+'">Ver perfil</button>' +
                                             '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +
@@ -218,6 +218,10 @@ function buscarProfesionales(formulario, $valorUbicacion){
     
                             document.getElementById('visualizarMapa'+i).innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.8724279365922!2d-58.354048612043975!3d-34.66114596650525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2s'+$calleAvenida+'%2'+$altura+'%2C%20'+$codigoPostal+'DSF%20'+$localidad+'%2C%20'+$provincia+'!5e0!3m2!1ses-419!2sar" class="mapa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
                         }
+
+                        document.getElementById("verPerfil"+i).addEventListener("click", function() {
+                            alert(data[i].nombreUsuario);
+                        });
                     }
 
                     document.getElementById('tituloCargando').style.display = 'block';
