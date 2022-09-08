@@ -54,10 +54,6 @@ function buscarProfesionales(formulario, $valorUbicacion){
                     //Creación de cartas profesionales
                     for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
 
-                        document.getElementById('verPerfil'+i).addEventListener("click", function() {
-                            alert("hola");
-                        });
-
                         //Calcular edad
                         var añoNacimiento = parseInt(String(data[i].fechaNacimiento).substring(0,4));
                         var mesNacimiento = parseInt(String(data[i].fechaNacimiento).substring(5,7));
@@ -183,6 +179,10 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                 '</div>' +
                             '</div>';
                         }
+
+                        $funciones += document.getElementById('verPerfil'+i).addEventListener("click", function() {
+                            alert("hola");
+                        });
 
                         if (data[i].localidadConsultorio != "") {
                             //Mostrar Mapa
