@@ -181,10 +181,9 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         }
 
                         con.innerHTML = con.innerHTML +
-
                         '<script>'+
                             'document.getElementById("verPerfil'+i+'").addEventListener("click", function() {' +
-                                +'alert(data[i].nombreUsuario);' +
+                                'alert(data[i].nombreUsuario);' +
                             '});' +
                         '</script>';
 
