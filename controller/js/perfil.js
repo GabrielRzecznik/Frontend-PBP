@@ -5,9 +5,12 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
     document.getElementById('mostrar').style.display = 'block';
 }
 
+//Obtener Url Actual
+let profesional = location.pathname;
+
+console.log(profesional);
+
 //Mostrar datos perfil
 document.getElementById('mostrarNombrePerfil').innerHTML = localStorage["nombre"];
 document.getElementById('mostrarApellidoPerfil').innerHTML = localStorage["apellido"];
 
-let url = location.href;
-console.log(url);
