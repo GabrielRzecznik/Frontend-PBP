@@ -180,7 +180,8 @@ function buscarProfesionales(formulario, $valorUbicacion){
                             '</div>';
                         }
 
-                        $funciones += document.getElementById('verPerfil'+i).addEventListener("click", function() {
+                        var funciones;
+                        funciones += document.getElementById('verPerfil'+i).addEventListener("click", function() {
                             alert("hola");
                         });
 
