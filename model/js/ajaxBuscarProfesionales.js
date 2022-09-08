@@ -164,7 +164,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                 '</div>' +
                                                 '<span class="infoProfesional">' +
                                                     $tiposConsulta +
-                                                '</span><a class="btn btn-primary botonProfesional">Ver perfil</a>' +
+                                                '</span><a href="../view/perfil.html" class="btn btn-primary botonProfesional">Ver perfil</a>' +
                                             '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +
