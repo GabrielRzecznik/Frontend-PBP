@@ -6,15 +6,15 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 }
 
 //Obtener Url Actual
-let profesional = location.search;
-profesional = profesional.slice(1);
+let parametro = location.search;
+parametro = parametro.slice(1);
 
-if (profesional == "") {
+if (parametro == "") {
     //Mostrar datos perfil
     document.getElementById('mostrarNombrePerfil').innerHTML = localStorage["nombre"];
     document.getElementById('mostrarApellidoPerfil').innerHTML = localStorage["apellido"];
 }else{
-    buscarProfesional(profesional);
+    buscarPerfil(parametro);
 }
 
 
