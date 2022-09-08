@@ -31,7 +31,7 @@ document.getElementById('altura').value = localStorage["altura"];
 function cerrarSesion() {
     localStorage.clear();
     sessionStorage.clear();
-    window.location.href = "https://frontend-pbp.herokuapp.com/";
+    window.location.href = "../";
 }
 
 //Modal configuración
