@@ -11,7 +11,7 @@ function restablecerUsuario(){
             if (xmlhttp.status == 200) {//Volvio Bien
                 localStorage.clear();
                 alert("¡Usuario restablecido con éxito!")
-                window.location.href = "https://frontend-pbp.herokuapp.com/";
+                window.location.href = "../";
             }else{
                 //Cargando
                 document.getElementById('tituloConfirmar').style.display = 'block';

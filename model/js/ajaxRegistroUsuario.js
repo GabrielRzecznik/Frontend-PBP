@@ -9,7 +9,7 @@ function registrarUsuario(formulario){
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
                 localStorage.setItem("id_usuario", data[0]["id_usuario"]);//Me guarda el id_usuario de la bd
-                window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPerfil.html";
+                window.location.href = "../view/registroPerfil.html";
             }else if (xmlhttp.status == 500) {
                 alert("¡Ocurrio un error inesperado!");
                 //Marcar Correo

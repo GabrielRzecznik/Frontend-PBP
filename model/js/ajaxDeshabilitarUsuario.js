@@ -9,7 +9,7 @@ function deshabilitarUsuario(){
             if (xmlhttp.status == 200) {
                 localStorage.clear();
                 alert("Lamentamos no poder haber satisfecho sus necesidades. !Muchas gracias por utilizarnos!");//Actualizar
-                window.location.href = "https://frontend-pbp.herokuapp.com/";
+                window.location.href = "../";
             }else{
                 alert("¡Error inesperado!");
             }   

@@ -14,7 +14,7 @@ function registrarProfesional(formulario, tc, os, $latitud, $longitud){
             if (xmlhttp.status == 200) {
                 alert("¡Perfil profesional creado con existo!")
                 localStorage.clear();
-                window.location.href = "https://frontend-pbp.herokuapp.com/";
+                window.location.href = "../";
             }else if (xmlhttp.status == 500) {
                 document.getElementById('tituloRegistrar').style.display = 'block';
                 document.getElementById('cargandoRegistrar').style.display = 'none';

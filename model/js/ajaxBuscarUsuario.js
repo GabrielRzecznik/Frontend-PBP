@@ -35,7 +35,7 @@ function buscarUsuario(formulario){
                     //Estado Usuario En creación
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
                     //Redirigir
-                    window.location.href = "https://frontend-pbp.herokuapp.com/view/registroPerfil.html";
+                    window.location.href = "../view/registroPerfil.html";
                 }if (data[0]["estadoUsuario"] == "Oculto") {
                     //Estado Usuario Oculto
                     alert("No se encontró el usuario!");

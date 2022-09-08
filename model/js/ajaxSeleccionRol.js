@@ -9,9 +9,9 @@ function seleccionRol(rol){
             if (xmlhttp.status == 200) {//Volvio Bien
                 if (rol == "Paciente") {
                     localStorage.clear();
-                    window.location.href = "https://frontend-pbp.herokuapp.com/";
+                    window.location.href = "../";
                 }else if(rol == "Profesional") {
-                    window.location.href = "https://frontend-pbp.herokuapp.com/view/registroProfesional.html";
+                    window.location.href = "../view/registroProfesional.html";
                 }
             }else{
                 alert("¡Error inesperado!");
