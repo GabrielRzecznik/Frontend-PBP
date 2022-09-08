@@ -11,7 +11,7 @@ window.addEventListener('load',load);
 function load(){
     //Verificar si hay logueo
     if (localStorage.getItem("id_usuario") == null) {
-        window.location.href = "https://frontend-pbp.herokuapp.com/";
+        window.location.href = "../";
     }else{
         document.getElementById('mostrar').style.display = 'block';
     }
