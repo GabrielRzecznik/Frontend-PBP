@@ -30,12 +30,12 @@ function buscarUsuario(formulario){
                     localStorage.setItem("latitud", data[0]["latitud"]);
                     localStorage.setItem("longitud", data[0]["longitud"]);
                     //Redirigir             
-                    window.location.href = "../Frontend/view/inicioBusqueda.php";
+                    window.location.href = "../view/inicioBusqueda.php";
                 }if (data[0]["estadoUsuario"] == "En Creación") {
                     //Estado Usuario En creación
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
                     //Redirigir
-                    window.location.href = "../Frontend/view/registroPerfil.html";
+                    window.location.href = "../view/registroPerfil.html";
                 }if (data[0]["estadoUsuario"] == "Oculto") {
                     //Estado Usuario Oculto
                     alert("No se encontró el usuario!");
