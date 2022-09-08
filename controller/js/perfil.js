@@ -14,7 +14,7 @@ if (profesional == "") {
     document.getElementById('mostrarNombrePerfil').innerHTML = localStorage["nombre"];
     document.getElementById('mostrarApellidoPerfil').innerHTML = localStorage["apellido"];
 }else{
-
+    buscarProfesional(profesional);
 }
 
 
