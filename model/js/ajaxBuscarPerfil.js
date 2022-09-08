@@ -19,7 +19,7 @@ function buscarPerfil($nombreUsuario){
                 document.getElementById('mostrarNombrePerfil').innerHTML = data[0]["nombre"];
                 document.getElementById('mostrarApellidoPerfil').innerHTML = data[0]["apellido"];
                 document.getElementById('mostrarSexoPerfil').innerHTML = data[0]["sexo"];
-                document.getElementById('mostrarFotoPerfil').innerHTML = data[0]["foto"];
+                //document.getElementById('mostrarFotoPerfil').innerHTML = data[0]["foto"];
                 document.getElementById('mostrarTelefonoPerfil').innerHTML = data[0]["telefono"];
                 document.getElementById('mostrarProvinciaPerfil').innerHTML = data[0]["provincia"];
                 document.getElementById('mostrarLocalidadPerfil').innerHTML = data[0]["localidad"];
