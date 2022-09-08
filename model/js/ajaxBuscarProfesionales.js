@@ -179,11 +179,12 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                 '</div>' +
                             '</div>';
                         }
-
-                        var funciones;
-                        funciones = funciones + "" + document.getElementById('verPerfil'+i).addEventListener("click", function() {
-                            alert("hola");
+                        
+                        $nombreUsuario = data[i].nombreUsuario;
+                        document.getElementById('verPerfil'+i).addEventListener("click", function($nombreUsuario) {
+                            alert($nombreUsuario);
                         });
+
 
                         if (data[i].localidadConsultorio != "") {
                             //Mostrar Mapa
