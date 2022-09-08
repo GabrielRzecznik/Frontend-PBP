@@ -5,7 +5,7 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
     document.getElementById('mostrar').style.display = 'block';
 }
 
-//Obtener Url Actual
+//Obtener parametro de URL 
 let parametro = location.search;
 parametro = parametro.slice(1);
 
