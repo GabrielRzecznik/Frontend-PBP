@@ -18,8 +18,9 @@ function buscarProvinciasConsultorio(){
                 const selectPC = document.getElementById('provinciaConsultorio');
             }if (xmlhttp.status == 401) {
                 alert("Ocurrio un error inesperado al traer las provincias");
+            }if (xmlhttp.status == 429){
+                //Guardar carga de base de datos
             }
-            console.log(xmlhttp.status);
         }
     }
     xmlhttp.open("GET",'https://apis.datos.gob.ar/georef/api/provincias',true);
@@ -49,6 +50,8 @@ function buscarProvincias(){
                 }
             }if (xmlhttp.status == 401) {
                 alert("Ocurrio un error inesperado al traer las provincias")
+            }if (xmlhttp.status == 429){
+                //Guardar carga de base de datos
             }
         }
     }

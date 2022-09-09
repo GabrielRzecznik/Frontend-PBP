@@ -20,15 +20,17 @@
     	include_once('../view/navegador.html'); 
 	?>
 
-	<!--Portada Mapa-->
-	<span id="visualizarMapa"></span>
-
 	<div class="container">
+		<!--Portada Mapa-->
+		<i class="fondoImagenPerfil"></i>
+		<i class="bi bi-person-circle imagenPerfil"></i>
+		<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
+
 		<div class="">
 			<div class="row">
 				<div class="col-lg-3 border bg-light rounded-3 contenedorDatosPrincipales">
 					<div class="row">
-						<i class="bi bi-person-circle iconoFoto"></i>
+			
 						<h3 class="centrarTexto"><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></span></h3>
 						<span class="centrarTexto" id="mostrarNombreUsuarioPerfil"></span>
 					</div>

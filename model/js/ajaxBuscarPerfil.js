@@ -27,26 +27,26 @@ function buscarPerfil($nombreUsuario){
                 document.getElementById('mostrarEspecialidadPerfil').innerHTML = data[0]["especialidad"];
                 document.getElementById('mostrarMatriculaPerfil').innerHTML = data[0]["matricula"];
                 //datos Profesional consultorio
-                if(data[0]["provinciaConsultorio"] != ""){
+                /*if(data[0]["provinciaConsultorio"] != ""){
                     document.getElementById('mostrarProvinciaConsultorioPerfil').innerHTML = data[0]["provinciaConsultorio"];
                     document.getElementById('mostrarLocalidadConsultorioPerfil').innerHTML = data[0]["localidadConsultorio"];
                     document.getElementById('mostrarCalleConsultorioPerfil').innerHTML = data[0]["calleConsultorio"];
                     document.getElementById('mostrarAlturaConsultorioPerfil').innerHTML = data[0]["alturaConsultorio"];
                     document.getElementById('mostrarDepartamentoConsultorioPerfil').innerHTML = data[0]["departamentoConsultorio"];
-                }
+                }*/
 
 
                 //Mostrar Mapa Portada
                 if (data[0].localidadConsultorio != "") {
                     //Mostrar Mapa
-                    $calleAvenida = data[i].calleConsultorio;
+                    $calleAvenida = data[0].calleConsultorio;
                     $calleAvenida = $calleAvenida.replace(/calle/,'C.');
                     $calleAvenida = $calleAvenida.replace(/Calle/,'C.');
                     $calleAvenida = $calleAvenida.replace(/avenida/,'Av.');
                     $calleAvenida = $calleAvenida.replace(/Avenida/,'Av.');
                     $calleAvenida = $calleAvenida.split(/ /).join('%20');
 
-                    $altura = data[i].alturaConsultorio;//0540
+                    $altura = data[0].alturaConsultorio;//0540
                     if ($altura < 10000) {
                         if ($altura < 1000) {
                             if ($altura < 10) {
@@ -65,10 +65,10 @@ function buscarPerfil($nombreUsuario){
 
                     $codigoPostal = "B1871";//B1871 Analizar si vale la pena incorporar segun el impacto
                     
-                    $localidad = data[i].localidadConsultorio;
+                    $localidad = data[0].localidadConsultorio;
                     $localidad = $localidad.split(/ /).join('%20');
 
-                    $provincia = data[i].provinciaConsultorio;//"Provincia%20Buenos%20Aires"
+                    $provincia = data[0].provinciaConsultorio;//"Provincia%20Buenos%20Aires"
                     $provincia = $provincia.split(/ /).join('%20');
                     $provincia = 'Provincia%20'+$provincia;
 
