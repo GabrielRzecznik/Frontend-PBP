@@ -87,8 +87,8 @@
 			</div>
 			<div class="col-lg-3">
 				<div class="card text-dark bg-light">
+					<div class="card-header"><b>Información de contacto</b></div>
 					<div class="card-body">	
-						<h5><b>Información de contacto</b></h5>
 						<i class="bi bi-envelope-fill"></i> <span id="mostrarCorreoPerfil"></span>
 						<br>
 						<i class="bi bi-telephone-fill"></i> <span id="mostrarTelefonoPerfil"></span>
