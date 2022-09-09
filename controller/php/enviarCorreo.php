@@ -12,10 +12,10 @@ try {
     //Configuración del servidor
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                    
     $mail->isSMTP();                                         
-    $mail->Host       = 'mail.trebolnetsi.com';                  //Setear el servidor SMTP
+    $mail->Host       = '';                  //Setear el servidor SMTP
     $mail->SMTPAuth   = true;                                   //autenticación SMTP
-    $mail->Username   = 'franco.zuarez@trebolnetsi.com';                     //SMTP usuario
-    $mail->Password   = 'fran1357F//**';                               //SMTP contraseña
+    $mail->Username   = '';                     //SMTP usuario
+    $mail->Password   = '';                               //SMTP contraseña
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          
     $mail->Port       = 465;                                    //puerto 
 
