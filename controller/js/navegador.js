@@ -547,6 +547,7 @@ document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (even
         if(campoConfiguracionProfesional.rangoHorarioDiaDesde == true){
             document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
             document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
+            mostrarHorarios();
         }
         //Mensaje de error
         document.getElementById('alertRangoHorarioDiaHasta').classList.remove('alertaError');
@@ -591,6 +592,8 @@ document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (even
 //#endregion
 
 //Mostrar Horarios
+let mostrarHorariosFrom = document.getElementById('mostrarHorarios');
+
 function mostrarHorarios() {
     let duracionConsulta = selectDuracionConsulta.value;
     let descanso = selectDescanso.value;
@@ -620,7 +623,7 @@ function mostrarHorarios() {
     //Rango total
     let rango = rango1 + rango2;
     
-    armarSelectRangoHorarioDiaHasta.innerHTML = "";
+    mostrarHorariosFrom.innerHTML = "";
 
     while (($inicio + rango) <= 1440) {
         $inicio += rango;
@@ -639,10 +642,9 @@ function mostrarHorarios() {
         var horaFinalizacion = Math.floor(($inicio + rango) / 60);          
         var minutosFinalizacion = ($inicio + rango) % 60;
 
-        armarSelectRangoHorarioDiaHasta.innerHTML += 
+        mostrarHorariosFrom.innerHTML += 
         '<button id="horario'+$id+'" type="button" class="btn btn-primary botonesHorarios">Horario disponible '+horas+':'+minutos+' a '+horaFinalizacion+':'+minutosFinalizacion+'</button>'; 
     }
-    
 }
 
 //#region Envia Formulario Configuración Grilla Profesional
