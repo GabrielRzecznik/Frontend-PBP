@@ -503,6 +503,8 @@ function completarSelectRangoDiaHasta() {
     '<option value="0">Hora de finalización</option>';
 
     $valorInicial = $inicio + rango;
+    console.log($valorInicial);
+    console.log($inicio + rango)
     while (($inicio + rango) < 1440 && $valorInicial < ($inicio + rango)) {
         $inicio += rango;
 
