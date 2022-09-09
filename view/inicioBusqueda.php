@@ -22,6 +22,8 @@
 	<div class="container-fluid">
 		<div class="row centrado">
 			<div class="col-md-3 bg-light border rounded-3 contenedores alto">
+				<h5>Buscar Profesionales</h5>
+				<br>
 				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioP">
 					<span>Seleccione especialidad:</span>
 					<select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example">
@@ -119,7 +121,7 @@
 						<option value="0">Ubicación actual</option>
 						<option value="1">Ubicación de mi casa</option><!--Pensar mejor nombre-->
 					</select>
-	
+					<br>
 					<button type="submit" class="btn btn-primary campos botonBuscar">
 						<span class="tituloCargando" id="tituloCargando"><i class="bi bi-search"></i> Buscar Profesional</span>
 						<div class="spinner-border text-light botonCargando" id="botonCargando" role="status"></div>
@@ -128,6 +130,7 @@
 			</div>
 
 			<div class="col-md-8 bg-light border rounded-3 contenedores">
+				<h5>Resultados:</h5>
 				<div class="row" id="con">
 					<span class="sinBusqueda centrarMensaje"><i class="bi bi-binoculars-fill"> Encuentra el profesional que estas buscando.</i></span>
 				</div>

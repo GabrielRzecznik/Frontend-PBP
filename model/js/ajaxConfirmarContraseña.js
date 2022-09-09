@@ -37,7 +37,10 @@ function confirmarContraseña(formulario, ingreso){
                     document.getElementById('cargandoPreValidacionEditar').style.display = 'none';
                     document.getElementById('textoPreValidacionEditar').style.display = 'block';
                 }if(ingreso == "Deshabilitar"){
-
+                    alert("¡La contraseña no coincide con la actual!");
+                    //Cancelar carga
+                    document.getElementById('cargandoPreValidacionDeshabilitar').style.display = 'none';
+                    document.getElementById('textoPreValidacionDeshabilitar').style.display = 'block';
                 }
             }
         }
