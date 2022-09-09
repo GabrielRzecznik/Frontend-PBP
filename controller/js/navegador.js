@@ -270,6 +270,10 @@ if (localStorage.getItem("id_profesional") != "null") {
 const campoConfiguracionProfesional = {
     diasAtencion: false,
     duracionConsulta: false,
+    descanso: false,
+    rangoHorarioDiaDesde: false,
+    rangoHorarioDiaHasta: false,
+    deshabilitarHorarios: false
 };
 
 //Validar Días de Atención
@@ -406,10 +410,15 @@ if (descanso.value == 0) {
 //#endregion
 
 //Validar Rango Horario Dia Desde
+const inputRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHasta');
+
 document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (event) => {
     if (event.target.value != 0) {
-        document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
-        document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
+        if(campoConfiguracionProfesional.rangoHorarioDiaHasta == true){
+            document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
+            document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
+            inputRangoHorarioDiaHasta.disabled = false;
+        }
         //Mensaje de error
         document.getElementById('alertRangoHorarioDiaDesde').classList.remove('alertaError');
         //Validar
@@ -435,7 +444,7 @@ if (rangoHorarioDiaDesde.value == 0) {
 //Validar Rango Horario Dia Hasta
 document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (event) => {
     if (event.target.value != 0) {
-        if(campoConfiguracionProfesional.rangoHorarioDiaHasta == true){
+        if(campoConfiguracionProfesional.rangoHorarioDiaDesde == true){
             document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
             document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
         }
