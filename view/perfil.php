@@ -23,7 +23,7 @@
 	<div class="container">
 		<!--Portada Mapa-->
 		<i class="fondoImagenPerfil"></i>
-		<span id="mostrarFotoPerfil" class="imagenPerfil fotoPerfil"></span>
+		<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
 		<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
 		<div class="contenedorInformacion bg-light">
 			<button type="button" class="btn btn-primary botonSolicitarTurno">Solicitar Turno</button>
