@@ -458,7 +458,7 @@ document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (even
 
         //Inicio = 00:00
         //Rango = 01:00
-        do {
+        while (($inicio + rango1) < 1440) {
             $inicio += rango;
 
             var horas = Math.floor($inicio / 60);          
@@ -474,8 +474,7 @@ document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (even
 
             armarSelectRangoHorarioDiaHasta.innerHTML += 
             '<option value="'+horas+':'+minutos+'">'+horas+':'+minutos+' hs</option>';            
-        
-        } while (($inicio + rango1) < 1440);
+        }
 
         selectRangoHorarioDiaHasta.disabled = false;
 
