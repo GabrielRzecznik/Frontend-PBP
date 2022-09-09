@@ -432,6 +432,7 @@ document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (even
         let consulta_minutos = duracionConsulta.substring(3,5);
 
         consulta_hora *= 60;
+        consulta_hora += Number(consulta_minutos);
         //consulta_hora *= 60;
         //consulta_minutos += consulta_hora;
 
