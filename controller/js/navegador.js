@@ -427,22 +427,35 @@ document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (even
         let descanso = selectDescanso.value;
         let rangoHorarioDiaDesde = selectRangoHorarioDiaDesde.value;
 
+        //Inicio del día
+        let inicio_hora = rangoHorarioDiaDesde.substring(0,2);
+        let inicio_minutos = rangoHorarioDiaDesde.substring(3,5);
+
+        inicio_hora *= 60;
+        $inicio = inicio_hora + Number(inicio_minutos);
+
         //Duración Consulta
         let consulta_hora = duracionConsulta.substring(0,2);
         let consulta_minutos = duracionConsulta.substring(3,5);
 
         consulta_hora *= 60;
-        consulta_hora += Number(consulta_minutos);
-        //consulta_hora *= 60;
-        //consulta_minutos += consulta_hora;
+        let rango1 = consulta_hora + Number(consulta_minutos);
 
         //Duración Descanso
         let descanso_hora = descanso.substring(0,2);
         let descanso_minutos = descanso.substring(3,5);
        
+        descanso_hora *= 60;
+        let rango2 = descanso_hora + Number(descanso_minutos);
        
-        console.log(consulta_minutos);
-        console.log(descanso_minutos);
+        //Rango total
+        let rango = rango1 + rango2;
+        
+        $i = 0;
+        while (($i + rango1) > 1440) {//1440 son los minutos de un día
+            $i += rango;
+
+        }
 
         selectRangoHorarioDiaHasta.disabled = false;
         armarSelectRangoHorarioDiaHasta.innerHTML = 
