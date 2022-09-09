@@ -19,6 +19,10 @@
 	<?php
     	include_once('../view/navegador.html'); 
 	?>
+
+	<!--Portada Mapa-->
+	<span id="visualizarMapa"></span>
+
 	<div class="container">
 		<div class="">
 			<div class="row">
