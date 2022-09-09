@@ -18,8 +18,6 @@ function buscarProvinciasConsultorio(){
                 const selectPC = document.getElementById('provinciaConsultorio');
             }if (xmlhttp.status == 401) {
                 alert("Ocurrio un error inesperado al traer las provincias");
-            }if (xmlhttp.status == 501){
-                alert("Callo el servidor");//No funciona
             }
             console.log(xmlhttp.status);
         }
