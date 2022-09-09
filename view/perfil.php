@@ -22,7 +22,7 @@
 
 	<div class="container">
 		<!--Portada Mapa-->
-		<i class="fondoImagenPerfil"></i>
+		<span class="fondoImagenPerfil"></span>
 		<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
 		<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
 		<div class="contenedorInformacion bg-light">
@@ -63,20 +63,27 @@
 					</div>
 				</div>
 				<br>
-				<div class="card text-dark bg-light informacionConsultorio" id="informacionConsultorio">
-					<div class="card-header"><b>Consultorio</b></div>
-					<div class="card-body">	
-						<span id="mostrarProvinciaConsultorioPerfil"></span>
-						<br>
-						<span id="mostrarLocalidadConsultorioPerfil"></span>
-						<br>
-						<span id="mostrarCalleConsultorioPerfil"></span>
-						<br>
-						<span id="mostrarAlturaConsultorioPerfil"></span>
-						<br>
-						<span id="mostrarDepartamentoConsultorioPerfil"></span>
+				<span class="informacionConsultorio" id="informacionConsultorio">
+					<div class="row">
+						<div class="col-6">
+							<div class="card text-dark bg-light">
+								<div class="card-header"><b>Información consultorio</b></div>
+								<div class="card-body">	
+									<span id="mostrarProvinciaConsultorioPerfil"></span>
+									<br>
+									<span id="mostrarLocalidadConsultorioPerfil"></span>
+									<br>
+									<span id="mostrarCalleConsultorioPerfil"></span> <span id="mostrarAlturaConsultorioPerfil"></span>
+									<br>
+									<span id="mostrarDepartamentoConsultorioPerfil"></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<span class="mapa" id="visualizarMapa2">Error al cargar portada</span>
+						</div>
 					</div>
-				</div>
+				</span>
 			</div>
 			<div class="col-lg-3">
 				<div class="card text-dark bg-light">
@@ -88,7 +95,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
+	</div>
+
+	<br>
 
 	<script src="../model/js/ajaxBuscarPerfil.js"></script>
     <script src="../controller/js/perfil.js"></script>

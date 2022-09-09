@@ -106,3 +106,8 @@ body{
 .informacionConsultorio{
 	display: none;
 }
+
+.mapaConsultorio{
+	width: 100%;
+	height: 100%;
+}
