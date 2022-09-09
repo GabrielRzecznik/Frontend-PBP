@@ -355,6 +355,13 @@ function validarDiasAtencion() {
     }   
 }
 
+//Validar Rango Horario Dia Desde
+const selectDuracionConsulta = document.getElementById('duracionConsulta');
+const selectDescanso = document.getElementById('descanso');
+const selectRangoHorarioDiaDesde = document.getElementById('rangoHorarioDiaDesde');
+const selectRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHasta');
+let armarSelectRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHasta');
+
 //Validar Duración de Consulta
 document.getElementById("duracionConsulta").addEventListener('change', (event) => {
     if (event.target.value != 0) {
@@ -424,13 +431,6 @@ if (descanso.value == 0) {
     campoConfiguracionProfesional['descanso'] = false;
 }
 //#endregion
-
-//Validar Rango Horario Dia Desde
-const selectDuracionConsulta = document.getElementById('duracionConsulta');
-const selectDescanso = document.getElementById('descanso');
-const selectRangoHorarioDiaDesde = document.getElementById('rangoHorarioDiaDesde');
-const selectRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHasta');
-let armarSelectRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHasta');
 
 document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (event) => {
     if (event.target.value != 0) {
