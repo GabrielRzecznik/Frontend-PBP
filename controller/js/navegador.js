@@ -333,8 +333,6 @@ function validarDiasAtencion() {
         }if (checkDomingo.checked == true) {
             $dias.push('Domingo'); 
         }
-
-        console.log($dias);
         
         document.getElementById('iconoDiasAtencion').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
         document.getElementById('iconoDiasAtencion').classList.add('mostrar','bi-check-circle-fill','validado');
@@ -364,6 +362,7 @@ let armarSelectRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHa
 
 //Validar Duración de Consulta
 document.getElementById("duracionConsulta").addEventListener('change', (event) => {
+    mostrarHorariosFrom.innerHTML = "¡Complete los campos anteriores previamente!";
     if (event.target.value != 0) {
         document.getElementById('iconoDuracionConsulta').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
         document.getElementById('iconoDuracionConsulta').classList.add('validado','bi-check-circle-fill');
@@ -405,6 +404,7 @@ if (duracionConsulta.value == 0) {
 
 //Validar Duración de Descanso entre Consultas
 document.getElementById("descanso").addEventListener('change', (event) => {
+    mostrarHorariosFrom.innerHTML = "¡Complete los campos anteriores previamente!";
     if (event.target.value != 0) {
         document.getElementById('iconoDescanso').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
         document.getElementById('iconoDescanso').classList.add('validado','bi-check-circle-fill');
@@ -445,6 +445,7 @@ if (descanso.value == 0) {
 //#endregion
 
 document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (event) => {
+    mostrarHorariosFrom.innerHTML = "¡Complete los campos anteriores previamente!";
     if (event.target.value != 0) {
         //Validar
         campoConfiguracionProfesional['rangoHorarioDiaDesde'] = true;
@@ -533,8 +534,6 @@ function completarSelectRangoDiaHasta() {
             minutos = "0" + minutos;    
         }
 
-        console.log(horas + ":" + minutos);
-
         armarSelectRangoHorarioDiaHasta.innerHTML += 
         '<option value="'+horas+':'+minutos+'">'+horas+':'+minutos+' hs</option>';            
     }
@@ -547,13 +546,14 @@ document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (even
         if(campoConfiguracionProfesional.rangoHorarioDiaDesde == true){
             document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
             document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
-            mostrarHorarios();
         }
         //Mensaje de error
         document.getElementById('alertRangoHorarioDiaHasta').classList.remove('alertaError');
         //Validar
         campoConfiguracionProfesional['rangoHorarioDiaHasta'] = true;
-    }else{
+        mostrarHorarios();
+        }else{
+        mostrarHorariosFrom.innerHTML = "¡Complete los campos anteriores previamente!";
         document.getElementById('iconoRangoHorarioDia').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
         document.getElementById('iconoRangoHorarioDia').classList.add('noValidado','bi-x-circle-fill');
         //Mensaje de error
@@ -563,12 +563,6 @@ document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (even
         campoConfiguracionProfesional['rangoHorarioDiaHasta'] = false;
     }
 });
-
-if (rangoHorarioDiaHasta.value == 0) {
-    document.getElementById('iconoRangoHorarioDia').classList.add('mostrar');//Agregar
-    document.getElementById('iconoRangoHorarioDia').classList.remove('bi-check-circle-fill');//Borrar
-    campoConfiguracionProfesional['rangoHorarioDiaHasta'] = false;
-}
 
 //Validar Rango Horario Día Hasta
 document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (event) => {
@@ -598,13 +592,21 @@ function mostrarHorarios() {
     let duracionConsulta = selectDuracionConsulta.value;
     let descanso = selectDescanso.value;
     let rangoHorarioDiaDesde = selectRangoHorarioDiaDesde.value;
-
+    let rangoHorarioDiaHasta = selectRangoHorarioDiaHasta.value;
+    
     //Inicio del día
     let inicio_hora = rangoHorarioDiaDesde.substring(0,2);
     let inicio_minutos = rangoHorarioDiaDesde.substring(3,5);
 
     inicio_hora *= 60;
     $inicio = inicio_hora + Number(inicio_minutos);
+
+    //Finalización
+    let fin_hora = rangoHorarioDiaHasta.substring(0,2);
+    let fin_minutos = rangoHorarioDiaHasta.substring(3,5);
+    
+    fin_hora *= 60;
+    $fin = fin_hora + Number(fin_minutos);
 
     //Duración Consulta
     let consulta_hora = duracionConsulta.substring(0,2);
@@ -625,9 +627,9 @@ function mostrarHorarios() {
     
     mostrarHorariosFrom.innerHTML = "";
 
-    while (($inicio + rango) <= 1440) {
-        $inicio += rango;
+    $id = 0;
 
+    while (($inicio + rango) <= $fin) {
         var horas = Math.floor($inicio / 60);          
         var minutos = $inicio % 60;
     
@@ -642,8 +644,15 @@ function mostrarHorarios() {
         var horaFinalizacion = Math.floor(($inicio + rango) / 60);          
         var minutosFinalizacion = ($inicio + rango) % 60;
 
+        if (horaFinalizacion < 10) {
+            horaFinalizacion = "0" + horaFinalizacion;    
+        }if (minutosFinalizacion < 10) {
+            minutosFinalizacion = "0" + minutosFinalizacion;    
+        }
+
         mostrarHorariosFrom.innerHTML += 
         '<button id="horario'+$id+'" type="button" class="btn btn-primary botonesHorarios">Horario disponible '+horas+':'+minutos+' a '+horaFinalizacion+':'+minutosFinalizacion+'</button>'; 
+        $inicio += rango;
     }
 }
 
