@@ -63,7 +63,7 @@
 					</div>
 				</div>
 				<br>
-				<div class="card text-dark bg-light">
+				<div class="card text-dark bg-light informacionConsultorio" id="informacionConsultorio">
 					<div class="card-header"><b>Consultorio</b></div>
 					<div class="card-body">	
 						<span id="mostrarProvinciaConsultorioPerfil"></span>

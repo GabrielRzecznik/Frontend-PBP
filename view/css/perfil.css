@@ -102,3 +102,7 @@ body{
 	height: 150px;
 	border-radius: 100%;
 }
+
+.informacionConsultorio{
+	display: none;
+}

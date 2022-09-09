@@ -75,9 +75,9 @@ function buscarPerfil($nombreUsuario){
                     }
                 }
 
-
                 //Mostrar Mapa Portada
                 if (data[0].localidadConsultorio != "") {
+                    document.getElementById('informacionConsultorio').style.display = 'block';
                     //Mostrar Mapa
                     $calleAvenida = data[0].calleConsultorio;
                     $calleAvenida = $calleAvenida.replace(/calle/,'C.');
