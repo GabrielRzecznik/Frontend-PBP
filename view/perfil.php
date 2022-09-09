@@ -63,27 +63,6 @@
 					</div>
 				</div>
 				<br>
-				<span class="informacionConsultorio" id="informacionConsultorio">
-					<div class="card text-dark bg-light">
-						<div class="row">
-							<div class="col-6">
-								<div class="card-header"><b>Información consultorio</b></div>
-								<div class="card-body">	
-									<span id="mostrarProvinciaConsultorioPerfil"></span>
-									<br>
-									<span id="mostrarLocalidadConsultorioPerfil"></span>
-									<br>
-									<span id="mostrarCalleConsultorioPerfil"></span> <span id="mostrarAlturaConsultorioPerfil"></span>
-									<br>
-									<span id="mostrarDepartamentoConsultorioPerfil"></span>
-								</div>
-							</div>
-							<div class="col-6">
-								<span class="mapa" id="visualizarMapa2">Error al cargar portada</span>
-							</div>
-						</div>
-					</div>
-				</span>
 			</div>
 			<div class="col-lg-3">
 				<div class="card text-dark bg-light">
@@ -94,6 +73,21 @@
 						<i class="bi bi-telephone-fill"></i> <span id="mostrarTelefonoPerfil"></span>
 					</div>
 				</div>
+				<br>
+				<span class="informacionConsultorio" id="informacionConsultorio">
+					<div class="card text-dark bg-light">
+						<div class="card-header"><b>Ubicación de consultorio </b><i class="bi bi-geo-alt-fill"></i></div>
+						<div class="card-body">	
+							<span id="mostrarProvinciaConsultorioPerfil"></span>
+							<br>
+							<span id="mostrarLocalidadConsultorioPerfil"></span>
+							<br>
+							<span id="mostrarCalleConsultorioPerfil"></span> <span id="mostrarAlturaConsultorioPerfil"></span>
+							<br>
+							<span id="mostrarDepartamentoConsultorioPerfil"></span>
+						</div>
+					</div>
+				</span>
 			</div>
 	</div>
 
