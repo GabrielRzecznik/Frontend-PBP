@@ -364,7 +364,15 @@ document.getElementById("duracionConsulta").addEventListener('change', (event) =
         document.getElementById('alertDuracionConsulta').classList.remove('alertaError');
         //Validar
         campoConfiguracionProfesional['duracionConsulta'] = true;
+
+        if (campoConfiguracionProfesional.duracionConsulta == true && campoConfiguracionProfesional.descanso == true && campoConfiguracionProfesional.rangoHorarioDiaDesde == true) {
+            completarSelectRangoDiaHasta();
+            selectRangoHorarioDiaHasta.disabled = false;
+        }
     }else{
+        selectRangoHorarioDiaHasta.value = 0;
+        selectRangoHorarioDiaHasta.disabled = true;
+
         document.getElementById('iconoDuracionConsulta').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
         document.getElementById('iconoDuracionConsulta').classList.add('noValidado','bi-x-circle-fill');
         //Mensaje de error
@@ -391,7 +399,15 @@ document.getElementById("descanso").addEventListener('change', (event) => {
         document.getElementById('alertDescanso').classList.remove('alertaError');
         //Validar
         campoConfiguracionProfesional['descanso'] = true;
+
+        if (campoConfiguracionProfesional.duracionConsulta == true && campoConfiguracionProfesional.descanso == true && campoConfiguracionProfesional.rangoHorarioDiaDesde == true) {
+            completarSelectRangoDiaHasta();
+            selectRangoHorarioDiaHasta.disabled = false;
+        }
     }else{
+        selectRangoHorarioDiaHasta.value = 0;
+        selectRangoHorarioDiaHasta.disabled = true;
+        
         document.getElementById('iconoDescanso').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
         document.getElementById('iconoDescanso').classList.add('noValidado','bi-x-circle-fill');
         //Mensaje de error
@@ -418,71 +434,23 @@ let armarSelectRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHa
 
 document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (event) => {
     if (event.target.value != 0) {
+        //Validar
+        campoConfiguracionProfesional['rangoHorarioDiaDesde'] = true;
+        
+        //Completas Select Rango Horario Dia Hasta
         if(campoConfiguracionProfesional.rangoHorarioDiaHasta == true){
             document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
             document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
-        }
-        
-        let duracionConsulta = selectDuracionConsulta.value;
-        let descanso = selectDescanso.value;
-        let rangoHorarioDiaDesde = selectRangoHorarioDiaDesde.value;
-
-        //Inicio del día
-        let inicio_hora = rangoHorarioDiaDesde.substring(0,2);
-        let inicio_minutos = rangoHorarioDiaDesde.substring(3,5);
-
-        inicio_hora *= 60;
-        $inicio = inicio_hora + Number(inicio_minutos);
-
-        //Duración Consulta
-        let consulta_hora = duracionConsulta.substring(0,2);
-        let consulta_minutos = duracionConsulta.substring(3,5);
-
-        consulta_hora *= 60;
-        let rango1 = consulta_hora + Number(consulta_minutos);
-
-        //Duración Descanso
-        let descanso_hora = descanso.substring(0,2);
-        let descanso_minutos = descanso.substring(3,5);
-       
-        descanso_hora *= 60;
-        let rango2 = descanso_hora + Number(descanso_minutos);
-       
-        //Rango total
-        let rango = rango1 + rango2;
-        
-        armarSelectRangoHorarioDiaHasta.innerHTML = 
-        '<option value="0">Hora de finalización</option>' +
-        '<option value="0">Hora de inicio</option>';
-
-
-        //Inicio = 00:00
-        //Rango = 01:00
-        while (($inicio + rango1) < 1440) {
-            $inicio += rango;
-
-            var horas = Math.floor($inicio / 60);          
-            var minutos = $inicio % 60;
-        
-            if (horas < 10) {
-                horas = "0" + horas;    
-            }if (minutos < 10) {
-                minutos = "0" + minutos;    
+        }else{
+            if (campoConfiguracionProfesional.duracionConsulta == true && campoConfiguracionProfesional.descanso == true && campoConfiguracionProfesional.rangoHorarioDiaDesde == true) {
+                completarSelectRangoDiaHasta();
+                selectRangoHorarioDiaHasta.disabled = false;
             }
-
-            console.log(horas + ":" + minutos);
-
-            armarSelectRangoHorarioDiaHasta.innerHTML += 
-            '<option value="'+horas+':'+minutos+'">'+horas+':'+minutos+' hs</option>';            
         }
-
-        selectRangoHorarioDiaHasta.disabled = false;
-
         //Mensaje de error
         document.getElementById('alertRangoHorarioDiaDesde').classList.remove('alertaError');
-        //Validar
-        campoConfiguracionProfesional['rangoHorarioDiaDesde'] = true;
     }else{
+        selectRangoHorarioDiaHasta.value = 0;
         selectRangoHorarioDiaHasta.disabled = true;
 
         document.getElementById('iconoRangoHorarioDia').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
@@ -501,6 +469,59 @@ if (rangoHorarioDiaDesde.value == 0) {
     campoConfiguracionProfesional['rangoHorarioDiaDesde'] = false;
 }
 //#endregion
+
+function completarSelectRangoDiaHasta() {
+    let duracionConsulta = selectDuracionConsulta.value;
+    let descanso = selectDescanso.value;
+    let rangoHorarioDiaDesde = selectRangoHorarioDiaDesde.value;
+
+    //Inicio del día
+    let inicio_hora = rangoHorarioDiaDesde.substring(0,2);
+    let inicio_minutos = rangoHorarioDiaDesde.substring(3,5);
+
+    inicio_hora *= 60;
+    $inicio = inicio_hora + Number(inicio_minutos);
+
+    //Duración Consulta
+    let consulta_hora = duracionConsulta.substring(0,2);
+    let consulta_minutos = duracionConsulta.substring(3,5);
+
+    consulta_hora *= 60;
+    let rango1 = consulta_hora + Number(consulta_minutos);
+
+    //Duración Descanso
+    let descanso_hora = descanso.substring(0,2);
+    let descanso_minutos = descanso.substring(3,5);
+   
+    descanso_hora *= 60;
+    let rango2 = descanso_hora + Number(descanso_minutos);
+   
+    //Rango total
+    let rango = rango1 + rango2;
+    
+    armarSelectRangoHorarioDiaHasta.innerHTML = 
+    '<option value="0">Hora de finalización</option>' +
+    '<option value="0">Hora de inicio</option>';
+
+    while (($inicio + rango) < 1440) {
+        $inicio += rango;
+
+        var horas = Math.floor($inicio / 60);          
+        var minutos = $inicio % 60;
+    
+        if (horas < 10) {
+            horas = "0" + horas;    
+        }if (minutos < 10) {
+            minutos = "0" + minutos;    
+        }
+
+        console.log(horas + ":" + minutos);
+
+        armarSelectRangoHorarioDiaHasta.innerHTML += 
+        '<option value="'+horas+':'+minutos+'">'+horas+':'+minutos+' hs</option>';            
+    }
+    
+}
 
 //Validar Rango Horario Dia Hasta
 document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (event) => {
