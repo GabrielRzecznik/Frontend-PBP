@@ -431,18 +431,15 @@ document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (even
         let consulta_hora = duracionConsulta.substring(0,2);
         let consulta_minutos = duracionConsulta.substring(3,5);
 
-        consulta_minutos /= 10;
         consulta_hora *= 60;
-        consulta_minutos += consulta_hora;
+        //consulta_hora *= 60;
+        //consulta_minutos += consulta_hora;
 
         //Duración Descanso
         let descanso_hora = descanso.substring(0,2);
         let descanso_minutos = descanso.substring(3,5);
        
-        descanso_minutos /= 10;
-        descanso_hora *= 60;
-        descanso_minutos += descanso_hora;
-
+       
         console.log(consulta_minutos);
         console.log(descanso_minutos);
 
