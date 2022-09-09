@@ -65,13 +65,15 @@ function buscarPerfil($nombreUsuario){
                 document.getElementById('mostrarTipoConsultasPerfil').innerHTML = tipoConsultas;
                 
                 //datos Profesional consultorio
-                /*if(data[0]["provinciaConsultorio"] != ""){
+                if(data[0]["provinciaConsultorio"] != ""){
                     document.getElementById('mostrarProvinciaConsultorioPerfil').innerHTML = data[0]["provinciaConsultorio"];
                     document.getElementById('mostrarLocalidadConsultorioPerfil').innerHTML = data[0]["localidadConsultorio"];
                     document.getElementById('mostrarCalleConsultorioPerfil').innerHTML = data[0]["calleConsultorio"];
                     document.getElementById('mostrarAlturaConsultorioPerfil').innerHTML = data[0]["alturaConsultorio"];
-                    document.getElementById('mostrarDepartamentoConsultorioPerfil').innerHTML = data[0]["departamentoConsultorio"];
-                }*/
+                    if (data[0]["departamentoConsultorio"] != ""){
+                        document.getElementById('mostrarDepartamentoConsultorioPerfil').innerHTML = data[0]["departamentoConsultorio"];
+                    }
+                }
 
 
                 //Mostrar Mapa Portada

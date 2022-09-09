@@ -62,6 +62,21 @@
 						Sus formatos de consulta son <b id="mostrarTipoConsultasPerfil"></b>
 					</div>
 				</div>
+				<br>
+				<div class="card text-dark bg-light">
+					<div class="card-header"><b>Consultorio</b></div>
+					<div class="card-body">	
+						<span id="mostrarProvinciaConsultorioPerfil"></span>
+						<br>
+						<span id="mostrarLocalidadConsultorioPerfil"></span>
+						<br>
+						<span id="mostrarCalleConsultorioPerfil"></span>
+						<br>
+						<span id="mostrarAlturaConsultorioPerfil"></span>
+						<br>
+						<span id="mostrarDepartamentoConsultorioPerfil"></span>
+					</div>
+				</div>
 			</div>
 			<div class="col-lg-3">
 				<div class="card text-dark bg-light">
