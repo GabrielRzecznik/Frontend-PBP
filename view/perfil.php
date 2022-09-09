@@ -23,7 +23,7 @@
 	<div class="container">
 		<!--Portada Mapa-->
 		<i class="fondoImagenPerfil"></i>
-		<i class="bi bi-person-circle imagenPerfil"></i>
+		<span id="mostrarFotoPerfil" class="imagenPerfil fotoPerfil"></span>
 		<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
 		<div class="contenedorInformacion bg-light">
 			<button type="button" class="btn btn-primary botonSolicitarTurno">Solicitar Turno</button>
@@ -51,7 +51,7 @@
 								<i class="bi bi-geo-alt-fill"></i> De <b id="mostrarLocalidadPerfil"></b>
 							</div>
 						</div>
-						<br>
+						<hr>
 						<h5><b>Información de profesional</b></h5>
 						Especializado en <b><span id="mostrarEspecialidadPerfil"></span></b> <i class="bi bi-file-medical-fill"></i>
 						<br>

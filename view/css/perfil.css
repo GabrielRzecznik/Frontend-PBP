@@ -94,3 +94,11 @@ body{
 .infoPersonal{
 	padding: 15px;
 }
+
+.foto{
+	top: -20px;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+}

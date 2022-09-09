@@ -19,6 +19,12 @@ function buscarPerfil($nombreUsuario){
                 document.getElementById('mostrarNombrePerfil').innerHTML = data[0]["nombre"];
                 document.getElementById('mostrarApellidoPerfil').innerHTML = data[0]["apellido"];
                 document.getElementById('mostrarSexoPerfil').innerHTML = data[0]["sexo"];
+                console.log(data[0]["foto"]);
+                if (data[0]["foto"] != "Array") {
+                    document.getElementById('mostrarFotoPerfil').innerHTML = '<img class="foto" src="'+data[0]["foto"]+'" alt="ocurrio un error">';
+                }else{
+                    document.getElementById('mostrarFotoPerfil').innerHTML = '<i class="bi bi-person-circle"></i>';
+                }
                 //Calcular edad
                 var añoNacimiento = parseInt(String(data[0].fechaNacimiento).substring(0,4));
                 var mesNacimiento = parseInt(String(data[0].fechaNacimiento).substring(5,7));
