@@ -590,7 +590,60 @@ document.getElementById("rangoHorarioDiaHasta").addEventListener('change', (even
 });
 //#endregion
 
+//Mostrar Horarios
+function mostrarHorarios() {
+    let duracionConsulta = selectDuracionConsulta.value;
+    let descanso = selectDescanso.value;
+    let rangoHorarioDiaDesde = selectRangoHorarioDiaDesde.value;
 
+    //Inicio del día
+    let inicio_hora = rangoHorarioDiaDesde.substring(0,2);
+    let inicio_minutos = rangoHorarioDiaDesde.substring(3,5);
+
+    inicio_hora *= 60;
+    $inicio = inicio_hora + Number(inicio_minutos);
+
+    //Duración Consulta
+    let consulta_hora = duracionConsulta.substring(0,2);
+    let consulta_minutos = duracionConsulta.substring(3,5);
+
+    consulta_hora *= 60;
+    let rango1 = consulta_hora + Number(consulta_minutos);
+
+    //Duración Descanso
+    let descanso_hora = descanso.substring(0,2);
+    let descanso_minutos = descanso.substring(3,5);
+   
+    descanso_hora *= 60;
+    let rango2 = descanso_hora + Number(descanso_minutos);
+   
+    //Rango total
+    let rango = rango1 + rango2;
+    
+    armarSelectRangoHorarioDiaHasta.innerHTML = "";
+
+    while (($inicio + rango) <= 1440) {
+        $inicio += rango;
+
+        var horas = Math.floor($inicio / 60);          
+        var minutos = $inicio % 60;
+    
+        if (horas < 10) {
+            horas = "0" + horas;    
+        }if (minutos < 10) {
+            minutos = "0" + minutos;    
+        }
+
+        $id++;
+
+        var horaFinalizacion = Math.floor(($inicio + rango) / 60);          
+        var minutosFinalizacion = ($inicio + rango) % 60;
+
+        armarSelectRangoHorarioDiaHasta.innerHTML += 
+        '<button id="horario'+$id+'" type="button" class="btn btn-primary botonesHorarios">Horario disponible '+horas+':'+minutos+' a '+horaFinalizacion+':'+minutosFinalizacion+'</button>'; 
+    }
+    
+}
 
 //#region Envia Formulario Configuración Grilla Profesional
 const formConfProf = document.getElementById('formConfProf');
