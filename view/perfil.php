@@ -25,46 +25,50 @@
 		<i class="fondoImagenPerfil"></i>
 		<i class="bi bi-person-circle imagenPerfil"></i>
 		<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
+		<div class="contenedorInformacion bg-light">
+			<button type="button" class="btn btn-primary botonSolicitarTurno">Solicitar Turno</button>
+			<button type="button" class="btn btn-success botonEnviarMensaje">Enviar Mensaje</button>
+			<h3 class="centrarTexto"><b><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b></span></h3>
+			<span class="centrarTexto" ><b>@</span><span id="mostrarNombreUsuarioPerfil"></b></span>
+			<div class="container margerSuperior">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-9">
+				<div class="card text-dark bg-light">
+					<div class="card-body">
+						<h5><b>Información personales</b></h5>
+						<div class="row">
+							<div class="col-6">
+								<b><span id="mostrarSexoPerfil"></span></b>
+							</div>
+							<div class="col-6">
+								<i class="bi bi-house-door-fill"></i> Vive en <b id="mostrarProvinciaPerfil"></b>
+								<br>
+								<i class="bi bi-geo-alt-fill"></i> De <b id="mostrarLocalidadPerfil"></b>
+							</div>
+						</div>
+						<br>
+						<h5><b>Información de profesional</b></h5>
+						<i class="bi bi-file-medical-fill"></i> Es <b><span id="mostrarEspecialidadPerfil"></span></b>
+						<br>
+						Matricula: <b><span id="mostrarMatriculaPerfil"></span></b>
 
-		<div class="">
-			<div class="row">
-				<div class="col-lg-3 border bg-light rounded-3 contenedorDatosPrincipales">
-					<div class="row">
-			
-						<h3 class="centrarTexto"><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></span></h3>
-						<span class="centrarTexto" id="mostrarNombreUsuarioPerfil"></span>
 					</div>
 				</div>
-				<div class="col-lg-8 border bg-light rounded-3 contenedorDatosPrincipales">
-					<div class="row">
-						<div class="col-md-6">
-							<span id="mostrarCorreoPerfil"></span>
-							<span id="mostrarApellidoPerfil"></span>
-							<br>
-							<span id="mostrarSexoPerfil"></span>
-							<br>
-							<span id="mostrarTelefonoPerfil"></span>
-							<br>
-							<span id="mostrarProvinciaPerfil"></span>
-							<br>
-							<span id="mostrarLocalidadPerfil"></span>
-						</div>
-						<div class="col-md-6 botones">
-							<button type="button" class="btn btn-primary">Solicitar Turno</button>
-							<button type="button" class="btn btn-primary">Enviar Mensaje</button>
-						</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card text-dark bg-light">
+					<div class="card-header"><b>Información de contacto</b></div>
+					<div class="card-body">	
+						<i class="bi bi-envelope-fill"></i> <span id="mostrarCorreoPerfil"></span>
+						<br>
+						<i class="bi bi-telephone-fill"></i> <span id="mostrarTelefonoPerfil"></span>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-
-	
-	
-	<span id="mostrarEspecialidadPerfil"></span>
-	<span id="mostrarMatriculaPerfil"></span>
-	
-
 
 	<script src="../model/js/ajaxBuscarPerfil.js"></script>
     <script src="../controller/js/perfil.js"></script>

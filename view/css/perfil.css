@@ -17,7 +17,7 @@ body{
 }
 
 .centrarTexto{
-	text-align: center;
+	margin-left: 250px;
 }
 
 .iconoFoto{
@@ -27,14 +27,14 @@ body{
 
 .imagenPerfil{
 	position: absolute;
-	margin-top: 30px;
+	margin-top: 60px;
 	margin-left: 70px;
 	font-size: 150px;
 }
 
 .fondoImagenPerfil{
 	position: absolute;
-	margin-top: 62px;
+	margin-top: 92px;
 	margin-left: 60px;
 	background-color: white;
 	border-radius: 100%;
@@ -53,4 +53,40 @@ body{
 		margin: auto;
 		text-align: center;
 	}
+}
+
+.mapaPortada{
+	width: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.contenedorInformacion{
+	margin-top: -6px;
+	padding-top: 10px;
+	width: 100%;
+	height: 130px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-style: solid;
+	border-color: #CCCDCE;
+	border-width: 1px;
+}
+
+.margerSuperior{
+	margin-top: 50px;
+}
+
+.botonSolicitarTurno{
+	position: relative;
+	float: right;
+	margin-top: 15px;
+	margin-right: 60px;
+}
+
+.botonEnviarMensaje{
+	position: relative;
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
 }
