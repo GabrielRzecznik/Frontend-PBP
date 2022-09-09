@@ -23,6 +23,7 @@
 		<div class="row centrado">
 			<div class="col-md-3 bg-light border rounded-3 contenedores alto">
 				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioP">
+					<span>Seleccione especialidad:</span>
 					<select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example">
 						<option value="0" selected>Especialidad</option>
 						<option value="Alergia e inmunologia infantil">Alergología e inmunología</option>
@@ -97,23 +98,23 @@
 						<option value="Toxicologia">Toxicologia</option>
 						<option value="Urologia">Urologia</option>
 					</select>
-				
+					<span>Seleccione modalidad de consulta:</span>
 					<select class="form-select campos" name="tipoConsulta" id="tipoConsulta" aria-label="Floating label select example">
 						<option value="0" selected>Modalidad</option>
 						<option value="Consultorio">Consultorio</option>
 						<option value="Virtual">Virtual</option>
 						<option value="Domicilio">Domicilio</option>
 					</select>
-
+					<span>Seleccione el sexo:</span>
 					<select class="form-select campos" name="sexo" id="sexo" aria-label="Floating label select example">
 						<option value="0" selected>Sexo</option>
 						<option value="Masculino">Masculino</option>
 						<option value="Femenino">Femenino</option>
 						<option value="X">X</option>
 					</select>
-				
+					<span>Seleccione la obra social de atención:</span>
 					<input type="text" class="form-control campos" name="obraSocial" id="obraSocial" placeholder="Obra social" aria-label="Obra social" aria-describedby="basic-addon1">
-				
+					<span>Seleccione su ubicación:</span>
 					<select class="form-select campos" name="ubicacion" id="ubicacion" aria-label="Floating label select example">
 						<option value="0">Ubicación actual</option>
 						<option value="1">Ubicación de mi casa</option><!--Pensar mejor nombre-->
