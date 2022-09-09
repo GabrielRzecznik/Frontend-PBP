@@ -410,20 +410,147 @@ if (descanso.value == 0) {
 //#endregion
 
 //Validar Rango Horario Dia Desde
-const inputRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHasta');
+const selectDuracionConsulta = document.getElementById('duracionConsulta');
+const selectDescanso = document.getElementById('descanso');
+const selectRangoHorarioDiaDesde = document.getElementById('rangoHorarioDiaDesde');
+const selectRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHasta');
+let armarSelectRangoHorarioDiaHasta = document.getElementById('rangoHorarioDiaHasta');
 
 document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (event) => {
     if (event.target.value != 0) {
         if(campoConfiguracionProfesional.rangoHorarioDiaHasta == true){
             document.getElementById('iconoRangoHorarioDia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
             document.getElementById('iconoRangoHorarioDia').classList.add('validado','bi-check-circle-fill');
-            inputRangoHorarioDiaHasta.disabled = false;
         }
+        
+        let duracionConsulta = selectDuracionConsulta.value;
+        let descanso = selectDescanso.value;
+        let rangoHorarioDiaDesde = selectRangoHorarioDiaDesde.value;
+
+        //Duración Consulta
+        let consulta_hora = duracionConsulta.substring(0,2);
+        let consulta_minutos = duracionConsulta.substring(3,4);
+
+        consulta_hora *= 60;
+        consulta_minutos += consulta_hora;
+
+        //Duración Descanso
+        let descanso_hora = descanso.substring(0,2);
+        let descanso_minutos = descanso.substring(3,4);
+       
+        descanso_hora *= 60;
+        descanso_minutos += descanso_hora;
+
+        console.log(consulta_minutos);
+        console.log(descanso_minutos);
+
+        selectRangoHorarioDiaHasta.disabled = false;
+        armarSelectRangoHorarioDiaHasta.innerHTML = 
+        '<option value="0">Hora de finalización</option>' +
+        '<option value="0">Hora de inicio</option>' +
+        '<option value="00:00">00:00 hs</option>' +
+        '<option value="00:15">00:15 hs</option>' +
+        '<option value="00:30">00:30 hs</option>' +
+        '<option value="00:45">00:45 hs</option>' +
+        '<option value="01:00">01:00 hs</option>' +
+        '<option value="01:15">01:15 hs</option>' +
+        '<option value="01:30">01:30 hs</option>' +
+        '<option value="01:45">01:45 hs</option>' +
+        '<option value="02:00">02:00 hs</option>' +
+        '<option value="02:15">02:15 hs</option>' +
+        '<option value="02:30">02:30 hs</option>' +
+        '<option value="02:45">02:45 hs</option>' +
+        '<option value="03:00">03:00 hs</option>' +
+        '<option value="03:15">03:15 hs</option>' +
+        '<option value="03:30">03:30 hs</option>' +
+        '<option value="03:45">03:45 hs</option>' +
+        '<option value="04:00">04:00 hs</option>' +
+        '<option value="04:15">04:15 hs</option>' +
+        '<option value="04:30">04:30 hs</option>' +
+        '<option value="04:45">04:45 hs</option>' +
+        '<option value="05:00">05:00 hs</option>' +
+        '<option value="05:15">05:15 hs</option>' +
+        '<option value="05:30">05:30 hs</option>' +
+        '<option value="05:45">05:45 hs</option>' +
+        '<option value="06:00">06:00 hs</option>' +
+        '<option value="06:15">06:15 hs</option>' +
+        '<option value="06:30">06:30 hs</option>' +
+        '<option value="06:45">06:45 hs</option>' +
+        '<option value="07:00">07:00 hs</option>' +
+        '<option value="07:15">07:15 hs</option>' +
+        '<option value="07:30">07:30 hs</option>' +
+        '<option value="07:45">07:45 hs</option>' +
+        '<option value="08:00">08:00 hs</option>' +
+        '<option value="08:15">08:15 hs</option>' +
+        '<option value="08:30">08:30 hs</option>' +
+        '<option value="08:45">08:45 hs</option>' +
+        '<option value="09:00">09:00 hs</option>' +
+        '<option value="09:15">09:15 hs</option>' +
+        '<option value="09:30">09:30 hs</option>' +
+        '<option value="09:45">09:45 hs</option>' +
+        '<option value="10:00">10:00 hs</option>' +
+        '<option value="10:15">10:15 hs</option>' +
+        '<option value="10:30">10:30 hs</option>' +
+        '<option value="10:45">10:45 hs</option>' +
+        '<option value="11:00">11:00 hs</option>' +
+        '<option value="11:15">11:15 hs</option>' +
+        '<option value="11:30">11:30 hs</option>' +
+        '<option value="11:45">11:45 hs</option>' +
+        '<option value="12:00">12:00 hs</option>' +
+        '<option value="12:15">12:15 hs</option>' +
+        '<option value="12:30">12:30 hs</option>' +
+        '<option value="12:45">12:45 hs</option>' +
+        '<option value="13:00">13:00 hs</option>' +
+        '<option value="13:15">13:15 hs</option>' +
+        '<option value="13:30">13:30 hs</option>' +
+        '<option value="13:45">13:45 hs</option>' +
+        '<option value="14:00">14:00 hs</option>' +
+        '<option value="14:15">14:15 hs</option>' +
+        '<option value="14:30">14:30 hs</option>' +
+        '<option value="14:45">14:45 hs</option>' +
+        '<option value="15:00">15:00 hs</option>' +
+        '<option value="15:15">15:15 hs</option>' +
+        '<option value="15:30">15:30 hs</option>' +
+        '<option value="15:45">15:45 hs</option>' +
+        '<option value="16:00">16:00 hs</option>' +
+        '<option value="16:15">16:15 hs</option>' +
+        '<option value="16:30">16:30 hs</option>' +
+        '<option value="16:45">16:45 hs</option>' +
+        '<option value="17:00">17:00 hs</option>' +
+        '<option value="17:15">17:15 hs</option>' +
+        '<option value="17:30">17:30 hs</option>' +
+        '<option value="17:45">17:45 hs</option>' +
+        '<option value="18:00">18:00 hs</option>' +
+        '<option value="18:15">18:15 hs</option>' +
+        '<option value="18:30">18:30 hs</option>' +
+        '<option value="18:45">18:45 hs</option>' +
+        '<option value="19:00">19:00 hs</option>' +
+        '<option value="19:15">19:15 hs</option>' +
+        '<option value="19:30">19:30 hs</option>' +
+        '<option value="19:45">19:45 hs</option>' +
+        '<option value="20:00">20:00 hs</option>' +
+        '<option value="20:15">20:15 hs</option>' +
+        '<option value="20:30">20:30 hs</option>' +
+        '<option value="20:45">20:45 hs</option>' +
+        '<option value="21:00">21:00 hs</option>' +
+        '<option value="21:15">21:15 hs</option>' +
+        '<option value="21:30">21:30 hs</option>' +
+        '<option value="21:45">21:45 hs</option>' +
+        '<option value="22:00">22:00 hs</option>' +
+        '<option value="22:15">22:15 hs</option>' +
+        '<option value="22:30">22:30 hs</option>' +
+        '<option value="22:45">22:45 hs</option>' +
+        '<option value="23:00">23:00 hs</option>' +
+        '<option value="23:15">23:15 hs</option>' +
+        '<option value="23:30">23:30 hs</option>' +
+        '<option value="23:45">23:45 hs</option>';
         //Mensaje de error
         document.getElementById('alertRangoHorarioDiaDesde').classList.remove('alertaError');
         //Validar
         campoConfiguracionProfesional['rangoHorarioDiaDesde'] = true;
     }else{
+        selectRangoHorarioDiaHasta.disabled = true;
+
         document.getElementById('iconoRangoHorarioDia').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
         document.getElementById('iconoRangoHorarioDia').classList.add('noValidado','bi-x-circle-fill');
         //Mensaje de error
