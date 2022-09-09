@@ -28,7 +28,7 @@ try {
     //$mail->addBCC('bcc@example.com');
 
     //Imagen
-    $mail->addAttachment('https://frontend-pbp.herokuapp.com/view/img/icono.png');         //Add attachments
+    //$mail->addAttachment('https://frontend-pbp.herokuapp.com/view/img/icono.png');         //Add attachments
     //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
     //Contenido
