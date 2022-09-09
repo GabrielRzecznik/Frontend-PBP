@@ -35,13 +35,15 @@
 		</div>
 		<br>
 		<div class="row">
-			<div class="col-md-9">
-				<div class="card text-dark bg-light">
+			<div class="col-lg-9">
+				<div class="card text-dark bg-light infoPersonal">
 					<div class="card-body">
 						<h5><b>Información personales</b></h5>
 						<div class="row">
 							<div class="col-6">
-								<b><span id="mostrarSexoPerfil"></span></b>
+								Es <b><span id="mostrarSexoPerfil"></span></b>
+								<br>
+								Tiene <b><span id="mostrarEdadPerfil"></span></b> años
 							</div>
 							<div class="col-6">
 								<i class="bi bi-house-door-fill"></i> Vive en <b id="mostrarProvinciaPerfil"></b>
@@ -51,14 +53,17 @@
 						</div>
 						<br>
 						<h5><b>Información de profesional</b></h5>
-						<i class="bi bi-file-medical-fill"></i> Es <b><span id="mostrarEspecialidadPerfil"></span></b>
+						Especializado en <b><span id="mostrarEspecialidadPerfil"></span></b> <i class="bi bi-file-medical-fill"></i>
 						<br>
 						Matricula: <b><span id="mostrarMatriculaPerfil"></span></b>
-
+						<br>
+						Atiende por <b id="mostrarObrasSocialesPerfil"></b>
+						<br>
+						Sus formatos de consulta son <b id="mostrarTipoConsultasPerfil"></b>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-lg-3">
 				<div class="card text-dark bg-light">
 					<div class="card-header"><b>Información de contacto</b></div>
 					<div class="card-body">	

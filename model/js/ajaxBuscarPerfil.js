@@ -12,20 +12,52 @@ function buscarPerfil($nombreUsuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
-                //datos Usuario
+                //Datos Usuario
                 document.getElementById('mostrarNombreUsuarioPerfil').innerHTML = data[0]["nombreUsuario"];
                 document.getElementById('mostrarCorreoPerfil').innerHTML = data[0]["correo"];
-                //datos Paciente
+                //Datos Paciente
                 document.getElementById('mostrarNombrePerfil').innerHTML = data[0]["nombre"];
                 document.getElementById('mostrarApellidoPerfil').innerHTML = data[0]["apellido"];
                 document.getElementById('mostrarSexoPerfil').innerHTML = data[0]["sexo"];
+                //Calcular edad
+                var añoNacimiento = parseInt(String(data[0].fechaNacimiento).substring(0,4));
+                var mesNacimiento = parseInt(String(data[0].fechaNacimiento).substring(5,7));
+                if(mesNacimiento < 10){
+                    mesNacimiento = "0" + mesNacimiento;
+                }
+                var diaNacimiento = parseInt(String(data[0].fechaNacimiento).substring(8,10));
+                if(diaNacimiento < 10){
+                    diaNacimiento = "0" + diaNacimiento;
+                }
+                var edad = año - añoNacimiento;
+                if (mes < mesNacimiento) {
+                    edad--;
+                }else if (mes == mesNacimiento) {
+                    if (dia < diaNacimiento) {
+                        edad--;
+                    }
+                }
+                document.getElementById('mostrarEdadPerfil').innerHTML = edad;
                 //document.getElementById('mostrarFotoPerfil').innerHTML = data[0]["foto"];
                 document.getElementById('mostrarTelefonoPerfil').innerHTML = data[0]["telefono"];
                 document.getElementById('mostrarProvinciaPerfil').innerHTML = data[0]["provincia"];
                 document.getElementById('mostrarLocalidadPerfil').innerHTML = data[0]["localidad"];
-                //datos Profesional 
+                //Datos Profesional 
                 document.getElementById('mostrarEspecialidadPerfil').innerHTML = data[0]["especialidad"];
                 document.getElementById('mostrarMatriculaPerfil').innerHTML = data[0]["matricula"];
+                //Mostrar obras sociales
+                $transformarArray = data[0].obraSocial;
+                $transformarArray = $transformarArray.replace(/{/,'');
+                $transformarArray = $transformarArray.replace(/}/,'');
+                var obrasSociales =  $transformarArray.split(/,/).join(', '); 
+                document.getElementById('mostrarObrasSocialesPerfil').innerHTML = obrasSociales;
+                //Mostrar tipo de consultas
+                $transformarArray2 = data[0].tipoConsulta;
+                $transformarArray2 = $transformarArray2.replace(/{/,'');
+                $transformarArray2 = $transformarArray2.replace(/}/,'');
+                var tipoConsultas =  $transformarArray2.split(/,/).join(', '); 
+                document.getElementById('mostrarTipoConsultasPerfil').innerHTML = tipoConsultas;
+                
                 //datos Profesional consultorio
                 /*if(data[0]["provinciaConsultorio"] != ""){
                     document.getElementById('mostrarProvinciaConsultorioPerfil').innerHTML = data[0]["provinciaConsultorio"];
