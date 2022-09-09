@@ -502,9 +502,7 @@ function completarSelectRangoDiaHasta() {
     armarSelectRangoHorarioDiaHasta.innerHTML = 
     '<option value="0">Hora de finalización</option>';
 
-    $valorInicial = $inicio + rango;
-
-    while (($inicio + rango) < 1440 && $valorInicial <= ($inicio)) {
+    while (($inicio + rango) < 1440) {
         $inicio += rango;
 
         var horas = Math.floor($inicio / 60);          
