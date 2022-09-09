@@ -451,9 +451,8 @@ document.getElementById("rangoHorarioDiaDesde").addEventListener('change', (even
         //Rango total
         let rango = rango1 + rango2;
         
-        $i = 0;
-        while (($i + rango1) > 1440) {//1440 son los minutos de un día
-            $i += rango;
+        while (($inicio + rango1) > 1440) {//1440 son los minutos de un día
+            $inicio += rango;
 
         }
 
