@@ -9,11 +9,6 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 let parametro = location.search;
 parametro = parametro.slice(1);
 
-if (parametro == "") {
-    //Mostrar datos perfil
-    document.getElementById('mostrarNombrePerfil').innerHTML = localStorage["nombre"];
-    document.getElementById('mostrarApellidoPerfil').innerHTML = localStorage["apellido"];
-}else{
-    buscarPerfil(parametro);
-}
+buscarPerfil(parametro);
+
 
