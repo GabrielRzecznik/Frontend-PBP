@@ -24,7 +24,9 @@
 		<!--Portada Mapa-->
 		<span class="fondoImagenPerfil"></span>
 		<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
-		<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
+		<span class=altoPortada>
+			<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
+		</span>
 		<div class="contenedorInformacion bg-light">
 			<button type="button" class="btn btn-primary botonSolicitarTurno">Solicitar Turno</button>
 			<button type="button" class="btn btn-success botonEnviarMensaje">Enviar Mensaje</button>
