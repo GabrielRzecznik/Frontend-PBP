@@ -46,7 +46,8 @@ body{
     .imagenPerfil {
 		position: absolute;
 		top: 80px;
-		left: 40%;
+		left: 100%;
+		right: 100%;
 		margin: 20px;
 	}
 
