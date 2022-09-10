@@ -45,7 +45,7 @@ body{
 @media (max-width: 768px) {
     .imagenPerfil {
 		position: absolute;
-		top: 17.25px;
+		top: 18px;
   		left: 50%;
 		margin-left: -78px;
 		
@@ -60,6 +60,7 @@ body{
 
 	.centrarTexto{
 		text-align: center;
+		margin-left: 0px;
 	}
 }
 
