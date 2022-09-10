@@ -57,13 +57,10 @@ body{
 
 .mapaPortada{
 	width: 100%;
+	height: 157.25px;
 	object-fit: cover;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-}
-
-.altoPortada{
-	height: 157.25px;
 }
 
 .contenedorInformacion{
