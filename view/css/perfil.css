@@ -45,6 +45,7 @@ body{
 @media (max-width: 768px) {
     .imagenPerfil {
 		position: absolute;
+		top: 60px;
 		left: 0;
 		right: 0;
 		margin: auto;
@@ -52,6 +53,7 @@ body{
 
 	.fondoImagenPerfil{
 		position: absolute;
+		margin-top: 60px;
 		left: 0;
 		right: 0;
 		margin: auto;
