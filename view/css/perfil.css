@@ -45,7 +45,6 @@ body{
 @media (max-width: 768px) {
     .imagenPerfil {
 		position: absolute;
-		top: 60px;
 		
 	}
 
