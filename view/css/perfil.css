@@ -46,8 +46,8 @@ body{
     .imagenPerfil {
 		position: absolute;
 		top: 80px;
-		left: 0%;
-		right: 0%;
+		text-align: center;
+		margin: 0 auto;
 	}
 
 	.fondoImagenPerfil{
