@@ -10,13 +10,20 @@
    height: 25px;
 }
 
+.nombreSitio{
+   position: absolute;
+   top: 5px;
+   left: 30px;
+}
+
 .textoLogo{
    font-size: 15px;
 }
 
 @media (max-width: 550px) { 
-   .textoLogo{
+   .nombreSitio{
       font-size: 12px;
+      top: 7px;
    }
 
    .logoUsuario {
