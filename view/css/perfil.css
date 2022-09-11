@@ -16,6 +16,12 @@ body{
 	margin-right: 1%;
 }
 
+.centrarNombre{
+	margin-left: 250px;
+	font-size: 25px;
+}
+
+
 .centrarTexto{
 	margin-left: 250px;
 }
@@ -66,7 +72,16 @@ body{
 		border: 4px solid white;
 		background-color: rgb(241, 241, 241);
 	}
+
+	.centrarNombre{
+		margin-left: 250px;
+		font-size: 20px;
+	}
 	
+	.centrarTexto{
+		margin-left: 250px;
+	}
+
 	.infoResp{
 		position: absolute;
 		margin-top: -1px;
