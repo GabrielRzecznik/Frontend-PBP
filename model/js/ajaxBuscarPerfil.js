@@ -23,7 +23,7 @@ function buscarPerfil($nombreUsuario){
                 if (data[0]["foto"] != "Array") {
                     document.getElementById('mostrarFotoPerfil').innerHTML = '<img class="foto" src="'+data[0]["foto"]+'" alt="ocurrio un error">';
                 }else{
-                    document.getElementById('mostrarFotoPerfil').innerHTML = '<i class="bi bi-person-circle"></i>';
+                    document.getElementById('mostrarFotoPerfil').innerHTML = '<img class="foto" src="../view/img/user.png" alt="ocurrio un error">';
                 }
                 //Calcular edad
                 var añoNacimiento = parseInt(String(data[0].fechaNacimiento).substring(0,4));
