@@ -23,6 +23,7 @@
 	<div class="container">
 		<!--Portada Mapa-->
 		<div class="contenedorInformacion bg-light">
+			<span class="mapa" id="visualizarMapa"></span>
 			<span class="fondoImagenPerfil"></span>
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
 			<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
@@ -32,9 +33,8 @@
 				<span class="centrarTexto" ><b>@</span><span id="mostrarNombreUsuarioPerfil"></b></span>
 			</span>
 			<div class="container margerSuperior">
-				</div>
 			</div>
-			<span class="mapa" id="visualizarMapa"></span>
+		</div>
 		<br>
 		<div class="row">
 			<div class="col-lg-9">
