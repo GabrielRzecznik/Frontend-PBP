@@ -25,8 +25,6 @@
 		<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
 		<div class="contenedorInformacion bg-light">
 			
-			<div class="container margerSuperior">
-			</div>
 		</div>
 		<br>
 		<div class="row">
