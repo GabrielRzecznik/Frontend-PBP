@@ -22,7 +22,9 @@
 
 	<div class="container">
 		<!--Portada Mapa-->
-		<span class="mapa" id="visualizarMapa"></span>
+		<div class="contenedorPortada">
+			<span class="mapa" id="visualizarMapa"></span>
+		</div>
 		<div class="contenedorInformacion bg-light">
 			<span class="fondoImagenPerfil"></span>
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
