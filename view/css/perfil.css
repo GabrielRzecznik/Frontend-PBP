@@ -43,8 +43,6 @@ body{
 }
 
 .contenedorPortada{
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
 	height: 199px;
 }
 
@@ -93,11 +91,15 @@ body{
 }
 
 .mapaPortada{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	width: 100%;
 	height: 100%;
 }
 
 .fotoPortada{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	object-fit: cover;
 }
 
