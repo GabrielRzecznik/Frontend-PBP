@@ -81,7 +81,7 @@ function buscarPerfil($nombreUsuario){
                     }
 
                     //Mostrar Mapa Portada
-                    if (data[0].localidadConsultorio != null) {
+                    if (data[0].localidadConsultorio != "") {
                         document.getElementById('informacionConsultorio').style.display = 'block';
                         //Mostrar Mapa
                         $calleAvenida = data[0].calleConsultorio;
@@ -121,8 +121,6 @@ function buscarPerfil($nombreUsuario){
                     }else{
                         document.getElementById('visualizarMapa').innerHTML = '<img  class="mapaPortada fotoPortada" src="../view/img/portadaSinConsultorio.jpg" alt="No se pudo cargar la portada">';
                     }
-                }else {
-                    document.getElementById('visualizarMapa').innerHTML = '<img  class="mapaPortada fotoPortada" src="../view/img/portadaSinConsultorio.jpg" alt="No se pudo cargar la portada">';
                 }
             }else{
                 alert("¡Ocurrió un error inesperado!");

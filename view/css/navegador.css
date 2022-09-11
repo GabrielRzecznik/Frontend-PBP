@@ -20,6 +20,10 @@
    font-size: 15px;
 }
 
+.cursorPointer{
+   cursor:pointer;
+}
+
 @media (max-width: 550px) { 
    .nombreSitio{
       font-size: 12px;
