@@ -22,7 +22,7 @@
 
 	<div class="container">
 		<!--Portada Mapa-->
-		<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
+		<span class="mapa" id="visualizarMapa"></span>
 		<div class="contenedorInformacion bg-light">
 			<span class="fondoImagenPerfil"></span>
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
