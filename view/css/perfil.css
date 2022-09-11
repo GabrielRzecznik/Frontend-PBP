@@ -80,6 +80,10 @@ body{
 		background-color: rgb(241, 241, 241); 
 	}
 
+	.sinBotones{
+		height: 100px;
+	}
+
 	.centrarNombre{
 		margin-left: -150px;
 		font-size: 21px;

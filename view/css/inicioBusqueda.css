@@ -64,6 +64,10 @@ body{
 	font-size: 35px;
 }
 
+.alto{
+	height: min-content;
+}
+
 .botonCargando{
 	display: none;
 	width: 15px;
@@ -91,10 +95,6 @@ body{
 	margin-top: 10%;
 	margin-bottom: 10%;
 	text-align: center;
-}
-
-.alto{
-	height: min-content;
 }
 
 .botonBuscar{

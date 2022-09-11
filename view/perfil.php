@@ -25,7 +25,7 @@
 		<div class="contenedorPortada">
 			<span class="mapa" id="visualizarMapa"></span>
 		</div>
-		<div class="contenedorInformacion bg-light" id="contenedorUsuario">
+		<div class="contenedorInformacion bg-light sinBotones" id="contenedorUsuario">
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
 			<span class="infoResp">
 				<b class="centrarNombre"><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b></span>
