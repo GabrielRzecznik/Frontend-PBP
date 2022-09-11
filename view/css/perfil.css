@@ -48,7 +48,7 @@ body{
 
 .contenedorInformacion{
 	position: relative;
-	top: -10px;
+	top: -15px;
 }
 
 @media (max-width: 768px) {
