@@ -26,7 +26,6 @@
 			<span class="mapa" id="visualizarMapa"></span>
 		</div>
 		<div class="contenedorInformacion bg-light">
-			<span class="fondoImagenPerfil"></span>
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
 			<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
 			<button type="button" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</button>

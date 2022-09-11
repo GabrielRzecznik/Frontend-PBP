@@ -35,19 +35,10 @@ body{
 .foto{
 	position: relative;
 	top: -20px;
-	width: 150px;
-	height: 150px;
+	width: 165px;
+	height: 165px;
 	border-radius: 100%;
-}
-
-.fondoImagenPerfil{
-	position: absolute;
-	margin-top: -80px;
-	margin-left: 60px;
-	background-color: white;
-	border-radius: 100%;
-	width: 170px;
-	height: 170px;
+	border: 10px solid white;
 }
 
 .contenedorPortada{
@@ -59,38 +50,24 @@ body{
 	top: -35px;
 }
 
-@media (max-width: 768px) {
-	.contenedorInformacion{
-		position: relative;
-		top: -35px;
-	}
-	
-	
+@media (max-width: 768px) {	
 	.infoResp{
 		position: absolute;
 		margin-top: 0px;
 		margin-left: -50px;
 	}
 
+	.centrarTexto{
+		margin-top: -5px;
+	}
+	
 	.imagenPerfil{
 		position: absolute;
 		margin-top: -122px;
 		margin-left: 30px;
 		font-size: 150px;
-	}
-
-	.centrarTexto{
-		margin-top: -5px;
-	}
-	
-	.fondoImagenPerfil{
-		position: absolute;
-		margin-top: -90px;
-		margin-left: 20px;
-		background-color: white;
-		border-radius: 100%;
-		width: 170px;
-		height: 170px;
+		width: 80ox;
+		height: 80px;
 	}
 
 	.botonSolicitarTurno{
