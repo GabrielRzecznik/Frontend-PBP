@@ -42,6 +42,10 @@ body{
 	height: 170px;
 }
 
+.contenedorPortada{
+	height: 170px;
+}
+
 .contenedorInformacion{
 	position: relative;
 	top: -10px;
@@ -84,10 +88,6 @@ body{
 		top: 60px;
 		right: -5%;
 	}
-}
-
-.contenedorPortada{
-	height: 160px;
 }
 
 .mapaPortada{
