@@ -89,15 +89,15 @@ body{
 	.botonSolicitarTurno{
 		position: absolute;
 		float: right;
-		top: 60px;
-		right: -47.5px;
+		top: 70px;
+		right: -55px;
 	}
 	
 	.botonEnviarMensaje{
 		position: absolute;
 		float: right;
-		top: 60px;
-		right: -47.5px;
+		top: 70px;
+		right: -55px;
 	}
 }
 
