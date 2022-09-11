@@ -42,11 +42,12 @@ body{
 	height: 170px;
 }
 
+.contenedorInformacion{
+	position: relative;
+	margin-top: -10px;
+}
+
 @media (max-width: 768px) {
-	.contenedorInformacion{
-		height: 300px;
-	}
-	
 	.infoResp{
 		position: absolute;
 		margin-top: 0px;
