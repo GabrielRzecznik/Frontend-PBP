@@ -32,6 +32,14 @@ body{
 	font-size: 150px;
 }
 
+.foto{
+	top: -20px;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+}
+
 .fondoImagenPerfil{
 	position: absolute;
 	margin-top: -80px;
@@ -52,6 +60,12 @@ body{
 }
 
 @media (max-width: 768px) {
+	.contenedorInformacion{
+		position: relative;
+		top: -35px;
+	}
+	
+	
 	.infoResp{
 		position: absolute;
 		margin-top: 0px;
@@ -139,14 +153,6 @@ body{
 
 .infoPersonal{
 	padding: 15px;
-}
-
-.foto{
-	top: -20px;
-	position: relative;
-	width: 150px;
-	height: 150px;
-	border-radius: 100%;
 }
 
 .informacionConsultorio{
