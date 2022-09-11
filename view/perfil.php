@@ -37,7 +37,6 @@
 			<div class="container margerSuperior">
 			</div>
 		</div>
-		<br>
 		<div class="row">
 			<div class="col-lg-9">
 				<div class="card text-dark bg-light infoPersonal">
