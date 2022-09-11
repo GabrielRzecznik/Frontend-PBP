@@ -27,15 +27,14 @@
 		</div>
 		<div class="contenedorInformacion bg-light">
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
-			<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
-			<button type="button" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</button>
 			<span class="infoResp">
 				<b class="centrarNombre"><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b></span>
 				<br>
 				<span class="centrarTexto" ><b>@</span><span id="mostrarNombreUsuarioPerfil"></b></span>
 			</span>
-			<div class="container margerSuperior">
-			</div>
+			<br>
+			<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
+			<button type="button" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</button>
 		</div>
 		<div class="row">
 			<div class="col-lg-9">

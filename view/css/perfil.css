@@ -77,12 +77,12 @@ body{
 	}
 
 	.centrarNombre{
-		margin-left: 250px;
+		margin-left: -120px;
 		font-size: 21px;
 	}
 	
 	.centrarTexto{
-		margin-left: 120px;
+		margin-left: 135px;
 	}
 	
 	.botonSolicitarTurno{
@@ -132,15 +132,15 @@ body{
 .botonSolicitarTurno{
 	position: relative;
 	float: right;
-	margin-top: 15px;
-	margin-right: 60px;
+	margin-top: -55px;
+	margin-right: 195px;
 }
 
 .botonEnviarMensaje{
 	position: relative;
 	float: right;
-	margin-top: 15px;
-	margin-right: 10px;
+	margin-top: -55px;
+	margin-right: 92px;
 }
 
 .infoPersonal{
