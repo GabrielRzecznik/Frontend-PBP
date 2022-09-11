@@ -53,7 +53,7 @@
 								<i class="bi bi-geo-alt-fill"></i> De <b id="mostrarLocalidadPerfil"></b>
 							</div>
 						</div>
-						<span class="infoProfesional">
+						<span class="infoProfesional" id="infoProfesional">
 							<hr>
 							<h5><b>Información de profesional</b></h5>
 							Especializado en <b><span id="mostrarEspecialidadPerfil"></span></b> <i class="bi bi-file-medical-fill"></i>
