@@ -31,7 +31,7 @@
 			<span class="infoResp">
 				<h4 class="centrarTexto"><b><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b></span></h4>
 				<span class="centrarTexto" ><b>@</span><span id="mostrarNombreUsuarioPerfil"></b></span>
-			</span>	
+			</span>
 			<div class="container margerSuperior">
 			</div>
 		</div>
