@@ -114,6 +114,10 @@ body{
 	object-fit: cover;
 }
 
+.infoProfesional{
+	display: none;
+}
+
 .contenedorInformacion{
 	margin-top: -6px;
 	padding-top: 10px;

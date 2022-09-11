@@ -49,7 +49,8 @@ function buscarPerfil($nombreUsuario){
                 document.getElementById('mostrarLocalidadPerfil').innerHTML = data[0]["localidad"];
                 
                 //Datos Profesional
-                if (data[0]["id_profesional"] != "") {
+                if (data[0]["id_profesional"] != null) {
+                    document.getElementById('infoProfesional').style.display = 'block';
                     document.getElementById('mostrarEspecialidadPerfil').innerHTML = data[0]["especialidad"];
                     document.getElementById('mostrarMatriculaPerfil').innerHTML = data[0]["matricula"];
                     //Mostrar obras sociales
@@ -77,7 +78,7 @@ function buscarPerfil($nombreUsuario){
                     }
 
                     //Mostrar Mapa Portada
-                    if (data[0].localidadConsultorio != "") {
+                    if (data[0].localidadConsultorio != null) {
                         document.getElementById('informacionConsultorio').style.display = 'block';
                         //Mostrar Mapa
                         $calleAvenida = data[0].calleConsultorio;
