@@ -59,6 +59,10 @@ body{
 	top: -35px;
 }
 
+.botonesPerfil{
+	display: none;
+}
+
 @media (max-width: 1000px) {	
 	.imagenPerfil{
 		position: absolute;

@@ -33,8 +33,10 @@
 				<b class="centrarTexto">@<span id="mostrarNombreUsuarioPerfil"></b>
 			</span>
 			<br>
-			<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
-			<button type="button" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</button>
+			<span class="botonesPerfil" id="botonesPerfil">
+				<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
+				<button type="button" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</button>
+			</span>
 		</div>
 		<div class="row">
 			<div class="col-lg-9">
