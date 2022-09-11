@@ -22,6 +22,7 @@ if (localStorage["departamento"] != "") {
     document.getElementById('iconoDepartamento').classList.add('signo','bi-check-circle-fill','noValidado');
     document.getElementById('departamento').value = localStorage["departamento"];
 }
+
 document.getElementById('nombre').value = localStorage["nombre"];
 document.getElementById('apellido').value = localStorage["apellido"];
 document.getElementById('fechaNacimiento').value = localStorage["fechaNacimiento"];
@@ -30,7 +31,6 @@ document.getElementById('telefono').value = localStorage["telefono"];
 document.getElementById('localidad').value = localStorage["localidad"];
 document.getElementById('calle').value = localStorage["calle"];
 document.getElementById('altura').value = localStorage["altura"];
-
 
 //Cerrar sesión
 function cerrarSesion() {
