@@ -267,7 +267,6 @@ formDeshabilitarUsuarioPreValidacion.addEventListener('submit', (e) => {
 
 //#region Opción Configuración profesional
 if (localStorage.getItem("id_profesional") != "null") {
-    alert("hola");
     document.getElementById('confProf').classList.remove('noMostrar');
 }
 //#endregion
