@@ -22,8 +22,8 @@
 
 	<div class="container">
 		<!--Portada Mapa-->
+		<span class="mapa" id="visualizarMapa"></span>
 		<div class="contenedorInformacion bg-light">
-			<span class="mapa" id="visualizarMapa"></span>
 			<span class="fondoImagenPerfil"></span>
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
 			<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
