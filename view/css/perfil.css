@@ -27,18 +27,18 @@ body{
 
 .imagenPerfil{
 	position: absolute;
-	margin-top: -112px;
+	margin-top: -132px;
 	margin-left: 70px;
 	font-size: 150px;
 }
 
 .foto{
 	position: relative;
-	top: -20px;
 	width: 165px;
 	height: 165px;
 	border-radius: 100%;
-	border: 10px solid white;
+	border: 7.5px solid white;
+	background-color: rgb(241, 241, 241);
 }
 
 .contenedorPortada{
@@ -51,37 +51,40 @@ body{
 }
 
 @media (max-width: 768px) {	
-	.infoResp{
-		position: absolute;
-		margin-top: 0px;
-		margin-left: -50px;
-	}
-
-	.centrarTexto{
-		margin-top: -5px;
-	}
-	
 	.imagenPerfil{
 		position: absolute;
-		margin-top: -122px;
+		margin-top: -105px;
 		margin-left: 30px;
 		font-size: 150px;
-		width: 80ox;
-		height: 80px;
 	}
 
+	.foto{
+		position: relative;
+		width: 75px;
+		height: 75px;
+		border-radius: 100%;
+		border: 4px solid white;
+		background-color: rgb(241, 241, 241);
+	}
+	
+	.infoResp{
+		position: absolute;
+		margin-top: -1px;
+		margin-left: -130px;
+	}
+	
 	.botonSolicitarTurno{
 		position: absolute;
 		float: right;
 		top: 60px;
-		right: -5%;
+		right: -10%;
 	}
 	
 	.botonEnviarMensaje{
 		position: absolute;
 		float: right;
 		top: 60px;
-		right: -5%;
+		right: -10%;
 	}
 }
 
