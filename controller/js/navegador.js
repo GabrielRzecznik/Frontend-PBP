@@ -8,6 +8,11 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 //Mostrar Usuario
 document.getElementById('usuario').innerHTML = localStorage["nombreUsuario"];
 
+//Ir a mi perfil
+document.getElementById("irMiPerfil").addEventListener("click", function() {
+    window.location.href = "../view/perfil.php?"+localStorage.getItem("nombreUsuario");
+});
+
 //Setear inputs - Editar Usuario
 document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 
