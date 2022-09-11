@@ -30,7 +30,7 @@
 			<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
 			<button type="button" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</button>
 			<span class="infoResp">
-				<h4 class="centrarTexto"><b><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b></span></h4>
+				<h5 class="centrarTexto"><b><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b></span></h5>
 				<span class="centrarTexto" ><b>@</span><span id="mostrarNombreUsuarioPerfil"></b></span>
 			</span>
 			<div class="container margerSuperior">
