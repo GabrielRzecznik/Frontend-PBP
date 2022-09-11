@@ -53,15 +53,17 @@
 								<i class="bi bi-geo-alt-fill"></i> De <b id="mostrarLocalidadPerfil"></b>
 							</div>
 						</div>
-						<hr>
-						<h5><b>Información de profesional</b></h5>
-						Especializado en <b><span id="mostrarEspecialidadPerfil"></span></b> <i class="bi bi-file-medical-fill"></i>
-						<br>
-						Matricula: <b><span id="mostrarMatriculaPerfil"></span></b>
-						<br>
-						Atiende por <b id="mostrarObrasSocialesPerfil"></b>
-						<br>
-						Sus formatos de consulta son <b id="mostrarTipoConsultasPerfil"></b>
+						<span class="infoProfesional">
+							<hr>
+							<h5><b>Información de profesional</b></h5>
+							Especializado en <b><span id="mostrarEspecialidadPerfil"></span></b> <i class="bi bi-file-medical-fill"></i>
+							<br>
+							Matricula: <b><span id="mostrarMatriculaPerfil"></span></b>
+							<br>
+							Atiende por <b id="mostrarObrasSocialesPerfil"></b>
+							<br>
+							Sus formatos de consulta son <b id="mostrarTipoConsultasPerfil"></b>
+						</span>
 					</div>
 				</div>
 				<br>
