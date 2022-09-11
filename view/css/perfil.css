@@ -43,6 +43,8 @@ body{
 }
 
 .contenedorPortada{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	height: 199px;
 }
 
@@ -148,9 +150,4 @@ body{
 .mapaConsultorio{
 	width: 100%;
 	height: 100%;
-}
-
-.mapa{
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
 }
