@@ -43,6 +43,10 @@ body{
 }
 
 @media (max-width: 768px) {
+	.contenedorInformacion{
+		height: 300px;
+	}
+	
 	.infoResp{
 		position: absolute;
 		margin-top: 0px;
