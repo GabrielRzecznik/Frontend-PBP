@@ -30,7 +30,7 @@
 			<span class="infoResp">
 				<b class="centrarNombre"><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b></span>
 				<br>
-				<span class="centrarTexto" ><b>@</span><span id="mostrarNombreUsuarioPerfil"></b></span>
+				<b class="centrarTexto">@<span id="mostrarNombreUsuarioPerfil"></b>
 			</span>
 			<br>
 			<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
