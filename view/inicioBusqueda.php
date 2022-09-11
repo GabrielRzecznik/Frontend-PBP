@@ -129,8 +129,8 @@
 				</form>
 			</div>
 
-			<div class="col-md-8 bg-light border rounded-3 contenedores">
-				<h5>Resultados:</h5>
+			<div class="col-md-8 bg-light border rounded-3 contenedores alto">
+				<h5><b>Resultados:</b></h5>
 				<div class="row" id="con">
 					<span class="sinBusqueda centrarMensaje"><i class="bi bi-binoculars-fill"> Encuentra el profesional que estas buscando.</i></span>
 				</div>
