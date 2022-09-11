@@ -22,14 +22,16 @@
 
 	<div class="container">
 		<!--Portada Mapa-->
-		<span class="fondoImagenPerfil"></span>
-		<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
 		<span class="mapa" id="visualizarMapa">Error al cargar portada</span>
 		<div class="contenedorInformacion bg-light">
-			<button type="button" class="btn btn-primary botonSolicitarTurno">Solicitar Turno</button>
-			<button type="button" class="btn btn-success botonEnviarMensaje">Enviar Mensaje</button>
-			<h3 class="centrarTexto"><b><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b></span></h3>
-			<span class="centrarTexto" ><b>@</span><span id="mostrarNombreUsuarioPerfil"></b></span>
+			<span class="fondoImagenPerfil"></span>
+			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
+			<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
+			<button type="button" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</button>
+			<span class="infoResp">
+				<h3 class="centrarTexto"><b><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b></span></h3>
+				<span class="centrarTexto" ><b>@</span><span id="mostrarNombreUsuarioPerfil"></b></span>
+			</span>	
 			<div class="container margerSuperior">
 			</div>
 		</div>
