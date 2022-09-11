@@ -50,6 +50,9 @@ function buscarPerfil($nombreUsuario){
                 
                 //Datos Profesional
                 if (data[0]["id_profesional"] != null) {
+                    if (data[0]["id_profesional"] != localStorage.getItem("id_profesional")) {
+                        document.getElementById('botonesPerfil').style.display = 'block';
+                    }
                     document.getElementById('infoProfesional').style.display = 'block';
                     document.getElementById('mostrarEspecialidadPerfil').innerHTML = data[0]["especialidad"];
                     document.getElementById('mostrarMatriculaPerfil').innerHTML = data[0]["matricula"];
