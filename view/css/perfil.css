@@ -17,12 +17,15 @@ body{
 }
 
 .centrarNombre{
-	margin-left: 250px;
 	font-size: 25px;
 }
 
 
 .centrarTexto{
+	margin-left: 250px;
+}
+
+.infoResp{
 	margin-left: 250px;
 }
 
@@ -70,7 +73,7 @@ body{
 		height: 75px;
 		border-radius: 100%;
 		border: 4px solid white;
-		background-color: rgb(241, 241, 241);
+		background-color: rgb(241, 241, 241); 
 	}
 
 	.centrarNombre{
@@ -80,12 +83,6 @@ body{
 	
 	.centrarTexto{
 		margin-left: 120px;
-	}
-
-	.infoResp{
-		position: absolute;
-		margin-top: -1px;
-		margin-left: -130px;
 	}
 	
 	.botonSolicitarTurno{
