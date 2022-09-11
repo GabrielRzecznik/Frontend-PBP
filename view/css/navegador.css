@@ -145,6 +145,10 @@
 .mostrar{
   visibility: visible;
 }
+
+.noMostrar{
+   visibility: none;
+}
   
 .fotoPerfil{
    width: 100%;
