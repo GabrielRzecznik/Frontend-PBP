@@ -22,7 +22,6 @@
 
 	<div class="container">
 		<!--Portada Mapa-->
-		<span class="mapa" id="visualizarMapa"></span>
 		<div class="contenedorInformacion bg-light">
 			<span class="fondoImagenPerfil"></span>
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
@@ -33,8 +32,9 @@
 				<span class="centrarTexto" ><b>@</span><span id="mostrarNombreUsuarioPerfil"></b></span>
 			</span>
 			<div class="container margerSuperior">
+				</div>
 			</div>
-		</div>
+			<span class="mapa" id="visualizarMapa"></span>
 		<br>
 		<div class="row">
 			<div class="col-lg-9">
