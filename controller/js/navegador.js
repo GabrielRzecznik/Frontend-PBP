@@ -665,7 +665,16 @@ function mostrarHorarios() {
 const formConfProf = document.getElementById('formConfProf');
 //ESTOY AQUI
 formConfProf.addEventListener('submit', (e) => {
-    
+    e.preventDefault();//evita que se envien los datos y se refresque la pagina
+
+    if (campoConfiguracionProfesional.diasAtencion && campoConfiguracionProfesional.duracionConsulta && campoConfiguracionProfesional.descanso && campoConfiguracionProfesional.rangoHorarioDiaDesde && campoConfiguracionProfesional.rangoHorarioDiaHasta && campoConfiguracionProfesional.deshabilitarHorarios) {
+        //Enviar AJAX
+        document.getElementById('cargando').style.display = 'block';
+        document.getElementById('loguearse').style.display = 'none';
+        buscarUsuario(formulario, $dias);
+    }else{
+        alert("¡Debe completar todos los campos!")
+    }
 }); 
 //#endregion
 
