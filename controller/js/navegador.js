@@ -666,10 +666,8 @@ const formConfProf = document.getElementById('formConfProf');
 //ESTOY AQUI
 formConfProf.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
-    console.log("diasAtencion:"+campoConfiguracionProfesional.diasAtencion);
-    console.log("duracionConsulta:"+campoConfiguracionProfesional.duracionConsulta);
-    console.log("descanso:"+campoConfiguracionProfesional.descanso);
-    if (campoConfiguracionProfesional.diasAtencion && campoConfiguracionProfesional.duracionConsulta && campoConfiguracionProfesional.descanso && campoConfiguracionProfesional.rangoHorarioDiaDesde && campoConfiguracionProfesional.rangoHorarioDiaHasta && campoConfiguracionProfesional.deshabilitarHorarios) {
+
+    if (campoConfiguracionProfesional.diasAtencion && campoConfiguracionProfesional.duracionConsulta && campoConfiguracionProfesional.descanso && campoConfiguracionProfesional.rangoHorarioDiaDesde && campoConfiguracionProfesional.rangoHorarioDiaHasta) {
         //Enviar AJAX
         document.getElementById('cargandoConfiguracionGrilla').style.display = 'block';
         document.getElementById('configurarGrilla').style.display = 'none';
