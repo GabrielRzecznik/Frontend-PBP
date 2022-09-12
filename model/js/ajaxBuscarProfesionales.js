@@ -170,7 +170,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                         '<div class="col-6">' +
                                             '<div class="sinMapa">' +
                                                 '<span class="textoSinMapa">' +
-                                                    'El profesional no cuenta<br>con consultorio. ' +
+                                                    '<b>El profesional no cuenta<br>con consultorio.</b> ' +
                                                     '<i class="bi bi-geo-alt-fill"></i>' +
                                                 '<span>' +        
                                             '</div>' + 
