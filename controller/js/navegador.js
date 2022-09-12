@@ -669,9 +669,9 @@ formConfProf.addEventListener('submit', (e) => {
 
     if (campoConfiguracionProfesional.diasAtencion && campoConfiguracionProfesional.duracionConsulta && campoConfiguracionProfesional.descanso && campoConfiguracionProfesional.rangoHorarioDiaDesde && campoConfiguracionProfesional.rangoHorarioDiaHasta && campoConfiguracionProfesional.deshabilitarHorarios) {
         //Enviar AJAX
-        document.getElementById('cargando').style.display = 'block';
-        document.getElementById('loguearse').style.display = 'none';
-        buscarUsuario(formulario, $dias);
+        document.getElementById('cargandoConfiguracionGrilla').style.display = 'block';
+        document.getElementById('configurarGrilla').style.display = 'none';
+        configurarGrillaProfesional(formulario, $dias);
     }else{
         alert("¡Debe completar todos los campos!")
     }
