@@ -671,7 +671,7 @@ formConfProf.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('cargandoConfiguracionGrilla').style.display = 'block';
         document.getElementById('configurarGrilla').style.display = 'none';
-        configurarGrillaProfesional(formulario, $dias);
+        configurarGrillaProfesional(formConfProf, $dias);
     }else{
         alert("¡Debe completar todos los campos!")
     }
