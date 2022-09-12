@@ -14,6 +14,7 @@ function configurarGrillaProfesional($formulario, $dias){
                 document.getElementById('cargandoConfiguracionGrilla').style.display = 'none';
                 localStorage.setItem("estadoProfesional", "Activo");
                 location.reload();
+                alert("Configuración grilla profesional guardada con éxito")
             }else if (xmlhttp.status == 500) {
                 document.getElementById('configurarGrilla').style.display = 'block';
                 document.getElementById('cargandoConfiguracionGrilla').style.display = 'none';
