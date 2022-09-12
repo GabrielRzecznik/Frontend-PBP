@@ -147,6 +147,7 @@
 	<script src="../model/js/ajaxBuscarProfesionales.js"></script>
 	<script src="../model/js/ajaxConfirmarContraseña.js"></script>
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
+	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
 </body>
 </html>
 
