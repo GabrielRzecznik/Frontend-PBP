@@ -122,6 +122,8 @@ function buscarPerfil($nombreUsuario){
                     }else{
                         document.getElementById('visualizarMapa').innerHTML = '<img  class="mapaPortada fotoPortada" src="../view/img/portadaSinConsultorio.jpg" alt="No se pudo cargar la portada">';
                     }
+                }else{
+                    document.getElementById('visualizarMapa').innerHTML = '<img  class="mapaPortada fotoPortada" src="../view/img/portadaSinConsultorio.jpg" alt="No se pudo cargar la portada">';
                 }
             }else{
                 alert("¡Ocurrió un error inesperado!");
