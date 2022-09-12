@@ -40,3 +40,4 @@ function enviarCorreo(correo, asignarDuracion){
     xmlhttp.open("POST",'https://formsubmit.co/ajax/'+correo,true);//Concatenarle cualquier correo
     xmlhttp.send(formData);
 }
+
