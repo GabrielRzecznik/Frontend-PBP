@@ -40,13 +40,3 @@ function enviarCorreo(correo, asignarDuracion){
     xmlhttp.open("POST",'https://formsubmit.co/ajax/'+correo,true);//Concatenarle cualquier correo
     xmlhttp.send(formData);
 }
-
-/*
-url: "https://formsubmit.co/ajax/rzecznike@gmail.com",
-    method: "POST",
-    data: {
-        name: "Hola!",
-        message: "Amiguito!"
-    },
-    dataType: "json"
-*/
