@@ -147,7 +147,7 @@
 }
 
 .noMostrar{
-   visibility: none;
+   display: none;
 }
   
 .fotoPerfil{
