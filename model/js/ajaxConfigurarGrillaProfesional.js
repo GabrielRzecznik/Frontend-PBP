@@ -12,7 +12,8 @@ function configurarGrillaProfesional($formulario, $dias){
             if (xmlhttp.status == 200) {
                 document.getElementById('configurarGrilla').style.display = 'block';
                 document.getElementById('cargandoConfiguracionGrilla').style.display = 'none';
-               
+                localStorage.setItem("estadoProfesional", "Activo");
+                location.reload();
             }else if (xmlhttp.status == 500) {
                 document.getElementById('configurarGrilla').style.display = 'block';
                 document.getElementById('cargandoConfiguracionGrilla').style.display = 'none';
