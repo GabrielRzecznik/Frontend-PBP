@@ -29,6 +29,7 @@ function buscarUsuario(formulario){
                     localStorage.setItem("nombreUsuario", data[0]["nombreUsuario"]);
                     localStorage.setItem("latitud", data[0]["latitud"]);
                     localStorage.setItem("longitud", data[0]["longitud"]);
+                    localStorage.setItem("estadoProfesional", data[0]["estadoProfesional"]);
                     //Redirigir             
                     window.location.href = "../view/inicioBusqueda.php";
                 }if (data[0]["estadoUsuario"] == "En Creación") {
