@@ -42,7 +42,7 @@
 			<div class="col-lg-9">
 				<div class="card text-dark bg-light infoPersonal">
 					<div class="card-body">
-						<h5><b>Información personales</b></h5>
+						<h5><b>Información personal</b></h5>
 						<div class="row">
 							<div class="col-6">
 								Es <b><span id="mostrarSexoPerfil"></span></b>
