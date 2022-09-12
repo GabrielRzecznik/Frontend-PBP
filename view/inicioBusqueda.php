@@ -23,7 +23,7 @@
 		<div class="row centrado">
 			<div class="col-md-3 bg-light border rounded-3 contenedores alto">
 				<h5><b>Buscar Profesionales</b></h5>
-				<br>
+				<hr>
 				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioP">
 					<b>Seleccione especialidad:</b>
 					<select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example">
@@ -131,6 +131,7 @@
 
 			<div class="col-md-8 bg-light border rounded-3 contenedores alto">
 				<h5><b>Resultados:</b></h5>
+				<hr>
 				<div class="row" id="con">
 					<span class="sinBusqueda centrarMensaje"><i class="bi bi-binoculars-fill"> Encuentra el profesional que estas buscando.</i></span>
 				</div>
