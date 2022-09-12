@@ -1,6 +1,6 @@
 function configurarGrillaProfesional($formulario, $dias){
     var formData= new FormData($formulario);
-    formData.append("diasAtencion", $dias);
+    formData.append("diasAtencion", '{'+$dias+'}');
     formData.append("id_prof", localStorage.getItem("id_profesional"));
     var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
