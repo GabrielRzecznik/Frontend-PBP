@@ -21,7 +21,7 @@
 	?>
 	<div class="container-fluid">
 		<div class="row centrado">
-			<div class="col-md-3 bg-light border rounded-3 contenedores alto margenes">
+			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding">
 				<h5><b>Buscar Profesionales</b></h5>
 				<hr>
 				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioP">

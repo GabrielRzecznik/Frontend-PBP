@@ -51,6 +51,10 @@ body{
     .infoProfesional{
 		font-size: small;
 	}
+
+	.padding{
+		padding: 3.5%;
+	}
 }
 
 .mapa{
@@ -124,8 +128,4 @@ body{
     vertical-align: middle;
 }
 
-.margenes{
-	margin-left: 2px;
-	margin-right: 2px;
-	padding: 3.5%;
-}
+
