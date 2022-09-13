@@ -125,5 +125,7 @@ body{
 }
 
 .margenes{
-	margin: 1%;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 3.5%;
 }
