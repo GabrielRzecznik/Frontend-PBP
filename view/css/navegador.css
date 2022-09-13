@@ -254,3 +254,15 @@
    margin: 5px;
    font-size: 12px;
 }
+
+.colorGris{
+	color: rgb(59, 59, 59);
+}
+
+.fotoUsuario{
+   border-radius: 100%;
+   width: 25px;
+   height: 25px;
+   position: relative;
+   margin-top: -2px;
+}

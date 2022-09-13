@@ -8,6 +8,11 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 //Mostrar Usuario
 document.getElementById('usuario').innerHTML = localStorage["nombreUsuario"];
 
+//Mostrar Foto
+if (localStorage.getItem("foto") != "Array") {
+    document.getElementById('fotoUsuario').innerHTML = '<img class="fotoUsuario" src="'+localStorage["foto"]+'" alt="">';
+}
+
 //Ir a mi perfil
 document.getElementById("irMiPerfil").addEventListener("click", function() {
     window.location.href = "../view/perfil.php?"+localStorage.getItem("nombreUsuario");
