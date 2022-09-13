@@ -28,9 +28,9 @@
 		<div class="contenedorInformacion bg-light sinBotones" id="contenedorUsuario">
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
 			<span class="infoResp">
-				<b class="centrarNombre"><span id="mostrarNombrePerfil"></span> <span id="mostrarApellidoPerfil"></b> <i id="ejecutarEditarPerfil" class="bi bi-pencil-fill"></i></span>
+				<b class="centrarNombre colorGris"><span id="mostrarNombrePerfil"></span><span id="mostrarApellidoPerfil"></b> <i id="ejecutarEditarPerfil" class="bi bi-pencil-fill lapiz"></i></span>
 				<br>
-				<b class="centrarTexto">@<span id="mostrarNombreUsuarioPerfil"></b>
+				<b class="centrarTexto colorGris">@<span id="mostrarNombreUsuarioPerfil"></b>
 			</span>
 			<br>
 			<span class="botonesPerfil" id="botonesPerfil">
@@ -42,20 +42,20 @@
 			<div class="col-lg-9">
 				<div class="card text-dark bg-light infoPersonal">
 					<div class="card-body">
-						<h5><b>Información personal</b></h5>
+						<h5 class="colorGris"><b>Información personal</b></h5>
 						<div class="row">
-							<div class="col-6">
+							<div class="col-6 colorGris">
 								Es <b><span id="mostrarSexoPerfil"></span></b>
 								<br>
 								Tiene <b><span id="mostrarEdadPerfil"></span></b> años
 							</div>
-							<div class="col-6">
+							<div class="col-6 colorGris">
 								<i class="bi bi-house-door-fill"></i> Vive en <b id="mostrarProvinciaPerfil"></b>
 								<br>
 								<i class="bi bi-geo-alt-fill"></i> De <b id="mostrarLocalidadPerfil"></b>
 							</div>
 						</div>
-						<span class="infoProfesional" id="infoProfesional">
+						<span class="infoProfesional colorGris" id="infoProfesional">
 							<hr>
 							<h5><b>Información de profesional</b></h5>
 							Especializado en <b><span id="mostrarEspecialidadPerfil"></span></b> <i class="bi bi-file-medical-fill"></i>
@@ -72,25 +72,29 @@
 			</div>
 			<div class="col-lg-3">
 				<div class="card text-dark bg-light">
-					<div class="card-header"><b>Información de contacto</b></div>
+					<div class="card-header"><b class="colorGris">Información de contacto</b></div>
 					<div class="card-body">	
-						<i class="bi bi-envelope-fill"></i> <span id="mostrarCorreoPerfil"></span>
-						<br>
-						<i class="bi bi-telephone-fill"></i> <span id="mostrarTelefonoPerfil"></span>
+						<span class="colorGris">
+							<i class="bi bi-envelope-fill"></i> <span id="mostrarCorreoPerfil"></span>
+							<br>
+							<i class="bi bi-telephone-fill"></i> <span id="mostrarTelefonoPerfil"></span>
+						</span>
 					</div>
 				</div>
 				<br>
 				<span class="informacionConsultorio" id="informacionConsultorio">
 					<div class="card text-dark bg-light">
-						<div class="card-header"><b>Ubicación de consultorio </b><i class="bi bi-geo-alt-fill"></i></div>
+						<div class="card-header"><span class="colorGris"><b>Ubicación de consultorio </b><i class="bi bi-geo-alt-fill"></i></div></span>
 						<div class="card-body">	
-							<span id="mostrarProvinciaConsultorioPerfil"></span>
-							<br>
-							<span id="mostrarLocalidadConsultorioPerfil"></span>
-							<br>
-							<span id="mostrarCalleConsultorioPerfil"></span> <span id="mostrarAlturaConsultorioPerfil"></span>
-							<br>
-							<span id="mostrarDepartamentoConsultorioPerfil"></span>
+							<span class="colorGris">
+								<span id="mostrarProvinciaConsultorioPerfil"></span>
+								<br>
+								<span id="mostrarLocalidadConsultorioPerfil"></span>
+								<br>
+								<span id="mostrarCalleConsultorioPerfil"></span> <span id="mostrarAlturaConsultorioPerfil"></span>
+								<br>
+								<span id="mostrarDepartamentoConsultorioPerfil"></span>
+							</span>
 						</div>
 					</div>
 				</span>

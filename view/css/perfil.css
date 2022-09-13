@@ -16,10 +16,14 @@ body{
 	margin-right: 1%;
 }
 
-.centrarNombre{
-	font-size: 25px;
+.colorGris{
+	color: rgb(59, 59, 59);
 }
 
+.centrarNombre{
+	font-size: 25px;
+	
+}
 
 .centrarTexto{
 	margin-left: 250px;
@@ -167,4 +171,14 @@ body{
 .mapaConsultorio{
 	width: 100%;
 	height: 100%;
+}
+
+.lapiz{
+	font-size: medium;
+	cursor: pointer;
+	color: rgb(150, 150, 150);
+}
+
+.lapiz:hover{
+	color: rgb(65, 65, 65);
 }
