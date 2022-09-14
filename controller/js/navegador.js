@@ -1032,8 +1032,9 @@ inputsEditarPaciente.forEach((input) => {
 
 //Editar Foto
 document.getElementById("editarFoto").addEventListener("click", function() {
-    document.getElementById('mostrarFotoEditar').classList.add('ocultarFotoEditar');
-    document.getElementById('inputEditarFoto').classList.remove('ocultarInputFoto');
+    alert("Proximamente");
+    //document.getElementById('mostrarFotoEditar').classList.add('ocultarFotoEditar');
+    //document.getElementById('inputEditarFoto').classList.remove('ocultarInputFoto');
 });
 
 document.getElementById("noEditarFoto").addEventListener("click", function() {
