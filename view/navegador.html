@@ -20,7 +20,6 @@
 	<header class="py-3 mb-3 border-bottom bg-light"><!--bg-light se utiliza para cambiarle el color!-->
 		<div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
 			<div class="dropdown">
-				
 				<a class="navbar-brand textoLogo" href="#"><img class="logo" src="../view/img/icono.png" alt="Error al cargar logo"> <b class="nombreSitio colorGris">Profesional By Proximity</b></a>
 			</div>
 			<div class="d-flex align-items-center">
@@ -171,7 +170,21 @@
 									<div class="card card-body" id="formularioEditarPaciente">
 										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarPaciente">
 											<b>Editar Perfil Paciente</b>
-											<br><br>
+											<br><hr>
+											<!--Campo Foto-->
+											<span id="mostrarFotoEditar">
+												<i class="bi bi-pencil-square iconoEditar" id="editarFoto"></i>
+												<span id="fotoUsuarioEditar"><i class="bi bi-person-circle fotoPerfil"></i></span>
+											</span>
+											<span class="ocultarInputFoto" id="inputEditarFoto">
+												<span class="texto">Foto </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFoto"></i>
+												<br>
+												<div class="input-group">
+													<!--<input type="file" class="form-control inputs" name="foto" id="foto">-->
+													<span class="input-group-text btn btn-warning" id="noEditarFoto">Atrás</span>
+												</div>
+											</span>
+											<br>
 											<!--Campo Nombre-->
 											<span class="texto">Nombre </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoNombre" title="Campo Obligatorio"></i>
 											<br>
@@ -196,11 +209,6 @@
 												<option value="Femenino">Femenino</option>
 												<option value="X">X</option>
 											</select>
-											<br>
-											<!--Campo Foto-->
-											<span class="texto">Foto </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFoto"></i>
-											<br>
-											<input type="file" class="form-control inputs" name="foto" id="foto">
 											<br>
 											<!--Campo Telefono-->
 											<span class="texto">Télefono </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoTelefono" title="Campo Obligatorio"></i>

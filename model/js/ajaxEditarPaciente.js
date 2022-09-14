@@ -2,9 +2,11 @@ function editarPaciente(formulario, $latitud, $longitud){
     var formData = new FormData(formulario);
     formData.append("sexo", formulario.sexoPaciente.value);
     formData.delete("sexoPaciente");
+    formData.append("foto", localStorage.getItem("foto"));
     formData.append("latitud", $latitud);
     formData.append("longitud", $longitud);
     formData.append("id_usu", localStorage.getItem("id_usuario"));
+    //console.log(document.getElementById('foto').value);
     var formJSON = JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
@@ -16,7 +18,7 @@ function editarPaciente(formulario, $latitud, $longitud){
                 localStorage.setItem("apellido", apellido.value.trim());
                 localStorage.setItem("fechaNacimiento", fechaNacimiento.value.trim());
                 localStorage.setItem("sexo", sexoPaciente.value.trim());
-                localStorage.setItem("foto", foto.value.trim());
+                //localStorage.setItem("foto", foto.value.trim());
                 localStorage.setItem("telefono", telefono.value.trim());
                 localStorage.setItem("provincia", provincia.value.trim());
                 localStorage.setItem("localidad", localidad.value.trim());

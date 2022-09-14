@@ -9,8 +9,10 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 document.getElementById('usuario').innerHTML = localStorage["nombreUsuario"];
 
 //Mostrar Foto
-if (localStorage.getItem("foto") != "Array") {
+if (localStorage.getItem("foto") != "Array" && localStorage.getItem("foto") != "") {
     document.getElementById('fotoUsuario').innerHTML = '<img class="fotoUsuario" src="'+localStorage["foto"]+'" alt="">';
+    //Mostrar Foto Editar
+    document.getElementById('fotoUsuarioEditar').innerHTML = '<img class="fotoUsuarioEditar" src="'+localStorage["foto"]+'" alt="">';
 }
 
 //Ir a mi perfil
@@ -1028,6 +1030,17 @@ inputsEditarPaciente.forEach((input) => {
 });
 //#endregion
 
+//Editar Foto
+document.getElementById("editarFoto").addEventListener("click", function() {
+    document.getElementById('mostrarFotoEditar').classList.add('ocultarFotoEditar');
+    document.getElementById('inputEditarFoto').classList.remove('ocultarInputFoto');
+});
+
+document.getElementById("noEditarFoto").addEventListener("click", function() {
+    document.getElementById('mostrarFotoEditar').classList.remove('ocultarFotoEditar');
+    document.getElementById('inputEditarFoto').classList.add('ocultarInputFoto');
+});
+
 //#region Envia Formulario Editar Paciente
 const formularioEditarPaciente = document.getElementById('formEditarPaciente');
 
@@ -1036,7 +1049,7 @@ formularioEditarPaciente.addEventListener('submit', (e) => {
     const apellidoValue = apellido.value.trim();
     const fechaNacimientoValue = fechaNacimiento.value.trim();
     const sexoPacienteValue = sexoPaciente.value.trim();
-    const fotoValue = foto.value.trim();
+    //const fotoValue = foto.value.trim();
     const telefonoValue = telefono.value.trim();
     const provinciaValue = provincia.value.trim();
     const localidadValue = localidad.value.trim();
@@ -1051,7 +1064,7 @@ formularioEditarPaciente.addEventListener('submit', (e) => {
     }
     
     if (camposEditarPaciente.nombre && camposEditarPaciente.apellido && camposEditarPaciente.fechaNacimiento && camposEditarPaciente.sexoPaciente && camposEditarPaciente.telefono && camposEditarPaciente.provincia && camposEditarPaciente.localidad && camposEditarPaciente.calle && camposEditarPaciente.altura && camposEditarPaciente.departamento) {
-        if (nombreValue != localStorage.getItem("nombre") || apellidoValue != localStorage.getItem("apellido") || fechaNacimientoValue != localStorage.getItem("fechaNacimiento") || sexoPacienteValue != localStorage.getItem("sexo") || fotoValue != localStorage.getItem("foto") || telefonoValue != localStorage.getItem("telefono") || provinciaValue != localStorage.getItem("provincia") || localidadValue != localStorage.getItem("localidad") || calleValue != localStorage.getItem("calle") || alturaValue != localStorage.getItem("altura") || departamentoValue != localStorage.getItem("departamento")) {
+        if (nombreValue != localStorage.getItem("nombre") || apellidoValue != localStorage.getItem("apellido") || fechaNacimientoValue != localStorage.getItem("fechaNacimiento") || sexoPacienteValue != localStorage.getItem("sexo") || telefonoValue != localStorage.getItem("telefono") || provinciaValue != localStorage.getItem("provincia") || localidadValue != localStorage.getItem("localidad") || calleValue != localStorage.getItem("calle") || alturaValue != localStorage.getItem("altura") || departamentoValue != localStorage.getItem("departamento")) {
             //Enviar AJAX
             document.getElementById('textoEditarPaciente').style.display = 'none';
             document.getElementById('cargandoEditarPaciente').style.display = 'block';

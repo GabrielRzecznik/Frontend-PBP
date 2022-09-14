@@ -266,3 +266,41 @@
    position: relative;
    margin-top: -2px;
 }
+
+.fotoUsuarioEditar{
+   margin: auto;
+   display: block;
+   width: 130px;
+   height: 130px;
+   border-radius: 100%;
+}
+
+.iconoEditar{
+   position: absolute;
+   text-align: center;
+   border-radius: 100%;
+   margin-top: 65px;
+   padding-top: 40px;
+   background-color: rgba(255, 255, 255, 0.219);
+   color: white;
+   width: 130px;
+   height: 130px;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   opacity: .0;
+   font-size: 30px;
+   cursor: pointer;
+}
+
+.iconoEditar:hover{
+   opacity: 1;
+}
+
+.ocultarFotoEditar{
+   display: none;
+}
+
+.ocultarInputFoto{
+   display: none;
+}
+
