@@ -32,7 +32,7 @@
                     </button>
                     <div class="row">
                         <div class="col-md-6">
-                            <a class="btn btn-secondary botonesSecundarios" href="./registroUsuario.html">Registrarse</a>  
+                            <a class="btn btn-secondary botonesSecundarios" href="./registroUsuario.php">Registrarse</a>  
                         </div>
                         <div class="col-md-6">
                             <a class="btn btn-secondary botonesSecundarios" href="https://frontend-pbp.herokuapp.com/">Iniciar sesión</a>

@@ -47,7 +47,7 @@
                     </button>
                     <div class="row">
                         <div class="col-md-6">
-                            <a class="btn btn-secondary botonesSecundarios" href="./restablecerUsuario.html">Restablecer</a>  
+                            <a class="btn btn-secondary botonesSecundarios" href="./restablecerUsuario.php">Restablecer</a>  
                         </div>
                         <div class="col-md-6">
                             <a class="btn btn-secondary botonesSecundarios" href="../">Iniciar sesión</a>
