@@ -15,6 +15,12 @@
     <title>Registro Usuario - Profesional By Proximity</title>
 </head>
 <body>
+    <?php
+        function enviarCorreoPhp(){
+            include_once('../controller/php/enviarCorreo.php'); 
+        }
+        enviarCorreoPhp();
+    ?>
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
