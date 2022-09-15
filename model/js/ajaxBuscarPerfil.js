@@ -19,7 +19,6 @@ function buscarPerfil($nombreUsuario){
                 document.getElementById('mostrarNombrePerfil').innerHTML = data[0]["nombre"];
                 document.getElementById('mostrarApellidoPerfil').innerHTML = data[0]["apellido"];
                 document.getElementById('mostrarSexoPerfil').innerHTML = data[0]["sexo"];
-                console.log(data[0]["foto"]);
                 if (data[0]["foto"] != "Array") {
                     document.getElementById('mostrarFotoPerfil').innerHTML = '<img class="foto" src="'+data[0]["foto"]+'" alt="ocurrio un error">';
                 }else{
