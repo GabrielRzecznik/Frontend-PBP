@@ -22,7 +22,7 @@ document.getElementById("irMiPerfil").addEventListener("click", function() {
     window.location.href = "../view/perfil.php?"+localStorage.getItem("nombreUsuario");
 });
 
-if (true) {
+function lapizEditar() {
     //Ir a editar perfil
     document.getElementById("ejecutarEditarPerfil").addEventListener("click", function() {
         //Abrir Modal

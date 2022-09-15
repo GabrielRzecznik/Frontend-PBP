@@ -13,8 +13,9 @@ function buscarPerfil($nombreUsuario){
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
                 //Datos Usuario
-                if (data[0]["id_usuario"] != localStorage.getItem("id_usuario")) {
-                    document.getElementById('ejecutarEditarPerfil').classList.remove = 'noMostrarLapiz';
+                if (data[0]["id_usuario"] == localStorage.getItem("id_usuario")) {
+                    document.getElementById('mostrarLapiz').innerHTML = '<i id="ejecutarEditarPerfil" class="bi bi-pencil-fill lapiz"></i>';
+                    lapizEditar();
                 }
                 
                 document.getElementById('mostrarNombreUsuarioPerfil').innerHTML = data[0]["nombreUsuario"];

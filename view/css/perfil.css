@@ -182,7 +182,3 @@ body{
 .lapiz:hover{
 	color: rgb(59, 59, 59);
 }
-
-.noMostrarLapiz{
-	display: none;
-}

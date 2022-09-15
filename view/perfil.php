@@ -28,7 +28,7 @@
 		<div class="contenedorInformacion bg-light sinBotones" id="contenedorUsuario">
 			<span id="mostrarFotoPerfil" class="imagenPerfil"></span>
 			<span class="infoResp">
-				<b class="centrarNombre colorGris"><span id="mostrarNombrePerfil"></span><span id="mostrarApellidoPerfil"></b> <i id="ejecutarEditarPerfil" class="bi bi-pencil-fill lapiz noMostrarLapiz"></i></span>
+				<b class="centrarNombre colorGris"><span id="mostrarNombrePerfil"></span><span id="mostrarApellidoPerfil"></b> <span id="mostrarLapiz"></span></span>
 				<br>
 				<b class="centrarTexto colorGris">@<span id="mostrarNombreUsuarioPerfil"></b>
 			</span>
