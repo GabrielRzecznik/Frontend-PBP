@@ -15,7 +15,6 @@ function buscarPerfil($nombreUsuario){
                 //Datos Usuario
                 if (data[0]["id_usuario"] == localStorage.getItem("id_usuario")) {
                     document.getElementById('mostrarLapiz').innerHTML = '<i id="ejecutarEditarPerfil" class="bi bi-pencil-fill lapiz"></i>';
-                    lapizEditar();
                 }
                 
                 document.getElementById('mostrarNombreUsuarioPerfil').innerHTML = data[0]["nombreUsuario"];
