@@ -106,13 +106,14 @@ document.getElementById("conf").addEventListener("click", function() {
     //Resetear contenidos
     document.getElementById("flush-collapseOne").classList.remove('show');
     document.getElementById("flush-collapseTwo").classList.remove('show');
-    document.getElementById("flush-collapseThree").classList.remove('show');
     
     document.getElementById("ediPerfil").classList.remove('show');
     document.getElementById("ediUsu").classList.remove('show');
     document.getElementById("desUsu").classList.remove('show');
 
     if (localStorage.getItem("id_profesional") != "null" && localStorage.getItem("estadoProfesional") != "Activo") {
+        document.getElementById("flush-collapseThree").classList.remove('show');
+        
         document.getElementById("confPro").classList.remove('accordion-button', 'rounded');
         document.getElementById("confPro").classList.add('accordion-button', 'collapsed', 'rounded');
     }
@@ -331,8 +332,6 @@ formDeshabilitarUsuarioPreValidacion.addEventListener('submit', (e) => {
 
 //#region Opción Configuración profesional
 if (localStorage.getItem("id_profesional") != "null" && localStorage.getItem("estadoProfesional") != "Activo") {
-    document.getElementById('confProf').remove();
-}else{
     //#region Configuración profesional
     const campoConfiguracionProfesional = {
         diasAtencion: false,
@@ -579,10 +578,10 @@ if (localStorage.getItem("id_profesional") != "null" && localStorage.getItem("es
         //Duración Descanso
         let descanso_hora = descanso.substring(0,2);
         let descanso_minutos = descanso.substring(3,5);
-    
+
         descanso_hora *= 60;
         let rango2 = descanso_hora + Number(descanso_minutos);
-    
+
         //Rango total
         let rango = rango1 + rango2;
         
@@ -685,10 +684,10 @@ if (localStorage.getItem("id_profesional") != "null" && localStorage.getItem("es
         //Duración Descanso
         let descanso_hora = descanso.substring(0,2);
         let descanso_minutos = descanso.substring(3,5);
-    
+
         descanso_hora *= 60;
         let rango2 = descanso_hora + Number(descanso_minutos);
-    
+
         //Rango total
         let rango = rango1 + rango2;
         
@@ -740,8 +739,8 @@ if (localStorage.getItem("id_profesional") != "null" && localStorage.getItem("es
         }
     }); 
     //#endregion
-
-
+}else{
+    document.getElementById('confProf').remove();
 }
 //#endregion
 
