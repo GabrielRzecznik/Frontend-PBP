@@ -11,13 +11,13 @@ $mail = new PHPMailer(true);
 try {
     //Configuración del servidor
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                    
-    $mail->isSMTP();                                         
-    $mail->Host       = '';                  //Setear el servidor SMTP
+    $mail->isSMTP();                                        
+    $mail->Host       = 'mail.trebolnetsi.com';                  //Setear el servidor SMTP
     $mail->SMTPAuth   = true;                                   //autenticación SMTP
-    $mail->Username   = '';                     //SMTP usuario
-    $mail->Password   = '';                               //SMTP contraseña
+    $mail->Username   = 'profesionalByProximity@trebolnetsi.com';                     //SMTP usuario
+    $mail->Password   = 'Pro2020Pro';                               //SMTP contraseña
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;          
-    $mail->Port       = 465;                                    //puerto 
+    $mail->Port       = 465;                                      //puerto 
 
     //Recipientes
     $mail->setFrom('francozuarez1@gmail.com', 'Profesional By Proximity');  //Desde donde se envía el mensaje
