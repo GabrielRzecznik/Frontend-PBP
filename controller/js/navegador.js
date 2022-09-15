@@ -13,6 +13,8 @@ if (localStorage.getItem("foto") != "Array" && localStorage.getItem("foto") != "
     document.getElementById('fotoUsuario').innerHTML = '<img class="fotoUsuario" src="'+localStorage["foto"]+'" alt="">';
     //Mostrar Foto Editar
     document.getElementById('fotoUsuarioEditar').innerHTML = '<img class="fotoUsuarioEditar" src="'+localStorage["foto"]+'" alt="">';
+}else{
+    document.getElementById('fotoUsuarioEditar').innerHTML = '<img class="fotoUsuarioEditar" src="../view/img/user.png" alt="">';
 }
 
 //Ir a mi perfil
@@ -1035,11 +1037,6 @@ document.getElementById("editarFoto").addEventListener("click", function() {
     alert("Proximamente");
     //document.getElementById('mostrarFotoEditar').classList.add('ocultarFotoEditar');
     //document.getElementById('inputEditarFoto').classList.remove('ocultarInputFoto');
-});
-
-document.getElementById("noEditarFoto").addEventListener("click", function() {
-    document.getElementById('mostrarFotoEditar').classList.remove('ocultarFotoEditar');
-    document.getElementById('inputEditarFoto').classList.add('ocultarInputFoto');
 });
 
 //#region Envia Formulario Editar Paciente

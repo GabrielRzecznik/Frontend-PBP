@@ -273,6 +273,7 @@
    width: 130px;
    height: 130px;
    border-radius: 100%;
+   background-color: rgb(180, 180, 180);
 }
 
 .iconoEditar{
@@ -293,6 +294,7 @@
 }
 
 .iconoEditar:hover{
+   transition-duration: 0.2s;
    opacity: 1;
 }
 
@@ -303,4 +305,3 @@
 .ocultarInputFoto{
    display: none;
 }
-
