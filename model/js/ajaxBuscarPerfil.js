@@ -13,6 +13,10 @@ function buscarPerfil($nombreUsuario){
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
                 //Datos Usuario
+                if (data[0]["id_usuario"] != localStorage.getItem("id_usuario")) {
+                    document.getElementById('ejecutarEditarPerfil').classList.remove = 'noMostrarLapiz';
+                }
+                
                 document.getElementById('mostrarNombreUsuarioPerfil').innerHTML = data[0]["nombreUsuario"];
                 document.getElementById('mostrarCorreoPerfil').innerHTML = data[0]["correo"];
                 //Datos Paciente

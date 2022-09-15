@@ -22,40 +22,46 @@ document.getElementById("irMiPerfil").addEventListener("click", function() {
     window.location.href = "../view/perfil.php?"+localStorage.getItem("nombreUsuario");
 });
 
-//Ir a editar perfil
-document.getElementById("ejecutarEditarPerfil").addEventListener("click", function() {
-    //Abrir Modal
-    var configuracion = new bootstrap.Modal(
-        document.getElementById("configuracion-modal")
-      );
-      configuracion.toggle();
+if (true) {
+    //Ir a editar perfil
+    document.getElementById("ejecutarEditarPerfil").addEventListener("click", function() {
+        //Abrir Modal
+        var configuracion = new bootstrap.Modal(
+            document.getElementById("configuracion-modal")
+          );
+          configuracion.toggle();
+        
+        //Cerrar Modal
+        document.getElementById("cerrar").addEventListener("click", function () {
+            configuracion.hide();
+            //Tenia algo de solicitud, controlar despues
+        });
     
-    //Cerrar Modal
-    document.getElementById("cerrar").addEventListener("click", function () {
-        configuracion.hide();
-        //Tenia algo de solicitud, controlar despues
+        //Boton acordion - Configuración perfil paciente
+        document.getElementById("confPerPac").classList.remove('collapsed');
+        document.getElementById("confPerPac").classList.add('accordion-button', 'rounded');
+        //Resetear acordion
+        document.getElementById("confUsu").classList.remove('accordion-button', 'rounded');
+        document.getElementById("confUsu").classList.add('accordion-button', 'collapsed', 'rounded');
+        
+        //Mostrar contenido - Configuración perfil paciente
+        document.getElementById("flush-collapseTwo").classList.add('show');
+        //Resetear contenidos
+        document.getElementById("flush-collapseOne").classList.remove('show');
+        
+        document.getElementById("ediPerfil").classList.add('show');
+        
+        document.getElementById("ediUsu").classList.remove('show');
+        document.getElementById("desUsu").classList.remove('show');
+        
+        if (localStorage.getItem("id_profesional") != "null" && localStorage.getItem("estadoProfesional") != "Activo") {
+            document.getElementById("confPro").classList.remove('accordion-button', 'rounded');
+            document.getElementById("confPro").classList.add('accordion-button', 'collapsed', 'rounded');
+            
+            document.getElementById("flush-collapseThree").classList.remove('show');
+        }
     });
-
-    //Boton acordion - Configuración perfil paciente
-    document.getElementById("confPerPac").classList.remove('collapsed');
-    document.getElementById("confPerPac").classList.add('accordion-button', 'rounded');
-    //Resetear acordion
-    document.getElementById("confUsu").classList.remove('accordion-button', 'rounded');
-    document.getElementById("confUsu").classList.add('accordion-button', 'collapsed', 'rounded');
-    document.getElementById("confPro").classList.remove('accordion-button', 'rounded');
-    document.getElementById("confPro").classList.add('accordion-button', 'collapsed', 'rounded');
-
-    //Mostrar contenido - Configuración perfil paciente
-    document.getElementById("flush-collapseTwo").classList.add('show');
-    //Resetear contenidos
-    document.getElementById("flush-collapseOne").classList.remove('show');
-    document.getElementById("flush-collapseThree").classList.remove('show');
-    
-    document.getElementById("ediPerfil").classList.add('show');
-
-    document.getElementById("ediUsu").classList.remove('show');
-    document.getElementById("desUsu").classList.remove('show');
-});
+}
 
 //Setear inputs - Editar Usuario
 document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
