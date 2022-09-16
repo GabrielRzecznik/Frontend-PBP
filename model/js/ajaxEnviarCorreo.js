@@ -38,6 +38,7 @@ function enviarCorreo1(correo, asignarDuracion){
                     clearTimeout($tiempo);
                 }
             }else{
+                asignarDuracion = false;
                 enviarCorreo2(correo, asignarDuracion);
             }   
         }
@@ -57,7 +58,7 @@ function enviarCorreo2(correo, asignarDuracion){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                //if (asignarDuracion) {
+                if (asignarDuracion) {
                     document.getElementById('tituloBuscar').style.display = 'block';
                     document.getElementById('cargandoBuscar').style.display = 'none';
                     //Cambia de Formulario
@@ -75,7 +76,7 @@ function enviarCorreo2(correo, asignarDuracion){
                     function codigoVerificado() {
                         clearTimeout($tiempo);
                     }
-                //}
+                }
             }else{
                 alert("¡ocurrio un error inesperado!");   
             }   
