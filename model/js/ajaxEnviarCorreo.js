@@ -77,8 +77,10 @@ function enviarCorreo2(correo, asignarDuracion){
                     }
                 }else{
                     //Cambia de Formulario
-                    document.getElementById('formulario').style.display = 'none';
-                    document.getElementById('activador').style.display = 'block';
+                    if (document.getElementById('formulario') != null) {
+                        document.getElementById('formulario').style.display = 'none';
+                        document.getElementById('activador').style.display = 'block';
+                    }
                 }
             }else{
                 alert("¡ocurrio un error inesperado!");   
