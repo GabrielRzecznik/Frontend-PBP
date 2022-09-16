@@ -18,7 +18,7 @@ function buscarUsuarioExistente(correo, nombreUsuario){
                     document.getElementById('activador').style.display = 'block';
                     //Envia Correo
                     $asignarDuracion = false; 
-                    enviarCorreo(correo, $asignarDuracion);
+                    enviarCorreo1(correo, $asignarDuracion);
                 }
             }if (xmlhttp.status == 401) {
                 if (correo == "No buscar") {
