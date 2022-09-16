@@ -44,7 +44,7 @@ function enviarCorreo1(correo, asignarDuracion){
         }
     }
     
-    xmlhttp.open("POST",'https://backed-pbp.herokuapp.com/Mail/enviarMail',true);//Concatenarle cualquier correo
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mail/enviarMail',true);//Concatenarle cualquier correo
     xmlhttp.send(formJSON);
 }
 
@@ -70,13 +70,13 @@ function enviarCorreo2(correo, asignarDuracion){
                         location.reload();
                     }
 
-                    //Cambia de Formulario
-                    document.getElementById('formulario').style.display = 'none';
-                    document.getElementById('activador').style.display = 'block';
-
                     function codigoVerificado() {
                         clearTimeout($tiempo);
                     }
+                }else{
+                    //Cambia de Formulario
+                    document.getElementById('formulario').style.display = 'none';
+                    document.getElementById('activador').style.display = 'block';
                 }
             }else{
                 alert("¡ocurrio un error inesperado!");   
