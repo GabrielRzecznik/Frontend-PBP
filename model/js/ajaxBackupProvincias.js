@@ -7,10 +7,10 @@ function backupProvincias(provincias){
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
-            if (xmlhttp.status == 200) {
-                console.log("¡Actualización con exito!");
-            }if (xmlhttp.status == 401) {
+            if (xmlhttp.status == 401) {
                alert("¡Ocurrio un error inesperado!");
+            }else{
+                alert("¡Revise su conexión con internet!")
             }
         }
     }
