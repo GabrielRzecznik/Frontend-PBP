@@ -19,7 +19,7 @@
         function enviarCorreoPhp(){
             include_once('../controller/php/enviarCorreo.php'); 
         }
-        enviarCorreoPhp();
+        //enviarCorreoPhp();
     ?>
     <div class="container">
         <div class="row">

@@ -141,7 +141,8 @@ document.getElementById("activado").addEventListener("click", function() {
     document.getElementById('activador').style.display = 'none';
     document.getElementById('formularioValidar').style.display = 'block';
     $asignarDuracion = true;
-    enviarCorreo(correo.value.trim(), $asignarDuracion);
+    //enviarCorreo(correo.value.trim(), $asignarDuracion);
+    enviarCorreoPhp();
 });
 
 document.getElementById("volverAtras").addEventListener("click", function() {
