@@ -9,16 +9,11 @@ function buscarUsuarioExistente(correo, nombreUsuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (correo == "No buscar") {
-                    editarUsuario(formularioEditar);
+                    editarUsuario(formularioEditar);//¿POR QUE?
                 }else{
-                    document.getElementById('tituloBuscar').style.display = 'block';
-                    document.getElementById('cargandoBuscar').style.display = 'none';
-                    //Cambia de Formulario
-                    document.getElementById('formulario').style.display = 'none';
-                    document.getElementById('activador').style.display = 'block';
                     //Envia Correo
                     $asignarDuracion = false; 
-                    console.log("existencia: "+correo);
+  
                     enviarCorreo1(correo, $asignarDuracion);
                 }
             }if (xmlhttp.status == 401) {

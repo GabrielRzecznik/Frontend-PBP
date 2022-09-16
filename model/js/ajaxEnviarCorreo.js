@@ -21,21 +21,25 @@ function enviarCorreo1(correo, asignarDuracion){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (asignarDuracion) {
+                    document.getElementById('tituloBuscar').style.display = 'block';
+                    document.getElementById('cargandoBuscar').style.display = 'none';
+                    //Cambia de Formulario
+                    document.getElementById('formulario').style.display = 'none';
+                    document.getElementById('formularioValidar').style.display = 'block';
+
                     $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
             
                     function anularCodigo() {
                         alert("¡Código vencido!. Han pasado 10 minutos!");
                         codigoGenerado = "";
                         location.reload();
-                    }
+                    }R
 
                     function codigoVerificado() {
                         clearTimeout($tiempo);
                     }
                 }
             }else{
-                console.log("correo: "+correo);
-                console.log("asignarDuracion: "+asignarDuracion);
                 enviarCorreo2(correo, asignarDuracion);
             }   
         }
@@ -56,6 +60,12 @@ function enviarCorreo2(correo, asignarDuracion){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (asignarDuracion) {
+                    document.getElementById('tituloBuscar').style.display = 'block';
+                    document.getElementById('cargandoBuscar').style.display = 'none';
+                    //Cambia de Formulario
+                    document.getElementById('formulario').style.display = 'none';
+                    document.getElementById('activador').style.display = 'block';
+                    
                     $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
             
                     function anularCodigo() {
