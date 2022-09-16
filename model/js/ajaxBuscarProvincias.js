@@ -13,8 +13,9 @@ function buscarProvinciasConsultorio(){
                 }
                 //Ordenar Array
                 $provinciasArgentinas.sort();
-                mostrarBackupProvincias();
+                
                 backupProvincias($provinciasArgentinas);
+                
                 for (var i = 0; i < data["provincias"].length; i++) {
                     provCon.innerHTML += '<option value="'+ $provinciasArgentinas[i] +'">'+ $provinciasArgentinas[i] +'</option>';
                 }
@@ -45,8 +46,9 @@ function buscarProvincias(){
                 }
                 //Ordenar Array
                 $provinciasArgentinas.sort();
-                mostrarBackupProvincias();
+
                 backupProvincias($provinciasArgentinas);
+                
                 for (var i = 0; i < data["provincias"].length; i++) {
                     provCon.innerHTML += '<option value="'+ $provinciasArgentinas[i] +'">'+ $provinciasArgentinas[i] +'</option>';
                 }
@@ -54,10 +56,8 @@ function buscarProvincias(){
                 if (localStorage["provincia"] != "") {
                     document.getElementById('provincia').value = localStorage["provincia"];
                 }
-            }if (xmlhttp.status == 401) {
-                alert("Ocurrio un error inesperado al traer las provincias")
-            }if (xmlhttp.status == 429){
-                //Guardar carga de base de datos
+            }else{
+                mostrarBackupProvincias();
             }
         }
     }
