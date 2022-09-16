@@ -1,7 +1,8 @@
 function backupProvincias(provincias){
     var formData = new FormData();
-    formData.append("jsonProvincias", provincias);
+    formData.append("jsonProvincias", '{'+provincias+'}');
     var formJSON = JSON.stringify(Object.fromEntries(formData));
+    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
