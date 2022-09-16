@@ -14,6 +14,7 @@ function enviarCorreo1(correo, asignarDuracion){
     var formData= new FormData();
     formData.append("destinatario",correo);
     formData.append("codigo",codigoGenerado);
+    var formJSON = JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -41,7 +42,7 @@ function enviarCorreo1(correo, asignarDuracion){
     }
     
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mail/enviarMail',true);//Concatenarle cualquier correo
-    xmlhttp.send(formData);
+    xmlhttp.send(formJSON);
 }
 
 //Opción 2
