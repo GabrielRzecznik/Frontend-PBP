@@ -20,24 +20,22 @@ function enviarCorreo1(correo, asignarDuracion){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                if (asignarDuracion) {
-                    document.getElementById('tituloBuscar').style.display = 'block';
-                    document.getElementById('cargandoBuscar').style.display = 'none';
-                    //Cambia de Formulario
-                    document.getElementById('formulario').style.display = 'none';
-                    document.getElementById('formularioValidar').style.display = 'block';
+                document.getElementById('tituloBuscar').style.display = 'block';
+                document.getElementById('cargandoBuscar').style.display = 'none';
+                //Cambia de Formulario
+                document.getElementById('formulario').style.display = 'none';
+                document.getElementById('formularioValidar').style.display = 'block';
 
-                    $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
-            
-                    function anularCodigo() {
-                        alert("¡Código vencido!. Han pasado 10 minutos!");
-                        codigoGenerado = "";
-                        location.reload();
-                    }
+                $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
+        
+                function anularCodigo() {
+                    alert("¡Código vencido!. Han pasado 10 minutos!");
+                    codigoGenerado = "";
+                    location.reload();
+                }
 
-                    function codigoVerificado() {
-                        clearTimeout($tiempo);
-                    }
+                function codigoVerificado() {
+                    clearTimeout($tiempo);
                 }
             }else{
                 enviarCorreo2(correo, asignarDuracion);
@@ -60,6 +58,7 @@ function enviarCorreo2(correo, asignarDuracion){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 if (asignarDuracion) {
+                    console.log(asignarDuracion);
                     document.getElementById('tituloBuscar').style.display = 'block';
                     document.getElementById('cargandoBuscar').style.display = 'none';
                     //Cambia de Formulario
