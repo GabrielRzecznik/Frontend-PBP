@@ -3,7 +3,7 @@ function mostrarBackupProvincias(llamado){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                if (llamado = "Sin Consultorio") {
+                if (llamado == "Sin Consultorio") {
                     let provCon = document.getElementById('provincia');
                     provCon.innerHTML += '<option value="0" selected="true" disabled="disabled">Seleccione su provincia</option>';
                     
@@ -26,7 +26,7 @@ function mostrarBackupProvincias(llamado){
                     if (localStorage["provincia"] != "") {
                         document.getElementById('provincia').value = localStorage["provincia"];
                     }
-                }if (llamado = "Con Consultorio") {
+                }if (llamado == "Con Consultorio") {
                     let provCon = document.getElementById('provinciaConsultorio');
                     provCon.innerHTML += '<option value="0" selected="true" disabled="disabled">Seleccione su provincia</option>';
                     
