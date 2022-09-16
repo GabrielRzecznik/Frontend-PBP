@@ -142,6 +142,14 @@ document.getElementById("activado").addEventListener("click", function() {
     document.getElementById('formularioValidar').style.display = 'block';
     $asignarDuracion = true;
     enviarCorreo(correo.value.trim(), $asignarDuracion);
+
+    fetch("0-dummy.php", { method: "POST", body: data })
+    .then(res => res.text())
+    .then((txt) => {
+        console.log(txt);
+    })
+    .catch((err) => { console.error(err); });
+    return false;
 });
 
 document.getElementById("volverAtras").addEventListener("click", function() {

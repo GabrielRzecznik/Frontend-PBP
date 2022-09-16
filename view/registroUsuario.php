@@ -15,7 +15,6 @@
     <title>Registro Usuario - Profesional By Proximity</title>
 </head>
 <body>
-    <span id="enviarCorreoPhp"></span>
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
