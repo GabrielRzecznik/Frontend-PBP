@@ -17,20 +17,13 @@
         //Recipientes
         $mail->setFrom('profesionalByProximity@trebolnetsi.com', 'Profesional By Proximity');  //Desde donde se envía el mensaje
         $mail->addAddress('rzecznike@gmail.com', 'Prueba');     //Hacia donde
-        //$mail->addAddress('Profesional By Proximity');          
-    // $mail->addReplyTo('info@example.com', 'Information');
-        //$mail->addCC('cc@example.com');
-        //$mail->addBCC('bcc@example.com');
-        //Imagen
-        //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-        //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
         //Contenido
         $mail->isHTML(true);                                  //Se puede setear en HTML
         $mail->Subject = 'Profesional By Proximity';
         $mail->Body    = 'Se ha enviado con exito la prueba ';
-    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         $mail->send();
-        //echo 'El mail ha sido enviado';
+        
     } catch (Exception $e) {
         //echo "El mail no ha sido enviado. Mailer Error: {$mail->ErrorInfo}";
     }
