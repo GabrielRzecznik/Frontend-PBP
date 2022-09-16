@@ -69,7 +69,7 @@ function enviarCorreo2(correo, asignarDuracion){
                         codigoGenerado = "";
                         location.reload();
                     }
-                    
+
                     //Cambia de Formulario
                     document.getElementById('formulario').style.display = 'none';
                     document.getElementById('activador').style.display = 'block';
@@ -77,8 +77,6 @@ function enviarCorreo2(correo, asignarDuracion){
                     function codigoVerificado() {
                         clearTimeout($tiempo);
                     }
-                }else{
-
                 }
             }else{
                 alert("¡ocurrio un error inesperado!");   
