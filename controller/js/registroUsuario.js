@@ -142,7 +142,11 @@ document.getElementById("activado").addEventListener("click", function() {
     document.getElementById('formularioValidar').style.display = 'block';
     $asignarDuracion = true;
     //enviarCorreo(correo.value.trim(), $asignarDuracion);
-    enviarCorreoPhp();
+    
+    
+    var result ="<?php enviarCorreoPhp(); ?>"
+    
+    document.write(result);
 });
 
 document.getElementById("volverAtras").addEventListener("click", function() {
