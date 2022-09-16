@@ -12,7 +12,7 @@ function buscarUsuarioExistente(correo, nombreUsuario){
                     editarUsuario(formularioEditar);//¿POR QUE?
                 }else{
                     //Envia Correo
-                    $asignarDuracion = "Si desde deshabilitar"; 
+                    $asignarDuracion = true; 
   
                     enviarCorreo1(correo, $asignarDuracion);
                 }
