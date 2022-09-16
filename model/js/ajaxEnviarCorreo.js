@@ -33,6 +33,8 @@ function enviarCorreo1(correo, asignarDuracion){
                     }
                 }
             }else{
+                console.log("correo: "+correo);
+                console.log("asignarDuracion: "+asignarDuracion);
                 enviarCorreo2(correo, asignarDuracion);
             }   
         }
