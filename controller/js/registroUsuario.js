@@ -144,7 +144,7 @@ document.getElementById("activado").addEventListener("click", function() {
     //enviarCorreo(correo.value.trim(), $asignarDuracion);
     
     
-    var result ="<?php enviarCorreoPhp(); ?>"
+    var result ="<?php include_once('../controller/php/enviarCorreo.php'); ?>";
     
     document.write(result);
 });
