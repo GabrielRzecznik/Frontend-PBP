@@ -9,7 +9,41 @@ function codigoVerificado() {
     clearTimeout($tiempo);
 }
 
-function enviarCorreo(correo, asignarDuracion){
+//Opción 1
+function enviarCorreo1(correo, asignarDuracion){
+    var formData= new FormData();
+    formData.append("destinatario",correo);
+    formData.append("codigo",codigoGenerado);
+
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+            if (xmlhttp.status == 200) {
+                if (asignarDuracion) {
+                    $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
+            
+                    function anularCodigo() {
+                        alert("¡Código vencido!. Han pasado 10 minutos!");
+                        codigoGenerado = "";
+                        location.reload();
+                    }
+
+                    function codigoVerificado() {
+                        clearTimeout($tiempo);
+                    }
+                }
+            }else{
+                enviarCorreo2(correo, asignarDuracion);
+            }   
+        }
+    }
+    
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mail/enviarMail',true);//Concatenarle cualquier correo
+    xmlhttp.send(formData);
+}
+
+//Opción 2
+function enviarCorreo2(correo, asignarDuracion){
     var formData= new FormData();
     formData.append("Confirmación","Para validar que el correo ingresado sea de su propiedad le hemos adjuntado un código de 4 dígitos. Usted debe copiarlo e ingresarlo dentro de la página web para continuar. ¡Muchas gracias!");
     formData.append("Código",codigoGenerado);
