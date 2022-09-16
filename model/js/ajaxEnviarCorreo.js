@@ -33,7 +33,7 @@ function enviarCorreo1(correo, asignarDuracion){
                         alert("¡Código vencido!. Han pasado 10 minutos!");
                         codigoGenerado = "";
                         location.reload();
-                    }R
+                    }
 
                     function codigoVerificado() {
                         clearTimeout($tiempo);
@@ -45,7 +45,7 @@ function enviarCorreo1(correo, asignarDuracion){
         }
     }
     
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mail/enviarMail',true);//Concatenarle cualquier correo
+    xmlhttp.open("POST",'https://backed-pbp.herokuapp.com/Mail/enviarMail',true);//Concatenarle cualquier correo
     xmlhttp.send(formJSON);
 }
 
