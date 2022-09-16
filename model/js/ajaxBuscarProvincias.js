@@ -13,6 +13,7 @@ function buscarProvinciasConsultorio(){
                 }
                 //Ordenar Array
                 $provinciasArgentinas.sort();
+                mostrarBackupProvincias();
                 backupProvincias($provinciasArgentinas);
                 for (var i = 0; i < data["provincias"].length; i++) {
                     provCon.innerHTML += '<option value="'+ $provinciasArgentinas[i] +'">'+ $provinciasArgentinas[i] +'</option>';
@@ -44,6 +45,7 @@ function buscarProvincias(){
                 }
                 //Ordenar Array
                 $provinciasArgentinas.sort();
+                mostrarBackupProvincias();
                 backupProvincias($provinciasArgentinas);
                 for (var i = 0; i < data["provincias"].length; i++) {
                     provCon.innerHTML += '<option value="'+ $provinciasArgentinas[i] +'">'+ $provinciasArgentinas[i] +'</option>';
