@@ -69,14 +69,17 @@ function enviarCorreo2(correo, asignarDuracion){
                         codigoGenerado = "";
                         location.reload();
                     }
+                    
+                    //Cambia de Formulario
+                    document.getElementById('formulario').style.display = 'none';
+                    document.getElementById('activador').style.display = 'block';
 
                     function codigoVerificado() {
                         clearTimeout($tiempo);
                     }
+                }else{
+
                 }
-                //Cambia de Formulario
-                document.getElementById('formulario').style.display = 'none';
-                document.getElementById('activador').style.display = 'block';
             }else{
                 alert("¡ocurrio un error inesperado!");   
             }   
