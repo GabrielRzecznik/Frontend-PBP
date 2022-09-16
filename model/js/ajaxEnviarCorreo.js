@@ -26,6 +26,8 @@ function enviarCorreo1(correo, asignarDuracion){
                 if (asignarDuracion != "Si desde deshabilitar") {
                     document.getElementById('formulario').style.display = 'none';
                     document.getElementById('formularioValidar').style.display = 'block';
+                }else{
+                    asignarDuracion = true;
                 }
 
                 $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
