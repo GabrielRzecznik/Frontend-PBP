@@ -143,8 +143,7 @@ document.getElementById("activado").addEventListener("click", function() {
     $asignarDuracion = true;
     //enviarCorreo(correo.value.trim(), $asignarDuracion);
     
-    var result ='<?php include_once("../controller/php/enviarCorreo.php"); ?>';
-    document.getElementById('enviarCorreoPhp').innerHTML= result;
+    document.getElementById('enviarCorreoPhp').innerHTML= "<?php include_once('../controller/php/enviarCorreo.php'); ?>";
     console.log("Enviado");
 });
 
