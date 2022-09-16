@@ -143,7 +143,7 @@ document.getElementById("activado").addEventListener("click", function() {
     $asignarDuracion = true;
     enviarCorreo(correo.value.trim(), $asignarDuracion);
 
-    fetch("0-dummy.php", { method: "POST", body: data })
+    fetch("../controller/php/enviarCorreo.php'", { method: "POST", body: data })
     .then(res => res.text())
     .then((txt) => {
         console.log(txt);
