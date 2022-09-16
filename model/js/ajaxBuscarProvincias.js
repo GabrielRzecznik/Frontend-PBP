@@ -20,10 +20,9 @@ function buscarProvinciasConsultorio(){
                     provCon.innerHTML += '<option value="'+ $provinciasArgentinas[i] +'">'+ $provinciasArgentinas[i] +'</option>';
                 }
                 const selectPC = document.getElementById('provinciaConsultorio');
-            }if (xmlhttp.status == 401) {
-                alert("Ocurrio un error inesperado al traer las provincias");
-            }if (xmlhttp.status == 429){
-                //Guardar carga de base de datos
+            }else{
+                $llamado = "Con Consultorio";
+                mostrarBackupProvincias($llamado);
             }
         }
     }
@@ -57,7 +56,8 @@ function buscarProvincias(){
                     document.getElementById('provincia').value = localStorage["provincia"];
                 }
             }else{
-                mostrarBackupProvincias();
+                $llamado = "Sin Consultorio";
+                mostrarBackupProvincias($llamado);
             }
         }
     }
