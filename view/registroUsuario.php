@@ -16,10 +16,10 @@
 </head>
 <body>
     <?php
-        function enviarCorreoPhp($correo){
+        function enviarCorreoPhp(){
             include_once('../controller/php/enviarCorreo.php'); 
         }
-        enviarCorreoPhp($correo);
+        enviarCorreoPhp();
     ?>
     <div class="container">
         <div class="row">

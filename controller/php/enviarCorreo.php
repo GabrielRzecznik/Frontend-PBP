@@ -21,7 +21,7 @@ try {
 
     //Recipientes
     $mail->setFrom('francozuarez1@gmail.com', 'Profesional By Proximity');  //Desde donde se envía el mensaje
-    $mail->addAddress('rzecznike@gmail.com', 'Prueba');     //Hacia donde
+    $mail->addAddress('gabriel.rz@hotmail.es', 'Prueba');     //Hacia donde
     //$mail->addAddress('Profesional By Proximity');          
    // $mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
