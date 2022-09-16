@@ -23,8 +23,10 @@ function enviarCorreo1(correo, asignarDuracion){
                 document.getElementById('tituloBuscar').style.display = 'block';
                 document.getElementById('cargandoBuscar').style.display = 'none';
                 //Cambia de Formulario
-                document.getElementById('formulario').style.display = 'none';
-                document.getElementById('formularioValidar').style.display = 'block';
+                if (asignarDuracion != "Si desde deshabilitar") {
+                    document.getElementById('formulario').style.display = 'none';
+                    document.getElementById('formularioValidar').style.display = 'block';
+                }
 
                 $tiempo = setTimeout(anularCodigo, 600000);//10 minutos = 600000
         

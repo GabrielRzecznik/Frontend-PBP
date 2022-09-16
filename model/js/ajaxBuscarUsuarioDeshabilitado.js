@@ -10,7 +10,7 @@ function buscarUsuarioDeshabilitado(correo){
                 //console.log("Usuario encontrado");
                 //Enviar correo
                 $asignarDuracion = true; 
-                enviarCorreo(correo, $asignarDuracion);
+                enviarCorreo1(correo, $asignarDuracion);
                 //Cambiar formulario
                 document.getElementById('form1').style.display = 'none';
                 document.getElementById('form2').style.display = 'block';
