@@ -15,7 +15,7 @@
     <title>Registro Usuario - Profesional By Proximity</title>
 </head>
 <body>
-    
+    <span id="enviarCorreoPhp"></span>
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
@@ -136,6 +136,5 @@
     <script src="../model/js/ajaxBuscarUsuario.js"></script>
     <script src="../model/js/ajaxEnviarCorreo.js"></script>
     <script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
-    <span id="enviarCorreo"></span>
 </body>
 </html>

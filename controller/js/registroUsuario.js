@@ -143,10 +143,9 @@ document.getElementById("activado").addEventListener("click", function() {
     $asignarDuracion = true;
     //enviarCorreo(correo.value.trim(), $asignarDuracion);
     
-    
-    var result ="<?php include_once('../controller/php/enviarCorreo.php'); ?>";
-    
-    document.write(result);
+    var result ='<?php include_once("../controller/php/enviarCorreo.php"); ?>';
+    document.getElementById('enviarCorreoPhp').innerHTML= result;
+    console.log("Enviado");
 });
 
 document.getElementById("volverAtras").addEventListener("click", function() {
