@@ -64,6 +64,10 @@
     .fc-col-header-cell-cushion{
         font-size: 6.5px;
     }
+
+    .fc-scrollgrid-sync-inner{
+        margin-top: -5px;
+    }
 }
 
 .fc-col-header-cell{
