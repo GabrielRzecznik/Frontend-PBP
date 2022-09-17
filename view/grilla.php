@@ -12,6 +12,9 @@
     <!--Css-->
     <link rel="stylesheet" href="../view/css/perfil.css">
 	<link rel="stylesheet" href="../view/css/navegador.css">
+	<link rel="stylesheet" href="../view/css/fullCalendar.css">
+	<!--Full Calendar-->
+	<link href="../controller/fullcalendar/main.css" rel='stylesheet'/>
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Inicio - Profesional By Proximity</title>
 </head>
@@ -19,9 +22,21 @@
 	<?php
     	include_once('../view/navegador.html'); 
 	?>
+	<br>
+	<div class="container">
+		<div class="card text-dark bg-light contenedorFullCalendar">
+			<div class="card-body">
+				<div id='calendar'></div>
+			</div>
+		</div>
+	</div>
 
+	<script src="../controller/fullcalendar/main.js"></script>
+    <script src="../controller/fullcalendar/locales/es.js"></script>
 	<!--<script src="../model/js/ajaxBuscarPerfil.js"></script>-->
-    <script src="../controller/js/grilla.js"></script>
+	<script src="../model/js/ajaxBackupProvincias.js"></script>
+	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
+    <script src="../controller/js/fullCalendar.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../controller/js/navegador.js"></script>
@@ -31,6 +46,9 @@
 	<script src="../model/js/ajaxConfirmarContraseña.js"></script>
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
+	
+
+	
 </body>
 </html>
 

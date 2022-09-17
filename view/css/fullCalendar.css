@@ -1,0 +1,55 @@
+.contenedorFullCalendar{
+    padding: 15px;
+}
+
+.fc-toolbar-title{
+    cursor: pointer;
+    text-align: center;
+}
+
+.fc-col-header-cell-cushion{
+    color: rgb(59, 59, 59);
+    text-decoration: none;
+}
+
+.fc-daygrid-day-number{
+    color: rgb(59, 59, 59);
+    text-decoration: none;
+}
+.fc-daygrid-event{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+
+.fc-timegrid-event{
+    cursor: pointer;
+}
+
+.fc-event-title{
+    text-decoration: none;
+}
+.fc-event-time{
+    cursor: pointer;
+    font-weight: bolder;
+    color: rgb(59, 59, 59);
+}
+
+.fc-event-title{
+    font-weight: bolder;
+    color: rgb(59, 59, 59);
+}
+
+.fc-col-header-cell{
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}
+
+.fc-timegrid-slot-label-cushion{
+    transform: translate(-15%);
+    cursor: pointer;
+}
+
+.fc-timegrid-axis-cushion{
+    cursor: pointer;
+    text-align: center;
+}

@@ -23,7 +23,7 @@
                 <br>
                 <!--Formulario de ingreso de correo-->
                 <form class="form1" onsubmit="event.preventDefault()" action="#" method="post" id="form1">
-                    <span class="texto">Correo </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCorreo"></i>
+                    <span class="texto">Correo </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoCorreo"></i>
                     <br>
                     <input type="text" class="form-control inputs" name="correo" id="correo">
                     <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
@@ -44,8 +44,8 @@
                     <span>
                         Se ha enviado un correo electrónico de validación a su dirección ingresada con un código de 4 caracteres. ¡Ingréselo dentro del campo código para continuar! El mismo tiene una validez de 10 minutos.
                     </span>
-                    <br>
-                    <span class="texto">Código </span><i class="bi bi-x-circle-fill iconos validado" id="iconoCodigo"></i>
+                    <br><br>
+                    <span class="texto">Código </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoCodigo"></i>
                     <br>
                     <input type="text" class="form-control inputs" name="codigo" id="codigo">
                     <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
@@ -67,12 +67,12 @@
                     </span>
                     <br>
                     <!--Campo Contraseña-->
-                    <span class="texto">Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPassword"></i>
+                    <span class="texto">Contraseña </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPassword"></i>
                     <br>
                     <input type="password" class="form-control inputs" name="password" id="password">
                     <br>
                     <!--Campo Validar Contraseña-->
-                    <span class="texto">Repetir Contraseña </span><i class="bi bi-x-circle-fill iconos validado" id="iconoPassword2"></i>
+                    <span class="texto">Repetir Contraseña </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPassword2"></i>
                     <br>
                     <input type="password" class="form-control inputs" name="password2" id="password2">
                     <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
