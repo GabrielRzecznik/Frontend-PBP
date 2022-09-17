@@ -58,6 +58,14 @@
     .fc-col-header-cell-cushion{
         font-size: 10px;
     }
+
+    .fc-scrollgrid-sync-inner{
+        margin-top: -3px;
+    }
+
+    .fc-button{
+        width: 30px;
+    }
 }
 
 @media (max-width: 500px) {
