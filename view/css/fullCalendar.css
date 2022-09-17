@@ -66,11 +66,15 @@
     .fc-button{
         width: 30px;
     }
+
+    .fc-icon{
+        margin-left: -8px;
+    }
 }
 
 @media (max-width: 500px) {
     .fc-col-header-cell-cushion{
-        font-size: 7.5px;
+        font-size: 6.5px;
     }
 
     .fc-scrollgrid-sync-inner{
