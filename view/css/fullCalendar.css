@@ -56,6 +56,12 @@
     }
 
     .fc-col-header-cell-cushion{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .fc-col-header-cell-cushion{
         font-size: 6.5px;
     }
 }
