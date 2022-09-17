@@ -66,12 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slotDuration: '01:00',//Tiempo de consulta + descanso
       slotMinTime: '07:00',//Día desde
       slotMaxTime: '21:00',//Día hasta
-      titleFormat: {//Texto parte superior
-        month: 'numeric',
-        year: 'numeric',
-        day: 'numeric',
-        weekday: 'long'
-      },
+      titleFormat: { year: 'numeric', month: 'long' }   ,
       headerToolbar: {
         left: "prev,next,today",
         center: "title",
