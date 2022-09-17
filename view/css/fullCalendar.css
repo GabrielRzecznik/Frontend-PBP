@@ -28,15 +28,36 @@
 .fc-event-title{
     text-decoration: none;
 }
+
 .fc-event-time{
-    cursor: pointer;
     font-weight: bolder;
+    font-size: 12px;
+    cursor: pointer;
     color: rgb(59, 59, 59);
 }
 
 .fc-event-title{
     font-weight: bolder;
+    font-size: 12px;
     color: rgb(59, 59, 59);
+}
+
+@media (max-width: 768px) {
+    .fc-event-time{
+        font-size: 9px;
+    }
+    
+    .fc-event-title{
+        display: none;
+    }
+
+    .fc-daygrid-event-harness{
+        max-width: min-content;
+    }
+
+    .fc-col-header-cell-cushion{
+        font-size: 10px;
+    }
 }
 
 .fc-col-header-cell{
