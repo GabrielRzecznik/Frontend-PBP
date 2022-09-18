@@ -34,7 +34,7 @@
 			</span>
 			<br>
 			<span class="botonesPerfil" id="botonesPerfil">
-				<button type="button" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</button>
+				<span id="botonGrilla"></span>
 				<button type="button" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</button>
 			</span>
 		</div>
