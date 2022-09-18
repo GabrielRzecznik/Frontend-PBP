@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Solicitud
           id: 'solicitud',
           title: 'Solicitud Enviada',
-          start: '2022-09-08 13:00:00',
-          end: '2022-09-08 13:45:00',
+          start: '2022-09-19 13:00:00',
+          end: '2022-09-19 13:45:00',
           backgroundColor: '#72a400',
           borderColor: '#649000'
         },
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Turno
           id: 'turno',
           title: 'Turno Confirmado',
-          start: '2022-09-29 09:00:00',
-          end: '2022-09-29 09:45:00',
+          start: '2022-09-19 09:00:00',
+          end: '2022-09-19 09:45:00',
           backgroundColor: '#CC8400',
           borderColor: '#b77600'
         },
@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Horario
           id: 'horarioDisponible',
           title: 'Horario Disponible',
-          start: '2022-09-08 14:00:00',
-          end: '2022-09-08 14:45:00',
+          start: '2022-09-19 14:00:00',
+          end: '2022-09-19 14:45:00',
           backgroundColor: '#3264c1',
           borderColor: '#003eb2'
         },
@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Horario No Disponible
           id: 'horarioNoDisponible',
           title: 'Horario No Disponible',
-          start: '2022-09-29 07:00:00',
-          end: '2022-09-29 07:45:00',
+          start: '2022-09-19 07:00:00',
+          end: '2022-09-19 07:45:00',
           backgroundColor: '#838383',
           borderColor: '#707070'
         }
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slotDuration: '01:00',//Tiempo de consulta + descanso
       slotMinTime: '07:00',//Día desde
       slotMaxTime: '21:00',//Día hasta
-      titleFormat: { year: 'numeric', month: 'long' },
+      //titleFormat: { year: 'numeric', month: 'long' },
       headerToolbar: {
         left: "prev,next,today",
         center: "title",
@@ -202,6 +202,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     calendar.render();
 });
+
+function ModalFormularioSolicitud() {
+  //Abrir Modal - Crear Solicitud
+  var myModal = new bootstrap.Modal(
+    document.getElementById("ventana-modal")
+  );
+  myModal.toggle();
+  //Cerrar Modal - Crear Solicitud
+  document.getElementById("close").addEventListener("click", function () {
+      myModal.hide();
+  });
+  //Cerrar Modal - Crear Solicitud
+  document.getElementById("cancelar").addEventListener("click", function () {
+      myModal.hide();
+  });
+   //Cerrar Modal - Crear Solicitud
+   document.getElementById("enviar").addEventListener("click", function () {
+    myModal.hide();
+    ModalConfirmación();
+  });
+}
+
+function ModalConfirmación(){
+  //Abrir Modal - Confirmar Envio Solicitud
+  var ConfirmaciónModal = new bootstrap.Modal(
+    document.getElementById("confirmación-modal")
+  );
+  ConfirmaciónModal.toggle();
+  //Cerrar Modal - Confirmar Envio Solicitud - VER SI NO SE PUEDEN UNIFICAR
+  document.getElementById("volverAtras").addEventListener("click", function () {
+    ConfirmaciónModal.hide();
+    ModalFormularioSolicitud();
+  });
+  
+  document.getElementById("cancelarConfirmación").addEventListener("click", function () {
+      ConfirmaciónModal.hide();
+  });
+}
 
 
 parametro = null;

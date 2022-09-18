@@ -30,14 +30,79 @@
 			</div>
 		</div>
 	</div>
+	
 
+	<!--Crear Solicitud-->
+	<form onsubmit="event.preventDefault()" action="#" method="post" id="crearSolicitud">
+    	<div class="modal fade" id="ventana-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        	<div class="modal-dialog modal-dialog-centered" role="document">
+            	<div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Crear solicitud</h5>
+                        <button id="close" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>                    
+                    <div class="modal-body">
+                        Fecha:
+                        <input type="date" class="form-control inputs" name="fecha" id="fecha" readonly>
+                        <br>
+                        <div class="row">
+                            <div class="col-6">
+                                Hora de Inicio:
+                                <input type="text" class="form-control inputs" name="horaDesdeSolicitud" id="horaDesdeSolicitud" readonly>
+                            </div>
+                        	<div class="col-6">
+                                Hora de Finalización:
+                                <input type="text" class="form-control inputs" name="horaHastaSolicitud" id="horaHastaSolicitud" readonly>
+                            </div>
+                        </div>
+                        <br>
+                        Tipo de Atención:<br>
+                        <select class="form-select" aria-label="Default select example" name="seleccionConsulta" id="seleccionConsulta">
+                            <option selected value="Consultorio">Consultario</option>
+                            <option value="Domicilio">Domicilio</option>
+                            <option value="Virtual">Virtual</option>
+                        </select>
+                        <br>
+                        Obra Social:<br>
+                        <select class="form-select" aria-label="Default select example" name="obraSocialSolicitud" id="obraSocialSolicitud">
+                            <option selected>Particular (Ninguna)</option>
+                            <option value="Osde">Osde</option>
+                            <option value="Ioma">Ioma</option>
+                            <option value="Medicus">Medicus</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <span class="btn btn-secondary" id="cancelar">Cancelar</span>
+                        <span class="btn btn-success" data-dismiss="modal" name="enviar" id="enviar">Enviar solicitud</span>
+                    </div>               
+                </div>
+           	</div>
+		</div>
+	</form>
+
+
+						<span>
+							¿Esta seguro que quiere enviar esta solicitud?<br>
+                            Una vez enviada la solicitud se le notificara al profesional!
+						</span>
+						<button type="submit" class="btn btn-success" data-dismiss="modal" name="confirmar" id="confirmar">
+                            <span>Confirmar</span>
+                        </button>
+						<span class="btn btn-warning" id="volverAtras">Atrás</span>
+	
+	<!--Bootstrap-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+	<!--Full Calendar-->
 	<script src="../controller/fullcalendar/main.js"></script>
     <script src="../controller/fullcalendar/locales/es.js"></script>
-	<!--<script src="../model/js/ajaxBuscarPerfil.js"></script>-->
+    <script src="../controller/js/fullCalendar.js"></script>
+	
+	<!--Navegador-->
 	<script src="../model/js/ajaxBackupProvincias.js"></script>
 	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
-    <script src="../controller/js/fullCalendar.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../controller/js/navegador.js"></script>
 	<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
@@ -47,8 +112,11 @@
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
 	
-
+	<!--Crear Solicitud-->
+    <script src="../model/js/ajaxCrearSolicitud.js"></script>
 	
+	
+    <!--<script src="../model/js/ajaxBuscarSolicitudes.js"></script>De ser el caso traeria las solicitudes-->    
 </body>
 </html>
 
