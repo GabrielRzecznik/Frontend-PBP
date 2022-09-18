@@ -1,3 +1,7 @@
+//Obtener parametro de URL 
+let parametro = location.search;
+parametro = parametro.slice(1);
+
 //Fecha actual
 let date = new Date();
 //let dia = date.getDate();
@@ -260,12 +264,11 @@ formularioCrearSolicitud.addEventListener('submit', (e) => {
   document.getElementById('confirmarSolicitud').style.display = 'none';
   document.getElementById('confSoliCarg').style.display = 'block';
 
-  crearSolicitud(seleccionConsultaeValue, obraSocialSolicitudValue, $horaDesdeSolicitud, $horaHastaSolicitud)
+  $id_paciente = localStorage.getItem("id_paciente");
+
+  crearSolicitud(seleccionConsultaeValue, obraSocialSolicitudValue, $horaDesdeSolicitud, $horaHastaSolicitud, $id_paciente, parametro)
 }); 
 //#endregion
 
-
-
-parametro = null;
 
 
