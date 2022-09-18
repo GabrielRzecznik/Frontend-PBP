@@ -145,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (fecha >= fechaActual2) {
 
+          //Setea el Modal Crear Solicitud
           //Cuerpo Modal
           document.getElementById('formularioEnviarSolicitud').style.display = 'block';
           document.getElementById('avisoConfirmarEnviarSolicitud').style.display = 'none';
