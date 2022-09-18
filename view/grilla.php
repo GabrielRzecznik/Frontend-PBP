@@ -38,13 +38,14 @@
         	<div class="modal-dialog modal-dialog-centered" role="document">
             	<div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Crear solicitud</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Enviar solicitud</h5>
                         <button id="close" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>                    
                     <div class="modal-body">
-                        Fecha:
+                    <!--Formulario Enviar Solicitud-->    
+					Fecha:
                         <input type="date" class="form-control inputs" name="fecha" id="fecha" readonly>
                         <br>
                         <div class="row">
@@ -72,10 +73,23 @@
                             <option value="Ioma">Ioma</option>
                             <option value="Medicus">Medicus</option>
                         </select>
+						<!--Confirmación Enviar Solicitud-->
+						<span>
+							¿Esta seguro que quiere enviar esta solicitud?<br>
+                            Una vez enviada la solicitud se le notificara al profesional!
+						</span>
                     </div>
                     <div class="modal-footer">
-                        <span class="btn btn-secondary" id="cancelar">Cancelar</span>
-                        <span class="btn btn-success" data-dismiss="modal" name="enviar" id="enviar">Enviar solicitud</span>
+						<!--Formulario Enviar Solicitud-->
+						<span class="mostrarFormularioEnviarSolicitud">
+							<span class="btn btn-secondary" id="cancelar">Cancelar</span>
+							<span class="btn btn-success" data-dismiss="modal" name="enviar" id="enviar">Enviar solicitud</span>
+						</span>
+						<!--Confirmación Enviar Solicitud-->
+						<span>
+							<span class="btn btn-warning" id="volverAtras">Atrás</span>
+							<button type="submit" class="btn btn-success" data-dismiss="modal" name="confirmar" id="confirmar">Confirmar</button>
+						</span>
                     </div>               
                 </div>
            	</div>
@@ -83,14 +97,8 @@
 	</form>
 
 
-						<span>
-							¿Esta seguro que quiere enviar esta solicitud?<br>
-                            Una vez enviada la solicitud se le notificara al profesional!
-						</span>
-						<button type="submit" class="btn btn-success" data-dismiss="modal" name="confirmar" id="confirmar">
-                            <span>Confirmar</span>
-                        </button>
-						<span class="btn btn-warning" id="volverAtras">Atrás</span>
+						
+						
 	
 	<!--Bootstrap-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
