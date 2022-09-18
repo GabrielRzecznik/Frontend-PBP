@@ -47,7 +47,7 @@
                     	<!--Formulario Enviar Solicitud-->    
 						<span id="formularioEnviarSolicitud">
 							Fecha:
-							<input type="date" class="form-control inputs" name="fecha" id="fecha" readonly>
+							<input type="date" class="form-control inputs" name="fechaSolicitud" id="fechaSolicitud" readonly>
 							<br>
 							<div class="row">
 								<div class="col-6">
@@ -85,12 +85,15 @@
 						<!--Formulario Enviar Solicitud-->
 						<span id="botonesEnviarSolicitud">
 							<span class="btn btn-secondary" id="cancelar">Cancelar</span>
-							<span class="btn btn-success" data-dismiss="modal" name="enviar" id="enviar">Enviar solicitud</span>
+							<span class="btn btn-success botonEnviarSolicitud" data-dismiss="modal" name="enviar" id="enviar">Enviar solicitud</span>
 						</span>
 						<!--Confirmación Enviar Solicitud-->
 						<span id="botonesConfirmarEnviarSolicitud" class="ocultar">
 							<span class="btn btn-warning" id="volverAtras">Atrás</span>
-							<button type="submit" class="btn btn-success" data-dismiss="modal" name="confirmar" id="confirmar">Confirmar</button>
+							<button type="submit" class="btn btn-success botonConfirmarSolicitud" data-dismiss="modal">
+								<span name="confirmarSolicitud" id="confirmarSolicitud">Confirmar</span>
+								<div class="spinner-border text-light confSoliCarg" id="confSoliCarg" role="status"></div>
+							</button>
 						</span>
                     </div>               
                 </div>

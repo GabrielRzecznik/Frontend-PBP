@@ -246,3 +246,5 @@ function ModalConfirmación(){
       ConfirmaciónModal.hide();
   });
 }
+
+//Formulario Crear Solicitud
