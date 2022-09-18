@@ -3,11 +3,11 @@ let parametro = location.search;
 parametro = parametro.slice(1);
 
 //Fecha actual
-let date = new Date();
+let date2 = new Date();
 //let dia = date.getDate();
 //let mes = date.getMonth()+1;
 //let año = date.getFullYear();
-let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));//Se tratan como String al mes y la fecha ya que si tienen un 0 por delante y es entero lo omite
+let fechaActual2 = String(date2.getFullYear() + '-' + String(date2.getMonth() + 1).padStart(2, '0') + '-' + String(date2.getDate()).padStart(2, '0'));//Se tratan como String al mes y la fecha ya que si tienen un 0 por delante y es entero lo omite
 
 //Full Calendar
 document.addEventListener("DOMContentLoaded", function () {
@@ -143,12 +143,12 @@ document.addEventListener("DOMContentLoaded", function () {
         var horaDesde = infoDesde.substring(16,24);
         var horaHasta = infoHasta.substring(16,24);
 
-        if (fecha >= fechaActual) {
+        if (fecha >= fechaActual2) {
 
           //console.log("Hora desde: "+horaDesde);
           //console.log("tres Horas Antes: "+tresHorasAntes);
 
-          if (fecha == fechaActual) {
+          if (fecha == fechaActual2) {
             if(tresHorasAntes <= horaDesde){
               ejecutarModalFormularioSolicitud();
             }else{

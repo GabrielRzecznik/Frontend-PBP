@@ -144,12 +144,12 @@ document.addEventListener("DOMContentLoaded", function () {
         var horaDesde = infoDesde.substring(16,24);
         var horaHasta = infoHasta.substring(16,24);
 
-        if (fecha >= fechaActual) {
+        if (fecha >= fechaActual2) {
 
           //console.log("Hora desde: "+horaDesde);
           //console.log("tres Horas Antes: "+tresHorasAntes);
 
-          if (fecha == fechaActual) {
+          if (fecha == fechaActual2) {
             if(tresHorasAntes <= horaDesde){
               ejecutarModalFormularioSolicitud();
             }else{
