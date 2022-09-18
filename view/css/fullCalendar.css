@@ -7,6 +7,10 @@
     text-align: center;
 }
 
+.fc-daygrid-day-number{
+    cursor: pointer;
+}
+
 .fc-col-header-cell-cushion{
     color: rgb(59, 59, 59);
     text-decoration: none;
