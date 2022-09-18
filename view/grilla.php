@@ -125,6 +125,9 @@
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
 	
+	<!--Datos del Profesional-->
+	<script src="../controller/js/perfil.js"></script>
+
 	<!--Crear Solicitud-->
     <script src="../model/js/ajaxCrearSolicitud.js"></script>
 	
