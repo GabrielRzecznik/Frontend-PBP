@@ -44,49 +44,51 @@
                         </button>
                     </div>                    
                     <div class="modal-body">
-                    <!--Formulario Enviar Solicitud-->    
-					Fecha:
-                        <input type="date" class="form-control inputs" name="fecha" id="fecha" readonly>
-                        <br>
-                        <div class="row">
-                            <div class="col-6">
-                                Hora de Inicio:
-                                <input type="text" class="form-control inputs" name="horaDesdeSolicitud" id="horaDesdeSolicitud" readonly>
-                            </div>
-                        	<div class="col-6">
-                                Hora de Finalización:
-                                <input type="text" class="form-control inputs" name="horaHastaSolicitud" id="horaHastaSolicitud" readonly>
-                            </div>
-                        </div>
-                        <br>
-                        Tipo de Atención:<br>
-                        <select class="form-select" aria-label="Default select example" name="seleccionConsulta" id="seleccionConsulta">
-                            <option selected value="Consultorio">Consultario</option>
-                            <option value="Domicilio">Domicilio</option>
-                            <option value="Virtual">Virtual</option>
-                        </select>
-                        <br>
-                        Obra Social:<br>
-                        <select class="form-select" aria-label="Default select example" name="obraSocialSolicitud" id="obraSocialSolicitud">
-                            <option selected>Particular (Ninguna)</option>
-                            <option value="Osde">Osde</option>
-                            <option value="Ioma">Ioma</option>
-                            <option value="Medicus">Medicus</option>
-                        </select>
+                    	<!--Formulario Enviar Solicitud-->    
+						<span id="formularioEnviarSolicitud">
+							Fecha:
+							<input type="date" class="form-control inputs" name="fecha" id="fecha" readonly>
+							<br>
+							<div class="row">
+								<div class="col-6">
+									Hora de Inicio:
+									<input type="text" class="form-control inputs" name="horaDesdeSolicitud" id="horaDesdeSolicitud" readonly>
+								</div>
+								<div class="col-6">
+									Hora de Finalización:
+									<input type="text" class="form-control inputs" name="horaHastaSolicitud" id="horaHastaSolicitud" readonly>
+								</div>
+							</div>
+							<br>
+							Tipo de Atención:<br>
+							<select class="form-select" aria-label="Default select example" name="seleccionConsulta" id="seleccionConsulta">
+								<option selected value="Consultorio">Consultario</option>
+								<option value="Domicilio">Domicilio</option>
+								<option value="Virtual">Virtual</option>
+							</select>
+							<br>
+							Obra Social:<br>
+							<select class="form-select" aria-label="Default select example" name="obraSocialSolicitud" id="obraSocialSolicitud">
+								<option selected>Particular (Ninguna)</option>
+								<option value="Osde">Osde</option>
+								<option value="Ioma">Ioma</option>
+								<option value="Medicus">Medicus</option>
+							</select>
+						</span>
 						<!--Confirmación Enviar Solicitud-->
-						<span>
+						<span id="avisoConfirmarEnviarSolicitud" class="ocultar">
 							¿Esta seguro que quiere enviar esta solicitud?<br>
                             Una vez enviada la solicitud se le notificara al profesional!
 						</span>
                     </div>
                     <div class="modal-footer">
 						<!--Formulario Enviar Solicitud-->
-						<span class="mostrarFormularioEnviarSolicitud">
+						<span id="botonesEnviarSolicitud">
 							<span class="btn btn-secondary" id="cancelar">Cancelar</span>
 							<span class="btn btn-success" data-dismiss="modal" name="enviar" id="enviar">Enviar solicitud</span>
 						</span>
 						<!--Confirmación Enviar Solicitud-->
-						<span>
+						<span id="botonesConfirmarEnviarSolicitud" class="ocultar">
 							<span class="btn btn-warning" id="volverAtras">Atrás</span>
 							<button type="submit" class="btn btn-success" data-dismiss="modal" name="confirmar" id="confirmar">Confirmar</button>
 						</span>

@@ -96,3 +96,7 @@
     cursor: pointer;
     text-align: center;
 }
+
+.ocultar{
+    display: none;
+}
