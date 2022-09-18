@@ -145,6 +145,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (fecha >= fechaActual2) {
 
+          //Cuerpo Modal
+          document.getElementById('formularioEnviarSolicitud').style.display = 'block';
+          document.getElementById('avisoConfirmarEnviarSolicitud').style.display = 'none';
+          //Pie Modal
+          document.getElementById('botonesEnviarSolicitud').style.display = 'block';
+          document.getElementById('botonesConfirmarEnviarSolicitud').style.display = 'none';
+          
           //console.log("Hora desde: "+horaDesde);
           //console.log("tres Horas Antes: "+tresHorasAntes);
 
