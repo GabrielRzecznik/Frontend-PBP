@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Solicitud
           id: 'solicitud',
           title: 'Solicitud Enviada',
-          start: '2022-09-19 13:00:00',
+          start: '2022-09-19 13:15:00',
           end: '2022-09-19 13:45:00',
           backgroundColor: '#72a400',
           borderColor: '#649000'
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Turno
           id: 'turno',
           title: 'Turno Confirmado',
-          start: '2022-09-19 09:00:00',
+          start: '2022-09-19 09:15:00',
           end: '2022-09-19 09:45:00',
           backgroundColor: '#CC8400',
           borderColor: '#b77600'
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Horario
           id: 'horarioDisponible',
           title: 'Horario Disponible',
-          start: '2022-09-19 14:00:00',
+          start: '2022-09-19 14:15:00',
           end: '2022-09-19 14:45:00',
           backgroundColor: '#3264c1',
           borderColor: '#003eb2'
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
           //Estilo Horario No Disponible
           id: 'horarioNoDisponible',
           title: 'Horario No Disponible',
-          start: '2022-09-19 07:00:00',
+          start: '2022-09-19 07:15:00',
           end: '2022-09-19 07:45:00',
           backgroundColor: '#838383',
           borderColor: '#707070'
@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
         //meridiem: 'long'
       },
 
-      slotDuration: '01:00',//Tiempo de consulta + descanso
-      slotMinTime: '07:00',//Día desde
-      slotMaxTime: '21:00',//Día hasta
+      slotDuration: '00:30',//Tiempo de consulta + descanso
+      slotMinTime: '00:00',//Día desde
+      slotMaxTime: '24:00',//Día hasta
       //titleFormat: { year: 'numeric', month: 'long' },
       headerToolbar: {
         left: "prev,next,today",

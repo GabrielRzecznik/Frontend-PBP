@@ -2,6 +2,16 @@
     padding: 15px;
 }
 
+
+.fc-media-screen {
+    height: 750px;
+}
+
+.fc-daygrid-day-frame{
+    height: 100px;
+    overflow: hidden;
+}
+
 .fc-toolbar-title{
     cursor: pointer;
     text-align: center;
@@ -73,6 +83,11 @@
 }
 
 @media (max-width: 500px) {
+    .fc-daygrid-day-number{
+        position: absolute;
+        left: 0px;
+    }
+
     .fc-col-header-cell-cushion{
         font-size: 6.5px;
     }
@@ -100,3 +115,4 @@
 .ocultar{
     display: none;
 }
+
