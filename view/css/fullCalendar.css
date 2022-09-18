@@ -77,11 +77,6 @@
 }
 
 @media (max-width: 500px) {
-    .fc-daygrid-day-number{
-        position: relative;
-        transform: translate(-50%, 0%);
-    }
-
     .fc-col-header-cell-cushion{
         font-size: 6.5px;
     }
