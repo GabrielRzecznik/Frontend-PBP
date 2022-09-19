@@ -223,6 +223,7 @@ function gestorMostrarGrilla($nombreUsuario){
             }
         }
     }
+    //Crear nueva consulta, la cual tenga relacion con SOLICITUDES, TURNOS, HORARIOS
     xmlhttp.open("GET",'https://backend-pbp.herokuapp.com/Usuarios/buscarPerfil/'+$nombreUsuario,false);
     xmlhttp.send();
 }
