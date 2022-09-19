@@ -16,8 +16,8 @@ function gestorMostrarGrilla($nombreUsuario){
                 $arrayEventos.forEach(function(eventos) {
                     //Color Solicitud enviada
                     if (eventos["descripcion"] == "Solicitud enviada") {
-                        $color = '#B6D7A8';
-                        $borde = '#a3c197';
+                        $color = '#bddbb0';
+                        $borde = '#A3C197';
                     }
                     //Armado
                     $arrayTerminadoEventos.push(
@@ -51,9 +51,7 @@ function gestorMostrarGrilla($nombreUsuario){
                     //Cargar Eventos - Solicitudes, Turnos
                     events: $arrayTerminadoEventos,
 
-                    dayHeaderFormat: {
-                        weekday: 'long'
-                    },
+                    
                     
                     slotLabelFormat: {
                         hour: '2-digit',

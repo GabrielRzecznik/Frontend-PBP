@@ -59,9 +59,9 @@
         max-width: min-content;
     }
 
-    .fc-col-header-cell-cushion{
+    /*.fc-col-header-cell-cushion{
         font-size: 10px;
-    }
+    }*/
 
     .fc-scrollgrid-sync-inner{
         margin-top: -3px;
@@ -77,9 +77,9 @@
 }
 
 @media (max-width: 500px) {
-    .fc-col-header-cell-cushion{
+    /*.fc-col-header-cell-cushion{
         font-size: 6.5px;
-    }
+    }*/
 
     .fc-scrollgrid-sync-inner{
         margin-top: -5px;
