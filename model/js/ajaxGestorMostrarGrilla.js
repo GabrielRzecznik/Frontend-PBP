@@ -224,5 +224,5 @@ function gestorMostrarGrilla($nombreUsuario){
         }
     }
     xmlhttp.open("GET",'https://backend-pbp.herokuapp.com/Usuarios/buscarPerfil/'+$nombreUsuario,false);
-    xmlhttp.send(formJSON);
+    xmlhttp.send();
 }
