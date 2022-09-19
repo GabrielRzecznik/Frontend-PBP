@@ -6,6 +6,34 @@ function gestorMostrarGrilla($nombreUsuario){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
+                var data=JSON.parse(xmlhttp.responseText);
+                
+                $arrayTerminadoEventos = [];
+
+                $arrayEventos = data;
+                        
+                //$provincias = "";
+                $arrayEventos.forEach(function(eventos) {
+                    //Color Solicitud enviada
+                    if (eventos["descripcion"] == "Solicitud enviada") {
+                        $color = '#B6D7A8';
+                        $borde = '#a3c197';
+                    }
+                    //Armado
+                    $arrayTerminadoEventos.push(
+                        {
+                            id: eventos["id_solicitud"],
+                            title: eventos["descripcion"],
+                            start: eventos["horaDesdeSolicitud"],
+                            end: eventos["horaHastaSolicitud"],
+                            backgroundColor: $color,
+                            borderColor: $borde
+                        }
+                    );
+
+                });
+                console.log($arrayTerminadoEventos);
+                
                 //Fecha actual
                 let date2 = new Date();
                 //let dia = date.getDate();
@@ -21,45 +49,7 @@ function gestorMostrarGrilla($nombreUsuario){
                     locale: "es",//Idioma
                     
                     //Cargar Eventos - Solicitudes, Turnos
-                    events: [
-                        {
-                        //Estilo Solicitud
-                        id: 'solicitud',
-                        title: 'Solicitud Enviada',
-                        start: '2022-09-22 13:15:00',
-                        end: '2022-09-22 13:45:00',
-                        backgroundColor: '#72a400',
-                        borderColor: '#649000'
-                        },
-                        {
-                        //Estilo Turno
-                        id: 'turno',
-                        title: 'Turno Confirmado',
-                        start: '2022-09-22 09:15:00',
-                        end: '2022-09-22 09:45:00',
-                        backgroundColor: '#CC8400',
-                        borderColor: '#b77600'
-                        },
-                        {
-                        //Estilo Horario
-                        id: 'horarioDisponible',
-                        title: 'Horario Disponible',
-                        start: '2022-09-22 14:15:00',
-                        end: '2022-09-22 14:45:00',
-                        backgroundColor: '#3264c1',
-                        borderColor: '#003eb2'
-                        },
-                        {
-                        //Estilo Horario No Disponible
-                        id: 'horarioNoDisponible',
-                        title: 'Horario No Disponible',
-                        start: '2022-09-22 07:15:00',
-                        end: '2022-09-22 07:45:00',
-                        backgroundColor: '#838383',
-                        borderColor: '#707070'
-                        }
-
-                    ],
+                    events: $arrayTerminadoEventos,
 
                     dayHeaderFormat: {
                         weekday: 'long'
@@ -81,7 +71,7 @@ function gestorMostrarGrilla($nombreUsuario){
                         right: "dayGridMonth,timeGridWeek,timeGridDay",
                     },
                     eventClick: function (info) {
-                        console.log(info.event);
+                        //console.log(info.event);
 
                         var infoDesde = String(info.event.start);
                         var infoHasta = String(info.event.end);
@@ -226,6 +216,6 @@ function gestorMostrarGrilla($nombreUsuario){
         }
     }
     //Crear nueva consulta, la cual tenga relacion con SOLICITUDES, TURNOS, HORARIOS
-    xmlhttp.open("GET",'https://backend-pbp.herokuapp.com/Usuarios/buscarPerfil/'+$nombreUsuario,false);
+    xmlhttp.open("GET",'https://backend-pbp.herokuapp.com/Pacientes/buscarEventos/'+$nombreUsuario,false);
     xmlhttp.send();
 }
