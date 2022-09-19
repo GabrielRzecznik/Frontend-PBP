@@ -8,6 +8,10 @@ if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUs
 //Mostrar Usuario
 document.getElementById('usuario').innerHTML = localStorage["nombreUsuario"];
 
+//Opcion Ir a mi Grilla
+let irAMiGrilla = document.getElementById('irAMiGrilla');
+irAMiGrilla.innerHTML = '<a class="dropdown-item" href="../view/grilla.php?'+localStorage["nombreUsuario"]+'">Mi Grilla</a>';
+
 //Mostrar Foto
 if (localStorage.getItem("foto") != "Array" && localStorage.getItem("foto") != "") {
     document.getElementById('fotoUsuario').innerHTML = '<img class="fotoUsuario" src="'+localStorage["foto"]+'" alt="">';
