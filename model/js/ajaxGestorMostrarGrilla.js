@@ -13,6 +13,9 @@ function gestorMostrarGrilla($nombreUsuario){
                 $arrayEventos = data;
                         
                 //$provincias = "";
+
+                $color = '';
+                $borde = '';
                 $arrayEventos.forEach(function(eventos) {
                     //Color Solicitud enviada
                     if (eventos["descripcion"] == "Solicitud enviada") {
