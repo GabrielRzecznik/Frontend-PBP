@@ -129,6 +129,7 @@
 	<script src="../model/js/ajaxBuscarPerfil.js"></script>
 
 	<!--Crear Solicitud-->
+	<script src="../controller/js/crearSolicitud.js"></script>
     <script src="../model/js/ajaxCrearSolicitud.js"></script>
 	
 	
