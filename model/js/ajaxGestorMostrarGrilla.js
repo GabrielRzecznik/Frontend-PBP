@@ -26,8 +26,8 @@ function gestorMostrarGrilla($nombreUsuario){
                         //Estilo Solicitud
                         id: 'solicitud',
                         title: 'Solicitud Enviada',
-                        start: '2022-09-19 13:15:00',
-                        end: '2022-09-19 13:45:00',
+                        start: '2022-09-22 13:15:00',
+                        end: '2022-09-22 13:45:00',
                         backgroundColor: '#72a400',
                         borderColor: '#649000'
                         },
@@ -35,8 +35,8 @@ function gestorMostrarGrilla($nombreUsuario){
                         //Estilo Turno
                         id: 'turno',
                         title: 'Turno Confirmado',
-                        start: '2022-09-19 09:15:00',
-                        end: '2022-09-19 09:45:00',
+                        start: '2022-09-22 09:15:00',
+                        end: '2022-09-22 09:45:00',
                         backgroundColor: '#CC8400',
                         borderColor: '#b77600'
                         },
@@ -44,8 +44,8 @@ function gestorMostrarGrilla($nombreUsuario){
                         //Estilo Horario
                         id: 'horarioDisponible',
                         title: 'Horario Disponible',
-                        start: '2022-09-19 14:15:00',
-                        end: '2022-09-19 14:45:00',
+                        start: '2022-09-22 14:15:00',
+                        end: '2022-09-22 14:45:00',
                         backgroundColor: '#3264c1',
                         borderColor: '#003eb2'
                         },
@@ -53,8 +53,8 @@ function gestorMostrarGrilla($nombreUsuario){
                         //Estilo Horario No Disponible
                         id: 'horarioNoDisponible',
                         title: 'Horario No Disponible',
-                        start: '2022-09-19 07:15:00',
-                        end: '2022-09-19 07:45:00',
+                        start: '2022-09-22 07:15:00',
+                        end: '2022-09-22 07:45:00',
                         backgroundColor: '#838383',
                         borderColor: '#707070'
                         }
@@ -81,6 +81,8 @@ function gestorMostrarGrilla($nombreUsuario){
                         right: "dayGridMonth,timeGridWeek,timeGridDay",
                     },
                     eventClick: function (info) {
+                        console.log(info.event);
+
                         var infoDesde = String(info.event.start);
                         var infoHasta = String(info.event.end);
                         
