@@ -14,4 +14,6 @@ buscarPerfil(parametro);
 let botonGrilla = document.getElementById('botonGrilla');
 
 botonGrilla.innerHTML = '<a href="../view/grilla.php?'+parametro+'" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</a>';
-//
+
+//Acceso externo al navegador para edición de perfil
+$accesoPerfil = true;
