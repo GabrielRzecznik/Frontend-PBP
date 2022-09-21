@@ -17,5 +17,3 @@ botonGrilla.innerHTML = '<a href="../view/grilla.php?'+parametro+'" class="btn b
 
 //Acceso externo al navegador para edición de perfil
 $accesoPerfil = true;
-
-buscarConfGrillaProf();
