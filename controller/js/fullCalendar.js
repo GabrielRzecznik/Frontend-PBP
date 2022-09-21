@@ -18,7 +18,7 @@ let fechaActual2 = String(date2.getFullYear() + '-' + String(date2.getMonth() + 
 $prof = localStorage.getItem("id_profesional");
 
 if ($prof != null) {
-    configurarGrillaProfesional(localStorage.getItem("id_profesional"));
+    buscarConfigurarGrillaProfesional(localStorage.getItem("id_profesional"));
     $slotDuration = $duracionConsulta;
     $slotMinTime = $rangoHorarioDiaDesde;
     $slotMaxTime = $rangoHorarioDiaHasta;

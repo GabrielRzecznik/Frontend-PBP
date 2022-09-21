@@ -1,4 +1,4 @@
-function configurarGrillaProfesional($id_profesional){
+function buscarConfigurarGrillaProfesional($id_profesional){
     var formData= new FormData();
     formData.append("id_profesional", $id_profesional);
     var formJSON=JSON.stringify(Object.fromEntries(formData));    
