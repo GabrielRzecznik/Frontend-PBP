@@ -18,15 +18,15 @@ let fechaActual2 = String(date2.getFullYear() + '-' + String(date2.getMonth() + 
 $prof = localStorage.getItem("id_profesional");
 
 
+buscarConfGrillaProf();
 if ($prof != null) {
-    buscarConfGrillaProf();
-    $slotDuration = $duracionConsulta;
-    $slotMinTime = $rangoHorarioDiaDesde;
-    $slotMaxTime = $rangoHorarioDiaHasta;
+    //$slotDuration = $duracionConsulta;
+    //$slotMinTime = $rangoHorarioDiaDesde;
+    //$slotMaxTime = $rangoHorarioDiaHasta;
 }else{
-    $slotDuration = '00:30';
-    $slotMinTime = '00:00';
-    $slotMaxTime = '24:00';
+    //$slotDuration = '00:30';
+    //$slotMinTime = '00:00';
+    //$slotMaxTime = '24:00';
 }
 
 //Full Calendar
@@ -45,9 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
         //meridiem: 'long'
     },
 
-    slotDuration: $slotDuration,//Tiempo de consulta + descanso
-    slotMinTime: $slotMinTime,//Día desde
-    slotMaxTime: $slotMaxTime,//Día hasta
+    slotDuration: '00:30',
+    slotMinTime: '00:00',
+    slotMaxTime: '24:00',
     //titleFormat: { year: 'numeric', month: 'long' },
     headerToolbar: {
         left: "prev,next,today",

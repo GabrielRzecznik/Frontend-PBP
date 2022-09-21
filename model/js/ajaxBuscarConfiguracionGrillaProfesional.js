@@ -1,5 +1,5 @@
 function buscarConfGrillaProf(){
-    var formData= new FormData(); //Las keys corresponden al atributo name de cada elemento  
+    var formData = new FormData(); //Las keys corresponden al atributo name de cada elemento  
     formData.append("id_profesional", localStorage.getItem("id_profesional"));
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
