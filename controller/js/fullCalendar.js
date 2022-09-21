@@ -14,6 +14,20 @@ let date2 = new Date();
 //let año = date.getFullYear();
 let fechaActual2 = String(date2.getFullYear() + '-' + String(date2.getMonth() + 1).padStart(2, '0') + '-' + String(date2.getDate()).padStart(2, '0'));//Se tratan como String al mes y la fecha ya que si tienen un 0 por delante y es entero lo omite
 
+//La grilla pertenece a un profesional?
+$prof = localStorage.getItem("id_profesional");
+
+if ($prof != null) {
+    configurarGrillaProfesional(localStorage.getItem("id_profesional"));
+    $slotDuration = $duracionConsulta;
+    $slotMinTime = $rangoHorarioDiaDesde;
+    $slotMaxTime = $rangoHorarioDiaHasta;
+}else{
+    $slotDuration = '00:30';
+    $slotMinTime = '00:00';
+    $slotMaxTime = '24:00';
+}
+
 //Full Calendar
 document.addEventListener("DOMContentLoaded", function () {
     var calendarEl = document.getElementById("calendar");
@@ -24,17 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
     //Cargar Eventos - Solicitudes, Turnos
     events: $arrayTerminadoEventos,
 
-    
-    
     slotLabelFormat: {
         hour: '2-digit',
         minute: '2-digit',
         //meridiem: 'long'
     },
 
-    slotDuration: '00:30',//Tiempo de consulta + descanso
-    slotMinTime: '00:00',//Día desde
-    slotMaxTime: '24:00',//Día hasta
+    slotDuration: $slotDuration,//Tiempo de consulta + descanso
+    slotMinTime: $slotMinTime,//Día desde
+    slotMaxTime: $slotMaxTime,//Día hasta
     //titleFormat: { year: 'numeric', month: 'long' },
     headerToolbar: {
         left: "prev,next,today",

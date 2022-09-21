@@ -2,7 +2,6 @@ function configurarGrillaProfesional($id_profesional){
     var formData= new FormData();
     formData.append("id_profesional", $id_profesional);
     var formJSON=JSON.stringify(Object.fromEntries(formData));    
-    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
 
@@ -15,6 +14,8 @@ function configurarGrillaProfesional($id_profesional){
                 $rangoHorarioDiaDesde = data[0]["rangoHorarioDiaDesde"];
                 $rangoHorarioDiaHasta = data[0]["rangoHorarioDiaHasta"];
                 $diasAtencion = data[0]["diasAtencion"];
+
+
             }else{
                 alert("¡Ocurrio un error inesperado al mostrar la configuración de la grilla profesional!");
             }
