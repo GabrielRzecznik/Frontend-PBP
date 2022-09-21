@@ -19,7 +19,7 @@ $prof = localStorage.getItem("id_profesional");
 
 
 if ($prof != null) {
-    buscarConfGrillaProf($prof);
+    buscarConfGrillaProf();
     $slotDuration = $duracionConsulta;
     $slotMinTime = $rangoHorarioDiaDesde;
     $slotMaxTime = $rangoHorarioDiaHasta;

@@ -1,13 +1,14 @@
-function buscarConfGrillaProf(id_profesional){
+function buscarConfGrillaProf(){
     var formData= new FormData(); //Las keys corresponden al atributo name de cada elemento  
-    formData.append("id_profesional", id_profesional);
+    formData.append("id_profesional", localStorage.getItem("id_profesional"));
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
-
+    alert("adofue");
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {
+                alert("Hola");
                 var data=JSON.parse(xmlhttp.responseText);
                 $duracionConsulta = data[0]["duracionConsulta"];
                 $descanso = data[0]["descanso"];
@@ -24,4 +25,3 @@ function buscarConfGrillaProf(id_profesional){
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/ConfiguracionGrillaProfesional/buscarConfiguracionGrillaProfesional',true);
     xmlhttp.send(formJSON);
 }
-
