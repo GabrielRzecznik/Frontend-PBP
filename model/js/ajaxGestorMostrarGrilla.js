@@ -2,6 +2,7 @@ function gestorMostrarGrilla($nombreUsuario){
     //var id_paciente = localStorage["id_usuario"];//Cambiar id usuario x paciente
     //var formJSON=JSON.stringify({"id_paciente":id_paciente});
     xmlhttp = new XMLHttpRequest();
+ 
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
