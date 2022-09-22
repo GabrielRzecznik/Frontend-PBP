@@ -1,7 +1,3 @@
-//Obtener parametro de URL 
-let parametro = location.search;
-parametro = parametro.slice(1);
-
 //La grilla pertenece a un profesional?
 $prof = localStorage.getItem("id_profesional");
                
@@ -15,6 +11,5 @@ if ($prof != null) {
 }
 //gestorMostrarGrilla(parametro);
 
-//No existe acceso externo al navegador para edición de perfil
-$accesoPerfil = false;
+
 

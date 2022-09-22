@@ -106,8 +106,8 @@
 	
 
 
-
-
+	<!--Parametro-->
+	<script src="../controller/js/parametroGrilla.js"></script>
 
 
 	<!--Navegador-->

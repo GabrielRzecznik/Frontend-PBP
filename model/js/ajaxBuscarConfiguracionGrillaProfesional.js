@@ -39,7 +39,7 @@ function buscarConfGrillaProf(){
                 }
     
                 duracion = horas +':'+ minutos;
-                
+
                 $slotDuration = duracion;
                 $slotMinTime = $rangoHorarioDiaDesde;
                 $slotMaxTime = $rangoHorarioDiaHasta;
