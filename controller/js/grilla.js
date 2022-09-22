@@ -13,7 +13,6 @@ if ($prof != null) {
     $slotMinTime = '00:00';
     $slotMaxTime = '24:00';
 }
-
 //gestorMostrarGrilla(parametro);
 
 //No existe acceso externo al navegador para edición de perfil
