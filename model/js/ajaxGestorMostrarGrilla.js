@@ -35,7 +35,17 @@ function gestorMostrarGrilla($nombreUsuario){
                     );
 
                 });
-                console.log($arrayTerminadoEventos);
+
+                //Generar Horarios
+                console.log($rangoHorarioDiaDesde);
+                console.log($rangoHorarioDiaHasta);
+                console.log($duracionConsulta);
+                console.log($descanso);
+                console.log($diasAtencion);
+
+                //Armar Calendario
+                armadoFullCalendar();
+
             }if (xmlhttp.status == 401) {
                 
             }
@@ -45,3 +55,4 @@ function gestorMostrarGrilla($nombreUsuario){
     xmlhttp.open("GET",'https://backend-pbp.herokuapp.com/Pacientes/buscarEventos/'+$nombreUsuario,false);
     xmlhttp.send();
 }
+

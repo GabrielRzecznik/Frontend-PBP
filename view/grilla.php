@@ -18,7 +18,7 @@
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Inicio - Profesional By Proximity</title>
 </head>
-<body class="mostrarPagina" id="mostrar">
+<body class="" id="mostrar">
 	<?php
     	include_once('../view/navegador.html'); 
 	?>
@@ -100,44 +100,81 @@
            	</div>
 		</div>
 	</form>
-
-
-						
-						
-	
 	<!--Bootstrap-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	
+	
+
+
+
+
+
+
+
+
+
 
 	<!--Configuracion Grilla Profesional-->
 	<script src="../model/js/ajaxBuscarConfiguracionGrillaProfesional.js"></script>
 
-	<!--Full Calendar-->
-	<script src="../model/js/ajaxGestorMostrarGrilla.js"></script>
-	<script src="../controller/fullcalendar/main.js"></script>
-    <script src="../controller/fullcalendar/locales/es.js"></script>
-    <script src="../controller/js/fullCalendar.js"></script>
+	<!--Grilla-->
+	<script src="../controller/js/grilla.js"></script>
 	
-	<!--Navegador-->
-	<script src="../model/js/ajaxBackupProvincias.js"></script>
-	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
-	<script src="../model/js/ajaxBuscarProvincias.js"></script>
-	<script src="../controller/js/navegador.js"></script>
-	<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
-	<script src="../model/js/ajaxEditarUsuario.js"></script>
-	<script src="../model/js/ajaxEditarPaciente.js"></script>
-	<script src="../model/js/ajaxConfirmarContraseña.js"></script>
-	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
-	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
-	
-	<!--Datos del Profesional-->
-	<script src="../model/js/ajaxBuscarPerfil.js"></script>
 
+
+
+
+	<!--Full Calendar-->
+    <script src="../controller/js/fullCalendar.js"></script>
+	<script src="../controller/fullcalendar/main.js"></script>
+	<script src="../controller/fullcalendar/locales/es.js"></script>
+	
+
+
+
+
+	
+	
+	
+	
+	
+	<!--Gestor-->
+	<script src="../model/js/ajaxGestorMostrarGrilla.js"></script>
+	
+	
+	
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+	
 	<!--Crear Solicitud-->
 	<script src="../controller/js/crearSolicitud.js"></script>
     <script src="../model/js/ajaxCrearSolicitud.js"></script>
 	
-	
-    <!--<script src="../model/js/ajaxBuscarSolicitudes.js"></script>De ser el caso traeria las solicitudes-->    
+	<!--Datos del Profesional-->
+	<script src="../model/js/ajaxBuscarPerfil.js"></script>
+
+
 </body>
 </html>
 

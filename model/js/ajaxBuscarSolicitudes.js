@@ -17,9 +17,12 @@ function buscarSolicitudes(){
                     var end = fecha + ' ' + horaHasta;
     
                     let eventos = [title, start, end];
-                    return eventos;
+                    return eventos; 
                 });
-
+                
+                //La grilla pertenece a un profesional?
+                $prof = localStorage.getItem("id_profesional");
+                        
             }if (xmlhttp.status == 401) {
                 alert("¡No se encontraron solicitudes ni turnos!");
             }

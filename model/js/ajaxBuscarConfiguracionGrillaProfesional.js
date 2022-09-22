@@ -8,13 +8,21 @@ function buscarConfGrillaProf(){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {
-                alert("Hola");
                 var data=JSON.parse(xmlhttp.responseText);
                 $duracionConsulta = data[0]["duracionConsulta"];
                 $descanso = data[0]["descanso"];
                 $rangoHorarioDiaDesde = data[0]["rangoHorarioDiaDesde"];
                 $rangoHorarioDiaHasta = data[0]["rangoHorarioDiaHasta"];
                 $diasAtencion = data[0]["diasAtencion"];
+
+                $slotDuration = $duracionConsulta;
+                $slotMinTime = $rangoHorarioDiaDesde;
+                $slotMaxTime = $rangoHorarioDiaHasta;
+
+                console.log("configuración - ok");
+
+                gestorMostrarGrilla(parametro);
+               
             }else if (xmlhttp.status == 500) {                
                 alert("¡Ocurrio un error inesperado con el correo ingresado!");
             }else{
@@ -24,4 +32,5 @@ function buscarConfGrillaProf(){
     }
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/ConfiguracionGrillaProfesional/buscarConfiguracionGrillaProfesional',true);
     xmlhttp.send(formJSON);
-}
+} 
+
