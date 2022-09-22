@@ -14,12 +14,37 @@ function buscarConfGrillaProf(){
                 $rangoHorarioDiaDesde = data[0]["rangoHorarioDiaDesde"];
                 $rangoHorarioDiaHasta = data[0]["rangoHorarioDiaHasta"];
                 $diasAtencion = data[0]["diasAtencion"];
+                
+                //Pasaje a minutos duracion consulta
+                var hora_duracionConsulta = $duracionConsulta.substring(0,2);
+                var minutos_duracionConsulta = $duracionConsulta.substring(3,5);
+                hora_duracionConsulta *= 60;
+                var duracionConsulta = hora_duracionConsulta + Number(minutos_duracionConsulta);
 
-                $slotDuration = $duracionConsulta;
+                //Pasaje a minutos descanso
+                var hora_descanso = $descanso.substring(0,2);
+                var minutos_descanso = $descanso.substring(3,5);
+                hora_descanso *= 60;
+                var descanso = hora_descanso + Number(minutos_descanso);
+
+                var duracion = duracionConsulta + descanso;
+
+                var horas = Math.floor(duracion / 60);          
+                var minutos = duracion % 60;
+
+                if (horas < 10) {
+                    horas = "0" + horas;    
+                }if (minutos < 10) {
+                    minutos = "0" + minutos;    
+                }
+    
+                duracion = horas +':'+ minutos;
+
+                console.log(duracion);
+
+                $slotDuration = duracion;
                 $slotMinTime = $rangoHorarioDiaDesde;
                 $slotMaxTime = $rangoHorarioDiaHasta;
-
-                console.log("configuración - ok");
 
                 gestorMostrarGrilla(parametro);
                

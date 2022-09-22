@@ -36,18 +36,19 @@ function gestorMostrarGrilla($nombreUsuario){
 
                 });
 
-                //Generar Horarios
-                console.log($rangoHorarioDiaDesde);
-                console.log($rangoHorarioDiaHasta);
-                console.log($duracionConsulta);
-                console.log($descanso);
-                console.log($diasAtencion);
+                //Generar Horarios Disponibles
+                
+
+                //console.log($rangoHorarioDiaDesde);
+                //console.log($rangoHorarioDiaHasta);
+                //console.log($duracionConsulta);
+                //console.log($descanso);
+                //console.log($diasAtencion);
 
                 //Armar Calendario
                 armadoFullCalendar();
-
-            }if (xmlhttp.status == 401) {
-                
+            }else {
+                alert("Ocurrio un error inesperado");
             }
         }
     }
