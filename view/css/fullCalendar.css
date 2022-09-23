@@ -132,3 +132,8 @@
     background-color: #b4b4b4;
     color: white;
 }
+
+#calendar {
+    max-width: 1100px;
+    margin: 40px auto;
+  }

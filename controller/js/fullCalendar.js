@@ -11,7 +11,11 @@ function armadoFullCalendar() {
     var calendar = new FullCalendar.Calendar(calendarEl, {
     
     locale: "es",//Idioma
-    
+    navLinks: true,
+    navLinkWeekClick: function(weekStart, jsEvent) {
+        console.log('week start', weekStart.toISOString());
+        console.log('coords', jsEvent.pageX, jsEvent.pageY);
+      },
     //Cargar Eventos - Solicitudes, Turnos
     events: $arrayTerminadoEventos,
 
