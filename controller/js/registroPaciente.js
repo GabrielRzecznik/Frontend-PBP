@@ -389,6 +389,10 @@ formulario.addEventListener('submit', (e) => {
     if (nombreValue === "" || apellidoValue === "" || fechaNacimiento === false || sexoValue === "0" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
         alert("¡Debe completar todos los campos obligatorios!");
     }
+
+    if (campos.nombre == false || campos.apellido == false || campos.fechaNacimiento == false || campos.sexo == false || campos.telefono == false || campos.provincia == false || campos.localidad == false || campos.calle == false || campos.altura == false || campos.departamento == false) {
+        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+    }
     
     if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
         //Enviar AJAX
