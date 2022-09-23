@@ -450,6 +450,9 @@ formulario.addEventListener('submit', (e) => {
         }
     }
 
+    if (campos.especialidad == false || campos.matricula == false || campos.tipoConsulta == false || campos.provinciaConsultorio == false || campos.localidadConsultorio == false || campos.calleConsultorio == false || campos.alturaConsultorio == false || campos.departamentoConsultorio == false) {
+        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+    }
     
     if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
         //Enviar AJAX
