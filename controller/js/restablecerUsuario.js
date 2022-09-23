@@ -262,6 +262,9 @@ formulario3.addEventListener('submit', (e) => {
         }
     }
     
+    if (campos3.password == false || campos3.password2 == false) {
+        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+    }
 
     if (campos3.password && (passwordValue === password2Value)) {
         //Modal confirmación
