@@ -70,13 +70,18 @@ function gestorMostrarGrilla($nombreUsuario){
                 var duracion = duracionConsulta + descanso;
 
                 $id = -1000;
+                $id_dia = 0;
 
                 $diaD = "";
                 $mesD = "";
 
-                while ((rangoHorarioDiaDesde + duracion) <= rangoHorarioDiaHasta) {
-                    //EL DÍA ES HABIL?
+                const RangoHorarioDiaDesde = rangoHorarioDiaDesde;
 
+                $fechaGenerada = "";
+
+                //Crear Horarios Disponibles Desde "HOY" a "UN MES"
+                for (let index = 0; index < 31; index++) {
+                    
                     //Calcular nombre de dia de semana
                     if (diaDisponible < 10) {
                         $diaCalcularNombreSemana = '0'+diaDisponible;
@@ -88,129 +93,144 @@ function gestorMostrarGrilla($nombreUsuario){
                     }else{
                         $mesCalcularNombreSemana = mesDisponible;
                     }
-
-                    var fechaCalcularNombreSemana = añoDisponible + "-" + $mesCalcularNombreSemana + "-" + $diaCalcularNombreSemana + " 00:00:00";
-
-                    var diaDeSemana = new Date(fechaCalcularNombreSemana).getDay();// VALOR EJEMPLO = 4
-
-                    console.log($diasAtencion);//{Lunes,Martes,Miércoles,Jueves,Viernes}
-
-                    $transformarArrayDiasAtencion = $diasAtencion;
-                    $transformarArrayDiasAtencion = $transformarArrayDiasAtencion.replace(/{/,'');
-                    $transformarArrayDiasAtencion = $transformarArrayDiasAtencion.replace(/}/,'');
                     
-                    $arrayDiasAtencion =  $transformarArrayDiasAtencion.split(','); 
-                    
-                    $arrayDiasAtencion.forEach(function(elemento) {
-                        if(elemento == "Domingo"){
-                            elemento = 0;
-                        }if(elemento == "Lunes"){
-                            elemento = 1;
-                        }if(elemento == "Martes"){
-                            elemento = 2;
-                        }if(elemento == "Miércoles"){
-                            elemento = 3;
-                        }if(elemento == "Jueves"){
-                            elemento = 4;
-                        }if(elemento == "Viernes"){
-                            elemento = 5;
-                        }if(elemento == "Sábado"){
-                            elemento = 6;
-                        }
+                    rangoHorarioDiaDesde = RangoHorarioDiaDesde;
 
-                        console.log(elemento + "<->" + diaDeSemana);
-
-                        if (elemento == diaDeSemana) {
-                            //Acá
-                            var hor = Math.floor(rangoHorarioDiaDesde / 60);          
-                            var min = rangoHorarioDiaDesde % 60;
-                        
-                            if (hor < 10) {
-                                hor = "0" + hor;    
-                            }if (min < 10) {
-                                min = "0" + min;    
-                            }       
-                            
-                            $id++;
-        
-                            var horaFinalizacion = Math.floor((rangoHorarioDiaDesde + duracion) / 60);          
-                            var minutosFinalizacion = (rangoHorarioDiaDesde + duracion) % 60;
-        
-                            if (horaFinalizacion < 10) {
-                                horaFinalizacion = "0" + horaFinalizacion;    
-                            }if (minutosFinalizacion < 10) {
-                                minutosFinalizacion = "0" + minutosFinalizacion;    
-                            }
-        
-                            var finalizacion = horaFinalizacion + ':' + minutosFinalizacion;
-        
-                            //Pasaje a minutos de finalizacion
-                            var hora_finalizacion = finalizacion.substring(0,2);
-                            var minutos_finalizacion = finalizacion.substring(3,5);
-                            hora_finalizacion *= 60;
-                            finalizacion = hora_finalizacion + Number(minutos_finalizacion);
-                
-                            finalizacion -= descanso;
-        
-                            var horaFinalizacion = Math.floor(finalizacion / 60);          
-                            var minutosFinalizacion = finalizacion % 60;
-        
-                            if (horaFinalizacion < 10) {
-                                horaFinalizacion = "0" + horaFinalizacion;    
-                            }if (minutosFinalizacion < 10) {
-                                minutosFinalizacion = "0" + minutosFinalizacion;    
-                            }
-        
-                            if (diaDisponible < 10) {
-                                $diaD = '0'+diaDisponible;
-                            }else{
-                                $diaD = diaDisponible;
-                            }
-                            if (mesDisponible < 10) {
-                                $mesD = '0'+mesDisponible;
-                            }else{
-                                $mesD = mesDisponible;
-                            }
-        
-                            var inicioHorario = añoDisponible + '-' + $mesD + '-' + $diaD + ' ' + hor + ':' + min + ':00';
-                            var finHorario = añoDisponible + '-' + $mesD + '-' + $diaD + ' ' + horaFinalizacion + ':' + minutosFinalizacion + ':00';
-        
-                            //Armado
-                            $arrayTerminadoEventos.push(
-                                {
-                                    id: $id,
-                                    title: "Horario disponible",
-                                    start: inicioHorario,
-                                    end: finHorario,
-                                    backgroundColor: "#D2E2FF",
-                                    borderColor: "73A3FA"
-                                }
-                            );
-        
-                            console.log($id);
-                            console.log("Horario disponible");
-                            console.log(inicioHorario);
-                            console.log(finHorario);
-                        }
-                    });
-
-                    
-                   /*/////////////////////////////////////////////////
-                        
+                    //Generar horarios
+                    while ((rangoHorarioDiaDesde + duracion) <= rangoHorarioDiaHasta) {
+                        //EL DÍA ES HABIL?
     
-                        *///////////////////////////////////////////
-                    rangoHorarioDiaDesde += duracion; 
+    
+                        var fechaCalcularNombreSemana = añoDisponible + "-" + $mesCalcularNombreSemana + "-" + $diaCalcularNombreSemana + " 00:00:00";
+    
+                        var diaDeSemana = new Date(fechaCalcularNombreSemana).getDay();// VALOR EJEMPLO = 4
+    
+                        $transformarArrayDiasAtencion = $diasAtencion;
+                        $transformarArrayDiasAtencion = $transformarArrayDiasAtencion.replace(/{/,'');
+                        $transformarArrayDiasAtencion = $transformarArrayDiasAtencion.replace(/}/,'');
+                        
+                        $arrayDiasAtencion =  $transformarArrayDiasAtencion.split(','); 
+                        
+                        $arrayDiasAtencion.forEach(function(elemento) {
+                            if(elemento == "Domingo"){
+                                elemento = 0;
+                            }if(elemento == "Lunes"){
+                                elemento = 1;
+                            }if(elemento == "Martes"){
+                                elemento = 2;
+                            }if(elemento == "Miércoles"){
+                                elemento = 3;
+                            }if(elemento == "Jueves"){
+                                elemento = 4;
+                            }if(elemento == "Viernes"){
+                                elemento = 5;
+                            }if(elemento == "Sábado"){
+                                elemento = 6;
+                            }
+    
+                            if (elemento == diaDeSemana) {
+                                //Acá
+                                var hor = Math.floor(rangoHorarioDiaDesde / 60);          
+                                var min = rangoHorarioDiaDesde % 60;
+                            
+                                if (hor < 10) {
+                                    hor = "0" + hor;    
+                                }if (min < 10) {
+                                    min = "0" + min;    
+                                }       
+                                
+                                $id++;
+            
+                                var horaFinalizacion = Math.floor((rangoHorarioDiaDesde + duracion) / 60);          
+                                var minutosFinalizacion = (rangoHorarioDiaDesde + duracion) % 60;
+            
+                                if (horaFinalizacion < 10) {
+                                    horaFinalizacion = "0" + horaFinalizacion;    
+                                }if (minutosFinalizacion < 10) {
+                                    minutosFinalizacion = "0" + minutosFinalizacion;    
+                                }
+            
+                                var finalizacion = horaFinalizacion + ':' + minutosFinalizacion;
+            
+                                //Pasaje a minutos de finalizacion
+                                var hora_finalizacion = finalizacion.substring(0,2);
+                                var minutos_finalizacion = finalizacion.substring(3,5);
+                                hora_finalizacion *= 60;
+                                finalizacion = hora_finalizacion + Number(minutos_finalizacion);
+                    
+                                finalizacion -= descanso;
+            
+                                var horaFinalizacion = Math.floor(finalizacion / 60);          
+                                var minutosFinalizacion = finalizacion % 60;
+            
+                                if (horaFinalizacion < 10) {
+                                    horaFinalizacion = "0" + horaFinalizacion;    
+                                }if (minutosFinalizacion < 10) {
+                                    minutosFinalizacion = "0" + minutosFinalizacion;    
+                                }
+            
+                                if (diaDisponible < 10) {
+                                    $diaD = '0'+diaDisponible;
+                                }else{
+                                    $diaD = diaDisponible;
+                                }
+                                if (mesDisponible < 10) {
+                                    $mesD = '0'+mesDisponible;
+                                }else{
+                                    $mesD = mesDisponible;
+                                }
+            
+                                var inicioHorario = añoDisponible + '-' + $mesD + '-' + $diaD + ' ' + hor + ':' + min + ':00';
+                                var finHorario = añoDisponible + '-' + $mesD + '-' + $diaD + ' ' + horaFinalizacion + ':' + minutosFinalizacion + ':00';
+            
+                                $fechaGenerada = inicioHorario.substring(0,10);
+
+                                //Armado
+                                $arrayTerminadoEventos.push(
+                                    {
+                                        id: $id,
+                                        title: "Horario disponible",
+                                        start: inicioHorario,
+                                        end: finHorario,
+                                        backgroundColor: "#D2E2FF",
+                                        borderColor: "73A3FA"
+                                    }
+                                );
+                            }
+                        });
+    
+                        
+
+                        
+                        rangoHorarioDiaDesde += duracion; 
+                    }
+                    
+                    $añoGenerado = $fechaGenerada.substring(0,4);
+                    $mesGenerado = $fechaGenerada.substring(5,7);
+                    $diaGenerado = $fechaGenerada.substring(8,10);
+
+                    var d = new Date($añoGenerado, $mesGenerado, $diaGenerado);
+                    
+                    d.setDate(d.getDate() + index);
+
+                    console.log("Objeto Date:"+d);
+    
+                    var strFecha = d.toString();
+
+                    $añoGenerado = strFecha.substring(11,15);
+                    $mesGenerado = strFecha.substring(4,7);//Transformar con switch
+                    $diaGenerado = strFecha.substring(8,10);//Terminado
+                    
+                    
+                    
+                    
+                    //Sumar un día a la fecha
+                    //diaDisponible = date3.getDate();
+                    //mesDisponible = date3.getMonth()+1;
+                    //añoDisponible = date3.getFullYear();
                 }
 
-
-
-
                 console.log($arrayTerminadoEventos);
-                //console.log($rangoHorarioDiaDesde);
-                //console.log($rangoHorarioDiaHasta);
-                //console.log($duracionConsulta);
-                //console.log($descanso);
-                //console.log($diasAtencion);
 
                 //Armar Calendario
                 armadoFullCalendar();
