@@ -59,7 +59,7 @@
                     <h7 class="titulo">Activación de Correo</h7>
                     <br>
                     <span>
-                        Hemos enviado un correo a su dirección ingresada el cual cuenta con un botón de activación, Debe cliquearlo para poder recibir posteriormente un código de verificación.
+                       Hemos enviado un correo a su dirección ingresada el cual cuenta con un botón de activación, Debe cliquearlo para poder recibir posteriormente un código de verificación.
                     </span>
                     <a href="#" class="btn btn-warning botonSubmit" name="activado" id="activado">
                         <span>Ya oprimí el botón</span>
@@ -78,7 +78,7 @@
                     <span>
                         Se ha enviado un correo electrónico de validación a su dirección ingresada con un código de 4 caracteres. Ingréselo dentro del campo código para continuar. !El mismo tiene una validez de 10 minutos!
                     </span>
-                    <br>
+                    <br><br>
                     <span class="texto">Código </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoCodigo" title="Campo Obligatorio"></i>
                     <br>
                     <input type="text" class="form-control inputs" name="codigo" id="codigo">
