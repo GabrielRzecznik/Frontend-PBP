@@ -128,7 +128,7 @@ formulario.addEventListener('submit', (e) => {
     }
     
     if (campos.nombreUsuario == false || campos.correo == false || campos.password == false || campos.password2 == false) {
-        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!.");
+        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
     }
 
     if (campos.nombreUsuario && campos.correo && campos.password && (passwordValue === password2Value)) {
@@ -202,6 +202,10 @@ formulario2.addEventListener('submit', (e) => {
     
     if (codigoValue === "") {
         alert("¡Complete el campo código!");
+    }
+
+    if (campos2.codigo == false) {
+        alert("Error al ingresar el código: ¡Formato no valido, verifique el mismos e intente nuevamente!");
     }
 
     if (campos2.codigo) {

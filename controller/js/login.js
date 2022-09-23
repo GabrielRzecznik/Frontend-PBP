@@ -84,7 +84,7 @@ formulario.addEventListener('submit', (e) => {
     }
 
     if (campos.usuario == false || campos.password == false) {
-        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!.");
+        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
     }
     
     if (campos.usuario && campos.password) {
