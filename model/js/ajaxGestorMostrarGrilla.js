@@ -205,29 +205,109 @@ function gestorMostrarGrilla($nombreUsuario){
                         rangoHorarioDiaDesde += duracion; 
                     }
                     
-                    $añoGenerado = $fechaGenerada.substring(0,4);
-                    $mesGenerado = $fechaGenerada.substring(5,7);
-                    $diaGenerado = $fechaGenerada.substring(8,10);
+                    var MyDate = new Date();
 
+                    var strMyDate = MyDate.toString();
+
+                    $añoGenerado = strMyDate.substring(11,15);
+                    $mesGenerado = strMyDate.substring(4,7);
+                    $diaGenerado = parseInt(strMyDate.substring(8,10));
+
+                    switch ($mesGenerado) {
+                        case "Jan":
+                            $mesGenerado = "1";
+                            break;
+                        case "Feb":
+                            $mesGenerado = "2";
+                            break;
+                        case "Mar":
+                            $mesGenerado = "3";
+                            break;
+                        case "Apr":
+                            $mesGenerado = "4";
+                            break;
+                        case "May":
+                            $mesGenerado = "5";
+                            break;
+                        case "Jun":
+                            $mesGenerado = "6";
+                            break;
+                        case "Jul":
+                            $mesGenerado = "7";
+                            break;
+                        case "Aug":
+                            $mesGenerado = "8";
+                            break;
+                        case "Sep":
+                            $mesGenerado = "9";
+                            break;
+                        case "Oct":
+                            $mesGenerado = "10";
+                            break;
+                        case "Nov":
+                            $mesGenerado = "11";
+                            break;
+                        case "Dec":
+                            $mesGenerado = "12";
+                            break;
+                    }
+                    
                     var d = new Date($añoGenerado, $mesGenerado, $diaGenerado);
+                    MyDate.setDate(d.getDate() + index+1);
                     
-                    d.setDate(d.getDate() + index);
-
-                    console.log("Objeto Date:"+d);
+                    var fechaActualizada = MyDate.toString();
+                    
+                    $añoGenerado = fechaActualizada.substring(11,15);
+                    $mesGenerado = fechaActualizada.substring(4,7);
+                    $diaGenerado = parseInt(fechaActualizada.substring(8,10));
+                    
+                    switch ($mesGenerado) {
+                        case "Jan":
+                            $mesGenerado = "1";
+                            break;
+                        case "Feb":
+                            $mesGenerado = "2";
+                            break;
+                        case "Mar":
+                            $mesGenerado = "3";
+                            break;
+                        case "Apr":
+                            $mesGenerado = "4";
+                            break;
+                        case "May":
+                            $mesGenerado = "5";
+                            break;
+                        case "Jun":
+                            $mesGenerado = "6";
+                            break;
+                        case "Jul":
+                            $mesGenerado = "7";
+                            break;
+                        case "Aug":
+                            $mesGenerado = "8";
+                            break;
+                        case "Sep":
+                            $mesGenerado = "9";
+                            break;
+                        case "Oct":
+                            $mesGenerado = "10";
+                            break;
+                        case "Nov":
+                            $mesGenerado = "11";
+                            break;
+                        case "Dec":
+                            $mesGenerado = "12";
+                            break;
+                    }
     
-                    var strFecha = d.toString();
+                    //var strFecha = d.toString();
 
-                    $añoGenerado = strFecha.substring(11,15);
-                    $mesGenerado = strFecha.substring(4,7);//Transformar con switch
-                    $diaGenerado = strFecha.substring(8,10);//Terminado
-                    
-                    
-                    
+                   
                     
                     //Sumar un día a la fecha
-                    //diaDisponible = date3.getDate();
-                    //mesDisponible = date3.getMonth()+1;
-                    //añoDisponible = date3.getFullYear();
+                    diaDisponible = $diaGenerado;
+                    mesDisponible = $mesGenerado;
+                    añoDisponible = $añoGenerado;
                 }
 
                 console.log($arrayTerminadoEventos);
