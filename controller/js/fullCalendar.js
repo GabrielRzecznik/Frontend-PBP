@@ -95,7 +95,7 @@ function armadoFullCalendar() {
             
                     var h = new Date();
                     var hora = h.getHours();
-                    var hora = (hora-3)
+                    var hora = (hora+3);//Error resuelto?
                     
                     if(hora < 10){
                         hora = "0" + hora;
@@ -124,6 +124,7 @@ function armadoFullCalendar() {
                         //console.log("tres Horas Antes: "+tresHorasAntes);
                 
                         if (fecha == fechaActual2) {
+                            console.log(tresHorasAntes + " <= " + horaDesde);
                             if(tresHorasAntes <= horaDesde){
                                 ejecutarModalFormularioSolicitud();
                             }else{

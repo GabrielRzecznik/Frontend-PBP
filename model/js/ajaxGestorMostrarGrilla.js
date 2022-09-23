@@ -80,7 +80,7 @@ function gestorMostrarGrilla($nombreUsuario){
                 $fechaGenerada = "";
 
                 //Crear Horarios Disponibles Desde "HOY" a "UN MES"
-                for (let index = 0; index < 31; index++) {
+                for (let index = 0; index < 62; index++) {
                     
                     //Calcular nombre de dia de semana
                     if (diaDisponible < 10) {
