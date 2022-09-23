@@ -82,6 +82,10 @@ formulario.addEventListener('submit', (e) => {
     if (usuarioValue === "" || contraseñaValue === "") {
         alert("¡Debe completar todos los campos!");
     }
+
+    if (campos.usuario == false || campos.password == false) {
+        alert("¡Revice los campos ingresados!");
+    }
     
     if (campos.usuario && campos.password) {
         //Enviar AJAX
