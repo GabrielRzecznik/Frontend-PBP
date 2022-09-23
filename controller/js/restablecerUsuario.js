@@ -117,6 +117,10 @@ formulario2.addEventListener('submit', (e) => {
         alert("¡Complete el campo código!");
     }
     
+    if (campos2.codigo == false) {
+        alert("Error al ingresar el código: ¡Formato no valido, verifique el mismos e intente nuevamente!");
+    }
+
     if (campos2.codigo) {
         //Enviar AJAX
         if (codigoGenerado == codigoValue) {
