@@ -15,6 +15,12 @@ function armadoFullCalendar() {
     //Cargar Eventos - Solicitudes, Turnos
     events: $arrayTerminadoEventos,
 
+    dayMaxEventRows: true, // for all non-TimeGrid views
+    views: {
+        timeGrid: {
+        dayMaxEventRows: 3 // adjust to 6 only for timeGridWeek/timeGridDay
+        }
+    },
     slotLabelFormat: {
         hour: '2-digit',
         minute: '2-digit',

@@ -120,3 +120,15 @@
     display: none;
     margin: 0 auto;
 }
+
+.fc-daygrid-more-link{
+    text-decoration: none;
+    color: white;
+    background-color: #8d8d8d;
+    border-radius: 5px;
+}
+
+.fc-daygrid-more-link:hover{
+    background-color: #b4b4b4;
+    color: white;
+}

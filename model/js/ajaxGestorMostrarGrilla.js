@@ -193,7 +193,7 @@ function gestorMostrarGrilla($nombreUsuario){
                                         start: inicioHorario,
                                         end: finHorario,
                                         backgroundColor: "#D2E2FF",
-                                        borderColor: "73A3FA"
+                                        borderColor: "#73A3FA"
                                     }
                                 );
                             }
