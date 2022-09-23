@@ -131,7 +131,7 @@ formulario.addEventListener('submit', (e) => {
         alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!.");
     }
 
-    if (campos.correo && campos.password && (passwordValue === password2Value)) {
+    if (campos.nombreUsuario && campos.correo && campos.password && (passwordValue === password2Value)) {
         //Enviar AJAX
         document.getElementById('tituloBuscar').style.display = 'none';
         document.getElementById('cargandoBuscar').style.display = 'block';
