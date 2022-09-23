@@ -26,7 +26,9 @@
 	<div class="container">
 		<div class="card text-dark bg-light contenedorFullCalendar">
 			<div class="card-body">
-				<div id='calendar'></div>
+				<div id='calendar'>
+				
+				</div>
 			</div>
 		</div>
 	</div>
