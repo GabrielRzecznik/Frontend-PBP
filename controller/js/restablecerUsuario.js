@@ -55,6 +55,10 @@ formulario.addEventListener('submit', (e) => {
     if (correoValue === "") {
         alert("¡Complete el campo correo!");
     }
+
+    if (campos.correo == false) {
+        alert("Error al ingresar el correo: ¡Formato no valido, verifique el mismos e intente nuevamente!");
+    }
     
     if (campos.correo) {
         //Cargando
