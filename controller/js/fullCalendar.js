@@ -95,7 +95,7 @@ function armadoFullCalendar() {
             
                     var h = new Date();
                     var hora = h.getHours();
-                    var hora = (hora+3);//Error resuelto?
+                    var hora = (hora+3);
                     
                     if(hora < 10){
                         hora = "0" + hora;
