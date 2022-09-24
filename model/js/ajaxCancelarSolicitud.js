@@ -16,6 +16,6 @@ function cancelarSolicitud(id_solicitud){
             }
         }
     }
-    xmlhttp.open("UPDATE",'https://backend-pbp.herokuapp.com/Solicitudes/eliminarSolicitud',true);
+    xmlhttp.open("UPDATE",'https://backend-pbp.herokuapp.com/Solicitudes/cancelarSolicitud',true);
     xmlhttp.send(formJSON);
 }
