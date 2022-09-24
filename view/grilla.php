@@ -102,15 +102,34 @@
            	</div>
 		</div>
 	</form>
+
+	<!--Cancelar Solicitud-->
+	<div class="modal fade" id="ventana-modal-cancelar-solicitud" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Cancelar solicitud</h5>
+					<button id="close-cancelar-solicitud" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>                    
+				<div class="modal-body">
+					¿Esta seguro que quiere cancelar esta solicitud?<br>
+					Una vez cancelada la solicitud se le notificara al profesional!
+				</div>
+				<div class="modal-footer">
+					<span class="btn btn-secondary" id="cancelar-cancelar-solicitud">Cancelar</span>
+					<span class="btn btn-warning botonEnviarSolicitud" data-dismiss="modal" id="cancelar-solicitud">Confirmar</span>
+				</div>             
+			</div>
+		</div>
+	</div>
+
 	<!--Bootstrap-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	
-	
-
-
 	<!--Parametro-->
 	<script src="../controller/js/parametroGrilla.js"></script>
-
 
 	<!--Navegador-->
 	<script src="../model/js/ajaxBackupProvincias.js"></script>
@@ -124,60 +143,19 @@
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
 
-
-
 	<!--Configuracion Grilla Profesional-->
 	<script src="../model/js/ajaxBuscarConfiguracionGrillaProfesional.js"></script>
 
 	<!--Grilla-->
 	<script src="../controller/js/grilla.js"></script>
 	
-
-
-
-
 	<!--Full Calendar-->
     <script src="../controller/js/fullCalendar.js"></script>
 	<script src="../controller/fullcalendar/main.js"></script>
 	<script src="../controller/fullcalendar/locales/es.js"></script>
 	
-
-
-
-
-	
-	
-	
-	
-	
 	<!--Gestor-->
 	<script src="../model/js/ajaxGestorMostrarGrilla.js"></script>
-	
-	
-	
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-		
-
-
-
-
-
-
-
-
-
-
-
-
 	
 	<!--Crear Solicitud-->
 	<script src="../controller/js/crearSolicitud.js"></script>
@@ -185,7 +163,6 @@
 	
 	<!--Datos del Profesional-->
 	<script src="../model/js/ajaxBuscarPerfil.js"></script>
-
 
 </body>
 </html>
