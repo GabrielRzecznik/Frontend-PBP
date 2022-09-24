@@ -1,4 +1,4 @@
-function ModalCancelarSolicitud($id_solicitud) {
+function ModalCancelarSolicitud(id_solicitud) {
     //Abrir Modal - Cancelar Solicitud
     var myModal2 = new bootstrap.Modal(
       document.getElementById("ventana-modal-cancelar-solicitud")
@@ -14,6 +14,6 @@ function ModalCancelarSolicitud($id_solicitud) {
     });
      
     document.getElementById("cancelar-solicitud").addEventListener("click", function () {
-        cancelarSolicitud($id_solicitud);
+        cancelarSolicitud(id_solicitud);
     });
 }
