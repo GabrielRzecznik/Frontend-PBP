@@ -163,7 +163,7 @@
 	
 	<!--Cancelar Solicitud-->
 	<script src="../controller/js/cancelarSolicitud.js"></script>
-    <!--<script src="../model/js/ajaxCancelarSolicitud.js"></script>-->
+    <script src="../model/js/ajaxCancelarSolicitud.js"></script>
 
 	<!--Datos del Profesional-->
 	<script src="../model/js/ajaxBuscarPerfil.js"></script>
