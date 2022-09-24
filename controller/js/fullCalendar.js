@@ -37,9 +37,6 @@ function armadoFullCalendar() {
         right: "dayGridMonth,timeGridWeek,timeGridDay",
     },
     eventClick: function (info) {
-        console.log(info.view.type);
-        console.log(info.event._def.title);
-        
         if (info.view.type != "dayGridMonth") {//Si no es clickeado en "MES"
             switch (info.event._def.title) {
                 case "Horario disponible":
@@ -124,7 +121,6 @@ function armadoFullCalendar() {
                         //console.log("tres Horas Antes: "+tresHorasAntes);
                 
                         if (fecha == fechaActual2) {
-                            console.log(tresHorasAntes + " <= " + horaDesde);
                             if(tresHorasAntes <= horaDesde){
                                 ejecutarModalFormularioSolicitud();
                             }else{
@@ -148,7 +144,8 @@ function armadoFullCalendar() {
                     }
                     break;
                 case "Solicitud enviada":
-                
+                    var id_solicitud = String(info.event._def.publicId);
+                    ModalCancelarSolicitud(id_solicitud);
                     break;
                 default:
                     break;
