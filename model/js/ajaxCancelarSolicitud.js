@@ -1,5 +1,6 @@
 function cancelarSolicitud(id_solicitud){
     var formJSON=JSON.stringify({"id_solicitud":id_solicitud});
+    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -16,6 +17,6 @@ function cancelarSolicitud(id_solicitud){
             }
         }
     }
-    xmlhttp.open("UPDATE",'https://backend-pbp.herokuapp.com/Solicitudes/cancelarSolicitud',true);
+    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Solicitudes/cancelarSolicitud',true);
     xmlhttp.send(formJSON);
 }
