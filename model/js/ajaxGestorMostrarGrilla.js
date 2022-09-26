@@ -16,7 +16,7 @@ function gestorMostrarGrilla($nombreUsuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
-                
+
                 $arrayTerminadoEventos = [];
 
                 $arrayEventos = data;
@@ -45,6 +45,7 @@ function gestorMostrarGrilla($nombreUsuario){
 
                 });
 
+                var eventosEnBaseDeDatos = $arrayEventos;
                 
                 if (parametro != localStorage.getItem("nombreUsuario")) {
                     //Generar Horarios Disponibles
@@ -87,7 +88,11 @@ function gestorMostrarGrilla($nombreUsuario){
     
                     //Crear Horarios Disponibles Desde "HOY" a "UN MES"
                     for (let index = 0; index < 62; index++) {
-                        
+                        if(eventosEnBaseDeDatos[index]){//Reemplazar por otro bucle
+                            console.log(eventosEnBaseDeDatos[index]);
+                            //Crear if, existe un horario que cohincida con un evento ya creado?
+                        }
+                        //console.log(eventosEnBaseDeDatos);
                         //Calcular nombre de dia de semana
                         if (diaDisponible < 10) {
                             $diaCalcularNombreSemana = '0'+diaDisponible;
