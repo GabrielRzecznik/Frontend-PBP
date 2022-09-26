@@ -8,6 +8,8 @@ function gestorMostrarGrilla($nombreUsuario){
     formData.append("nombreUsuario", $nombreUsuario);
     formData.append("id_paciente", localStorage.getItem("id_paciente"));
     var formJSON = JSON.stringify(Object.fromEntries(formData));
+    console.log(formJSON);
+
 
     xmlhttp = new XMLHttpRequest();
  
