@@ -223,6 +223,12 @@ formularioEditar.addEventListener('submit', (e) => {
             }else{
                 buscarUsuarioExistente(correo, nombreUsuarioValue);
             }
+        }else{
+            document.getElementById('iconoNombreUsuario').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoNombreUsuario').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoPassword').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoPassword').classList.add('signo','bi-check-circle-fill','noValidado');
+            alert("¡No se registraron cambios!");
         }
     }
 
@@ -1140,6 +1146,10 @@ formularioEditarPaciente.addEventListener('submit', (e) => {
     if (nombreValue === "" || apellidoValue === "" || fechaNacimiento === false || sexoPacienteValue === "0" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
         alert("¡Debe completar todos los campos obligatorios!");
     }
+
+    if(camposEditarPaciente.nombre == false && camposEditarPaciente.apellido == false && camposEditarPaciente.fechaNacimiento == false && camposEditarPaciente.sexoPaciente == false && camposEditarPaciente.telefono == false && camposEditarPaciente.provincia == false && camposEditarPaciente.localidad == false && camposEditarPaciente.calle == false && camposEditarPaciente.altura == false && camposEditarPaciente.departamento == false && nombreValue !== "" || apellidoValue !== "" || fechaNacimiento !== false || sexoPacienteValue !== "0" || telefonoValue !== "" || provinciaValue !== "0" || localidadValue !== "" || calleValue !== "" || alturaValue !== ""){
+        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+    }
     
     if (camposEditarPaciente.nombre && camposEditarPaciente.apellido && camposEditarPaciente.fechaNacimiento && camposEditarPaciente.sexoPaciente && camposEditarPaciente.telefono && camposEditarPaciente.provincia && camposEditarPaciente.localidad && camposEditarPaciente.calle && camposEditarPaciente.altura && camposEditarPaciente.departamento) {
         if (nombreValue != localStorage.getItem("nombre") || apellidoValue != localStorage.getItem("apellido") || fechaNacimientoValue != localStorage.getItem("fechaNacimiento") || sexoPacienteValue != localStorage.getItem("sexo") || telefonoValue != localStorage.getItem("telefono") || provinciaValue != localStorage.getItem("provincia") || localidadValue != localStorage.getItem("localidad") || calleValue != localStorage.getItem("calle") || alturaValue != localStorage.getItem("altura") || departamentoValue != localStorage.getItem("departamento")) {
@@ -1147,6 +1157,28 @@ formularioEditarPaciente.addEventListener('submit', (e) => {
             document.getElementById('textoEditarPaciente').style.display = 'none';
             document.getElementById('cargandoEditarPaciente').style.display = 'block';
             APP.doSearch();
+        }else{
+            document.getElementById('iconoNombre').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoNombre').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoApellido').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoApellido').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoFechaNacimiento').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoFechaNacimiento').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoSexoPaciente').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoSexoPaciente').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoTelefono').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoTelefono').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoProvincia').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoProvincia').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoLocalidad').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoLocalidad').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoCalle').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoCalle').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoAltura').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoAltura').classList.add('signo','bi-check-circle-fill','noValidado');
+            document.getElementById('iconoDepartamento').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            document.getElementById('iconoDepartamento').classList.add('signo','bi-check-circle-fill','noValidado');
+            alert("¡No se registraron cambios!");
         }
     }
 
