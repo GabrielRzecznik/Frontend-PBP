@@ -4,8 +4,11 @@ let mesDisponible = date3.getMonth()+1;
 let añoDisponible = date3.getFullYear();
 
 function gestorMostrarGrilla($nombreUsuario){
-    //var id_paciente = localStorage["id_usuario"];//Cambiar id usuario x paciente
-    //var formJSON=JSON.stringify({"id_paciente":id_paciente});
+    var formData = new FormData();
+    formData.append("nombreUsuario", $nombreUsuario);
+    formData.append("id_paciente", localStorage.getItem("id_paciente"));
+    var formJSON = JSON.stringify(Object.fromEntries(formData));
+
     xmlhttp = new XMLHttpRequest();
  
     xmlhttp.onreadystatechange = function () {
@@ -320,7 +323,7 @@ function gestorMostrarGrilla($nombreUsuario){
         }
     }
     //Crear nueva consulta, la cual tenga relacion con SOLICITUDES, TURNOS, HORARIOS
-    xmlhttp.open("GET",'https://backend-pbp.herokuapp.com/Pacientes/buscarEventos/'+$nombreUsuario,false);
-    xmlhttp.send();
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Pacientes/buscarEventos',false);
+    xmlhttp.send(formJSON);
 }
 
