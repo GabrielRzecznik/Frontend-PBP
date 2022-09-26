@@ -10,9 +10,10 @@ let con = document.getElementById('con');
 function buscarProfesionales(formulario, $valorUbicacion){
     var formData= new FormData(formulario);
     formData.delete('ubicacion');
+    
     //¿Es profesional?
     $esProf = localStorage.getItem("id_profesional");
-    if ($esProf != null) {
+    if ($esProf == null) {
         formData.append("id_profesional", 0);
     }else{
         formData.append("id_profesional", localStorage.getItem("id_profesional"));
@@ -230,6 +231,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 }
             }
         }
+        console.log(formJSON);
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Profesionales/buscarProfesionales',true);
         xmlhttp.send(formJSON);
     }
