@@ -272,6 +272,10 @@ formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
     if (passwordValidarValue === "") {
         alert("¡Debe completar el campo contraseña actual!");
     }
+
+    if(campoValidarContraseña.passwordValidar == false && passwordValidarValue !== ""){
+        alert("Error al ingresar la contraseña actual: ¡Formato no valido, verifique el mismo e intente nuevamente!");
+    }
     
     if (campoValidarContraseña.passwordValidar) {
         //Enviar AJAX
@@ -332,6 +336,10 @@ formDeshabilitarUsuarioPreValidacion.addEventListener('submit', (e) => {
         alert("¡Debe completar el campo contraseña actual!");
     }
     
+    if(campoValidarContraseñaDeshabilitar.passwordValidar == false && passwordValidarDeshabilitar !== ""){
+        alert("Error al ingresar la contraseña actual: ¡Formato no valido, verifique el mismo e intente nuevamente!");
+    }
+
     if (campoValidarContraseñaDeshabilitar.passwordValidarDeshabilitar) {
         //Enviar AJAX
         document.getElementById('cargandoPreValidacionDeshabilitar').style.display = 'block';
