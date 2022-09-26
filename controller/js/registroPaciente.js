@@ -390,7 +390,7 @@ formulario.addEventListener('submit', (e) => {
         alert("¡Debe completar todos los campos obligatorios!");
     }
 
-    if (campos.nombre == false || campos.apellido == false || campos.fechaNacimiento == false || campos.sexo == false || campos.telefono == false || campos.provincia == false || campos.localidad == false || campos.calle == false || campos.altura == false || campos.departamento == false) {
+    if ((campos.nombre == false && nombreValue !== "") || (campos.apellido == false && apellidoValue !== "") || (campos.fechaNacimiento == false) || (campos.sexo == false && sexoValue !== "") || (campos.telefono == false && telefonoValue !== "") || (campos.provincia == false && provinciaValue !== "") || (campos.localidad == false && localidadValue !== "") || (campos.calle == false && calleValue !== "") || (campos.altura == false && alturaValue !== "") || campos.departamento == false) {
         alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
     }
     

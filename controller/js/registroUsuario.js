@@ -127,7 +127,7 @@ formulario.addEventListener('submit', (e) => {
         alert("¡Las contraseñas no coinciden!")
     }
     
-    if (campos.nombreUsuario == false || campos.correo == false || campos.password == false || campos.password2 == false) {
+    if ((campos.nombreUsuario == false && nombreUsuarioValue !== "") || (campos.correo == false && correoValue !== "") || (campos.password == false && passwordValue !== "") || (campos.password2 == false && password2Value === "")) {
         alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
     }
 
@@ -204,7 +204,7 @@ formulario2.addEventListener('submit', (e) => {
         alert("¡Complete el campo código!");
     }
 
-    if (campos2.codigo == false) {
+    if (campos2.codigo == false && codigoValue !== "") {
         alert("Error al ingresar el código: ¡Formato no valido, verifique el mismos e intente nuevamente!");
     }
 
