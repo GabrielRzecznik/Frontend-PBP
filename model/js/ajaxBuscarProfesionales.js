@@ -13,7 +13,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
     
     //¿Es profesional?
     $esProf = localStorage.getItem("id_profesional");
-    if ($esProf == null) {
+    if ($esProf == "") {
         formData.append("id_profesional", 0);
     }else{
         formData.append("id_profesional", localStorage.getItem("id_profesional"));
