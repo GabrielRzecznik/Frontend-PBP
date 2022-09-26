@@ -208,7 +208,7 @@ formularioEditar.addEventListener('submit', (e) => {
         alert("¡Debe completar todos los campos!");
     }
 
-    if (camposEditar.nombreUsuario == false && nombreUsuarioValue !== "" || camposEditar.password == false && contraseñaValue !== "") {
+    if ((camposEditar.nombreUsuario == false && nombreUsuarioValue !== "") || (camposEditar.password == false && contraseñaValue !== "")) {
         alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
     }
     
@@ -1147,7 +1147,7 @@ formularioEditarPaciente.addEventListener('submit', (e) => {
         alert("¡Debe completar todos los campos obligatorios!");
     }
 
-    if(camposEditarPaciente.nombre == false && camposEditarPaciente.apellido == false && camposEditarPaciente.fechaNacimiento == false && camposEditarPaciente.sexoPaciente == false && camposEditarPaciente.telefono == false && camposEditarPaciente.provincia == false && camposEditarPaciente.localidad == false && camposEditarPaciente.calle == false && camposEditarPaciente.altura == false && camposEditarPaciente.departamento == false && nombreValue !== "" || apellidoValue !== "" || fechaNacimiento !== false || sexoPacienteValue !== "0" || telefonoValue !== "" || provinciaValue !== "0" || localidadValue !== "" || calleValue !== "" || alturaValue !== ""){
+    if((camposEditarPaciente.nombre == false && nombreValue !== "") || (camposEditarPaciente.apellido == false && apellidoValue !== "") || (camposEditarPaciente.fechaNacimiento == false) || (camposEditarPaciente.sexoPaciente == false && sexoPacienteValue !== "0") || (camposEditarPaciente.telefono == false && telefonoValue !== "") || (camposEditarPaciente.provincia == false && provinciaValue !== "0") || (camposEditarPaciente.localidad == false && localidadValue !== "") || (camposEditarPaciente.calle == false && calleValue !== "") || (camposEditarPaciente.altura == false && alturaValue !== "") || (camposEditarPaciente.departamento == false)){
         alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
     }
     

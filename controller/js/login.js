@@ -83,7 +83,7 @@ formulario.addEventListener('submit', (e) => {
         alert("¡Debe completar todos los campos!");
     }
 
-    if (campos.usuario == false || campos.password == false) {
+    if ((campos.usuario == false && usuarioValue !== "") || (campos.password == false && contraseñaValue !== "")) {
         alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
     }
     
