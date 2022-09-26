@@ -336,7 +336,7 @@ formDeshabilitarUsuarioPreValidacion.addEventListener('submit', (e) => {
         alert("¡Debe completar el campo contraseña actual!");
     }
     
-    if(campoValidarContraseñaDeshabilitar.passwordValidar == false && passwordValidarDeshabilitar !== ""){
+    if(campoValidarContraseñaDeshabilitar.passwordValidarDeshabilitar == false && passwordValidarDeshabilitarValue !== ""){
         alert("Error al ingresar la contraseña actual: ¡Formato no valido, verifique el mismo e intente nuevamente!");
     }
 
