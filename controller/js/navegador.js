@@ -207,6 +207,10 @@ formularioEditar.addEventListener('submit', (e) => {
     if (nombreUsuarioValue === "" || contraseñaValue === "") {
         alert("¡Debe completar todos los campos!");
     }
+
+    if (camposEditar.nombreUsuario == false && nombreUsuarioValue !== "" || camposEditar.password == false && contraseñaValue !== "") {
+        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+    }
     
     if (camposEditar.nombreUsuario && camposEditar.password) {
         if (nombreUsuarioValue != localStorage.getItem("nombreUsuario") || contraseñaValue !=  passwordValidar.value.trim()) {   
