@@ -8,14 +8,15 @@ function buscarConfGrillaProf(){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {
-                if (parametro != localStorage.getItem("nombreUsuario")) {            
+                if (localStorage.getItem("id_profesional") != "") {//parametro != localStorage.getItem("nombreUsuario")      
                     var data=JSON.parse(xmlhttp.responseText);
                     $duracionConsulta = data[0]["duracionConsulta"];
                     $descanso = data[0]["descanso"];
                     $rangoHorarioDiaDesde = data[0]["rangoHorarioDiaDesde"];
                     $rangoHorarioDiaHasta = data[0]["rangoHorarioDiaHasta"];
                     $diasAtencion = data[0]["diasAtencion"];
-                    
+                    $id_prof = data[0]["id_prof"];
+
                     //Pasaje a minutos duracion consulta
                     var hora_duracionConsulta = $duracionConsulta.substring(0,2);
                     var minutos_duracionConsulta = $duracionConsulta.substring(3,5);

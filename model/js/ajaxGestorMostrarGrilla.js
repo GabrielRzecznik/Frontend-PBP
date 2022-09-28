@@ -8,7 +8,6 @@ function gestorMostrarGrilla($nombreUsuario){
     formData.append("nombreUsuario", $nombreUsuario);
     formData.append("id_paciente", localStorage.getItem("id_paciente"));
     var formJSON = JSON.stringify(Object.fromEntries(formData));
-    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
  
@@ -47,7 +46,7 @@ function gestorMostrarGrilla($nombreUsuario){
 
                 var eventosEnBaseDeDatos = $arrayEventos;
                 
-                if (parametro != localStorage.getItem("nombreUsuario")) {
+                if (localStorage.getItem("id_profesional") != "") {//parametro != localStorage.getItem("nombreUsuario")
                     //Generar Horarios Disponibles
     
                     //Pasaje a Minutos Rango Horario Dia Desde
@@ -85,14 +84,9 @@ function gestorMostrarGrilla($nombreUsuario){
                     const RangoHorarioDiaDesde = rangoHorarioDiaDesde;
     
                     $fechaGenerada = "";
-    
+                        
                     //Crear Horarios Disponibles Desde "HOY" a "UN MES"
                     for (let index = 0; index < 62; index++) {
-                        if(eventosEnBaseDeDatos[index]){//Reemplazar por otro bucle
-                            console.log(eventosEnBaseDeDatos[index]);
-                            //Crear if, existe un horario que cohincida con un evento ya creado?
-                        }
-                        //console.log(eventosEnBaseDeDatos);
                         //Calcular nombre de dia de semana
                         if (diaDisponible < 10) {
                             $diaCalcularNombreSemana = '0'+diaDisponible;
@@ -110,7 +104,6 @@ function gestorMostrarGrilla($nombreUsuario){
                         //Generar horarios
                         while ((rangoHorarioDiaDesde + duracion) <= rangoHorarioDiaHasta) {
                             //EL DÍA ES HABIL?
-        
         
                             var fechaCalcularNombreSemana = añoDisponible + "-" + $mesCalcularNombreSemana + "-" + $diaCalcularNombreSemana + " 00:00:00";
         
@@ -196,23 +189,34 @@ function gestorMostrarGrilla($nombreUsuario){
                 
                                     $fechaGenerada = inicioHorario.substring(0,10);
     
-                                    //Armado
-                                    $arrayTerminadoEventos.push(
-                                        {
-                                            id: $id,
-                                            title: "Horario disponible",
-                                            start: inicioHorario,
-                                            end: finHorario,
-                                            backgroundColor: "#D2E2FF",
-                                            borderColor: "#73A3FA"
+                                    $crearHorarioDisponible = true;
+
+                                    //Hay algun evento superpuesto?
+                                    eventosEnBaseDeDatos.forEach(function(elemento) {
+                                        $hds = elemento.horaDesdeSolicitud;
+                                        $hhs = elemento.horaHastaSolicitud;
+                                       
+                                        if ((inicioHorario >= $hds) && (inicioHorario <= $hhs) || (finHorario >= $hds) && (finHorario <= $hhs)) {
+                                            $crearHorarioDisponible = false; 
                                         }
-                                    );
+                                    });
+
+                                    if ($crearHorarioDisponible) {
+                                        //Armado
+                                        $arrayTerminadoEventos.push(
+                                            {
+                                                id: $id,
+                                                title: "Horario disponible",
+                                                start: inicioHorario,
+                                                end: finHorario,
+                                                backgroundColor: "#D2E2FF",
+                                                borderColor: "#73A3FA"
+                                            }
+                                        );
+                                    }
+
                                 }
-                            });
-        
-                            
-    
-                            
+                            });                        
                             rangoHorarioDiaDesde += duracion; 
                         }
                         
