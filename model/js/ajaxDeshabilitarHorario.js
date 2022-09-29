@@ -1,8 +1,8 @@
 function deshabilitarHorario(id_proHorario, infoDesdeHorario, infoHastaHorario){
     var formData= new FormData();
     formData.append("id_proHorario", id_proHorario);
-    formData.append("infoDesdeHorario", infoDesdeHorario);
-    formData.append("infoHastaHorario", infoHastaHorario);
+    formData.append("horarioDesde", infoDesdeHorario);
+    formData.append("horarioHasta", infoHastaHorario);
     var formJSON = JSON.stringify(Object.fromEntries(formData));
     
     console.log(formJSON);
