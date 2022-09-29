@@ -130,7 +130,7 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Deshabilitar Horario</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Deshabilitar horario</h5>
 					<button id="close-cancelar-horario" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -142,6 +142,28 @@
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-cancelar-horario">Atrás</span>
 					<span class="btn btn-warning botonEnviarHorario" data-dismiss="modal" id="cancelar-horario">Confirmar</span>
+				</div>             
+			</div>
+		</div>
+	</div>
+
+	<!--Responder Solicitud-->
+	<div class="modal fade" id="ventana-modal-responder-solicitud" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Deshabilitar horario</h5>
+					<button id="close-responder-solicitud" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>                    
+				<div class="modal-body">
+					¿Esta seguro que quiere deshabilitar este horario?<br>
+					¡Podra cancelar esta acción cuando usted quiera!
+				</div>
+				<div class="modal-footer">
+					<span class="btn btn-secondary" id="cancelar-responder-solicitud">Atrás</span>
+					<span class="btn btn-warning botonEnviarHorario" data-dismiss="modal" id="cancelar-responder-solicitud">Confirmar</span>
 				</div>             
 			</div>
 		</div>

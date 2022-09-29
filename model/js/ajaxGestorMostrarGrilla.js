@@ -16,7 +16,8 @@ function gestorMostrarGrilla($nombreUsuario){
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
 
-                //console.log(data);
+                //console.log(data[2]["id_pacSolicitud"]);
+                //console.log(data[2]["id_proSolicitud"]);
 
                 $arrayTerminadoEventos = [];
 
@@ -27,23 +28,38 @@ function gestorMostrarGrilla($nombreUsuario){
                 $color = '';
                 $borde = '';
                 $arrayEventos.forEach(function(eventos) {
-                    //Color Solicitud enviada
-                    if (eventos["descripcion"] == "Solicitud enviada") {
+                    //Armado Solicitud enviada
+                    if (eventos["descripcion"] == "Solicitud enviada" && eventos["id_pacSolicitud"] == localStorage.getItem("id_paciente")) {
                         $color = '#bddbb0';
                         $borde = '#A3C197';
+                        
+                        $arrayTerminadoEventos.push(
+                            {
+                                id: eventos["id_solicitud"],
+                                title: eventos["descripcion"],
+                                start: eventos["horaDesdeSolicitud"],
+                                end: eventos["horaHastaSolicitud"],
+                                backgroundColor: $color,
+                                borderColor: $borde
+                            }
+                        );
                     }
-                    //Armado
-                    $arrayTerminadoEventos.push(
-                        {
-                            id: eventos["id_solicitud"],
-                            title: eventos["descripcion"],
-                            start: eventos["horaDesdeSolicitud"],
-                            end: eventos["horaHastaSolicitud"],
-                            backgroundColor: $color,
-                            borderColor: $borde
-                        }
-                    );
-
+                    //Armado Solicitud recibido
+                    if (eventos["descripcion"] == "Solicitud enviada" && eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente")) {
+                        $color = '#87b972';
+                        $borde = '#6aa84f';
+                        
+                        $arrayTerminadoEventos.push(
+                            {
+                                id: eventos["id_solicitud"],
+                                title: "Solicitud recibida",
+                                start: eventos["horaDesdeSolicitud"],
+                                end: eventos["horaHastaSolicitud"],
+                                backgroundColor: $color,
+                                borderColor: $borde
+                            }
+                        );
+                    }
                 });
 
                 var eventosEnBaseDeDatos = $arrayEventos;
