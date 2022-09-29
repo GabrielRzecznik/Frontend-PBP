@@ -140,6 +140,11 @@ function armadoFullCalendar() {
                         var añoDesde = infoDesdeHorario.substring(11, 15);
                         var añoHasta = infoHastaHorario.substring(11, 15);
                         
+                        var horaDesde = infoDesdeHorario.substring(16, 24);
+                        var horaHasta = infoHastaHorario.substring(16, 24);
+                        
+                        
+                        /*
                         var hd = new Date();
                         var horaDesde = hd.getHours();
                         
@@ -163,9 +168,10 @@ function armadoFullCalendar() {
                         if(minutosHasta < 10){
                             minutosHasta = "0" + minutosHasta;
                         }
+                        */
 
-                        var infoDesdeHorario = añoDesde+"-"+mesDesde+"-"+diaDesde+" "+horaDesde+":"+minutosDesde+":00";
-                        var infoHastaHorario = añoHasta+"-"+mesHasta+"-"+diaHasta+" "+horaHasta+":"+minutosHasta+":00";
+                        var infoDesdeHorario = añoDesde+"-"+mesDesde+"-"+diaDesde+" "+horaDesde;
+                        var infoHastaHorario = añoHasta+"-"+mesHasta+"-"+diaHasta+" "+horaHasta;
                         
                         ModalCancelarHorario(profesional, infoDesdeHorario, infoHastaHorario);
                     }else{
