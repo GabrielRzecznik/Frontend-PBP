@@ -44,8 +44,9 @@ function armadoFullCalendar() {
                         //DESHABILITAR HORARIO
                         var infoDesdeHorario = String(info.event.start);
                         var infoHastaHorario = String(info.event.end);
+                        var profesional = localStorage.getItem("id_profesional");
 
-                        //deshabilitarHorario(infoDesdeHorario, infoHastaHorario);
+                        ModalCancelarHorario(profesional, infoDesdeHorario, infoHastaHorario);
                     }else{
                         //CREAR SOLICITUD
                         var infoDesde = String(info.event.start);

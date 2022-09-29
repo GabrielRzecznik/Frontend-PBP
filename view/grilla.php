@@ -115,11 +115,33 @@
 				</div>                    
 				<div class="modal-body">
 					¿Esta seguro que quiere cancelar esta solicitud?<br>
-					Una vez cancelada la solicitud se le notificara al profesional!
+					!Una vez cancelada la solicitud se le notificara al profesional!
 				</div>
 				<div class="modal-footer">
-					<span class="btn btn-secondary" id="cancelar-cancelar-solicitud">Cancelar</span>
+					<span class="btn btn-secondary" id="cancelar-cancelar-solicitud">Atrás</span>
 					<span class="btn btn-warning botonEnviarSolicitud" data-dismiss="modal" id="cancelar-solicitud">Confirmar</span>
+				</div>             
+			</div>
+		</div>
+	</div>
+
+	<!--Cancelar Horario Disponible-->
+	<div class="modal fade" id="ventana-modal-cancelar-horario" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Deshabilitar Horario</h5>
+					<button id="close-cancelar-horario" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>                    
+				<div class="modal-body">
+					¿Esta seguro que quiere deshabilitar este horario?<br>
+					¡Podra cancelar esta acción cuando usted quiera!
+				</div>
+				<div class="modal-footer">
+					<span class="btn btn-secondary" id="cancelar-cancelar-horario">Atrás</span>
+					<span class="btn btn-warning botonEnviarHorario" data-dismiss="modal" id="cancelar-horario">Confirmar</span>
 				</div>             
 			</div>
 		</div>
@@ -157,6 +179,10 @@
 	<!--Gestor-->
 	<script src="../model/js/ajaxGestorMostrarGrilla.js"></script>
 	
+	<!--Deshabilitar Horario-->
+	<script src="../controller/js/deshabilitarHorario.js"></script>
+    <script src="../model/js/ajaxDeshabilitarHorario.js"></script>
+
 	<!--Crear Solicitud-->
 	<script src="../controller/js/crearSolicitud.js"></script>
     <script src="../model/js/ajaxCrearSolicitud.js"></script>

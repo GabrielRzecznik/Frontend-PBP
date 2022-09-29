@@ -16,6 +16,8 @@ function gestorMostrarGrilla($nombreUsuario){
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
 
+                //console.log(data);
+
                 $arrayTerminadoEventos = [];
 
                 $arrayEventos = data;
@@ -46,7 +48,7 @@ function gestorMostrarGrilla($nombreUsuario){
 
                 var eventosEnBaseDeDatos = $arrayEventos;
                 
-                if (localStorage.getItem("id_profesional") != "") {//parametro != localStorage.getItem("nombreUsuario")
+                if ((parametro != localStorage.getItem("nombreUsuario")) || localStorage.getItem("id_profesional")) {
                     //Generar Horarios Disponibles
     
                     //Pasaje a Minutos Rango Horario Dia Desde
