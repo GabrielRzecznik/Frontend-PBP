@@ -46,6 +46,127 @@ function armadoFullCalendar() {
                         var infoHastaHorario = String(info.event.end);
                         var profesional = localStorage.getItem("id_profesional");
 
+                        var diaDesde = infoDesdeHorario.substring(8, 10);
+                        var diaHasta = infoHastaHorario.substring(8, 10);
+
+                        var mesDesde = infoDesdeHorario.substring(4, 7);
+
+                        switch (mesDesde) {
+                            case "Jan":
+                                mesDesde = "01";
+                                break;
+                            case "Feb":
+                                mesDesde = "02";
+                                break;
+                            case "Mar":
+                                mesDesde = "03";
+                                break;
+                            case "Apr":
+                                mesDesde = "04";
+                                break;
+                            case "May":
+                                mesDesde = "05";
+                                break;
+                            case "Jun":
+                                mesDesde = "06";
+                                break;
+                            case "Jul":
+                                mesDesde = "07";
+                                break;
+                            case "Aug":
+                                mesDesde = "08";
+                                break;
+                            case "Sep":
+                                mesDesde = "09";
+                                break;
+                            case "Oct":
+                                mesDesde = "10";
+                                break;
+                            case "Nov":
+                                mesDesde = "11";
+                                break;
+                            case "Dec":
+                                mesDesde = "12";
+                                break;
+                            default:
+                                console.log("Ocurrio un error inesperado");
+                                break;
+                        }
+
+                        var mesHasta = infoHastaHorario.substring(4, 7);
+
+                        switch (mesHasta) {
+                            case "Jan":
+                                mesHasta = "01";
+                                break;
+                            case "Feb":
+                                mesHasta = "02";
+                                break;
+                            case "Mar":
+                                mesHasta = "03";
+                                break;
+                            case "Apr":
+                                mesHasta = "04";
+                                break;
+                            case "May":
+                                mesHasta = "05";
+                                break;
+                            case "Jun":
+                                mesHasta = "06";
+                                break;
+                            case "Jul":
+                                mesHasta = "07";
+                                break;
+                            case "Aug":
+                                mesHasta = "08";
+                                break;
+                            case "Sep":
+                                mesHasta = "09";
+                                break;
+                            case "Oct":
+                                mesHasta = "10";
+                                break;
+                            case "Nov":
+                                mesHasta = "11";
+                                break;
+                            case "Dec":
+                                mesHasta = "12";
+                                break;
+                            default:
+                                console.log("Ocurrio un error inesperado");
+                                break;
+                        }
+                        
+                        var añoDesde = infoDesdeHorario.substring(11, 15);
+                        var añoHasta = infoHastaHorario.substring(11, 15);
+                        
+                        var hd = new Date();
+                        var horaDesde = hd.getHours();
+                        
+                        if(horaDesde < 10){
+                            horaDesde = "0" + horaDesde;
+                        }
+                        var minutosDesde = hd.getMinutes();
+                        
+                        if(minutosDesde < 10){
+                            minutosDesde = "0" + minutosDesde;
+                        }
+
+                        var hh = new Date();
+                        var horaHasta = hh.getHours();
+                        
+                        if(horaHasta < 10){
+                            horaHasta = "0" + horaHasta;
+                        }
+                        var minutosHasta = hh.getMinutes();
+                        
+                        if(minutosHasta < 10){
+                            minutosHasta = "0" + minutosHasta;
+                        }
+
+                        var infoDesdeHorario = añoDesde+"-"+mesDesde+"-"+diaDesde+" "+horaDesde+":"+minutosDesde+":00";
+                        var infoHastaHorario = añoHasta+"-"+mesHasta+"-"+diaHasta+" "+horaHasta+":"+minutosHasta+":00";
+                        
                         ModalCancelarHorario(profesional, infoDesdeHorario, infoHastaHorario);
                     }else{
                         //CREAR SOLICITUD
