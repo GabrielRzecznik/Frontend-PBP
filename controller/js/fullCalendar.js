@@ -265,11 +265,11 @@ function armadoFullCalendar() {
                     break;
                 case "Turno confirmado a":
                     var id_turno = String(info.event._def.publicId);
-                    cancelarTurno(id_turno);
+                    ModalCancelarTurno(id_turno);
                     break;
                 case "Turno confirmado d":
                     var id_turno = String(info.event._def.publicId);
-                    cancelarTurno(id_turno);
+                    ModalCancelarTurno(id_turno);
                     break;
                 default:
                     break;
