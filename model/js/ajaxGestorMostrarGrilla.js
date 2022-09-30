@@ -63,14 +63,28 @@ function gestorMostrarGrilla($nombreUsuario){
                         );
                     }
                     //Armado Turno confirmado a (Recibido)
-                    if (eventos["descripcion"] == "Solicitud aceptada" && eventos["estadoTurno"] == "Activo" && eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente")) {
+                    if (eventos["descripcionTurno"] == "Turno confirmado" && eventos["estadoTurno"] == "Activo" && eventos["id_pacSolicitud"] == localStorage.getItem("id_paciente")) {
                         $color = '#ffaa24';
                         $borde = '#cc881c';
-                        
                         $arrayTerminadoEventos.push(
                             {
                                 id: eventos["id_turno"],
-                                title: eventos["descripcionTurno"],
+                                title: "Turno confirmado a",
+                                start: eventos["horaDesdeSolicitud"],
+                                end: eventos["horaHastaSolicitud"],
+                                backgroundColor: $color,
+                                borderColor: $borde
+                            }
+                        );
+                    }
+                    //Armado Turno confirmado a (Enviada)
+                    if (eventos["descripcionTurno"] == "Turno confirmado" && eventos["estadoTurno"] == "Activo" && eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente")) {
+                        $color = '#ffaa24';
+                        $borde = '#cc881c';
+                        $arrayTerminadoEventos.push(
+                            {
+                                id: eventos["id_turno"],
+                                title: "Turno confirmado de",
                                 start: eventos["horaDesdeSolicitud"],
                                 end: eventos["horaHastaSolicitud"],
                                 backgroundColor: $color,
