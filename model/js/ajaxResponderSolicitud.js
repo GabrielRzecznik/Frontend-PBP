@@ -1,6 +1,8 @@
 function responderSolicitud(id_solicitud, estadoSolicitud){
-    var formJSON=JSON.stringify({"id_solicitud":id_solicitud});
-    var formJSON=JSON.stringify({"estadoSolicitud":estadoSolicitud});
+    var formData= new FormData();
+    formData.append("id_solicitud",id_solicitud);
+    formData.append("estadoSolicitud",estadoSolicitud);
+    var formJSON=JSON.stringify(Object.fromEntries(formData));
     console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();

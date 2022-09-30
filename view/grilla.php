@@ -152,18 +152,18 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Deshabilitar horario</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Responder solicitud de</h5>
 					<button id="close-responder-solicitud" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>                    
 				<div class="modal-body">
-					¿Esta seguro que quiere deshabilitar este horario?<br>
-					¡Podra cancelar esta acción cuando usted quiera!
+					Información
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-responder-solicitud">Atrás</span>
-					<span class="btn btn-warning botonEnviarHorario" data-dismiss="modal" id="cancelar-responder-solicitud">Confirmar</span>
+					<span class="btn btn-danger botonEnviarHorario" data-dismiss="modal" id="rechazar-solicitud">Rechazar</span>
+					<span class="btn btn-success botonEnviarHorario" data-dismiss="modal" id="aceptar-solicitud">Aceptar</span>
 				</div>             
 			</div>
 		</div>
@@ -212,6 +212,10 @@
 	<!--Cancelar Solicitud-->
 	<script src="../controller/js/cancelarSolicitud.js"></script>
     <script src="../model/js/ajaxCancelarSolicitud.js"></script>
+
+	<!--Responder Solicitud-->
+	<script src="../controller/js/responderSolicitud.js"></script>
+    <script src="../model/js/ajaxResponderSolicitud.js"></script>
 
 	<!--Datos del Profesional-->
 	<script src="../model/js/ajaxBuscarPerfil.js"></script>

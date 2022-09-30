@@ -13,7 +13,13 @@ function ModalResponderSolicitud(id_solicitud) {
         myModal4.hide();
     });
      
-    document.getElementById("responder-solicitud").addEventListener("click", function () {
-        responderSolicitud(id_solicitud);
+    document.getElementById("aceptar-solicitud").addEventListener("click", function () {
+        var respuesta = "Aceptada";
+        responderSolicitud(id_solicitud, respuesta);
+    });
+
+    document.getElementById("rechazar-solicitud").addEventListener("click", function () {
+        var respuesta = "Rechazada";
+        responderSolicitud(id_solicitud, respuesta);
     });
 }

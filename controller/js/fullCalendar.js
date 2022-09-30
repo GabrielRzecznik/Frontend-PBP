@@ -142,33 +142,6 @@ function armadoFullCalendar() {
                         
                         var horaDesde = infoDesdeHorario.substring(16, 24);
                         var horaHasta = infoHastaHorario.substring(16, 24);
-                        
-                        
-                        /*
-                        var hd = new Date();
-                        var horaDesde = hd.getHours();
-                        
-                        if(horaDesde < 10){
-                            horaDesde = "0" + horaDesde;
-                        }
-                        var minutosDesde = hd.getMinutes();
-                        
-                        if(minutosDesde < 10){
-                            minutosDesde = "0" + minutosDesde;
-                        }
-
-                        var hh = new Date();
-                        var horaHasta = hh.getHours();
-                        
-                        if(horaHasta < 10){
-                            horaHasta = "0" + horaHasta;
-                        }
-                        var minutosHasta = hh.getMinutes();
-                        
-                        if(minutosHasta < 10){
-                            minutosHasta = "0" + minutosHasta;
-                        }
-                        */
 
                         var infoDesdeHorario = añoDesde+"-"+mesDesde+"-"+diaDesde+" "+horaDesde;
                         var infoHastaHorario = añoHasta+"-"+mesHasta+"-"+diaHasta+" "+horaHasta;
@@ -283,6 +256,10 @@ function armadoFullCalendar() {
                 case "Solicitud enviada":
                     var id_solicitud = String(info.event._def.publicId);
                     ModalCancelarSolicitud(id_solicitud);
+                    break;
+                case "Solicitud recibida":
+                    var id_solicitud = String(info.event._def.publicId);
+                    ModalResponderSolicitud(id_solicitud);
                     break;
                 default:
                     break;
