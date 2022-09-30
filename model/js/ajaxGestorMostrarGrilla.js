@@ -66,6 +66,7 @@ function gestorMostrarGrilla($nombreUsuario){
                     if (eventos["descripcionTurno"] == "Turno confirmado" && eventos["estadoTurno"] == "Activo" && eventos["id_pacSolicitud"] == localStorage.getItem("id_paciente")) {
                         $color = '#ffaa24';
                         $borde = '#cc881c';
+                        $titulo = 'Turno confirmado de '+eventos["profesional"];
                         $arrayTerminadoEventos.push(
                             {
                                 id: eventos["id_turno"],
@@ -81,10 +82,11 @@ function gestorMostrarGrilla($nombreUsuario){
                     if ((eventos["descripcionTurno"] == "Turno confirmado" && eventos["estadoTurno"] == "Activo") && (eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente") && eventos["id_proSolicitud"] == localStorage.getItem("id_profesional"))) {
                         $color = '#ffbb4f';
                         $borde = '#ffb239';
+                        $titulo = 'Turno confirmado a '+eventos["paciente"];
                         $arrayTerminadoEventos.push(
                             {
                                 id: eventos["id_turno"],
-                                title: "Turno confirmado de",
+                                title: $titulo,
                                 start: eventos["horaDesdeSolicitud"],
                                 end: eventos["horaHastaSolicitud"],
                                 backgroundColor: $color,
