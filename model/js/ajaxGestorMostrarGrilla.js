@@ -78,7 +78,7 @@ function gestorMostrarGrilla($nombreUsuario){
                         );
                     }
                     //Armado Turno confirmado a (Enviada)
-                    if (eventos["descripcionTurno"] == "Turno confirmado" && eventos["estadoTurno"] == "Activo" && eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente")) {
+                    if ((eventos["descripcionTurno"] == "Turno confirmado" && eventos["estadoTurno"] == "Activo") && (eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente") && eventos["id_proSolicitud"] == localStorage.getItem("id_profesional"))) {
                         $color = '#ffbb4f';
                         $borde = '#ffb239';
                         $arrayTerminadoEventos.push(
@@ -92,11 +92,27 @@ function gestorMostrarGrilla($nombreUsuario){
                             }
                         );
                     }
+                    //Armado Turno confirmado a (Enviada)
+                    if ((eventos["descripcionTurno"] == "Turno confirmado" && eventos["estadoTurno"] == "Activo") && (eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente") && eventos["id_proSolicitud"] != localStorage.getItem("id_profesional"))) {
+                        $color = '#bcbcbc';
+                        $borde = '#969696';
+                        $arrayTerminadoEventos.push(
+                            {
+                                id: eventos["id_turno"],
+                                title: "Horario ocupado",
+                                start: eventos["horaDesdeSolicitud"],
+                                end: eventos["horaHastaSolicitud"],
+                                backgroundColor: $color,
+                                borderColor: $borde
+                            }
+                        );
+                    }
+                   
                 });
 
                 var eventosEnBaseDeDatos = $arrayEventos;
                 
-                if (((parametro != localStorage.getItem("nombreUsuario")) || localStorage.getItem("id_profesional")) && $sinConfigurar == false) {
+                if (((parametro != localStorage.getItem("nombreUsuario")) || localStorage.getItem("id_profesional")) && localStorage.getItem("id_profesional") != "" && $sinConfigurar == false) {
                     //Generar Horarios Disponibles
     
                     //Pasaje a Minutos Rango Horario Dia Desde
