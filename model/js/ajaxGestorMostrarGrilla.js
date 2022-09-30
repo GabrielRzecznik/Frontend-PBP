@@ -22,6 +22,8 @@ function gestorMostrarGrilla($nombreUsuario){
                 $arrayTerminadoEventos = [];
 
                 $arrayEventos = data;
+
+                console.log(data);
                         
                 //$provincias = "";
 
@@ -53,6 +55,22 @@ function gestorMostrarGrilla($nombreUsuario){
                             {
                                 id: eventos["id_solicitud"],
                                 title: "Solicitud recibida",
+                                start: eventos["horaDesdeSolicitud"],
+                                end: eventos["horaHastaSolicitud"],
+                                backgroundColor: $color,
+                                borderColor: $borde
+                            }
+                        );
+                    }
+                    //Armado Turno confirmado a (Recibido)
+                    if (eventos["descripcion"] == "Solicitud aceptada" && eventos["estadoTurno"] == "Activo" && eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente")) {
+                        $color = '#ffaa24';
+                        $borde = '#cc881c';
+                        
+                        $arrayTerminadoEventos.push(
+                            {
+                                id: eventos["id_turno"],
+                                title: eventos["descripcionTurno"],
                                 start: eventos["horaDesdeSolicitud"],
                                 end: eventos["horaHastaSolicitud"],
                                 backgroundColor: $color,
