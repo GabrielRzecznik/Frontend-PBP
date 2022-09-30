@@ -265,8 +265,6 @@ function armadoFullCalendar() {
                     break;
             }
         }
-
-        
     },
     slotDuration: $slotDuration,
     slotMinTime: $slotMinTime,
