@@ -38,7 +38,9 @@ function armadoFullCalendar() {
     },
     eventClick: function (info) {
         if (info.view.type != "dayGridMonth") {//Si no es clickeado en "MES"
-            switch (info.event._def.title) {
+            //$hola = "Solicitud recibidaaaaaaaaaaaa";
+            //console.log($hola.substring(0, 18));
+            switch (info.event._def.title.substring(0, 18)) {
                 case "Horario disponible":
                     if ($id_prof == localStorage.getItem("id_profesional")) {
                         //DESHABILITAR HORARIO
@@ -253,7 +255,7 @@ function armadoFullCalendar() {
                         }
                     }
                     break;
-                case "Solicitud enviada":
+                case "Solicitud enviada ":
                     var id_solicitud = String(info.event._def.publicId);
                     ModalCancelarSolicitud(id_solicitud);
                     break;
@@ -263,6 +265,10 @@ function armadoFullCalendar() {
                     break;
                 case "Turno confirmado a":
                     console.log(info.event);
+                    break;
+                case "Turno confirmado d":
+                    console.log(info.event);
+                    break;
                 default:
                     break;
             }

@@ -34,11 +34,11 @@ function gestorMostrarGrilla($nombreUsuario){
                     if (eventos["descripcion"] == "Solicitud enviada" && eventos["id_pacSolicitud"] == localStorage.getItem("id_paciente")) {
                         $color = '#bddbb0';
                         $borde = '#A3C197';
-                        
+                        $titulo = 'Solicitud enviada '+eventos["profesional"];
                         $arrayTerminadoEventos.push(
                             {
                                 id: eventos["id_solicitud"],
-                                title: eventos["descripcion"],
+                                title: $titulo,
                                 start: eventos["horaDesdeSolicitud"],
                                 end: eventos["horaHastaSolicitud"],
                                 backgroundColor: $color,
@@ -50,11 +50,11 @@ function gestorMostrarGrilla($nombreUsuario){
                     if (eventos["descripcion"] == "Solicitud enviada" && eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente")) {
                         $color = '#87b972';
                         $borde = '#6aa84f';
-                        
+                        $titulo = 'Solicitud recibida de '+eventos["paciente"];
                         $arrayTerminadoEventos.push(
                             {
                                 id: eventos["id_solicitud"],
-                                title: "Solicitud recibida",
+                                title: $titulo,
                                 start: eventos["horaDesdeSolicitud"],
                                 end: eventos["horaHastaSolicitud"],
                                 backgroundColor: $color,
@@ -70,7 +70,7 @@ function gestorMostrarGrilla($nombreUsuario){
                         $arrayTerminadoEventos.push(
                             {
                                 id: eventos["id_turno"],
-                                title: "Turno confirmado a",
+                                title: $titulo,
                                 start: eventos["horaDesdeSolicitud"],
                                 end: eventos["horaHastaSolicitud"],
                                 backgroundColor: $color,
