@@ -11,7 +11,7 @@ function responderSolicitud(id_solicitud, respuesta){
             if (xmlhttp.status == 200) {
                 //document.getElementById('confirmarSolicitud').style.display = 'block';
                 //document.getElementById('confSoliCarg').style.display = 'none';
-                if (estadoSolicitud == "Aceptada") {
+                if (respuesta == "Aceptada") {
                     alert("¡Solicitud aceptada con exito!");
                 }else{
                     alert("¡Solicitud rechazada con exito!");
