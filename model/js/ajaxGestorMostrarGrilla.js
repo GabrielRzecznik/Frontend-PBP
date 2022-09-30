@@ -80,7 +80,7 @@ function gestorMostrarGrilla($nombreUsuario){
                     }
                     //Armado Turno confirmado a (Enviada)
                     if ((eventos["descripcionTurno"] == "Turno confirmado" && eventos["estadoTurno"] == "Activo") && (eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente") && eventos["id_proSolicitud"] == localStorage.getItem("id_profesional"))) {
-                        $color = '#ffbb4f';
+                        $color = '#ffc365';
                         $borde = '#ffb239';
                         $titulo = 'Turno confirmado a '+eventos["paciente"];
                         $arrayTerminadoEventos.push(
