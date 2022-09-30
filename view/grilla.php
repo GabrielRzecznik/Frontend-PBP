@@ -169,6 +169,34 @@
 		</div>
 	</div>
 
+	<!--Cancelar Turno-->
+	<div class="modal fade" id="ventana-modal-cancelar-turno" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Cancelar turno</h5>
+					<button id="close-cancelar-turno" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>                    
+				<div class="modal-body">
+					<span id="vistaPaciente">
+						¿Esta seguro que quiere cancelar este turno?<br>
+						!Una vez cancelado el turno se le notificara al profesional!
+					</span>
+					<span id="vistaProfesional">
+						¿Esta seguro que quiere cancelar este turno?<br>
+						!Una vez cancelado el turno se le notificara al paciente!
+					</span>
+				</div>
+				<div class="modal-footer">
+					<span class="btn btn-secondary" id="cancelar-cancelar-turno">Atrás</span>
+					<span class="btn btn-danger botonEnviarTurno" data-dismiss="modal" id="cancelar-turno">Confirmar</span>
+				</div>             
+			</div>
+		</div>
+	</div>
+
 	<!--Bootstrap-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	
