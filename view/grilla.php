@@ -217,6 +217,10 @@
 	<script src="../controller/js/responderSolicitud.js"></script>
     <script src="../model/js/ajaxResponderSolicitud.js"></script>
 
+	<!--Cancelar Turno-->
+	<script src="../controller/js/cancelarTurno.js"></script>
+    <script src="../model/js/ajaxCancelarTurno.js"></script>
+
 	<!--Datos del Profesional-->
 	<script src="../model/js/ajaxBuscarPerfil.js"></script>
 
