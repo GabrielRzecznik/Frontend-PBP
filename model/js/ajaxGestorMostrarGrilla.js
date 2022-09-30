@@ -79,8 +79,8 @@ function gestorMostrarGrilla($nombreUsuario){
                     }
                     //Armado Turno confirmado a (Enviada)
                     if (eventos["descripcionTurno"] == "Turno confirmado" && eventos["estadoTurno"] == "Activo" && eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente")) {
-                        $color = '#ffaa24';
-                        $borde = '#cc881c';
+                        $color = '#ffbb4f';
+                        $borde = '#ffb239';
                         $arrayTerminadoEventos.push(
                             {
                                 id: eventos["id_turno"],
@@ -96,7 +96,7 @@ function gestorMostrarGrilla($nombreUsuario){
 
                 var eventosEnBaseDeDatos = $arrayEventos;
                 
-                if ((parametro != localStorage.getItem("nombreUsuario")) || localStorage.getItem("id_profesional")) {
+                if (((parametro != localStorage.getItem("nombreUsuario")) || localStorage.getItem("id_profesional")) && $sinConfigurar == false) {
                     //Generar Horarios Disponibles
     
                     //Pasaje a Minutos Rango Horario Dia Desde
@@ -259,8 +259,8 @@ function gestorMostrarGrilla($nombreUsuario){
                                                 title: "Horario disponible",
                                                 start: inicioHorario,
                                                 end: finHorario,
-                                                backgroundColor: "#D2E2FF",
-                                                borderColor: "#73A3FA"
+                                                backgroundColor: "#94c2e5",
+                                                borderColor: "#69aadb"
                                             }
                                         );
                                     }

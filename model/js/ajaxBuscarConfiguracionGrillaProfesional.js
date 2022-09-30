@@ -8,8 +8,15 @@ function buscarConfGrillaProf(){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {
-                if (localStorage.getItem("id_profesional") != "") {//parametro != localStorage.getItem("nombreUsuario")      
-                    var data=JSON.parse(xmlhttp.responseText);
+                var data=JSON.parse(xmlhttp.responseText);
+
+                $sinConfigurar = false;
+
+                if (data == "") {
+                    $sinConfigurar = true;
+                }
+
+                if (localStorage.getItem("id_profesional") != "" && data != "") {//parametro != localStorage.getItem("nombreUsuario")      
                     $duracionConsulta = data[0]["duracionConsulta"];
                     $descanso = data[0]["descanso"];
                     $rangoHorarioDiaDesde = data[0]["rangoHorarioDiaDesde"];
