@@ -59,7 +59,7 @@ if (parametro == localStorage.getItem("nombreUsuario")) {
             document.getElementById("ediUsu").classList.remove('show');
             document.getElementById("desUsu").classList.remove('show');
             
-            if (localStorage.getItem("id_profesional") != "null" && localStorage.getItem("estadoProfesional") != "Activo") {
+            if (localStorage.getItem("id_profesional") != "" && localStorage.getItem("estadoProfesional") != "Activo") {
                 document.getElementById("confPro").classList.remove('accordion-button', 'rounded');
                 document.getElementById("confPro").classList.add('accordion-button', 'collapsed', 'rounded');
                 
@@ -123,7 +123,7 @@ document.getElementById("conf").addEventListener("click", function() {
     document.getElementById("ediUsu").classList.remove('show');
     document.getElementById("desUsu").classList.remove('show');
 
-    if (localStorage.getItem("id_profesional") != "null" && localStorage.getItem("estadoProfesional") != "Activo") {
+    if (localStorage.getItem("id_profesional") != "" && localStorage.getItem("estadoProfesional") != "Activo") {
         document.getElementById("flush-collapseThree").classList.remove('show');
         
         document.getElementById("confPro").classList.remove('accordion-button', 'rounded');
@@ -206,11 +206,12 @@ formularioEditar.addEventListener('submit', (e) => {
     
     if (nombreUsuarioValue === "" || contraseñaValue === "") {
         alert("¡Debe completar todos los campos!");
+    }else{
+        if ((camposEditar.nombreUsuario == false && nombreUsuarioValue !== "") || (camposEditar.password == false && contraseñaValue !== "")) {
+            alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+        }
     }
 
-    if ((camposEditar.nombreUsuario == false && nombreUsuarioValue !== "") || (camposEditar.password == false && contraseñaValue !== "")) {
-        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
-    }
     
     if (camposEditar.nombreUsuario && camposEditar.password) {
         if (nombreUsuarioValue != localStorage.getItem("nombreUsuario") || contraseñaValue !=  passwordValidar.value.trim()) {   
@@ -361,7 +362,7 @@ formDeshabilitarUsuarioPreValidacion.addEventListener('submit', (e) => {
 //#endregion
 
 //#region Opción Configuración profesional
-if (localStorage.getItem("id_profesional") != "null" && localStorage.getItem("estadoProfesional") != "Activo") {
+if (localStorage.getItem("id_profesional") != "" && localStorage.getItem("estadoProfesional") != "Activo") {
     //#region Configuración profesional
     const campoConfiguracionProfesional = {
         diasAtencion: false,
@@ -1145,11 +1146,12 @@ formularioEditarPaciente.addEventListener('submit', (e) => {
     
     if (nombreValue === "" || apellidoValue === "" || fechaNacimiento === false || sexoPacienteValue === "0" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
         alert("¡Debe completar todos los campos obligatorios!");
+    }else{
+        if((camposEditarPaciente.nombre == false && nombreValue !== "") || (camposEditarPaciente.apellido == false && apellidoValue !== "") || (camposEditarPaciente.fechaNacimiento == false) || (camposEditarPaciente.sexoPaciente == false && sexoPacienteValue !== "0") || (camposEditarPaciente.telefono == false && telefonoValue !== "") || (camposEditarPaciente.provincia == false && provinciaValue !== "0") || (camposEditarPaciente.localidad == false && localidadValue !== "") || (camposEditarPaciente.calle == false && calleValue !== "") || (camposEditarPaciente.altura == false && alturaValue !== "") || (camposEditarPaciente.departamento == false)){
+            alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+        }
     }
 
-    if((camposEditarPaciente.nombre == false && nombreValue !== "") || (camposEditarPaciente.apellido == false && apellidoValue !== "") || (camposEditarPaciente.fechaNacimiento == false) || (camposEditarPaciente.sexoPaciente == false && sexoPacienteValue !== "0") || (camposEditarPaciente.telefono == false && telefonoValue !== "") || (camposEditarPaciente.provincia == false && provinciaValue !== "0") || (camposEditarPaciente.localidad == false && localidadValue !== "") || (camposEditarPaciente.calle == false && calleValue !== "") || (camposEditarPaciente.altura == false && alturaValue !== "") || (camposEditarPaciente.departamento == false)){
-        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
-    }
     
     if (camposEditarPaciente.nombre && camposEditarPaciente.apellido && camposEditarPaciente.fechaNacimiento && camposEditarPaciente.sexoPaciente && camposEditarPaciente.telefono && camposEditarPaciente.provincia && camposEditarPaciente.localidad && camposEditarPaciente.calle && camposEditarPaciente.altura && camposEditarPaciente.departamento) {
         if (nombreValue != localStorage.getItem("nombre") || apellidoValue != localStorage.getItem("apellido") || fechaNacimientoValue != localStorage.getItem("fechaNacimiento") || sexoPacienteValue != localStorage.getItem("sexo") || telefonoValue != localStorage.getItem("telefono") || provinciaValue != localStorage.getItem("provincia") || localidadValue != localStorage.getItem("localidad") || calleValue != localStorage.getItem("calle") || alturaValue != localStorage.getItem("altura") || departamentoValue != localStorage.getItem("departamento")) {
