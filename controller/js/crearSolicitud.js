@@ -41,6 +41,7 @@ document.getElementById('confSoliCarg').style.height = '19.5px';
 const formularioCrearSolicitud = document.getElementById('crearSolicitud');
 
 formularioCrearSolicitud.addEventListener('submit', (e) => {
+    document.getElementById('enviarSolicitud').disabled = true;
     const fechaSolicitudValue = fechaSolicitud.value.trim();
     const seleccionConsultaeValue = seleccionConsulta.value.trim();
     const obraSocialSolicitudValue = obraSocialSolicitud.value.trim();

@@ -98,9 +98,9 @@
 						<!--Confirmación Enviar Solicitud-->
 						<span id="botonesConfirmarEnviarSolicitud" class="ocultar">
 							<span class="btn btn-warning" id="volverAtras">Atrás</span>
-							<button type="submit" class="btn btn-success botonConfirmarSolicitud" data-dismiss="modal">
+							<button type="submit" class="btn btn-success botones" data-dismiss="modal" id="enviarSolicitud">
 								<span name="confirmarSolicitud" id="confirmarSolicitud">Confirmar</span>
-								<div class="spinner-border text-light confSoliCarg" id="confSoliCarg" role="status"></div>
+								<div class="spinner-border text-light aspectoSpinner" id="confSoliCarg" role="status"></div>
 							</button>
 						</span>
                     </div>               
@@ -168,8 +168,14 @@
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-responder-solicitud">Atrás</span>
-					<button class="btn btn-danger botonEnviarHorario" data-dismiss="modal" id="rechazar-solicitud">Rechazar</button>
-					<button class="btn btn-success botonEnviarHorario" data-dismiss="modal" id="aceptar-solicitud">Aceptar</button>
+					<button class="btn btn-danger botonEnviarHorario botones" data-dismiss="modal" id="rechazar-solicitud">
+						<span id="texto-boton-rechazar-solicitud">Rechazar</span>
+						<div class="spinner-border text-light aspectoSpinner" id="cargando-boton-rechazar-solicitud" role="status"></div>
+					</button>
+					<button class="btn btn-success botonEnviarHorario botones" data-dismiss="modal" id="aceptar-solicitud">
+						<span id="texto-boton-aceptar-solicitud">Aceptar</span>
+						<div class="spinner-border text-light aspectoSpinner" id="cargando-boton-aceptar-solicitud" role="status"></div>
+					</button>
 				</div>             
 			</div>
 		</div>

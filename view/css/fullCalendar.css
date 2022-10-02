@@ -109,13 +109,13 @@
     margin-left: 5px;
 }
 
-.botonConfirmarSolicitud{
+.botones{
     margin-left: 5px;
     width: 100px;
     height: 38px;
 }
 
-.confSoliCarg{
+.aspectoSpinner{
     font-size: 12px;
     display: none;
     margin: 0 auto;
