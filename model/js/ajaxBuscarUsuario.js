@@ -13,7 +13,11 @@ function buscarUsuario(formulario){
                     //Estado Usuario Activo
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
                     localStorage.setItem("id_paciente", data[0]["id_paciente"]);
-                    localStorage.setItem("id_profesional", data[0]["id_profesional"]);
+                    if(data[0]["id_profesional"] !== null){
+                        localStorage.setItem("id_profesional", data[0]["id_profesional"]);
+                    }else{
+                        localStorage.setItem("id_profesional", "");
+                    }
                     localStorage.setItem("nombre", data[0]["nombre"]);
                     localStorage.setItem("apellido", data[0]["apellido"]);
                     localStorage.setItem("fechaNacimiento", data[0]["fechaNacimiento"]);
