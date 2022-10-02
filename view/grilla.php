@@ -168,8 +168,8 @@
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-responder-solicitud">Atrás</span>
-					<span class="btn btn-danger botonEnviarHorario" data-dismiss="modal" id="rechazar-solicitud">Rechazar</span>
-					<span class="btn btn-success botonEnviarHorario" data-dismiss="modal" id="aceptar-solicitud">Aceptar</span>
+					<button class="btn btn-danger botonEnviarHorario" data-dismiss="modal" id="rechazar-solicitud">Rechazar</button>
+					<button class="btn btn-success botonEnviarHorario" data-dismiss="modal" id="aceptar-solicitud">Aceptar</button>
 				</div>             
 			</div>
 		</div>
