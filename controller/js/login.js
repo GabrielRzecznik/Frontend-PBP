@@ -81,10 +81,10 @@ formulario.addEventListener('submit', (e) => {
     
     if (usuarioValue === "" || contraseñaValue === "") {
         alert("¡Debe completar todos los campos!");
-    }
-
-    if ((campos.usuario == false && usuarioValue !== "") || (campos.password == false && contraseñaValue !== "")) {
-        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+    }else{
+        if ((campos.usuario == false && usuarioValue !== "") || (campos.password == false && contraseñaValue !== "")) {
+            alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+        }
     }
     
     if (campos.usuario && campos.password) {

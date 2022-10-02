@@ -125,11 +125,12 @@ formulario.addEventListener('submit', (e) => {
         alert("¡Debe completar todos los campos!");
     }else if (passwordValue !== password2Value) {
         alert("¡Las contraseñas no coinciden!")
+    }else{
+        if ((campos.nombreUsuario == false && nombreUsuarioValue !== "") || (campos.correo == false && correoValue !== "") || (campos.password == false && passwordValue !== "") || (campos.password2 == false && password2Value !== "")) {
+            alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+        }
     }
     
-    if ((campos.nombreUsuario == false && nombreUsuarioValue !== "") || (campos.correo == false && correoValue !== "") || (campos.password == false && passwordValue !== "") || (campos.password2 == false && password2Value === "")) {
-        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
-    }
 
     if (campos.nombreUsuario && campos.correo && campos.password && (passwordValue === password2Value)) {
         //Enviar AJAX

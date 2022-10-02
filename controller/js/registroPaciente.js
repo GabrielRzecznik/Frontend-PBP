@@ -374,7 +374,7 @@ const formulario = document.getElementById('formulario');
 formulario.addEventListener('submit', (e) => {
     const nombreValue = nombre.value.trim();
     const apellidoValue = apellido.value.trim();
-    //const fechaNacimientoValue = fechaNacimiento.value.trim();
+    const fechaNacimientoValue = fechaNacimiento.value.trim();
     const sexoValue = sexo.value.trim();
     //const fotoValue = foto.value.trim();
     const telefonoValue = telefono.value.trim();
@@ -388,10 +388,10 @@ formulario.addEventListener('submit', (e) => {
     
     if (nombreValue === "" || apellidoValue === "" || fechaNacimiento === false || sexoValue === "0" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
         alert("¡Debe completar todos los campos obligatorios!");
-    }
-
-    if ((campos.nombre == false && nombreValue !== "") || (campos.apellido == false && apellidoValue !== "") || (campos.fechaNacimiento == false) || (campos.sexo == false && sexoValue !== "") || (campos.telefono == false && telefonoValue !== "") || (campos.provincia == false && provinciaValue !== "") || (campos.localidad == false && localidadValue !== "") || (campos.calle == false && calleValue !== "") || (campos.altura == false && alturaValue !== "") || campos.departamento == false) {
-        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+    }else{
+        if ((campos.nombre == false && nombreValue !== "") || (campos.apellido == false && apellidoValue !== "") || fechaNacimientoValue !== "" || (campos.sexo == false && sexoValue !== "0") || (campos.telefono == false && telefonoValue !== "") || (campos.provincia == false && provinciaValue !== "") || (campos.localidad == false && localidadValue !== "") || (campos.calle == false && calleValue !== "") || (campos.altura == false && alturaValue !== "") || campos.departamento == false) {
+            alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+        }
     }
     
     if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
