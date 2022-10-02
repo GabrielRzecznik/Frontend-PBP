@@ -56,7 +56,7 @@ formulario.addEventListener('submit', (e) => {
         alert("¡Complete el campo correo!");
     }
 
-    if (campos.correo == false) {
+    if ((campos.correo == false && correoValue !== "")) {
         alert("Error al ingresar el correo: ¡Formato no valido, verifique el mismos e intente nuevamente!");
     }
     
@@ -121,7 +121,7 @@ formulario2.addEventListener('submit', (e) => {
         alert("¡Complete el campo código!");
     }
     
-    if (campos2.codigo == false) {
+    if ((campos2.codigo == false && codigoValue !== "")) {
         alert("Error al ingresar el código: ¡Formato no valido, verifique el mismos e intente nuevamente!");
     }
 
@@ -259,12 +259,13 @@ formulario3.addEventListener('submit', (e) => {
             alert("¡Debe completar todos los campos!");
         }else if (passwordValue !== password2Value) {
             alert("¡Las contraseñas no coinciden!");
+        }else{
+            if ((campos3.password == false && passwordValue !== "") || (campos3.password2 == false && password2Value !== "")) {
+                alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+            }
         }
     }
     
-    if (campos3.password == false || campos3.password2 == false) {
-        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
-    }
 
     if (campos3.password && (passwordValue === password2Value)) {
         //Modal confirmación

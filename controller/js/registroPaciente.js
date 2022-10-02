@@ -16,6 +16,8 @@ function load(){
         document.getElementById('mostrar').style.display = 'block';
     }
 
+    document.getElementById('provincia').value = '0';
+
     nombre.focus();
 }
 //#endregion

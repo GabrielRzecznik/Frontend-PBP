@@ -441,18 +441,23 @@ formulario.addEventListener('submit', (e) => {
     if ($conConsultorio) {
         if (especialidadValue === "0" || matriculaValue === "" || provinciaConsultorioValue === "0" || provinciaConsultorioValue === "" || localidadConsultorioValue === "" || calleConsultorioValue === "" || alturaConsultorioValue === "") {
             alert("¡Debe completar todos los campos obligatorios!");
+        }else{
+            if ((campos.especialidad == false && especialidadValue !== "0") || (campos.matricula == false && matriculaValue !== "") || campos.tipoConsulta == false || (campos.provinciaConsultorio == false && provinciaConsultorioValue !== "") || (campos.localidadConsultorio == false && localidadConsultorioValue !== "") || (campos.calleConsultorio == false && calleConsultorioValue !== "") || (campos.alturaConsultorio == false && alturaConsultorioValue !== "") || campos.departamentoConsultorio == false) {
+                alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+            }
         }
     }else{
         if ((campos.especialidad == false && especialidadValue === "0") || (campos.matricula == false && matriculaValue === "") || (campos.tipoConsulta == false)) {//TERMINAR ACÁ
             alert("¡Debe completar todos los campos obligatorios!");
         }else{
             campos['provinciaConsultorio'] = true;
+            if ((campos.especialidad == false && especialidadValue !== "0") || (campos.matricula == false && matriculaValue !== "") || campos.tipoConsulta == false || (campos.provinciaConsultorio == false && provinciaConsultorioValue !== "") || (campos.localidadConsultorio == false && localidadConsultorioValue !== "") || (campos.calleConsultorio == false && calleConsultorioValue !== "") || (campos.alturaConsultorio == false && alturaConsultorioValue !== "") || campos.departamentoConsultorio == false) {
+                alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+            }
         }
     }
-
-    if ((campos.especialidad == false) || campos.matricula == false || campos.tipoConsulta == false || campos.provinciaConsultorio == false || campos.localidadConsultorio == false || campos.calleConsultorio == false || campos.alturaConsultorio == false || campos.departamentoConsultorio == false) {
-        alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
-    }
+    
+    
     
     if (campos.especialidad && campos.matricula && campos.tipoConsulta && campos.provinciaConsultorio && campos.localidadConsultorio && campos.calleConsultorio && campos.alturaConsultorio && campos.departamentoConsultorio) {
         //Enviar AJAX
