@@ -386,10 +386,10 @@ formulario.addEventListener('submit', (e) => {
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
-    if (nombreValue === "" || apellidoValue === "" || fechaNacimiento === false || sexoValue === "0" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
+    if (nombreValue === "" || apellidoValue === "" || fechaNacimientoValue === "" || sexoValue === "0" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
         alert("¡Debe completar todos los campos obligatorios!");
     }else{
-        if ((campos.nombre == false && nombreValue !== "") || (campos.apellido == false && apellidoValue !== "") || fechaNacimientoValue !== "" || (campos.sexo == false && sexoValue !== "0") || (campos.telefono == false && telefonoValue !== "") || (campos.provincia == false && provinciaValue !== "") || (campos.localidad == false && localidadValue !== "") || (campos.calle == false && calleValue !== "") || (campos.altura == false && alturaValue !== "") || campos.departamento == false) {
+        if ((campos.nombre == false && nombreValue !== "") || (campos.apellido == false && apellidoValue !== "") || (campos.fechaActual == false && fechaNacimientoValue !== "") || (campos.sexo == false && sexoValue !== "0") || (campos.telefono == false && telefonoValue !== "") || (campos.provincia == false && provinciaValue !== "") || (campos.localidad == false && localidadValue !== "") || (campos.calle == false && calleValue !== "") || (campos.altura == false && alturaValue !== "") || campos.departamento == false) {
             alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
         }
     }
