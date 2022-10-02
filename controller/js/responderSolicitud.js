@@ -14,19 +14,15 @@ function ModalResponderSolicitud(id_solicitud) {
     });
      
     document.getElementById("aceptar-solicitud").addEventListener("click", function () {
-        $aceptar = document.getElementById("aceptar-solicitud");
-        $aceptar.disabled = true;
-        $rechazar = document.getElementById("rechazar-solicitud");
-        $rechazar.disabled = true;
+        document.getElementById("aceptar-solicitud").disabled = true;
+        document.getElementById("rechazar-solicitud").disabled = true;
         var respuesta = "Aceptada";
         responderSolicitud(id_solicitud, respuesta);
     });
 
     document.getElementById("rechazar-solicitud").addEventListener("click", function () {
-        $aceptar = document.getElementById("aceptar-solicitud");
-        $aceptar.disabled = true;
-        $rechazar = document.getElementById("rechazar-solicitud");
-        $rechazar.disabled = true;
+        document.getElementById("aceptar-solicitud").disabled = true;
+        document.getElementById("rechazar-solicitud").disabled = true;
         var respuesta = "Rechazada";
         responderSolicitud(id_solicitud, respuesta);
     });
