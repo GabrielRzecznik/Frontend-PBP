@@ -17,7 +17,7 @@ function buscarConfGrillaProf(){
                         $sinConfigurar = true;
                     }
     
-                    if (localStorage.getItem("id_profesional") != "" && data != "") {//parametro != localStorage.getItem("nombreUsuario")      
+                    if (data != "") {//localStorage.getItem("id_profesional") != "" && data != ""   
                         $duracionConsulta = data[0]["duracionConsulta"];
                         $descanso = data[0]["descanso"];
                         $rangoHorarioDiaDesde = data[0]["rangoHorarioDiaDesde"];
