@@ -72,7 +72,6 @@ function buscarConfGrillaProf(){
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/ConfiguracionGrillaProfesional/buscarConfiguracionGrillaProfesional',true);
         xmlhttp.send(formJSON);
     }else{
-        gestorMostrarGrilla(parametro);
         $slotDuration = '00:30';
     }
 } 
