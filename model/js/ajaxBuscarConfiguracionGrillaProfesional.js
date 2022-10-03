@@ -1,5 +1,5 @@
 function buscarConfGrillaProf(){
-    if (parametro !== localStorage.getItem("nombreUsuario") && localStorage.getItem("estadoProfesional") !== "Sin configurar") {
+    if (parametro !== localStorage.getItem("nombreUsuario") && localStorage.getItem("estadoProfesional") !== "Sin Configuración") {
         var formData = new FormData(); //Las keys corresponden al atributo name de cada elemento  
         formData.append("nombreUsuario", parametro);
         var formJSON=JSON.stringify(Object.fromEntries(formData));
