@@ -1,5 +1,5 @@
 function buscarConfGrillaProf(){
-    if (parametro !== localStorage.getItem("nombreUsuario") && localStorage.getItem("estadoProfesional") !== "Sin Configuración") {
+    //if ((localStorage.getItem("estadoProfesional") !== "Sin Configuración") && localStorage.getItem !== parametro) {
         var formData = new FormData(); //Las keys corresponden al atributo name de cada elemento  
         formData.append("nombreUsuario", parametro);
         var formJSON=JSON.stringify(Object.fromEntries(formData));
@@ -17,7 +17,7 @@ function buscarConfGrillaProf(){
                         $sinConfigurar = true;
                     }
     
-                    //if (localStorage.getItem("id_profesional") != "" && data != "") {//parametro != localStorage.getItem("nombreUsuario")      
+                    if (localStorage.getItem("id_profesional") != "" && data != "") {//parametro != localStorage.getItem("nombreUsuario")      
                         $duracionConsulta = data[0]["duracionConsulta"];
                         $descanso = data[0]["descanso"];
                         $rangoHorarioDiaDesde = data[0]["rangoHorarioDiaDesde"];
@@ -53,7 +53,7 @@ function buscarConfGrillaProf(){
                         $slotDuration = duracion;
                         $slotMinTime = $rangoHorarioDiaDesde;
                         $slotMaxTime = $rangoHorarioDiaHasta;
-                    /*}else{
+                    }/*else{
                         $slotDuration = '00:30';
                         $slotMinTime = '00:00';
                         $slotMaxTime = '24:00';
@@ -71,7 +71,7 @@ function buscarConfGrillaProf(){
         }
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/ConfiguracionGrillaProfesional/buscarConfiguracionGrillaProfesional',true);
         xmlhttp.send(formJSON);
-    }
+    //}
 } 
 
 /*
