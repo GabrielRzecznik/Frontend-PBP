@@ -3,7 +3,10 @@ let diaDisponible = date3.getDate();
 let mesDisponible = date3.getMonth()+1;
 let añoDisponible = date3.getFullYear();
 
-if (localStorage.getItem("id_profesional") === "") {
+if (parametro === localStorage.getItem("nombreUsuario") && localStorage.getItem("id_profesional") === "") {
+    $slotDuration = '00:30';
+    $slotMinTime = '00:00';
+    $slotMaxTime = '24:00';
     gestorMostrarGrilla(parametro);
 }
 

@@ -1,5 +1,5 @@
 function buscarConfGrillaProf(){
-    if (localStorage.getItem("id_profesional") !== "") {
+    if (parametro !== localStorage.getItem("nombreUsuario") || localStorage.getItem("id_profesional") !== "") {
         var formData = new FormData(); //Las keys corresponden al atributo name de cada elemento  
         formData.append("nombreUsuario", parametro);
         var formJSON=JSON.stringify(Object.fromEntries(formData));
@@ -65,6 +65,8 @@ function buscarConfGrillaProf(){
                 }else{
                     alert("¡Fallo la conexión con el servidor!");
                 }
+            }else{
+                $slotDuration = '00:30';
             }
         }
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/ConfiguracionGrillaProfesional/buscarConfiguracionGrillaProfesional',true);
@@ -72,3 +74,6 @@ function buscarConfGrillaProf(){
     }
 } 
 
+/*
+    
+*/
