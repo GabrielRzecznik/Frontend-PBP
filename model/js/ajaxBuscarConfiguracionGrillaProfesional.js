@@ -71,6 +71,8 @@ function buscarConfGrillaProf(){
         }
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/ConfiguracionGrillaProfesional/buscarConfiguracionGrillaProfesional',true);
         xmlhttp.send(formJSON);
+    }else{
+        
     }
 } 
 
