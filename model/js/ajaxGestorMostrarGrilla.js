@@ -3,6 +3,10 @@ let diaDisponible = date3.getDate();
 let mesDisponible = date3.getMonth()+1;
 let añoDisponible = date3.getFullYear();
 
+if (localStorage.getItem("id_profesional") === "") {
+    gestorMostrarGrilla(parametro);
+}
+
 function gestorMostrarGrilla($nombreUsuario){
     var formData = new FormData();
     formData.append("nombreUsuario", $nombreUsuario);
