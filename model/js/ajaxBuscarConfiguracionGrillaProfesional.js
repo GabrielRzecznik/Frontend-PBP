@@ -17,7 +17,7 @@ function buscarConfGrillaProf(){
                         $sinConfigurar = true;
                     }
     
-                    //if (localStorage.getItem("id_profesional") != "" && data != "") {//parametro != localStorage.getItem("nombreUsuario")      
+                    if (localStorage.getItem("id_profesional") != "" && data != "") {//parametro != localStorage.getItem("nombreUsuario")      
                         $duracionConsulta = data[0]["duracionConsulta"];
                         $descanso = data[0]["descanso"];
                         $rangoHorarioDiaDesde = data[0]["rangoHorarioDiaDesde"];
@@ -72,6 +72,7 @@ function buscarConfGrillaProf(){
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/ConfiguracionGrillaProfesional/buscarConfiguracionGrillaProfesional',true);
         xmlhttp.send(formJSON);
     }
+}
 } 
 
 /*
