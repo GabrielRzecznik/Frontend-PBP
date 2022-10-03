@@ -1,5 +1,7 @@
 function buscarConfGrillaProf(){
-    if (localStorage.getItem("id_profesional") !== "") {//(localStorage.getItem("estadoProfesional") !== "Sin Configuración") && localStorage.getItem !== parametro
+    console.log(parametro);
+
+    //if (localStorage.getItem("id_profesional") !== ) {//(localStorage.getItem("estadoProfesional") !== "Sin Configuración") && localStorage.getItem !== parametro
         var formData = new FormData(); //Las keys corresponden al atributo name de cada elemento  
         formData.append("nombreUsuario", parametro);
         var formJSON=JSON.stringify(Object.fromEntries(formData));
@@ -71,7 +73,7 @@ function buscarConfGrillaProf(){
         }
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/ConfiguracionGrillaProfesional/buscarConfiguracionGrillaProfesional',true);
         xmlhttp.send(formJSON);
-    }
+    //}
 } 
 
 /*
