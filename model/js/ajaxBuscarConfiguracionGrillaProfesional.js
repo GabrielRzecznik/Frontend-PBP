@@ -17,7 +17,7 @@ function buscarConfGrillaProf(){
                         $sinConfigurar = true;
                     }
     
-                    if (localStorage.getItem("id_profesional") != "" && data != "") {//parametro != localStorage.getItem("nombreUsuario")      
+                    //if (localStorage.getItem("id_profesional") != "" && data != "") {//parametro != localStorage.getItem("nombreUsuario")      
                         $duracionConsulta = data[0]["duracionConsulta"];
                         $descanso = data[0]["descanso"];
                         $rangoHorarioDiaDesde = data[0]["rangoHorarioDiaDesde"];
@@ -53,11 +53,11 @@ function buscarConfGrillaProf(){
                         $slotDuration = duracion;
                         $slotMinTime = $rangoHorarioDiaDesde;
                         $slotMaxTime = $rangoHorarioDiaHasta;
-                    }else{
+                    /*}else{
                         $slotDuration = '00:30';
                         $slotMinTime = '00:00';
                         $slotMaxTime = '24:00';
-                    }
+                    }*/
                     gestorMostrarGrilla(parametro);
                    
                 }else if (xmlhttp.status == 500) {                

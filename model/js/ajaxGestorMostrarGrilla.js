@@ -121,7 +121,7 @@ function gestorMostrarGrilla($nombreUsuario){
 
                 var eventosEnBaseDeDatos = $arrayEventos;
                 
-                if (((parametro != localStorage.getItem("nombreUsuario")) || localStorage.getItem("id_profesional")) && localStorage.getItem("id_profesional") != "" && $sinConfigurar == false) {
+                if (((parametro != localStorage.getItem("nombreUsuario")) || localStorage.getItem("id_profesional")) && $sinConfigurar == false) {
                     //Generar Horarios Disponibles
     
                     //Pasaje a Minutos Rango Horario Dia Desde
