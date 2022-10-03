@@ -1,6 +1,5 @@
 function buscarConfGrillaProf(){
-    console.log(parametro);
-
+    //Invertir
     if ((localStorage.getItem("nombreUsuario") === parametro) && localStorage.getItem("id_profesional") === "") {
        
     }else{
