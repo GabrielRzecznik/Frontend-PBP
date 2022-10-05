@@ -50,7 +50,7 @@ function gestorMostrarGrilla($nombreUsuario){
                     if (eventos["descripcion"] == "Solicitud enviada" && eventos["id_pacSolicitud"] == localStorage.getItem("id_paciente")) {
                         $color = '#bddbb0';
                         $borde = '#A3C197';
-                        $titulo = 'Solicitud enviada '+eventos["profesional"];
+                        $titulo = 'Solicitud enviada al profesional '+eventos["profesional"];
                         $arrayTerminadoEventos.push(
                             {
                                 id: eventos["id_solicitud"],
@@ -66,7 +66,7 @@ function gestorMostrarGrilla($nombreUsuario){
                     if (eventos["descripcion"] == "Solicitud enviada" && eventos["id_pacSolicitud"] != localStorage.getItem("id_paciente")) {
                         $color = '#87b972';
                         $borde = '#6aa84f';
-                        $titulo = 'Solicitud recibida de '+eventos["paciente"];
+                        $titulo = 'Solicitud recibida del paciente '+eventos["paciente"];
                         $arrayTerminadoEventos.push(
                             {
                                 id: eventos["id_solicitud"],
