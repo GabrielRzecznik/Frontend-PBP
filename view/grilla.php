@@ -84,7 +84,7 @@
 						<!--Confirmación Enviar Solicitud-->
 						<span id="avisoConfirmarEnviarSolicitud" class="ocultar">
 							¿Esta seguro que quiere enviar esta solicitud?<br>
-                            Una vez enviada la solicitud se le notificara al profesional!
+                            ¡Una vez enviada la solicitud se le notificara al profesional!
 						</span>
                     </div>
                     <div class="modal-footer">
@@ -119,7 +119,7 @@
 				</div>                    
 				<div class="modal-body">
 					¿Esta seguro que quiere cancelar esta solicitud?<br>
-					!Una vez cancelada la solicitud se le notificara al profesional!
+					¡Una vez cancelada la solicitud se le notificara al profesional!
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-cancelar-solicitud">Atrás</span>
