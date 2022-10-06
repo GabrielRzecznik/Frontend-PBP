@@ -192,11 +192,11 @@
 				<div class="modal-body">
 					<span id="vistaPaciente">
 						¿Esta seguro que quiere cancelar este turno?<br>
-						!Una vez cancelado el turno se le notificara al profesional!
+						¡Una vez cancelado el turno se le notificara al profesional!
 					</span>
 					<span id="vistaProfesional">
 						¿Esta seguro que quiere cancelar este turno?<br>
-						!Una vez cancelado el turno se le notificara al paciente!
+						¡Una vez cancelado el turno se le notificara al paciente!
 					</span>
 				</div>
 				<div class="modal-footer">
