@@ -29,7 +29,7 @@
 							<a class="nav-link noSeleccionado" href="https://frontend-pbp.herokuapp.com/view/notificaciones.html"><i class="bi bi-bell-fill"></i></a><!--Icono Notificaciones-->
 						</li>
 						<li class="liNav">
-							<a class="nav-link noSeleccionado" href="https://frontend-pbp.herokuapp.com/view/chats.html"><i class="bi bi-chat-square-text-fill"></i></a><!--Icono Chat-->
+							<a class="nav-link noSeleccionado" href="./chats.php"><i class="bi bi-chat-square-text-fill"></i></a><!--Icono Chat-->
 						</li>
 						<li class="liNav">
 							<a class="nav-link seleccionado" aria-current="page" href="../view/inicioBusqueda.php"><i class="bi bi-house-fill"></i></a><!--Icono Inicio-->

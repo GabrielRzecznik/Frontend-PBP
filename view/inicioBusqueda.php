@@ -17,7 +17,7 @@
 </head>
 <body class="mostrarPagina" id="mostrar">
 	<?php
-    	include_once('../view/navegador.html'); 
+    	include_once('../view/navegador.php'); 
 	?>
 	<div class="container-fluid">
 		<div class="row centrado">

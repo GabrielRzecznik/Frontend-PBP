@@ -1,3 +1,5 @@
+$id_solicitud = null;
+
 function ModalCancelarSolicitud(id_solicitud) {
     //Abrir Modal - Cancelar Solicitud
     var myModal2 = new bootstrap.Modal(
@@ -13,7 +15,9 @@ function ModalCancelarSolicitud(id_solicitud) {
         myModal2.hide();
     });
      
-    document.getElementById("cancelar-solicitud").addEventListener("click", function () {
-        cancelarSolicitud(id_solicitud);
-    });
+    $id_solicitud = id_solicitud;
 }
+
+document.getElementById("cancelar-solicitud").addEventListener("click", function () {
+    cancelarSolicitud($id_solicitud);
+});

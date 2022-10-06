@@ -1,3 +1,5 @@
+$id_turno = null;
+
 function ModalCancelarTurno(id_turno) {
     //Abrir Modal - Cancelar Turno
     var myModal2 = new bootstrap.Modal(
@@ -13,7 +15,9 @@ function ModalCancelarTurno(id_turno) {
         myModal2.hide();
     });
      
-    document.getElementById("cancelar-turno").addEventListener("click", function () {
-        cancelarTurno(id_turno);
-    });
+    $id_turno = id_turno;
 }
+
+document.getElementById("cancelar-turno").addEventListener("click", function () {
+    cancelarTurno($id_turno);
+});

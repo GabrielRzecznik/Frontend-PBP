@@ -20,7 +20,7 @@
 </head>
 <body class="" id="mostrar">
 	<?php
-    	include_once('../view/navegador.html'); 
+    	include_once('../view/navegador.php'); 
 	?>
 	<br>
 	<div class="container">
