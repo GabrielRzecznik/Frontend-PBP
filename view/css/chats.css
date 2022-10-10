@@ -1,5 +1,12 @@
-.main {
+.mainListaContactos {
     height: 100vh;
+    height: -webkit-fill-available; /*Buscar para otros navegadores*/
+    height: 600px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.main-chats {
     height: -webkit-fill-available; /*Buscar para otros navegadores*/
     overflow-x: auto;
     overflow-y: hidden;
@@ -42,7 +49,7 @@
 }
 
 .contenedor-chat{
-    height: 500px;
+    height: 600px;
 }
 
 .mensajeEspacio{
@@ -93,4 +100,16 @@
     font-size: small;
     float: right;
     color: rgb(148, 148, 148);
+}
+
+.borrarMensaje{
+    cursor: pointer;
+}
+
+.borrarMensaje:hover{
+    color: rgb(80, 80, 80);
+}
+
+.indicadorDia{
+    text-align: center;
 }
