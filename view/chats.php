@@ -69,10 +69,22 @@
 				<hr>
 				
 				<div class="contenedor-chat">
-					<!--Mensaje Propio-->
-					
-					<!--Mensaje de tercero-->
-				
+					<!--Mensaje Enviado-->
+					<span class="mensajeEnviado">
+						<div class="contenidoMensajeEnviado">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+							<div class="horaMensajeEnviado">23:56</div>
+						</div>
+						
+					</span>
+					<!--Mensaje Recibido
+					<span class="mensajeEnviado">
+						<span id="fotoTercero"><i class="bi bi-person-circle fotoPerfil"></i></span>
+						<span>
+
+						</span>
+						<br>
+					</span>-->
 				</div>
 
 				<hr>

@@ -1,7 +1,6 @@
 .main {
     height: 100vh;
     height: -webkit-fill-available; /*Buscar para otros navegadores*/
-    max-height: 75vh;
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -44,4 +43,26 @@
 
 .contenedor-chat{
     height: 500px;
+}
+
+.contenidoMensajeEnviado{
+    padding: 10px;
+   
+    background-color: rgb(230, 230, 230);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+
+.mensajeEnviado{
+    width: max-content;
+    max-width: 60%;
+    float: right;
+}
+
+.horaMensajeEnviado{
+    font-size: small;
+    float: right;
+    color: rgb(148, 148, 148);
 }
