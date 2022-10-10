@@ -31,7 +31,14 @@
 						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
 							<div class="d-flex w-100 align-items-center justify-content-between">
 							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
+							<small>
+								<span class="textoAzul">
+									Lunes
+								</span>
+								<span class="badge rounded-pill bg-primary nuevosMensajes">
+									3
+								</span>
+							</small>
 							</div>
 							<div class="col-10 mb-1 small">
 								Hola, buenos días!
@@ -161,14 +168,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="mensajeEspacio">
-						<div class="mensajeEnviado">
-							<div class="contenidoMensajeEnviado">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-								<div class="horaMensajeEnviado">23:56</div>
-							</div>
-						</div>
-					</div>
 					<!--Mensaje Recibidos-->
 					<div class="mensajeEspacio">
 						<div class="mensajeRecibido">
@@ -181,11 +180,13 @@
 					<div class="mensajeEspacio">
 						<div class="mensajeRecibido">
 							<div class="contenidoMensajeRecibido">
-								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+								Me gustaria solicitar un turno!
 								<div class="horaMensajeRecibido">23:56</div>
 							</div>
 						</div>
 					</div>
+					<!--Indicador día-->
+					<div class="indicadorMensajesNoLeidos">Mensajes no leídos</div>
 					<!--Mensaje Enviado-->
 					<div class="mensajeEspacio">
 						<div class="mensajeEnviado">

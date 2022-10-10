@@ -1,7 +1,7 @@
 .mainListaContactos {
     height: 100vh;
     height: -webkit-fill-available; /*Buscar para otros navegadores*/
-    height: 600px;
+    max-height: 600px;
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -112,4 +112,17 @@
 
 .indicadorDia{
     text-align: center;
+}
+
+.textoAzul{
+    color: #2196f3;
+}
+
+.indicadorMensajesNoLeidos{
+    margin-top: 7px;
+    text-align: center;
+    font-weight: bold; 
+    background-color: rgb(240, 240, 240);
+    border-top: 1px solid rgb(220, 220, 220);
+    border-bottom: 1px solid rgb(220, 220, 220);
 }
