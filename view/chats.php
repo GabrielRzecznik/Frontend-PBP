@@ -37,9 +37,9 @@
 								Hola, buenos días!
 							</div>
 						</a>
-						<a href="#" class="py-3 lh-sm item-chat">
+						<a href="#gabriel1999" class="py-3 lh-sm item-chat">
 						<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
+							<strong class="mb-1">Mercia Dos Santos Jesus</strong>
 							<small>Lunes</small>
 							</div>
 							<div class="col-10 mb-1 small">
@@ -69,7 +69,10 @@
 				<hr>
 				
 				<div class="contenedor-chat">
-
+					<!--Mensaje Propio-->
+					
+					<!--Mensaje de tercero-->
+				
 				</div>
 
 				<hr>
