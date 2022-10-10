@@ -1,0 +1,47 @@
+.main {
+    height: 100vh;
+    height: -webkit-fill-available; /*Buscar para otros navegadores*/
+    max-height: 75vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scrollarea {
+    overflow-y: auto;
+}
+
+.anchoTotal{
+    width: 100%;
+}
+
+.item-chat{
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.item-chat:hover{
+    background-color: rgb(230, 230, 230);
+    color: rgb(59, 59, 59);
+}
+
+.boton-opciones-chat{
+    line-height: 35px;
+    text-align: center;
+    position: relative;
+    float: right;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.boton-opciones-chat:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+.contenedor-chat{
+    height: 500px;
+}

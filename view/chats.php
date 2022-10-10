@@ -20,7 +20,69 @@
     	include_once('../view/navegador.php'); 
 	?>
 
-	
+	<div class="container-fluid">
+		<div class="row centrado">
+			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding">
+				<h5><b>Chats</b></h5>
+				<hr>
+				<main class="d-flex flex-nowrap main">
+					<div class="d-flex flex-column align-items-stretch flex-shrink-0 anchoTotal">
+						<div class="list-group list-group-flush border-bottom scrollarea">
+						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+							<div class="d-flex w-100 align-items-center justify-content-between">
+							<strong class="mb-1">Gabriel Rzecznik</strong>
+							<small>Lunes</small>
+							</div>
+							<div class="col-10 mb-1 small">
+								Hola, buenos días!
+							</div>
+						</a>
+						<a href="#" class="py-3 lh-sm item-chat">
+						<div class="d-flex w-100 align-items-center justify-content-between">
+							<strong class="mb-1">Gabriel Rzecznik</strong>
+							<small>Lunes</small>
+							</div>
+							<div class="col-10 mb-1 small">
+								Hola, buenos días!
+							</div>
+						</a>
+						</div>
+					</div>
+				</main>
+			</div>
+			<div class="col-md-8 bg-light border rounded-3 contenedores main">
+
+
+				<div class="flex-shrink-1 dropdown">
+					<span href="#" class="boton-opciones-chat" id="dropdownOption1" data-bs-toggle="dropdown" aria-expanded="false">
+						<span class="" data-bs-dismiss="modal2" aria-label="Close"><i class="bi bi-three-dots-vertical"></i></span>
+					</span>
+					
+					<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownOption1">
+						<li><a class="dropdown-item" href="#" id="conf">Ver perfil</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#" id="conf">Borrar chat</a></li>
+					</ul>
+				</div>
+
+				<h5><b>Gabriel Rzecznik</b> / @gabriel1999</h5>
+				<hr>
+				
+				<div class="contenedor-chat">
+
+				</div>
+
+				<hr>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Escribe algo..." aria-describedby="button-addon2">
+					<button class="btn btn-primary" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16"><path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/></svg></button>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
 	<script src="../model/js/ajaxBackupProvincias.js"></script>
 	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
 	
