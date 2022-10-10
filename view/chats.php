@@ -70,29 +70,54 @@
 				
 				<div class="contenedor-chat">
 					<!--Mensaje Enviado-->
-					<div class="mensajeEnviado">
-						<div class="contenidoMensajeEnviado">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-							<div class="horaMensajeEnviado">23:56</div>
+					<div class="mensajeEspacio">
+						<div class="mensajeEnviado">
+							<div class="contenidoMensajeEnviado">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+								<div class="horaMensajeEnviado">23:56</div>
+							</div>
 						</div>
 					</div>
-					<div class="mensajeEnviado">
-						<div class="contenidoMensajeEnviado">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-							<div class="horaMensajeEnviado">23:56</div>
+					<div class="mensajeEspacio">
+						<div class="mensajeEnviado">
+							<div class="contenidoMensajeEnviado">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+								<div class="horaMensajeEnviado">23:56</div>
+							</div>
 						</div>
 					</div>
 					<!--Mensaje Recibidos-->
-					<div class="mensajeRecibido">
-						<div class="contenidoMensajeRecibido">
-							Hola, buenos dias!
-							<div class="horaMensajeRecibido">23:56</div>
+					<div class="mensajeEspacio">
+						<div class="mensajeRecibido">
+							<div class="contenidoMensajeRecibido">
+								Hola, buenos dias!
+								<div class="horaMensajeRecibido">23:56</div>
+							</div>
 						</div>
 					</div>
-					<div class="mensajeRecibido">
-						<div class="contenidoMensajeRecibido">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-							<div class="horaMensajeRecibido">23:56</div>
+					<div class="mensajeEspacio">
+						<div class="mensajeRecibido">
+							<div class="contenidoMensajeRecibido">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+								<div class="horaMensajeRecibido">23:56</div>
+							</div>
+						</div>
+					</div>
+					<!--Mensaje Enviado-->
+					<div class="mensajeEspacio">
+						<div class="mensajeEnviado">
+							<div class="contenidoMensajeEnviado">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+								<div class="horaMensajeEnviado">23:56</div>
+							</div>
+						</div>
+					</div>
+					<div class="mensajeEspacio">
+						<div class="mensajeEnviado">
+							<div class="contenidoMensajeEnviado">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+								<div class="horaMensajeEnviado">23:56</div>
+							</div>
 						</div>
 					</div>
 				</div>
