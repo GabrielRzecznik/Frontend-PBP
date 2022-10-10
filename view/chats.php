@@ -70,22 +70,34 @@
 				
 				<div class="contenedor-chat">
 					<!--Mensaje Enviado-->
-					<span class="mensajeEnviado">
+					<div class="mensajeEnviado">
 						<div class="contenidoMensajeEnviado">
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
 							<div class="horaMensajeEnviado">23:56</div>
 						</div>
-						
-					</span>
-					<!--Mensaje Recibido
-					<span class="mensajeEnviado">
-						<span id="fotoTercero"><i class="bi bi-person-circle fotoPerfil"></i></span>
-						<span>
-
-						</span>
-						<br>
-					</span>-->
+					</div>
+					<div class="mensajeEnviado">
+						<div class="contenidoMensajeEnviado">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+							<div class="horaMensajeEnviado">23:56</div>
+						</div>
+					</div>
+					<!--Mensaje Recibidos-->
+					<div class="mensajeRecibido">
+						<div class="contenidoMensajeRecibido">
+							Hola, buenos dias!
+							<div class="horaMensajeRecibido">23:56</div>
+						</div>
+					</div>
+					<div class="mensajeRecibido">
+						<div class="contenidoMensajeRecibido">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+							<div class="horaMensajeRecibido">23:56</div>
+						</div>
+					</div>
 				</div>
+
+				
 
 				<hr>
 				<div class="input-group">
