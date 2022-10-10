@@ -61,6 +61,7 @@ function buscarConfGrillaProf(){
                         $slotMinTime = '00:00';
                         $slotMaxTime = '24:00';
                     }*/
+                    
                     gestorMostrarGrilla(parametro);
                    
                 }else if (xmlhttp.status == 500) {                

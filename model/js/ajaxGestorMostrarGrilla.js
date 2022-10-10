@@ -422,5 +422,8 @@ function gestorMostrarGrilla($nombreUsuario){
     console.log(formJSON);
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Pacientes/buscarEventos',false);
     xmlhttp.send(formJSON);
+
+
+
 }
 
