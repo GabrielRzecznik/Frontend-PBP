@@ -35,7 +35,7 @@
 			<br>
 			<span class="botonesPerfil" id="botonesPerfil">
 				<span id="botonGrilla"></span>
-				<button type="button" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</button>
+				<span id="botonChat"></span>
 			</span>
 		</div>
 		<div class="row">
