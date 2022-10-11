@@ -1,6 +1,6 @@
 function crearSolicitud(seleccionConsulta, obraSocialSolicitud, horaDesdeSolicitud, horaHastaSolicitud, id_paciente, profesional){
     var formJSON=JSON.stringify({"seleccionConsulta":seleccionConsulta, "obraSocialSolicitud":obraSocialSolicitud, "horaDesdeSolicitud":horaDesdeSolicitud, "horaHastaSolicitud":horaHastaSolicitud, "id_paciente":id_paciente, "profesional":profesional});
-    console.log(formJSON);
+
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
@@ -8,7 +8,13 @@ function crearSolicitud(seleccionConsulta, obraSocialSolicitud, horaDesdeSolicit
                 document.getElementById('confirmarSolicitud').style.display = 'block';
                 document.getElementById('confSoliCarg').style.display = 'none';
                 alert("¡Solicitud enviada con exito!");
-                location.reload();
+                
+                var data=JSON.parse(xmlhttp.responseText);
+                $id_solicitud = data;
+                
+                //Enviar Notificación
+                enviarNotificacion($id_solicitud);
+                //location.reload();
             }else{
                 document.getElementById('confirmarSolicitud').style.display = 'block';
                 document.getElementById('confSoliCarg').style.display = 'none';
