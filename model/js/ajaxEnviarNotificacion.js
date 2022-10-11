@@ -1,8 +1,9 @@
 function enviarNotificacion(id_evento, tipoNoti){
+    //Armar switch
     if (tipoNoti == "Solicitud recibida") {
         var formJSON=JSON.stringify({"id_solicitud":id_evento, "tipoNoti":tipoNoti});
     }
-
+    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function

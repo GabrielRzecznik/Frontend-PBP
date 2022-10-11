@@ -261,6 +261,9 @@
 	<script src="../controller/js/cancelarTurno.js"></script>
     <script src="../model/js/ajaxCancelarTurno.js"></script>
 
+	<!--Notificaciones-->
+	<script src="../model/js/ajaxEnviarNotificacion.js"></script>
+
 	<!--Datos del Profesional-->
 	<script src="../model/js/ajaxBuscarPerfil.js"></script>
 

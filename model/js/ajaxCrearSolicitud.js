@@ -13,7 +13,8 @@ function crearSolicitud(seleccionConsulta, obraSocialSolicitud, horaDesdeSolicit
                 $id_solicitud = data;
                 
                 //Enviar Notificación
-                enviarNotificacion($id_solicitud);
+                $tipoNoti = "Solicitud recibida";
+                enviarNotificacion($id_solicitud, $tipoNoti);
                 //location.reload();
             }else{
                 document.getElementById('confirmarSolicitud').style.display = 'block';
