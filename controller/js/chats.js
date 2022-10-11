@@ -35,22 +35,21 @@ formularioEnviarMensaje.addEventListener('submit', (e) => {
     if ($mensajeValue !== "") {
         
         $id_chat = 0;
-        $usuario = "paciente";
+        $rol = "Paciente";
 
         //El usuario es el paciente o el profesional del chat?
-        if ($usuario == "paciente") {
+        if ($rol == "Paciente") {
             $paciente = localStorage.getItem("id_paciente");
             $profesional = chatPorHash;
-        }if ($usuario == "profesional") {
+        }if ($rol == "Profesional") {
             $paciente = chatPorHash;
             $profesional = localStorage.getItem("id_profesional");
         }
 
-
         let date = new Date();
-        $fecha = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
+        $fecha = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
 
-        enviarMensaje($id_chat, $paciente, $profesional, $fecha, formularioEnviarMensaje);
+        enviarMensaje($id_chat, $paciente, $profesional, $rol, $fecha, formularioEnviarMensaje);
     }
 });
 //#endregion

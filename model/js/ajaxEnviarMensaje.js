@@ -1,18 +1,21 @@
-function enviarMensaje(id_chat, usuario1, usuario2, ){
-    var formJSON=JSON.stringify({"seleccionConsulta":seleccionConsulta, "obraSocialSolicitud":obraSocialSolicitud, "horaDesdeSolicitud":horaDesdeSolicitud, "horaHastaSolicitud":horaHastaSolicitud, "id_paciente":id_paciente, "profesional":profesional});
+function enviarMensaje(id_chat, paciente, profesional, rol, fecha, formularioEnviarMensaje){
+    var formData= new FormData(formularioEnviarMensaje);
+    formData.append("id_cha", id_chat);
+    formData.append("id_pacMen", paciente);
+    formData.append("id_proMen", profesional);
+    formData.append("rol", rol);
+    formData.append("fecha", fecha);
+    var formJSON=JSON.stringify(Object.fromEntries(formData));
+   
     console.log(formJSON);
+    
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                document.getElementById('confirmarSolicitud').style.display = 'block';
-                document.getElementById('confSoliCarg').style.display = 'none';
-                alert("¡Solicitud enviada con exito!");
-                location.reload();
+               
             }else{
-                document.getElementById('confirmarSolicitud').style.display = 'block';
-                document.getElementById('confSoliCarg').style.display = 'none';
-                alert("¡Ocurrio un error inesperado!");
+                
             }
         }
     }

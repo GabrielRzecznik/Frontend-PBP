@@ -246,5 +246,9 @@
 	<script src="../model/js/ajaxConfirmarContraseña.js"></script>
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
+
+	<!--Enviar Mensaje-->
+	<script src="../model/js/ajaxEnviarMensaje.js"></script>
+
 </body>
 </html>
