@@ -1,8 +1,8 @@
 parametro = null;
 
 //Iniciar desde un chat determinado
-let chat = location.hash;
-chat = chat.slice(1);
+let chatPorHash = location.hash;
+chatPorHash = chatPorHash.slice(1);
 
 
 
@@ -33,9 +33,26 @@ formularioEnviarMensaje.addEventListener('submit', (e) => {
     $mensajeValue = document.getElementById('mensaje').value;
     
     if ($mensajeValue !== "") {
-        document.getElementById('mensaje').value = "";
+        
+        $id_chat = 0;
+        $usuario = "paciente";
+
+        //El usuario es el paciente o el profesional del chat?
+        if ($usuario == "paciente") {
+            $paciente = localStorage.getItem("id_paciente");
+            $profesional = chatPorHash;
+        }if ($usuario == "profesional") {
+            $paciente = chatPorHash;
+            $profesional = localStorage.getItem("id_profesional");
+        }
+
+
+        let date = new Date();
+        $fecha = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
+
+        enviarMensaje($id_chat, $paciente, $profesional, $fecha, formularioEnviarMensaje);
     }
-}); 
+});
 //#endregion
 
 
