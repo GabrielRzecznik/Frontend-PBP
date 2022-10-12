@@ -23,5 +23,5 @@ function ModalCancelarHorario(id_proHorario, infoDesdeHorario, infoHastaHorario)
 }
 
 document.getElementById("cancelar-horario").addEventListener("click", function () {
-    deshabilitarHorario(id_proHorario, infoDesdeHorario, infoHastaHorario);
+    deshabilitarHorario($id_proHorario, $infoDesdeHorario, $infoHastaHorario);
 });
