@@ -1,6 +1,6 @@
-id_proHorario = null;
-infoDesdeHorario = null;
-infoHastaHorario = null;
+$id_proHorario = null;
+$infoDesdeHorario = null;
+$infoHastaHorario = null;
 
 function ModalCancelarHorario(id_proHorario, infoDesdeHorario, infoHastaHorario) {//Pasar 3 parametros
     //Abrir Modal - Cancelar Horario
@@ -17,6 +17,9 @@ function ModalCancelarHorario(id_proHorario, infoDesdeHorario, infoHastaHorario)
         myModal3.hide();
     });
      
+    $id_proHorario = id_proHorario;
+    $infoDesdeHorario = infoDesdeHorario;
+    $infoHastaHorario = infoHastaHorario;
 }
 
 document.getElementById("cancelar-horario").addEventListener("click", function () {
