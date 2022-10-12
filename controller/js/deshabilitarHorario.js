@@ -13,7 +13,8 @@ function ModalCancelarHorario(id_proHorario, infoDesdeHorario, infoHastaHorari) 
         myModal3.hide();
     });
      
-    document.getElementById("cancelar-horario").addEventListener("click", function () {
-        deshabilitarHorario(id_proHorario, infoDesdeHorario, infoHastaHorari);
-    });
 }
+
+document.getElementById("cancelar-horario").addEventListener("click", function () {
+    deshabilitarHorario(id_proHorario, infoDesdeHorario, infoHastaHorari);
+});
