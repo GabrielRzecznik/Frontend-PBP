@@ -1,7 +1,7 @@
 function enviarNotificacion(id_evento, tipoNoti){
     //Armar switch
     if (tipoNoti == "Solicitud recibida") {
-        var formJSON=JSON.stringify({"id_solicitud":id_evento, "tipoNoti":tipoNoti});
+        var formJSON=JSON.stringify({"id_evento":id_evento, "tipoNoti":tipoNoti});
     }
     console.log(formJSON);
 
