@@ -8,6 +8,14 @@ function cancelarTurno(id_turno){
             if (xmlhttp.status == 200) {
                 //document.getElementById('confirmarSolicitud').style.display = 'block';
                 //document.getElementById('confSoliCarg').style.display = 'none';
+                if ($cancelador == "paciente") {
+                    $tipoNoti = "Turno cancelada por paciente";
+                    enviarNotificacion(id_solicitud, $tipoNoti);
+                }if ($cancelador == "profesional") {
+                    $tipoNoti = "Turno cancelada por profesional";
+                    enviarNotificacion(id_solicitud, $tipoNoti);
+                }
+                
                 alert("Turno cancelado con exito!");
                 location.reload();
             }else{
