@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../view/css/perfil.css">
 	<link rel="stylesheet" href="../view/css/navegador.css">
     <!--<link rel="icon" href="./favicon.ico">-->
-    <title>Inicio - Profesional By Proximity</title>
+    <title>Perfil - Profesional By Proximity</title>
 </head>
 <body class="mostrarPagina" id="mostrar">
 	<?php

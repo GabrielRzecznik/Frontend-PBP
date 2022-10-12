@@ -26,7 +26,7 @@
 				<span class="w-100 me-2 derecha">
 					<ul class="ulNav">
 						<li class="liNav">
-							<a class="nav-link noSeleccionado" href="https://frontend-pbp.herokuapp.com/view/notificaciones.html"><i class="bi bi-bell-fill"></i></a><!--Icono Notificaciones-->
+							<a class="nav-link noSeleccionado" href="../view/notificaciones.php"><i class="bi bi-bell-fill"></i></a><!--Icono Notificaciones-->
 						</li>
 						<li class="liNav">
 							<a class="nav-link noSeleccionado" href="./chats.php"><i class="bi bi-chat-square-text-fill"></i></a><!--Icono Chat-->
