@@ -8,8 +8,15 @@ function cancelarSolicitud(id_solicitud){
             if (xmlhttp.status == 200) {
                 //document.getElementById('confirmarSolicitud').style.display = 'block';
                 //document.getElementById('confSoliCarg').style.display = 'none';
+                if (respuesta == "Aceptada") {
+                    $tipoNoti = "Solicitud cancelada por paciente";
+                    enviarNotificacion(id_solicitud, $tipoNoti);
+                }else{
+                    $tipoNoti = "Solicitud cancelada por profesional";
+                    enviarNotificacion(id_solicitud, $tipoNoti);
+                }
                 alert("¡Solicitud cancelada con exito!");
-                location.reload();
+                //location.reload();
             }else{
                 //document.getElementById('confirmarSolicitud').style.display = 'block';
                 //document.getElementById('confSoliCarg').style.display = 'none';
