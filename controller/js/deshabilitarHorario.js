@@ -1,4 +1,8 @@
-function ModalCancelarHorario(id_proHorario, infoDesdeHorario, infoHastaHorari) {//Pasar 3 parametros
+id_proHorario = null;
+infoDesdeHorario = null;
+infoHastaHorario = null;
+
+function ModalCancelarHorario(id_proHorario, infoDesdeHorario, infoHastaHorario) {//Pasar 3 parametros
     //Abrir Modal - Cancelar Horario
     var myModal3 = new bootstrap.Modal(
       document.getElementById("ventana-modal-cancelar-horario")
@@ -16,5 +20,5 @@ function ModalCancelarHorario(id_proHorario, infoDesdeHorario, infoHastaHorari) 
 }
 
 document.getElementById("cancelar-horario").addEventListener("click", function () {
-    deshabilitarHorario(id_proHorario, infoDesdeHorario, infoHastaHorari);
+    deshabilitarHorario(id_proHorario, infoDesdeHorario, infoHastaHorario);
 });
