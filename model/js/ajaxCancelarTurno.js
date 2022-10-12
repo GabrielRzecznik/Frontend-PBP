@@ -10,10 +10,10 @@ function cancelarTurno(id_turno){
                 //document.getElementById('confSoliCarg').style.display = 'none';
                 if ($cancelador == "paciente") {
                     $tipoNoti = "Turno cancelada por paciente";
-                    enviarNotificacion(id_solicitud, $tipoNoti);
+                    enviarNotificacion(id_turno, $tipoNoti);
                 }if ($cancelador == "profesional") {
                     $tipoNoti = "Turno cancelada por profesional";
-                    enviarNotificacion(id_solicitud, $tipoNoti);
+                    enviarNotificacion(id_turno, $tipoNoti);
                 }
                 
                 alert("Turno cancelado con exito!");
