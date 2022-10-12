@@ -15,6 +15,6 @@ function enviarNotificacion(id_evento, tipoNoti){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Notificacion/enviarNotificacion',true);
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Notificaciones/enviarNotificacion',true);
     xmlhttp.send(formJSON);
 }
