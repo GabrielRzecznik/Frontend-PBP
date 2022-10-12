@@ -12,11 +12,15 @@ function responderSolicitud(id_solicitud, respuesta){
                 //document.getElementById('confirmarSolicitud').style.display = 'block';
                 //document.getElementById('confSoliCarg').style.display = 'none';
                 if (respuesta == "Aceptada") {
+                    $tipoNoti = "Solicitud aceptada";
+                    enviarNotificacion(id_solicitud, $tipoNoti);
                     alert("¡Solicitud aceptada con exito!");
                 }else{
+                    $tipoNoti = "Solicitud rechazada";
+                    enviarNotificacion(id_solicitud, $tipoNoti);
                     alert("¡Solicitud rechazada con exito!");
                 }
-                location.reload();
+                //location.reload();
             }else{
                 //document.getElementById('confirmarSolicitud').style.display = 'block';
                 //document.getElementById('confSoliCarg').style.display = 'none';
