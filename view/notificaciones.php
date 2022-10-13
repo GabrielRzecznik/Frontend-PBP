@@ -23,28 +23,7 @@
 	<div class="container contenedor bg-light border rounded-3">
 		<h5><b>Notificaciones</b></h5>
 		<hr>
-		<div class="alert alert-success" role="alert">
-			<i class="bi bi-calendar2-plus-fill margen-derecho"></i>
-			<span clas="hr"></span>
-			<b>Solicitud recibida: </b>
-			El paciente Gabriel Rzecznik te a enviado una solicitud de modalidad consultorio y de caracter particular, el día jueves 13 de octubre del 2022 desde las 11:50 hasta las 12:25
-		</div>
-		<div class="alert alert-warning" role="alert">
-			<i class="bi bi-calendar2-x-fill margen-derecho"></i>
-			<b>Solicitud cancelada</b>
-		</div>
-		<div class="alert alert-success" role="alert">
-			<i class="bi bi-calendar2-check-fill margen-derecho"></i>
-			<b>Solicitud aceptada</b>
-		</div>
-		<div class="alert alert-danger" role="alert">
-			<i class="bi bi-calendar2-x-fill margen-derecho"></i>
-			<b>Solicitud rechazada</b>
-		</div>
-		<div class="alert alert-danger" role="alert">
-			<i class="bi bi-calendar2-x-fill margen-derecho"></i>
-			<b>Turno cancelado</b>
-		</div>
+		<span id="notificaciones"></span>
 	</div>
 
 	<br>
@@ -52,6 +31,7 @@
 	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
 	
 	
+	<script src="../model/js/ajaxBuscarNotificaciones.js"></script>
     <script src="../controller/js/notificaciones.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	
