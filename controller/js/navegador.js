@@ -77,7 +77,7 @@ document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 
 setTimeout(function(){
     buscarProvincias();
-}, 0500);
+}, 1000);
 
 if (localStorage["departamento"] != "") {
     document.getElementById('iconoDepartamento').classList.add('signo','bi-check-circle-fill','noValidado');
