@@ -283,4 +283,6 @@ function armadoFullCalendar() {
     slotMaxTime: '24:00:00'
     });
     calendar.render();
+    
+    cargarNavegador();
 }

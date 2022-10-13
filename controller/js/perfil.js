@@ -19,5 +19,3 @@ let botonChat = document.getElementById('botonChat');
 
 botonChat.innerHTML = '<a href="../view/chats.php#'+parametro+'" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</a>';
 
-//Acceso externo al navegador para edición de perfil
-$accesoPerfil = true;

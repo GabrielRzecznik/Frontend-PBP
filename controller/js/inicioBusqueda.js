@@ -81,5 +81,6 @@ formularioP.addEventListener('submit', (e) => {
 
 parametro = null;
 
+cargarNavegador();
 
 

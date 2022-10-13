@@ -1,4 +1,5 @@
-//Verificar si hay logueo
+function cargarNavegador() {
+   //Verificar si hay logueo
 if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUsuario") == null) {
     window.location.href = "../";
 }else{
@@ -75,9 +76,8 @@ document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 //Setear inputs - Editar Paciente/Perfil
 //
 
-setTimeout(function(){
-    buscarProvincias();
-}, 1000);
+buscarProvincias();
+
 
 if (localStorage["departamento"] != "") {
     document.getElementById('iconoDepartamento').classList.add('signo','bi-check-circle-fill','noValidado');
@@ -1228,4 +1228,7 @@ const APP = {
 
 document.addEventListener('DOMContentLoaded', APP.init);
 //#endregion
+
+ 
+}
 

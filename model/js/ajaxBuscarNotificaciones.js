@@ -68,8 +68,8 @@ function buscarNotificaciones(){
 
                         arrayNotificaciones.push(data[i]["id_notificacion"]);
                     }
-
-                    notificacionesVistas(arrayNotificaciones);
+                    cargarNavegador();
+                    //notificacionesVistas(arrayNotificaciones);
                 }
             }else{
                 console.log("Ocurrio un error inesperado al cargar las notificaciones");
