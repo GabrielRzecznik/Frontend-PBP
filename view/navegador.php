@@ -28,11 +28,7 @@
 						<li class="liNav">
 							<a class="nav-link noSeleccionado" id="no" href="../view/notificaciones.php">
 								<i class="bi bi-bell-fill">
-									<span id="contNoti">
-										<span class="position-absolute top-1 start-10 translate-middle badge rounded-pill bg-danger">
-											8
-										</span>
-									</span>
+									
 								</i>
 							</a><!--Icono Notificaciones-->
 						</li>
