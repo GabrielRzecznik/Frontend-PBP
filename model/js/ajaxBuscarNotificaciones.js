@@ -34,21 +34,21 @@ function buscarNotificaciones(){
                                 break;
                             case "Solicitud cancelada":
                                 notificaciones.innerHTML += '<div class="tamaño-letra alert alert-warning" role="alert">' +
-                                    '<i class="bi bi-calendar2-plus-fill margen-derecho"></i>' +
+                                    '<i class="bi bi-calendar2-x-fill margen-derecho"></i>' +
                                     '<b>Solicitud cancelada </b>' +
                                     '<span>'+data[i]["descripcionNoti"]+'</span>' +
                                 '</div>';
                                 break;
                             case "Solicitud aceptada":
                                 notificaciones.innerHTML += '<div class="tamaño-letra alert alert-success" role="alert">' +
-                                    '<i class="bi bi-calendar2-plus-fill margen-derecho"></i>' +
+                                    '<i class="bi bi-calendar2-check-fill margen-derecho"></i>' +
                                     '<b>Solicitud aceptada </b>' +
                                     '<span>'+data[i]["descripcionNoti"]+'</span>' +
                                 '</div>';
                                 break;
                             case "Solicitud rechazada":
                                 notificaciones.innerHTML += '<div class="tamaño-letra alert alert-danger" role="alert">' +
-                                    '<i class="bi bi-calendar2-plus-fill margen-derecho"></i>' +
+                                    '<i class="bi bi-calendar2-x-fill margen-derecho"></i>' +
                                     '<b>Solicitud rechazada </b>' +
                                     '<span>'+data[i]["descripcionNoti"]+'</span>' +
                                 '</div>';
