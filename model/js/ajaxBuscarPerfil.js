@@ -11,6 +11,8 @@ function buscarPerfil($nombreUsuario){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
+                buscarProvincias();
+                
                 var data=JSON.parse(xmlhttp.responseText);
                 //Datos Usuario
                 if (data[0]["id_usuario"] == localStorage.getItem("id_usuario")) {
