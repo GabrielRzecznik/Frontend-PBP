@@ -20,7 +20,7 @@ function buscarNotificaciones(){
                 notificaciones.innerHTML = '';
 
                 if (data == "") {
-                    notificaciones.innerHTML = '<i class="bi bi-file-earmark-medical centrarMensaje"> No se encontraron notificaciones.</i>';
+                    notificaciones.innerHTML = '<div class="centrar-texto"><i class="bi bi-bell-slash-fill"></i> Aun no tiene notificaciones</i></div>';
                 }else{
                     //Creación de cartas profesionales
                     for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach

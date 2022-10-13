@@ -23,7 +23,9 @@
 	<div class="container contenedor bg-light border rounded-3">
 		<h6><b>Notificaciones</b></h6>
 		<hr>
-		<span id="notificaciones"></span>
+		<span id="notificaciones">
+			<div class="loader"></div>
+		</span>
 	</div>
 
 	<br>
