@@ -30,18 +30,31 @@ document.getElementById("irMiPerfil").addEventListener("click", function() {
 function cargarNavegador(pestaña) {
     buscarProvincias();
     
-    if (pestaña = "notificaciones") {
+    if (pestaña == "Notificaciones") {
         document.getElementById('in').classList.remove("seleccionado");
         document.getElementById('in').classList.add("noSeleccionado");
         document.getElementById('no').classList.add("seleccionado");
         document.getElementById('no').classList.remove("noSeleccionado");
+        document.getElementById('ch').classList.remove("seleccionado");
+        document.getElementById('ch').classList.add("noSeleccionado");
     }
 
-    if (pestaña = "Inicio") {
+    if (pestaña == "Inicio") {
         document.getElementById('in').classList.add("seleccionado");
         document.getElementById('in').classList.remove("noSeleccionado");
         document.getElementById('no').classList.remove("seleccionado");
         document.getElementById('no').classList.add("noSeleccionado");
+        document.getElementById('ch').classList.remove("seleccionado");
+        document.getElementById('ch').classList.add("noSeleccionado");
+    }
+
+    if (pestaña == "Chat") {
+        document.getElementById('in').classList.remove("seleccionado");
+        document.getElementById('in').classList.add("noSeleccionado");
+        document.getElementById('no').classList.remove("seleccionado");
+        document.getElementById('no').classList.add("noSeleccionado");
+        document.getElementById('ch').classList.add("seleccionado");
+        document.getElementById('ch').classList.remove("noSeleccionado");
     }
 
     if (parametro == localStorage.getItem("nombreUsuario")) {
