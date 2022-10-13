@@ -1,4 +1,4 @@
-function cargarNavegador() {
+
    //Verificar si hay logueo
 if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUsuario") == null) {
     window.location.href = "../";
@@ -27,48 +27,69 @@ document.getElementById("irMiPerfil").addEventListener("click", function() {
     window.location.href = "../view/perfil.php?"+localStorage.getItem("nombreUsuario");
 });
 
-if (parametro == localStorage.getItem("nombreUsuario")) {
-    if ($accesoPerfil == true) {
-        //Ir a editar perfil
-        document.getElementById("ejecutarEditarPerfil").addEventListener("click", function() {
-            //Abrir Modal
-            var configuracion = new bootstrap.Modal(
-                document.getElementById("configuracion-modal")
-              );
-              configuracion.toggle();
-            
-            //Cerrar Modal
-            document.getElementById("cerrar").addEventListener("click", function () {
-                configuracion.hide();
-                //Tenia algo de solicitud, controlar despues
-            });
-        
-            //Boton acordion - Configuración perfil paciente
-            document.getElementById("confPerPac").classList.remove('collapsed');
-            document.getElementById("confPerPac").classList.add('accordion-button', 'rounded');
-            //Resetear acordion
-            document.getElementById("confUsu").classList.remove('accordion-button', 'rounded');
-            document.getElementById("confUsu").classList.add('accordion-button', 'collapsed', 'rounded');
-            
-            //Mostrar contenido - Configuración perfil paciente
-            document.getElementById("flush-collapseTwo").classList.add('show');
-            //Resetear contenidos
-            document.getElementById("flush-collapseOne").classList.remove('show');
-            
-            document.getElementById("ediPerfil").classList.add('show');
-            
-            document.getElementById("ediUsu").classList.remove('show');
-            document.getElementById("desUsu").classList.remove('show');
-            
-            if (localStorage.getItem("id_profesional") != "" && localStorage.getItem("estadoProfesional") != "Activo") {
-                document.getElementById("confPro").classList.remove('accordion-button', 'rounded');
-                document.getElementById("confPro").classList.add('accordion-button', 'collapsed', 'rounded');
-                
-                document.getElementById("flush-collapseThree").classList.remove('show');
-            }
-        });
+function cargarNavegador(pestaña) {
+    buscarProvincias();
+    
+    if (pestaña = "notificaciones") {
+        document.getElementById('in').classList.remove("seleccionado");
+        document.getElementById('in').classList.add("noSeleccionado");
+        document.getElementById('no').classList.add("seleccionado");
+        document.getElementById('no').classList.remove("noSeleccionado");
     }
+
+    if (pestaña = "Inicio") {
+        document.getElementById('in').classList.add("seleccionado");
+        document.getElementById('in').classList.remove("noSeleccionado");
+        document.getElementById('no').classList.remove("seleccionado");
+        document.getElementById('no').classList.add("noSeleccionado");
+    }
+
+    if (parametro == localStorage.getItem("nombreUsuario")) {
+        if ($accesoPerfil == true) {
+            //Ir a editar perfil
+            document.getElementById("ejecutarEditarPerfil").addEventListener("click", function() {
+                //Abrir Modal
+                var configuracion = new bootstrap.Modal(
+                    document.getElementById("configuracion-modal")
+                  );
+                  configuracion.toggle();
+                
+                //Cerrar Modal
+                document.getElementById("cerrar").addEventListener("click", function () {
+                    configuracion.hide();
+                    //Tenia algo de solicitud, controlar despues
+                });
+            
+                //Boton acordion - Configuración perfil paciente
+                document.getElementById("confPerPac").classList.remove('collapsed');
+                document.getElementById("confPerPac").classList.add('accordion-button', 'rounded');
+                //Resetear acordion
+                document.getElementById("confUsu").classList.remove('accordion-button', 'rounded');
+                document.getElementById("confUsu").classList.add('accordion-button', 'collapsed', 'rounded');
+                
+                //Mostrar contenido - Configuración perfil paciente
+                document.getElementById("flush-collapseTwo").classList.add('show');
+                //Resetear contenidos
+                document.getElementById("flush-collapseOne").classList.remove('show');
+                
+                document.getElementById("ediPerfil").classList.add('show');
+                
+                document.getElementById("ediUsu").classList.remove('show');
+                document.getElementById("desUsu").classList.remove('show');
+                
+                if (localStorage.getItem("id_profesional") != "" && localStorage.getItem("estadoProfesional") != "Activo") {
+                    document.getElementById("confPro").classList.remove('accordion-button', 'rounded');
+                    document.getElementById("confPro").classList.add('accordion-button', 'collapsed', 'rounded');
+                    
+                    document.getElementById("flush-collapseThree").classList.remove('show');
+                }
+            });
+        }
+    }
+    
 }
+
+
 
 //Setear inputs - Editar Usuario
 document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
@@ -76,8 +97,7 @@ document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 //Setear inputs - Editar Paciente/Perfil
 //
 
-buscarProvincias();
-
+//buscarProvincias();
 
 if (localStorage["departamento"] != "") {
     document.getElementById('iconoDepartamento').classList.add('signo','bi-check-circle-fill','noValidado');
@@ -1229,6 +1249,4 @@ const APP = {
 document.addEventListener('DOMContentLoaded', APP.init);
 //#endregion
 
- 
-}
 

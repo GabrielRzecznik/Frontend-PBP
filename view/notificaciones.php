@@ -39,13 +39,13 @@
 	
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../controller/js/navegador.js"></script>
-	
 	<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
 	<script src="../model/js/ajaxEditarUsuario.js"></script>
 	<script src="../model/js/ajaxEditarPaciente.js"></script>
 	<script src="../model/js/ajaxConfirmarContraseña.js"></script>
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
+	
     
 </body>
 </html>

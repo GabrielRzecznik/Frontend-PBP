@@ -68,7 +68,9 @@ function buscarNotificaciones(){
 
                         arrayNotificaciones.push(data[i]["id_notificacion"]);
                     }
-                    cargarNavegador();
+
+                    $pestaña = "Notificaciones";
+                    cargarNavegador($pestaña);
                     //notificacionesVistas(arrayNotificaciones);
                 }
             }else{

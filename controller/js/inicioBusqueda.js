@@ -81,6 +81,8 @@ formularioP.addEventListener('submit', (e) => {
 
 parametro = null;
 
-cargarNavegador();
+$pestaña = "Inicio";
+
+cargarNavegador($pestaña);
 
 

@@ -26,13 +26,21 @@
 				<span class="w-100 me-2 derecha">
 					<ul class="ulNav">
 						<li class="liNav">
-							<a class="nav-link noSeleccionado" href="../view/notificaciones.php"><i class="bi bi-bell-fill"></i></a><!--Icono Notificaciones-->
+							<a class="nav-link noSeleccionado" id="no" href="../view/notificaciones.php">
+								<i class="bi bi-bell-fill">
+									<span id="contNoti">
+										<span class="position-absolute top-1 start-10 translate-middle badge rounded-pill bg-danger">
+											8
+										</span>
+									</span>
+								</i>
+							</a><!--Icono Notificaciones-->
 						</li>
 						<li class="liNav">
-							<a class="nav-link noSeleccionado" href="./chats.php"><i class="bi bi-chat-square-text-fill"></i></a><!--Icono Chat-->
+							<a class="nav-link noSeleccionado" id="ch" href="./chats.php"><i class="bi bi-chat-square-text-fill"></i></a><!--Icono Chat-->
 						</li>
 						<li class="liNav">
-							<a class="nav-link seleccionado" aria-current="page" href="../view/inicioBusqueda.php"><i class="bi bi-house-fill"></i></a><!--Icono Inicio-->
+							<a class="nav-link noSeleccionado" id="in" aria-current="page" href="../view/inicioBusqueda.php"><i class="bi bi-house-fill"></i></a><!--Icono Inicio-->
 						</li>
 					</ul>
 				</span>
