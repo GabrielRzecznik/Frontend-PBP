@@ -25,11 +25,6 @@
 }
 
 @media (max-width: 550px) { 
-   .nombreSitio{
-      font-size: 12px;
-      top: 7px;
-   }
-
    .logoUsuario {
       display: none;
     }
