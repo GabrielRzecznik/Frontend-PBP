@@ -16,7 +16,7 @@ function buscarNotificaciones(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
-                
+                console.log(data);
                 notificaciones.innerHTML = '';
 
                 if (data == "") {
@@ -28,35 +28,36 @@ function buscarNotificaciones(){
                             case "Solicitud recibida":
                                 notificaciones.innerHTML += '<div class="alert alert-success" role="alert">' +
                                     '<i class="bi bi-calendar2-plus-fill margen-derecho"></i>' +
-                                    '<b>Solicitud recibida</b>' +
+                                    '<b>Solicitud recibida </b>' +
                                     '<span>'+data[i]["descripcionNoti"]+'</span>' +
                                 '</div>';
                                 break;
                             case "Solicitud cancelada":
                                 notificaciones.innerHTML += '<div class="alert alert-warning" role="alert">' +
                                     '<i class="bi bi-calendar2-plus-fill margen-derecho"></i>' +
-                                    '<b>Solicitud cancelada</b>' +
+                                    '<b>Solicitud cancelada </b>' +
                                     '<span>'+data[i]["descripcionNoti"]+'</span>' +
                                 '</div>';
                                 break;
                             case "Solicitud aceptada":
                                 notificaciones.innerHTML += '<div class="alert alert-success" role="alert">' +
                                     '<i class="bi bi-calendar2-plus-fill margen-derecho"></i>' +
-                                    '<b>Solicitud aceptada</b>' +
+                                    '<b>Solicitud aceptada </b>' +
                                     '<span>'+data[i]["descripcionNoti"]+'</span>' +
                                 '</div>';
                                 break;
                             case "Solicitud rechazada":
                                 notificaciones.innerHTML += '<div class="alert alert-danger" role="alert">' +
                                     '<i class="bi bi-calendar2-plus-fill margen-derecho"></i>' +
-                                    '<b>Solicitud rechazada</b>' +
+                                    '<b>Solicitud rechazada </b>' +
                                     '<span>'+data[i]["descripcionNoti"]+'</span>' +
                                 '</div>';
                                 break;
-                            case "Turno cancelado":
+                                case "Turno cancelado por paciente":
+                                case "Turno cancelado por profesional":
                                 notificaciones.innerHTML += '<div class="alert alert-danger" role="alert">' +
                                     '<i class="bi bi-calendar2-plus-fill margen-derecho"></i>' +
-                                    '<b>Turno cancelado</b>' +
+                                    '<b>Turno cancelado </b>' +
                                     '<span>'+data[i]["descripcionNoti"]+'</span>' +
                                 '</div>';
                                 break;
