@@ -76,6 +76,7 @@ function buscarNotificaciones(){
                     }
 
                     if ($vista) {
+                        console.log("Hola");
                         notificacionesVistas(arrayNotificaciones);
                     }
 
