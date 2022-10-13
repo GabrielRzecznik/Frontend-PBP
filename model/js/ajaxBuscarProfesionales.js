@@ -231,6 +231,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                 }
             }
         }
+        console.log(formJSON);
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Profesionales/buscarProfesionales',true);
         xmlhttp.send(formJSON);
     }

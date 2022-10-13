@@ -124,9 +124,9 @@ function buscarNotificaciones(){
                         notificacionesVistas(arrayNotificaciones);
                     }
 
-                    $pestaña = "Notificaciones";
-                    cargarNavegador($pestaña);
                 }
+                $pestaña = "Notificaciones";
+                cargarNavegador($pestaña);
             }else{
                 console.log("Ocurrio un error inesperado al cargar las notificaciones");
             }
