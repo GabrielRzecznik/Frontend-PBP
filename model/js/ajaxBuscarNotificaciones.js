@@ -24,6 +24,8 @@ function buscarNotificaciones(){
                     notificaciones.innerHTML = '<div class="centrar-texto"><i class="bi bi-bell-slash-fill"></i> Aun no tiene notificaciones</i></div>';
                 }else{
                     //Creación de cartas profesionales
+                    $vista = false;
+                    
                     for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
                         switch (data[i]["tipoNoti"]) {
                             case "Solicitud recibida":
@@ -66,12 +68,19 @@ function buscarNotificaciones(){
                                 break;
                         }
 
+                        if (data[i]["estadoNoti"] == "Pendiente") {
+                            $vista = true;
+                        }
+
                         arrayNotificaciones.push(data[i]["id_notificacion"]);
+                    }
+
+                    if ($vista) {
+                        notificacionesVistas(arrayNotificaciones);
                     }
 
                     $pestaña = "Notificaciones";
                     cargarNavegador($pestaña);
-                    //notificacionesVistas(arrayNotificaciones);
                 }
             }else{
                 console.log("Ocurrio un error inesperado al cargar las notificaciones");

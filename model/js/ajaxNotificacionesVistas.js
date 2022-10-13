@@ -12,7 +12,7 @@ function notificacionesVistas($arrayNotificaciones){
             }
         }
     }
-   
+
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Notificaciones/notificacionesVisualizadas',true);
     xmlhttp.send(formJSON);
 }
