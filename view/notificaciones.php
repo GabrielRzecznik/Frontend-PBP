@@ -21,7 +21,7 @@
 	?>
 
 	<div class="container contenedor bg-light border rounded-3">
-		<h5><b>Notificaciones</b></h5>
+		<h6><b>Notificaciones</b></h6>
 		<hr>
 		<span id="notificaciones"></span>
 	</div>
