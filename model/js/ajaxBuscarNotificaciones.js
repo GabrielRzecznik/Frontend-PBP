@@ -16,7 +16,8 @@ function buscarNotificaciones(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
-                console.log(data);
+                var arrayNotificaciones = [];
+
                 notificaciones.innerHTML = '';
 
                 if (data == "") {
@@ -64,7 +65,11 @@ function buscarNotificaciones(){
                             default:
                                 break;
                         }
+
+                        arrayNotificaciones.push(data[i]["id_notificacion"]);
                     }
+
+                    //notificacionesVistas(arrayNotificaciones);
                 }
             }else{
                 console.log("Ocurrio un error inesperado al cargar las notificaciones");
