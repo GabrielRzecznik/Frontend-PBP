@@ -28,7 +28,7 @@ document.getElementById("irMiPerfil").addEventListener("click", function() {
 });
 
 function cargarNavegador(pestaña) {
-    buscarProvincias();
+    notificacionesNuevas();
     
     if (pestaña == "Notificaciones") {
         document.getElementById('in').classList.remove("seleccionado");

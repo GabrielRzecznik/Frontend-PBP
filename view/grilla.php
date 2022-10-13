@@ -216,6 +216,7 @@
 	<!--Navegador-->
 	<script src="../model/js/ajaxBackupProvincias.js"></script>
 	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
+	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>
 	
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../controller/js/navegador.js"></script>

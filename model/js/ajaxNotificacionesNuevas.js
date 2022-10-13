@@ -16,7 +16,6 @@ function notificacionesNuevas(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
-
                 contNoti.innerHTML = '';
 
                 if (data == "") {
@@ -28,12 +27,14 @@ function notificacionesNuevas(){
 										    '</span>'+
 					                    '</span>';
                 }
+                buscarProvincias();
             }else{
                 console.log("Ocurrio un error inesperado al cargar las notificaciones");
+                buscarProvincias();
             }
         }
     }
    
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Notificaciones/buscarNotificaciones',true);
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Notificaciones/notificacionesNuevas',true);
     xmlhttp.send(formJSON);
 }

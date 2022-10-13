@@ -28,7 +28,8 @@
 						<li class="liNav">
 							<a class="nav-link noSeleccionado" id="no" href="../view/notificaciones.php">
 								<i class="bi bi-bell-fill">
-									
+									<span id="contNoti">
+									</span>
 								</i>
 							</a><!--Icono Notificaciones-->
 						</li>
