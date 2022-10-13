@@ -73,7 +73,12 @@ if (parametro == localStorage.getItem("nombreUsuario")) {
 document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 
 //Setear inputs - Editar Paciente/Perfil
-buscarProvincias();
+//
+
+setTimeout(function(){
+    buscarProvincias();
+}, 0500);
+
 if (localStorage["departamento"] != "") {
     document.getElementById('iconoDepartamento').classList.add('signo','bi-check-circle-fill','noValidado');
     document.getElementById('departamento').value = localStorage["departamento"];
