@@ -133,8 +133,8 @@ function gestorMostrarGrilla($nombreUsuario){
                             {
                                 id: eventos["id_horario"],
                                 title: "Horario no disponible",
-                                start: eventos["horaDesdeSolicitud"],
-                                end: eventos["horaHastaSolicitud"],
+                                start: eventos["horarioDesde"],
+                                end: eventos["horarioHasta"],
                                 backgroundColor: $color,
                                 borderColor: $borde
                             }
@@ -294,8 +294,11 @@ function gestorMostrarGrilla($nombreUsuario){
                                     eventosEnBaseDeDatos.forEach(function(elemento) {
                                         $hds = elemento.horaDesdeSolicitud;
                                         $hhs = elemento.horaHastaSolicitud;
+
+                                        $hd = elemento.horarioDesde;
+                                        $hh = elemento.horarioHasta;
                                        
-                                        if ((inicioHorario >= $hds) && (inicioHorario <= $hhs) || (finHorario >= $hds) && (finHorario <= $hhs)) {
+                                        if (((inicioHorario >= $hds) && (inicioHorario <= $hhs) || (finHorario >= $hds) && (finHorario <= $hhs))||((inicioHorario >= $hd) && (inicioHorario <= $hh) || (finHorario >= $hd) && (finHorario <= $hh))) {
                                             $crearHorarioDisponible = false; 
                                         }
                                     });
