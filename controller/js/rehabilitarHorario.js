@@ -19,5 +19,5 @@ function ModalRehabilitarHorario(id_horario) {
 }
 
 document.getElementById("rehabilitar-horario").addEventListener("click", function () {
-    deshabilitarHorario($id_horario);
+    rehabilitarHorario($id_horario);
 });
