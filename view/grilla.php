@@ -151,6 +151,27 @@
 		</div>
 	</div>
 
+	<!--Rehabilitar Horario-->
+	<div class="modal fade" id="ventana-modal-rehabilitar-horario" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Deshabilitar horario</h5>
+					<button id="close-rehabilitar-horario" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>                    
+				<div class="modal-body">
+					¿Esta seguro que quiere rehabilitar este horario?
+				</div>
+				<div class="modal-footer">
+					<span class="btn btn-secondary" id="cancelar-rehabilitar-horario">Atrás</span>
+					<span class="btn btn-success botonEnviarHorario" data-dismiss="modal" id="rehabilitar-horario">Confirmar</span>
+				</div>             
+			</div>
+		</div>
+	</div>
+
 	<!--Responder Solicitud-->
 	<div class="modal fade" id="ventana-modal-responder-solicitud" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
@@ -245,6 +266,10 @@
 	<!--Deshabilitar Horario-->
 	<script src="../controller/js/deshabilitarHorario.js"></script>
     <script src="../model/js/ajaxDeshabilitarHorario.js"></script>
+
+	<!--Rehabilitar Horario-->
+	<script src="../controller/js/rehabilitarHorario.js"></script>
+    <script src="../model/js/ajaxRehabilitarHorario.js"></script>
 
 	<!--Crear Solicitud-->
 	<script src="../controller/js/crearSolicitud.js"></script>
