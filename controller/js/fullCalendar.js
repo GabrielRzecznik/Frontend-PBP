@@ -38,8 +38,6 @@ function armadoFullCalendar() {
     },
     eventClick: function (info) {
         if (info.view.type != "dayGridMonth") {//Si no es clickeado en "MES"
-            //$hola = "Solicitud recibidaaaaaaaaaaaa";
-            //console.log($hola.substring(0, 18));
             switch (info.event._def.title.substring(0, 18)) {
                 case "Horario disponible":
                     if ($id_prof == localStorage.getItem("id_profesional")) {
