@@ -125,6 +125,21 @@ function gestorMostrarGrilla($nombreUsuario){
                             }
                         );
                     }
+                    //Armado Horario no disponible (Enviada)
+                    if ((eventos["estadoHorario"] == "Deshabilitado")) {
+                        $color = '#bcbcbc';
+                        $borde = '#969696';
+                        $arrayTerminadoEventos.push(
+                            {
+                                id: eventos["id_horario"],
+                                title: "Horario no disponible",
+                                start: eventos["horaDesdeSolicitud"],
+                                end: eventos["horaHastaSolicitud"],
+                                backgroundColor: $color,
+                                borderColor: $borde
+                            }
+                        );
+                    }
                    
                 });
 
