@@ -262,11 +262,13 @@ function armadoFullCalendar() {
                     ModalResponderSolicitud(id_solicitud);
                     break;
                 case "Turno confirmado a":
+                    document.getElementById("vista-profesional").style.display = 'block';
                     var id_turno = String(info.event._def.publicId);
                     $cancelador = "profesional";
                     ModalCancelarTurno(id_turno);
                     break;
                 case "Turno confirmado p":
+                    document.getElementById("vista-paciente").style.display = 'block';
                     var id_turno = String(info.event._def.publicId);
                     $cancelador = "paciente";
                     ModalCancelarTurno(id_turno);

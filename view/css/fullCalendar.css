@@ -136,3 +136,11 @@
 .fc-timegrid-slot-label-frame {
     height: 30px;
 }
+
+.vista-paciente{
+    display: none;
+}
+
+.vista-profesional{
+    display: none;
+}

@@ -34,7 +34,7 @@ formularioEnviarMensaje.addEventListener('submit', (e) => {
     
     if ($mensajeValue !== "") {
         
-        $id_chat = 0;
+        $id_chat = "nuevo";
         $rol = "Paciente";
 
         //El usuario es el paciente o el profesional del chat?
@@ -47,9 +47,9 @@ formularioEnviarMensaje.addEventListener('submit', (e) => {
         }
 
         let date = new Date();
-        $fecha = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+        $fechaHora = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
 
-        enviarMensaje($id_chat, $paciente, $profesional, $rol, $fecha, formularioEnviarMensaje);
+        enviarMensaje($id_chat, $paciente, $profesional, $rol, $fechaHora, formularioEnviarMensaje);
     }
 });
 //#endregion

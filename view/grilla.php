@@ -156,7 +156,7 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Deshabilitar horario</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Rehabilitar horario</h5>
 					<button id="close-rehabilitar-horario" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -211,11 +211,11 @@
 					</button>
 				</div>                    
 				<div class="modal-body">
-					<span id="vistaPaciente">
+					<span class="vista-paciente" id="vista-paciente">
 						¿Esta seguro que quiere cancelar este turno?<br>
 						¡Una vez cancelado el turno se le notificara al profesional!
 					</span>
-					<span id="vistaProfesional">
+					<span class="vista-profesional" id="vista-profesional">
 						¿Esta seguro que quiere cancelar este turno?<br>
 						¡Una vez cancelado el turno se le notificara al paciente!
 					</span>
