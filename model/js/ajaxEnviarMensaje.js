@@ -1,6 +1,6 @@
 function enviarMensaje(id_chat, paciente, profesional, rol, fechaHora, formularioEnviarMensaje){
     var formData= new FormData(formularioEnviarMensaje);
-    formData.append("id_cha", id_chat);
+    formData.append("id_chat", id_chat);
     formData.append("id_pacMen", paciente);
     formData.append("id_proMen", profesional);
     formData.append("rol", rol);

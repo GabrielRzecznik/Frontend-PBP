@@ -34,7 +34,7 @@ formularioEnviarMensaje.addEventListener('submit', (e) => {
     
     if ($mensajeValue !== "") {
         
-        $id_chat = "nuevo";
+        $id_chat = "Nuevo";
         $rol = "Paciente";
 
         //El usuario es el paciente o el profesional del chat?
