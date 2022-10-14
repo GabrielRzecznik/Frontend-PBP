@@ -273,6 +273,12 @@ function armadoFullCalendar() {
                     $cancelador = "paciente";
                     ModalCancelarTurno(id_turno);
                     break;
+                case "Horario no disponi":
+                    if (parametro == localStorage.getItem("nombreUsuario")) {
+                        var id_horario = String(info.event._def.publicId);
+                        ModalRehabilitarHorario(id_horario);
+                    }
+                    break;
                 default:
                     break;
             }
