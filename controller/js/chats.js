@@ -49,7 +49,7 @@ formularioEnviarMensaje.addEventListener('submit', (e) => {
         let date = new Date();
         $fechaHora = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
 
-        enviarMensaje($id_chat, $paciente, $profesional, $rol, $fechaHora, formularioEnviarMensaje);
+        enviarMensaje($id_chat, $paciente, $profesional, $rol, $fechaHora, $mensajeValue);
     }
 });
 //#endregion
