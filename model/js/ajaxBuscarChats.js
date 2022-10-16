@@ -86,6 +86,12 @@ function buscarChats(){
                                 '</div>' +
                             '</a>';
                         }
+                        
+                        //Cargar variables con valores del chat
+                        $id_chat = data[i]["id_chat"];
+                        
+                        
+                        
                     }
                 }else{
                     chats.innerHTML = 'Aun no tienes chats';
