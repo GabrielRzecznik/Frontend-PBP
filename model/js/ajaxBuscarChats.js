@@ -19,34 +19,31 @@ function buscarChats(){
                 var data=JSON.parse(xmlhttp.responseText);
                 //data[0]["estadoUsuario"] == "Activo"
 
-                chats.innerHTML =   '<main class="d-flex flex-nowrap mainListaContactos">' +
-                                        '<div class="d-flex flex-column align-items-stretch flex-shrink-0 anchoTotal">' +
-                                            '<div class="list-group list-group-flush border-bottom scrollarea">';
+                chats.innerHTML = '';
 
                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
-                    if (data[0]["mensajesSinLeer"] == 0) {
-                        chats.innerHTML += '<a href="#'+ data[0]["nombreUsuario"] +'" class="py-3 lh-sm item-chat" aria-current="true">' +
+                    console.log(data[i]["mensajesSinLeer"]);
+                    if (data[i]["mensajesSinLeer"] == 0) {
+                        chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] +'" class="py-3 lh-sm item-chat" aria-current="true">' +
                             '<div class="d-flex w-100 align-items-center justify-content-between">' +
-                                '<strong class="mb-1">'+ data[0]["nombre"] + ' ' + data[0]["apellido"] +'</strong>' +
+                                '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                 '<small>Lunes</small>' +
                             '</div>' +
                             '<div class="col-10 mb-1 small">' +
-                                data[0]["ultimoMensaje"] +
+                                data[i]["ultimoMensaje"] +
                             '</div>' +
                         '</a>';
                     }else{
-                        chats.innerHTML += '<a href="#'+ data[0]["nombreUsuario"] +'" class="py-3 lh-sm item-chat" aria-current="true">' +
+                        chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] +'" class="py-3 lh-sm item-chat" aria-current="true">' +
                             '<div class="d-flex w-100 align-items-center justify-content-between">' +
-                                '<strong class="mb-1">'+ data[0]["nombre"] + ' ' + data[0]["apellido"] +'</strong>' +
-                                '<span class="textoAzul">' +
-                                    'Lunes' +
-                                '</span>' +
-                                '<span class="badge rounded-pill bg-primary nuevosMensajes">' +
-                                    data[0]["mensajesSinLeer"] +
-                                '</span>' +
+                                '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
+                                '<small>' +
+                                    '<span class="textoAzul"> Lunes </span>' +
+                                    '<span class="badge rounded-pill bg-primary nuevosMensajes">' + data[i]["mensajesSinLeer"] + '</span>' +
+                                '</small>' +    
                             '</div>' +
                             '<div class="col-10 mb-1 small">' +
-                                data[0]["ultimoMensaje"] +
+                                data[i]["ultimoMensaje"] +
                             '</div>' +
                         '</a>';
                     }
