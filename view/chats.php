@@ -248,6 +248,9 @@
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
 
+	<!--Buscar Chats-->
+	<script src="../model/js/ajaxBuscarChats.js"></script>
+
 	<!--Enviar Mensaje-->
 	<script src="../model/js/ajaxEnviarMensaje.js"></script>
 
