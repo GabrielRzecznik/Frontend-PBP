@@ -15,7 +15,7 @@ function enviarMensaje(id_chat, remitente, destinatario, descripcion, fechaHora)
             if (xmlhttp.status == 200) {//Volvio Bien
                
             }else{
-                
+                alert("Ocurrio un error al enviar el mensaje");
             }
         }
     }

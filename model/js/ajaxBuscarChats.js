@@ -16,7 +16,7 @@ function buscarChats(){
             if (xmlhttp.status == 200) {//Volvio Bien
                
             }else{
-                
+                alert("Ocurrio un error al trar los chats");
             }
         }
     }
