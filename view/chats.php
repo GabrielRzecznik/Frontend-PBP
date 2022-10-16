@@ -25,118 +25,121 @@
 			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding">
 				<h5><b>Chats</b></h5>
 				<hr>
-				<main class="d-flex flex-nowrap mainListaContactos">
-					<div class="d-flex flex-column align-items-stretch flex-shrink-0 anchoTotal">
-						<div class="list-group list-group-flush border-bottom scrollarea">
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>
-								<span class="textoAzul">
-									Lunes
-								</span>
-								<span class="badge rounded-pill bg-primary nuevosMensajes">
-									3
-								</span>
-							</small>
+				<span id="chats">
+					
+					<main class="d-flex flex-nowrap mainListaContactos">
+						<div class="d-flex flex-column align-items-stretch flex-shrink-0 anchoTotal">
+							<div class="list-group list-group-flush border-bottom scrollarea">
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>
+										<span class="textoAzul">
+											Lunes
+										</span>
+										<span class="badge rounded-pill bg-primary nuevosMensajes">
+											3
+										</span>
+									</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#gabriel1999" class="py-3 lh-sm item-chat">
+								<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Mercia Dos Santos Jesus</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
+								<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
+									<div class="d-flex w-100 align-items-center justify-content-between">
+									<strong class="mb-1">Gabriel Rzecznik</strong>
+									<small>Lunes</small>
+									</div>
+									<div class="col-10 mb-1 small">
+										Hola, buenos días!
+									</div>
+								</a>
 							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#gabriel1999" class="py-3 lh-sm item-chat">
-						<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Mercia Dos Santos Jesus</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
-						<a href="#" class="py-3 lh-sm item-chat" aria-current="true">
-							<div class="d-flex w-100 align-items-center justify-content-between">
-							<strong class="mb-1">Gabriel Rzecznik</strong>
-							<small>Lunes</small>
-							</div>
-							<div class="col-10 mb-1 small">
-								Hola, buenos días!
-							</div>
-						</a>
 						</div>
-					</div>
-				</main>
+					</main>
+				</span>
 			</div>
 			<div class="col-md-8 bg-light border rounded-3 contenedores main-chats">
 
@@ -229,13 +232,18 @@
 			</div>
 		</div>
 	</div>
-
+	
 	<script src="../model/js/ajaxBackupProvincias.js"></script>
 	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
 	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>
 	
+	
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../controller/js/navegador.js"></script>
+	
+	<!--Buscar Chats-->
+	<script src="../model/js/ajaxBuscarChats.js"></script>
+	
 	<script src="../controller/js/chats.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -248,8 +256,6 @@
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
 
-	<!--Buscar Chats-->
-	<script src="../model/js/ajaxBuscarChats.js"></script>
 
 	<!--Enviar Mensaje-->
 	<script src="../model/js/ajaxEnviarMensaje.js"></script>

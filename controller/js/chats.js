@@ -4,8 +4,6 @@ parametro = null;
 let chatPorHash = location.hash;
 chatPorHash = chatPorHash.slice(1);
 
-
-
 //#region Validación de Campos
 const inputMensaje = document.querySelectorAll('#formularioEnviarMensaje input');
 
@@ -54,4 +52,6 @@ formularioEnviarMensaje.addEventListener('submit', (e) => {
 });
 //#endregion
 
-cargarNavegador();
+buscarChats();
+
+//cargarNavegador();
