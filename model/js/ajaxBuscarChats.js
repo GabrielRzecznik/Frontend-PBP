@@ -1,3 +1,7 @@
+//Obtener fecha actual
+let date = new Date();
+let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
+
 let chats = document.getElementById('chats');
 
 function buscarChats(){
@@ -22,12 +26,48 @@ function buscarChats(){
                 chats.innerHTML = '';
 
                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
-                    console.log(data[i]["mensajesSinLeer"]);
+                    $fechaHora = data[i]["ultimoMensajeHora"];
+
+                    $fecha = $fechaHora.slice(0, 10);
+                    $hora = $fechaHora.slice(11, 16);
+
+                    if ($fecha == fechaActual) {
+                        $tiempoEnvio = $hora;
+                    }else{
+                        $fecha = new Date($fecha).getDay();
+
+                        switch ($fecha) {
+                            case 0:
+                                $tiempoEnvio = "Domingo";
+                                break;
+                            case 1:
+                                $tiempoEnvio = "Lunes";
+                                break;
+                            case 2:
+                                $tiempoEnvio = "Martes";
+                                break;
+                            case 3:
+                                $tiempoEnvio = "Miércoles";
+                                break;
+                            case 4:
+                                $tiempoEnvio = "Jueves";
+                                break;
+                            case 5:
+                                $tiempoEnvio = "Viernes";
+                                break;
+                                case 6:
+                                $tiempoEnvio = "Sabado";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
                     if (data[i]["mensajesSinLeer"] == 0) {
                         chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] +'" class="py-3 lh-sm item-chat" aria-current="true">' +
                             '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                 '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
-                                '<small>Lunes</small>' +
+                                '<small>' + $tiempoEnvio + ' </small>' +
                             '</div>' +
                             '<div class="col-10 mb-1 small">' +
                                 data[i]["ultimoMensaje"] +
@@ -38,7 +78,7 @@ function buscarChats(){
                             '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                 '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                 '<small>' +
-                                    '<span class="textoAzul"> Lunes </span>' +
+                                    '<span class="textoAzul">' + $tiempoEnvio + ' </span>' +
                                     '<span class="badge rounded-pill bg-primary nuevosMensajes">' + data[i]["mensajesSinLeer"] + '</span>' +
                                 '</small>' +    
                             '</div>' +
