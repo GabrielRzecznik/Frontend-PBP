@@ -63,7 +63,7 @@ function buscarChats(){
                         }
     
                         if (data[i]["mensajesSinLeer"] == 0) {
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] +'" class="py-3 lh-sm item-chat" aria-current="true">' +
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" id="abrirChat" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' + $tiempoEnvio + ' </small>' +
@@ -73,7 +73,7 @@ function buscarChats(){
                                 '</div>' +
                             '</a>';
                         }else{
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] +'" class="py-3 lh-sm item-chat" aria-current="true">' +
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" id="abrirChat" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' +
