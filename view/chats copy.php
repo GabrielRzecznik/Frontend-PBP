@@ -47,71 +47,71 @@
 					</ul>
 				</div>
 
-				<b><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span id="nombreUsuario"></span></span>
+				<h5><b>Gabriel Rzecznik</b> / @gabriel1999</h5>
 				<hr>
-				<span id="mensajes">
-					<main class="scrollarea contenedor-chat">
-						<!--Indicador día-->
-						<div class="indicadorDia">Lunes 7 de mayo 2022</div>
-						<!--Mensaje Enviado-->
-						<div class="mensajeEspacio">
-							<div class="mensajeEnviado">
-								<div class="contenidoMensajeEnviado">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-									<div class="horaMensajeEnviado">23:56</div>
-								</div>
-							</div>
-						</div>
-						<!--Mensaje Recibidos-->
-						<div class="mensajeEspacio">
-							<div class="mensajeRecibido">
-								<div class="contenidoMensajeRecibido">
-									Hola, buenos dias!
-									<div class="horaMensajeRecibido">23:56</div>
-								</div>
-							</div>
-						</div>
-						<div class="mensajeEspacio">
-							<div class="mensajeRecibido">
-								<div class="contenidoMensajeRecibido">
-									Me gustaria solicitar un turno!
-									<div class="horaMensajeRecibido">23:56</div>
-								</div>
-							</div>
-						</div>
-						<!--Indicador día-->
-						<div class="indicadorMensajesNoLeidos">Mensajes no leídos</div>
-						<!--Mensaje Enviado-->
-						<div class="mensajeEspacio">
-							<div class="mensajeEnviado">
-								<div class="contenidoMensajeEnviado">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-									<div class="horaMensajeEnviado">
-										23:56
-										<span class="borrarMensaje">
-											<i class="bi bi-trash-fill"></i>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="mensajeEspacio">
-							<div class="mensajeEnviado">
-								<div class="contenidoMensajeEnviado">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-									<div class="horaMensajeEnviado">
-										23:56
-										<span class="borrarMensaje">
-											<i class="bi bi-trash-fill"></i>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>	
-					</main>
 				
-				</span>
-
+				<main class="scrollarea contenedor-chat">
+					<!--Indicador día-->
+					<div class="indicadorDia">Lunes 7 de mayo 2022</div>
+					<!--Mensaje Enviado-->
+					<div class="mensajeEspacio">
+						<div class="mensajeEnviado">
+							<div class="contenidoMensajeEnviado">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+								<div class="horaMensajeEnviado">23:56</div>
+							</div>
+						</div>
+					</div>
+					<!--Mensaje Recibidos-->
+					<div class="mensajeEspacio">
+						<div class="mensajeRecibido">
+							<div class="contenidoMensajeRecibido">
+								Hola, buenos dias!
+								<div class="horaMensajeRecibido">23:56</div>
+							</div>
+						</div>
+					</div>
+					<div class="mensajeEspacio">
+						<div class="mensajeRecibido">
+							<div class="contenidoMensajeRecibido">
+								Me gustaria solicitar un turno!
+								<div class="horaMensajeRecibido">23:56</div>
+							</div>
+						</div>
+					</div>
+					<!--Indicador día-->
+					<div class="indicadorMensajesNoLeidos">Mensajes no leídos</div>
+					<!--Mensaje Enviado-->
+					<div class="mensajeEspacio">
+						<div class="mensajeEnviado">
+							<div class="contenidoMensajeEnviado">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+								<div class="horaMensajeEnviado">
+									23:56
+									<span class="borrarMensaje">
+										<i class="bi bi-trash-fill"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mensajeEspacio">
+						<div class="mensajeEnviado">
+							<div class="contenidoMensajeEnviado">
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
+								<div class="horaMensajeEnviado">
+									23:56
+									<span class="borrarMensaje">
+										<i class="bi bi-trash-fill"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					
+				</main>
+				
 				<br>
 
 				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioEnviarMensaje">

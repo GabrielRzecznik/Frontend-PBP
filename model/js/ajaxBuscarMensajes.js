@@ -13,6 +13,9 @@ function buscarMensajes(id_chat){
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
                 mensajes.innerHTML = '';
+
+                
+
             }else{
                 alert("Ocurrio un error al trar los chats");
             }
