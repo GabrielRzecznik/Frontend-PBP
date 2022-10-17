@@ -38,7 +38,7 @@
 
 				<b><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span id="nombreUsuarioChat"></span></span>
 				
-				<span id="mensajes"></span>
+				<main class="scrollarea contenedor-chat" id="mensajes"></main>
 
 				<br>
 				

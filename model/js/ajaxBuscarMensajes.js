@@ -30,28 +30,82 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat){
                         '<li><a class="dropdown-item" href="#" id="borrarChat">Borrar chat</a></li>' +
                     '</ul>' +
                 '</div>';
+                
+                mensajes.innerHTML = "";
 
-                mensajes.innerHTML = '<main class="scrollarea contenedor-chat">' +
+                var data=JSON.parse(xmlhttp.responseText);
+
+                
+                if (data != "") {        
+                    for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
+                        mensajes.innerHTML += '<div class="indicadorDia">Lunes 7 de mayo 2022</div>';
+                        
+                        $fechaHoraMen = data[i]["fechaHora"];
+                        $fechaMen = $fechaHoraMen.slice(0, 10);
+                        $horaMen = $fechaHoraMen.slice(14, 19);
+    
+                        if ($fechaMen == fechaActual) {
+                            $tiempoEnvio = $horaMen;
+                        }else{
+                            $fechaMen = new Date($fechaMen).getDay();
+    
+                            switch ($fechaMen) {
+                                case 0:
+                                    $tiempoEnvio = "Domingo";
+                                    break;
+                                case 1:
+                                    $tiempoEnvio = "Lunes";
+                                    break;
+                                case 2:
+                                    $tiempoEnvio = "Martes";
+                                    break;
+                                case 3:
+                                    $tiempoEnvio = "Miércoles";
+                                    break;
+                                case 4:
+                                    $tiempoEnvio = "Jueves";
+                                    break;
+                                case 5:
+                                    $tiempoEnvio = "Viernes";
+                                    break;
+                                    case 6:
+                                    $tiempoEnvio = "Sabado";
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+
+                        if (data[i]["remitente"] == localStorage.getItem("id_paciente") || data[i]["remitente"] == localStorage.getItem("id_profesional")) {
+                            //Mensaje Enviado
+                            mensajes.innerHTML += '<div class="mensajeEspacio">' +
+                                '<div class="mensajeEnviado">' +
+                                    '<div class="contenidoMensajeEnviado">' +
+                                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!' +
+                                        '<div class="horaMensajeEnviado">'+  +'</div>' +
+                                    '</div>' +
+                                '</div>' +
+						    '</div>';
+                        }else{
+                            mensajes.innerHTML += '<div class="mensajeEspacio">' +
+                                '<div class="mensajeRecibido">' +
+                                    '<div class="contenidoMensajeRecibido">' +
+                                        'Hola, buenos dias!' +
+                                        '<div class="horaMensajeRecibido">23:56</div>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>';
+                        }
+
+
+                    }
+                }
+
+                /*mensajes.innerHTML = '<main class="scrollarea contenedor-chat">' +
 						'<!--Indicador día-->' +
-						'<div class="indicadorDia">Lunes 7 de mayo 2022</div>' +
-						'<!--Mensaje Enviado-->' +
-						'<div class="mensajeEspacio">' +
-							'<div class="mensajeEnviado">' +
-								'<div class="contenidoMensajeEnviado">' +
-									'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!' +
-									'<div class="horaMensajeEnviado">23:56</div>' +
-								'</div>' +
-							'</div>' +
-						'</div>' +
-						'<!--Mensaje Recibidos-->' +
-						'<div class="mensajeEspacio">' +
-							'<div class="mensajeRecibido">' +
-								'<div class="contenidoMensajeRecibido">' +
-									'Hola, buenos dias!' +
-									'<div class="horaMensajeRecibido">23:56</div>' +
-								'</div>' +
-							'</div>' +
-						'</div>' +
+						'' +
+						
+						
 						'<div class="mensajeEspacio">' +
 							'<div class="mensajeRecibido">' +
 								'<div class="contenidoMensajeRecibido">' +
@@ -89,10 +143,10 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat){
 								'</div>' +
 							'</div>' +
 						'</div>' +
-					'</main>';
+					'</main>';*/
                 
 
-                var data=JSON.parse(xmlhttp.responseText);
+                
             }else{
                 alert("Ocurrio un error al trar los chats");
             }
