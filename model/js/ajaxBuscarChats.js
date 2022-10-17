@@ -96,7 +96,7 @@ function buscarChats(){
                             $rol = "Paciente";
                             $buscarMensajes($id_chat, $rol);
                         }else if($id_proChat == localStorage.getItem("id_profesional")) {
-                            $rol = "Paciente";
+                            $rol = "Profesional";
                             $buscarMensajes($id_chat, $rol);
                         }
                     }
