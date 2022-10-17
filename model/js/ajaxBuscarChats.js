@@ -69,7 +69,7 @@ function buscarChats(){
                         $apellidoChat = String("'" + data[i]["apellido"] + "'");
                         $nombreUsuarioChat = String("'@" + data[i]["nombreUsuario"] + "'");
 
-                        if ($id_pacChat = localStorage.getItem("id_paciente")) {
+                        if ($id_pacChat == localStorage.getItem("id_paciente")) {
                             $rem = $id_pacChat;
                             $des = $id_proChat;
                         }else{

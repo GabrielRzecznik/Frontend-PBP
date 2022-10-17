@@ -180,24 +180,11 @@ function enviarMensajesDentroDelChat($id_chat, $remitente, $destinatario) {
     formularioEnviarMensaje.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        $mensajeValue = document.getElementById('mensaje').value;
+        $descripcion = document.getElementById('mensaje').value;
         
-        if ($mensajeValue !== "") {
-            
-            $id_chat = "Nuevo";
-            $rol = "Paciente";
-
-            //El usuario es el paciente o el profesional del chat?
-            if ($rol == "Paciente") {
-                $paciente = localStorage.getItem("id_paciente");
-                $profesional = chatPorHash;
-            }if ($rol == "Profesional") {
-                $paciente = chatPorHash;
-                $profesional = localStorage.getItem("id_profesional");
-            }
-
+        if ($descripcion !== "") {
             let date = new Date();
-            $fechaHora = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+            $fechaHora = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + ' 00:' + date.getHours() + ':' + date.getMinutes());
 
             enviarMensaje($id_chat, $remitente, $destinatario, $descripcion, $fechaHora)
         }

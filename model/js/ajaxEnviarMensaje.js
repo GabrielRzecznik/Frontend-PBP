@@ -19,6 +19,6 @@ function enviarMensaje(id_chat, remitente, destinatario, descripcion, fechaHora)
             }
         }
     }
-    //xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/enviarMensaje',true);
-    //xmlhttp.send(formJSON);
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/enviarMensaje',true);
+    xmlhttp.send(formJSON);
 }
