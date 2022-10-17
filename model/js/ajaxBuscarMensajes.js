@@ -45,31 +45,31 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat){
                         $horaMen = $fechaHoraMen.slice(14, 19);
     
                         if ($fechaMen == fechaActual) {
-                            $tiempoEnvio = $horaMen;
+                            $tiempoMen = $horaMen;
                         }else{
                             $fechaMen = new Date($fechaMen).getDay();
     
                             switch ($fechaMen) {
                                 case 0:
-                                    $tiempoEnvio = "Domingo";
+                                    $tiempoMen = "Domingo";
                                     break;
                                 case 1:
-                                    $tiempoEnvio = "Lunes";
+                                    $tiempoMen = "Lunes";
                                     break;
                                 case 2:
-                                    $tiempoEnvio = "Martes";
+                                    $tiempoMen = "Martes";
                                     break;
                                 case 3:
-                                    $tiempoEnvio = "Miércoles";
+                                    $tiempoMen = "Miércoles";
                                     break;
                                 case 4:
-                                    $tiempoEnvio = "Jueves";
+                                    $tiempoMen = "Jueves";
                                     break;
                                 case 5:
-                                    $tiempoEnvio = "Viernes";
+                                    $tiempoMen = "Viernes";
                                     break;
                                     case 6:
-                                    $tiempoEnvio = "Sabado";
+                                    $tiempoMen = "Sabado";
                                     break;
                                 default:
                                     break;
