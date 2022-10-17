@@ -65,8 +65,12 @@ function buscarChats(){
                         $id_pacChat = data[i]["id_pacChat"];
                         $id_proChat = data[i]["id_proChat"];
     
-                        if (data[i]["mensajesSinLeer"] == 0) {
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                        $nombreChat = String("'" + data[i]["nombre"] + "'");
+                        $apellidoChat = String("'" + data[i]["apellido"] + "'");
+                        $nombreUsuarioChat = String("'@" + data[i]["nombreUsuario"] + "'");
+
+                        if (data[i]["mensajesSinLeer"] == 0) {//
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' + $tiempoEnvio + ' </small>' +
@@ -76,7 +80,7 @@ function buscarChats(){
                                 '</div>' +
                             '</a>';
                         }else{
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' +

@@ -23,7 +23,7 @@
 	<div class="container-fluid">
 		<div class="row centrado">
 			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding">
-				<h5><b>Chats</b></h5>
+				<b>Chats</b>
 				<hr>
 				<main class="d-flex flex-nowrap mainListaContactos">
 					<div class="d-flex flex-column align-items-stretch flex-shrink-0 anchoTotal">
@@ -34,92 +34,22 @@
 			</div>
 			<div class="col-md-8 bg-light border rounded-3 contenedores main-chats">
 
-
-				<div class="flex-shrink-1 dropdown">
-					<span href="#" class="boton-opciones-chat" id="dropdownOption1" data-bs-toggle="dropdown" aria-expanded="false">
-						<span class="" data-bs-dismiss="modal2" aria-label="Close"><i class="bi bi-three-dots-vertical"></i></span>
-					</span>
-					
-					<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownOption1">
-						<li><a class="dropdown-item" href="#" id="conf">Ver perfil</a></li>
-						<li><hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="#" id="conf">Borrar chat</a></li>
-					</ul>
-				</div>
+				<span id="opcionesChat"></span>
 
 				<b><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span id="nombreUsuarioChat"></span></span>
-				<hr>
-				<span id="mensajes">
-					<main class="scrollarea contenedor-chat">
-						<!--Indicador día-->
-						<div class="indicadorDia">Lunes 7 de mayo 2022</div>
-						<!--Mensaje Enviado-->
-						<div class="mensajeEspacio">
-							<div class="mensajeEnviado">
-								<div class="contenidoMensajeEnviado">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-									<div class="horaMensajeEnviado">23:56</div>
-								</div>
-							</div>
-						</div>
-						<!--Mensaje Recibidos-->
-						<div class="mensajeEspacio">
-							<div class="mensajeRecibido">
-								<div class="contenidoMensajeRecibido">
-									Hola, buenos dias!
-									<div class="horaMensajeRecibido">23:56</div>
-								</div>
-							</div>
-						</div>
-						<div class="mensajeEspacio">
-							<div class="mensajeRecibido">
-								<div class="contenidoMensajeRecibido">
-									Me gustaria solicitar un turno!
-									<div class="horaMensajeRecibido">23:56</div>
-								</div>
-							</div>
-						</div>
-						<!--Indicador día-->
-						<div class="indicadorMensajesNoLeidos">Mensajes no leídos</div>
-						<!--Mensaje Enviado-->
-						<div class="mensajeEspacio">
-							<div class="mensajeEnviado">
-								<div class="contenidoMensajeEnviado">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-									<div class="horaMensajeEnviado">
-										23:56
-										<span class="borrarMensaje">
-											<i class="bi bi-trash-fill"></i>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="mensajeEspacio">
-							<div class="mensajeEnviado">
-								<div class="contenidoMensajeEnviado">
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!
-									<div class="horaMensajeEnviado">
-										23:56
-										<span class="borrarMensaje">
-											<i class="bi bi-trash-fill"></i>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>	
-					</main>
 				
-				</span>
+				<span id="mensajes"></span>
 
 				<br>
-
-				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioEnviarMensaje">
-					<div class="input-group inputMensaje">
-						<input type="text" id="mensaje" class="form-control" placeholder="Escribe algo..." aria-describedby="button-addon2">
-						<button class="btn btn-primary" type="submit" id="botonEnviarMensaje" disabled="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16"><path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/></svg></button>
-					</div>
-				</form>
+				
+				<span class="ocultar" id="fromEnvMen">
+					<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioEnviarMensaje">
+						<div class="input-group inputMensaje">
+							<input type="text" id="mensaje" class="form-control" placeholder="Escribe algo..." aria-describedby="button-addon2">
+							<button class="btn btn-primary" type="submit" id="botonEnviarMensaje" disabled="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16"><path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/></svg></button>
+						</div>
+					</form>
+				</span>
 			</div>
 		</div>
 	</div>
