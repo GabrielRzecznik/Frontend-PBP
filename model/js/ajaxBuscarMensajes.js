@@ -162,54 +162,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat){
 
                         $fechaAxuliar = $fechaMen;
                     }
-                }
-
-                /*mensajes.innerHTML = '<main class="scrollarea contenedor-chat">' +
-						'<!--Indicador día-->' +
-						'' +
-						
-						
-						'<div class="mensajeEspacio">' +
-							'<div class="mensajeRecibido">' +
-								'<div class="contenidoMensajeRecibido">' +
-									'Me gustaria solicitar un turno!' +
-									'<div class="horaMensajeRecibido">23:56</div>' +
-								'</div>' +
-							'</div>' +
-						'</div>' +
-						'<!--Indicador día-->' +
-						'<div class="indicadorMensajesNoLeidos">Mensajes no leídos</div>' +
-						'<!--Mensaje Enviado-->' +
-						'<div class="mensajeEspacio">' +
-							'<div class="mensajeEnviado">' +
-								'<div class="contenidoMensajeEnviado">' +
-									'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!' +
-									'<div class="horaMensajeEnviado">' +
-										'23:56' +
-										'<span class="borrarMensaje">' +
-											'<i class="bi bi-trash-fill"></i>' +
-										'</span>' +
-									'</div>' +
-								'</div>' +
-							'</div>' +
-						'</div>' +
-						'<div class="mensajeEspacio">' +
-							'<div class="mensajeEnviado">' +
-								'<div class="contenidoMensajeEnviado">' +
-									'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!' +
-									'<div class="horaMensajeEnviado">' +
-										'23:56' +
-										'<span class="borrarMensaje">' +
-											'<i class="bi bi-trash-fill"></i>' +
-										'</span>' +
-									'</div>' +
-								'</div>' +
-							'</div>' +
-						'</div>' +
-					'</main>';*/
-                
-
-                
+                }                
             }else{
                 alert("Ocurrio un error al trar los chats");
             }
