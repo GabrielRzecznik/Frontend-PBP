@@ -35,44 +35,101 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat){
 
                 var data=JSON.parse(xmlhttp.responseText);
 
-                
+                $fechaAxuliar = "";
+                $hoy = false;
+
                 if (data != "") {        
                     for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
-                        mensajes.innerHTML += '<div class="indicadorDia">Lunes 7 de mayo 2022</div>';
                         
                         $fechaHoraMen = data[i]["fechaHora"];
                         $fechaMen = $fechaHoraMen.slice(0, 10);
+                        $añoMen = $fechaHoraMen.slice(0, 4);
+                        $mesMen = $fechaHoraMen.slice(5, 7);
+                        $diaMen = $fechaHoraMen.slice(8, 10);
+
+                        if ($diaMen < 10) {
+                            $diaMen = $fechaHoraMen.slice(9, 10);//Testear
+                        }
+
                         $horaMen = $fechaHoraMen.slice(14, 19);
-    
+                        
                         if ($fechaMen == fechaActual) {
-                            $tiempoMen = $horaMen;
+                            if ($hoy == false) {
+                                $hoy = true;
+                                mensajes.innerHTML += '<div class="indicadorDia">Hoy</div>';
+                            }
                         }else{
                             $fechaMen = new Date($fechaMen).getDay();
     
                             switch ($fechaMen) {
                                 case 0:
-                                    $tiempoMen = "Domingo";
+                                    $diaSemana = "Domingo";
                                     break;
                                 case 1:
-                                    $tiempoMen = "Lunes";
+                                    $diaSemana = "Lunes";
                                     break;
                                 case 2:
-                                    $tiempoMen = "Martes";
+                                    $diaSemana = "Martes";
                                     break;
                                 case 3:
-                                    $tiempoMen = "Miércoles";
+                                    $diaSemana = "Miércoles";
                                     break;
                                 case 4:
-                                    $tiempoMen = "Jueves";
+                                    $diaSemana = "Jueves";
                                     break;
                                 case 5:
-                                    $tiempoMen = "Viernes";
+                                    $diaSemana = "Viernes";
                                     break;
                                     case 6:
-                                    $tiempoMen = "Sabado";
+                                    $diaSemana = "Sábado";
                                     break;
                                 default:
                                     break;
+                            }
+
+                            switch ($mesMen) {
+                                case "01":
+                                    $mesMen = "Enero";
+                                    break;
+                                case "02":
+                                    $mesMen = "Febrero";
+                                    break;
+                                case "03":
+                                    $mesMen = "Marzo";
+                                    break;
+                                case "04":
+                                    $mesMen = "Abril";
+                                    break;
+                                case "05":
+                                    $mesMen = "Mayo";
+                                    break;
+                                case "06":
+                                    $mesMen = "Junio";
+                                    break;
+                                case "07":
+                                    $mesMen = "Julio";
+                                    break;
+                                case "08":
+                                    $mesMen = "Agosto";
+                                    break;
+                                case "09":
+                                    $mesMen = "Septiembre";
+                                    break;
+                                case "10":
+                                    $mesMen = "Octubre";
+                                    break;
+                                case "11":
+                                    $mesMen = "Noviembre";
+                                    break;
+                                case "12":
+                                    $mesMen = "Diciembre";
+                                    break;
+                                default:
+                                    break;
+                            }
+                            
+                            if ($fechaMen != $fechaAxuliar) {
+                                mensajes.innerHTML += '<div class="indicadorDia">'+ $diaSemana +' ' + $diaMen + ' de ' + $mesMen + ' '+ $añoMen +'</div>';
                             }
                         }
 
@@ -81,23 +138,29 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat){
                             mensajes.innerHTML += '<div class="mensajeEspacio">' +
                                 '<div class="mensajeEnviado">' +
                                     '<div class="contenidoMensajeEnviado">' +
-                                        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quos eos odit corporis ullam unde iste, eveniet accusamus facere qui neque, natus provident, iure doloribus explicabo incidunt magni sequi beatae!' +
-                                        '<div class="horaMensajeEnviado">'+  +'</div>' +
+                                        data[i]["descripcion"] + '&nbsp' +
+                                        '<div class="horaMensajeRecibido">' +
+                                            $horaMen + '&nbsp' +
+                                            '<span class="borrarMensaje">' +
+											    '<i class="bi bi-trash-fill"></i>' +
+										    '</span>' +
+                                        '</div>' +
                                     '</div>' +
                                 '</div>' +
 						    '</div>';
                         }else{
+                            //Mensaje Recibido
                             mensajes.innerHTML += '<div class="mensajeEspacio">' +
                                 '<div class="mensajeRecibido">' +
                                     '<div class="contenidoMensajeRecibido">' +
-                                        'Hola, buenos dias!' +
-                                        '<div class="horaMensajeRecibido">23:56</div>' +
+                                        data[i]["descripcion"] + '&nbsp' +
+                                        '<div class="horaMensajeRecibido">' + $horaMen + '</div>' +
                                     '</div>' +
                                 '</div>' +
                             '</div>';
                         }
 
-
+                        $fechaAxuliar = $fechaMen;
                     }
                 }
 
