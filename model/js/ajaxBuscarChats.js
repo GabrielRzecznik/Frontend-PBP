@@ -69,8 +69,16 @@ function buscarChats(){
                         $apellidoChat = String("'" + data[i]["apellido"] + "'");
                         $nombreUsuarioChat = String("'@" + data[i]["nombreUsuario"] + "'");
 
+                        if ($id_pacChat = localStorage.getItem("id_paciente")) {
+                            $rem = $id_pacChat;
+                            $des = $id_proChat;
+                        }else{
+                            $rem = $id_proChat;
+                            $des = $id_pacChat;
+                        }
+
                         if (data[i]["mensajesSinLeer"] == 0) {//
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' + $tiempoEnvio + ' </small>' +
@@ -80,7 +88,7 @@ function buscarChats(){
                                 '</div>' +
                             '</a>';
                         }else{
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' +

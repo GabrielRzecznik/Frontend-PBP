@@ -1,8 +1,5 @@
 parametro = null;
 
-//Mientras no seleccione ningun chat el valor va a ser nuevo - pensar bien
-$id_chat = "Nuevo";
-
 //Iniciar desde un chat determinado
 let chatPorHash = location.hash;
 chatPorHash = chatPorHash.slice(1);

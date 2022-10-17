@@ -1,6 +1,8 @@
 let mensajes = document.getElementById('mensajes');
 
-function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat){
+function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des){
+    enviarMensajesDentroDelChat(id_chat, rem, des);
+    
     var formData= new FormData();
     formData.append("id_chat", id_chat);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
@@ -170,4 +172,34 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat){
     }
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/buscarMensajes',true);
     xmlhttp.send(formJSON);
+}
+
+function enviarMensajesDentroDelChat($id_chat, $remitente, $destinatario) {
+    const formularioEnviarMensaje = document.getElementById('formularioEnviarMensaje');
+
+    formularioEnviarMensaje.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        $mensajeValue = document.getElementById('mensaje').value;
+        
+        if ($mensajeValue !== "") {
+            
+            $id_chat = "Nuevo";
+            $rol = "Paciente";
+
+            //El usuario es el paciente o el profesional del chat?
+            if ($rol == "Paciente") {
+                $paciente = localStorage.getItem("id_paciente");
+                $profesional = chatPorHash;
+            }if ($rol == "Profesional") {
+                $paciente = chatPorHash;
+                $profesional = localStorage.getItem("id_profesional");
+            }
+
+            let date = new Date();
+            $fechaHora = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
+
+            enviarMensaje($id_chat, $remitente, $destinatario, $descripcion, $fechaHora)
+        }
+    });
 }
