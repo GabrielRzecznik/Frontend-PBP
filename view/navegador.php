@@ -160,7 +160,7 @@
 						<div class="accordion-item">
 						  <h2 class="accordion-header" id="flush-headingTwo">
 							<button id="confPerPac" class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-								Configuración perfil paciente
+								Configuración perfil
 							</button>
 						  </h2>
 						  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
