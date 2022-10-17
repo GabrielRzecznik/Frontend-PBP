@@ -13,8 +13,6 @@ function buscarChats(){
         formData.append("id_profesional", 0);
     }
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-   
-    console.log(formJSON);
     
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
@@ -98,7 +96,9 @@ function buscarChats(){
                             $rol = "Profesional";
                         }
 
-                        $buscarMensajes($id_chat, $rol);
+                        document.getElementById("abrirChat").addEventListener("click", function() {
+                            $buscarMensajes($id_chat, $rol);
+                        });
                     }
                 }else{
                     chats.innerHTML = 'Aun no tienes chats';

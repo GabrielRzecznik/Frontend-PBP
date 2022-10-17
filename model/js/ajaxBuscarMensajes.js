@@ -1,7 +1,3 @@
-//Obtener fecha actual
-let date = new Date();
-let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
-
 let mensajes = document.getElementById('mensajes');
 
 function buscarMensajes(id_chat, rol){
