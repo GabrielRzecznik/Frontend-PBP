@@ -47,7 +47,7 @@
 					</ul>
 				</div>
 
-				<b><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span id="nombreUsuario"></span></span>
+				<b><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span id="nombreUsuarioChat"></span></span>
 				<hr>
 				<span id="mensajes">
 					<main class="scrollarea contenedor-chat">
