@@ -132,6 +132,9 @@
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../controller/js/navegador.js"></script>
 	
+	<!--Buscar Mensajes-->
+	<script src="../model/js/ajaxBuscarMensajes.js"></script>
+
 	<!--Buscar Chats-->
 	<script src="../model/js/ajaxBuscarChats.js"></script>
 	
