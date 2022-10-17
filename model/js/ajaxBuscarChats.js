@@ -72,15 +72,15 @@ function buscarChats(){
                         if ($id_pacChat == localStorage.getItem("id_paciente")) {
                             $rem = $id_pacChat;
                             $des = $id_proChat;
-                            $rol = "Paciente";
+                            $rol = "'"+"Paciente"+"'";
                         }else{
                             $rem = $id_proChat;
                             $des = $id_pacChat;
-                            $rol = "Profesional";
+                            $rol = "'"+"Profesional"+"'";
                         }
 
                         if (data[i]["mensajesSinLeer"] == 0) {//
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + $rol + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + ',' + $rol + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' + $tiempoEnvio + ' </small>' +
@@ -90,7 +90,7 @@ function buscarChats(){
                                 '</div>' +
                             '</a>';
                         }else{
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + $rol + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + ',' + $rol + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' +

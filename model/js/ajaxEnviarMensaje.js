@@ -1,8 +1,9 @@
-function enviarMensaje(id_chat, remitente, destinatario, descripcion, fechaHora){
+function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fechaHora){
     var formData= new FormData();
     formData.append("id_chat", id_chat);
     formData.append("remitente", remitente);
     formData.append("destinatario", destinatario);
+    formData.append("rol", rol);
     formData.append("descripcion", descripcion);
     formData.append("fechaHora", fechaHora);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
