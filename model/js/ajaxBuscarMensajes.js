@@ -90,7 +90,8 @@ function buscarMensajes(id_chat, rol){
                             $rol = "Profesional";
                         }
 
-                        $buscarMensajes($id_chat, $rol);
+                        
+                        buscarMensajes($id_chat, $rol);
                     }
                 }else{
                     chats.innerHTML = 'Aun no tienes chats';

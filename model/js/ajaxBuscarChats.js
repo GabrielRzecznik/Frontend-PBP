@@ -59,9 +59,14 @@ function buscarChats(){
                                     break;
                             }
                         }
+
+                        //Cargar variables con valores del chat
+                        $id_chat = data[i]["id_chat"];
+                        $id_pacChat = data[i]["id_pacChat"];
+                        $id_proChat = data[i]["id_proChat"];
     
                         if (data[i]["mensajesSinLeer"] == 0) {
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" id="abrirChat" class="py-3 lh-sm item-chat" aria-current="true">' +
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' + $tiempoEnvio + ' </small>' +
@@ -71,7 +76,7 @@ function buscarChats(){
                                 '</div>' +
                             '</a>';
                         }else{
-                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" id="abrirChat" class="py-3 lh-sm item-chat" aria-current="true">' +
+                            chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' +
@@ -84,21 +89,6 @@ function buscarChats(){
                                 '</div>' +
                             '</a>';
                         }
-                        
-                        //Cargar variables con valores del chat
-                        $id_chat = data[i]["id_chat"];
-                        $id_pacChat = data[i]["id_pacChat"];
-                        $id_proChat = data[i]["id_proChat"];
-
-                        if ($id_pacChat == localStorage.getItem("id_paciente")) {
-                            $rol = "Paciente";
-                        }else if($id_proChat == localStorage.getItem("id_profesional")) {
-                            $rol = "Profesional";
-                        }
-
-                        document.getElementById("abrirChat").addEventListener("click", function() {
-                            $buscarMensajes($id_chat, $rol);
-                        });
                     }
                 }else{
                     chats.innerHTML = 'Aun no tienes chats';
