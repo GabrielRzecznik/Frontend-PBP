@@ -1,7 +1,14 @@
 let mensajes = document.getElementById('mensajes');
 
-function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des){
-    enviarMensajesDentroDelChat(id_chat, rem, des);
+$rem = "";
+$des = "";
+$rol = "";
+
+function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol){
+    console.log(rem + " " + des);
+    $rem = rem;
+    $des = des;
+    $rol = rol;
     
     var formData= new FormData();
     formData.append("id_chat", id_chat);
@@ -172,21 +179,4 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
     }
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/buscarMensajes',true);
     xmlhttp.send(formJSON);
-}
-
-function enviarMensajesDentroDelChat($id_chat, $remitente, $destinatario) {
-    const formularioEnviarMensaje = document.getElementById('formularioEnviarMensaje');
-
-    formularioEnviarMensaje.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        $descripcion = document.getElementById('mensaje').value;
-        
-        if ($descripcion !== "") {
-            let date = new Date();
-            $fechaHora = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + ' 00:' + date.getHours() + ':' + date.getMinutes());
-
-            enviarMensaje($id_chat, $remitente, $destinatario, $descripcion, $fechaHora)
-        }
-    });
 }

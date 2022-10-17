@@ -82,6 +82,7 @@
 
 
 	<!--Enviar Mensaje-->
+	<script src="../controller/js/enviarMensaje.js"></script>
 	<script src="../model/js/ajaxEnviarMensaje.js"></script>
 
 </body>
