@@ -6,7 +6,6 @@ $des = "";
 $rol = "";
 
 function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol){
-    console.log(rem + " " + des);
     $cha = id_chat;
     $rem = rem;
     $des = des;
