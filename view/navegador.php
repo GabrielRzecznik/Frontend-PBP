@@ -167,14 +167,14 @@
 							<div class="accordion-body">
 								<p>
 									<button class="btn bg-light opcionConfiguracion" id="editarCuentaUsuario" data-bs-toggle="collapse" href="#ediPerfil" role="button" aria-expanded="false" aria-controls="collapseExample">
-										Editar perfil paciente<i class="bi bi-person-lines-fill derecha"></i>
+										Editar perfil<i class="bi bi-person-lines-fill derecha"></i>
 									</button>
 								</p>
 								<div class="collapse" id="ediPerfil">
 									<!--Formulario editar perfil paciente-->
 									<div class="card card-body" id="formularioEditarPaciente">
 										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarPaciente">
-											<b>Editar Perfil Paciente</b>
+											<b>Editar Perfil</b>
 											<br><hr>
 											<!--Campo Foto-->
 											<i class="bi bi-pencil-square iconoEditar" id="editarFoto"></i>
