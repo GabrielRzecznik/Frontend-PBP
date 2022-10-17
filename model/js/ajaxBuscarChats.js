@@ -94,11 +94,11 @@ function buscarChats(){
 
                         if ($id_pacChat == localStorage.getItem("id_paciente")) {
                             $rol = "Paciente";
-                            $buscarMensajes($id_chat, $rol);
                         }else if($id_proChat == localStorage.getItem("id_profesional")) {
                             $rol = "Profesional";
-                            $buscarMensajes($id_chat, $rol);
                         }
+
+                        $buscarMensajes($id_chat, $rol);
                     }
                 }else{
                     chats.innerHTML = 'Aun no tienes chats';
