@@ -9,11 +9,14 @@ $rem = "";
 $des = "";
 $rol = "";
 
-$actualizarMensajes = "";
+$actualizar = "";
 
 function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol){
-    $actualizar 
     //Actualiza cada 1 segundo
+    clearInterval($actualizar);
+    
+    $actualizar = setInterval(actualizarMensajesEnTiempoReal, 1000);
+
     function actualizarMensajesEnTiempoReal() {
        
         console.log("En linea");
@@ -21,7 +24,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
         
         $nom = nombreChat;
         $ape = apellidoChat;
-        $nuc = apellidoChat;
+        $nuc = nombreUsuarioChat;
         
         
         
@@ -202,5 +205,4 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/buscarMensajes',true);
         xmlhttp.send(formJSON);
     }
-    $actualizar = setInterval(actualizarMensajesEnTiempoReal, 1000);
 }
