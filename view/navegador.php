@@ -174,7 +174,7 @@
 									<!--Formulario editar perfil paciente-->
 									<div class="card card-body" id="formularioEditarPaciente">
 										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarPaciente">
-											<b>Editar Perfil</b>
+											<b>Editar perfil</b>
 											<br><hr>
 											<!--Campo Foto-->
 											<i class="bi bi-pencil-square iconoEditar" id="editarFoto"></i>
@@ -234,7 +234,7 @@
 											<br>
 											<input type="text" class="form-control inputs" name="departamento" id="departamento">
 											<button type="submit" class="btn btn-warning botonEditarPaciente">
-												<span class="editarUsuario" id="textoEditarPaciente">Editar usuario</span>
+												<span class="editarUsuario" id="textoEditarPaciente">Editar perfil</span>
 												<div class="spinner-border text-secondary cargandoEditarPaciente" id="cargandoEditarPaciente" role="status"></div>
 											</button>
 										</form>
