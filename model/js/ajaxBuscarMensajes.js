@@ -9,8 +9,10 @@ $rem = "";
 $des = "";
 $rol = "";
 
+$actualizarMensajes = "";
+
 function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol){
-    
+    $actualizar 
     //Actualiza cada 1 segundo
     function actualizarMensajesEnTiempoReal() {
        
