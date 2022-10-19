@@ -86,7 +86,7 @@ function buscarChats(){
                                     '<small>' + $tiempoEnvio + ' </small>' +
                                 '</div>' +
                                 '<div class="col-10 mb-1 small">' +
-                                    data[i]["ultimoMensaje"] +
+                                    '<span id = "ultimoMensaje' + $id_chat + '">' + data[i]["ultimoMensaje"] + '</span>' +
                                 '</div>' +
                             '</a>';
                         }else{
@@ -99,7 +99,7 @@ function buscarChats(){
                                     '</small>' +    
                                 '</div>' +
                                 '<div class="col-10 mb-1 small">' +
-                                    data[i]["ultimoMensaje"] +
+                                    '<span id = "ultimoMensaje' + $id_chat + '">' + data[i]["ultimoMensaje"] + '</span>' +
                                 '</div>' +
                             '</a>';
                         }
