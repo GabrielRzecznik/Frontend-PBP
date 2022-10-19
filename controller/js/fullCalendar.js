@@ -231,13 +231,13 @@ function armadoFullCalendar() {
                     
                             if (fecha == fechaActual2) {
                                 if(tresHorasAntes <= horaDesde){
-                                    //ACÁ IMPORTANTE
+                                    buscarDatosProfesionalCrearSolicitud($id_prof);
                                     ejecutarModalFormularioSolicitud();
                                 }else{
                                     alert("No puedes enviar una solicitud sin una anterioridad mayor de 3 horas.");
                                 }
                             }else{
-                                //Y ACÁ IMPORTANTE
+                                buscarDatosProfesionalCrearSolicitud($id_prof);
                                 ejecutarModalFormularioSolicitud();
                             }
                         }else{

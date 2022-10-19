@@ -1,3 +1,6 @@
+let selectObraSocial = document.getElementById('selectObraSocial');
+let selectTipoConsulta = document.getElementById('selectTipoConsulta');
+
 function buscarDatosProfesionalCrearSolicitud(id_profesional){
     var formJSON=JSON.stringify({"id_profesional":id_profesional});
 
@@ -5,7 +8,22 @@ function buscarDatosProfesionalCrearSolicitud(id_profesional){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                console.log("Todo bien!");
+                data=JSON.parse(xmlhttp.responseText);
+                
+                var obraSocial = data["obraSocial"];
+                var tipoConsulta = data["tipoConsulta"];
+
+                //Mostrar obras sociales
+                $transformarArray = obraSocial;
+                $transformarArray = $transformarArray.replace(/{/,'');
+                $transformarArray = $transformarArray.replace(/}/,'');
+                
+                var arrayOS =  $transformarArray.split(','); 
+                
+                $obrasSociales = "";
+                $arrayOS.forEach(function(elemento) {
+                    $obrasSociales += '<span class="badge rounded-pill bg-secondary margenSO">' + elemento + '</span>';
+                });
             }else{
                 alert("¡Ocurrio un error inesperado al traer ciertos datos del profesional!");
             }
