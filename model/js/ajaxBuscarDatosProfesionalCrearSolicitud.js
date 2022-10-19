@@ -20,6 +20,7 @@ function buscarDatosProfesionalCrearSolicitud(id_profesional){
                 
                 var arrayOS =  $transformarArray.split(','); 
                 
+                //Estaba por acá
                 $obrasSociales = "";
                 $arrayOS.forEach(function(elemento) {
                     $obrasSociales += '<span class="badge rounded-pill bg-secondary margenSO">' + elemento + '</span>';
