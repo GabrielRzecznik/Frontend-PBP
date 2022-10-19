@@ -194,14 +194,14 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                                 $fechaAxuliar = $fechaMen;
                             }
                             
+                            //Scroll
+                            var men = document.getElementById("mensajes");
+                            men.scrollTop = men.scrollHeight;
                         }
                     }
-                    
+
                     $dataAnterior = data;
-                    
-                    //Scroll
-                    var men = document.getElementById("mensajes");
-                    men.scrollTop = men.scrollHeight;
+
     
                     
                     
