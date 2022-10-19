@@ -22,7 +22,7 @@
 
 	<div class="container-fluid">
 		<div class="row centrado">
-			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding">
+			<div class="col-3 bg-light border rounded-3 contenedores alto padding">
 				<b>Chats</b>
 				<hr>
 				<main class="d-flex flex-nowrap mainListaContactos">
@@ -32,7 +32,7 @@
 					</div>
 				</main>
 			</div>
-			<div class="col-md-8 bg-light border rounded-3 contenedores main-chats">
+			<div class="col-8 bg-light border rounded-3 contenedores main-chats">
 
 				<span id="opcionesChat"></span>
 
