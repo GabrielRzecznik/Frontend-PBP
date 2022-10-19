@@ -79,7 +79,7 @@
 	<script src="../model/js/ajaxConfirmarContraseña.js"></script>
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
-	
+
 	<!--Enviar Mensaje-->
 	<script src="../controller/js/enviarMensaje.js"></script>
 	<script src="../model/js/ajaxEnviarMensaje.js"></script>
