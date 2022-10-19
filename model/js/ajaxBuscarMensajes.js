@@ -87,11 +87,11 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                                     }
                                 }
                                 
-                                //Ultimo mensaje del chat
+                                /*Ultimo mensaje del chat
                                 if (data[i]["id_mensaje"] > mensajeAnterior) {
                                     $ultimoMensaje = data[i]["descripcion"];
-                                    $ultimoMensajeHora = data[i]["fechaHora"].slice(14, 19);
-                                }
+                                    //$ultimoMensajeHora = data[i]["fechaHora"].slice(14, 19);
+                                }*/
 
                                 mensajeAnterior = data[i]["id_mensaje"];
 
@@ -217,8 +217,8 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                                 $fechaAxuliar = $fechaMen;
                             }
 
-                            ultimoMensaje.innerHTML = $ultimoMensaje;
-                            ultimoMensajeHora.innerHTML = $ultimoMensajeHora;
+                            //ultimoMensaje.innerHTML = $ultimoMensaje;
+                            //ultimoMensajeHora.innerHTML = $ultimoMensajeHora;
 
                             //Scroll
                             var men = document.getElementById("mensajes");
