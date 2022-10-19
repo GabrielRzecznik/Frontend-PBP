@@ -271,6 +271,9 @@
 	<script src="../controller/js/rehabilitarHorario.js"></script>
     <script src="../model/js/ajaxRehabilitarHorario.js"></script>
 
+	<!--Buscar datos Obras Sociales y Tipos de Atención del Profesional para Crear Solicitud-->
+	<script src="../model/js/ajaxBuscarDatosProfesionalCrearSolicitud.js"></script>
+
 	<!--Crear Solicitud-->
 	<script src="../controller/js/crearSolicitud.js"></script>
     <script src="../model/js/ajaxCrearSolicitud.js"></script>
