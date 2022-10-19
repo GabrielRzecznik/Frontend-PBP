@@ -69,9 +69,18 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                         $fechaAxuliar = "";
                         $hoy = false;
         
-                        if (data != "") {        
+                        if (data != "") {
+                            let ultimoMensaje = document.getElementById('ultimoMensaje'+data["id_cha"]);
+                            let mensajeAnterior = 0;
+
                             for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
-                                
+                                //Ultimo mensaje del chat
+                                if (data[i]["id_mensaje"] = mensajeAnterior) {
+                                    $ultimoMensaje = data[i]["descripcion"];
+                                }
+
+                                mensajeAnterior = data[i]["id_mensaje"];
+
                                 $fechaHoraMen = data[i]["fechaHora"];
                                 $fechaMen = $fechaHoraMen.slice(0, 10);
                                 $añoMen = $fechaHoraMen.slice(0, 4);
@@ -193,6 +202,8 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
         
                                 $fechaAxuliar = $fechaMen;
                             }
+
+                            ultimoMensaje.innerHTML = $ultimoMensaje;
                             
                             //Scroll
                             var men = document.getElementById("mensajes");
