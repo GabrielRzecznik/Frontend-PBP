@@ -62,6 +62,9 @@
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../controller/js/navegador.js"></script>
 	
+	<!--Mensajes Vistos-->
+	<script src="../model/js/ajaxMensajesVistos.js"></script>
+
 	<!--Buscar Mensajes-->
 	<script src="../model/js/ajaxBuscarMensajes.js"></script>
 

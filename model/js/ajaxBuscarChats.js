@@ -1,7 +1,7 @@
 //Obtener fecha actual
 let date = new Date();
 let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
-
+let rol = "";
 let chats = document.getElementById('chats');
 
 function buscarChats(){
@@ -73,10 +73,12 @@ function buscarChats(){
                             $rem = $id_pacChat;
                             $des = $id_proChat;
                             $rol = "'"+"Paciente"+"'";
+                            rol = "Paciente";
                         }else{
                             $rem = $id_proChat;
                             $des = $id_pacChat;
                             $rol = "'"+"Profesional"+"'";
+                            rol = "Profesional";
                         }
 
                         if (data[i]["mensajesSinLeer"] == 0) {//

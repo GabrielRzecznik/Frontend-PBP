@@ -14,6 +14,8 @@ $rol = "";
 $dataAnterior = "";
 $actualizarMensajes = "";
 
+var ids_mensaje = []; 
+
 function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol){
     clearInterval($actualizarMensajes);
     
@@ -75,10 +77,20 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                             let mensajeAnterior = 0;
 
                             for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
+                                if (rol == "Paciente") {
+                                    if (data[i]["destinatario"] == localStorage.getItem("id_paciente") && data[i]["visto"] == false) {
+                                        ids_mensaje.push(data[i]["id_mensaje"]);
+                                    }
+                                }else{
+                                    if (data[i]["destinatario"] == localStorage.getItem("id_profesional") && data[i]["visto"] == false) {
+                                        ids_mensaje.push(data[i]["id_mensaje"]);
+                                    }
+                                }
+                                
                                 //Ultimo mensaje del chat
                                 if (data[i]["id_mensaje"] > mensajeAnterior) {
                                     $ultimoMensaje = data[i]["descripcion"];
-                                    $ultimoMensajeHora = data[i]["fechaHora"].slice(14, 18);
+                                    $ultimoMensajeHora = data[i]["fechaHora"].slice(14, 19);
                                 }
 
                                 mensajeAnterior = data[i]["id_mensaje"];
@@ -206,7 +218,8 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                             }
 
                             ultimoMensaje.innerHTML = $ultimoMensaje;
-                            
+                            ultimoMensajeHora.innerHTML = $ultimoMensajeHora;
+
                             //Scroll
                             var men = document.getElementById("mensajes");
                             men.scrollTop = men.scrollHeight;
@@ -214,11 +227,10 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                     }
 
                     $dataAnterior = data;
-
-    
-                    
-                    
-                    
+ 
+                    if (ids_mensaje != "") {
+                        mensajesVistos(ids_mensaje);                    
+                    }
                 }else{
                     alert("Ocurrio un error al trar los chats");
                 }
