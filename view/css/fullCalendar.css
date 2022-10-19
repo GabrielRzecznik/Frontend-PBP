@@ -146,3 +146,16 @@
 }
 
 /*verificar*/
+.botonDescargarGrilla{
+    text-align: center;
+    background-color: #2C3E50;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 7px;
+    border: none;
+    width: 100%;
+}
+
+.botonDescargarGrilla:hover{
+    background-color: #1E2B37;
+}

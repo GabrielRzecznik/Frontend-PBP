@@ -30,6 +30,8 @@
 					<div class="card-body">
 						<div id='calendar'>
 						</div>
+						<br>
+						<button class="botonDescargarGrilla">Descargar grilla actual en PDF <i class="bi bi-download"></i></button>
 					</div>
 				</div>
 			</div>
