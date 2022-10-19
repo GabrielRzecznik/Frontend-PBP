@@ -68,17 +68,11 @@
 							<br>
 							Tipo de Atención:<br>
 							<select class="form-select" aria-label="Default select example" name="seleccionConsulta" id="seleccionConsulta">
-								<option selected value="Consultorio">Consultario</option>
-								<option value="Domicilio">Domicilio</option>
-								<option value="Virtual">Virtual</option>
 							</select>
 							<br>
 							Obra Social:<br>
 							<select class="form-select" aria-label="Default select example" name="obraSocialSolicitud" id="obraSocialSolicitud">
-								<option selected>Particular (Ninguna)</option>
-								<option value="Osde">Osde</option>
-								<option value="Ioma">Ioma</option>
-								<option value="Medicus">Medicus</option>
+								
 							</select>
 						</span>
 						<!--Confirmación Enviar Solicitud-->

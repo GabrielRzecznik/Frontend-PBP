@@ -1,5 +1,5 @@
-let selectObraSocial = document.getElementById('selectObraSocial');
-let selectTipoConsulta = document.getElementById('selectTipoConsulta');
+let selectObraSocial = document.getElementById('obraSocialSolicitud');
+let selectTipoConsulta = document.getElementById('seleccionConsulta');
 
 function buscarDatosProfesionalCrearSolicitud(id_profesional){
     var formJSON=JSON.stringify({"id_profesional":id_profesional});
@@ -13,17 +13,35 @@ function buscarDatosProfesionalCrearSolicitud(id_profesional){
                 var obraSocial = data["obraSocial"];
                 var tipoConsulta = data["tipoConsulta"];
 
-                //Mostrar obras sociales
-                $transformarArray = obraSocial;
+                //Mostrar obras sociales  
+                selectObraSocial.innerHTML = '<option value="Particular (Ninguna)" selected>Particular (Ninguna)</option>';
+                
+                if (data["obraSocial"] != "{}") {
+                    $transformarArray = obraSocial;
+                    $transformarArray = $transformarArray.replace(/{/,'');
+                    $transformarArray = $transformarArray.replace(/}/,'');
+                    
+                    var arrayOS =  $transformarArray.split(','); 
+                    
+                    
+                    //Estaba por acá
+                    arrayOS.forEach(function(elemento) {
+                        selectObraSocial.innerHTML += '<option value="' + elemento + '">' + elemento + '</option>';  
+                    });
+                }
+
+                //Mostrar tipos de consulta
+                $transformarArray = tipoConsulta;
                 $transformarArray = $transformarArray.replace(/{/,'');
                 $transformarArray = $transformarArray.replace(/}/,'');
                 
-                var arrayOS =  $transformarArray.split(','); 
+                var arrayTC =  $transformarArray.split(','); 
+                
+                selectTipoConsulta.innerHTML = '';
                 
                 //Estaba por acá
-                $obrasSociales = "";
-                $arrayOS.forEach(function(elemento) {
-                    $obrasSociales += '<span class="badge rounded-pill bg-secondary margenSO">' + elemento + '</span>';
+                arrayTC.forEach(function(elemento) {
+                    selectTipoConsulta.innerHTML += '<option value="' + elemento + '">' + elemento + '</option>';  
                 });
             }else{
                 alert("¡Ocurrio un error inesperado al traer ciertos datos del profesional!");
