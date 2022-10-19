@@ -70,12 +70,12 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                         $hoy = false;
         
                         if (data != "") {
-                            let ultimoMensaje = document.getElementById('ultimoMensaje'+data["id_cha"]);
+                            var ultimoMensaje = document.getElementById('ultimoMensaje'+data["id_cha"]);
                             let mensajeAnterior = 0;
 
                             for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
                                 //Ultimo mensaje del chat
-                                if (data[i]["id_mensaje"] = mensajeAnterior) {
+                                if (data[i]["id_mensaje"] > mensajeAnterior) {
                                     $ultimoMensaje = data[i]["descripcion"];
                                 }
 
