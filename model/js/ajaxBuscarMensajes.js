@@ -70,7 +70,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                         $hoy = false;
         
                         if (data != "") {
-                            var ultimoMensaje = document.getElementById('ultimoMensaje'+data["id_cha"]);
+                            var ultimoMensaje = document.getElementById('ultimoMensaje'+data[0]["id_cha"]);
                             let mensajeAnterior = 0;
 
                             for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
