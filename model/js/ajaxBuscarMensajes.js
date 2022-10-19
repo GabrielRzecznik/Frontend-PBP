@@ -12,13 +12,13 @@ $des = "";
 $rol = "";
 
 $dataAnterior = "";
-$actualizar = "";
+$actualizarMensajes = "";
 
 function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol){
-    clearInterval($actualizar);
+    clearInterval($actualizarMensajes);
     
     //Actualiza cada 1 segundo
-    $actualizar = setInterval(actualizarMensajesEnTiempoReal, 1000);
+    $actualizarMensajes = setInterval(actualizarMensajesEnTiempoReal, 1000);
     
     let nomC = document.getElementById('nombreChat');
     let apeC = document.getElementById('apellidoChat');
@@ -60,7 +60,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                             '<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownOption1">' +
                                 '<li><a class="dropdown-item" href="#" id="">Ver perfil</a></li>' +
                                 '<li><hr class="dropdown-divider"></li>' +
-                                '<li><a class="dropdown-item" href="#" id="borrarChat">Borrar chat</a></li>' +
+                                //'<li><a class="dropdown-item" href="#" id="borrarChat">Borrar chat</a></li>' +
                             '</ul>' +
                         '</div>';
                         
@@ -181,9 +181,9 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                                                 data[i]["descripcion"] + '&nbsp' +
                                                 '<div class="horaMensajeRecibido">' +
                                                     $horaMen + '&nbsp' +
-                                                    '<span class="borrarMensaje">' +
+                                                    /*'<span class="borrarMensaje">' +
                                                         '<i class="bi bi-trash-fill"></i>' +
-                                                    '</span>' +
+                                                    '</span>' +*/
                                                 '</div>' +
                                             '</div>' +
                                         '</div>' +
