@@ -94,7 +94,7 @@ function buscarChats(){
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                     '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
                                     '<small>' +
-                                        '<span class="textoAzul">' + $tiempoEnvio + ' </span>' +
+                                        '<span id="ultimoMensajeHora' + $id_chat + '" class="textoAzul">' + $tiempoEnvio + ' </span>' +
                                         '<span class="badge rounded-pill bg-primary nuevosMensajes">' + data[i]["mensajesSinLeer"] + '</span>' +
                                     '</small>' +    
                                 '</div>' +
