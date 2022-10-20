@@ -29,7 +29,7 @@ body{
 }
 
 .contenedores{
-	padding: 1%;
+	padding: 10px;
 	padding-bottom: 1%;
 	margin-top: 1%;
 	margin-left: 1%;
@@ -54,6 +54,21 @@ body{
 
 	.padding{
 		padding: 3.5%;
+	}
+
+	.titulos{
+		font-size: small;
+	}
+
+	.campos{
+		margin-bottom: 1%;
+	}
+
+	.contenedores{
+		padding: 10px;
+		padding-bottom: 10px;
+		margin-top: 10px;
+		
 	}
 }
 
@@ -127,5 +142,4 @@ body{
 	display: table-cell;
     vertical-align: middle;
 }
-
 

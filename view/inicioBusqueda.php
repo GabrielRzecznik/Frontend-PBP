@@ -22,11 +22,11 @@
 	<div class="container-fluid">
 		<div class="row centrado">
 			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding">
-				<h5><b>Buscar Profesionales</b></h5>
+				<b>Buscar Profesionales</b>
 				<hr>
 				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioP">
-					<b>Seleccione especialidad:</b>
-					<select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example">
+					<b class="titulos">Seleccione especialidad:</b>
+					<select class="form-select campos titulos" name="especialidad" id="especialidad" aria-label="Floating label select example">
 						<option value="0" selected>Especialidad</option>
 						<option value="Alergia e inmunologia infantil">Alergología e inmunología</option>
 						<option value="Alergia e inmunologia">Alergología e inmunología</option>
@@ -100,37 +100,37 @@
 						<option value="Toxicologia">Toxicologia</option>
 						<option value="Urologia">Urologia</option>
 					</select>
-					<b>Seleccione modalidad de consulta:</b>
-					<select class="form-select campos" name="tipoConsulta" id="tipoConsulta" aria-label="Floating label select example">
+					<b class="titulos">Seleccione modalidad de consulta:</b>
+					<select class="form-select campos titulos" name="tipoConsulta" id="tipoConsulta" aria-label="Floating label select example">
 						<option value="0" selected>Modalidad</option>
 						<option value="Consultorio">Consultorio</option>
 						<option value="Virtual">Virtual</option>
 						<option value="Domicilio">Domicilio</option>
 					</select>
-					<b>Seleccione el sexo:</b>
-					<select class="form-select campos" name="sexo" id="sexo" aria-label="Floating label select example">
+					<b class="titulos">Seleccione el sexo:</b>
+					<select class="form-select campos titulos" name="sexo" id="sexo" aria-label="Floating label select example">
 						<option value="0" selected>Sexo</option>
 						<option value="Masculino">Masculino</option>
 						<option value="Femenino">Femenino</option>
 						<option value="X">X</option>
 					</select>
-					<b>Seleccione la obra social de atención:</b>
-					<input type="text" class="form-control campos" name="obraSocial" id="obraSocial" placeholder="Obra social" aria-label="Obra social" aria-describedby="basic-addon1">
-					<b>Seleccione su ubicación:</b>
-					<select class="form-select campos" name="ubicacion" id="ubicacion" aria-label="Floating label select example">
+					<b class="titulos">Seleccione la obra social de atención:</b>
+					<input type="text" class="form-control campos titulos" name="obraSocial" id="obraSocial" placeholder="Obra social" aria-label="Obra social" aria-describedby="basic-addon1">
+					<b class="titulos">Seleccione su ubicación:</b>
+					<select class="form-select campos titulos" name="ubicacion" id="ubicacion" aria-label="Floating label select example">
 						<option value="0">Ubicación actual</option>
 						<option value="1">Ubicación de mi casa</option><!--Pensar mejor nombre-->
 					</select>
 					<br>
 					<button type="submit" class="btn btn-primary campos botonBuscar">
-						<span class="tituloCargando" id="tituloCargando"><i class="bi bi-search"></i> Buscar Profesional</span>
+						<span class="tituloCargando titulos" id="tituloCargando"><i class="bi bi-search"></i> Buscar Profesional</span>
 						<div class="spinner-border text-light botonCargando" id="botonCargando" role="status"></div>
 					</button>
 				</form>
 			</div>
 
 			<div class="col-md-8 bg-light border rounded-3 contenedores alto">
-				<h5><b>Resultados:</b></h5>
+				<b>Resultados:</b>
 				<hr>
 				<div class="row" id="con">
 					<span class="sinBusqueda centrarMensaje"><i class="bi bi-binoculars-fill"> Encuentra el profesional que estas buscando.</i></span>

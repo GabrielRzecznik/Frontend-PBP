@@ -1275,9 +1275,12 @@ document.getElementById("confPerPac").addEventListener("click", function() {
     cerrarTodosLosMensajes();
 });
 
-document.getElementById("confPro").addEventListener("click", function() {
-    cerrarTodosLosMensajes();
-});
+if (localStorage.getItem("estadoProfesional") == "Sin Configuración") {
+    document.getElementById("confPro").addEventListener("click", function() {
+        cerrarTodosLosMensajes();
+    });
+}
+
 
 document.getElementById("editarCuentaUsuario").addEventListener("click", function() {
     cerrarTodosLosMensajes();
