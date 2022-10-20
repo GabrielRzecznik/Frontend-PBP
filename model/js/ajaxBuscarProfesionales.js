@@ -164,7 +164,9 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                     '<div class="col-6 infoProfesional">' +
                                                         $obrasSociales +
                                                         '<br>' +
-                                                        '<span class="badge rounded-pill bg-secondary">Profesional a ' + data[i].distancia + ' km</span>' +
+                                                        '<span class="badge fondoDistancia bg-secondary">Profesional' +
+                                                        '<br>' +
+                                                        ' a ' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
                                                 '<span class="infoProfesional">' +
