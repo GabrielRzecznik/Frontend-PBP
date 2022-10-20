@@ -68,7 +68,10 @@ body{
 		padding: 10px;
 		padding-bottom: 10px;
 		margin-top: 10px;
-		
+	}
+
+	.margenes-celulares{
+		margin: 10px;
 	}
 }
 

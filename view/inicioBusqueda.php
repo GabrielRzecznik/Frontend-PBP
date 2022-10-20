@@ -20,7 +20,7 @@
     	include_once('../view/navegador.php'); 
 	?>
 	<div class="container-fluid">
-		<div class="row centrado">
+		<div class="row centrado margenes-celulares">
 			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding">
 				<b>Buscar Profesionales</b>
 				<hr>
