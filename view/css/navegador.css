@@ -26,8 +26,8 @@
 
 @media (max-width: 550px) { 
    .nombreSitio{
-      font-size: 12px;
-      top: 7px;
+      
+      top: 4px;
    }
 
    .logoUsuario {
