@@ -84,7 +84,7 @@ function buscarChats(){
                         if (data[i]["mensajesSinLeer"] == 0) {//
                             chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + ',' + $rol + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
-                                    '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
+                                    '<b class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</b>' +
                                     '<small>' + $tiempoEnvio + ' </small>' +
                                 '</div>' +
                                 '<div class="col-10 mb-1 small">' +
@@ -94,7 +94,7 @@ function buscarChats(){
                         }else{
                             chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + ',' + $rol + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                 '<div class="d-flex w-100 align-items-center justify-content-between">' +
-                                    '<strong class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</strong>' +
+                                    '<b class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</b>' +
                                     '<small>' +
                                         '<span id="ultimoMensajeHora' + $id_chat + '" class="textoAzul">' + $tiempoEnvio + ' </span>' +
                                         '<span class="badge rounded-pill bg-primary nuevosMensajes">' + data[i]["mensajesSinLeer"] + '</span>' +
