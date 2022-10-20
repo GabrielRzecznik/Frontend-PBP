@@ -100,12 +100,13 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                     '<div class="row">' +
                                         '<div class="col-6">' +
                                             '<div class="card-body">' +
-                                                        '<h5>' +
-                                                            '<span id="mostrarNombreProfesional">' + data[i].nombre + ' </span>' +
-                                                            '<span id="mostrarApellidoProfesional">' + data[i].apellido + '</span>' +
-                                                            '<h6 id="mostrarProfesion col12">' + data[i].especialidad + '</h6>' +
-                                                        '</h5>' +		
-                                                        '<hr>' +							
+                                                    '<b>' +
+                                                        '<span id="mostrarNombreProfesional">' + data[i].nombre + ' </span>' +
+                                                        '<span id="mostrarApellidoProfesional">' + data[i].apellido + '</span>' +
+                                                        '<br>' +
+                                                    '</b>' +		
+                                                    '<span id="mostrarProfesion col12">' + data[i].especialidad + '</span>' +
+                                                    '<hr>' +							
                                                 '<div class="row">' +
                                                     '<div class="col-6 infoProfesional">' +
                                                         '<span id="mostrarProvinciaProfesional">' + data[i].provinciaConsultorio + '</span>' +
@@ -116,7 +117,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                         '<br>' +
                                                         '<span id="mostrarEdadProfesional">' + edad + ' años</span>' +//Pasar a años
                                                     '</div>' +
-                                                    '<div class="col-6">' +
+                                                    '<div class="col-6 infoProfesional">' +
                                                         $obrasSociales +
                                                         '<br>' +
                                                         '<span class="badge rounded-pill bg-secondary">Consultorio a ' + data[i].distancia + ' km</span>' +
@@ -141,12 +142,13 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                     '<div class="row">' +
                                         '<div class="col-6">' +
                                             '<div class="card-body">' +
-                                                        '<h5>' +
-                                                            '<span id="mostrarNombreProfesional">' + data[i].nombre + ' </span>' +
-                                                            '<span id="mostrarApellidoProfesional">' + data[i].apellido + '</span>' +
-                                                            '<h6 id="mostrarProfesion col12">' + data[i].especialidad + '</h6>' +
-                                                        '</h5>' +		
-                                                        '<hr>' +							
+                                                '<b>' +
+                                                    '<span id="mostrarNombreProfesional">' + data[i].nombre + ' </span>' +
+                                                    '<span id="mostrarApellidoProfesional">' + data[i].apellido + '</span>' +
+                                                    '<br>' +
+                                                '</b>' +		
+                                                '<span id="mostrarProfesion col12">' + data[i].especialidad + '</span>' +
+                                                '<hr>' +									
                                                 '<div class="row">' +
                                                     '<div class="col-6 infoProfesional">' +
                                                         '<span id="mostrarProvinciaProfesional">' + data[i].provincia + '</span>' +
@@ -157,7 +159,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                         '<br>' +
                                                         '<span id="mostrarEdadProfesional">' + edad + ' años</span>' +//Pasar a años
                                                     '</div>' +
-                                                    '<div class="col-6">' +
+                                                    '<div class="col-6 infoProfesional">' +
                                                         $obrasSociales +
                                                         '<br>' +
                                                         '<span class="badge rounded-pill bg-secondary">Profesional a ' + data[i].distancia + ' km</span>' +
