@@ -31,7 +31,15 @@
 						<div id='calendar'>
 						</div>
 						<br>
-						<button id="descargarGrilla" class="botonDescargarGrilla">Descargar grilla actual en PDF <i class="bi bi-download"></i></button>
+						<button id="descargarGrilla" class="botonDescargarGrilla">
+							Descargar grilla actual en PDF
+							<i id="iconoDescargarGrilla" class="bi bi-download"></i>
+							<span id="cargandoDescargaGrilla" class="ocultar">
+								<div class="spinner-border text-light cargandoDescargaGrilla spinner-border-sm" role="status">
+									<span class="visually-hidden">Generando...</span>
+								</div>
+							</span>
+						</button>
 					</div>
 				</div>
 			</div>
