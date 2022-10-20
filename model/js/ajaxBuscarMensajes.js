@@ -232,7 +232,6 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                         mensajesVistos(ids_mensaje);                    
                     }
                 }else{
-                    alert("Ocurrio un error al trar los chats");
                 }
             }
         }
