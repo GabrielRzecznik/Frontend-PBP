@@ -122,7 +122,7 @@
 						<option value="1">Ubicación de mi casa</option><!--Pensar mejor nombre-->
 					</select>
 					<br>
-					<button type="submit" class="btn btn-primary campos botonBuscar">
+					<button type="submit" class="btn btn-primary btn-sm campos botonBuscar">
 						<span class="tituloCargando titulos" id="tituloCargando"><i class="bi bi-search"></i> Buscar Profesional</span>
 						<div class="spinner-border text-light botonCargando" id="botonCargando" role="status"></div>
 					</button>
