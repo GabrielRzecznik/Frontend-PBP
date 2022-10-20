@@ -120,6 +120,7 @@ body{
 }
 
 .botonBuscar{
+	margin-top: 10px;
 	width: 100%;
 	height: 35px;
 	margin-bottom: 0px;
