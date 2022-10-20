@@ -246,12 +246,6 @@
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
 
-	<!--Configuracion Grilla Profesional-->
-	<script src="../model/js/ajaxBuscarConfiguracionGrillaProfesional.js"></script>
-
-	<!--Grilla-->
-	<script src="../controller/js/grilla.js"></script>
-	
 	<!--Full Calendar-->
     <script src="../controller/js/fullCalendar.js"></script>
 	<script src="../controller/fullcalendar/main.js"></script>
@@ -259,6 +253,11 @@
 	
 	<!--Gestor-->
 	<script src="../model/js/ajaxGestorMostrarGrilla.js"></script>
+	
+	<!--Configuracion Grilla Profesional-->
+	<script src="../model/js/ajaxBuscarConfiguracionGrillaProfesional.js"></script>
+	<!--Grilla-->
+	<script src="../controller/js/grilla.js"></script>
 	
 	<!--Deshabilitar Horario-->
 	<script src="../controller/js/deshabilitarHorario.js"></script>
