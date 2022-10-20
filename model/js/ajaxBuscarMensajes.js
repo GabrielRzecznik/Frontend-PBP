@@ -231,7 +231,6 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                     if (ids_mensaje != "") {
                         mensajesVistos(ids_mensaje);                    
                     }
-                }else{
                 }
             }
         }
