@@ -122,7 +122,7 @@
 									<br>
 								</div>
 								<p>
-									<button class="btn bg-light opcionConfiguracion" data-bs-toggle="collapse" href="#desUsu" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<button id="deshabilitarCuentaUsuario" class="btn bg-light opcionConfiguracion" data-bs-toggle="collapse" href="#desUsu" role="button" aria-expanded="false" aria-controls="collapseExample">
 										Deshabilitar cuenta usuario <i class="bi bi-person-x-fill derecha"></i>
 									</button>
 								</p>
@@ -166,7 +166,7 @@
 						  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 							<div class="accordion-body">
 								<p>
-									<button class="btn bg-light opcionConfiguracion" id="editarCuentaUsuario" data-bs-toggle="collapse" href="#ediPerfil" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<button class="btn bg-light opcionConfiguracion" id="editarPerfil" data-bs-toggle="collapse" href="#ediPerfil" role="button" aria-expanded="false" aria-controls="collapseExample">
 										Editar perfil<i class="bi bi-person-lines-fill derecha"></i>
 									</button>
 								</p>

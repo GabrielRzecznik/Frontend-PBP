@@ -136,6 +136,10 @@ function cerrarSesion() {
 //Modal configuración
 document.getElementById("conf").addEventListener("click", function() {
     //Abrir Modal
+
+    //Cerrar todos los mensajes
+    cerrarTodosLosMensajes();
+
     var configuracion = new bootstrap.Modal(
         document.getElementById("configuracion-modal")
         );
@@ -1262,4 +1266,48 @@ const APP = {
 document.addEventListener('DOMContentLoaded', APP.init);
 //#endregion
 
+//Cerrar Mensajes de Configuración
+document.getElementById("confUsu").addEventListener("click", function() {
+    cerrarTodosLosMensajes();
+});
 
+document.getElementById("confPerPac").addEventListener("click", function() {
+    cerrarTodosLosMensajes();
+});
+
+document.getElementById("confPro").addEventListener("click", function() {
+    cerrarTodosLosMensajes();
+});
+
+document.getElementById("editarCuentaUsuario").addEventListener("click", function() {
+    cerrarTodosLosMensajes();
+});
+
+document.getElementById("deshabilitarCuentaUsuario").addEventListener("click", function() {
+    cerrarTodosLosMensajes();
+});
+
+document.getElementById("editarPerfil").addEventListener("click", function() {
+    cerrarTodosLosMensajes();
+});
+
+function cerrarTodosLosMensajes() {
+    document.getElementById('alertNombreUsuario').classList.remove('alertaError');
+    document.getElementById('alertPassword').classList.remove('alertaError');
+    document.getElementById('alertPasswordValidar').classList.remove('alertaError');
+    document.getElementById('alertDuracionConsulta').classList.remove('alertaError');
+    document.getElementById('alertDiasAtencion').classList.remove('alertaError');
+    document.getElementById('alertDescanso').classList.remove('alertaError');
+    document.getElementById('alertRangoHorarioDiaDesde').classList.remove('alertaError');
+    document.getElementById('alertRangoHorarioDiaHasta').classList.remove('alertaError');
+    document.getElementById('alertNombre').classList.remove('alertaError');
+    document.getElementById('alertApellido').classList.remove('alertaError');
+    document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
+    document.getElementById('alertSexoPaciente').classList.remove('alertaError');
+    document.getElementById('alertTelefono').classList.remove('alertaError');
+    document.getElementById('alertProvincia').classList.remove('alertaError');
+    document.getElementById('alertLocalidad').classList.remove('alertaError');
+    document.getElementById('alertCalle').classList.remove('alertaError');
+    document.getElementById('alertAltura').classList.remove('alertaError');
+    document.getElementById('alertDepartamento').classList.remove('alertaError');
+}

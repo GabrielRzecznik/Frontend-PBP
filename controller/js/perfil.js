@@ -19,3 +19,6 @@ let botonChat = document.getElementById('botonChat');
 
 botonChat.innerHTML = '<a href="../view/chats.php#'+parametro+'" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</a>';
 
+document.getElementById("mostrarLapiz").addEventListener("click", function() {
+    cerrarTodosLosMensajes();
+});
