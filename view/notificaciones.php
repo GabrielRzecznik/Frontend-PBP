@@ -19,7 +19,7 @@
 	<?php
     	include_once('../view/navegador.php'); 
 	?>
-
+	<br>
 	<div class="container contenedor bg-light border rounded-3">
 		<h6><b>Notificaciones</b></h6>
 		<hr>
