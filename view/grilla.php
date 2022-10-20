@@ -31,7 +31,7 @@
 						<div id='calendar'>
 						</div>
 						<br>
-						<button class="botonDescargarGrilla">Descargar grilla actual en PDF <i class="bi bi-download"></i></button>
+						<button id="descargarGrilla" class="botonDescargarGrilla">Descargar grilla actual en PDF <i class="bi bi-download"></i></button>
 					</div>
 				</div>
 			</div>
@@ -195,6 +195,7 @@
 			</div>
 		</div>
 	</div>
+	<br>
 
 	<!--Cancelar Turno-->
 	<div class="modal fade" id="ventana-modal-cancelar-turno" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -291,6 +292,10 @@
 
 	<!--Datos del Profesional-->
 	<script src="../model/js/ajaxBuscarPerfil.js"></script>
+
+	<!--Descargar Grilla a PDF-->
+	<script src="../controller/js/libreriaPDF.bundle.min.js"></script>
+	<script src="../controller/js/descargarGrilla.js"></script>
 
 </body>
 </html>

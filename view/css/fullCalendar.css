@@ -48,11 +48,11 @@
 
 @media (max-width: 768px) {
     .fc-event-time{
-        font-size: 9px;
+        font-size: 7px;
     }
     
     .fc-event-title{
-        display: none;
+        font-size: 0px;
     }
 
     .fc-daygrid-event-harness{
