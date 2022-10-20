@@ -147,3 +147,7 @@ body{
     vertical-align: middle;
 }
 
+.fondoDistancia{
+	margin-top: 3px;
+	border-radius: 10px;
+}
