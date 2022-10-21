@@ -261,6 +261,13 @@ function verificarChatExistente($data) {
         }
         if (nuevoChat) {
             //Nuevo chat
+            
+
+            $cha = "Nuevo";
+            $rem = localStorage.getItem("id_paciente");
+            $des = "";
+            //$rol = rol;
+
             let nomC = document.getElementById('nombreChat');
             let apeC = document.getElementById('apellidoChat');
             let nuC = document.getElementById('nombreUsuarioChat');
