@@ -30,7 +30,7 @@
     position: relative;
    }
    
-   .loader::before {
+.loader::before {
     content: "";
     position: absolute;
     background: var(--loader-color);
@@ -41,16 +41,16 @@
     border-radius: 30px;
     animation: moving 1s ease-in-out infinite;
     ;
-   }
+}
    
-   @keyframes moving {
+@keyframes moving {
     50% {
-     width: 100%;
+        width: 100%;
     }
-   
+
     100% {
-     width: 0;
-     right: 0;
-     left: unset;
+        width: 0;
+        right: 0;
+        left: unset;
     }
-   }
+}

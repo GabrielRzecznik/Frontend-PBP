@@ -29,6 +29,7 @@
 				<div class="card text-dark bg-light contenedorFullCalendar">
 					<div class="card-body">
 						<div id='calendar'>
+							<div class="loader"></div>
 						</div>
 						<br>
 						<button id="descargarGrilla" class="botonDescargarGrilla">
