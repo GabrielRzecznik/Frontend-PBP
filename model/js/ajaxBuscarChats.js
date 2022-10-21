@@ -19,6 +19,7 @@ function buscarChats(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
+
                 chats.innerHTML = '';
                 
                 if (data != "") {        
@@ -106,8 +107,11 @@ function buscarChats(){
                             '</a>';
                         }
                     }
+                    verificarChatExistente(data);
+                    
                 }else{
                     chats.innerHTML = 'Aun no tienes chats';
+                    verificarChatExistente(data);
                 }
 
             }else{
@@ -117,4 +121,27 @@ function buscarChats(){
     }
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Chats/buscarChats',true);
     xmlhttp.send(formJSON);
+}
+
+function verificarChatExistente($data) {
+    let chatExistente = null;
+    let chatPorHash = location.hash;
+    chatPorHash = chatPorHash.slice(1);
+
+    console.log($data);
+
+    if (chatPorHash != "") {
+        for (let i = 0; i < $data.length; i++) {
+            if (chatPorHash == $data[i]["nombreUsuario"]) {
+                if (chatExistente == true) {
+                    //Chat existente
+                    if ($data[i]["id_pacChat"] == localStorage.getItem("id_paciente")) {
+                        buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Paciente');
+                    }else{
+                        buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Profesional');
+                    }
+                }
+            }
+        }
+    }
 }
