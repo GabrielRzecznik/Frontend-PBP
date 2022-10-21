@@ -185,3 +185,13 @@
 .altoLoader{
     height: 50px;
 }
+
+.enviarNuevoMensaje{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: max-content;
+    text-align: center;
+    font-style: italic;
+    color: rgb(80, 80, 80);
+}
