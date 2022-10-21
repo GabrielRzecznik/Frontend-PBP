@@ -132,7 +132,7 @@
 				<b>Resultados:</b>
 				<hr>
 				<div class="row" id="con">
-					<span class="sinBusqueda centrarMensaje"><i class="bi bi-binoculars-fill"> Encuentra el profesional que estas buscando.</i></span>
+					<span class="sinBusqueda centrarMensaje"><i class="bi bi-binoculars-fill">  Encuentra el profesional que estas buscando.</i></span>
 				</div>
 			</div>
 		</div>

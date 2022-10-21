@@ -50,6 +50,7 @@
 
 .contenedor-chat{
     height: 600px;
+    margin-bottom: 12px;
 }
 
 .mensajeEspacio{
@@ -129,4 +130,18 @@
 
 .ocultar{
     display: none;
+}
+
+.contenedor-sin-chat{
+    text-align: center;
+    padding: 100px;
+}
+
+.iconoMensaje{
+    font-size: 100px;
+    color: rgb(219, 219, 219);
+}
+
+.titulo-sin-chat{
+    font-style: italic;
 }

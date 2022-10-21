@@ -27,20 +27,25 @@
 				<hr>
 				<main class="d-flex flex-nowrap mainListaContactos">
 					<div class="d-flex flex-column align-items-stretch flex-shrink-0 anchoTotal">
-						<div class="list-group list-group-flush border-bottom scrollarea" id="chats">
+						<div class="list-group list-group-flush scrollarea" id="chats">
 						</div>
 					</div>
 				</main>
 			</div>
 			<div class="col-md-8 bg-light border rounded-3 contenedores main-chats">
-
 				<span id="opcionesChat"></span>
 
 				<b><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span id="nombreUsuarioChat"></span></span>
 				
-				<main class="scrollarea contenedor-chat" id="mensajes"></main>
+				<main class="scrollarea contenedor-sin-chat" id="mensajes">
+					<span class="sinBusqueda centrarMensaje">
+						<i class="bi bi-chat-square-fill iconoMensaje"></i>
+						<br>
+						<span class="titulo-sin-chat">Envía y recibe mensajes sin necesidad de salir de nuestra aplicación.</span>
+					</span>
+				</main>
 
-				<br>
+				
 				
 				<span class="ocultar" id="fromEnvMen">
 					<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioEnviarMensaje">
