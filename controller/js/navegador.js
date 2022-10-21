@@ -1281,7 +1281,6 @@ if (localStorage.getItem("estadoProfesional") == "Sin Configuración") {
     });
 }
 
-
 document.getElementById("editarCuentaUsuario").addEventListener("click", function() {
     cerrarTodosLosMensajes();
 });
