@@ -144,5 +144,7 @@ function verificarChatExistente($data) {
             //Nuevo chat
             console.log("nuevo chat");
         }
+    }else{
+        document.getElementById('loader').classList.add("ocultar");
     }
 }

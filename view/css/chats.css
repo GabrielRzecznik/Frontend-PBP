@@ -148,7 +148,6 @@
 
 .loader {
     margin:0px auto;
-    margin-top: 15px;
     --height-of-loader: 4px;
     --loader-color: #0071e2;
     width: 45%;
@@ -181,4 +180,8 @@
         right: 0;
         left: unset;
     }
+}
+
+.altoLoader{
+    height: 50px;
 }

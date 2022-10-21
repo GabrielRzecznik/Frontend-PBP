@@ -43,7 +43,10 @@
 						<br>
 						<span class="titulo-sin-chat">
 							Envía y recibe mensajes sin necesidad de salir de nuestra aplicación.
-							<div id="loader" class="loader"></div>
+							<div class="altoLoader">
+								<br>
+								<div id="loader" class="loader"></div>
+							</div>
 						</span>
 					</span>
 				</main>
