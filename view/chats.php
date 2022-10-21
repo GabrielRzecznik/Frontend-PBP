@@ -73,6 +73,9 @@
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../controller/js/navegador.js"></script>
 	
+	<!--Verificar Chat Existe-->
+	<script src="../controller/js/verificarChatExistente.js"></script>
+
 	<!--Mensajes Vistos-->
 	<script src="../model/js/ajaxMensajesVistos.js"></script>
 
