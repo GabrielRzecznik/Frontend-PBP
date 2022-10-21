@@ -124,24 +124,26 @@ function buscarChats(){
 }
 
 function verificarChatExistente($data) {
-    let chatExistente = null;
+    let nuevoChat = true;
     let chatPorHash = location.hash;
     chatPorHash = chatPorHash.slice(1);
-
-    console.log($data);
 
     if (chatPorHash != "") {
         for (let i = 0; i < $data.length; i++) {
             if (chatPorHash == $data[i]["nombreUsuario"]) {
-                if (chatExistente == true) {
-                    //Chat existente
-                    if ($data[i]["id_pacChat"] == localStorage.getItem("id_paciente")) {
-                        buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Paciente');
-                    }else{
-                        buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Profesional');
-                    }
+                //Chat existente
+                console.log("hola");
+                if ($data[i]["id_pacChat"] == localStorage.getItem("id_paciente")) {
+                    buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Paciente');
+                }else{
+                    buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Profesional');
                 }
+                nuevoChat = false;
             }
+        }
+        if (nuevoChat) {
+            //Nuevo chat
+            console.log("nuevo chat");
         }
     }
 }
