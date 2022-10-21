@@ -297,4 +297,7 @@ function armadoFullCalendar() {
     calendar.updateSize();
     
     cargarNavegador();
+
+    let botonDescargarGrilla = document.getElementById("descargarGrilla");
+    botonDescargarGrilla.disabled = false;
 }

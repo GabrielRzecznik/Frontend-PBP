@@ -32,7 +32,7 @@
 							<div class="loader"></div>
 						</div>
 						<br>
-						<button id="descargarGrilla" class="botonDescargarGrilla">
+						<button id="descargarGrilla" class="botonDescargarGrilla" disabled>
 							Descargar grilla actual en PDF
 							<i id="iconoDescargarGrilla" class="bi bi-download"></i>
 							<span id="cargandoDescargaGrilla" class="ocultar">
@@ -182,7 +182,7 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Responder solicitud de</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Responder solicitud de </h5>
 					<button id="close-responder-solicitud" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
