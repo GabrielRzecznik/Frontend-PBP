@@ -41,7 +41,10 @@
 					<span class="sinBusqueda centrarMensaje">
 						<i class="bi bi-chat-square-fill iconoMensaje"></i>
 						<br>
-						<span class="titulo-sin-chat">Envía y recibe mensajes sin necesidad de salir de nuestra aplicación.</span>
+						<span class="titulo-sin-chat">
+							Envía y recibe mensajes sin necesidad de salir de nuestra aplicación.
+							<div id="loader" class="loader"></div>
+						</span>
 					</span>
 				</main>
 

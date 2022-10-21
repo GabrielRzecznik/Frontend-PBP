@@ -132,7 +132,6 @@ function verificarChatExistente($data) {
         for (let i = 0; i < $data.length; i++) {
             if (chatPorHash == $data[i]["nombreUsuario"]) {
                 //Chat existente
-                console.log("hola");
                 if ($data[i]["id_pacChat"] == localStorage.getItem("id_paciente")) {
                     buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Paciente');
                 }else{
