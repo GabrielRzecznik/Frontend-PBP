@@ -499,7 +499,7 @@
 					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
 						<i class="bi bi-info-circle-fill"></i>
 						<strong>Nombre de usuario:</strong>
-						El nombre de usuario ingresado no es válido. Recuerde que no puede dejar espacios en blanco. 
+						El nombre de usuario debe tener de 8 a 16 caracteres. Debe contener al menos una "mayúscula", un "digito" y no puede contener espacios en blanco.
 						<br>Nombre de usuario: "Ejemplo1234"
 					</div>
 					<!--Alerta Contraseña Editar-->
