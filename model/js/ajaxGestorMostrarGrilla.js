@@ -431,8 +431,8 @@ function gestorMostrarGrilla($nombreUsuario){
 
                 //Armar Calendario
                 armadoFullCalendar();
-            }else {
-                alert("Ocurrio un error inesperado");
+            }else if (xmlhttp.status == 500) {      //Ver por que no aparece          
+                alert("¡Fallo la conexión con el servidor al cargar los eventos de la grilla solicitada!");
             }
         }
     }

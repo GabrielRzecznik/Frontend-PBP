@@ -67,7 +67,7 @@ function buscarConfGrillaProf(){
                 }else if (xmlhttp.status == 500) {                
                     alert("¡Ocurrio un error inesperado con el correo ingresado!");
                 }else{
-                    alert("¡Fallo la conexión con el servidor!");
+                    alert("¡Fallo la conexión con el servidor al cargar la configuración de la grilla solicitada!");
                 }
             }else{
                 $slotDuration = '00:30';
