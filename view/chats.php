@@ -38,7 +38,7 @@
 				<b><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span id="nombreUsuarioChat"></span></span>
 				
 				<main class="scrollarea contenedor-sin-chat" id="mensajes">
-					<span class="sinBusqueda centrarMensaje">
+					<span class="sinBusqueda centrarMensaje" id="tituloSinChat">
 						<i class="bi bi-chat-square-fill iconoMensaje"></i>
 						<br>
 						<span class="titulo-sin-chat">
@@ -49,6 +49,7 @@
 							</div>
 						</span>
 					</span>
+					<span id="mensajeNuevoChat"></span>
 				</main>
 
 				

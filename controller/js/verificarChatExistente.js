@@ -17,40 +17,12 @@ function verificarChatExistente($data) {
         }
         if (nuevoChat) {
             //Nuevo chat
-            
-
-            $cha = "Nuevo";
-            $rem = localStorage.getItem("id_paciente");
-            $des = "";
-            //$rol = rol;
-
-            let nomC = document.getElementById('nombreChat');
-            let apeC = document.getElementById('apellidoChat');
-            let nuC = document.getElementById('nombreUsuarioChat');
-            let opcionesChat = document.getElementById('opcionesChat');
-
-            opcionesChat.innerHTML = '<div class="flex-shrink-1 dropdown">' +
-                '<span href="#" class="boton-opciones-chat" id="dropdownOption1" data-bs-toggle="dropdown" aria-expanded="false">' +
-                    '<span data-bs-dismiss="modal2" aria-label="Close"><i class="bi bi-three-dots-vertical"></i></span>' +
-                '</span>' +
-                '<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownOption1">' +
-                    '<li><a class="dropdown-item" href="#" id="">Ver perfil</a></li>' +
-                    //'<li><hr class="dropdown-divider"></li>' +
-                    //'<li><a class="dropdown-item" href="#" id="borrarChat">Borrar chat</a></li>' +
-                '</ul>' +
-            '</div>';
-
             buscarProfesionalPorNombreUsuario(chatPorHash);
-
-            console.log("nuevo chat");
-            nomC.innerHTML = "nombre";
-            apeC.innerHTML = "apellido";
-            nuC.innerHTML = '@'+"nombreUsuario" + '<hr>';
-
-            mensajes.innerHTML = '<div class="alert alert-warning enviarNuevoMensaje">¡Enviale un mensaje al<br>profesional <b>Gabriel Rzecznik.</b><br>Para crear un nuevo chat!</div>';
-
-            document.getElementById('mensajes').classList.remove('contenedor-sin-chat');
+            
             document.getElementById('mensajes').classList.add('contenedor-chat');
+            document.getElementById('mensajes').classList.remove('contenedor-sin-chat');
+            document.getElementById('tituloSinChat').classList.add('ocultar');
+            //document.getElementById('fromEnvMen').classList.remove('ocultar');
             document.getElementById('fromEnvMen').classList.remove('ocultar');
         }
     }else{

@@ -137,6 +137,10 @@
     padding: 100px;
 }
 
+.contenedor-nuevo-chat{
+    text-align: center;
+}
+
 .iconoMensaje{
     font-size: 100px;
     color: rgb(219, 219, 219);

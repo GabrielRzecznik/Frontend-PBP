@@ -38,7 +38,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
         $des = des;
         $rol = rol;
         
-        var formData= new FormData();
+        var formData = new FormData();
         formData.append("id_chat", id_chat);
         var formJSON=JSON.stringify(Object.fromEntries(formData));
        
@@ -75,9 +75,9 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                         $hoy = false;
         
                         if (data != "") {
-                            var ultimoMensaje = document.getElementById('ultimoMensaje'+data[0]["id_cha"]);
-                            var ultimoMensajeHora = document.getElementById('ultimoMensajeHora'+data[0]["id_cha"]);
-                            let mensajeAnterior = 0;
+                            //var ultimoMensaje = document.getElementById('ultimoMensaje'+data[0]["id_cha"]);
+                            //var ultimoMensajeHora = document.getElementById('ultimoMensajeHora'+data[0]["id_cha"]);
+                            //let mensajeAnterior = 0;
 
                             for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
                                 if (rol == "Paciente") {

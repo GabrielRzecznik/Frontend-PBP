@@ -1,4 +1,10 @@
 function buscarProfesionalPorNombreUsuario(nombreUsuario){
+    let mensajeNuevoChat = document.getElementById('mensajeNuevoChat');
+    let nomC = document.getElementById('nombreChat');
+    let apeC = document.getElementById('apellidoChat');
+    let nuC = document.getElementById('nombreUsuarioChat');
+    let opcionesChat = document.getElementById('opcionesChat');
+    
     var formData= new FormData();
     formData.append("nombreUsuario", nombreUsuario);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
@@ -8,7 +14,28 @@ function buscarProfesionalPorNombreUsuario(nombreUsuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
-                console.log(data);
+                nomC.innerHTML = data["nombre"];
+                apeC.innerHTML = data["apellido"];
+                nuC.innerHTML = '@' + nombreUsuario + '<hr>';
+
+                //Información importante del chat
+                $cha = "Nuevo";
+                $rem = localStorage.getItem("id_paciente");
+                $des = nombreUsuario;
+                $rol = "Paciente";
+
+                opcionesChat.innerHTML = '<div class="flex-shrink-1 dropdown">' +
+                    '<span href="#" class="boton-opciones-chat" id="dropdownOption1" data-bs-toggle="dropdown" aria-expanded="false">' +
+                        '<span data-bs-dismiss="modal2" aria-label="Close"><i class="bi bi-three-dots-vertical"></i></span>' +
+                    '</span>' +
+                    '<ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownOption1">' +
+                        '<li><a class="dropdown-item" href="./perfil.php?' + nombreUsuario + '" id="">Ver perfil</a></li>' +
+                        //'<li><hr class="dropdown-divider"></li>' +
+                        //'<li><a class="dropdown-item" href="#" id="borrarChat">Borrar chat</a></li>' +
+                    '</ul>' +
+                '</div>';
+
+                mensajeNuevoChat.innerHTML = '<div class="alert alert-warning enviarNuevoMensaje">¡Enviale un mensaje al<br>profesional <b>' + data["nombre"] + ' ' + data["apellido"] + '.</b><br>Para crear un nuevo chat!</div>';
             }else{
                 alert("Ocurrio un error al enviar el mensaje");
             }
