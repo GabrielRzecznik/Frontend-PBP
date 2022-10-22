@@ -8,11 +8,12 @@ function buscarProfesionalPorNombreUsuario(nombreUsuario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
+                console.log(data);
             }else{
                 alert("Ocurrio un error al enviar el mensaje");
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/enviarMensaje',true);
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Profesionales/buscarProfesionalPorNombreUsuario',true);
     xmlhttp.send(formJSON);
 }

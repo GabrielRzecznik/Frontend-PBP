@@ -76,6 +76,9 @@
 	<!--Verificar Chat Existe-->
 	<script src="../controller/js/verificarChatExistente.js"></script>
 
+	<!--Buscar Datos Profesional por nombreUsuario-->
+	<script src="../model/js/ajaxBuscarProfesionalPorNombreUsuario.js"></script>
+
 	<!--Mensajes Vistos-->
 	<script src="../model/js/ajaxMensajesVistos.js"></script>
 
