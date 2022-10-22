@@ -40,6 +40,8 @@ function verificarChatExistente($data) {
                 '</ul>' +
             '</div>';
 
+            buscarProfesionalPorNombreUsuario(chatPorHash);
+
             console.log("nuevo chat");
             nomC.innerHTML = "nombre";
             apeC.innerHTML = "apellido";
