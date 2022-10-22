@@ -3,6 +3,7 @@ let date = new Date();
 let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
 let rol = "";
 let chats = document.getElementById('chats');
+$primeraCargaChats = true;
 
 function buscarChats(){
     var formData= new FormData();
@@ -107,12 +108,16 @@ function buscarChats(){
                             '</a>';
                         }
                     }
-                    verificarChatExistente(data);
+                    if ($primeraCargaChats) {
+                        verificarChatExistente(data);
+                    }
                 }else{
+                    if ($primeraCargaChats) {
+                        verificarChatExistente(data);
+                    }
                     chats.innerHTML = 'Aun no tienes chats';
-                    verificarChatExistente(data);
                 }
-
+                $primeraCargaChats = false;
             }else{
                 alert("Ocurrio un error al trar los chats");
             }

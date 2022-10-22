@@ -1,4 +1,8 @@
 function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fechaHora){
+    if (id_chat == "Nuevo") {
+        document.getElementById("mensaje").disabled = true;
+    }
+    
     var formData= new FormData();
     formData.append("id_chat", id_chat);
     formData.append("remitente", remitente);
