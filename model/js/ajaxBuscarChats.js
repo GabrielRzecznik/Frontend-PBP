@@ -6,6 +6,13 @@ let chats = document.getElementById('chats');
 $primeraCargaChats = true;
 
 function buscarChats(){
+    
+    //Actualiza cada 1 segundo
+    $actualizarChats = setInterval(actualizarChatsEnTiempoReal, 1000);
+
+    function actualizarChatsEnTiempoReal() {
+
+    }
     var formData= new FormData();
     formData.append("id_paciente", localStorage.getItem("id_paciente"));
     if (localStorage.getItem("id_profesional") != "") {
