@@ -14,7 +14,11 @@ function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fecha
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
-                buscarMensajes(data[0], $nom, $ape, $nuc, $rem, $des, $rol);
+                if ($cha != "Nuevo") {
+                    buscarMensajes($cha, $nom, $ape, $nuc, $rem, $des, $rol);
+                }else{
+                    buscarMensajes(data[0], $nom, $ape, $nuc, $rem, $des, $rol);
+                }
             }else{
                 alert("Ocurrio un error al enviar el mensaje");
             }
