@@ -18,12 +18,18 @@ function buscarProfesionalPorNombreUsuario(nombreUsuario){
                 apeC.innerHTML = data["apellido"];
                 nuC.innerHTML = '@' + nombreUsuario + '<hr>';
 
+                $nom = data["nombre"];
+                $ape = data["apellido"];
+                $nuc = '@' + nombreUsuario;
+
                 //Información importante del chat
                 $cha = "Nuevo";
                 $rem = localStorage.getItem("id_paciente");
                 $des = nombreUsuario;
                 $rol = "Paciente";
-
+                
+                $id_pro = data["id_profesional"];
+                
                 opcionesChat.innerHTML = '<div class="flex-shrink-1 dropdown">' +
                     '<span href="#" class="boton-opciones-chat" id="dropdownOption1" data-bs-toggle="dropdown" aria-expanded="false">' +
                         '<span data-bs-dismiss="modal2" aria-label="Close"><i class="bi bi-three-dots-vertical"></i></span>' +

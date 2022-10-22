@@ -17,6 +17,7 @@ function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fecha
                 if ($cha != "Nuevo") {
                     buscarMensajes($cha, $nom, $ape, $nuc, $rem, $des, $rol);
                 }else{
+                    $des = $id_pro;
                     buscarMensajes(data[0], $nom, $ape, $nuc, $rem, $des, $rol);
                 }
             }else{

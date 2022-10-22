@@ -17,6 +17,7 @@ $actualizarMensajes = "";
 var ids_mensaje = []; 
 
 function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol){
+    console.log(id_chat + ' ' + nombreChat + ' ' + apellidoChat + ' ' + nombreUsuarioChat + ' ' + rem + ' ' + des + ' ' + rol)
     clearInterval($actualizarMensajes);
     
     //Actualiza cada 1 segundo
