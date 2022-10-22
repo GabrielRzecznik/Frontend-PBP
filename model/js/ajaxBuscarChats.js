@@ -11,6 +11,7 @@ function buscarChats(){
     $actualizarChats = setInterval(actualizarChatsEnTiempoReal, 1000);
 
     function actualizarChatsEnTiempoReal() {
+
         var formData= new FormData();
         formData.append("id_paciente", localStorage.getItem("id_paciente"));
         if (localStorage.getItem("id_profesional") != "") {
