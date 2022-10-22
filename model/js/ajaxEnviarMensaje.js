@@ -7,7 +7,6 @@ function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fecha
     formData.append("descripcion", descripcion);
     formData.append("fechaHora", fechaHora);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
-    console.log(formJSON);
 
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
