@@ -21,7 +21,7 @@ function mensajesNuevos(){
                 if (data == "") {
                     contMens.innerHTML = '';
                 }else{
-                    contMens.innerHTML = '<span class="position-absolute top-1 start-10 translate-middle badge rounded-pill bg-danger">' +
+                    contMens.innerHTML = '<span class="position-absolute tamaño-numero top-1 start-10 translate-middle badge bg-danger">' +
                                             data.length +
                                         '</span>';
                 }
@@ -33,6 +33,6 @@ function mensajesNuevos(){
         }
     }
    
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/MensajesNuevos',true);
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/mensajesNuevos',true);
     xmlhttp.send(formJSON);
 }
