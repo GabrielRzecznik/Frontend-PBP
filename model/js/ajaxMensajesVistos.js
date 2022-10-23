@@ -7,7 +7,7 @@ function mensajesVistos($ids_mensaje){
     xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
-                
+                buscarChats();
             }else{
                 alert("Ocurrio un error al verificar mensajes vistos");
             }

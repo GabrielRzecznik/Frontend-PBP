@@ -31,7 +31,6 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
     let opcionesChat = document.getElementById('opcionesChat');
     
     function actualizarMensajesEnTiempoReal() {
-        
         $nom = nombreChat;
         $ape = apellidoChat;
         $nuc = nombreUsuarioChat;
@@ -236,6 +235,8 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
  
                     if (ids_mensaje != "") {
                         mensajesVistos(ids_mensaje);                    
+                    }else{
+                        buscarChats();
                     }
                 }
             }

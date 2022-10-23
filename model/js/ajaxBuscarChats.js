@@ -8,7 +8,11 @@ $primeraCargaChats = true;
 function buscarChats(){
     
     //Actualiza cada 1 segundo
-    $actualizarChats = setInterval(actualizarChatsEnTiempoReal, 1000);
+    if ($primeraCargaChats) {
+        $actualizarChats = setInterval(actualizarChatsEnTiempoReal, 1000);
+    }else{
+        actualizarChatsEnTiempoReal();
+    }
 
     function actualizarChatsEnTiempoReal() {
         var formData= new FormData();
@@ -25,7 +29,6 @@ function buscarChats(){
             if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
                 if (xmlhttp.status == 200) {//Volvio Bien
                     var data=JSON.parse(xmlhttp.responseText);
-    
                     chats.innerHTML = '';
                     
                     if (data != "") {        
@@ -77,19 +80,19 @@ function buscarChats(){
                             $nombreUsuarioChat = String("'@" + data[i]["nombreUsuario"] + "'");
     
                             if ($id_pacChat == localStorage.getItem("id_paciente")) {
-                                $rem = $id_pacChat;
-                                $des = $id_proChat;
-                                $rol = "'"+"Paciente"+"'";
+                                $remChat = $id_pacChat;
+                                $desChat = $id_proChat;
+                                $rolChat = "'"+"Paciente"+"'";
                                 rol = "Paciente";
                             }else{
-                                $rem = $id_proChat;
-                                $des = $id_pacChat;
-                                $rol = "'"+"Profesional"+"'";
+                                $remChat = $id_proChat;
+                                $desChat = $id_pacChat;
+                                $rolChat = "'"+"Profesional"+"'";
                                 rol = "Profesional";
                             }
     
                             if (data[i]["mensajesSinLeer"] == 0) {//
-                                chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + ',' + $rol + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                                chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $remChat + ',' + $desChat + ',' + $rolChat + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                     '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                         '<b class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</b>' +
                                         '<small>' + $tiempoEnvio + ' </small>' +
@@ -99,7 +102,7 @@ function buscarChats(){
                                     '</div>' +
                                 '</a>';
                             }else{
-                                chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $rem + ',' + $des + ',' + $rol + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                                chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $remChat + ',' + $desChat + ',' + $rolChat + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
                                     '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                         '<b class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</b>' +
                                         '<small>' +
@@ -120,6 +123,7 @@ function buscarChats(){
                         if ($primeraCargaChats) {
                             verificarChatExistente(data);
                         }
+                        clearInterval($actualizarChats);
                         chats.innerHTML = 'Aun no tienes chats';
                     }
                     $primeraCargaChats = false;
