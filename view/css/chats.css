@@ -214,8 +214,9 @@
     top: -1px
 }
 
-.margen-bot-carga-chat{
+.margen-carga-chat{
     position: relative;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
