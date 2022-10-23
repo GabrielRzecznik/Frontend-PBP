@@ -28,7 +28,7 @@
 				<main class="d-flex flex-nowrap mainListaContactos">
 					<div class="d-flex flex-column align-items-stretch flex-shrink-0 anchoTotal">
 						<div class="list-group list-group-flush scrollarea" id="chats">
-							<div id="loader" class="loader"></div>
+							<div id="loader margen-top-carga-chat" class="loader"></div>
 						</div>
 					</div>
 				</main>

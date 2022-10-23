@@ -203,3 +203,11 @@
 .centrar-mensaje{
     text-align: center;
 }
+
+.alto-carga-chats{
+    height: 30px;
+}
+
+.margen-top-carga-chat{
+    margin-top: 20px;
+}
