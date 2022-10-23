@@ -1,6 +1,6 @@
 let contMens = document.getElementById('contMens');
 
-function mensajesNuevas(){
+function mensajesNuevos(){
     var formData = new FormData();
     formData.append("id_paciente", localStorage.getItem("id_paciente"));
     if (localStorage.getItem("id_profesional") !== "") {

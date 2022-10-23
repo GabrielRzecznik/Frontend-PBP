@@ -32,6 +32,7 @@
 	<script src="../model/js/ajaxBackupProvincias.js"></script>
 	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
 	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>
+	<script src="../model/js/ajaxMensajesNuevos.js"></script>
 	
 	<script src="../model/js/ajaxNotificacionesVistas.js"></script>
 	<script src="../model/js/ajaxBuscarNotificaciones.js"></script>
