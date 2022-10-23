@@ -125,7 +125,7 @@ function buscarChats(){
                             verificarChatExistente(data);
                         }
                         clearInterval($actualizarChats);
-                        chats.innerHTML = 'Aun no tienes chats';
+                        chats.innerHTML = '<div class="centrar-mensaje"><i class="bi bi-chat-square-text-fill"> Aun no tienes chats</i></div>';
                     }
                     $primeraCargaChats = false;
                 }else{

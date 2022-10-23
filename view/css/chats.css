@@ -199,3 +199,7 @@
     font-style: italic;
     color: rgb(80, 80, 80);
 }
+
+.centrar-mensaje{
+    text-align: center;
+}
