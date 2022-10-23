@@ -36,7 +36,9 @@
 			</div>
 			<div class="col-md-8 bg-light border rounded-3 contenedores main-chats">
 				<span id="opcionesChat"></span>
-
+				<span class="mostrarEnCelulares" id="volverChats">
+					<i class="btn bi bi-chevron-left"></i>
+				</span>
 				<b><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span id="nombreUsuarioChat"></span></span>
 				
 				<main class="scrollarea contenedor-sin-chat" id="mensajes">
