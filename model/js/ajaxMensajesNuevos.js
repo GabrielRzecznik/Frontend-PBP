@@ -16,16 +16,14 @@ function mensajesNuevos(){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
-                contNoti.innerHTML = '';
+                contMens.innerHTML = '';
 
                 if (data == "") {
                     contMens.innerHTML = '';
                 }else{
-                    contMens.innerHTML = '<span id="contNoti">' +
-										    '<span class="position-absolute top-1 start-10 translate-middle badge rounded-pill bg-danger">' +
-											    data.length +
-										    '</span>'+
-					                    '</span>';
+                    contMens.innerHTML = '<span class="position-absolute top-1 start-10 translate-middle badge rounded-pill bg-danger">' +
+                                            data.length +
+                                        '</span>';
                 }
                 buscarProvincias();
             }else{

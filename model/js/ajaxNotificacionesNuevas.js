@@ -21,11 +21,9 @@ function notificacionesNuevas(){
                 if (data == "") {
                     contNoti.innerHTML = '';
                 }else{
-                    contNoti.innerHTML = '<span id="contNoti">' +
-										    '<span class="position-absolute top-1 start-10 translate-middle badge rounded-pill bg-danger">' +
-											    data.length +
-										    '</span>'+
-					                    '</span>';
+                    contNoti.innerHTML = '<span class="position-absolute top-1 start-10 translate-middle badge rounded-pill bg-danger">' +
+											data.length +
+                                        '</span>';
                 }
                 buscarProvincias();
             }else{
