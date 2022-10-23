@@ -132,7 +132,6 @@ function buscarChats(){
                 }
             }
         }
-        console.log("Chat en linea");
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Chats/buscarChats',true);
         xmlhttp.send(formJSON);
     }
