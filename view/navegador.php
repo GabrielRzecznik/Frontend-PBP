@@ -34,7 +34,12 @@
 							</a><!--Icono Notificaciones-->
 						</li>
 						<li class="liNav">
-							<a class="nav-link noSeleccionado" id="ch" href="./chats.php"><i class="bi bi-chat-square-text-fill"></i></a><!--Icono Chat-->
+							<a class="nav-link noSeleccionado" id="ch" href="../view/chats.php">
+								<i class="bi bi-chat-square-text-fill">
+									<span id="contMens">
+									</span>
+								</i>
+							</a>
 						</li>
 						<li class="liNav">
 							<a class="nav-link noSeleccionado" id="in" aria-current="page" href="../view/inicioBusqueda.php"><i class="bi bi-house-fill"></i></a><!--Icono Inicio-->
