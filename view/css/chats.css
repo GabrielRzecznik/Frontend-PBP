@@ -1,6 +1,7 @@
 .mainListaContactos {
     height: 100vh;
     height: -webkit-fill-available; /*Buscar para otros navegadores*/
+    height: -moz-available;
     max-height: 600px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -8,6 +9,7 @@
 
 .main-chats {
     height: -webkit-fill-available; /*Buscar para otros navegadores*/
+    height: -moz-available;
     overflow-x: auto;
     overflow-y: hidden;
 }
@@ -215,4 +217,8 @@
 .margen-bot-carga-chat{
     position: relative;
     margin-bottom: 10px;
+}
+
+.alto{
+	height: min-content;
 }
