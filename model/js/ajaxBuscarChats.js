@@ -36,7 +36,6 @@ function buscarChats(){
                     data=JSON.parse(xmlhttp.responseText);
                     for (var i = 0; i < data.length; i++) {
                         if ((data[i]["ultimoMensaje"] != dataAnteriorChat[i]["ultimoMensaje"]) || (data[i]["ultimoMensajeHora"] != dataAnteriorChat[i]["ultimoMensajeHora"])) {
-                            console.log(data[i]["ultimoMensaje"] + " " + dataAnteriorChat[i]["ultimoMensaje"]);
                             if (data != "") {        
                                 chats.innerHTML = '';
                                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
