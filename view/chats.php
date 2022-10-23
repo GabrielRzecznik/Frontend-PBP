@@ -28,10 +28,11 @@
 				<main class="d-flex flex-nowrap mainListaContactos">
 					<div class="d-flex flex-column align-items-stretch flex-shrink-0 anchoTotal">
 						<div class="list-group list-group-flush scrollarea" id="chats">
-							<div id="loader margen-top-carga-chat" class="loader"></div>
+							<div id="loader" class="loader margen-bot-carga-chat"></div>
 						</div>
 					</div>
 				</main>
+				<div class="linea-blanca"></div>
 			</div>
 			<div class="col-md-8 bg-light border rounded-3 contenedores main-chats">
 				<span id="opcionesChat"></span>

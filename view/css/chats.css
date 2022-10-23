@@ -204,10 +204,15 @@
     text-align: center;
 }
 
-.alto-carga-chats{
-    height: 30px;
+.linea-blanca{
+    position: relative;
+    background-color: #F8F9FA;
+    width: 100%;
+    height: 1px;
+    top: -1px
 }
 
-.margen-top-carga-chat{
-    margin-top: 20px;
+.margen-bot-carga-chat{
+    position: relative;
+    margin-bottom: 10px;
 }
