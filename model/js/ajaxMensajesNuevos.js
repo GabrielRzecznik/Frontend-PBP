@@ -25,10 +25,10 @@ function mensajesNuevos(){
                                             data.length +
                                         '</span>';
                 }
-                buscarProvincias();
+                notificacionesNuevas();
             }else{
                 console.log("Ocurrio un error inesperado al cargar las mensajes");
-                buscarProvincias();
+                notificacionesNuevas();
             }
         }
     }
