@@ -17,6 +17,7 @@ function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fecha
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
             if (xmlhttp.status == 200) {//Volvio Bien
                 var data=JSON.parse(xmlhttp.responseText);
+                console.log(data);
                 if ($cha != "Nuevo") {
                     $priCar = false;
                     buscarMensajes($cha, $nom, $ape, $nuc, $rem, $des, $rol, $priCar);
@@ -30,6 +31,7 @@ function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fecha
             }
         }
     }
+    console.log(id_chat + " " + remitente + " " + destinatario + " " + rol + " " + descripcion + " " + fechaHora);
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/enviarMensaje',true);
     xmlhttp.send(formJSON);
 }
