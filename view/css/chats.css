@@ -268,4 +268,8 @@
     .infoChat{
         font-size: 12px;
     }
+
+    .infoChat2{
+        display: none;
+    }
 }
