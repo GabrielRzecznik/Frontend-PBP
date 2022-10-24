@@ -13,7 +13,8 @@ function buscarChats(){
     //Actualiza cada 1 segundo
     if ($primeraCargaChats) {
         $actualizarChats = setInterval(actualizarChatsEnTiempoReal, 1000);
-        cargarNavegador();
+        $pestaña = "Chat";
+        cargarNavegador($pestaña);
     }else{
         actualizarChatsEnTiempoReal();
     }

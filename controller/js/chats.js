@@ -18,7 +18,5 @@ inputMensaje.forEach((input) => {
 });
 //#endregion
 
-$pestaña = "Chat";
-
 buscarChats();
 //cargarNavegador();
