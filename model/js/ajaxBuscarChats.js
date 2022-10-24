@@ -39,6 +39,7 @@ function buscarChats(){
                         }
                         clearInterval($actualizarChats);
                         chats.innerHTML = '<div class="centrar-mensaje"><i class="bi bi-chat-square-text-fill"> Aun no tienes chats</i></div>';
+                        document.getElementById("loader").classList.add("ocultar");
                     }
                     for (var i = 0; i < data.length; i++) {
                         console.log("hola");  
@@ -139,8 +140,6 @@ function buscarChats(){
                                 clearInterval($actualizarChats);
                                 chats.innerHTML = '<div class="centrar-mensaje"><i class="bi bi-chat-square-text-fill"> Aun no tienes chats</i></div>';
                             }
-                        }else{
-                            console.log("hola");
                         }
                     }
                     dataAnteriorChat = data;
