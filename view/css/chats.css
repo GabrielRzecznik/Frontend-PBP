@@ -272,4 +272,8 @@
     .infoChat2{
         display: none;
     }
+
+    .ocultarSoloCelulares{
+        display: none;
+    }
 }
