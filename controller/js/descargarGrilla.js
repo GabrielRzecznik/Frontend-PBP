@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('calendar').classList.remove('altoGrilla');
         document.getElementById('calendar').classList.add('zoom');
 
-        const $elementoParaConvertir = document.body; //document.getElementById("capturarGrilla");
+        const $elementoParaConvertir = document.getElementById("capturarGrilla"); //document.body;
         html2pdf().set({
             margin: 1,
             filename: 'grilla.pdf',
