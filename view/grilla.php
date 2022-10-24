@@ -25,7 +25,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<div class="card text-dark bg-light contenedorFullCalendar">
+				<div class="card text-dark bg-light contenedorFullCalendar" id="capturarGrilla">
 					<div class="card-body">
 						<div id='calendar'>
 							<div class="loader"></div>
