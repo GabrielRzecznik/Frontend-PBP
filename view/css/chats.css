@@ -264,4 +264,8 @@
         left: 10px;
         right: 10px;
     }
+
+    .infoChat{
+        font-size: 12px;
+    }
 }
