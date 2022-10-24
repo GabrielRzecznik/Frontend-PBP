@@ -37,7 +37,7 @@ function buscarChats(){
                         if ($primeraCargaChats) {
                             verificarChatExistente(data);
                         }
-                        clearInterval($actualizarChats);
+                        //clearInterval($actualizarChats);
                         chats.innerHTML = '<div class="centrar-mensaje"><i class="bi bi-chat-square-text-fill"> Aun no tienes chats</i></div>';
                         document.getElementById("loader").classList.add("ocultar");
                     }
@@ -132,16 +132,11 @@ function buscarChats(){
                                 if ($primeraCargaChats) {
                                     verificarChatExistente(data);
                                 }
-                            }else{
-                                if ($primeraCargaChats) {
-                                    verificarChatExistente(data);
-                                }
-                                clearInterval($actualizarChats);
-                                chats.innerHTML = '<div class="centrar-mensaje"><i class="bi bi-chat-square-text-fill"> Aun no tienes chats</i></div>';
+                                dataAnteriorChat = data;
                             }
                         }
                     }
-                    dataAnteriorChat = data;
+                    
                     $primeraCargaChats = false;
                 }else{
                     alert("Ocurrio un error al trar los chats");
