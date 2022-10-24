@@ -58,7 +58,7 @@
 
 				
 				
-				<span class="ocultar" id="fromEnvMen">
+				<span class="ocultar inputMensajePosicion" id="fromEnvMen">
 					<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioEnviarMensaje">
 						<div class="input-group inputMensaje">
 							<input type="text" id="mensaje" class="form-control" placeholder="Escribe algo..." aria-describedby="button-addon2">
