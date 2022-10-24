@@ -32,11 +32,18 @@ function buscarChats(){
         xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
             if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
                 if (xmlhttp.status == 200) {//Volvio Bien
-                    
                     data=JSON.parse(xmlhttp.responseText);
+                    if (data == "") {
+                        if ($primeraCargaChats) {
+                            verificarChatExistente(data);
+                        }
+                        clearInterval($actualizarChats);
+                        chats.innerHTML = '<div class="centrar-mensaje"><i class="bi bi-chat-square-text-fill"> Aun no tienes chats</i></div>';
+                    }
                     for (var i = 0; i < data.length; i++) {
+                        console.log("hola");  
                         if ((data[i]["ultimoMensaje"] != dataAnteriorChat[i]["ultimoMensaje"]) || (data[i]["ultimoMensajeHora"] != dataAnteriorChat[i]["ultimoMensajeHora"])) {
-                            if (data != "") {        
+                            if (data != "") {      
                                 chats.innerHTML = '';
                                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
                                     $fechaHora = data[i]["ultimoMensajeHora"];
@@ -132,6 +139,8 @@ function buscarChats(){
                                 clearInterval($actualizarChats);
                                 chats.innerHTML = '<div class="centrar-mensaje"><i class="bi bi-chat-square-text-fill"> Aun no tienes chats</i></div>';
                             }
+                        }else{
+                            console.log("hola");
                         }
                     }
                     dataAnteriorChat = data;
