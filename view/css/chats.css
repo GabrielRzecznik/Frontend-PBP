@@ -249,7 +249,7 @@
     }
 
     .inputMensajePosicion{
-        position: absolute;
+        position: fixed;
         bottom: 10px;
         left: 10px;
         right: 10px;
@@ -258,8 +258,8 @@
     .contenedor-chat{
         bottom: 0px;
         height: auto;
-        position: absolute;
-        top: 80px;
+        position: fixed;
+        top: 170px;
         bottom: 50px;
         left: 10px;
         right: 10px;
