@@ -30,6 +30,8 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
     let nuC = document.getElementById('nombreUsuarioChat');
     let opcionesChat = document.getElementById('opcionesChat');
     
+    var primerEjecucionChat = true;
+
     function actualizarMensajesEnTiempoReal() {
         $nom = nombreChat;
         $ape = apellidoChat;
@@ -100,10 +102,11 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                                 }*/
 
                                 //mensajeAnterior = data[i]["id_mensaje"];
-
-                                if (data[i]["visto"] == false && (data[i]["destinatario"] == localStorage.getItem("id_paciente") || data[i]["destinatario"] == localStorage.getItem("id_profesional"))) {
+                                //( )
+                                if ((primerEjecucionChat) && (data[i]["visto"] == false) && (data[i]["destinatario"] == localStorage.getItem("id_paciente") || data[i]["destinatario"] == localStorage.getItem("id_profesional"))) {
                                     $vis = true;
                                     mensajes.innerHTML += '<div class="indicadorDia">Nuevo</div>';
+                                    primerEjecucionChat = false;
                                 }
 
                                 $fechaHoraMen = data[i]["fechaHora"];
