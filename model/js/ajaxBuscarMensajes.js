@@ -16,7 +16,7 @@ $actualizarMensajes = "";
 
 var ids_mensaje = []; 
 
-function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol){
+function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol, priCar){
     clearInterval($actualizarMensajes);
     clearInterval($actualizarChats);
 
@@ -30,7 +30,10 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
     let nuC = document.getElementById('nombreUsuarioChat');
     let opcionesChat = document.getElementById('opcionesChat');
     
-    var primerEjecucionChat = true;
+    console.log("Hola");
+    if (priCar) {
+        var primerEjecucionChat = true;
+    }
 
     function actualizarMensajesEnTiempoReal() {
         $nom = nombreChat;

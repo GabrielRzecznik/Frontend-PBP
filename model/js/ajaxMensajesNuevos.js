@@ -17,7 +17,7 @@ function mensajesNuevos(){
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
                 contMens.innerHTML = '';
-                primerEjecucionChat = false;
+
                 if (data == "") {
                     contMens.innerHTML = '';
                 }else{

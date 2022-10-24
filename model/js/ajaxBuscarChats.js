@@ -105,7 +105,7 @@ function buscarChats(){
                                     }
             
                                     if (data[i]["mensajesSinLeer"] == 0) {//
-                                        chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $remChat + ',' + $desChat + ',' + $rolChat + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                                        chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $remChat + ',' + $desChat + ',' + $rolChat + ', true)" class="py-3 lh-sm item-chat" aria-current="true">' +
                                             '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                                 '<b class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</b>' +
                                                 '<small>' + $tiempoEnvio + ' </small>' +
@@ -115,7 +115,7 @@ function buscarChats(){
                                             '</div>' +
                                         '</a>';
                                     }else{
-                                        chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $remChat + ',' + $desChat + ',' + $rolChat + ')" class="py-3 lh-sm item-chat" aria-current="true">' +
+                                        chats.innerHTML += '<a href="#'+ data[i]["nombreUsuario"] + '" onclick="buscarMensajes(' + data[i]["id_chat"] + ',' + $nombreChat + ',' + $apellidoChat + ',' + $nombreUsuarioChat + ',' + $remChat + ',' + $desChat + ',' + $rolChat + ', true)" class="py-3 lh-sm item-chat" aria-current="true">' +
                                             '<div class="d-flex w-100 align-items-center justify-content-between">' +
                                                 '<b class="mb-1">'+ data[i]["nombre"] + ' ' + data[i]["apellido"] +'</b>' +
                                                 '<small>' +
