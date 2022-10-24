@@ -20,3 +20,10 @@ inputMensaje.forEach((input) => {
 
 buscarChats();
 //cargarNavegador();
+
+//Celulares
+const $volverChats = document.getElementById("volverChats");
+$volverChats.addEventListener("click", () => {
+    document.getElementById('ocultarChat').classList.add('ocultarSoloCelulares');
+    document.getElementById('ocultarLista').classList.remove('ocultarSoloCelulares');
+});

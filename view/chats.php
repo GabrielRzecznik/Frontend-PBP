@@ -22,7 +22,7 @@
 
 	<div class="container-fluid">
 		<div class="row centrado">
-			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding">
+			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding" id="ocultarLista">
 				<b>Chats</b>
 				<hr>
 				<main class="d-flex flex-nowrap mainListaContactos">
@@ -34,10 +34,10 @@
 				</main>
 				<div class="linea-blanca"></div>
 			</div>
-			<div class="col-md-8 bg-light border rounded-3 contenedores main-chats">
+			<div class="col-md-8 bg-light border rounded-3 contenedores main-chats ocultarSoloCelulares" id="ocultarChat">
 				<span id="opcionesChat"></span>
-				<span class="mostrarEnCelulares" id="volverChats">
-					<i class="btn bi bi-chevron-left"></i>
+				<span class="mostrarEnCelulares">
+					<i class="btn bi bi-chevron-left" id="volverChats"></i>
 				</span>
 				<b class="infoChat"><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span class="infoChat" id="nombreUsuarioChat"></span></span>
 				

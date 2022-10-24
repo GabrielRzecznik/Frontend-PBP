@@ -17,6 +17,9 @@ $actualizarMensajes = "";
 var ids_mensaje = []; 
 
 function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol, priCar){
+    document.getElementById('ocultarLista').classList.add('ocultarSoloCelulares');
+    document.getElementById('ocultarChat').classList.remove('ocultarSoloCelulares');
+
     clearInterval($actualizarMensajes);
     clearInterval($actualizarChats);
 
