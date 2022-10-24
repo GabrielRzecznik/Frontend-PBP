@@ -8,6 +8,7 @@ dataAnteriorChat.push(["ultimoMensaje", ""]);
 dataAnteriorChat.push(["ultimoMensajeHora", ""]);
 let chats = document.getElementById('chats');
 $primeraCargaChats = true;
+$sumatoriaMensajesSinLeer = 0;
 
 function buscarChats(){
     //Actualiza cada 1 segundo
@@ -19,7 +20,8 @@ function buscarChats(){
         actualizarChatsEnTiempoReal();
     }
 
-    function actualizarChatsEnTiempoReal() {
+    
+    function actualizarChatsEnTiempoReal() {        
         var formData= new FormData();
         formData.append("id_paciente", localStorage.getItem("id_paciente"));
         if (localStorage.getItem("id_profesional") != "") {
@@ -42,12 +44,16 @@ function buscarChats(){
                         chats.innerHTML = '<div class="centrar-mensaje"><i class="bi bi-chat-square-text-fill"> Aun no tienes chats</i></div>';
                         document.getElementById("loader").classList.add("ocultar");
                     }
+                    
+
+
                     for (var i = 0; i < data.length; i++) {
-                        console.log(dataAnteriorChat[i]);
+                        //console.log(dataAnteriorChat[i]);
                         if ((data[i]["ultimoMensaje"] != dataAnteriorChat[i]["ultimoMensaje"]) || (data[i]["ultimoMensajeHora"] != dataAnteriorChat[i]["ultimoMensajeHora"]) || (data[i]["mensajesSinLeer"] != dataAnteriorChat[i]["mensajesSinLeer"])) {
-                            if (data != "") {      
+                            if (data != "") { 
                                 chats.innerHTML = '';
                                 for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
+                                    $sumatoriaMensajesSinLeer += data[i]["mensajesSinLeer"]
                                     $fechaHora = data[i]["ultimoMensajeHora"];
                 
                                     $fecha = $fechaHora.slice(0, 10);
@@ -136,9 +142,14 @@ function buscarChats(){
                                 }
                                 dataAnteriorChat = data;
                             }
+                            if ($primeraCargaChats == false) {
+                               let mensajesNuevosActualizar = document.getElementById('mensajesNuevosActualizar');
+                                mensajesNuevosActualizar.innerHTML = $sumatoriaMensajesSinLeer ;     
+                            }
                         }
                     }
-                    
+                    $sumatoriaMensajesSinLeer = 0;
+
                     $primeraCargaChats = false;
                 }else{
                     alert("Ocurrio un error al trar los chats");

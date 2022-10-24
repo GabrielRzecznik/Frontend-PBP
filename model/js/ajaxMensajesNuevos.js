@@ -21,7 +21,7 @@ function mensajesNuevos(){
                 if (data == "") {
                     contMens.innerHTML = '';
                 }else{
-                    contMens.innerHTML = '<span class="position-absolute tamaño-numero top-1 start-10 translate-middle badge bg-danger">' +
+                    contMens.innerHTML = '<span class="position-absolute tamaño-numero top-1 start-10 translate-middle badge bg-danger" id="mensajesNuevosActualizar">' +
                                             data.length +
                                         '</span>';
                 }
