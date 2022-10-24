@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const $botonDescargarGrilla = document.getElementById("descargarGrilla");
     $botonDescargarGrilla.addEventListener("click", () => {
+        
+        document.getElementById('calendar').classList.remove('altoGrilla');
+        document.getElementById('calendar').classList.add('zoom');
+
         const $elementoParaConvertir = document.body; // <-- Desde aquí podemos elegir cualquier elemento del DOM
         html2pdf().set({
             margin: 1,
@@ -21,6 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
         .from($elementoParaConvertir)
         .save()
         .catch(err => console.log(err));
+       
+        $devolverTamañoGrilla = setTimeout(devolverTamañoGrilla, 1000);
         
     });
 });
+
+function devolverTamañoGrilla() {
+    document.getElementById('calendar').classList.add('altoGrilla');
+    document.getElementById('calendar').classList.remove('zoom');
+}
+

@@ -36,6 +36,11 @@ function armadoFullCalendar() {
         center: "title",
         right: "dayGridMonth,timeGridWeek,timeGridDay",
     },
+    navLinkWeekClick: function(weekStart, jsEvent) {
+        console.log('week start', weekStart.toISOString());
+        console.log('coords', jsEvent.pageX, jsEvent.pageY);
+      }
+    ,
     eventClick: function (info) {
         if (info.view.type != "dayGridMonth") {//Si no es clickeado en "MES"
             switch (info.event._def.title.substring(0, 18)) {
@@ -286,7 +291,7 @@ function armadoFullCalendar() {
             }
         }
     },
-    height: 650,
+    //height: 650,
     //contentHeight: 600,
     slotDuration: $slotDuration,
     slotMinTime: $slotMinTime,
@@ -301,3 +306,5 @@ function armadoFullCalendar() {
     let botonDescargarGrilla = document.getElementById("descargarGrilla");
     botonDescargarGrilla.disabled = false;
 }
+
+document.getElementById('calendar').classList.add('altoGrilla');
