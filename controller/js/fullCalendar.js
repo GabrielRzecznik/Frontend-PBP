@@ -289,8 +289,8 @@ function armadoFullCalendar() {
     height: 650,
     //contentHeight: 600,
     slotDuration: $slotDuration,
-    slotMinTime: '00:00:00',
-    slotMaxTime: '24:00:00'
+    slotMinTime: $slotMinTime,
+    slotMaxTime: $slotMaxTime
     });
     //calendar.updateSize();
     calendar.render();

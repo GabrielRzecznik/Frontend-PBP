@@ -1,7 +1,7 @@
 function buscarConfGrillaProf(){
     //Invertir
     if ((localStorage.getItem("nombreUsuario") === parametro) && localStorage.getItem("id_profesional") === "") {
-       
+    
     }else{
         var formData = new FormData(); //Las keys corresponden al atributo name de cada elemento  
         formData.append("nombreUsuario", parametro);
@@ -53,9 +53,15 @@ function buscarConfGrillaProf(){
             
                         duracion = horas +':'+ minutos;
         
-                        $slotDuration = duracion;
-                        $slotMinTime = $rangoHorarioDiaDesde;
-                        $slotMaxTime = $rangoHorarioDiaHasta;
+                        if(localStorage.getItem("nombreUsuario") === parametro && localStorage.getItem("id_profesional") !== ""){
+                            $slotDuration = '01:00';
+                            $slotMinTime = '00:00';
+                            $slotMaxTime = '24:00';
+                        }else{
+                            $slotDuration = duracion;
+                            $slotMinTime = $rangoHorarioDiaDesde;
+                            $slotMaxTime = $rangoHorarioDiaHasta;
+                        }
                     }/*else{
                         $slotDuration = '00:30';
                         $slotMinTime = '00:00';
