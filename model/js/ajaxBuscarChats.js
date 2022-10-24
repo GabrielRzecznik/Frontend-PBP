@@ -43,6 +43,7 @@ function buscarChats(){
                         document.getElementById("loader").classList.add("ocultar");
                     }
                     for (var i = 0; i < data.length; i++) {
+                        console.log(dataAnteriorChat[i]);
                         if ((data[i]["ultimoMensaje"] != dataAnteriorChat[i]["ultimoMensaje"]) || (data[i]["ultimoMensajeHora"] != dataAnteriorChat[i]["ultimoMensajeHora"]) || (data[i]["mensajesSinLeer"] != dataAnteriorChat[i]["mensajesSinLeer"])) {
                             if (data != "") {      
                                 chats.innerHTML = '';
