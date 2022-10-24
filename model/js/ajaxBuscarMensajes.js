@@ -98,7 +98,8 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                                     //$ultimoMensajeHora = data[i]["fechaHora"].slice(14, 19);
                                 }*/
 
-                                mensajeAnterior = data[i]["id_mensaje"];
+                                //mensajeAnterior = data[i]["id_mensaje"];
+                                
 
                                 $fechaHoraMen = data[i]["fechaHora"];
                                 $fechaMen = $fechaHoraMen.slice(0, 10);
