@@ -39,7 +39,7 @@
 				<span class="mostrarEnCelulares" id="volverChats">
 					<i class="btn bi bi-chevron-left"></i>
 				</span>
-				<b class="infoChat"><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span class="infoChat" id="nombreUsuarioChat"></span></span>
+				<b class="infoChat"><span id="nombreChat"></span> <span id="apellidoChat"></span></b><span class> <span class="infoChat2" id="nombreUsuarioChat"></span></span>
 				
 				<main class="scrollarea contenedor-sin-chat" id="mensajes">
 					<span class="sinBusqueda centrarMensaje" id="tituloSinChat">
