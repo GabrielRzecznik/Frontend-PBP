@@ -7,6 +7,9 @@ function verificarChatExistente($data) {
         for (let i = 0; i < $data.length; i++) {
             if (chatPorHash == $data[i]["nombreUsuario"]) {
                 //Chat existente
+                document.getElementById('ocultarChat').classList.remove('ocultarSoloCelulares');
+                document.getElementById('ocultarLista').classList.add('ocultarSoloCelulares');
+
                 if ($data[i]["id_pacChat"] == localStorage.getItem("id_paciente")) {
                     buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],'@'+$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Paciente',true);
                 }else{
@@ -17,6 +20,9 @@ function verificarChatExistente($data) {
         }
         if (nuevoChat) {
             //Nuevo chat
+            document.getElementById('ocultarChat').classList.remove('ocultarSoloCelulares');
+            document.getElementById('ocultarLista').classList.add('ocultarSoloCelulares');
+
             buscarProfesionalPorNombreUsuario(chatPorHash);
             
             document.getElementById('mensajes').classList.add('contenedor-chat');
