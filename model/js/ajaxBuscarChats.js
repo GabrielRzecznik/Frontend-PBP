@@ -142,13 +142,7 @@ function buscarChats(){
                                 }
                                 dataAnteriorChat = data;
                             }
-                            if ($primeraCargaChats == false) {
-                               let mensajesNuevosActualizar = document.getElementById('mensajesNuevosActualizar');
-                                mensajesNuevosActualizar.innerHTML = $sumatoriaMensajesSinLeer ;     
-                                document.getElementById('contMens').classList.remove('ocultar');
-                            }else{
-                                document.getElementById('contMens').classList.add('ocultar');
-                            }
+                            mensajesNuevos();
                         }
                     }
                     $sumatoriaMensajesSinLeer = 0;

@@ -22,7 +22,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
 
     clearInterval($actualizarMensajes);
     clearInterval($actualizarChats);
-
+console.log("Hola");
     document.getElementById("mensaje").disabled = false;
 
     //Actualiza cada 1 segundo
