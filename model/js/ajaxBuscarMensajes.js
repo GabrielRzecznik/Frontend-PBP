@@ -75,6 +75,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
         
                         $fechaAxuliar = "";
                         $hoy = false;
+                        $vis = false;
         
                         if (data != "") {
                             //var ultimoMensaje = document.getElementById('ultimoMensaje'+data[0]["id_cha"]);
@@ -99,7 +100,11 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                                 }*/
 
                                 //mensajeAnterior = data[i]["id_mensaje"];
-                                
+
+                                if (data[i]["visto"] == false && (data[i]["destinatario"] == localStorage.getItem("id_paciente") || data[i]["destinatario"] == localStorage.getItem("id_profesional"))) {
+                                    $vis = true;
+                                    mensajes.innerHTML += '<div class="indicadorDia">Nuevo</div>';
+                                }
 
                                 $fechaHoraMen = data[i]["fechaHora"];
                                 $fechaMen = $fechaHoraMen.slice(0, 10);
