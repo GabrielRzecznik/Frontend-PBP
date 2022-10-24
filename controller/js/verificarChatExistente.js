@@ -8,9 +8,9 @@ function verificarChatExistente($data) {
             if (chatPorHash == $data[i]["nombreUsuario"]) {
                 //Chat existente
                 if ($data[i]["id_pacChat"] == localStorage.getItem("id_paciente")) {
-                    buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],'@'+$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Paciente');
+                    buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],'@'+$data[i]["nombreUsuario"],$data[i]["id_pacChat"],$data[i]["id_proChat"],'Paciente',true);
                 }else{
-                    buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],'@'+$data[i]["nombreUsuario"],$data[i]["id_proChat"],$data[i]["id_pacChat"],'Profesional');
+                    buscarMensajes($data[i]["id_chat"],$data[i]["nombre"],$data[i]["apellido"],'@'+$data[i]["nombreUsuario"],$data[i]["id_proChat"],$data[i]["id_pacChat"],'Profesional',true);
                 }
                 nuevoChat = false;
             }
