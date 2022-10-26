@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const $botonDescargarGrilla = document.getElementById("descargarGrilla");
     $botonDescargarGrilla.addEventListener("click", () => {
-        
+
         document.getElementById('calendar').classList.remove('altoGrilla');
         document.getElementById('calendar').classList.add('zoom');
 
