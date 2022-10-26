@@ -66,6 +66,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                     document.getElementById('mensajes').classList.remove('contenedor-sin-chat');
                     document.getElementById('mensajes').classList.add('contenedor-chat');
                     
+                    //REPLANTEAR
                     if (data.length != $dataAnterior.length) {
                         opcionesChat.innerHTML = '<div class="flex-shrink-1 dropdown">' +
                             '<span href="#" class="boton-opciones-chat" id="dropdownOption1" data-bs-toggle="dropdown" aria-expanded="false">' +
