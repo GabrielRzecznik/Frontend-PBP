@@ -68,10 +68,17 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                     
                     $actMen = false;
 
-                    for (let i = 0; i < data.length; i++) {
-                        console.log($dataAnterior[i]["id_mensaje"]);
-                        if (data[i]["id_mensaje"] != $dataAnterior[i]["id_mensaje"]) {
-                            $actMen = true;
+                    for (let index = 0; index < data.length; index++) {
+                        if (
+                            (data[i]["id_mensaje"] != dataAnteriorChat[i]["id_mensaje"])||
+                            (data[i]["id_cha"] != dataAnteriorChat[i]["id_cha"]) ||
+                            (data[i]["descripcion"] != dataAnteriorChat[i]["descripcion"]) ||
+                            (data[i]["estadoMensaje"] != dataAnteriorChat[i]["estadoMensaje"]) ||
+                            (data[i]["fechaHora"] != dataAnteriorChat[i]["fechaHora"]) ||
+                            (data[i]["remitente"] != dataAnteriorChat[i]["remitente"]) ||
+                            (data[i]["destinatario"] != dataAnteriorChat[i]["destinatario"])
+                        ) {
+                            $actMen = true
                         }
                     }
 
