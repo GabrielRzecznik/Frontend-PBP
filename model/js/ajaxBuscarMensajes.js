@@ -11,7 +11,7 @@ $rem = "";
 $des = "";
 $rol = "";
 
-$dataAnterior = "";
+$dataAnterior = ["", ""];
 $actualizarMensajes = "";
 
 var ids_mensaje = []; 
@@ -66,10 +66,19 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                     document.getElementById('mensajes').classList.remove('contenedor-sin-chat');
                     document.getElementById('mensajes').classList.add('contenedor-chat');
                     
-                    
+                    $actMen = false;
+
+                    for (let i = 0; i < data.length; i++) {
+                        console.log($dataAnterior[i]["id_mensaje"]);
+                        if (data[i]["id_mensaje"] != $dataAnterior[i]["id_mensaje"]) {
+                            $actMen = true;
+                        }
+                    }
 
                     //REPLANTEAR
-                    if (data != $dataAnterior) {
+                    if ($actMen) {//Pensar mañana tranquilo
+                        console.log(data[1]);
+                        console.log($dataAnterior[1]);
                         opcionesChat.innerHTML = '<div class="flex-shrink-1 dropdown">' +
                             '<span href="#" class="boton-opciones-chat" id="dropdownOption1" data-bs-toggle="dropdown" aria-expanded="false">' +
                                 '<span data-bs-dismiss="modal2" aria-label="Close"><i class="bi bi-three-dots-vertical"></i></span>' +
@@ -239,8 +248,8 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                             men.scrollTop = men.scrollHeight;
                         }
                     }
-
                     $dataAnterior = data;
+
  
                     if (ids_mensaje != "") {
                         mensajesVistos(ids_mensaje);                    
