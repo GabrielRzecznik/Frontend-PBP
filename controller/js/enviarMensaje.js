@@ -6,7 +6,7 @@ formularioEnviarMensaje.addEventListener('submit', (e) => {
     $descripcion = document.getElementById('mensaje').value;
     
     if ($descripcion !== "") {
-        clearInterval($actualizarChats);
+        //clearInterval($actualizarChats);
         let date = new Date();
         $fechaHora = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0') + ' 00:' + date.getHours() + ':' + date.getMinutes());
 

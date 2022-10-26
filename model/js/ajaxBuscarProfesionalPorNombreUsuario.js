@@ -1,4 +1,7 @@
 function buscarProfesionalPorNombreUsuario(nombreUsuario){
+    clearInterval($actualizarMensajes);
+    clearInterval($actualizarChats);
+
     let mensajeNuevoChat = document.getElementById('mensajeNuevoChat');
     let nomC = document.getElementById('nombreChat');
     let apeC = document.getElementById('apellidoChat');
@@ -40,8 +43,10 @@ function buscarProfesionalPorNombreUsuario(nombreUsuario){
                         //'<li><a class="dropdown-item" href="#" id="borrarChat">Borrar chat</a></li>' +
                     '</ul>' +
                 '</div>';
-
                 mensajeNuevoChat.innerHTML = '<div class="alert alert-warning enviarNuevoMensaje">¡Enviale un mensaje al<br>profesional <b>' + data["nombre"] + ' ' + data["apellido"] + '.</b><br>Para crear un nuevo chat!</div>';
+                
+                //Actualiza cada 1 segundo
+                $actCht = setInterval(actCht, 1000);
             }else{
                 alert("Ocurrio un error al enviar el mensaje");
             }
@@ -49,4 +54,8 @@ function buscarProfesionalPorNombreUsuario(nombreUsuario){
     }
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Profesionales/buscarProfesionalPorNombreUsuario',true);
     xmlhttp.send(formJSON);
+}
+
+function actCht() {
+    buscarChats();
 }

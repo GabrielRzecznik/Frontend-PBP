@@ -3,9 +3,7 @@ let date = new Date();
 let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
 let rol = "";
 var data = "";
-let dataAnteriorChat = [];
-dataAnteriorChat.push(["ultimoMensaje", ""]);
-dataAnteriorChat.push(["ultimoMensajeHora", ""]);
+let dataAnteriorChat = ["", ""];
 let chats = document.getElementById('chats');
 $primeraCargaChats = true;
 $sumatoriaMensajesSinLeer = 0;
@@ -19,7 +17,6 @@ function buscarChats(){
     }else{
         actualizarChatsEnTiempoReal();
     }
-
     
     function actualizarChatsEnTiempoReal() {        
         var formData= new FormData();
@@ -142,7 +139,9 @@ function buscarChats(){
                                 }
                                 dataAnteriorChat = data;
                             }
-                            mensajesNuevos();
+                            if ($primeraCargaChats != true) {
+                                mensajesNuevos();
+                            }
                         }
                     }
                     $sumatoriaMensajesSinLeer = 0;

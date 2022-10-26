@@ -33,9 +33,10 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
     let nuC = document.getElementById('nombreUsuarioChat');
     let opcionesChat = document.getElementById('opcionesChat');
     
-    if (priCar) {
-        var primerEjecucionChat = true;
-    }
+    var primerEjecucionChat = true;
+
+    //console.log(id_chat + " " + nombreChat + " " + apellidoChat + " " + nombreUsuarioChat + " " + rem + " " + des + " " + rol + " " + priCar)
+
 
     function actualizarMensajesEnTiempoReal() {
         $nom = nombreChat;
@@ -100,15 +101,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                                     }
                                 }
                                 
-                                /*Ultimo mensaje del chat
-                                if (data[i]["id_mensaje"] > mensajeAnterior) {
-                                    $ultimoMensaje = data[i]["descripcion"];
-                                    //$ultimoMensajeHora = data[i]["fechaHora"].slice(14, 19);
-                                }*/
-
-                                //mensajeAnterior = data[i]["id_mensaje"];
-                                //( )
-                                if ((primerEjecucionChat) && (data[i]["visto"] == false) && (data[i]["destinatario"] == localStorage.getItem("id_paciente") || data[i]["destinatario"] == localStorage.getItem("id_profesional"))) {
+                                if ((primerEjecucionChat) && (data[i]["visto"] == false) && ((data[i]["destinatario"] == localStorage.getItem("id_paciente") || data[i]["destinatario"] == localStorage.getItem("id_profesional")))) {
                                     $vis = true;
                                     mensajes.innerHTML += '<div class="indicadorDia">Nuevo</div>';
                                     primerEjecucionChat = false;
@@ -249,10 +242,11 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
  
                     if (ids_mensaje != "") {
                         mensajesVistos(ids_mensaje);                    
-                    }else{
-                        buscarChats();
                     }
+                    
+                    buscarChats();
                 }
+                primerEjecucionChat = false;
             }
         }
         xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/buscarMensajes',true);

@@ -1,5 +1,6 @@
 function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fechaHora){
     if (id_chat == "Nuevo") {
+        clearInterval($actCht);
         document.getElementById("mensaje").disabled = true;
     }
     
@@ -23,6 +24,9 @@ function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fecha
                 }else{
                     $priCar = false;
                     $des = $id_pro;
+                    
+                    dataAnteriorChat = ["", ""];
+                    
                     buscarMensajes(data[0], $nom, $ape, $nuc, $rem, $des, $rol, $priCar);
                 }
             }else{
