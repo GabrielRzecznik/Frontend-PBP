@@ -35,7 +35,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
     
     var primerEjecucionChat = true;
 
-    //console.log(id_chat + " " + nombreChat + " " + apellidoChat + " " + nombreUsuarioChat + " " + rem + " " + des + " " + rol + " " + priCar)
+    console.log(id_chat + " " + nombreChat + " " + apellidoChat + " " + nombreUsuarioChat + " " + rem + " " + des + " " + rol + " " + priCar)
 
 
     function actualizarMensajesEnTiempoReal() {
@@ -242,9 +242,9 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
  
                     if (ids_mensaje != "") {
                         mensajesVistos(ids_mensaje);                    
-                    }
-                    
-                    buscarChats();
+                    }else{
+                        buscarChats();
+                    } 
                 }
                 primerEjecucionChat = false;
             }
