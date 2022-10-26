@@ -141,6 +141,7 @@ function buscarChats(){
                             }
                             if ($primeraCargaChats != true) {
                                 mensajesNuevos();
+                                console.log("hola");
                             }
                         }
                     }
