@@ -137,7 +137,7 @@ function buscarChats(){
                                 if ($primeraCargaChats) {
                                     verificarChatExistente(data);
                                 }
-                                dataAnteriorChat = "";
+                                dataAnteriorChat = [];
                                 dataAnteriorChat.push(data);
                             }
                             if ($primeraCargaChats != true) {
