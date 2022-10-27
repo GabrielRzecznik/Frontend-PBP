@@ -74,13 +74,13 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                     for (let i = 0; i < data.length; i++) {
                         if (data[i]["id_mensaje"] > $ultimoId_mensaje) {
                             $ultimoId_mensaje = data[i]["id_mensaje"];
-                            $remitenteMensaje = data[i]["remitente"];
-                            $destinatarioMensaje = data[i]["destinatario"];
                         }
+                        $remitenteMensaje = data[i]["remitente"];
+                        $destinatarioMensaje = data[i]["destinatario"];
                     }
-
+                    console.log($ultimoId_mensaje + " " + $ultimoId_mensajeAnterior);
                     //REPLANTEAR
-                    if (($ultimoId_mensaje > $ultimoId_mensajeAnterior) || ($remitenteMensaje == $remitenteMensajeAnterior) && ($destinatarioMensaje == $destinatarioMensajeAnterior)) {//Pensar mañana tranquilo
+                    if (($ultimoId_mensaje != $ultimoId_mensajeAnterior)) {//Pensar mañana tranquilo
                         console.log("Actualización")
                         //console.log(data[1]);
                         //console.log($dataAnterior[1]);
@@ -254,10 +254,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                         }
                     }
 
-                    $remitenteMensajeAnterior = $remitenteMensaje;
-                    $destinatarioMensajeAnterior = $destinatarioMensaje;
-
-                    if ($ultimoId_mensaje > $ultimoId_mensajeAnterior) {
+                    if ($ultimoId_mensaje != $ultimoId_mensajeAnterior) {
                         $ultimoId_mensajeAnterior = $ultimoId_mensaje;
                     }
 
