@@ -68,6 +68,8 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                     
                     $actMen = false;
 
+                    console.log(data);
+
                     for (let i = 0; i < data.length; i++) {
                         if (
                             (data[i]["id_mensaje"] != dataAnteriorChat[i]["id_mensaje"])||
@@ -86,13 +88,14 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                             dataAnteriorChat[i]["fechaHora"] = data[i]["fechaHora"];
                             dataAnteriorChat[i]["remitente"] = data[i]["remitente"];
                             dataAnteriorChat[i]["destinatario"] = data[i]["destinatario"];
+                            dataAnteriorChat[i]["visto"] = data[i]["visto"];
                         }
                     }
 
                     //REPLANTEAR
                     if ($actMen) {//Pensar mañana tranquilo
-                        console.log(data[1]);
-                        console.log($dataAnterior[1]);
+                        //console.log(data[1]);
+                        //console.log($dataAnterior[1]);
                         opcionesChat.innerHTML = '<div class="flex-shrink-1 dropdown">' +
                             '<span href="#" class="boton-opciones-chat" id="dropdownOption1" data-bs-toggle="dropdown" aria-expanded="false">' +
                                 '<span data-bs-dismiss="modal2" aria-label="Close"><i class="bi bi-three-dots-vertical"></i></span>' +
