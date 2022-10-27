@@ -43,8 +43,8 @@ function buscarChats(){
                     }
                     
 
-
                     for (var i = 0; i < data.length; i++) {
+                        console.log(dataAnteriorChat[i]);
                         //console.log(dataAnteriorChat[i]);
                         if ((data[i]["ultimoMensaje"] != dataAnteriorChat[i]["ultimoMensaje"]) || (data[i]["ultimoMensajeHora"] != dataAnteriorChat[i]["ultimoMensajeHora"]) || (data[i]["mensajesSinLeer"] != dataAnteriorChat[i]["mensajesSinLeer"])) {
                             if (data != "") { 
@@ -137,7 +137,8 @@ function buscarChats(){
                                 if ($primeraCargaChats) {
                                     verificarChatExistente(data);
                                 }
-                                dataAnteriorChat = data;
+                                dataAnteriorChat = "";
+                                dataAnteriorChat.push(data);
                             }
                             if ($primeraCargaChats != true) {
                                 mensajesNuevos();
