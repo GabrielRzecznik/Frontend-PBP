@@ -11,10 +11,12 @@ $rem = "";
 $des = "";
 $rol = "";
 
-$dataAnterior = ["", ""];
+$dataAnterior = "";
 $actualizarMensajes = "";
 
 var ids_mensaje = []; 
+
+$primeraCargaMensajes = true;
 
 function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol, priCar){
     document.getElementById('ocultarLista').classList.add('ocultarSoloCelulares');
@@ -68,32 +70,27 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                     
                     $actMen = false;
 
-                    console.log(data);
 
-                    for (let i = 0; i < data.length; i++) {
-                        if (
-                            (data[i]["id_mensaje"] != dataAnteriorChat[i]["id_mensaje"])||
-                            (data[i]["id_cha"] != dataAnteriorChat[i]["id_cha"]) ||
-                            (data[i]["descripcion"] != dataAnteriorChat[i]["descripcion"]) ||
-                            (data[i]["estadoMensaje"] != dataAnteriorChat[i]["estadoMensaje"]) ||
-                            (data[i]["fechaHora"] != dataAnteriorChat[i]["fechaHora"]) ||
-                            (data[i]["remitente"] != dataAnteriorChat[i]["remitente"]) ||
-                            (data[i]["destinatario"] != dataAnteriorChat[i]["destinatario"])
-                        ) {
+                    if ($primeraCargaMensajes == true) {
+                        $actMen = true;
+                        $dataAnterior = "";
+                        $dataAnterior = data;
+                    }else{
+                        console.log(data == $dataAnterior);
+                        if (data === $dataAnterior) {
+                            $actMen = false;
+                        }else{
                             $actMen = true;
-                            dataAnteriorChat[i]["id_mensaje"] = data[i]["id_mensaje"];
-                            dataAnteriorChat[i]["id_cha"] = data[i]["id_cha"];
-                            dataAnteriorChat[i]["descripcion"] = data[i]["descripcion"];
-                            dataAnteriorChat[i]["estadoMensaje"] = data[i]["estadoMensaje"];
-                            dataAnteriorChat[i]["fechaHora"] = data[i]["fechaHora"];
-                            dataAnteriorChat[i]["remitente"] = data[i]["remitente"];
-                            dataAnteriorChat[i]["destinatario"] = data[i]["destinatario"];
-                            dataAnteriorChat[i]["visto"] = data[i]["visto"];
+                            $dataAnterior = "";
+                            $dataAnterior = data;
                         }
                     }
 
+                    $primeraCargaMensajes = false;
+
                     //REPLANTEAR
                     if ($actMen) {//Pensar mañana tranquilo
+                        console.log("Actualización")
                         //console.log(data[1]);
                         //console.log($dataAnterior[1]);
                         opcionesChat.innerHTML = '<div class="flex-shrink-1 dropdown">' +
