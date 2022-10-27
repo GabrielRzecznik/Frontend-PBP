@@ -100,10 +100,6 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                         $vis = false;
         
                         if (data != "") {
-                            //var ultimoMensaje = document.getElementById('ultimoMensaje'+data[0]["id_cha"]);
-                            //var ultimoMensajeHora = document.getElementById('ultimoMensajeHora'+data[0]["id_cha"]);
-                            //let mensajeAnterior = 0;
-
                             for (var i = 0; i < data.length; i++) {//data.length undefined, recorrer como foreach
                                 if (rol == "Paciente") {
                                     if (data[i]["destinatario"] == localStorage.getItem("id_paciente") && data[i]["visto"] == false) {
