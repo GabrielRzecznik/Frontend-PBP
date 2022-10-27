@@ -39,8 +39,6 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
     var primerEjecucionChat = true;
 
     function actualizarMensajesEnTiempoReal() {
-        
-       
         $nom = nombreChat;
         $ape = apellidoChat;
         $nuc = nombreUsuarioChat;
