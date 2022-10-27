@@ -11,12 +11,11 @@ $rem = "";
 $des = "";
 $rol = "";
 
-$dataAnterior = "";
 $actualizarMensajes = "";
 
-var ids_mensaje = []; 
+$ultimoId_mensajeAnterior = 0;
 
-$primeraCargaMensajes = true;
+var ids_mensaje = []; 
 
 function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, rem, des, rol, priCar){
     document.getElementById('ocultarLista').classList.add('ocultarSoloCelulares');
@@ -68,28 +67,16 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                     document.getElementById('mensajes').classList.remove('contenedor-sin-chat');
                     document.getElementById('mensajes').classList.add('contenedor-chat');
                     
-                    $actMen = false;
+                    $ultimoId_mensaje = 0;
 
-
-                    if ($primeraCargaMensajes == true) {
-                        $actMen = true;
-                        $dataAnterior = "";
-                        $dataAnterior = data;
-                    }else{
-                        console.log(data == $dataAnterior);
-                        if (data === $dataAnterior) {
-                            $actMen = false;
-                        }else{
-                            $actMen = true;
-                            $dataAnterior = "";
-                            $dataAnterior = data;
+                    for (let i = 0; i < data.length; i++) {
+                        if (data[i]["id_usuario"] > $ultimoId_mensaje) {
+                            $ultimoId_mensaje = data[i]["id_usuario"];
                         }
                     }
 
-                    $primeraCargaMensajes = false;
-
                     //REPLANTEAR
-                    if ($actMen) {//Pensar mañana tranquilo
+                    if (ultimoId_mensaje > ultimoId_mensajeAnterior) {//Pensar mañana tranquilo
                         console.log("Actualización")
                         //console.log(data[1]);
                         //console.log($dataAnterior[1]);
