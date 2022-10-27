@@ -14,6 +14,8 @@ $rol = "";
 $actualizarMensajes = "";
 
 $ultimoId_mensajeAnterior = 0;
+$remitenteMensajeAnterior = 0;
+$destinatarioMensajeAnterior = 0;
 
 var ids_mensaje = []; 
 
