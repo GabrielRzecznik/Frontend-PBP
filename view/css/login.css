@@ -124,3 +124,9 @@ body{
   text-align: center;
   display: block;
 }
+
+.iconoManualUsuario{
+  position: relative;
+  float: right;
+  
+}
