@@ -26,6 +26,9 @@
 				<span class="w-100 me-2 derecha">
 					<ul class="ulNav">
 						<li class="liNav">
+							<a class="nav-link noSeleccionado" target="_blank" href="../view/manual/Manual de Usuario.pdf"><i class="bi bi-book-fill" title="Manual de usuario"></i></a>
+						</li>
+						<li class="liNav">
 							<a class="nav-link noSeleccionado" id="no" href="../view/notificaciones.php">
 								<i class="bi bi-bell-fill">
 									<span id="contNoti">
