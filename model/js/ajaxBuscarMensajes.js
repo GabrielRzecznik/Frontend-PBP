@@ -139,25 +139,25 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
             
                                     switch ($fechaMen) {
                                         case 0:
-                                            $diaSemana = "Domingo";
-                                            break;
-                                        case 1:
                                             $diaSemana = "Lunes";
                                             break;
-                                        case 2:
+                                        case 1:
                                             $diaSemana = "Martes";
                                             break;
-                                        case 3:
+                                        case 2:
                                             $diaSemana = "Miércoles";
                                             break;
-                                        case 4:
+                                        case 3:
                                             $diaSemana = "Jueves";
+                                            break;
+                                        case 4:
+                                            $diaSemana = "Viernes";
                                             break;
                                         case 5:
                                             $diaSemana = "Viernes";
                                             break;
                                             case 6:
-                                            $diaSemana = "Sábado";
+                                            $diaSemana = "Domingo";
                                             break;
                                         default:
                                             break;
