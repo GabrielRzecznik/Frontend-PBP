@@ -63,25 +63,25 @@ function buscarChats(){
                 
                                         switch ($fecha) {
                                             case 0:
-                                                $tiempoEnvio = "Domingo";
-                                                break;
-                                            case 1:
                                                 $tiempoEnvio = "Lunes";
                                                 break;
-                                            case 2:
+                                            case 1:
                                                 $tiempoEnvio = "Martes";
                                                 break;
-                                            case 3:
+                                            case 2:
                                                 $tiempoEnvio = "Miércoles";
                                                 break;
-                                            case 4:
+                                            case 3:
                                                 $tiempoEnvio = "Jueves";
                                                 break;
-                                            case 5:
+                                            case 4:
                                                 $tiempoEnvio = "Viernes";
                                                 break;
+                                            case 5:
+                                                $tiempoEnvio = "Sábado";
+                                                break;
                                                 case 6:
-                                                $tiempoEnvio = "Sabado";
+                                                $tiempoEnvio = "Domingo";
                                                 break;
                                             default:
                                                 break;

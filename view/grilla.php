@@ -190,6 +190,10 @@
 					<b>Tipo consulta:</b> <span id="tipoConsultaResponder"></span>
 					<br>
 					<b>Obra social seleccionada:</b> <span id="ObraSocialResponder"></span>
+					<br>
+					<b>Hora de inicio:</b> <span id="horaDesdeResponder"></span>
+					<br>
+					<b>Hora de Finalización:</b> <span id="horaHastaResponder"></span>
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-responder-solicitud">Atrás</span>
