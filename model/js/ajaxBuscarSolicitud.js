@@ -1,5 +1,7 @@
 let nombreSolicitudResponder = document.getElementById('nombreSolicitudResponder');
 let apellidoSolicitudResponder = document.getElementById('apellidoSolicitudResponder');
+let tipoConsultaResponder = document.getElementById('tipoConsultaResponder');
+let ObraSocialResponder = document.getElementById('ObraSocialResponder');
 
 function buscarSolicitud(id_solicitud, tipoSolicitud){
     var formData= new FormData();
@@ -18,6 +20,8 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
                 if (tipoSolicitud = "solicitud_recibida") {
                     nombreSolicitudResponder.innerHTML = data["nombre"];
                     apellidoSolicitudResponder.innerHTML = data["apellido"];
+                    tipoConsultaResponder.innerHTML = data["seleccionConsulta"];
+                    ObraSocialResponder.innerHTML = data["obraSocialSolicitud"];
                 }
             }else{
                 alert("¡Ocurrio un error inesperado al buscar los datos de la solicitud!");

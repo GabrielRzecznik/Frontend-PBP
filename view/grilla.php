@@ -187,7 +187,9 @@
 					</button>
 				</div>                    
 				<div class="modal-body">
-					Información
+					<b>Tipo consulta:</b> <span id="tipoConsultaResponder"></span>
+					<br>
+					<b>Obra social seleccionada:</b> <span id="ObraSocialResponder"></span>
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-responder-solicitud">Atrás</span>
