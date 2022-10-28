@@ -533,7 +533,7 @@
 					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDiasAtencion">
 						<i class="bi bi-info-circle-fill"></i>
 						<strong>Días de atención:</strong>
-						Debes seleccionar minimo 1 día de atención a la semana.
+						Debes seleccionar mínimo 1 día de atención a la semana.
 					</div>
 					<!--Alerta Descanso entre consultas-->
 					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDescanso">
