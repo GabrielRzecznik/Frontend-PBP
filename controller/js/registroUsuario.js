@@ -6,6 +6,10 @@ function load(){
 }
 //#endregion
 
+if (localStorage.getItem("id_usuario") != null) {
+    window.location.href = "../";
+}
+
 //#region Validación Formulario
 const inputs = document.querySelectorAll('#formulario input');
 
