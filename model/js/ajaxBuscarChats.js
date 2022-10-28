@@ -63,25 +63,25 @@ function buscarChats(){
                 
                                         switch ($fecha) {
                                             case 0:
-                                                $tiempoEnvio = "Lunes";
+                                                $tiempoEnvio = "Lunes " + $fechaHora.slice(8, 10) + "/" + $fechaHora.slice(5, 7) + "/" + $fechaHora.slice(0, 4);
                                                 break;
                                             case 1:
-                                                $tiempoEnvio = "Martes";
+                                                $tiempoEnvio = "Martes " + $fechaHora.slice(8, 10) + "/" + $fechaHora.slice(5, 7) + "/" + $fechaHora.slice(0, 4);
                                                 break;
                                             case 2:
-                                                $tiempoEnvio = "Miércoles";
+                                                $tiempoEnvio = "Miércoles " + $fechaHora.slice(8, 10) + "/" + $fechaHora.slice(5, 7) + "/" + $fechaHora.slice(0, 4);
                                                 break;
                                             case 3:
-                                                $tiempoEnvio = "Jueves";
+                                                $tiempoEnvio = "Jueves " + $fechaHora.slice(8, 10) + "/" + $fechaHora.slice(5, 7) + "/" + $fechaHora.slice(0, 4);
                                                 break;
                                             case 4:
-                                                $tiempoEnvio = "Viernes";
+                                                $tiempoEnvio = "Viernes " + $fechaHora.slice(8, 10) + "/" + $fechaHora.slice(5, 7) + "/" + $fechaHora.slice(0, 4);
                                                 break;
                                             case 5:
-                                                $tiempoEnvio = "Sábado";
+                                                $tiempoEnvio = "Sábado " + $fechaHora.slice(8, 10) + "/" + $fechaHora.slice(5, 7) + "/" + $fechaHora.slice(0, 4);
                                                 break;
                                                 case 6:
-                                                $tiempoEnvio = "Domingo";
+                                                $tiempoEnvio = "Domingo " + $fechaHora.slice(8, 10) + "/" + $fechaHora.slice(5, 7) + "/" + $fechaHora.slice(0, 4);
                                                 break;
                                             default:
                                                 break;
