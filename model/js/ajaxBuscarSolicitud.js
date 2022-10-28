@@ -1,3 +1,6 @@
+let nombreSolicitudResponder = document.getElementById('nombreSolicitudResponder');
+let apellidoSolicitudResponder = document.getElementById('apellidoSolicitudResponder');
+
 function buscarSolicitud(id_solicitud, tipoSolicitud){
     var formData= new FormData();
     formData.append("id_solicitud", id_solicitud);
@@ -9,7 +12,13 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
-                console.log(data);
+                nombreSolicitudResponder.innerHTML = '';
+                apellidoSolicitudResponder.innerHTML = '';
+
+                if (tipoSolicitud = "solicitud_recibida") {
+                    nombreSolicitudResponder.innerHTML = data["nombre"];
+                    apellidoSolicitudResponder.innerHTML = data["apellido"];
+                }
             }else{
                 alert("¡Ocurrio un error inesperado al buscar los datos de la solicitud!");
             }
