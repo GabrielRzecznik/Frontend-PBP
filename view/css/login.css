@@ -126,7 +126,6 @@ body{
 }
 
 .iconoManualUsuario{
-  position: relative;
-  float: right;
-  
+  text-align: right;
+  margin-bottom: -30px;
 }
