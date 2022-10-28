@@ -287,6 +287,9 @@
 	<script src="../controller/js/cancelarSolicitud.js"></script>
     <script src="../model/js/ajaxCancelarSolicitud.js"></script>
 
+	<!--Buscar Datos Solicitud-->
+	<script src="../model/js/ajaxBuscarSolicitud.js"></script>
+
 	<!--Responder Solicitud-->
 	<script src="../controller/js/responderSolicitud.js"></script>
     <script src="../model/js/ajaxResponderSolicitud.js"></script>
