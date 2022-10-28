@@ -26,35 +26,77 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
                     ObraSocialResponder.innerHTML = data["obraSocialSolicitud"];
 
                     $fechaResponder = new Date(data["horaDesdeSolicitud"].substring(0,10)).getDay();
-                    console.log($fechaResponder);
                     switch ($fechaResponder) {
                         case 0:
-                            $tiempoResponder = "Lunes";
+                            $diaResponder = "Lunes";
                             break;
                         case 1:
-                            $tiempoResponder = "Martes";
+                            $diaResponder = "Martes";
                             break;
                         case 2:
-                            $tiempoResponder = "Miércoles";
+                            $diaResponder = "Miércoles";
                             break;
                         case 3:
-                            $tiempoResponder = "Jueves";
+                            $diaResponder = "Jueves";
                             break;
                         case 4:
-                            $tiempoResponder = "Viernes";
+                            $diaResponder = "Viernes";
                             break;
                         case 5:
-                            $tiempoResponder = "Sábado";
+                            $diaResponder = "Sábado";
                             break;
                         case 6:
-                            $tiempoResponder = "Domingo";
+                            $diaResponder = "Domingo";
                             break;
                         default:
                             break;
                     }
 
-                    horaDesdeResponder.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $tiempoResponder;
-                    horaHastaResponder.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $tiempoResponder;
+                    $mesResponder = data["horaDesdeSolicitud"].substring(5,7);
+
+                    switch ($mesResponder) {
+                        case "01":
+                            $mesResponder = "Enero";
+                            break;
+                        case "02":
+                            $mesResponder = "Febrero";
+                            break;
+                        case "03":
+                            $mesResponder = "Marzo";
+                            break;
+                        case "04":
+                            $mesResponder = "Abril";
+                            break;
+                        case "05":
+                            $mesResponder = "Mayo";
+                            break;
+                        case "06":
+                            $mesResponder = "Junio";
+                            break;
+                        case "07":
+                            $mesResponder = "Julio";
+                            break;
+                        case "08":
+                            $mesResponder = "Agosto";
+                            break;
+                        case "09":
+                            $mesResponder = "Septiembre";
+                            break;
+                        case "10":
+                            $mesResponder = "Octubre";
+                            break;
+                        case "11":
+                            $mesResponder = "Noviembre";
+                            break;
+                        case "12":
+                            $mesResponder = "Diciembre";
+                            break;
+                        default:
+                            break;
+                    }
+
+                    horaDesdeResponder.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaResponder + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesResponder + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaHastaResponder.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaResponder + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesResponder + " del " + data["horaHastaSolicitud"].substring(0,4);
                 }
             }else{
                 alert("¡Ocurrio un error inesperado al buscar los datos de la solicitud!");
