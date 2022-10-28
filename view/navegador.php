@@ -20,7 +20,7 @@
 	<header class="py-3 mb-3 border-bottom bg-light"><!--bg-light se utiliza para cambiarle el color!-->
 		<div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
 			<div class="dropdown">
-				<a class="navbar-brand textoLogo" href="#"><img class="logo" src="../view/img/icono.png" alt="Error al cargar logo"> <b class="nombreSitio colorGris">Profesional By Proximity</b></a>
+				<a class="navbar-brand textoLogo" href="#"><img class="logo" src="../view/img/icono.png" alt="Error al cargar logo"> <b class="nombreSitio colorGris nombre1">Profesional By Proximity</b><b class="nombreSitio colorGris nombre2">PBP</b></a>
 			</div>
 			<div class="d-flex align-items-center">
 				<span class="w-100 me-2 derecha">
@@ -30,7 +30,7 @@
 						</li>
 						<li class="liNav">
 							<a class="nav-link noSeleccionado" id="no" href="../view/notificaciones.php">
-								<i class="bi bi-bell-fill">
+								<i class="bi bi-bell-fill" title="Notificaciones">
 									<span id="contNoti">
 									</span>
 								</i>
@@ -38,14 +38,14 @@
 						</li>
 						<li class="liNav">
 							<a class="nav-link noSeleccionado" id="ch" href="../view/chats.php">
-								<i class="bi bi-chat-square-text-fill">
+								<i class="bi bi-chat-square-text-fill" title="Mensajes">
 									<span id="contMens">
 									</span>
 								</i>
 							</a>
 						</li>
 						<li class="liNav">
-							<a class="nav-link noSeleccionado" id="in" aria-current="page" href="../view/inicioBusqueda.php"><i class="bi bi-house-fill"></i></a><!--Icono Inicio-->
+							<a class="nav-link noSeleccionado" id="in" aria-current="page" href="../view/inicioBusqueda.php"><i class="bi bi-house-fill" title="Inicio"></i></a><!--Icono Inicio-->
 						</li>
 					</ul>
 				</span>

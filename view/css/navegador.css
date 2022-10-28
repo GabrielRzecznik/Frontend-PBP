@@ -24,14 +24,22 @@
    cursor:pointer;
 }
 
-@media (max-width: 550px) { 
-   .nombreSitio{
-      top: 4px;
-   }
+.nombre2 {
+   display: none;
+}
 
+@media (max-width: 570px) { 
    .logoUsuario {
       display: none;
-    }
+   }
+
+   .nombre1 {
+      display: none;
+   }
+
+   .nombre2 {
+      display: block;
+   }
 }
 
 .seleccionado{
