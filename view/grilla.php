@@ -181,7 +181,7 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Responder solicitud de </h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Responder solicitud de <span id="nombreSolicitudResponder"></span> <span id="apellidoSolicitudResponder"></span></h5>
 					<button id="close-responder-solicitud" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>

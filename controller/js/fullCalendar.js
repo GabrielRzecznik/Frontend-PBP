@@ -266,6 +266,8 @@ function armadoFullCalendar() {
                     break;
                 case "Solicitud recibida":
                     var id_solicitud = String(info.event._def.publicId);
+                    var tipoSolicitud = "solicitud_recibida";
+                    buscarSolicitud(id_solicitud, tipoSolicitud);
                     ModalResponderSolicitud(id_solicitud);
                     break;
                 case "Turno confirmado a":
