@@ -180,7 +180,12 @@
 					</button>
 				</div>                    
 				<div class="modal-body">
-					¿Esta seguro que quiere rehabilitar este horario?
+					<div class="alert alert-warning">
+						¿Esta seguro que quiere rehabilitar este horario?
+					</div>
+					Hora de inicio: <b id="horaDesdeHorarioNoDisponible"></b>
+					<br>
+					Hora de Finalización: <b id="horaHastaHorarioNoDisponible"></b>
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-rehabilitar-horario">Atrás</span>

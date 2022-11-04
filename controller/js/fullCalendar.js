@@ -157,7 +157,7 @@ function armadoFullCalendar() {
 
                         $mesEvento = infoDesdeHorario.substring(5,7); 
 
-                        calcularMesEvento();    
+                        calcularMesEvento();
                         
                         document.getElementById('horaDesdeHorarioDisponible').innerHTML = horaDesde.substring(0, 5) + " del " + $diaEvento + " " + diaDesde + " de " + $mesEvento + " del " + añoDesde;
                         document.getElementById('horaHastaHorarioDisponible').innerHTML = horaHasta.substring(0, 5) + " del " + $diaEvento + " " + diaHasta + " de " + $mesEvento + " del " + añoHasta;
@@ -306,6 +306,120 @@ function armadoFullCalendar() {
                     if (parametro == localStorage.getItem("nombreUsuario")) {
                         var id_horario = String(info.event._def.publicId);
                         ModalRehabilitarHorario(id_horario);
+
+                        var infoDesdeHorario = String(info.event.start);
+                        var infoHastaHorario = String(info.event.end);
+                        var profesional = localStorage.getItem("id_profesional");
+
+                        var diaDesde = infoDesdeHorario.substring(8, 10);
+                        var diaHasta = infoHastaHorario.substring(8, 10);
+
+                        var mesDesde = infoDesdeHorario.substring(4, 7);
+
+                        switch (mesDesde) {
+                            case "Jan":
+                                mesDesde = "01";
+                                break;
+                            case "Feb":
+                                mesDesde = "02";
+                                break;
+                            case "Mar":
+                                mesDesde = "03";
+                                break;
+                            case "Apr":
+                                mesDesde = "04";
+                                break;
+                            case "May":
+                                mesDesde = "05";
+                                break;
+                            case "Jun":
+                                mesDesde = "06";
+                                break;
+                            case "Jul":
+                                mesDesde = "07";
+                                break;
+                            case "Aug":
+                                mesDesde = "08";
+                                break;
+                            case "Sep":
+                                mesDesde = "09";
+                                break;
+                            case "Oct":
+                                mesDesde = "10";
+                                break;
+                            case "Nov":
+                                mesDesde = "11";
+                                break;
+                            case "Dec":
+                                mesDesde = "12";
+                                break;
+                            default:
+                                console.log("Ocurrio un error inesperado");
+                                break;
+                        }
+
+                        var mesHasta = infoHastaHorario.substring(4, 7);
+
+                        switch (mesHasta) {
+                            case "Jan":
+                                mesHasta = "01";
+                                break;
+                            case "Feb":
+                                mesHasta = "02";
+                                break;
+                            case "Mar":
+                                mesHasta = "03";
+                                break;
+                            case "Apr":
+                                mesHasta = "04";
+                                break;
+                            case "May":
+                                mesHasta = "05";
+                                break;
+                            case "Jun":
+                                mesHasta = "06";
+                                break;
+                            case "Jul":
+                                mesHasta = "07";
+                                break;
+                            case "Aug":
+                                mesHasta = "08";
+                                break;
+                            case "Sep":
+                                mesHasta = "09";
+                                break;
+                            case "Oct":
+                                mesHasta = "10";
+                                break;
+                            case "Nov":
+                                mesHasta = "11";
+                                break;
+                            case "Dec":
+                                mesHasta = "12";
+                                break;
+                            default:
+                                console.log("Ocurrio un error inesperado");
+                                break;
+                        }
+                        
+                        var añoDesde = infoDesdeHorario.substring(11, 15);
+                        var añoHasta = infoHastaHorario.substring(11, 15);
+                        
+                        var horaDesde = infoDesdeHorario.substring(16, 24);
+                        var horaHasta = infoHastaHorario.substring(16, 24);
+
+                        var infoDesdeHorario = añoDesde+"-"+mesDesde+"-"+diaDesde+" "+horaDesde;
+
+                        $fechaEvento = new Date(infoDesdeHorario.substring(0,10)).getDay();
+
+                        calcularFechaEvento();
+
+                        $mesEvento = infoDesdeHorario.substring(5,7); 
+
+                        calcularMesEvento();
+                        
+                        document.getElementById('horaDesdeHorarioNoDisponible').innerHTML = horaDesde.substring(0, 5) + " del " + $diaEvento + " " + diaDesde + " de " + $mesEvento + " del " + añoDesde;
+                        document.getElementById('horaHastaHorarioNoDisponible').innerHTML = horaHasta.substring(0, 5) + " del " + $diaEvento + " " + diaHasta + " de " + $mesEvento + " del " + añoHasta;
                     }
                     break;
                 default:
