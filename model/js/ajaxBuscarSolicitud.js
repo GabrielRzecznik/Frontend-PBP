@@ -25,6 +25,7 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
                     tipoConsultaResponder.innerHTML = data["seleccionConsulta"];
                     ObraSocialResponder.innerHTML = data["obraSocialSolicitud"];
 
+                    calcularFechaEvento();
                     $fechaEvento = new Date(data["horaDesdeSolicitud"].substring(0,10)).getDay();
                     switch ($fechaEvento) {
                         case 0:
@@ -106,4 +107,8 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
     console.log(formJSON);
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Solicitudes/buscarSolicitud',true);
     xmlhttp.send(formJSON);
+}
+
+function calcularFechaEvento() {
+    
 }

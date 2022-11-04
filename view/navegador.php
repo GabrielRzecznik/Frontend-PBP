@@ -98,8 +98,8 @@
 									<!--Validar Contraseña-->
 									<div class="card card-body formularioEditarUsuarioPreValidacion" id="formularioEditarUsuarioPreValidacion">
 										<form onsubmit="event.preventDefault()" action="#" method="post" id="formEditarUsuarioPreValidacion">
-											<b>Para editar su cuenta usuario ingrese su contraseña actual.</b>
-											<br><br>
+											<div class="alert alert-warning">Para editar su cuenta usuario ingrese su contraseña actual.</div>
+											<br>
 											<span class="texto">Contraseña actual </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPasswordValidar" title="Campo Obligatorio"></i>
 											<br>
 											<input type="password" class="form-control inputs" name="passwordValidar" id="passwordValidar">
@@ -138,8 +138,8 @@
 									<!--Validar Contraseña-->
 									<div class="card card-body formularioDeshabilitarUsuarioPreValidacion" id="formularioDeshabilitarUsuarioPreValidacion">
 										<form onsubmit="event.preventDefault()" action="#" method="post" id="formDeshabilitarUsuarioPreValidacion">
-											<b>Para deshabilitar su cuenta usuario ingrese su contraseña actual.</b>
-											<br><br>
+											<div class="alert alert-warning">Para deshabilitar su cuenta usuario ingrese su contraseña actual.</div>
+											<br>
 											<span class="texto">Contraseña actual </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPasswordValidarDeshabilitar" title="Campo Obligatorio"></i>
 											<br>
 											<input type="password" class="form-control inputs" name="passwordValidarDeshabilitar" id="passwordValidarDeshabilitar">
