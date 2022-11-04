@@ -121,16 +121,14 @@
     margin: 0 auto;
 }
 
-
-
-.fc-more-link{
+.fc-daygrid-more-link{
     text-decoration: none;
     color: white;
     background-color: #8d8d8d;
     border-radius: 5px;
 }
 
-.fc-more-link:hover{
+.fc-daygrid-more-link:hover{
     background-color: #b4b4b4;
     color: white;
 }
