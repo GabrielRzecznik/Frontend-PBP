@@ -222,11 +222,11 @@
 					</button>
 				</div>                    
 				<div class="modal-body">
-					<span class="vista-paciente" id="vista-paciente">
+					<span class="vista-paciente alert alert-warning" id="vista-paciente">
 						¿Esta seguro que quiere cancelar este turno?<br>
 						¡Una vez cancelado el turno se le notificara al profesional!
 					</span>
-					<span class="vista-profesional" id="vista-profesional">
+					<span class="vista-profesional alert alert-warning" id="vista-profesional">
 						¿Esta seguro que quiere cancelar este turno?<br>
 						¡Una vez cancelado el turno se le notificara al paciente!
 					</span>
