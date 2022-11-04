@@ -189,7 +189,7 @@
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-rehabilitar-horario">Atrás</span>
-					<span class="btn btn-success botonEnviarHorario" data-dismiss="modal" id="rehabilitar-horario">Confirmar</span>
+					<button class="btn btn-success botonEnviarHorario" data-dismiss="modal" id="rehabilitar-horario">Confirmar</button>
 				</div>             
 			</div>
 		</div>
