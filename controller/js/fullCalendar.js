@@ -278,7 +278,7 @@ function armadoFullCalendar() {
                     document.getElementById("vista-profesional").style.display = 'block';
                     var id_turno = String(info.event._def.publicId);
                     var tipoTurno = "turno_confirmado";
-                    buscarSolicitud(id_turno, tipoTurno);
+                    buscarTurno(id_turno, tipoTurno);
                     $cancelador = "profesional";
                     ModalCancelarTurno(id_turno);
                     break;
