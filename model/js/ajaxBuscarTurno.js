@@ -19,8 +19,6 @@ function buscarTurno(id_turno, tipoTurno){
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
 
-                console.log(data);
-
                 if (tipoTurno = '') {
                     
                 }
@@ -47,6 +45,7 @@ function buscarTurno(id_turno, tipoTurno){
             }
         }
     }
+    console.log(formJSON);
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Turnos/buscarTurno',true);
     xmlhttp.send(formJSON);
 }
