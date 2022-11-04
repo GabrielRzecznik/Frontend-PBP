@@ -20,11 +20,11 @@ function buscarTurno(id_turno, tipoTurno){
                 var data=JSON.parse(xmlhttp.responseText);
 
                 if (tipoTurno == 'turno_confirmado') {
-                    //Mostrar profesional
-                    rolCancelarTurno.innerHTML = 'con el profesional';
-                }else{
                     //Mostrar paciente
                     rolCancelarTurno.innerHTML = 'al paciente';
+                }else{
+                    //Mostrar profesional
+                    rolCancelarTurno.innerHTML = 'con el profesional';
                 }
                 
                 nombreCancelarTurno.innerHTML = '';
