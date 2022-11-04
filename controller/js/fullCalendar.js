@@ -150,7 +150,18 @@ function armadoFullCalendar() {
 
                         var infoDesdeHorario = añoDesde+"-"+mesDesde+"-"+diaDesde+" "+horaDesde;
                         var infoHastaHorario = añoHasta+"-"+mesHasta+"-"+diaHasta+" "+horaHasta;
+
+                        $fechaEvento = new Date(infoDesdeHorario.substring(0,10)).getDay();
+
+                        calcularFechaEvento();
+
+                        $mesEvento = infoDesdeHorario.substring(5,7); 
+
+                        calcularMesEvento();    
                         
+                        document.getElementById('horaDesdeHorarioDisponible').innerHTML = horaDesde.substring(0, 5) + " del " + $diaEvento + " " + diaDesde + " de " + $mesEvento + " del " + añoDesde;
+                        document.getElementById('horaHastaHorarioDisponible').innerHTML = horaHasta.substring(0, 5) + " del " + $diaEvento + " " + diaHasta + " de " + $mesEvento + " del " + añoHasta;
+
                         ModalCancelarHorario(profesional, infoDesdeHorario, infoHastaHorario);
                     }else{
                         //CREAR SOLICITUD
@@ -319,3 +330,74 @@ function armadoFullCalendar() {
 }
 
 document.getElementById('calendar').classList.add('altoGrilla');
+
+function calcularFechaEvento() {
+    switch ($fechaEvento) {
+        case 0:
+            $diaEvento = "Lunes";
+            break;
+        case 1:
+            $diaEvento = "Martes";
+            break;
+        case 2:
+            $diaEvento = "Miércoles";
+            break;
+        case 3:
+            $diaEvento = "Jueves";
+            break;
+        case 4:
+            $diaEvento = "Viernes";
+            break;
+        case 5:
+            $diaEvento = "Sábado";
+            break;
+        case 6:
+            $diaEvento = "Domingo";
+            break;
+        default:
+            break;
+    }
+}
+
+function calcularMesEvento() {
+    switch ($mesEvento) {
+        case "01":
+            $mesEvento = "Enero";
+            break;
+        case "02":
+            $mesEvento = "Febrero";
+            break;
+        case "03":
+            $mesEvento = "Marzo";
+            break;
+        case "04":
+            $mesEvento = "Abril";
+            break;
+        case "05":
+            $mesEvento = "Mayo";
+            break;
+        case "06":
+            $mesEvento = "Junio";
+            break;
+        case "07":
+            $mesEvento = "Julio";
+            break;
+        case "08":
+            $mesEvento = "Agosto";
+            break;
+        case "09":
+            $mesEvento = "Septiembre";
+            break;
+        case "10":
+            $mesEvento = "Octubre";
+            break;
+        case "11":
+            $mesEvento = "Noviembre";
+            break;
+        case "12":
+            $mesEvento = "Diciembre";
+            break;
+        default:
+            break;
+    }
+}
