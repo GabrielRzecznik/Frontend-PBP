@@ -153,8 +153,10 @@
 					</button>
 				</div>                    
 				<div class="modal-body">
-					¿Esta seguro que quiere deshabilitar este horario?<br>
-					¡Podra cancelar esta acción cuando usted quiera!
+					<div class="alert alert-warning">
+						¿Esta seguro que quiere deshabilitar este horario?<br>
+						¡Podra cancelar esta acción cuando usted quiera!
+					</div>
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-cancelar-horario">Atrás</span>
