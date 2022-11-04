@@ -20,7 +20,9 @@ function buscarTurno(id_turno, tipoTurno){
                 var data=JSON.parse(xmlhttp.responseText);
 
                 if (tipoTurno = '') {
-                    
+                    //Mostrar paciente
+                }else{
+                    //Mostrar profesional
                 }
                 
                 nombreCancelarTurno.innerHTML = '';

@@ -286,6 +286,8 @@ function armadoFullCalendar() {
                     document.getElementById("vista-profesional").style.display = 'none';
                     document.getElementById("vista-paciente").style.display = 'block';
                     var id_turno = String(info.event._def.publicId);
+                    var tipoTurno = "turno_enviado";
+                    buscarTurno(id_turno, tipoTurno);
                     $cancelador = "paciente";
                     ModalCancelarTurno(id_turno);
                     break;
