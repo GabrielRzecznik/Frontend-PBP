@@ -116,14 +116,23 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Cancelar solicitud</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Cancelar solicitud al profesional <span id="nombreCancelarSolicitud"></span> <span id="apellidoCancelarSolicitud"></span></h5>
 					<button id="close-cancelar-solicitud" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>                    
 				<div class="modal-body">
-					¿Esta seguro que quiere cancelar esta solicitud?<br>
-					¡Una vez cancelada la solicitud se le notificara al profesional!
+					<div class="alert alert-warning">
+						¿Esta seguro que quiere cancelar esta solicitud?<br>
+						¡Una vez cancelada la solicitud se le notificara al profesional!
+					</div>
+					Tipo consulta: <b id="tipoConsultaCancelarSolicitud"></b>
+					<br>
+					Obra social seleccionada: <b id="ObraSocialCancelarSolicitud"></b>
+					<br>
+					Hora de inicio: <b id="horaDesdeCancelarSolicitud"></b>
+					<br>
+					Hora de Finalización: <b id="horaHastaCancelarSolicitud"></b>
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-cancelar-solicitud">Atrás</span>
@@ -187,13 +196,13 @@
 					</button>
 				</div>                    
 				<div class="modal-body">
-					<b>Tipo consulta:</b> <span id="tipoConsultaResponder"></span>
+					Tipo consulta: <b id="tipoConsultaResponder"></b>
 					<br>
-					<b>Obra social seleccionada:</b> <span id="ObraSocialResponder"></span>
+					Obra social seleccionada: <b id="ObraSocialResponder"></b>
 					<br>
-					<b>Hora de inicio:</b> <span id="horaDesdeResponder"></span>
+					Hora de inicio: <b id="horaDesdeResponder"></b>
 					<br>
-					<b>Hora de Finalización:</b> <span id="horaHastaResponder"></span>
+					Hora de Finalización: <b id="horaHastaResponder"></b>
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-responder-solicitud">Atrás</span>
