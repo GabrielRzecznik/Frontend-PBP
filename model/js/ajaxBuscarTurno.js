@@ -5,6 +5,8 @@ let ObraSocialCancelarTurno = document.getElementById('ObraSocialCancelarTurnoPa
 let horaDesdeCancelarTurno = document.getElementById('horaDesdeCancelarTurnoPaciente');
 let horaHastaCancelarTurno = document.getElementById('horaHastaCancelarTurnoPaciente');
 
+let rolCancelarTurno = document.getElementById('rolCancelarTurno');
+
 function buscarTurno(id_turno, tipoTurno){
     var formData= new FormData();
     formData.append("id_turno", id_turno);

@@ -225,7 +225,7 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Cancelar turno al <span id="RolCancelarTurno"> <span id="nombreCancelarTurno"></span> <span id="apellidoCancelarTurno"></h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Cancelar turno al <span id="rolCancelarTurno"> <span id="nombreCancelarTurno"></span> <span id="apellidoCancelarTurno"></h5>
 					<button id="close-cancelar-turno" type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
