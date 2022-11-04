@@ -305,6 +305,9 @@
 	<!--Buscar Datos Solicitud-->
 	<script src="../model/js/ajaxBuscarSolicitud.js"></script>
 
+	<!--Buscar Datos Turno-->
+	<script src="../model/js/ajaxBuscarTurno.js"></script>
+
 	<!--Responder Solicitud-->
 	<script src="../controller/js/responderSolicitud.js"></script>
     <script src="../model/js/ajaxResponderSolicitud.js"></script>
