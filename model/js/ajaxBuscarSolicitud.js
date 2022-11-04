@@ -7,6 +7,10 @@ let horaHastaResponder = document.getElementById('horaHastaResponder');
 
 let nombreCancelarSolicitud = document.getElementById('nombreCancelarSolicitud');
 let apellidoCancelarSolicitud = document.getElementById('apellidoCancelarSolicitud');
+let tipoConsultaCancelarSolicitud = document.getElementById('tipoConsultaCancelarSolicitud');
+let ObraSocialCancelarSolicitud = document.getElementById('ObraSocialCancelarSolicitud');
+let horaDesdeCancelarSolicitud = document.getElementById('horaDesdeCancelarSolicitud');
+let horaHastaCancelarSolicitud = document.getElementById('horaHastaCancelarSolicitud');
 
 function buscarSolicitud(id_solicitud, tipoSolicitud){
     var formData= new FormData();
