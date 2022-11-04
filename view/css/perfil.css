@@ -182,3 +182,9 @@ body{
 .lapiz:hover{
 	color: rgb(59, 59, 59);
 }
+
+.interrogacion{
+	color: rgb(0, 174, 255);
+	cursor: pointer;
+	text-decoration: none;
+}

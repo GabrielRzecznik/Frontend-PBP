@@ -62,8 +62,7 @@
 							<br>
 							Matricula: <b><span id="mostrarMatriculaPerfil"></span></b>
 							<br>
-							Atiende por <b id="mostrarObrasSocialesPerfil"></b>
-							<br>
+							<span id="atiendePor"></span> <b id="mostrarObrasSocialesPerfil"></b>
 							Sus formatos de consulta son <b id="mostrarTipoConsultasPerfil"></b>
 						</span>
 					</div>

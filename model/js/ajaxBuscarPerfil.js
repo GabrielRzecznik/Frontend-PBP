@@ -59,13 +59,18 @@ function buscarPerfil($nombreUsuario){
                     }
                     document.getElementById('infoProfesional').style.display = 'block';
                     document.getElementById('mostrarEspecialidadPerfil').innerHTML = data[0]["especialidad"];
-                    document.getElementById('mostrarMatriculaPerfil').innerHTML = data[0]["matricula"];
+                    document.getElementById('mostrarMatriculaPerfil').innerHTML = data[0]["matricula"] + ' <a href="https://sistemas.ms.gba.gov.ar/consultamatric/" target="_blank" class="interrogacion"">Corroborar validez <i class="bi bi-file-earmark-medical-fill"></i></a>';
                     //Mostrar obras sociales
-                    $transformarArray = data[0].obraSocial;
-                    $transformarArray = $transformarArray.replace(/{/,'');
-                    $transformarArray = $transformarArray.replace(/}/,'');
-                    var obrasSociales =  $transformarArray.split(/,/).join(', '); 
-                    document.getElementById('mostrarObrasSocialesPerfil').innerHTML = obrasSociales;
+                    if (data[0].obraSocial != "{}") {
+                        $transformarArray = data[0].obraSocial;
+                        $transformarArray = $transformarArray.replace(/{/,'');
+                        $transformarArray = $transformarArray.replace(/}/,'');
+                        var obrasSociales =  $transformarArray.split(/,/).join(', ');
+                        
+                        document.getElementById('atiendePor').innerHTML = 'Atiende por';
+                        document.getElementById('mostrarObrasSocialesPerfil').innerHTML = obrasSociales + '<br>';
+                    }
+
                     //Mostrar tipo de consultas
                     $transformarArray2 = data[0].tipoConsulta;
                     $transformarArray2 = $transformarArray2.replace(/{/,'');
