@@ -62,11 +62,11 @@ function buscarTurno(id_turno, tipoTurno){
                     horaHastaCancelarSolicitud.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
                 }
             }else{
-                alert("¡Ocurrio un error inesperado al buscar los datos de la solicitud!");
+                alert("¡Ocurrio un error inesperado al buscar los datos del turno!");
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Solicitudes/buscarSolicitud',true);
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Turos/buscarTurno',true);
     xmlhttp.send(formJSON);
 }
 
