@@ -25,78 +25,78 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
                     tipoConsultaResponder.innerHTML = data["seleccionConsulta"];
                     ObraSocialResponder.innerHTML = data["obraSocialSolicitud"];
 
-                    $fechaResponder = new Date(data["horaDesdeSolicitud"].substring(0,10)).getDay();
-                    switch ($fechaResponder) {
+                    $fechaEvento = new Date(data["horaDesdeSolicitud"].substring(0,10)).getDay();
+                    switch ($fechaEvento) {
                         case 0:
-                            $diaResponder = "Lunes";
+                            $diaEvento = "Lunes";
                             break;
                         case 1:
-                            $diaResponder = "Martes";
+                            $diaEvento = "Martes";
                             break;
                         case 2:
-                            $diaResponder = "Miércoles";
+                            $diaEvento = "Miércoles";
                             break;
                         case 3:
-                            $diaResponder = "Jueves";
+                            $diaEvento = "Jueves";
                             break;
                         case 4:
-                            $diaResponder = "Viernes";
+                            $diaEvento = "Viernes";
                             break;
                         case 5:
-                            $diaResponder = "Sábado";
+                            $diaEvento = "Sábado";
                             break;
                         case 6:
-                            $diaResponder = "Domingo";
+                            $diaEvento = "Domingo";
                             break;
                         default:
                             break;
                     }
 
-                    $mesResponder = data["horaDesdeSolicitud"].substring(5,7);
+                    $mesEvento = data["horaDesdeSolicitud"].substring(5,7);
 
-                    switch ($mesResponder) {
+                    switch ($mesEvento) {
                         case "01":
-                            $mesResponder = "Enero";
+                            $mesEvento = "Enero";
                             break;
                         case "02":
-                            $mesResponder = "Febrero";
+                            $mesEvento = "Febrero";
                             break;
                         case "03":
-                            $mesResponder = "Marzo";
+                            $mesEvento = "Marzo";
                             break;
                         case "04":
-                            $mesResponder = "Abril";
+                            $mesEvento = "Abril";
                             break;
                         case "05":
-                            $mesResponder = "Mayo";
+                            $mesEvento = "Mayo";
                             break;
                         case "06":
-                            $mesResponder = "Junio";
+                            $mesEvento = "Junio";
                             break;
                         case "07":
-                            $mesResponder = "Julio";
+                            $mesEvento = "Julio";
                             break;
                         case "08":
-                            $mesResponder = "Agosto";
+                            $mesEvento = "Agosto";
                             break;
                         case "09":
-                            $mesResponder = "Septiembre";
+                            $mesEvento = "Septiembre";
                             break;
                         case "10":
-                            $mesResponder = "Octubre";
+                            $mesEvento = "Octubre";
                             break;
                         case "11":
-                            $mesResponder = "Noviembre";
+                            $mesEvento = "Noviembre";
                             break;
                         case "12":
-                            $mesResponder = "Diciembre";
+                            $mesEvento = "Diciembre";
                             break;
                         default:
                             break;
                     }
 
-                    horaDesdeResponder.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaResponder + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesResponder + " del " + data["horaHastaSolicitud"].substring(0,4);
-                    horaHastaResponder.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaResponder + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesResponder + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaDesdeResponder.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaHastaResponder.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
                 }
             }else{
                 alert("¡Ocurrio un error inesperado al buscar los datos de la solicitud!");

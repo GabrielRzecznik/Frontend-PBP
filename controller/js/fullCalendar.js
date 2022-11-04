@@ -261,7 +261,10 @@ function armadoFullCalendar() {
                     }
                     break;
                 case "Solicitud enviada ":
+                    //Cancelar Solicitud
                     var id_solicitud = String(info.event._def.publicId);
+                    var tipoSolicitud = "solicitud_enviada";
+                    buscarSolicitud(id_solicitud, tipoSolicitud);
                     ModalCancelarSolicitud(id_solicitud);
                     break;
                 case "Solicitud recibida":
@@ -271,12 +274,14 @@ function armadoFullCalendar() {
                     ModalResponderSolicitud(id_solicitud);
                     break;
                 case "Turno confirmado a":
+                    document.getElementById("vista-paciente").style.display = 'none';
                     document.getElementById("vista-profesional").style.display = 'block';
                     var id_turno = String(info.event._def.publicId);
                     $cancelador = "profesional";
                     ModalCancelarTurno(id_turno);
                     break;
                 case "Turno confirmado p":
+                    document.getElementById("vista-profesional").style.display = 'none';
                     document.getElementById("vista-paciente").style.display = 'block';
                     var id_turno = String(info.event._def.publicId);
                     $cancelador = "paciente";
