@@ -66,7 +66,7 @@ function buscarTurno(id_turno, tipoTurno){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Turos/buscarTurno',true);
+    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Turnos/buscarTurno',true);
     xmlhttp.send(formJSON);
 }
 
