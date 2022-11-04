@@ -15,7 +15,6 @@ let horaHastaCancelarSolicitud = document.getElementById('horaHastaCancelarSolic
 function buscarSolicitud(id_solicitud, tipoSolicitud){
     var formData= new FormData();
     formData.append("id_solicitud", id_solicitud);
-    formData.append("tipoSolicitud", tipoSolicitud);
     var formJSON = JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
