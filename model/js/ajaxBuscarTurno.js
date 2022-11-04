@@ -18,6 +18,10 @@ function buscarTurno(id_turno, tipoTurno){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
+
+                if (tipoTurno = '') {
+                    
+                }
                 
                 nombreCancelarTurno.innerHTML = '';
                 apellidoCancelarTurno.innerHTML = '';
