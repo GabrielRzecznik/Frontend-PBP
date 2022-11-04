@@ -157,6 +157,9 @@
 						¿Esta seguro que quiere deshabilitar este horario?<br>
 						¡Podra cancelar esta acción cuando usted quiera!
 					</div>
+					Hora de inicio: <b id="horaDesdeHorarioDisponible"></b>
+					<br>
+					Hora de Finalización: <b id="horaHastaHorarioDisponible"></b>
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-cancelar-horario">Atrás</span>
