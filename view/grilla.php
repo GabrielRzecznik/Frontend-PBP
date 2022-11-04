@@ -231,14 +231,21 @@
 					</button>
 				</div>                    
 				<div class="modal-body">
-					<span class="vista-paciente alert alert-warning" id="vista-paciente">
+					<div class="vista-paciente alert alert-warning" id="vista-paciente">
 						¿Esta seguro que quiere cancelar este turno?<br>
 						¡Una vez cancelado el turno se le notificara al profesional!
-					</span>
-					<span class="vista-profesional alert alert-warning" id="vista-profesional">
+					</div>
+					<div class="vista-profesional alert alert-warning" id="vista-profesional">
 						¿Esta seguro que quiere cancelar este turno?<br>
 						¡Una vez cancelado el turno se le notificara al paciente!
-					</span>
+					</div>
+					Tipo consulta: <b id="tipoConsultaCancelarTurno"></b>
+					<br>
+					Obra social seleccionada: <b id="ObraSocialCancelarTurno"></b>
+					<br>
+					Hora de inicio: <b id="horaDesdeCancelarTurno"></b>
+					<br>
+					Hora de Finalización: <b id="horaHastaCancelarTurno"></b>
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-cancelar-turno">Atrás</span>
