@@ -1,9 +1,9 @@
-let nombreCancelarTurno = document.getElementById('nombreCancelarTurnoPaciente');
-let apellidoCancelarTurno = document.getElementById('apellidoCancelarTurnoPaciente');
-let tipoConsultaCancelarTurno = document.getElementById('tipoConsultaCancelarTurnoPaciente');
-let ObraSocialCancelarTurno = document.getElementById('ObraSocialCancelarTurnoPaciente');
-let horaDesdeCancelarTurno = document.getElementById('horaDesdeCancelarTurnoPaciente');
-let horaHastaCancelarTurno = document.getElementById('horaHastaCancelarTurnoPaciente');
+let nombreCancelarTurno = document.getElementById('nombreCancelarTurno');
+let apellidoCancelarTurno = document.getElementById('apellidoCancelarTurno');
+let tipoConsultaCancelarTurno = document.getElementById('tipoConsultaCancelarTurno');
+let ObraSocialCancelarTurno = document.getElementById('ObraSocialCancelarTurno');
+let horaDesdeCancelarTurno = document.getElementById('horaDesdeCancelarTurno');
+let horaHastaCancelarTurno = document.getElementById('horaHastaCancelarTurno');
 
 let rolCancelarTurno = document.getElementById('rolCancelarTurno');
 
