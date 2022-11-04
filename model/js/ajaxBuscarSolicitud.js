@@ -45,10 +45,10 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
                 }if (tipoSolicitud = "solicitud_enviada") {
                     nombreCancelarSolicitud.innerHTML = '';
                     apellidoCancelarSolicitud.innerHTML = '';
-                    nombreSolicitudResponder.innerHTML = data["nombre"];
-                    apellidoSolicitudResponder.innerHTML = data["apellido"];
-                    tipoConsultaResponder.innerHTML = data["seleccionConsulta"];
-                    ObraSocialResponder.innerHTML = data["obraSocialSolicitud"];
+                    nombreCancelarSolicitud.innerHTML = data["nombre"];
+                    apellidoCancelarSolicitud.innerHTML = data["apellido"];
+                    tipoConsultaCancelarSolicitud.innerHTML = data["seleccionConsulta"];
+                    ObraSocialCancelarSolicitud.innerHTML = data["obraSocialSolicitud"];
 
                     $fechaEvento = new Date(data["horaDesdeSolicitud"].substring(0,10)).getDay();
 
@@ -58,8 +58,8 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
 
                     calcularMesEvento();
 
-                    horaDesdeResponder.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
-                    horaHastaResponder.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaDesdeCancelarSolicitud.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaHastaCancelarSolicitud.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
                 }
             }else{
                 alert("¡Ocurrio un error inesperado al buscar los datos de la solicitud!");
