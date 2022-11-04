@@ -25,12 +25,12 @@ function buscarTurno(id_turno, tipoTurno){
                 var data=JSON.parse(xmlhttp.responseText);
                 
                 if (tipoTurno = "turno_recibida") {
-                    nombreSolicitudResponder.innerHTML = '';
-                    apellidoSolicitudResponder.innerHTML = '';
-                    nombreSolicitudResponder.innerHTML = data["nombre"];
-                    apellidoSolicitudResponder.innerHTML = data["apellido"];
-                    tipoConsultaResponder.innerHTML = data["seleccionConsulta"];
-                    ObraSocialResponder.innerHTML = data["obraSocialSolicitud"];
+                    nombreCancelarTurnoProfesional.innerHTML = '';
+                    apellidoCancelarTurnoProfesional.innerHTML = '';
+                    nombreCancelarTurnoProfesional.innerHTML = data["nombre"];
+                    apellidoCancelarTurnoProfesional.innerHTML = data["apellido"];
+                    tipoConsultaCancelarTurnoProfesional.innerHTML = data["seleccionConsulta"];
+                    ObraSocialCancelarTurnoProfesional.innerHTML = data["obraSocialSolicitud"];
 
                     $fechaEvento = new Date(data["horaDesdeSolicitud"].substring(0,10)).getDay();
 
@@ -40,15 +40,15 @@ function buscarTurno(id_turno, tipoTurno){
 
                     calcularMesEvento();
 
-                    horaDesdeResponder.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
-                    horaHastaResponder.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaDesdeCancelarTurnoProfesional.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaHastaCancelarTurnoProfesional.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
                 }if (tipoSolicitud = "turno_enviada") {
-                    nombreCancelarSolicitud.innerHTML = '';
-                    apellidoCancelarSolicitud.innerHTML = '';
-                    nombreCancelarSolicitud.innerHTML = data["nombre"];
-                    apellidoCancelarSolicitud.innerHTML = data["apellido"];
-                    tipoConsultaCancelarSolicitud.innerHTML = data["seleccionConsulta"];
-                    ObraSocialCancelarSolicitud.innerHTML = data["obraSocialSolicitud"];
+                    nombreCancelarTurnoPaciente.innerHTML = '';
+                    apellidoCancelarTurnoPaciente.innerHTML = '';
+                    nombreCancelarTurnoPaciente.innerHTML = data["nombre"];
+                    apellidoCancelarTurnoPaciente.innerHTML = data["apellido"];
+                    tipoConsultaCancelarTurnoPaciente.innerHTML = data["seleccionConsulta"];
+                    ObraSocialCancelarTurnoPaciente.innerHTML = data["obraSocialSolicitud"];
 
                     $fechaEvento = new Date(data["horaDesdeSolicitud"].substring(0,10)).getDay();
 
@@ -58,8 +58,8 @@ function buscarTurno(id_turno, tipoTurno){
 
                     calcularMesEvento();
 
-                    horaDesdeCancelarSolicitud.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
-                    horaHastaCancelarSolicitud.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaDesdeCancelarTurnoPaciente.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaHastaCancelarTurnoPaciente.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
                 }
             }else{
                 alert("¡Ocurrio un error inesperado al buscar los datos del turno!");
