@@ -103,6 +103,7 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
             }
         }
     }
+    console.log(formJSON);
     xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Solicitudes/buscarSolicitud',true);
     xmlhttp.send(formJSON);
 }
