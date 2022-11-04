@@ -21,8 +21,10 @@ function buscarTurno(id_turno, tipoTurno){
 
                 if (tipoTurno = '') {
                     //Mostrar paciente
+                    rolCancelarTurno.innerHTML = 'paciente';
                 }else{
                     //Mostrar profesional
+                    rolCancelarTurno.innerHTML = 'profesional';
                 }
                 
                 nombreCancelarTurno.innerHTML = '';
