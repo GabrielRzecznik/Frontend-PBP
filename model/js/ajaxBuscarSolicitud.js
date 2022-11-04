@@ -5,6 +5,9 @@ let ObraSocialResponder = document.getElementById('ObraSocialResponder');
 let horaDesdeResponder = document.getElementById('horaDesdeResponder');
 let horaHastaResponder = document.getElementById('horaHastaResponder');
 
+let nombreCancelarSolicitud = document.getElementById('nombreCancelarSolicitud');
+let apellidoCancelarSolicitud = document.getElementById('apellidoCancelarSolicitud');
+
 function buscarSolicitud(id_solicitud, tipoSolicitud){
     var formData= new FormData();
     formData.append("id_solicitud", id_solicitud);
@@ -20,6 +23,24 @@ function buscarSolicitud(id_solicitud, tipoSolicitud){
                 if (tipoSolicitud = "solicitud_recibida") {
                     nombreSolicitudResponder.innerHTML = '';
                     apellidoSolicitudResponder.innerHTML = '';
+                    nombreSolicitudResponder.innerHTML = data["nombre"];
+                    apellidoSolicitudResponder.innerHTML = data["apellido"];
+                    tipoConsultaResponder.innerHTML = data["seleccionConsulta"];
+                    ObraSocialResponder.innerHTML = data["obraSocialSolicitud"];
+
+                    $fechaEvento = new Date(data["horaDesdeSolicitud"].substring(0,10)).getDay();
+
+                    calcularFechaEvento();
+
+                    $mesEvento = data["horaDesdeSolicitud"].substring(5,7);
+
+                    calcularMesEvento();
+
+                    horaDesdeResponder.innerHTML = data["horaDesdeSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaDesdeSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
+                    horaHastaResponder.innerHTML = data["horaHastaSolicitud"].substring(11,16) + " del " + $diaEvento + " " + data["horaHastaSolicitud"].substring(8,10) + " de " + $mesEvento + " del " + data["horaHastaSolicitud"].substring(0,4);
+                }if (tipoSolicitud = "solicitud_enviada") {
+                    nombreCancelarSolicitud.innerHTML = '';
+                    apellidoCancelarSolicitud.innerHTML = '';
                     nombreSolicitudResponder.innerHTML = data["nombre"];
                     apellidoSolicitudResponder.innerHTML = data["apellido"];
                     tipoConsultaResponder.innerHTML = data["seleccionConsulta"];
