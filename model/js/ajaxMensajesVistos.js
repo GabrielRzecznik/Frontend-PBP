@@ -13,6 +13,6 @@ function mensajesVistos($ids_mensaje){
             }
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Mensajes/mensajesVistos',true);
+    xmlhttp.open("PUT",'http://localhost/phpapp/Backend-PBP/Mensajes/mensajesVistos',true);
     xmlhttp.send(formJSON);
 }

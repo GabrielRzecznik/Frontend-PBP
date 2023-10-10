@@ -34,6 +34,7 @@ function buscarUsuarioExistente(correo, nombreUsuario){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/buscarUsuarioExistente',true);
+    console.log(formJSON);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Usuarios/buscarUsuarioExistente',true);
     xmlhttp.send(formJSON);
 }

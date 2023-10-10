@@ -25,6 +25,6 @@ function cancelarTurno(id_turno){
             }
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Turnos/cancelarTurno',true);
+    xmlhttp.open("PUT",'http://localhost/phpapp/Backend-PBP/Turnos/cancelarTurno',true);
     xmlhttp.send(formJSON);
 }

@@ -133,6 +133,6 @@ function buscarNotificaciones(){
         }
     }
    
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Notificaciones/buscarNotificaciones',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Notificaciones/buscarNotificaciones',true);
     xmlhttp.send(formJSON);
 }

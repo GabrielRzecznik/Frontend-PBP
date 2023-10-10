@@ -48,6 +48,6 @@ function buscarDatosProfesionalCrearSolicitud(id_profesional){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Profesionales/buscarDatosProfesionalCrearSolicitud',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Profesionales/buscarDatosProfesionalCrearSolicitud',true);
     xmlhttp.send(formJSON);
 }

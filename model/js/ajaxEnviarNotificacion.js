@@ -13,6 +13,6 @@ function enviarNotificacion(id_evento, tipoNoti){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Notificaciones/enviarNotificacion',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Notificaciones/enviarNotificacion',true);
     xmlhttp.send(formJSON);
 }

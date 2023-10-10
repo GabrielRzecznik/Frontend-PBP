@@ -39,6 +39,6 @@ function editarPaciente(formulario, $latitud, $longitud){
             }
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Pacientes/editarPaciente',true);
+    xmlhttp.open("PUT",'http://localhost/phpapp/Backend-PBP/Pacientes/editarPaciente',true);
     xmlhttp.send(formJSON);
 }

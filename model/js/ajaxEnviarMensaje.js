@@ -34,6 +34,6 @@ function enviarMensaje(id_chat, remitente, destinatario, rol, descripcion, fecha
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/enviarMensaje',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Mensajes/enviarMensaje',true);
     xmlhttp.send(formJSON);
 }

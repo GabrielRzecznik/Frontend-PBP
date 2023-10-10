@@ -26,7 +26,7 @@ function registrarProfesional(formulario, tc, os, $latitud, $longitud){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Profesionales/crearProfesional',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Profesionales/crearProfesional',true);
     xmlhttp.send(formJSON);
 }
 

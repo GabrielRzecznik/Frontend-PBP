@@ -22,6 +22,6 @@ function deshabilitarHorario(id_proHorario, infoDesdeHorario, infoHastaHorario){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Horarios/deshabilitarHorario',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Horarios/deshabilitarHorario',true);
     xmlhttp.send(formJSON);
 }

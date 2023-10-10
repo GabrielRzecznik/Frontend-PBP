@@ -28,6 +28,6 @@ function responderSolicitud(id_solicitud, respuesta){
             }
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Solicitudes/responderSolicitud',true);
+    xmlhttp.open("PUT",'http://localhost/phpapp/Backend-PBP/Solicitudes/responderSolicitud',true);
     xmlhttp.send(formJSON);
 }

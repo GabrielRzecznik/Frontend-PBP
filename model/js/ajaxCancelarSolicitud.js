@@ -20,6 +20,6 @@ function cancelarSolicitud(id_solicitud){
             }
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Solicitudes/cancelarSolicitud',true);
+    xmlhttp.open("PUT",'http://localhost/phpapp/Backend-PBP/Solicitudes/cancelarSolicitud',true);
     xmlhttp.send(formJSON);
 }

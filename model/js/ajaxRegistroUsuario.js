@@ -21,7 +21,8 @@ function registrarUsuario(formulario){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/crearUsuario',true);
+    console.log(formJSON);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Usuarios/crearUsuario',true);
     xmlhttp.send(formJSON);
 }
 

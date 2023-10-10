@@ -18,6 +18,6 @@ function rehabilitarHorario(id_horario){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Horarios/rehabilitarHorario',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Horarios/rehabilitarHorario',true);
     xmlhttp.send(formJSON);
 }

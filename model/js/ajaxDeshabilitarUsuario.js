@@ -15,6 +15,6 @@ function deshabilitarUsuario(){
             }   
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Usuarios/deshabilitarUsuario',true);
+    xmlhttp.open("PUT",'http://localhost/phpapp/Backend-PBP/Usuarios/deshabilitarUsuario',true);
     xmlhttp.send(formJSON);
 }

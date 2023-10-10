@@ -33,6 +33,6 @@ function notificacionesNuevas(){
         }
     }
    
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Notificaciones/notificacionesNuevas',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Notificaciones/notificacionesNuevas',true);
     xmlhttp.send(formJSON);
 }

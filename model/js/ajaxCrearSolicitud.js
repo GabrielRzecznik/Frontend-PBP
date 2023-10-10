@@ -23,6 +23,6 @@ function crearSolicitud(seleccionConsulta, obraSocialSolicitud, horaDesdeSolicit
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Solicitudes/crearSolicitud',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Solicitudes/crearSolicitud',true);
     xmlhttp.send(formJSON);
 }

@@ -438,7 +438,7 @@ function gestorMostrarGrilla($nombreUsuario){
     }
     //Crear nueva consulta, la cual tenga relacion con SOLICITUDES, TURNOS, HORARIOS
     console.log(formJSON);
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Pacientes/buscarEventos',false);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Pacientes/buscarEventos',false);
     xmlhttp.send(formJSON);
 
 

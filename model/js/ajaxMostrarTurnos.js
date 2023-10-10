@@ -26,6 +26,6 @@ function buscarUsuario(formulario){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/buscarUsuario',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Usuarios/buscarUsuario',true);
     xmlhttp.send(formJSON);
 }

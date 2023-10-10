@@ -26,7 +26,7 @@ function configurarGrillaProfesional($formulario, $dias){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/ConfiguracionGrillaProfesional/crearConfiguracionGrillaProfesional',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/ConfiguracionGrillaProfesional/crearConfiguracionGrillaProfesional',true);
     xmlhttp.send(formJSON);
 }
 

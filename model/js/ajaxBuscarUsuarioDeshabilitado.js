@@ -22,6 +22,6 @@ function buscarUsuarioDeshabilitado(correo){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/buscarUsuarioDeshabilitado',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Usuarios/buscarUsuarioDeshabilitado',true);
     xmlhttp.send(formJSON);
 }

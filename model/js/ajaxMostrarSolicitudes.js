@@ -27,6 +27,6 @@ function mostrarSolicitudes(id_paciente){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Solicitudes/buscarSolicitudes',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Solicitudes/buscarSolicitudes',true);
     xmlhttp.send(formJSON);
 }

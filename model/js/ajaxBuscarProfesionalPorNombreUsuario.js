@@ -52,7 +52,7 @@ function buscarProfesionalPorNombreUsuario(nombreUsuario){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Profesionales/buscarProfesionalPorNombreUsuario',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Profesionales/buscarProfesionalPorNombreUsuario',true);
     xmlhttp.send(formJSON);
 }
 

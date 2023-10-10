@@ -24,7 +24,7 @@ function registrarPaciente(formulario, $latitud, $longitud){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Pacientes/crearPaciente',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Pacientes/crearPaciente',true);
     xmlhttp.send(formJSON);
 }
 

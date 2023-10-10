@@ -35,7 +35,7 @@ function buscarUsuario(formulario){
                     localStorage.setItem("longitud", data[0]["longitud"]);
                     localStorage.setItem("estadoProfesional", data[0]["estadoProfesional"]);
                     //Redirigir             
-                    window.location.href = "../view/inicioBusqueda.php";
+                    window.location.href = "../Frontend-PBP/view/inicioBusqueda.php";
                 }if (data[0]["estadoUsuario"] == "En Creación") {
                     //Estado Usuario En creación
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
@@ -56,6 +56,6 @@ function buscarUsuario(formulario){
             }
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Usuarios/buscarUsuario',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Usuarios/buscarUsuario',true);
     xmlhttp.send(formJSON);
 }

@@ -52,6 +52,6 @@ function mostrarBackupProvincias(llamado){
             }   
         }
     }
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Provincias/mostrarProvincias',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Provincias/mostrarProvincias',true);
     xmlhttp.send();
 }

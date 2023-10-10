@@ -264,7 +264,7 @@ function buscarMensajes(id_chat, nombreChat, apellidoChat, nombreUsuarioChat, re
                 primerEjecucionChat = false;
             }
         }
-        xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/buscarMensajes',true);
+        xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Mensajes/buscarMensajes',true);
         xmlhttp.send(formJSON);
     }
 }

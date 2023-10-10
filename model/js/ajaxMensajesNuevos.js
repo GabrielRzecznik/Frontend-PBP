@@ -33,6 +33,6 @@ function mensajesNuevos(){
         }
     }
    
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mensajes/mensajesNuevos',true);
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Mensajes/mensajesNuevos',true);
     xmlhttp.send(formJSON);
 }

@@ -153,7 +153,7 @@ function buscarChats(){
                 }
             }
         }
-        xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Chats/buscarChats',true);
+        xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Chats/buscarChats',true);
         xmlhttp.send(formJSON);
     }
 }

@@ -46,7 +46,7 @@ function enviarCorreo1(correo, asignarDuracion){
         }
     }
     
-    xmlhttp.open("POST",'https://backend-pbp.herokuapp.com/Mail/enviarMail',true);//Concatenarle cualquier correo
+    xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Mail/enviarMail',true);//Concatenarle cualquier correo
     xmlhttp.send(formJSON);
 }
 

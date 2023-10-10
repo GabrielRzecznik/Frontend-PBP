@@ -20,6 +20,6 @@ function restablecerUsuario(){
             }   
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Usuarios/restablecerUsuario',true);
+    xmlhttp.open("PUT",'http://localhost/phpapp/Backend-PBP/Usuarios/restablecerUsuario',true);
     xmlhttp.send(formJSON);
 }

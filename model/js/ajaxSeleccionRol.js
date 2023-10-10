@@ -18,6 +18,6 @@ function seleccionRol(rol){
             }   
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Usuarios/activarUsuario',true);
+    xmlhttp.open("PUT",'http://localhost/phpapp/Backend-PBP/Usuarios/activarUsuario',true);
     xmlhttp.send(formJSON);
 }

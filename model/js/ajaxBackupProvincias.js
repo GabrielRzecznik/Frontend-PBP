@@ -11,6 +11,6 @@ function backupProvincias(provincias){
             }
         }
     }
-    xmlhttp.open("PUT",'https://backend-pbp.herokuapp.com/Provincias/actualizarProvincias',true);
+    xmlhttp.open("PUT",'http://localhost/phpapp/Backend-PBP/Provincias/actualizarProvincias',true);
     xmlhttp.send(formJSON);
 }
