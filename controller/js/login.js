@@ -123,17 +123,12 @@ formulario.addEventListener('submit', (e) => {
     const passwordValue = password.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
-
-    //const alertElement = alertSuperior;
    
     if (timeoutId) {
         clearTimeout(timeoutId);
     }
 
     if (usuarioValue === "" || passwordValue === "") {
-
-        //alertElement.classList.add('alertaError');
-
         if (usuarioValue === "" && passwordValue !== "") {
             iconoUsuario.classList.add('mostrar','bi-x-circle-fill','noValidado');
         }else if (usuarioValue !== "" && passwordValue === "") {
