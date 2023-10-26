@@ -49,21 +49,11 @@
             <div class="col-md-2"></div>
         </div>
     </div>
-    <!--Alerta Usuario-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertUsuario">
+    <!--Alerta Supeior-->
+    <div class="alert alert-dismissible fade show alerta" role="alert" id="alertSuperior">
         <i class="bi bi-info-circle-fill"></i>
-        <strong>Correo o Nombre de usuario:</strong>
-        El correo o nombre de usuario ingresado no es válido.
-        <br>Recuerde que no puede dejar espacios en blanco.
-        <br>Correo: "ejemplo@gmail.com"
-        <br>Nombre de usuario: "Ejemplo1234"<!--Corregir con java-->
-    </div>
-    <!--Alerta Contraseña-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Contraseña:</strong>
-        La contraseña debe tener de 8 a 16 caracteres.
-        <br>Debe contener al menos una "mayúscula" y un "digito".
+        <span id="textoAlert"></span>
+        <br>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="./controller/js/login.js"></script>

@@ -154,6 +154,9 @@ document.getElementById("activado").addEventListener("click", function() {
 });
 
 document.getElementById("volverAtras").addEventListener("click", function() {
+    document.getElementById('tituloBuscar').style.display = 'block';
+    document.getElementById('cargandoBuscar').style.display = 'none';
+
     document.getElementById('activador').style.display = 'none';
     document.getElementById('formulario').style.display = 'block';
 });

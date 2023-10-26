@@ -49,10 +49,16 @@ function buscarUsuario(formulario){
                     document.getElementById('loguearse').style.display = 'block';
                 }   
             }if (xmlhttp.status == 401) {
-                alert("¡No se encontro el usuario!");
+                const tipoAlert = "danger";
+                const textoAlert = '<strong>Error al iniciar sesión:</strong> ¡No se encontro el usuario!';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+                
                 //Cancelar carga
                 document.getElementById('cargando').style.display = 'none';
                 document.getElementById('loguearse').style.display = 'block';
+                //Reiniciar iconos
+                
             }
         }
     }

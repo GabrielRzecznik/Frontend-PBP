@@ -6,7 +6,6 @@ function load(){
     if (localStorage.getItem("id_usuario") && localStorage.getItem("nombreUsuario")) {
         window.location.href = "../Frontend-PBP/view/inicioBusqueda.php";
     }
-    usuario.focus();
 }
 //#endregion
 
@@ -14,8 +13,6 @@ function load(){
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-    
-    //correo: /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, //entre 4 y 24 caracteres, permitido caracteres y _ - solamente
     usuario: /^(?=\w*\d*)(\S)\S{8,40}$/, //entre 8 y 40 caracteres
     password: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/ //entre 8 y 24 caracteres, al menos un dígito, almenos una mayúscula
 };
@@ -25,39 +22,87 @@ const campos = {
     password: false
 };
 
+var iconoUsuario = document.getElementById('iconoUsuario');
+var iconoPassword = document.getElementById('iconoPassword');
+
+//#region Alerts
+var alertSuperior = document.getElementById('alertSuperior');
+var textoAlert = document.getElementById("textoAlert");
+var tituloAlert = document.getElementById("tituloAlert");
+let timeoutId;
+
+function mostrarAlertSuperior($tipoAlert, $textoAlert) {
+    const alertElement = alertSuperior;
+    
+    if ($tipoAlert == "warning") {
+        alertSuperior.classList.remove("alert-danger");
+        alertSuperior.classList.add("alert-warning");
+    }else{
+        alertSuperior.classList.remove("alert-warning");
+        alertSuperior.classList.add("alert-danger");
+    }
+    
+    alertElement.classList.add('alertaError');
+
+    textoAlert.innerHTML = $textoAlert;
+    
+    duracionAlets(alertElement);
+}
+
+function duracionAlets(alertElement) {
+    timeoutId = setTimeout(() => {
+        alertElement.classList.remove('alertaError');
+    }, 7500);
+}
+//#endregion
+
 const validarFormulario = (e) => {
-   switch (e.target.name) {//identifica el nombre del input manipulado
+   switch (e.target.name) {
         case 'usuario':
             if (expresiones.usuario.test(e.target.value)) {
-                document.getElementById('iconoUsuario').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoUsuario').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertUsuario').classList.remove('alertaError');
-                //Validar
+                iconoUsuario.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                iconoUsuario.classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                
+                alertSuperior.classList.remove('alertaError');
+                
                 campos['usuario'] = true;
             }else{
-                document.getElementById('iconoUsuario').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoUsuario').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Mensaje de error
-                document.getElementById('alertUsuario').classList.add('alertaError');
-                document.getElementById('alertPassword').classList.remove('alertaError');
+                iconoUsuario.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoUsuario.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                }
+
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Correo o Nombre de usuario:</strong> El correo o nombre de usuario ingresado no es válido. Recuerde que no puede dejar espacios en blanco.<br>Correo: "ejemplo@gmail.com"<br>Nombre de usuario: "ejemplo1234"';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
                 campos['usuario'] = false;
             }
             break;
         case 'password':
             if (expresiones.password.test(e.target.value)) {
-                document.getElementById('iconoPassword').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoPassword').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertPassword').classList.remove('alertaError');
-                //Validar
+                iconoPassword.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                iconoPassword.classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                
+                alertSuperior.classList.remove('alertaError');
+                
                 campos['password'] = true;
             }else{
-                document.getElementById('iconoPassword').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoPassword').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Mensaje de error
-                document.getElementById('alertPassword').classList.add('alertaError');
-                document.getElementById('alertUsuario').classList.remove('alertaError');
+                iconoPassword.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoPassword.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                }
+
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Correo o Nombre de usuario:</strong> El correo o nombre de usuario ingresado no es válido. <br>Recuerde que no puede dejar espacios en blanco. <br>Correo: "ejemplo@gmail.com"<br>Nombre de usuario: "ejemplo1234"';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
                 campos['password'] = false;
             }
             break;
@@ -75,15 +120,39 @@ const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
     const usuarioValue = usuario.value.trim();
-    const contraseñaValue = password.value.trim();
+    const passwordValue = password.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
-    
-    if (usuarioValue === "" || contraseñaValue === "") {
-        alert("¡Debe completar todos los campos!");
+
+    //const alertElement = alertSuperior;
+   
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+    }
+
+    if (usuarioValue === "" || passwordValue === "") {
+
+        //alertElement.classList.add('alertaError');
+
+        if (usuarioValue === "" && passwordValue !== "") {
+            iconoUsuario.classList.add('mostrar','bi-x-circle-fill','noValidado');
+        }else if (usuarioValue !== "" && passwordValue === "") {
+            iconoPassword.classList.add('mostrar','bi-x-circle-fill','noValidado');   
+        }else{
+            iconoUsuario.classList.add('mostrar','bi-x-circle-fill','noValidado');
+            iconoPassword.classList.add('mostrar','bi-x-circle-fill','noValidado');
+        }
+
+        const tipoAlert = "danger";
+        const textoAlert = '<strong>Error al iniciar sesión:</strong> Debe completar todos los campos.';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
     }else{
-        if ((campos.usuario == false && usuarioValue !== "") || (campos.password == false && contraseñaValue !== "")) {
-            alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+        if ((campos.usuario == false && usuarioValue !== "") || (campos.password == false && passwordValue !== "")) {
+            const tipoAlert = "danger";
+            const textoAlert = '<strong>Error al iniciar sesión:</strong> ¡Formato no valido! Verifique los campos e intente nuevamente.';
+
+            mostrarAlertSuperior(tipoAlert, textoAlert);
         }
     }
     
@@ -93,8 +162,5 @@ formulario.addEventListener('submit', (e) => {
         document.getElementById('loguearse').style.display = 'none';
         buscarUsuario(formulario);
     }
-
-}); 
+});
 //#endregion
-    
-  

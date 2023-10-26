@@ -21,7 +21,7 @@ function registrarUsuario(formulario){
             }
         }
     }
-    console.log(formJSON);
+    
     xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Usuarios/crearUsuario',true);
     xmlhttp.send(formJSON);
 }

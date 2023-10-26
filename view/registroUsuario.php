@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="col-md-4 panel1">
+            <div class="col-lg-4 panel1">
                 <h5 class="titulo">Crear Usuario</h5>
                 <br>
                 <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
@@ -50,7 +50,7 @@
                             <a class="btn btn-secondary botonesSecundarios" href="./restablecerUsuario.php">Restablecer</a>  
                         </div>
                         <div class="col-md-6">
-                            <a class="btn btn-secondary botonesSecundarios" href="../">Iniciar sesión</a>
+                            <a class="btn btn-secondary botonesSecundarios" href="../">Ir al inicio</a>
                         </div>
                     </div>
                 </form>
@@ -69,7 +69,7 @@
                             <a class="btn btn-secondary botonesSecundarios" href="#" id="volverAtras">Volver atrás</a>  
                         </div>
                         <div class="col-md-6">
-                            <a class="btn btn-secondary botonesSecundarios" href="../index.php">Iniciar sesión</a>
+                            <a class="btn btn-secondary botonesSecundarios" href="../index.php">Ir al inicio</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-4 panel2"></div>
+            <div class="col-lg-4 panel2"></div>
             <div class="col-md-2"></div>
         </div>
     </div>
