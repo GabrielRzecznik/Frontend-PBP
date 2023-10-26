@@ -50,15 +50,13 @@ function buscarUsuario(formulario){
                 }   
             }if (xmlhttp.status == 401) {
                 const tipoAlert = "danger";
-                const textoAlert = '<strong>Error al iniciar sesión:</strong> ¡No se encontro el usuario!';
+                const textoAlert = '<strong>Error al iniciar sesión:</strong> No se encontro el usuario, revise sus credenciales e inténtalo nuevamente.';
 
                 mostrarAlertSuperior(tipoAlert, textoAlert);
                 
                 //Cancelar carga
                 document.getElementById('cargando').style.display = 'none';
-                document.getElementById('loguearse').style.display = 'block';
-                //Reiniciar iconos
-                
+                document.getElementById('loguearse').style.display = 'block';  
             }
         }
     }
