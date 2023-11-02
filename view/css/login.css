@@ -12,6 +12,11 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.mostrarPagina{
+  display: none;
+}
+
 .panel1{
   margin-top: 15%;
   background-color: rgb(240, 240, 240);

@@ -1,13 +1,10 @@
-//#region Metodo Load
-window.addEventListener('load',load);
-
-function load(){
-    //Verificar si hay logueo
+window.addEventListener('pageshow', function() {
     if (localStorage.getItem("id_usuario") && localStorage.getItem("nombreUsuario")) {
         window.location.href = "../Frontend-PBP/view/inicioBusqueda.php";
+    }else{
+        document.getElementById('mostrar').style.display = 'block';
     }
-}
-//#endregion
+});
 
 //#region Validación de Campos
 const inputs = document.querySelectorAll('#formulario input');
@@ -34,6 +31,10 @@ let timeoutId;
 function mostrarAlertSuperior($tipoAlert, $textoAlert) {
     const alertElement = alertSuperior;
     
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+    }
+    
     if ($tipoAlert == "warning") {
         alertSuperior.classList.remove("alert-danger");
         alertSuperior.classList.add("alert-warning");
@@ -46,10 +47,6 @@ function mostrarAlertSuperior($tipoAlert, $textoAlert) {
 
     textoAlert.innerHTML = $textoAlert;
     
-    duracionAlets(alertElement);
-}
-
-function duracionAlets(alertElement) {
     timeoutId = setTimeout(() => {
         alertElement.classList.remove('alertaError');
     }, 7500);
@@ -70,10 +67,6 @@ const validarFormulario = (e) => {
                 iconoUsuario.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
                 iconoUsuario.classList.add('mostrar','bi-x-circle-fill','noValidado');
                 
-                if (timeoutId) {
-                    clearTimeout(timeoutId);
-                }
-
                 const tipoAlert = "warning";
                 const textoAlert = '<strong>Correo o Nombre de usuario:</strong> El correo o nombre de usuario ingresado no es válido. Recuerde que no puede dejar espacios en blanco.<br>Correo: "ejemplo@gmail.com"<br>Nombre de usuario: "ejemplo1234"';
 
@@ -94,10 +87,6 @@ const validarFormulario = (e) => {
                 iconoPassword.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
                 iconoPassword.classList.add('mostrar','bi-x-circle-fill','noValidado');
                 
-                if (timeoutId) {
-                    clearTimeout(timeoutId);
-                }
-
                 const tipoAlert = "warning";
                 const textoAlert = '<strong>Correo o Nombre de usuario:</strong> El correo o nombre de usuario ingresado no es válido. <br>Recuerde que no puede dejar espacios en blanco. <br>Correo: "ejemplo@gmail.com"<br>Nombre de usuario: "ejemplo1234"';
 
@@ -123,10 +112,6 @@ formulario.addEventListener('submit', (e) => {
     const passwordValue = password.value.trim();
     
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
-   
-    if (timeoutId) {
-        clearTimeout(timeoutId);
-    }
 
     if (usuarioValue === "" || passwordValue === "") {
         if (usuarioValue === "" && passwordValue !== "") {

@@ -44,9 +44,7 @@
 				</div>
 			</div>
 		</div>
-		
 	</div>
-	
 
 	<!--Crear Solicitud-->
 	<form onsubmit="event.preventDefault()" action="#" method="post" id="crearSolicitud">

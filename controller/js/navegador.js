@@ -1,10 +1,11 @@
-
-   //Verificar si hay logueo
-if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUsuario") == null) {
-    window.location.href = "../";
-}else{
-    document.getElementById('mostrar').style.display = 'block';
-}
+//Verificar si hay logueo
+window.addEventListener('pageshow', function() {
+    if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUsuario") == null) {
+        window.location.href = "../";
+    }else{
+        document.getElementById('mostrar').style.display = 'block';
+    }
+});
 
 //Mostrar Usuario
 document.getElementById('usuario').innerHTML = localStorage["nombreUsuario"];

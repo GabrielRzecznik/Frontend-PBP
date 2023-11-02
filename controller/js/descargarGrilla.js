@@ -25,14 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .from($elementoParaConvertir)
         .save()
         .catch(err => console.log(err));
-       
-        $devolverTamañoGrilla = setTimeout(devolverTamañoGrilla, 1000);
-        
     });
 });
-
-function devolverTamañoGrilla() {
-    document.getElementById('calendar').classList.add('altoGrilla');
-    document.getElementById('calendar').classList.remove('zoom');
-}
 

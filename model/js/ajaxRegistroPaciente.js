@@ -12,7 +12,7 @@ function registrarPaciente(formulario, $latitud, $longitud){
             if (xmlhttp.status == 200) {
                 document.getElementById('tituloRegistrar').style.display = 'block';
                 document.getElementById('cargandoRegistrar').style.display = 'none';
-                window.location.href = "../view/seleccionRol.html";
+                window.location.href = "../view/seleccionRol.php";
             }else if (xmlhttp.status == 500) {
                 document.getElementById('tituloRegistrar').style.display = 'block';
                 document.getElementById('cargandoRegistrar').style.display = 'none';

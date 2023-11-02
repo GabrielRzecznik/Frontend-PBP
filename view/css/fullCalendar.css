@@ -1,3 +1,56 @@
+.container {
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (ajusta esto según tu preferencia) */
+    position: relative;
+    overflow: hidden;
+}
+
+.fc-toolbar-button, .fc-header-toolbar {
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .fc-toolbar-button, .fc-header-toolbar {
+        font-size: 10px;
+    }
+
+    .fc-col-header-cell-cushion {
+        font-size: 10px;
+    }
+
+    .fc-daygrid-day-number{
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 600px) {
+    .fc-toolbar-button, .fc-header-toolbar {
+        font-size: 8px;
+    }
+
+    .fc-col-header-cell-cushion {
+        font-size: 8px;
+    }
+
+    .fc-daygrid-day-number{
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 450px) {
+    .fc-toolbar-button, .fc-header-toolbar {
+        font-size: 6px;
+    }
+
+    .fc-col-header-cell-cushion {
+        font-size: 6px;
+    }
+
+    .fc-daygrid-day-number{
+        font-size: 5px;
+    }
+}
+
 .contenedorFullCalendar{
     padding: 15px;
 }
@@ -57,22 +110,6 @@
 
     .fc-daygrid-event-harness{
         max-width: min-content;
-    }
-
-    /*.fc-col-header-cell-cushion{
-        font-size: 10px;
-    }*/
-
-    .fc-scrollgrid-sync-inner{
-        margin-top: -3px;
-    }
-
-    .fc-button{
-        width: 30px;
-    }
-
-    .fc-icon{
-        margin-left: -8px;
     }
 }
 
@@ -210,3 +247,9 @@
 .altoGrilla{
     height: 650px;
 }
+
+
+
+
+
+

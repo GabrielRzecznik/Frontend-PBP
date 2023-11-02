@@ -12,7 +12,7 @@
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Login - Profesional By Proximity</title>
 </head>
-<body>
+<body class="mostrarPagina" id="mostrar">
     <div class="container" id="container">
         <div class="row">
             <div class="col-md-2"></div>
@@ -32,9 +32,6 @@
                         <span class="loguearse" id="loguearse">Iniciar sesión</span>
                         <div class="spinner-border text-secondary cargando" id="cargando" role="status"></div>
                     </button>
-                    <!--<a href="./view/grilla.html" class="btn btn-warning botonLogin" name="boton" id="boton">
-                        <span id="loguearse">Iniciar Sesión</span>
-                    </a>-->
                     <div class="row">
                         <div class="col-md-6">
                             <a class="btn btn-secondary botonesSecundarios" href="./view/restablecerUsuario.php">Restablecer</a>  

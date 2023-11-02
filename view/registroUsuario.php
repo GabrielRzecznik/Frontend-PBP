@@ -40,7 +40,13 @@
                     <!--Campo Validar Contraseña-->
                     <span class="texto">Repita su Contraseña </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPassword2" title="Campo Obligatorio"></i>
                     <br>
-                    <input type="password" class="form-control inputs" name="password2" id="password2">
+                    <div class="inputContraseña">
+                        <input type="password" class="form-control inputs" name="password2" id="password2">
+                        <span class="dialog-text btn btn-warning" id="dialog-text">
+                        <i class="bi bi-exclamation-circle-fill"></i>    
+                        Las contraseñas no coinciden
+                        </span>
+                    </div>
                     <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
                         <span class="tituloBuscar" id="tituloBuscar">Continuar</span>
                         <div class="spinner-border text-secondary cargandoBuscar" id="cargandoBuscar" role="status"></div>
@@ -100,31 +106,29 @@
             <div class="col-md-2"></div>
         </div>
     </div>
-    <!--Alerta Nombre Usuario-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
+
+    <!--Alerta Supeior-->
+    <div class="alert alert-dismissible fade show alerta" role="alert" id="alertSuperior">
         <i class="bi bi-info-circle-fill"></i>
-        <strong>Nombre de usuario:</strong>
-        El nombre de usuario debe tener de 8 a 16 caracteres. Debe contener al menos una "mayúscula", un "digito" y no puede contener espacios en blanco.
-        <br>Nombre de usuario: "Ejemplo1234"
-    </div>   
-    <!--Alerta Correo-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCorreo">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Correo:</strong>
-        El correo ingresado no corresponde a una dirección valida. Solamente admite letras en "minúscula".<!--Corregir con java-->
+        <span id="textoAlert"></span>
+        <br>
     </div>
-    <!--Alerta Contraseña-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Contraseña:</strong>
-        La contraseña debe tener de 8 a 16 caracteres. Debe contener al menos una "mayúscula" y un "digito".
-    </div>
-    <!--Alerta Contraseña-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword2">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Validación Contraseña:</strong>
-        La validación de contraseña debe tener de 8 a 16 caracteres, Debe contener al menos una "mayúscula" y un "digito" y coincidir con la contraseña.
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!--Alerta Código-->
     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCodigo">
         <i class="bi bi-info-circle-fill"></i>

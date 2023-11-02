@@ -181,13 +181,13 @@ body{
 }
 
 @media (max-width: 768px) {
-  .opciones{
-  cursor: pointer;
-  display:inline-block;
-  user-select: none;
-  border-radius: 5px;
-  margin-bottom: 15%;
-}
+    .opciones{
+    cursor: pointer;
+    display:inline-block;
+    user-select: none;
+    border-radius: 5px;
+    margin-bottom: 15%;
+  }
 }
 
 .opciones:hover{
@@ -243,3 +243,52 @@ body{
 .contenedorEtiquetasOS{
   height: 25px;
 }
+
+.inputContraseña {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dialog-text {
+  display: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: #ffc400;
+  color: #000;
+  font-size: small;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 100%; /* Aparecerá al lado del input */
+  transform: translateY(-50%);
+}
+
+.dialog-text::before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent #ffc400 transparent transparent; /* Apuntando hacia la izquierda */
+  top: 50%;
+  right: 100%; /* Ajusta la distancia según tus necesidades */
+  transform: translateY(-50%);
+}
+
+@media (max-width: 991px) {
+  .dialog-text {
+    white-space: normal;
+    text-overflow: clip;
+    right: 0;
+    left: 70%;
+    font-size: 9px;
+  }
+
+  .dialog-text::before {
+    display: none;
+  }
+}
+
+
+
