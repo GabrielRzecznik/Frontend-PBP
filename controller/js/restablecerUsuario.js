@@ -1,10 +1,8 @@
-//#region Metodo Load
-window.addEventListener('load',load);
-
-function load(){
-    correo.focus();
-}
-//#endregion
+window.addEventListener('pageshow', function() {
+    document.getElementById('mostrar').style.display = 'none';
+    const instancia = "restablecerUsuario";
+    controlAcceso(instancia);
+});
 
 //#region Validación formulario 1
 const inputs = document.querySelectorAll('#form1 input');

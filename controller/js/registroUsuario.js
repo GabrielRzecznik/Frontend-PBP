@@ -1,7 +1,7 @@
 window.addEventListener('pageshow', function() {
-    if (localStorage.getItem("id_usuario") && localStorage.getItem("nombreUsuario")) {
-        window.location.href = "../Frontend-PBP/view/inicioBusqueda.php";
-    }
+    document.getElementById('mostrar').style.display = 'none';
+    const instancia = "registroUsuario";
+    controlAcceso(instancia);
 });
 
 //#region Validación Formulario
@@ -181,7 +181,7 @@ formulario.addEventListener('submit', (e) => {
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
     
-    e.preventDefault();//evita que se envien los datos y se refresque la pagina
+    e.preventDefault();
     
     if (nombreUsuarioValue === "" || correoValue === "" || passwordValue === "" || password2Value === "") {
         const tipoAlert = "danger";

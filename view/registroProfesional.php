@@ -227,7 +227,6 @@
         <strong>Departamento consultorio: </strong>
         ¡El departamento ingresada no es valida!
     </div>
-    <script src="../model/js/ajaxBackupProvincias.js"></script>
 	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
     <script src="../model/js/ajaxBuscarProvincias.js"></script>
     <script src="../controller/js/registroProfesional.js"></script>

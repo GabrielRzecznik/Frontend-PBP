@@ -14,7 +14,7 @@
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Selección de Rol - Profesional By Proximity</title>
 </head>
-<body>
+<body class="mostrarPagina" id="mostrar">
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
@@ -40,6 +40,7 @@
             </div>
         </div>
     </div>
+    <script src="../controller/js/controlAcceso.js"></script>
     <script src="../controller/js/seleccionRol.js"></script>
     <script src="../model/js/ajaxSeleccionRol.js"></script>
 </body>

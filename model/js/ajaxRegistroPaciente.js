@@ -1,22 +1,23 @@
-function registrarPaciente(formulario, $latitud, $longitud){
-    var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
+function registrarPaciente(formulario, $foto, $provincia, $latitud, $longitud){
+    var formData= new FormData(formulario);
+    formData.append("id_usuario", localStorage.getItem("id_usuario"));
     formData.append("latitud", $latitud);
     formData.append("longitud", $longitud);
-    formData.append("id_usuario", localStorage.getItem("id_usuario"));
+    formData.set("provincia", $provincia);
+    formData.set("foto", $foto);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
-        if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
+                localStorage.setItem("id_paciente", "");
+                
                 document.getElementById('tituloRegistrar').style.display = 'block';
                 document.getElementById('cargandoRegistrar').style.display = 'none';
+                
                 window.location.href = "../view/seleccionRol.php";
-            }else if (xmlhttp.status == 500) {
-                document.getElementById('tituloRegistrar').style.display = 'block';
-                document.getElementById('cargandoRegistrar').style.display = 'none';
-                alert("¡Ocurrio un error inesperado con el correo ingresado!");
             }else{
                 document.getElementById('tituloRegistrar').style.display = 'block';
                 document.getElementById('cargandoRegistrar').style.display = 'none';
@@ -24,6 +25,7 @@ function registrarPaciente(formulario, $latitud, $longitud){
             }
         }
     }
+
     xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Pacientes/crearPaciente',true);
     xmlhttp.send(formJSON);
 }

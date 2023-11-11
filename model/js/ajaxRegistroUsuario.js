@@ -1,14 +1,15 @@
 function registrarUsuario(formulario){
-    var formData= new FormData(formulario); //Las keys corresponden al atributo name de cada elemento  
+    var formData= new FormData(formulario);  
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
-        if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
+    xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
                 localStorage.setItem("id_usuario", data[0]["id_usuario"]);//Me guarda el id_usuario de la bd
+                localStorage.setItem("estadoUsuario", data[0]["estadoUsuario"]);
                 window.location.href = "../view/registroPerfil.php";
             }else if (xmlhttp.status == 500) {
                 alert("¡Ocurrio un error inesperado!");

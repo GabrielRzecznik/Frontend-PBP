@@ -26,7 +26,7 @@ function buscarPerfil($nombreUsuario){
                 if (data[0]["foto"] != "Array") {
                     document.getElementById('mostrarFotoPerfil').innerHTML = '<img class="foto" src="'+data[0]["foto"]+'" alt="ocurrio un error">';
                 }else{
-                    document.getElementById('mostrarFotoPerfil').innerHTML = '<img class="foto" src="../view/img/user.png" alt="ocurrio un error">';
+                    document.getElementById('mostrarFotoPerfil').innerHTML = '<img class="foto" src="./view/img/user.png" alt="ocurrio un error">';
                 }
                 //Calcular edad
                 var añoNacimiento = parseInt(String(data[0].fechaNacimiento).substring(0,4));
@@ -128,10 +128,10 @@ function buscarPerfil($nombreUsuario){
     
                         document.getElementById('visualizarMapa').innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.8724279365922!2d-58.354048612043975!3d-34.66114596650525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2s'+$calleAvenida+'%2'+$altura+'%2C%20'+$codigoPostal+'DSF%20'+$localidad+'%2C%20'+$provincia+'!5e0!3m2!1ses-419!2sar" class="mapaPortada" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
                     }else{
-                        document.getElementById('visualizarMapa').innerHTML = '<img  class="mapaPortada fotoPortada" src="../view/img/portadaSinConsultorio.jpg" alt="No se pudo cargar la portada">';
+                        document.getElementById('visualizarMapa').innerHTML = '<img  class="mapaPortada fotoPortada" src="./view/img/portadaSinConsultorio.jpg" alt="No se pudo cargar la portada">';
                     }
                 }else{
-                    document.getElementById('visualizarMapa').innerHTML = '<img  class="mapaPortada fotoPortada" src="../view/img/portadaSinConsultorio.jpg" alt="No se pudo cargar la portada">';
+                    document.getElementById('visualizarMapa').innerHTML = '<img  class="mapaPortada fotoPortada" src="./view/img/portadaSinConsultorio.jpg" alt="No se pudo cargar la portada">';
                 }
                 //Acceso externo al navegador para edición de perfil
                 $accesoPerfil = true;

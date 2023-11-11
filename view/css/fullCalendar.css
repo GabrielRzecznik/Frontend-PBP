@@ -3,6 +3,7 @@
     padding-bottom: 56.25%; /* 16:9 aspect ratio (ajusta esto según tu preferencia) */
     position: relative;
     overflow: hidden;
+    z-index: 9997;
 }
 
 .fc-toolbar-button, .fc-header-toolbar {
@@ -21,6 +22,14 @@
     .fc-daygrid-day-number{
         font-size: 9px;
     }
+
+    .fc-timegrid-slot-label-cushion{
+        font-size: 9px;
+    }
+
+    .fc-timegrid-axis-cushion{
+        font-size: 9px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -35,6 +44,14 @@
     .fc-daygrid-day-number{
         font-size: 7px;
     }
+
+    .fc-timegrid-slot-label-cushion{
+        font-size: 7px;
+    }
+
+    .fc-timegrid-axis-cushion{
+        font-size: 7px;
+    }
 }
 
 @media (max-width: 450px) {
@@ -47,6 +64,14 @@
     }
 
     .fc-daygrid-day-number{
+        font-size: 5px;
+    }
+
+    .fc-timegrid-slot-label-cushion{
+        font-size: 5px;
+    }
+
+    .fc-timegrid-axis-cushion{
         font-size: 5px;
     }
 }
@@ -103,7 +128,7 @@
     .fc-event-time{
         font-size: 7px;
     }
-    
+
     .fc-event-title{
         font-size: 0px;
     }
@@ -240,16 +265,24 @@
     }
 }
 
-.zoom{
-    height: 890px;
-}
-
 .altoGrilla{
     height: 650px;
 }
 
+.elevarGrilla {
+    top: -50px;
+}
 
+.carga {
+    background-color: #34495E;;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    display: none;
+}
 
-
-
-
+.principal {
+    position: relative;
+    z-index: 9999;
+}

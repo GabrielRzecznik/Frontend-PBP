@@ -10,8 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!--Css-->
-    <link rel="stylesheet" href="../view/css/inicioBusqueda.css">
-	<link rel="stylesheet" href="../view/css/navegador.css">
+    <link rel="stylesheet" href="./css/inicioBusqueda.css">
+	<link rel="stylesheet" href="./css/navegador.css">
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Inicio - Profesional By Proximity</title>
 </head>
@@ -24,7 +24,7 @@
 			<div class="col-md-3 bg-light border rounded-3 contenedores alto padding">
 				<b>Buscar Profesionales</b>
 				<hr>
-				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioP">
+				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioP" enctype="multipart/form-data">
 					<b class="titulos">Seleccione especialidad:</b>
 					<select class="form-select campos titulos" name="especialidad" id="especialidad" aria-label="Floating label select example">
 						<option value="0" selected>Especialidad</option>
@@ -139,15 +139,12 @@
 	</div>
 	<br>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<script src="../model/js/ajaxBackupProvincias.js"></script>
-	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
+	<script src="../controller/js/controlAcceso.js"></script>
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>
 	<script src="../model/js/ajaxMensajesNuevos.js"></script>
-	
 	<script src="../controller/js/navegador.js"></script>
 	<script src="../controller/js/inicioBusqueda.js"></script>
-	
 	<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
 	<script src="../model/js/ajaxEditarUsuario.js"></script>
 	<script src="../model/js/ajaxEditarPaciente.js"></script>

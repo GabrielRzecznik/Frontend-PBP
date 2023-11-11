@@ -46,13 +46,14 @@
             <div class="col-md-2"></div>
         </div>
     </div>
-    <!--Alerta Supeior-->
+    <!--Alerta Superior-->
     <div class="alert alert-dismissible fade show alerta" role="alert" id="alertSuperior">
         <i class="bi bi-info-circle-fill"></i>
         <span id="textoAlert"></span>
         <br>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./controller/js/controlAcceso.js"></script>
     <script src="./controller/js/login.js"></script>
     <script src="./model/js/ajaxBuscarUsuario.js"></script>
     

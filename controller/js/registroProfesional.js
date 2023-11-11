@@ -1,10 +1,8 @@
-//#region Metodo Load
-window.addEventListener('load',load);
-
-function load(){
-    //Agregar obra social
-}
-//#endregion
+window.addEventListener('pageshow', function() {
+    document.getElementById('mostrar').style.display = 'none';
+    const instancia = "registroProfesional";
+    controlAcceso(instancia);
+});
 
 //#region Validación Inputs Normales
 const inputs = document.querySelectorAll('#formulario input');

@@ -1,26 +1,17 @@
+window.addEventListener('pageshow', function() {
+    document.getElementById('mostrar').style.display = 'none';
+    const instancia = "registroPerfil";
+    controlAcceso(instancia);
+});
+
+buscarProvincias();
+
 //Obtener fecha actual
 let date = new Date();
 let fechaActual = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + String(date.getDate()).padStart(2, '0'));
 let dia = date.getDate();
 let mes = date.getMonth()+1;
 let año = date.getFullYear();
-
-//#region Metodo Load
-window.addEventListener('load',load);
-
-function load(){
-    //Verificar si hay logueo
-    if (localStorage.getItem("id_usuario") == null) {
-        window.location.href = "../";
-    }else{
-        document.getElementById('mostrar').style.display = 'block';
-    }
-
-    document.getElementById('provincia').value = '0';
-
-    nombre.focus();
-}
-//#endregion
 
 //#region Validación de Campos
 const inputs = document.querySelectorAll('#formulario input');
@@ -40,7 +31,7 @@ const campos = {
     apellido: false,
     fechaNacimiento: false,
     sexo: false,
-    //foto: false,
+    foto: false,
     telefono: false,
     provincia: false,
     localidad: false,
@@ -49,310 +40,333 @@ const campos = {
     departamento: true
 };
 
+var iconoNombre = document.getElementById('iconoNombre');
+var iconoApellido = document.getElementById('iconoApellido');
+var iconoFechaNacimiento = document.getElementById('iconoFechaNacimiento');
+var iconoSexo = document.getElementById('iconoSexo');
+var iconoFoto = document.getElementById('iconoFoto');
+var iconoTelefono = document.getElementById('iconoTelefono');
+var iconoProvincia = document.getElementById('iconoProvincia');
+var iconoLocalidad = document.getElementById('iconoLocalidad');
+var iconoCalle = document.getElementById('iconoCalle');
+var iconoAltura = document.getElementById('iconoAltura');
+var iconoDepartamento = document.getElementById('iconoDepartamento');
+
+//#region Alerts
+var alertSuperior = document.getElementById('alertSuperior');
+var textoAlert = document.getElementById("textoAlert");
+var tituloAlert = document.getElementById("tituloAlert");
+let timeoutId;
+
+function mostrarAlertSuperior($tipoAlert, $textoAlert) {
+    const alertElement = alertSuperior;
+    
+    if (timeoutId) {
+        clearTimeout(timeoutId);
+    }
+    
+    if ($tipoAlert == "warning") {
+        alertSuperior.classList.remove("alert-danger");
+        alertSuperior.classList.add("alert-warning");
+    }else{
+        alertSuperior.classList.remove("alert-warning");
+        alertSuperior.classList.add("alert-danger");
+    }
+    
+    alertElement.classList.add('alertaError');
+
+    textoAlert.innerHTML = $textoAlert;
+    
+    timeoutId = setTimeout(() => {
+        alertElement.classList.remove('alertaError');
+    }, 7500);
+}
+//#endregion
+
 const validarFormulario = (e) => {
-   switch (e.target.name) {//identifica el nombre del input manipulado
+   switch (e.target.name) {
         case 'nombre':
             if (expresiones.nombre.test(e.target.value)) {
-                document.getElementById('iconoNombre').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoNombre').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertNombre').classList.remove('alertaError');
-                //Validar campo
+                iconoNombre.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                iconoNombre.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+                alertSuperior.classList.remove('alertaError');
+                
                 campos['nombre'] = true;
             }else{
-                document.getElementById('iconoNombre').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoNombre').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Limpiar mensaje
-                document.getElementById('alertNombre').classList.add('alertaError');
-                document.getElementById('alertApellido').classList.remove('alertaError');
-                document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-                document.getElementById('alertSexo').classList.remove('alertaError');
-                //document.getElementById('alertFoto').classList.remove('alertaError');
-                document.getElementById('alertTelefono').classList.remove('alertaError');
-                document.getElementById('alertProvincia').classList.remove('alertaError');
-                document.getElementById('alertLocalidad').classList.remove('alertaError');
-                document.getElementById('alertCalle').classList.remove('alertaError');
-                document.getElementById('alertAltura').classList.remove('alertaError');
-                document.getElementById('alertDepartamento').classList.remove('alertaError');
+                iconoNombre.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoNombre.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Nombre:</strong> ¡El nombre ingresado no es valido!<br>Debe tener de 2 a 30 caracteres los cuales no<br>puede ser numeros ni caracteres especiales.';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
                 campos['nombre'] = false;
             }
             break;
         case 'apellido':
             if (expresiones.apellido.test(e.target.value)) {
-                document.getElementById('iconoApellido').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoApellido').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertApellido').classList.remove('alertaError');
-                //Validar campo
+                iconoApellido.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                iconoApellido.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+                alertSuperior.classList.remove('alertaError');
+                
                 campos['apellido'] = true;
             }else{
-                document.getElementById('iconoApellido').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoApellido').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Limpiar mensaje
-                document.getElementById('alertNombre').classList.remove('alertaError');
-                document.getElementById('alertApellido').classList.add('alertaError');
-                document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-                document.getElementById('alertSexo').classList.remove('alertaError');
-                //document.getElementById('alertFoto').classList.remove('alertaError');
-                document.getElementById('alertTelefono').classList.remove('alertaError');
-                document.getElementById('alertProvincia').classList.remove('alertaError');
-                document.getElementById('alertLocalidad').classList.remove('alertaError');
-                document.getElementById('alertCalle').classList.remove('alertaError');
-                document.getElementById('alertAltura').classList.remove('alertaError');
-                document.getElementById('alertDepartamento').classList.remove('alertaError');
+                iconoApellido.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoApellido.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Apellido:</strong> ¡El apellido ingresado no es valido!<br>Debe tener de 2 a 30 caracteres los cuales no <br>puede ser numeros ni caracteres especiales.';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
                 campos['apellido'] = false;
             }
             break;
         case 'telefono':
             if (expresiones.telefono.test(e.target.value)) {
-                document.getElementById('iconoTelefono').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoTelefono').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertTelefono').classList.remove('alertaError');
-                //Validar campo
+                iconoTelefono.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                iconoTelefono.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+                alertSuperior.classList.remove('alertaError');
+                
                 campos['telefono'] = true;
             }else{
-                document.getElementById('iconoTelefono').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoTelefono').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Limpiar mensaje
-                document.getElementById('alertNombre').classList.remove('alertaError');
-                document.getElementById('alertApellido').classList.remove('alertaError');
-                document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-                document.getElementById('alertSexo').classList.remove('alertaError');
-                //document.getElementById('alertFoto').classList.remove('alertaError');
-                document.getElementById('alertTelefono').classList.add('alertaError');
-                document.getElementById('alertProvincia').classList.remove('alertaError');
-                document.getElementById('alertLocalidad').classList.remove('alertaError');
-                document.getElementById('alertCalle').classList.remove('alertaError');
-                document.getElementById('alertAltura').classList.remove('alertaError');
-                document.getElementById('alertDepartamento').classList.remove('alertaError');
+                iconoTelefono.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoTelefono.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Télefono:</strong> ¡El télefono ingresado no es valido!';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
                 campos['telefono'] = false;
-            }
-            break;
-        case 'localidad':
-            if (expresiones.localidad.test(e.target.value)) {
-                document.getElementById('iconoLocalidad').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoLocalidad').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertLocalidad').classList.remove('alertaError');
-                //Validar campo
-                campos['localidad'] = true;
-            }else{
-                document.getElementById('iconoLocalidad').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoLocalidad').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Limpiar mensaje
-                document.getElementById('alertNombre').classList.remove('alertaError');
-                document.getElementById('alertApellido').classList.remove('alertaError');
-                document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-                document.getElementById('alertSexo').classList.remove('alertaError');
-                //document.getElementById('alertFoto').classList.remove('alertaError');
-                document.getElementById('alertTelefono').classList.remove('alertaError');
-                document.getElementById('alertProvincia').classList.remove('alertaError');
-                document.getElementById('alertLocalidad').classList.add('alertaError');
-                document.getElementById('alertCalle').classList.remove('alertaError');
-                document.getElementById('alertAltura').classList.remove('alertaError');
-                document.getElementById('alertDepartamento').classList.remove('alertaError');
-                campos['localidad'] = false;
             }
             break;
         case 'calle':
             if (expresiones.calle.test(e.target.value)) {
-                document.getElementById('iconoCalle').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoCalle').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertCalle').classList.remove('alertaError');
-                //Validar campo
+                iconoCalle.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                iconoCalle.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+                alertSuperior.classList.remove('alertaError');
+                
                 campos['calle'] = true;
             }else{
-                document.getElementById('iconoCalle').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoCalle').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Limpiar mensaje
-                document.getElementById('alertNombre').classList.remove('alertaError');
-                document.getElementById('alertApellido').classList.remove('alertaError');
-                document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-                document.getElementById('alertSexo').classList.remove('alertaError');
-                //document.getElementById('alertFoto').classList.remove('alertaError');
-                document.getElementById('alertTelefono').classList.remove('alertaError');
-                document.getElementById('alertProvincia').classList.remove('alertaError');
-                document.getElementById('alertLocalidad').classList.remove('alertaError');
-                document.getElementById('alertCalle').classList.add('alertaError');
-                document.getElementById('alertAltura').classList.remove('alertaError');
-                document.getElementById('alertDepartamento').classList.remove('alertaError');
+                iconoCalle.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoCalle.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Calle/Avenida:</strong> ¡La calle o avenida ingresada no es valida!';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
                 campos['calle'] = false;
             }
             break;
         case 'altura':
             if (expresiones.altura.test(e.target.value)) {
-                document.getElementById('iconoAltura').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoAltura').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertAltura').classList.remove('alertaError');
-                //Validar campo
+                iconoAltura.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                iconoAltura.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+                alertSuperior.classList.remove('alertaError');
+                
                 campos['altura'] = true;
             }else{
-                document.getElementById('iconoAltura').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoAltura').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Limpiar mensaje
-                document.getElementById('alertNombre').classList.remove('alertaError');
-                document.getElementById('alertApellido').classList.remove('alertaError');
-                document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-                document.getElementById('alertSexo').classList.remove('alertaError');
-                //document.getElementById('alertFoto').classList.remove('alertaError');
-                document.getElementById('alertTelefono').classList.remove('alertaError');
-                document.getElementById('alertProvincia').classList.remove('alertaError');
-                document.getElementById('alertLocalidad').classList.remove('alertaError');
-                document.getElementById('alertCalle').classList.remove('alertaError');
-                document.getElementById('alertAltura').classList.add('alertaError');
-                document.getElementById('alertDepartamento').classList.remove('alertaError');
+                iconoAltura.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoAltura.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Altura:</strong> ¡La altura ingresada no es vailida!';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
                 campos['altura'] = false;
             }
             break;
         case 'departamento':
             if (expresiones.departamento.test(e.target.value)) {
-                document.getElementById('iconoDepartamento').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoDepartamento').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertDepartamento').classList.remove('alertaError');
-                //Validar campo
+                iconoDepartamento.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                iconoDepartamento.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+                alertSuperior.classList.remove('alertaError');
+                
                 campos['departamento'] = true;
             }else if(departamento.value.trim() == ""){
-                document.getElementById('iconoDepartamento').classList.remove('mostrar','bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
-                //Limpiar 
-                document.getElementById('alertDepartamento').classList.remove('alertaError');
+                iconoDepartamento.classList.remove('mostrar','bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+
+                alertSuperior.classList.remove('alertaError');
+
                 campos['departamento'] = true;
             }else{
-                document.getElementById('iconoDepartamento').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoDepartamento').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Limpiar mensaje
-                document.getElementById('alertNombre').classList.remove('alertaError');
-                document.getElementById('alertApellido').classList.remove('alertaError');
-                document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-                document.getElementById('alertSexo').classList.remove('alertaError');
-                //document.getElementById('alertFoto').classList.remove('alertaError');
-                document.getElementById('alertTelefono').classList.remove('alertaError');
-                document.getElementById('alertProvincia').classList.remove('alertaError');
-                document.getElementById('alertLocalidad').classList.remove('alertaError');
-                document.getElementById('alertCalle').classList.remove('alertaError');
-                document.getElementById('alertAltura').classList.remove('alertaError');
-                document.getElementById('alertDepartamento').classList.add('alertaError');
+                iconoDepartamento.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoDepartamento.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Departamento:</strong> ¡El departamento ingresado no es valido!Altura:</strong> ¡La altura ingresada no es vailida!';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
                 campos['departamento'] = false;
             }
             break;
    } 
 };
 
-//Validar sexo
+//#region Validar sexo
 document.getElementById("sexo").addEventListener('change', (event) => {
     if (event.target.value != 0) {
-        document.getElementById('iconoSexo').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
-        document.getElementById('iconoSexo').classList.add('validado','bi-check-circle-fill');
-        //Mensaje de error
-        document.getElementById('alertSexo').classList.remove('alertaError');
-        //Validar
+        iconoSexo.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+        iconoSexo.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+        alertSuperior.classList.remove('alertaError');
+                
         campos['sexo'] = true;
     }else{
-        document.getElementById('iconoSexo').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
-        document.getElementById('iconoSexo').classList.add('noValidado','bi-x-circle-fill');
-        //Mensaje de error
-        document.getElementById('alertSexo').classList.add('alertaError');
-        //Limpiar mensaje
-        document.getElementById('alertNombre').classList.remove('alertaError');
-        document.getElementById('alertApellido').classList.remove('alertaError');
-        document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-        //document.getElementById('alertFoto').classList.remove('alertaError');
-        document.getElementById('alertTelefono').classList.remove('alertaError');
-        document.getElementById('alertProvincia').classList.remove('alertaError');
-        document.getElementById('alertLocalidad').classList.remove('alertaError');
-        document.getElementById('alertCalle').classList.remove('alertaError');
-        document.getElementById('alertAltura').classList.remove('alertaError');
-        document.getElementById('alertDepartamento').classList.remove('alertaError');
+        iconoSexo.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+        iconoSexo.classList.add('mostrar','bi-x-circle-fill','noValidado');
+        
+        const tipoAlert = "warning";
+        const textoAlert = '<strong>Sexo:</strong> ¡El campo sexo es obligatorio!';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
+
         campos['sexo'] = false;
     }
 });
 
 if (sexo.value == 0) {
-    document.getElementById('iconoSexo').classList.add('mostrar');//Agregar
-    document.getElementById('iconoSexo').classList.remove('bi-check-circle-fill');//Borrar
+    iconoSexo.classList.add('mostrar');
+    iconoSexo.classList.remove('bi-check-circle-fill');
     campos['sexo'] = false;
 }
+//#endregion
 
-//Validar fecha de nacimiento
+//#region Validar fecha de nacimiento
 document.getElementById("fechaNacimiento").addEventListener('change', (event) => {
-    //event.target.value Captura el valor del input date
-    fechaIngresada = event.target.value;
-    
-    var añoIngresado = parseInt(String(fechaIngresada).substring(0,4));
-    var mesIngresado = parseInt(String(fechaIngresada).substring(5,7));
-    if(mesIngresado < 10){
-        mesIngresado = "0" + mesIngresado;
-    }
-    var diaIngresado = parseInt(String(fechaIngresada).substring(8,10));
-    if(diaIngresado < 10){
-        diaIngresado = "0" + diaIngresado;
-    }
-   
+    var fechaIngresada = event.target.value;
+    var fechaIngresadaDate = new Date(fechaIngresada);
+
+    var añoIngresado = fechaIngresadaDate.getFullYear();
+    var mesIngresado = fechaIngresadaDate.getMonth() + 1;
+    var diaIngresado = fechaIngresadaDate.getDate();
+
     var edad = año - añoIngresado;
 
     if (mes < mesIngresado) {
         edad--;
-    }else if (mes == mesIngresado) {
-        if (dia < diaIngresado) {
-            edad--;
-        }
+    } else if (mes === mesIngresado && dia < diaIngresado) {
+        edad--;
     }
 
     if (edad > 16 && edad < 120) {
-        document.getElementById('iconoFechaNacimiento').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
-        document.getElementById('iconoFechaNacimiento').classList.add('mostrar','bi-check-circle-fill','validado');
-        //Mensaje de error
-        document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-        //Validar
+        iconoFechaNacimiento.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+        iconoFechaNacimiento.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+        alertSuperior.classList.remove('alertaError');
+        
         campos['fechaNacimiento'] = true;
     }else{
-        document.getElementById('iconoFechaNacimiento').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
-        document.getElementById('iconoFechaNacimiento').classList.add('mostrar','noValidado','bi-x-circle-fill');
-        //Mensaje de error
-        document.getElementById('alertFechaNacimiento').classList.add('alertaError');
-        //Limpiar mensaje
-        document.getElementById('alertNombre').classList.remove('alertaError');
-        document.getElementById('alertApellido').classList.remove('alertaError');
-        document.getElementById('alertSexo').classList.remove('alertaError');
-        //document.getElementById('alertFoto').classList.remove('alertaError');
-        document.getElementById('alertTelefono').classList.remove('alertaError');
-        document.getElementById('alertProvincia').classList.remove('alertaError');
-        document.getElementById('alertLocalidad').classList.remove('alertaError');
-        document.getElementById('alertCalle').classList.remove('alertaError');
-        document.getElementById('alertAltura').classList.remove('alertaError');
-        document.getElementById('alertDepartamento').classList.remove('alertaError');
+        iconoFechaNacimiento.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+        iconoFechaNacimiento.classList.add('mostrar','bi-x-circle-fill','noValidado');
+        
+        if (edad < 16) {
+            const textoAlert = '<strong>Fecha de nacimiento:</strong> ¡Debes ser mayor de 16 años para utilizar nuestros servicios!';
+            mensajeFechaNacimiento(textoAlert);
+        }else{
+            const textoAlert = '<strong>Fecha de nacimiento:</strong> ¡La fecha ingresada no es válida!';
+            mensajeFechaNacimiento(textoAlert);
+        }
+
+        function mensajeFechaNacimiento($textoAlert) {
+            const tipoAlert = "warning";
+            const textoAlert = $textoAlert;
+            mostrarAlertSuperior(tipoAlert, textoAlert);
+        }
+
         campos['fechaNacimiento'] = false;
     }
 });
+//#endregion
+
+//#region Validar foto
+
+function errorFoto() {
+    iconoFoto.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+    iconoFoto.classList.add('mostrar','bi-x-circle-fill','noValidado');
+            
+    campos['foto'] = false;
+}
+
+function mensajeFoto(textoAlert) {
+    const tipoAlert = "warning";
+
+    mostrarAlertSuperior(tipoAlert, textoAlert);
+}
+
+document.getElementById("foto").addEventListener('change', (event) => {
+    if (event.target.value != ""){
+        const fileInput = document.getElementById("foto");
+        const selectedFile = fileInput.files[0];
+
+        if (selectedFile.type.startsWith("image/")) {
+            iconoFoto.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+            iconoFoto.classList.add('mostrar','bi-check-circle-fill','validado');
+
+            alertSuperior.classList.remove('alertaError');
+            
+            campos['foto'] = true;
+        } else {
+            errorFoto();
+
+            const textoAlert = '<strong>Foto:</strong> ¡El formato no es valido!';
+
+            mensajeFoto(textoAlert);
+        }
+    }else{
+        errorFoto();
+
+        const textoAlert = '<strong>Foto:</strong> ¡Es un campo obligatorio!';
+
+        mensajeFoto(textoAlert);
+    }
+});
+//#endregion
 
 //#region Select Provincia
-document.getElementById("provincia").addEventListener('change', (event) => {
+var provinciaSeleccionada = "";
+var selectProvincias = document.getElementById("provincia");
+
+selectProvincias.addEventListener('change', (event) => {
+    var selectLocalidades = document.getElementById("localidad");
+
+    provinciaSeleccionada = selectProvincias.value;
+
+    selectLocalidades.disabled = false;
+
+    buscarLocalidades(provinciaSeleccionada);
+
+    iconoLocalidad.classList.add('bi-exclamation-circle-fill','signo','bi-!-circle-fill','noValidado');
+    iconoLocalidad.classList.remove('mostrar','bi-check-circle-fill','validado');
+    campos['localidad'] = false;
+
     if (event.target.value != 0) {
-        document.getElementById('iconoProvincia').classList.remove('signo','noValidado','bi-exclamation-circle-fill','bi-x-circle-fill');
-        document.getElementById('iconoProvincia').classList.add('validado','bi-check-circle-fill', 'mostrar');
-        //Mensaje de error
-        document.getElementById('alertProvincia').classList.remove('alertaError');
-        //Validar
+        iconoProvincia.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+        iconoProvincia.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+        alertSuperior.classList.remove('alertaError');
+        
         campos['provincia'] = true;
     }else{
-        document.getElementById('iconoProvincia').classList.remove('signo','validado','bi-exclamation-circle-fill','bi-check-circle-fill');
-        document.getElementById('iconoProvincia').classList.add('noValidado','bi-x-circle-fill');
-        //Mensaje de error
-        document.getElementById('alertProvincia').classList.add('alertaError');
-        //Limpiar mensaje
-        document.getElementById('alertNombre').classList.remove('alertaError');
-        document.getElementById('alertApellido').classList.remove('alertaError');
-        document.getElementById('alertFechaNacimiento').classList.remove('alertaError');
-        document.getElementById('alertSexo').classList.remove('alertaError');
-        //document.getElementById('alertFoto').classList.remove('alertaError');
-        document.getElementById('alertTelefono').classList.remove('alertaError');
-        document.getElementById('alertLocalidad').classList.remove('alertaError');
-        document.getElementById('alertCalle').classList.remove('alertaError');
-        document.getElementById('alertAltura').classList.remove('alertaError');
-        document.getElementById('alertDepartamento').classList.remove('alertaError');
+        iconoProvincia.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+        iconoProvincia.classList.add('mostrar','bi-x-circle-fill','noValidado');
+        
+        const tipoAlert = "warning";
+        const textoAlert = '<strong>Provincia</strong> ¡Debe seleccionar su provincia de residencia!';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
+
         campos['provincia'] = false;
     }
 });
@@ -360,7 +374,38 @@ document.getElementById("provincia").addEventListener('change', (event) => {
 if (provincia.value == 0) {
     document.getElementById('iconoProvincia').classList.add('mostrar');//Agregar
     document.getElementById('iconoProvincia').classList.remove('bi-check-circle-fill');//Borrar
+    
     campos['provincia'] = false;
+}
+//#endregion
+
+//#region Select Localidad
+document.getElementById("localidad").addEventListener('change', (event) => {
+    if (event.target.value != 0) {
+        iconoLocalidad.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+        iconoLocalidad.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+        alertSuperior.classList.remove('alertaError');
+        
+        campos['localidad'] = true;
+    }else{
+        iconoLocalidad.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+        iconoLocalidad.classList.add('mostrar','bi-x-circle-fill','noValidado');
+        
+        const tipoAlert = "warning";
+        const textoAlert = '<strong>Localidad</strong> ¡La localidad ingresada no es valida!';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
+
+        campos['localidad'] = false;
+    }
+});
+
+if (localidad.value == 0) {
+    iconoLocalidad.classList.add('mostrar');//Agregar
+    iconoLocalidad.classList.remove('bi-check-circle-fill');//Borrar
+    
+    campos['localidad'] = false;
 }
 //#endregion
 
@@ -371,6 +416,7 @@ inputs.forEach((input) => {
 //#endregion
 
 //#region Envia Formulario
+
 const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
@@ -378,7 +424,7 @@ formulario.addEventListener('submit', (e) => {
     const apellidoValue = apellido.value.trim();
     const fechaNacimientoValue = fechaNacimiento.value.trim();
     const sexoValue = sexo.value.trim();
-    //const fotoValue = foto.value.trim();
+    const fotoValue = foto.value.trim();
     const telefonoValue = telefono.value.trim();
     const provinciaValue = provincia.value.trim();
     const localidadValue = localidad.value.trim();
@@ -386,24 +432,32 @@ formulario.addEventListener('submit', (e) => {
     const alturaValue = altura.value.trim();
     //const departamentoValue = departamento.value.trim();
     
-    e.preventDefault();//evita que se envien los datos y se refresque la pagina
-    
-    if (nombreValue === "" || apellidoValue === "" || fechaNacimientoValue === "" || sexoValue === "0" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
-        alert("¡Debe completar todos los campos obligatorios!");
+    e.preventDefault();
+
+    function mensajeErrorFormulario($textoAlert) {
+        const tipoAlert = "danger";
+        const textoAlert = $textoAlert;
+        mostrarAlertSuperior(tipoAlert, textoAlert);
+    }
+
+    if (nombreValue === "" || apellidoValue === "" || fechaNacimientoValue === "" || sexoValue === "0" || fotoValue === "" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
+        const textoAlert = '<strong>Error al registrar datos personales:</strong> ¡Debe completar todos los campos obligatorios!';
+
+        mensajeErrorFormulario(textoAlert);
     }else{
-        if ((campos.nombre == false && nombreValue !== "") || (campos.apellido == false && apellidoValue !== "") || (campos.fechaActual == false && fechaNacimientoValue !== "") || (campos.sexo == false && sexoValue !== "0") || (campos.telefono == false && telefonoValue !== "") || (campos.provincia == false && provinciaValue !== "") || (campos.localidad == false && localidadValue !== "") || (campos.calle == false && calleValue !== "") || (campos.altura == false && alturaValue !== "") || campos.departamento == false) {
-            alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+        if ((campos.nombre === false && nombreValue !== "") || (campos.apellido === false && apellidoValue !== "") || (campos.fechaActual === false && fechaNacimientoValue !== "") || (campos.sexo === false && sexoValue !== "0") || (campos.foto === false && fotoValue !== "") || (campos.telefono === false && telefonoValue !== "") || (campos.provincia === false && provinciaValue !== "") || (campos.localidad === false && localidadValue !== "") || (campos.calle === false && calleValue !== "") || (campos.altura === false && alturaValue !== "") || campos.departamento === false) {
+            const textoAlert = '<strong>Error al registrar datos personales:</strong> Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!';
+
+            mensajeErrorFormulario(textoAlert);
         }
     }
     
-    if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
+    if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.foto && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
         //Enviar AJAX
         document.getElementById('tituloRegistrar').style.display = 'none';
         document.getElementById('cargandoRegistrar').style.display = 'block';
         APP.doSearch();
-        //registrarPaciente(formulario);
     }
-
 }); 
 //#endregion
 
@@ -435,14 +489,18 @@ const APP = {
         })
     },
     showSearchResults: () => {
-      //console.log(APP.data['display_name']); - por si despues agregamos codigo postal
+        //Enviar Ajax
+        const selectProvincia = document.getElementById("provincia");
+        const provincia = selectProvincia.selectedOptions[0].textContent;
 
-      //Enviar Ajax
-      registrarPaciente(formulario, APP.data['lat'], APP.data['lon']);
+        const fotoInput = document.getElementById("foto");
+        const fotoFile = fotoInput.files[0];
+
+        registrarPaciente(formulario, fotoFile, provincia, APP.data['lat'], APP.data['lon']);
     },
 };
 
 document.addEventListener('DOMContentLoaded', APP.init);
 //#endregion
 
-buscarProvincias();
+

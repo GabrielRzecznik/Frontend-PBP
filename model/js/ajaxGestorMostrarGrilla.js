@@ -3,21 +3,12 @@ let diaDisponible = date3.getDate();
 let mesDisponible = date3.getMonth()+1;
 let añoDisponible = date3.getFullYear();
 
-/*if (parametro === localStorage.getItem("nombreUsuario") && localStorage.getItem("id_profesional") === "") {
-    $slotDuration = '00:30';
-    $slotMinTime = '00:00';
-    $slotMaxTime = '24:00';
-    gestorMostrarGrilla(parametro);
-}*/
-
 if (parametro === localStorage.getItem("nombreUsuario") && localStorage.getItem("id_profesional") === "") {
     $slotDuration = '00:30';
     $slotMinTime = '00:00';
     $slotMaxTime = '24:00';
     gestorMostrarGrilla(parametro);
 }
-
-
 
 function gestorMostrarGrilla($nombreUsuario){
     var formData = new FormData();
@@ -38,8 +29,6 @@ function gestorMostrarGrilla($nombreUsuario){
                 $arrayTerminadoEventos = [];
 
                 $arrayEventos = data;
-
-                console.log(data);
                         
                 //$provincias = "";
 
@@ -428,7 +417,6 @@ function gestorMostrarGrilla($nombreUsuario){
                     }
                 }
 
-
                 //Armar Calendario
                 armadoFullCalendar();
             }else if (xmlhttp.status == 500) {      //Ver por que no aparece          
@@ -437,7 +425,6 @@ function gestorMostrarGrilla($nombreUsuario){
         }
     }
     //Crear nueva consulta, la cual tenga relacion con SOLICITUDES, TURNOS, HORARIOS
-    console.log(formJSON);
     xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Pacientes/buscarEventos',false);
     xmlhttp.send(formJSON);
 

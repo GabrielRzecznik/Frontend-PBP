@@ -14,7 +14,7 @@
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Registro Usuario - Profesional By Proximity</title>
 </head>
-<body>
+<body class="mostrarPagina" id="mostrar">
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
@@ -135,6 +135,7 @@
         <strong>Código:</strong>
         ¡El código ingresado no es valido!
     </div>
+    <script src="../controller/js/controlAcceso.js"></script>
     <script src="../controller/js/registroUsuario.js"></script>
     <script src="../model/js/ajaxRegistroUsuario.js"></script>
     <script src="../model/js/ajaxBuscarUsuario.js"></script>

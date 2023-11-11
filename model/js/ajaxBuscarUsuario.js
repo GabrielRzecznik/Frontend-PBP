@@ -9,7 +9,7 @@ function buscarUsuario(formulario){
                 //Tranforma la información que ataja en un JSON que puede ser leido mediante el data[][""]
                 var data=JSON.parse(xmlhttp.responseText);
                 
-                if (data[0]["estadoUsuario"] == "Activo") {
+                if (data[0]["estadoUsuario"] === "Activo") {
                     //Estado Usuario Activo
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
                     localStorage.setItem("id_paciente", data[0]["id_paciente"]);
@@ -35,12 +35,14 @@ function buscarUsuario(formulario){
                     localStorage.setItem("longitud", data[0]["longitud"]);
                     localStorage.setItem("estadoProfesional", data[0]["estadoProfesional"]);
                     //Redirigir             
-                    window.location.href = "../Frontend-PBP/view/inicioBusqueda.php";
-                }if (data[0]["estadoUsuario"] == "En Creación") {
+                    window.location.href = "./view/inicioBusqueda.php";
+                }if (data[0]["estadoUsuario"] === "En creación") {
                     //Estado Usuario En creación
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
+                    localStorage.setItem("estadoUsuario", data[0]["estadoUsuario"]);
+                    localStorage.setItem("id_paciente", data[0]["id_paciente"]);
                     //Redirigir
-                    window.location.href = "../view/registroPerfil.php";
+                    window.location.href = "./view/registroPerfil.php";
                 }if (data[0]["estadoUsuario"] == "Oculto") {
                     //Estado Usuario Oculto
                     alert("No se encontró el usuario!");

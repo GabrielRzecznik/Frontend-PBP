@@ -127,7 +127,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                         ' a ' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
-                                                '<a href="../view/perfil.php?'+data[i].nombreUsuario+'" class="btn btn-sm btn-primary botonProfesional">Ver perfil</a>' +
+                                                '<a href="./view/perfil.php?'+data[i].nombreUsuario+'" class="btn btn-sm btn-primary botonProfesional">Ver perfil</a>' +
                                             '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +
@@ -171,7 +171,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                                     '</div>' +
                                                 '</div>' +
                                                 
-                                                '<a href="../view/perfil.php?'+data[i].nombreUsuario+'" class="btn btn-sm btn-primary botonProfesional">Ver perfil</a>' +
+                                                '<a href="./view/perfil.php?'+data[i].nombreUsuario+'" class="btn btn-sm btn-primary botonProfesional">Ver perfil</a>' +
                                             '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +

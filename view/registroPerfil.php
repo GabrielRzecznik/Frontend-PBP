@@ -14,14 +14,14 @@
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Registro Perfil - Profesional By Proximity</title>
 </head>
-<body id="mostrar">
+<body class="mostrarPagina" id="mostrar">
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8 panel3">
                 <h5 class="titulo">Datos personales</h5>
                 <br>
-                <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
+                <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario" enctype="multipart/form-data">
                     <div class="row">
 
                         <div class="col-md-6"> 
@@ -51,9 +51,9 @@
                             </select>
                             <br>
                             <!--Campo Foto-->
-                            <span class="texto">Foto </span><i class="bi bi-x-circle-fill iconos validado" id="iconoFoto"></i>
+                            <span class="texto">Foto </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoFoto"></i>
                             <br>
-                            <input type="file" class="form-control inputs" name="foto" id="foto">
+                            <input type="file" class="form-control inputs" name="foto" id="foto" accept="image/*">
                             <br>
                             <!--Campo Telefono-->
                             <span class="texto">Télefono </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoTelefono" title="Campo Obligatorio"></i>
@@ -61,16 +61,16 @@
                             <input type="text" class="form-control inputs" name="telefono" id="telefono">
                             <br>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6" id="contenedor-localidad">
                             <!--Campo Provincia-->
                             <span class="texto">Provincia </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoProvincia" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
-                            <select class="form-select campos" name="provincia" id="provincia" aria-label="Floating label select example"></select>
+                            <select class="form-select campos" name="provincia" id="provincia" aria-label="Floating label select example" disabled></select>
                             <br>
                             <!--Campo Localidad-->
                             <span class="texto">Localidad </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoLocalidad" title="Campo Obligatorio"></i>
                             <br>
-                            <input type="text" class="form-control inputs" name="localidad" id="localidad">
+                            <select class="form-select campos" name="localidad" id="localidad" aria-label="Floating label select example" disabled></select>
                             <br>
                             <!--Campo Calle-->
                             <span class="texto">Nombre de calle/avenida </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoCalle" title="Campo Obligatorio"></i>
@@ -97,73 +97,15 @@
             </div>
         </div>
     </div>
-    <!--Alerta Nombre-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombre">
+    <!--Alerta Superior-->
+    <div class="alert alert-dismissible fade show alerta" role="alert" id="alertSuperior">
         <i class="bi bi-info-circle-fill"></i>
-        <strong>Nombre: </strong>
-        ¡El nombre ingresado no es valido!
-        <br>Debe tener de 2 a 30 caracteres los cuales no 
-        <br>puede ser numeros ni caracteres especiales.
-    </div>   
-    <!--Alerta Apellido-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertApellido">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Apellido: </strong>
-        ¡El apellido ingresado no es valido!
-        <br>Debe tener de 2 a 30 caracteres los cuales no 
-        <br>puede ser numeros ni caracteres especiales.
+        <span id="textoAlert"></span>
+        <br>
     </div>
-    <!--Alerta Fecha Nacimiento-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertFechaNacimiento">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Fecha de nacimiento: </strong>
-        ¡Debes ser mayor de 16 años para utilizar nuestros servicios!
-    </div>
-    <!--Alerta Sexo-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertSexo">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Sexo: </strong>
-        ¡El campo sexo es obligatorio!
-    </div>
-     <!--Alerta Télefno-->
-     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertTelefono">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Télefono: </strong>
-        ¡El télefono ingresado no es valido!
-    </div> 
-     <!--Alerta Provincia-->
-     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertProvincia">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Provincia</strong>
-        ¡Debe seleccionar su provincia de residencia!
-    </div> 
-     <!--Alerta Localidad-->
-     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertLocalidad">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Localidad: </strong>
-        ¡La localidad ingresada no es valida!
-    </div> 
-     <!--Alerta Calle/Avenida-->
-     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCalle">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Calle/Avenida: </strong>
-        ¡La calle o avenida ingresada no es valida!
-    </div> 
-     <!--Alerta Altura-->
-     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertAltura">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Altura: </strong>
-        ¡La altura ingresada no es vailida!
-    </div> 
-     <!--Alerta Departamento-->
-     <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDepartamento">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Departamento: </strong>
-        ¡El departamento ingresado no es valido!
-    </div>
-    <script src="../model/js/ajaxBackupProvincias.js"></script>
-	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
+    <script src="../controller/js/controlAcceso.js"></script>
     <script src="../model/js/ajaxBuscarProvincias.js"></script>
+    <script src="../model/js/ajaxBuscarLocalidades.js"></script>
     <script src="../controller/js/registroPaciente.js"></script>
     <script src="../model/js/ajaxRegistroPaciente.js"></script>
 </body>

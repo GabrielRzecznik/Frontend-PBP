@@ -18,10 +18,24 @@
     <title>Inicio - Profesional By Proximity</title>
 </head>
 <body class="" id="mostrar">
-	<?php
-    	include_once('../view/navegador.php'); 
-	?>
+	<span class="carga" id="carga">
+		<div class="spinner-border text-primary" role="status">
+			<span class="sr-only"></span>
+		</div>
+		<!-- Puedes personalizar el contenido de la etiqueta de carga según tus necesidades -->
+		<p>Cargando...</p>
+	</span>
+	<span class="principal">
+		<?php
+			include_once('../view/navegador.php'); 
+		?>
+	</span>
+	
 	<br>
+
+
+
+
 	<div class="container" id="capturarGrilla">
 		<div class="row">
 			<div class="col-12">

@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!--Css-->
-    <link rel="stylesheet" href="../view/css/restablecerUsuario.css">
+    <link rel="stylesheet" href="./css/restablecerUsuario.css">
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Restablecer Cuenta - Profesional By Proximity</title>
 </head>
@@ -35,7 +35,7 @@
                             <a class="btn btn-secondary botonesSecundarios" href="./registroUsuario.php">Registrarse</a>  
                         </div>
                         <div class="col-md-6">
-                            <a class="btn btn-secondary botonesSecundarios" href="https://frontend-pbp.herokuapp.com/">Iniciar sesión</a>
+                            <a class="btn btn-secondary botonesSecundarios" href="./../">Iniciar sesión</a>
                         </div>
                     </div>
                 </form>

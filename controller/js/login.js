@@ -1,9 +1,7 @@
 window.addEventListener('pageshow', function() {
-    if (localStorage.getItem("id_usuario") && localStorage.getItem("nombreUsuario")) {
-        window.location.href = "../Frontend-PBP/view/inicioBusqueda.php";
-    }else{
-        document.getElementById('mostrar').style.display = 'block';
-    }
+    document.getElementById('mostrar').style.display = 'none';
+    const instancia = "login";
+    controlAcceso(instancia);
 });
 
 //#region Validación de Campos

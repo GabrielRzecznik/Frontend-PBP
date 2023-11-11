@@ -11,7 +11,7 @@ function seleccionRol(rol){
                     localStorage.clear();
                     window.location.href = "../";
                 }else if(rol == "Profesional") {
-                    window.location.href = "../view/registroProfesional.php";
+                    window.location.href = "/view/registroProfesional.php";
                 }
             }else{
                 alert("¡Error inesperado!");

@@ -13,11 +13,11 @@ buscarPerfil(parametro);
 
 let botonGrilla = document.getElementById('botonGrilla');
 
-botonGrilla.innerHTML = '<a href="../view/grilla.php?'+parametro+'" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</a>';
+botonGrilla.innerHTML = '<a href="./view/grilla.php?'+parametro+'" class="btn btn-primary btn-sm botonSolicitarTurno">Solicitar Turno</a>';
 
 let botonChat = document.getElementById('botonChat');
 
-botonChat.innerHTML = '<a href="../view/chats.php#'+parametro+'" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</a>';
+botonChat.innerHTML = '<a href="./view/chats.php#'+parametro+'" class="btn btn-success btn-sm botonEnviarMensaje">Enviar Mensaje</a>';
 
 document.getElementById("mostrarLapiz").addEventListener("click", function() {
     cerrarTodosLosMensajes();

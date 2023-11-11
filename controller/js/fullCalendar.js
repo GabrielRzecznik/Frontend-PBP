@@ -1,3 +1,5 @@
+var visualizacionGrilla = "mes";
+
 function armadoFullCalendar() {
     //Fecha actual
     let date2 = new Date();
@@ -436,6 +438,19 @@ function armadoFullCalendar() {
     //calendar.updateSize();
     calendar.render();
     calendar.updateSize();
+
+    // Detectar cambios de vista
+    calendar.on('datesSet', function(info) {
+        var currentView = info.view.type;
+
+        if (currentView === 'dayGridMonth') {
+            visualizacionGrilla = "mes";
+        } else if (currentView === 'timeGridWeek') {
+            visualizacionGrilla = "semana";
+        } else if (currentView === 'timeGridDay') {
+            visualizacionGrilla = "dia";
+        }
+    });
     
     cargarNavegador();
 
