@@ -239,21 +239,27 @@ const campos2 = {
     codigo: false
 };
 
+var iconoCodigo = document.getElementById('iconoCodigo');
+
 const validarFormulario2 = (e) => {
    switch (e.target.name) {
         case 'codigo':
             if (expresiones2.codigo.test(e.target.value)) {
-                document.getElementById('iconoCodigo').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoCodigo').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertCodigo').classList.remove('alertaError');
-                //Validar
+                iconoCodigo.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
+                iconoCodigo.classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
+                
+                alertSuperior.classList.remove('alertaError');
+                  
                 campos2['codigo'] = true;
             }else{
-                document.getElementById('iconoCodigo').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoCodigo').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Mensaje de error codigo
-                document.getElementById('alertCodigo').classList.add('alertaError');
+                iconoCodigo.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoCodigo.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Código:</strong> ¡El código ingresado no es valido!';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+                
                 campos2['codigo'] = false;
             }
             break;
@@ -265,7 +271,7 @@ inputs2.forEach((input) => {
     input.addEventListener('blur' , validarFormulario2);//cuando me salgo y preciono fuera del input
 });
 //#endregion
-  
+
 //#region Envia Formulario Validar
 const formulario2 = document.getElementById('formularioValidar');
 
@@ -275,11 +281,17 @@ formulario2.addEventListener('submit', (e) => {
     e.preventDefault();//evita que se envien los datos y se refresque la pagina
     
     if (codigoValue === "") {
-        alert("¡Complete el campo código!");
+        const tipoAlert = "danger";
+        const textoAlert = '¡Complete el campo código!';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
     }
 
     if (campos2.codigo == false && codigoValue !== "") {
-        alert("Error al ingresar el código: ¡Formato no valido, verifique el mismos e intente nuevamente!");
+        const tipoAlert = "danger";
+        const textoAlert = 'Error al ingresar el código: ¡Formato no valido, verifique el mismos e intente nuevamente!';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
     }
 
     if (campos2.codigo) {
@@ -289,9 +301,14 @@ formulario2.addEventListener('submit', (e) => {
             document.getElementById('cargandoRegistrar').style.display = 'block';
             registrarUsuario(formulario);
         }else{
-            alert("El código ingresado es invalido!");//"Mensaje validado en su caso de uso"
+            const tipoAlert = "danger";
+            const textoAlert = '¡El código ingresado es invalido!';
+
+            mostrarAlertSuperior(tipoAlert, textoAlert);
+
             document.getElementById("codigo").value = "";
-            document.getElementById('iconoCodigo').classList.remove('bi-check-circle-fill');
+            iconoCodigo.classList.remove('bi-check-circle-fill','validado','signo');
+            iconoCodigo.classList.add('mostrar','bi-exclamation-circle-fill','noValidado');
         }
     }
 
@@ -305,8 +322,8 @@ document.getElementById("atras").addEventListener("click", function() {
     document.getElementById('formularioValidar').style.display = 'none';
     //Borrar contenido input código
     document.getElementById("codigo").value = "";
-    document.querySelector('#iconoCodigo').classList.remove('bi-x-circle-fill');
-    document.querySelector('#iconoCodigo').classList.remove('bi-check-circle-fill');
+    iconoCodigo.classList.remove('bi-x-circle-fill');
+    iconoCodigo.classList.remove('bi-check-circle-fill');
     //Cancelar Cargando
     document.getElementById('tituloBuscar').style.display = 'block';
     document.getElementById('cargandoBuscar').style.display = 'none';

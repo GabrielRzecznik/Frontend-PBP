@@ -23,11 +23,11 @@
                 <form onsubmit="event.preventDefault()" action="#" method="post" id="formulario">
                     <span class="texto">Usuario o Correo </span><i class="bi" id="iconoUsuario" title="Campo Obligatorio"></i>
                     <br>
-                    <input type="text" class="form-control inputs" name="usuario" id="usuario">
+                    <input type="text" class="form-control inputs" name="usuario" id="usuario" autocomplete="username">
                     <br>
                     <span class="texto">Contraseña </span><i class="bi" id="iconoPassword" title="Campo Obligatorio"></i>
                     <br>
-                    <input type="password" class="form-control inputs" name="password" id="password">
+                    <input type="password" class="form-control inputs" name="password" id="password" autocomplete="current-password">
                     <button type="submit" class="btn btn-warning botonLogin" name="boton" id="boton">
                         <span class="loguearse" id="loguearse">Iniciar sesión</span>
                         <div class="spinner-border text-secondary cargando" id="cargando" role="status"></div>

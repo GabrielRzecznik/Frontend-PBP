@@ -4,7 +4,8 @@ window.addEventListener('pageshow', function() {
     controlAcceso(instancia);
 });
 
-buscarProvincias();
+const instancia = "registroPaciente";
+buscarProvincias(instancia);
 
 //Obtener fecha actual
 let date = new Date();

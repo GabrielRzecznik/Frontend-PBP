@@ -14,7 +14,7 @@
     <!--<link rel="icon" href="./favicon.ico">-->
     <title>Registro Profesional - Profesional By Proximity</title>
 </head>
-<body>
+<body class="mostrarPagina" id="mostrar">
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
@@ -92,7 +92,7 @@
                                 <option value="Radioterapia">Radioterapia</option>
                                 <option value="Reumatologia infantil">Reumatologia infantil</option>
                                 <option value="Reumatologia">Reumatologia</option>
-                                <option value="Terapia intensiva">Terapia intensiv</option>
+                                <option value="Terapia intensiva">Terapia intensiva</option>
                                 <option value="Terapista intensivo infantil">Terapista intensivo infantil</option>
                                 <option value="Tocoginecologia">Tocoginecologia</option>
                                 <option value="Toxicologia">Toxicologia</option>
@@ -100,14 +100,15 @@
                             </select>
                             <br>
                             <!--Campo Matricula-->
-                            <span class="texto">Matricula </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoMatricula" title="Campo Obligatorio"></i><!--Campo obligatorio-->
+                            <span class="texto">Matrícula </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoMatricula" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
                             <input type="text" class="form-control inputs" name="matricula" id="matricula">
                             <br>
                             <!--Campo Obra Social-->
                             <span class="texto">Obras sociales de atención </span><i class="bi" id="iconoObraSocial"></i><!--Campo no obligatorio-->
                             <div class="input-group">
-                                <input type="text" class="form-control inputs" name="obraSocial" id="obraSocial" aria-describedby="agregar">
+                                <!--<input type="text" class="form-control inputs" name="obraSocial" id="obraSocial" aria-describedby="agregar">-->
+                                <select class="form-select campos" name="obraSocial" id="obraSocial" aria-describedby="agregar"></select>
                                 <button class="btn btn-outline-secondary" type="button" id="agregar"><i class="bi bi-plus-lg"></i></button>
                                 <button class="btn btn-outline-secondary" type="button" id="borrar"><i class="bi bi-trash-fill"></i></i></i></button>
                             </div>
@@ -227,8 +228,10 @@
         <strong>Departamento consultorio: </strong>
         ¡El departamento ingresada no es valida!
     </div>
-	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
+    <script src="../controller/js/controlAcceso.js"></script>
+    <script src="../model/js/ajaxBuscarObrasSociales.js"></script>
     <script src="../model/js/ajaxBuscarProvincias.js"></script>
+    <script src="../model/js/ajaxBuscarLocalidades.js"></script>
     <script src="../controller/js/registroProfesional.js"></script>
     <script src="../model/js/ajaxRegistroProfesional.js"></script>
 </body>

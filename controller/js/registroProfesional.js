@@ -9,7 +9,6 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
     matricula: /^[0-9/\s]{5,6}$/,//Ejemplo de Cordoba: 35887/1; Bs As: 208845, 236163
-    obraSocial: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{2,40}$/,
     localidadConsultorio: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     calleConsultorio: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü. 0-9\s]{2,35}$/,
     alturaConsultorio: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{1,6}$/,
@@ -19,14 +18,12 @@ const expresiones = {
 const campos = {
     especialidad: false,
     matricula: false,
-    obraSocial: false,
     tipoConsulta: false,
     provinciaConsultorio: true,
     localidadConsultorio: true,
     calleConsultorio: true,
     alturaConsultorio: true,
     departamentoConsultorio: true,
-    //Check
     consultorio: false,
 };
 
@@ -261,15 +258,25 @@ if (provinciaConsultorio.value == 0) {
 //#region Input Obras Sociales
 //Botón Agregar
 const botonAgregar = document.getElementById('agregar');
+const selectObraSocial = document.getElementById("obraSocial");
 $ObrasSocialesIngresadas = [];
 $cantidadDeOS = 0;
 $escribirHTML = "";
-document.getElementById("agregar").addEventListener("click", function() {
+botonAgregar.addEventListener("click", function() {
     $obraSocialIngresada = obraSocial.value.trim();
-    if (!($obraSocialIngresada == "" || campos.obraSocial == false)) {
+
+    if (!($obraSocialIngresada == 0)) {
+        for (var i = 0; i < selectObraSocial.options.length; i++) {
+            if (selectObraSocial.options[i].value === $obraSocialIngresada) {
+                selectObraSocial.remove(i);
+              break;
+            }
+        }
+
         if ($cantidadDeOS < 3) {
             if ($cantidadDeOS == 2) {
                 botonAgregar.disabled = true;
+                selectObraSocial.disabled = true;
             }
             siguientesLetras = $obraSocialIngresada.slice(1).toLowerCase();//Pasar a minusculas
             primerLetra = $obraSocialIngresada[0].toUpperCase();//Primer letra a mayuscula
@@ -286,16 +293,18 @@ document.getElementById("agregar").addEventListener("click", function() {
         }
     }
     //Borra contenido input
-    document.getElementById("obraSocial").value = "";
+    selectObraSocial.value = 0;
     document.getElementById('iconoObraSocial').classList.remove('mostrar','bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
 });
 //Botón Borrar
 document.getElementById("borrar").addEventListener("click", function() {
+    buscarObrasSociales();
     $cantidadDeOS = 0;
     $ObrasSocialesIngresadas = [];
     $escribirHTML = "";
     document.getElementById('contenido').innerHTML = $escribirHTML;
     botonAgregar.disabled = false;
+    selectObraSocial.disabled = false;
 });
 //#endregion
 
@@ -364,7 +373,8 @@ $conConsultorio = false;
 document.getElementById("consultorio").addEventListener("click", function() {
     if (checkConsultorio.checked == true) {
         $conConsultorio = true;
-        buscarProvinciasConsultorio();
+        const instancia = "registroProfesional";
+        buscarProvincias(instancia);
         //Activar Inputs
         inputProvinciaConsultorio.disabled = false;
         inputLocalidadConsultorio.disabled = false;

@@ -25,7 +25,7 @@
                     <!--Campo Nombre Usuario-->
                     <span class="texto">Nombre de Usuario </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoNombreUsuario" title="Campo Obligatorio"></i>
                     <br>
-                    <input type="text" class="form-control inputs" name="nombreUsuario" id="nombreUsuario">
+                    <input type="text" class="form-control inputs" name="nombreUsuario" id="nombreUsuario" autocomplete="username">
                     <br>
                     <!--Campo Correo-->
                     <span class="texto">Correo </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoCorreo" title="Campo Obligatorio"></i>
@@ -35,19 +35,19 @@
                     <!--Campo Contraseña-->
                     <span class="texto">Contraseña </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPassword" title="Campo Obligatorio"></i>
                     <br>
-                    <input type="password" class="form-control inputs" name="password" id="password">
+                    <input type="password" class="form-control inputs" name="password" id="password" autocomplete="new-password">
                     <br>
                     <!--Campo Validar Contraseña-->
                     <span class="texto">Repita su Contraseña </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPassword2" title="Campo Obligatorio"></i>
                     <br>
                     <div class="inputContraseña">
-                        <input type="password" class="form-control inputs" name="password2" id="password2">
+                        <input type="password" class="form-control inputs" name="password2" id="password2" autocomplete="new-password">
                         <span class="dialog-text btn btn-warning" id="dialog-text">
                         <i class="bi bi-exclamation-circle-fill"></i>    
                         Las contraseñas no coinciden
                         </span>
                     </div>
-                    <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
+                    <button type="submit" class="btn btn-warning botonSubmit">
                         <span class="tituloBuscar" id="tituloBuscar">Continuar</span>
                         <div class="spinner-border text-secondary cargandoBuscar" id="cargandoBuscar" role="status"></div>
                     </button>
@@ -88,7 +88,7 @@
                     <span class="texto">Código </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoCodigo" title="Campo Obligatorio"></i>
                     <br>
                     <input type="text" class="form-control inputs" name="codigo" id="codigo">
-                    <button type="submit" class="btn btn-warning botonSubmit" name="boton" id="boton">
+                    <button type="submit" class="btn btn-warning botonSubmit">
                         <span class="tituloRegistrar" id="tituloRegistrar">Crear usuario</span>
                         <div class="spinner-border text-secondary cargandoRegistrar" id="cargandoRegistrar" role="status"></div>
                     </button>
@@ -114,27 +114,6 @@
         <br>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--Alerta Código-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCodigo">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Código:</strong>
-        ¡El código ingresado no es valido!
-    </div>
     <script src="../controller/js/controlAcceso.js"></script>
     <script src="../controller/js/registroUsuario.js"></script>
     <script src="../model/js/ajaxRegistroUsuario.js"></script>
