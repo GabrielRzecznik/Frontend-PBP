@@ -23,7 +23,7 @@ function controlAcceso(instancia) {
                 window.location.href = "../";
             }else if (localStorage.getItem("nombre")) {
                 window.location.href = "../view/inicioBusqueda.php";
-            }else if (!localStorage.getItem("id_paciente")) {
+            }else if (!isNaN(localStorage.getItem("id_paciente"))) {
                 window.location.href = "../view/seleccionRol.php";
             }else{
                 document.getElementById('mostrar').style.display = 'block';
@@ -34,7 +34,7 @@ function controlAcceso(instancia) {
                 window.location.href = "../";
             }else if (localStorage.getItem("nombre")) {
                 window.location.href = "../view/inicioBusqueda.php";
-            }else if (localStorage.getItem("id_paciente")) {
+            }else if (isNaN(localStorage.getItem("id_paciente"))) {
                 window.location.href = "../view/registroPerfil.php";
             }else{
                 document.getElementById('mostrar').style.display = 'block';

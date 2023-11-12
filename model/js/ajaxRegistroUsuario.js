@@ -8,8 +8,10 @@ function registrarUsuario(formulario){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 var data=JSON.parse(xmlhttp.responseText);
-                localStorage.setItem("id_usuario", data[0]["id_usuario"]);//Me guarda el id_usuario de la bd
+                localStorage.setItem("id_usuario", data[0]["id_usuario"]);
                 localStorage.setItem("estadoUsuario", data[0]["estadoUsuario"]);
+                localStorage.setItem("id_paciente", null);
+
                 window.location.href = "../view/registroPerfil.php";
             }else if (xmlhttp.status == 500) {
                 alert("¡Ocurrio un error inesperado!");

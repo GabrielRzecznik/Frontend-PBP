@@ -493,10 +493,7 @@ const APP = {
         const selectProvincia = document.getElementById("provincia");
         const provincia = selectProvincia.selectedOptions[0].textContent;
 
-        const fotoInput = document.getElementById("foto");
-        const fotoFile = fotoInput.files[0];
-
-        registrarPaciente(formulario, fotoFile, provincia, APP.data['lat'], APP.data['lon']);
+        registrarPaciente(formulario, provincia, APP.data['lat'], APP.data['lon']);
     },
 };
 

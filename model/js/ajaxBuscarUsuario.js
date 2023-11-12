@@ -40,7 +40,12 @@ function buscarUsuario(formulario){
                     //Estado Usuario En creación
                     localStorage.setItem("id_usuario", data[0]["id_usuario"]);
                     localStorage.setItem("estadoUsuario", data[0]["estadoUsuario"]);
-                    localStorage.setItem("id_paciente", data[0]["id_paciente"]);
+                    
+                    if (data[0]["id_paciente"] !== null) {
+                        localStorage.setItem("id_paciente", data[0]["id_paciente"]);
+                    }else{
+                        localStorage.setItem("id_paciente", null);
+                    }
                     //Redirigir
                     window.location.href = "./view/registroPerfil.php";
                 }if (data[0]["estadoUsuario"] == "Oculto") {
