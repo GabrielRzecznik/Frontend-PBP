@@ -336,17 +336,18 @@ document.getElementById("foto").addEventListener('change', (event) => {
 //#endregion
 
 //#region Select Provincia
-var provinciaSeleccionada = "";
 var selectProvincias = document.getElementById("provincia");
 
 selectProvincias.addEventListener('change', (event) => {
-    var selectLocalidades = document.getElementById("localidad");
+    const selectLocalidades = document.getElementById("localidad");
 
-    provinciaSeleccionada = selectProvincias.value;
+    var provinciaSeleccionada = selectProvincias.value;
 
     selectLocalidades.disabled = false;
 
-    buscarLocalidades(provinciaSeleccionada);
+    const instancia = "localidad";
+
+    buscarLocalidades(provinciaSeleccionada, instancia);
 
     iconoLocalidad.classList.add('bi-exclamation-circle-fill','signo','bi-!-circle-fill','noValidado');
     iconoLocalidad.classList.remove('mostrar','bi-check-circle-fill','validado');
@@ -403,8 +404,8 @@ document.getElementById("localidad").addEventListener('change', (event) => {
 });
 
 if (localidad.value == 0) {
-    iconoLocalidad.classList.add('mostrar');//Agregar
-    iconoLocalidad.classList.remove('bi-check-circle-fill');//Borrar
+    iconoLocalidad.classList.add('mostrar');
+    iconoLocalidad.classList.remove('bi-check-circle-fill');
     
     campos['localidad'] = false;
 }
@@ -438,10 +439,11 @@ formulario.addEventListener('submit', (e) => {
     function mensajeErrorFormulario($textoAlert) {
         const tipoAlert = "danger";
         const textoAlert = $textoAlert;
+        
         mostrarAlertSuperior(tipoAlert, textoAlert);
     }
 
-    if (nombreValue === "" || apellidoValue === "" || fechaNacimientoValue === "" || sexoValue === "0" || fotoValue === "" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "" || calleValue === "" || alturaValue === "") {
+    if (nombreValue === "" || apellidoValue === "" || fechaNacimientoValue === "" || sexoValue === "0" || fotoValue === "" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "0" || calleValue === "" || alturaValue === "") {
         const textoAlert = '<strong>Error al registrar datos personales:</strong> ¡Debe completar todos los campos obligatorios!';
 
         mensajeErrorFormulario(textoAlert);
@@ -491,10 +493,10 @@ const APP = {
     },
     showSearchResults: () => {
         //Enviar Ajax
-        const selectProvincia = document.getElementById("provincia");
-        const provincia = selectProvincia.selectedOptions[0].textContent;
+        //const selectProvincia = document.getElementById("provincia");
+        //const provincia = selectProvincia.selectedOptions[0].textContent;
 
-        registrarPaciente(formulario, provincia, APP.data['lat'], APP.data['lon']);
+        registrarPaciente(formulario, APP.data['lat'], APP.data['lon']);
     },
 };
 
