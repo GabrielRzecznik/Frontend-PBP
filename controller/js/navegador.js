@@ -9,7 +9,7 @@ document.getElementById('usuario').innerHTML = localStorage["nombreUsuario"];
 
 //Opcion Ir a mi Grilla
 let irAMiGrilla = document.getElementById('irAMiGrilla');
-irAMiGrilla.innerHTML = '<a class="dropdown-item" href="./view/grilla.php?'+localStorage["nombreUsuario"]+'">Mi Grilla</a>';
+irAMiGrilla.innerHTML = '<a class="dropdown-item" href="../view/grilla.php?'+localStorage["nombreUsuario"]+'">Mi Grilla</a>';
 
 //Mostrar Foto
 if (localStorage.getItem("foto") != "Array" && localStorage.getItem("foto") != "") {
@@ -17,12 +17,12 @@ if (localStorage.getItem("foto") != "Array" && localStorage.getItem("foto") != "
     //Mostrar Foto Editar
     document.getElementById('fotoUsuarioEditar').innerHTML = '<img class="fotoUsuarioEditar" src="'+localStorage["foto"]+'" alt="">';
 }else{
-    document.getElementById('fotoUsuarioEditar').innerHTML = '<img class="fotoUsuarioEditar" src="./view/img/user.png" alt="">';
+    document.getElementById('fotoUsuarioEditar').innerHTML = '<img class="fotoUsuarioEditar" src="../view/img/user.png" alt="">';
 }
 
 //Ir a mi perfil
 document.getElementById("irMiPerfil").addEventListener("click", function() {
-    window.location.href = "./view/perfil.php?"+localStorage.getItem("nombreUsuario");
+    window.location.href = "../view/perfil.php?"+localStorage.getItem("nombreUsuario");
 });
 
 function cargarNavegador(pestaña) {

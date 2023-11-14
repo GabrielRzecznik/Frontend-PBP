@@ -133,25 +133,7 @@
         <span id="textoAlert"></span>
         <br>
     </div>
-
-
-
-
-    <!--Alerta Obra Social-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertObraSocial">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Obras Sociales de Atención: </strong>
-        ¡La obra social ingresada no es valida!
-    </div>
-    <!--Alerta Departamento Consultorio-->
-    <div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDepartamentoConsultorio">
-        <i class="bi bi-info-circle-fill"></i>
-        <strong>Departamento consultorio: </strong>
-        ¡El departamento ingresada no es valida!
-    </div>
-
-
-
+    <script src="../controller/js/definirGeoLocalizacion.js"></script>
     <script src="../controller/js/controlAcceso.js"></script>
     <script src="../model/js/ajaxBuscarEspecialidades.js"></script>
     <script src="../model/js/ajaxBuscarObrasSociales.js"></script>

@@ -1,9 +1,8 @@
-function registrarPaciente(formulario, $provincia, $latitud, $longitud){
+function registrarPaciente(formulario, $latitud, $longitud){
     var formData= new FormData(formulario);
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
     formData.append("latitud", $latitud);
     formData.append("longitud", $longitud);
-    formData.set("provincia", $provincia);
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();

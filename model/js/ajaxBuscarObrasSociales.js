@@ -4,7 +4,7 @@ function buscarObrasSociales(instancia){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 switch (instancia) {
-                    case "registroProfesionales":
+                    case "registroProfesional":
                         var selObr = document.getElementById('obraSocial');
                         generarCodigoHTML();
                         instancia = "provinciaMatricula";

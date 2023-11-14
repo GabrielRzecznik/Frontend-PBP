@@ -1,11 +1,9 @@
 window.addEventListener('pageshow', function() {
     document.getElementById('mostrar').style.display = 'none';
-    const instancia = "registroPerfil";
+    var instancia = "registroPaciente";
     controlAcceso(instancia);
+    buscarProvincias(instancia);
 });
-
-const instancia = "registroPaciente";
-buscarProvincias(instancia);
 
 //Obtener fecha actual
 let date = new Date();
@@ -40,6 +38,18 @@ const campos = {
     altura: false,
     departamento: true
 };
+
+var inputNombre = document.getElementById("nombre");
+var inputApellido = document.getElementById("apellido");
+var inputFechaNacimiento = document.getElementById("fechaNacimiento");
+var selectSexo = document.getElementById("sexo");
+var inputFoto = document.getElementById("foto");
+var inputTelefono = document.getElementById("telefono");
+var selectProvincia = document.getElementById("provincia");
+var selectLocalidad = document.getElementById("localidad");
+var inputCalle = document.getElementById("calle");
+var inputAltura = document.getElementById("altura");
+var inputDepartamento = document.getElementById("departamento");
 
 var iconoNombre = document.getElementById('iconoNombre');
 var iconoApellido = document.getElementById('iconoApellido');
@@ -194,7 +204,7 @@ const validarFormulario = (e) => {
                 alertSuperior.classList.remove('alertaError');
                 
                 campos['departamento'] = true;
-            }else if(departamento.value.trim() == ""){
+            }else if(inputDepartamento.value === ""){
                 iconoDepartamento.classList.remove('mostrar','bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
 
                 alertSuperior.classList.remove('alertaError');
@@ -216,7 +226,7 @@ const validarFormulario = (e) => {
 };
 
 //#region Validar sexo
-document.getElementById("sexo").addEventListener('change', (event) => {
+selectSexo.addEventListener('change', (event) => {
     if (event.target.value != 0) {
         iconoSexo.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
         iconoSexo.classList.add('mostrar','bi-check-circle-fill','validado');
@@ -245,7 +255,7 @@ if (sexo.value == 0) {
 //#endregion
 
 //#region Validar fecha de nacimiento
-document.getElementById("fechaNacimiento").addEventListener('change', (event) => {
+inputFechaNacimiento.addEventListener('change', (event) => {
     var fechaIngresada = event.target.value;
     var fechaIngresadaDate = new Date(fechaIngresada);
 
@@ -306,9 +316,9 @@ function mensajeFoto(textoAlert) {
     mostrarAlertSuperior(tipoAlert, textoAlert);
 }
 
-document.getElementById("foto").addEventListener('change', (event) => {
+inputFoto.addEventListener('change', (event) => {
     if (event.target.value != ""){
-        const fileInput = document.getElementById("foto");
+        const fileInput = inputFoto;
         const selectedFile = fileInput.files[0];
 
         if (selectedFile.type.startsWith("image/")) {
@@ -336,14 +346,10 @@ document.getElementById("foto").addEventListener('change', (event) => {
 //#endregion
 
 //#region Select Provincia
-var selectProvincias = document.getElementById("provincia");
+selectProvincia.addEventListener('change', (event) => {
+    var provinciaSeleccionada = selectProvincia.value;
 
-selectProvincias.addEventListener('change', (event) => {
-    const selectLocalidades = document.getElementById("localidad");
-
-    var provinciaSeleccionada = selectProvincias.value;
-
-    selectLocalidades.disabled = false;
+    selectLocalidad.disabled = false;
 
     const instancia = "localidad";
 
@@ -374,8 +380,8 @@ selectProvincias.addEventListener('change', (event) => {
 });
 
 if (provincia.value == 0) {
-    document.getElementById('iconoProvincia').classList.add('mostrar');//Agregar
-    document.getElementById('iconoProvincia').classList.remove('bi-check-circle-fill');//Borrar
+    iconoProvincia.classList.add('mostrar');
+    iconoProvincia.classList.remove('bi-check-circle-fill');
     
     campos['provincia'] = false;
 }
@@ -463,44 +469,3 @@ formulario.addEventListener('submit', (e) => {
     }
 }); 
 //#endregion
-
-//#region Localización - Enviar
-const APP = {
-    TOKEN: 'pk.890591643afa7bba7e01f73847cf87dc',
-    SEARCHURL: `https://us1.locationiq.com/v1/search.php?format=json&`,
-    REVERSEURL: `https://us1.locationiq.com/v1/reverse.php?format=json&`,
-    MAPURL: `https://maps.locationiq.com/v3/staticmap?`,
-    data: null,
-    init: () => {
-      //document.getElementById('boton').addEventListener('click', APP.doSearch);
-    },
-    doSearch: () => {
-      //ev.preventDefault();
-      $ubicacion = provincia.value.trim() +" "+ localidad.value.trim() +" "+ calle.value.trim() +" "+ altura.value.trim();
-
-      let q = $ubicacion;//Ingreso ubicación
-      if (!q) return false;
-      let url = `${APP.SEARCHURL}key=${APP.TOKEN}&q=${q}`;
-      fetch(url)
-        .then((resp) => {
-          if (!resp.ok) throw new Error(resp.statusText);
-          return resp.json();
-        })
-        .then((data) => {
-          APP.data = data[0];
-          APP.showSearchResults();
-        })
-    },
-    showSearchResults: () => {
-        //Enviar Ajax
-        //const selectProvincia = document.getElementById("provincia");
-        //const provincia = selectProvincia.selectedOptions[0].textContent;
-
-        registrarPaciente(formulario, APP.data['lat'], APP.data['lon']);
-    },
-};
-
-document.addEventListener('DOMContentLoaded', APP.init);
-//#endregion
-
-

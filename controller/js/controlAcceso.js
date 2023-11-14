@@ -18,7 +18,7 @@ function controlAcceso(instancia) {
                 document.getElementById('mostrar').style.display = 'block';
             }
             break;
-        case "registroPerfil":
+        case "registroPaciente":
             if (!localStorage.getItem("id_usuario")) {
                 window.location.href = "../";
             }else if (localStorage.getItem("nombre")) {

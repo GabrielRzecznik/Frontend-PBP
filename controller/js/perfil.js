@@ -1,9 +1,9 @@
 //Verificar si hay logueo
-if (localStorage.getItem("id_usuario") == null && localStorage.getItem("nombreUsuario") == null) {
-    window.location.href = "../";
-}else{
-    document.getElementById('mostrar').style.display = 'block';
-}
+window.addEventListener('pageshow', function() {
+    document.getElementById('mostrar').style.display = 'none';
+    const instancia = "navegador";
+    controlAcceso(instancia);
+});
 
 //Obtener parametro de URL 
 let parametro = location.search;

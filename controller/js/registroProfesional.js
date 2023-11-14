@@ -1,10 +1,8 @@
 window.addEventListener('pageshow', function() {
     document.getElementById('mostrar').style.display = 'none';
-    const instanciaAcceso = "registroProfesional";
-    controlAcceso(instanciaAcceso);
-
-    const instanciaEspecialidad = "registroProfesionales";
-    buscarEspecialidades(instanciaEspecialidad);
+    const instancia = "registroProfesional";
+    controlAcceso(instancia);
+    buscarEspecialidades(instancia);
 });
 
 
@@ -24,6 +22,7 @@ const campos = {
     especialidad: false,
     matriculaNacional: false,
     matriculaProvincial: false,
+    provinciaMatricula: false,
     tipoConsulta: false,
     provinciaConsultorio: true,
     localidadConsultorio: true,
@@ -33,26 +32,27 @@ const campos = {
     consultorio: false,
 };
 
-const selectEspecialidad = document.getElementById('especialidad');
-const inputMatriculaNacional = document.getElementById('matriculaNacional');
-const inputMatriculaProvincial = document.getElementById('matriculaProvincial');
-const selectObraSocial = document.getElementById("obraSocial");
-const selectProvinciaConsultorio = document.getElementById('provinciaConsultorio');
-const selectLocalidadConsultorio = document.getElementById('localidadConsultorio');
-const inputCalleConsultorio = document.getElementById('calleConsultorio');
-const inputAlturaConsultorio = document.getElementById('alturaConsultorio');
-const inputDepartamentoConsultorio = document.getElementById('departamentoConsultorio');
+var selectEspecialidad = document.getElementById('especialidad');
+var inputMatriculaNacional = document.getElementById('matriculaNacional');
+var inputMatriculaProvincial = document.getElementById('matriculaProvincial');
+var selectProvinciaMatricula = document.getElementById('provinciaMatricula');
+var selectObraSocial = document.getElementById("obraSocial");
+var selectProvinciaConsultorio = document.getElementById('provinciaConsultorio');
+var selectLocalidadConsultorio = document.getElementById('localidadConsultorio');
+var inputCalleConsultorio = document.getElementById('calleConsultorio');
+var inputAlturaConsultorio = document.getElementById('alturaConsultorio');
+var inputDepartamentoConsultorio = document.getElementById('departamentoConsultorio');
 
-const iconoEspecialidad = document.getElementById("iconoEspecialidad");
-const iconoMatriculaNacional = document.getElementById("iconoMatriculaNacional");
-const iconoMatriculaProvincial = document.getElementById("iconoMatriculaProvincial");
-const iconoTipoConsulta = document.getElementById("iconoTipoConsulta");
-const iconoProvinciaConsultorio = document.getElementById("iconoProvinciaConsultorio");
-const iconoLocalidadConsultorio = document.getElementById("iconoLocalidadConsultorio");
-const iconoCalleConsultorio = document.getElementById("iconoCalleConsultorio");
-const iconoAlturaConsultorio = document.getElementById("iconoAlturaConsultorio");
-const iconoDepartamentoConsultorio = document.getElementById("iconoDepartamentoConsultorio");
-const iconoConsultorio = document.getElementById("iconoConsultorio");
+var iconoEspecialidad = document.getElementById("iconoEspecialidad");
+var iconoMatriculaNacional = document.getElementById("iconoMatriculaNacional");
+var iconoMatriculaProvincial = document.getElementById("iconoMatriculaProvincial");
+var iconoTipoConsulta = document.getElementById("iconoTipoConsulta");
+var iconoProvinciaConsultorio = document.getElementById("iconoProvinciaConsultorio");
+var iconoLocalidadConsultorio = document.getElementById("iconoLocalidadConsultorio");
+var iconoCalleConsultorio = document.getElementById("iconoCalleConsultorio");
+var iconoAlturaConsultorio = document.getElementById("iconoAlturaConsultorio");
+var iconoDepartamentoConsultorio = document.getElementById("iconoDepartamentoConsultorio");
+var iconoConsultorio = document.getElementById("iconoConsultorio");
 
 //#region Alerts
 var alertSuperior = document.getElementById('alertSuperior');
@@ -92,10 +92,20 @@ var btnAmbas = document.getElementById("btnAmbas");
 var btnNacional = document.getElementById("btnNacional");
 var btnProvincial = document.getElementById("btnProvincial");
 
+function resetIconosMatricula() {
+    iconoMatriculaNacional.classList.remove('bi-x-circle-fill');
+    iconoMatriculaNacional.classList.add('bi-exclamation-circle-fill','signo');
+    iconoMatriculaProvincial.classList.remove('bi-x-circle-fill');
+    iconoMatriculaProvincial.classList.add('bi-exclamation-circle-fill','signo');
+}
+
 btnAmbas.addEventListener('click', function() {
     contInpMatNac.style.display = 'block';
     contInpMatPro.style.display = 'block';
+    
+    resetIconosMatricula();
 
+    selectProvinciaMatricula.value = 0;
     inputMatriculaNacional.value = "";
     inputMatriculaProvincial.value = "";
 
@@ -107,6 +117,9 @@ btnNacional.addEventListener('click', function() {
     contInpMatNac.style.display = 'none';
     contInpMatPro.style.display = 'block';
 
+    resetIconosMatricula();
+
+    selectProvinciaMatricula.value = 0;
     inputMatriculaNacional.value = "";
     inputMatriculaProvincial.value = "";
 
@@ -114,10 +127,13 @@ btnNacional.addEventListener('click', function() {
     campos['matriculaProvincial'] = true;
 });
 
-btnProvincial.addEventListener('click', function() {
+btnProvincial.addEventListener('click', function() { 
     contInpMatNac.style.display = 'block';
     contInpMatPro.style.display = 'none';
 
+    resetIconosMatricula();
+
+    selectProvinciaMatricula.value = 0;
     inputMatriculaNacional.value = "";
     inputMatriculaProvincial.value = "";
 
@@ -149,8 +165,13 @@ const validarFormulario = (e) => {
             break;
         case 'matriculaProvincial':
             if (expresiones.matriculaProvincial.test(e.target.value)) {
-                iconoMatriculaProvincial.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
-                iconoMatriculaProvincial.classList.add('mostrar','bi-check-circle-fill','validado');
+                if (selectProvinciaMatricula.value !== "0") {
+                    iconoMatriculaProvincial.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                    iconoMatriculaProvincial.classList.add('mostrar','bi-check-circle-fill','validado');
+                }else{
+                    iconoMatriculaProvincial.classList.remove('bi-x-circle-fill');
+                    iconoMatriculaProvincial.classList.add('bi-exclamation-circle-fill','signo');
+                }
                 
                 alertSuperior.classList.remove('alertaError');
                 
@@ -187,6 +208,26 @@ const validarFormulario = (e) => {
                 campos['calleConsultorio'] = false;
             }
             break;
+        case 'alturaConsultorio':
+            if (expresiones.alturaConsultorio.test(e.target.value)) {
+                iconoAlturaConsultorio.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                iconoAlturaConsultorio.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+                alertSuperior.classList.remove('alertaError');
+                
+                campos['alturaConsultorio'] = true;
+            }else{
+                iconoAlturaConsultorio.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoAlturaConsultorio.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Altura consultorio:</strong> ¡La altura ingresada no es valida!';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+                
+                campos['alturaConsultorio'] = false;
+            }
+            break;
         case 'departamentoConsultorio':
             if (expresiones.departamentoConsultorio.test(e.target.value)) {
                 iconoDepartamentoConsultorio.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
@@ -195,7 +236,7 @@ const validarFormulario = (e) => {
                 alertSuperior.classList.remove('alertaError');
                 
                 campos['departamentoConsultorio'] = true;
-            }else if(expresiones.departamentoConsultorio.value.trim() == ""){
+            }else if(inputDepartamentoConsultorio.value === ""){
                 iconoDepartamentoConsultorio.classList.remove('mostrar','bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
 
                 alertSuperior.classList.remove('alertaError');
@@ -206,7 +247,7 @@ const validarFormulario = (e) => {
                 iconoDepartamentoConsultorio.classList.add('mostrar','bi-x-circle-fill','noValidado');
                 
                 const tipoAlert = "warning";
-                const textoAlert = '<strong>Altura consultorio:</strong> ¡La altura ingresada no es valida!';
+                const textoAlert = '<strong>Departamento consultorio: </strong> ¡El departamento ingresada no es valida!';
 
                 mostrarAlertSuperior(tipoAlert, textoAlert);
 
@@ -217,9 +258,37 @@ const validarFormulario = (e) => {
 };
 //#endregion
 
+//#region Select Provincias Matricula
+selectProvinciaMatricula.addEventListener('change', (event) => {
+    if (event.target.value != 0) {
+        if (inputMatriculaProvincial.value !== "") {
+            iconoMatriculaProvincial.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+            iconoMatriculaProvincial.classList.add('mostrar','bi-check-circle-fill','validado');
+        }else{
+            iconoMatriculaProvincial.classList.remove('bi-x-circle-fill');
+            iconoMatriculaProvincial.classList.add('bi-exclamation-circle-fill','signo');
+        }
+                
+        alertSuperior.classList.remove('alertaError');
+        
+        campos['provinciaMatricula'] = true;
+    }else{
+        iconoMatriculaProvincial.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+        iconoMatriculaProvincial.classList.add('mostrar','bi-x-circle-fill','noValidado');
+        
+        const tipoAlert = "warning";
+        const textoAlert = '<strong>Especialidad:</strong> ¡Debe seleccionar tu especialidad principal!';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
+
+        campos['provinciaMatricula'] = false;
+    }
+});
+//#endregion
+
 //#region Select Especialidad
 selectEspecialidad.addEventListener('change', (event) => {
-    if (event.target.value != 0) {
+    if (event.target.value !== 0) {
         iconoEspecialidad.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
         iconoEspecialidad.classList.add('mostrar','bi-check-circle-fill','validado');
                 
@@ -250,7 +319,7 @@ selectProvinciaConsultorio.addEventListener('change', (event) => {
 
     buscarLocalidades(provinciaSeleccionada, instancia);
     
-    if (event.target.value != 0) {
+    if (event.target.value !== 0) {
         iconoProvinciaConsultorio.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
         iconoProvinciaConsultorio.classList.add('mostrar','bi-check-circle-fill','validado');
                 
@@ -273,7 +342,7 @@ selectProvinciaConsultorio.addEventListener('change', (event) => {
 
 //#region Select Localidad
 selectLocalidadConsultorio.addEventListener('change', (event) => {
-    if (event.target.value != 0) {
+    if (event.target.value !== 0) {
         iconoLocalidadConsultorio.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
         iconoLocalidadConsultorio.classList.add('mostrar','bi-check-circle-fill','validado');
                 
@@ -367,13 +436,13 @@ checkVirtual.addEventListener("click", function() {
 var tiposConsultas = [];
 
 function validarTipoConsulta() {
-    if (checkConsultorio.checked == true || checkDomicilio.checked == true || checkVirtual.checked == true) {
+    if (checkConsultorio.checked === true || checkDomicilio.checked === true || checkVirtual.checked === true) {
         tiposConsultas = [];
-        if (checkConsultorio.checked == true) {
+        if (checkConsultorio.checked === true) {
             tiposConsultas.push('Consultorio');
-        }if (checkDomicilio.checked == true) {
+        }if (checkDomicilio.checked === true) {
             tiposConsultas.push('Domicilio');
-        }if (checkVirtual.checked == true) {
+        }if (checkVirtual.checked === true) {
             tiposConsultas.push('Virtual'); 
         }
         
@@ -519,40 +588,4 @@ formulario.addEventListener('submit', (e) => {
 
 }); 
 //#endregion
-
-//#region Localización - Enviar
-const APP = {
-    TOKEN: 'pk.890591643afa7bba7e01f73847cf87dc',
-    SEARCHURL: `https://us1.locationiq.com/v1/search.php?format=json&`,
-    REVERSEURL: `https://us1.locationiq.com/v1/reverse.php?format=json&`,
-    MAPURL: `https://maps.locationiq.com/v3/staticmap?`,
-    data: null,
-    init: () => {},
-    doSearch: () => {
-      $ubicacion = provinciaConsultorio.value.trim() +" "+ localidadConsultorio.value.trim() +" "+ calleConsultorio.value.trim() +" "+ alturaConsultorio.value.trim();
-
-      let q = $ubicacion;//Ingreso ubicación
-      if (!q) return false;
-      let url = `${APP.SEARCHURL}key=${APP.TOKEN}&q=${q}`;
-      fetch(url)
-        .then((resp) => {
-          if (!resp.ok) throw new Error(resp.statusText);
-          return resp.json();
-        })
-        .then((data) => {
-          APP.data = data[0];
-          APP.showSearchResults();
-        })
-    },
-    showSearchResults: () => {
-      //console.log(APP.data['display_name']); - por si despues agregamos codigo postal
-
-      //Enviar Ajax
-      registrarProfesional(formulario, tiposConsultas, ObrasSocialesIngresadas, APP.data['lat'], APP.data['lon']);
-    },
-};
-  
-document.addEventListener('DOMContentLoaded', APP.init);
-//#endregion
-
 
