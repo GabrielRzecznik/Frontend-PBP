@@ -20,7 +20,6 @@ selectProvincia.value = localStorage["provincia"];
 selectLocalidad.value = localStorage["localidad"];
 inputCalle.value = localStorage["calle"];
 inputAltura.value = localStorage["altura"];
-inputDepartamento = localStorage["departamento"];
 
 var iconoNombre = document.getElementById('iconoNombre');
 var iconoApellido = document.getElementById('iconoApellido');
@@ -33,3 +32,8 @@ var iconoLocalidad = document.getElementById('iconoLocalidad');
 var iconoCalle = document.getElementById('iconoCalle');
 var iconoAltura = document.getElementById('iconoAltura');
 var iconoDepartamento = document.getElementById('iconoDepartamento');
+
+if (localStorage["departamento"] != "") {
+    iconoDepartamento.classList.add('signo','bi-check-circle-fill','noValidado');
+    inputDepartamento.value = localStorage["departamento"];
+}

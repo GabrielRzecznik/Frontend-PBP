@@ -601,9 +601,10 @@
 	</div>
 	<script src="../controller/js/controlAcceso.js"></script>
 	<script src="../controller/js/alertaSuperior.js"></script>
+	<script src="../controller/js/cerrarSesion.js"></script>
 	<script src="../controller/js/editarUsuario.js"></script>
 	<script src="../controller/js/editarPerfil.js"></script>
-	<script src="../controller/js/cerrarSesion.js"></script>
+	<script src="../controller/js/configurarGrillaProfesional.js"></script>
 	<script src="../controller/js/navegador.js"></script>
 	<script src="../controller/js/deshabilitarUsuario.js"></script>
 </body>
