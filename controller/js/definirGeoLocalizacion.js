@@ -1,4 +1,5 @@
-const APP = {
+function definirGeoLocalizacion(instancia) {  
+  const APP = {
     TOKEN: 'pk.890591643afa7bba7e01f73847cf87dc',
     SEARCHURL: `https://us1.locationiq.com/v1/search.php?format=json&`,
     REVERSEURL: `https://us1.locationiq.com/v1/reverse.php?format=json&`,
@@ -7,6 +8,7 @@ const APP = {
     init: () => {},
     doSearch: () => {
       switch (instancia) {
+        case "navegador":
         case "registroPaciente":
           var selectedIndexProvincia = selectProvincia.selectedIndex;
           var selectedTextProvincia = selectProvincia.options[selectedIndexProvincia].text;
@@ -50,8 +52,13 @@ const APP = {
         case "registroProfesional":
           registrarProfesional(formulario, tiposConsultas, ObrasSocialesIngresadas, APP.data['lat'], APP.data['lon']);
           break;
+        case "navegador":
+          editarPaciente(formularioEditarPaciente, APP.data['lat'], APP.data['lon']);
         default:
           break;
         }
     },
-};
+  }; 
+
+  APP.doSearch();
+}

@@ -37,8 +37,9 @@ const validarFormulario = (e) => {
 };
 
 inputs.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+    input.addEventListener('keyup' , validarFormulario);
+    input.addEventListener('keydown' , validarFormulario);
+    input.addEventListener('blur' , validarFormulario);
 });
 //#endregion
 

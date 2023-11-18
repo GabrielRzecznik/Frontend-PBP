@@ -1,6 +1,7 @@
+var instancia = "login";
+
 window.addEventListener('pageshow', function() {
     document.getElementById('mostrar').style.display = 'none';
-    const instancia = "login";
     controlAcceso(instancia);
 });
 
@@ -17,39 +18,11 @@ const campos = {
     password: false
 };
 
+var inputUsuario = document.getElementById('usuario');
+var inputPassword = document.getElementById('password');
+
 var iconoUsuario = document.getElementById('iconoUsuario');
 var iconoPassword = document.getElementById('iconoPassword');
-
-//#region Alerts
-var alertSuperior = document.getElementById('alertSuperior');
-var textoAlert = document.getElementById("textoAlert");
-var tituloAlert = document.getElementById("tituloAlert");
-let timeoutId;
-
-function mostrarAlertSuperior($tipoAlert, $textoAlert) {
-    const alertElement = alertSuperior;
-    
-    if (timeoutId) {
-        clearTimeout(timeoutId);
-    }
-    
-    if ($tipoAlert == "warning") {
-        alertSuperior.classList.remove("alert-danger");
-        alertSuperior.classList.add("alert-warning");
-    }else{
-        alertSuperior.classList.remove("alert-warning");
-        alertSuperior.classList.add("alert-danger");
-    }
-    
-    alertElement.classList.add('alertaError');
-
-    textoAlert.innerHTML = $textoAlert;
-    
-    timeoutId = setTimeout(() => {
-        alertElement.classList.remove('alertaError');
-    }, 7500);
-}
-//#endregion
 
 const validarFormulario = (e) => {
    switch (e.target.name) {
@@ -97,8 +70,9 @@ const validarFormulario = (e) => {
 };
 
 inputs.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+    input.addEventListener('keyup' , validarFormulario);
+    input.addEventListener('keydown' , validarFormulario);
+    input.addEventListener('blur' , validarFormulario);
 });
 //#endregion
 
@@ -106,10 +80,10 @@ inputs.forEach((input) => {
 const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
-    const usuarioValue = usuario.value.trim();
-    const passwordValue = password.value.trim();
+    const usuarioValue = inputUsuario.value.trim();
+    const passwordValue = inputPassword.value.trim();
     
-    e.preventDefault();//evita que se envien los datos y se refresque la pagina
+    e.preventDefault();
 
     if (usuarioValue === "" || passwordValue === "") {
         if (usuarioValue === "" && passwordValue !== "") {
@@ -126,7 +100,7 @@ formulario.addEventListener('submit', (e) => {
 
         mostrarAlertSuperior(tipoAlert, textoAlert);
     }else{
-        if ((campos.usuario == false && usuarioValue !== "") || (campos.password == false && passwordValue !== "")) {
+        if ((campos.usuario === false && usuarioValue !== "") || (campos.password === false && passwordValue !== "")) {
             const tipoAlert = "danger";
             const textoAlert = '<strong>Error al iniciar sesión:</strong> ¡Formato no valido! Verifique los campos e intente nuevamente.';
 

@@ -116,7 +116,7 @@
 											<br><br>
 											<span class="texto">Nombre de Usuario </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoNombreUsuario"></i>
 											<br>
-											<input type="text" class="form-control inputs" name="nombreUsuario" id="nombreUsuario">
+											<input type="text" class="form-control inputs" name="nombreUsuario" id="nombreUsuario" autocomplete="username">
 											<br>
 											<span class="texto">Contraseña </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoPassword"></i>
 											<br>
@@ -198,6 +198,11 @@
 											<br>
 											<input type="text" class="form-control inputs" name="apellido" id="apellido">
 											<br>
+											<!--Campo DNI-->
+											<span class="texto">DNI </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoDni" title="Campo Obligatorio"></i>
+											<br>
+											<input type="text" class="form-control inputs" name="dni" id="dni">
+											<br>
 											<!--Campo Fecha de Nacimiento-->
 											<span class="texto">Fecha de nacimiento </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoFechaNacimiento" title="Campo Obligatorio"></i>
 											<br>
@@ -219,13 +224,15 @@
 											<input type="text" class="form-control inputs" name="telefono" id="telefono">
 											<br>
 											<!--Campo Provincia-->
-											<span class="texto">Provincia </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoProvincia" title="Campo Obligatorio"></i><!--Campo obligatorio-->
-											<select class="form-select" name="provincia" id="provincia" aria-label="Floating label select example"></select>
+											<!--Campo Provincia-->
+											<span class="texto">Provincia </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoProvincia" title="Campo Obligatorio"></i><!--Campo obligatorio-->
+											<br>
+											<select class="form-select campos" name="provincia" id="provincia" aria-label="Floating label select example" disabled></select>
 											<br>
 											<!--Campo Localidad-->
-											<span class="texto">Localidad </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoLocalidad" title="Campo Obligatorio"></i>
+											<span class="texto">Localidad </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoLocalidad" title="Campo Obligatorio"></i>
 											<br>
-											<input type="text" class="form-control inputs" name="localidad" id="localidad">
+											<select class="form-select campos" name="localidad" id="localidad" aria-label="Floating label select example" disabled></select>
 											<br>
 											<!--Campo Calle-->
 											<span class="texto">Nombre de calle/avenida </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoCalle" title="Campo Obligatorio"></i>
@@ -503,43 +510,12 @@
 						  </div>
 						</div>
 					</div>
-					<!--Alerta Nombre de Usuario-->
-					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombreUsuario">
-						<i class="bi bi-info-circle-fill"></i>
-						<strong>Nombre de usuario:</strong>
-						El nombre de usuario debe tener de 8 a 16 caracteres. Debe contener al menos una "mayúscula", un "digito" y no puede contener espacios en blanco.
-						<br>Nombre de usuario: "Ejemplo1234"
-					</div>
-					<!--Alerta Contraseña Editar-->
-					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPassword">
-						<i class="bi bi-info-circle-fill"></i>
-						<strong>Contraseña:</strong>
-						La contraseña debe tener de 8 a 16 caracteres. Debe contener al menos una "mayúscula" y un "digito".
-					</div>
-					<!--Alerta Contraseña Validar-->
-					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertPasswordValidar">
-						<i class="bi bi-info-circle-fill"></i>
-						<strong>Contraseña:</strong>
-						La contraseña debe tener de 8 a 16 caracteres.
-						<br>Debe contener al menos una "mayúscula" y un "digito".
-					</div>
-					<!--Alerta Duración de consultas-->
-					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDuracionConsulta">
-						<i class="bi bi-info-circle-fill"></i>
-						<strong>Duración de consultas:</strong>
-						Debes seleccionar la duración de tus consultas.
-					</div>
-					<!--Alerta Días de Atención-->
-					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDiasAtencion">
-						<i class="bi bi-info-circle-fill"></i>
-						<strong>Días de atención:</strong>
-						Debes seleccionar mínimo 1 día de atención a la semana.
-					</div>
-					<!--Alerta Descanso entre consultas-->
-					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertDescanso">
-						<i class="bi bi-info-circle-fill"></i>
-						<strong>Descanso entre consultas:</strong>
-						Debes seleccionar la duración de tus descansos entre consultas.
+
+					
+					<strong>Contraseña:</strong> La contraseña debe tener de 8 a 16 caracteres. <br>Debe contener al menos una "mayúscula" y un "digito".
+					<strong>Duración de consultas:</strong> Debes seleccionar la duración de tus consultas.
+					<strong>Días de atención:</strong> Debes seleccionar mínimo 1 día de atención a la semana.
+					<strong>Descanso entre consultas:</strong> Debes seleccionar la duración de tus descansos entre consultas.
 					</div>
 					<!--Alerta Rango Horario Dia Desde-->
 					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertRangoHorarioDiaDesde">
@@ -592,13 +568,7 @@
 						<i class="bi bi-info-circle-fill"></i>
 						<strong>Provincia</strong>
 						¡Debe seleccionar su provincia de residencia!
-					</div> 
-					<!--Alerta Localidad-->
-					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertLocalidad">
-						<i class="bi bi-info-circle-fill"></i>
-						<strong>Localidad: </strong>
-						¡La localidad ingresada no es valida!
-					</div> 
+					</div>
 					<!--Alerta Calle/Avenida-->
 					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertCalle">
 						<i class="bi bi-info-circle-fill"></i>
@@ -617,9 +587,23 @@
 						<strong>Departamento: </strong>
 						¡El departamento ingresado no es valido!
 					</div>
+
+
+					<!--Alerta Superior-->
+					<div class="alert alert-dismissible fade show alerta" role="alert" id="alertSuperior">
+						<i class="bi bi-info-circle-fill"></i>
+						<span id="textoAlert"></span>
+						<br>
+					</div>
 				</div>
 		  	</div>
 		</div>
 	</div>
+	<script src="../controller/js/controlAcceso.js"></script>
+	<script src="../controller/js/alertaSuperior.js"></script>
+	<script src="../controller/js/editarUsuario.js"></script>
+	<script src="../controller/js/editarPerfil.js"></script>
+	<script src="../controller/js/navegador.js"></script>
+	<script src="../controller/js/deshabilitarUsuario.js"></script>
 </body>
 </html>

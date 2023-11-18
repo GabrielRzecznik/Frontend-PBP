@@ -139,12 +139,15 @@
 	</div>
 	<br>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<script src="../controller/js/controlAcceso.js"></script>
+	
+
+	
 	<script src="../model/js/ajaxBuscarProvincias.js"></script>
 	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>
 	<script src="../model/js/ajaxMensajesNuevos.js"></script>
-	<script src="../controller/js/navegador.js"></script>
+	
 	<script src="../controller/js/inicioBusqueda.js"></script>
+	
 	<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
 	<script src="../model/js/ajaxEditarUsuario.js"></script>
 	<script src="../model/js/ajaxEditarPaciente.js"></script>

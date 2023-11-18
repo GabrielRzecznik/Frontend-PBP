@@ -21,41 +21,15 @@ const campos = {
     password2: false
 };
 
+var inputUsuario = document.getElementById('nombreUsuario');
+var inputCorreo = document.getElementById('correo');
+var inputPassword = document.getElementById('password');
+var inputPassword2 = document.getElementById('password2');
+
 var iconoUsuario = document.getElementById('iconoNombreUsuario');
 var iconoCorreo = document.getElementById('iconoCorreo');
 var iconoPassword = document.getElementById('iconoPassword');
 var iconoPassword2 = document.getElementById('iconoPassword2');
-
-//#region Alerts
-var alertSuperior = document.getElementById('alertSuperior');
-var textoAlert = document.getElementById("textoAlert");
-var tituloAlert = document.getElementById("tituloAlert");
-let timeoutId;
-
-function mostrarAlertSuperior($tipoAlert, $textoAlert) {
-    const alertElement = alertSuperior;
-    
-    if (timeoutId) {
-        clearTimeout(timeoutId);
-    }
-    
-    if ($tipoAlert == "warning") {
-        alertSuperior.classList.remove("alert-danger");
-        alertSuperior.classList.add("alert-warning");
-    }else{
-        alertSuperior.classList.remove("alert-warning");
-        alertSuperior.classList.add("alert-danger");
-    }
-    
-    alertElement.classList.add('alertaError');
-
-    textoAlert.innerHTML = $textoAlert;
-    
-    timeoutId = setTimeout(() => {
-        alertElement.classList.remove('alertaError');
-    }, 7500);
-}
-//#endregion
 
 const validarFormulario = (e) => {
    switch (e.target.name) {
@@ -167,8 +141,9 @@ const validarFormulario = (e) => {
 };
 
 inputs.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+    input.addEventListener('keyup' , validarFormulario);
+    input.addEventListener('keydown' , validarFormulario);
+    input.addEventListener('blur' , validarFormulario);
 });
 //#endregion
 
@@ -176,10 +151,10 @@ inputs.forEach((input) => {
 const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
-    const nombreUsuarioValue = nombreUsuario.value.trim();
-    const correoValue = correo.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
+    const nombreUsuarioValue = inputNombreUsuario.value.trim();
+    const correoValue = inputCorreo.value.trim();
+    const passwordValue = inputPassword.value.trim();
+    const password2Value = inputPassword2.value.trim();
     
     e.preventDefault();
     
@@ -206,7 +181,7 @@ formulario.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('tituloBuscar').style.display = 'none';
         document.getElementById('cargandoBuscar').style.display = 'block';
-        buscarUsuarioExistente(correo.value.trim(), nombreUsuario.value.trim());
+        buscarUsuarioExistente(inputCorreo.value.trim(), inputNombreUsuario.value.trim());
     }
 });
 //#endregion
@@ -267,8 +242,9 @@ const validarFormulario2 = (e) => {
 };
 
 inputs2.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario2);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario2);//cuando me salgo y preciono fuera del input
+    input.addEventListener('keyup' , validarFormulario2);
+    input.addEventListener('keydown' , validarFormulario2);
+    input.addEventListener('blur' , validarFormulario2);
 });
 //#endregion
 

@@ -1,10 +1,10 @@
+var instancia = "registroProfesional";
+
 window.addEventListener('pageshow', function() {
     document.getElementById('mostrar').style.display = 'none';
-    const instancia = "registroProfesional";
     controlAcceso(instancia);
     buscarEspecialidades(instancia);
 });
-
 
 //#region Validación Inputs Normales
 const inputs = document.querySelectorAll('#formulario input');
@@ -53,37 +53,6 @@ var iconoCalleConsultorio = document.getElementById("iconoCalleConsultorio");
 var iconoAlturaConsultorio = document.getElementById("iconoAlturaConsultorio");
 var iconoDepartamentoConsultorio = document.getElementById("iconoDepartamentoConsultorio");
 var iconoConsultorio = document.getElementById("iconoConsultorio");
-
-//#region Alerts
-var alertSuperior = document.getElementById('alertSuperior');
-var textoAlert = document.getElementById("textoAlert");
-var tituloAlert = document.getElementById("tituloAlert");
-let timeoutId;
-
-function mostrarAlertSuperior($tipoAlert, $textoAlert) {
-    const alertElement = alertSuperior;
-    
-    if (timeoutId) {
-        clearTimeout(timeoutId);
-    }
-    
-    if ($tipoAlert == "warning") {
-        alertSuperior.classList.remove("alert-danger");
-        alertSuperior.classList.add("alert-warning");
-    }else{
-        alertSuperior.classList.remove("alert-warning");
-        alertSuperior.classList.add("alert-danger");
-    }
-    
-    alertElement.classList.add('alertaError');
-
-    textoAlert.innerHTML = $textoAlert;
-    
-    timeoutId = setTimeout(() => {
-        alertElement.classList.remove('alertaError');
-    }, 7500);
-}
-//#endregion
 
 var contInpMatNac = document.getElementById("contInpMatNac");
 var contInpMatPro = document.getElementById("contInpMatPro");
@@ -522,6 +491,7 @@ document.getElementById("consultorio").addEventListener("click", function() {
 
 inputs.forEach((input) => {
     input.addEventListener('keyup' , validarFormulario);
+    input.addEventListener('keydown' , validarFormulario);
     input.addEventListener('blur' , validarFormulario);
 });
 
@@ -578,7 +548,7 @@ formulario.addEventListener('submit', (e) => {
         document.getElementById('tituloRegistrar').style.display = 'none';
         document.getElementById('cargandoRegistrar').style.display = 'block';
         if (checkConsultorio.checked) {
-            APP.doSearch();
+            definirGeoLocalizacion(instancia);
         }else{
             $latitud = "";
             $longitud = "";

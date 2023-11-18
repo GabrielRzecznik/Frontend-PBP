@@ -133,12 +133,13 @@
         <span id="textoAlert"></span>
         <br>
     </div>
-    <script src="../controller/js/definirGeoLocalizacion.js"></script>
     <script src="../controller/js/controlAcceso.js"></script>
+    <script src="../controller/js/alertaSuperior.js"></script>
     <script src="../model/js/ajaxBuscarEspecialidades.js"></script>
     <script src="../model/js/ajaxBuscarObrasSociales.js"></script>
     <script src="../model/js/ajaxBuscarProvincias.js"></script>
     <script src="../model/js/ajaxBuscarLocalidades.js"></script>
+    <script src="../controller/js/definirGeoLocalizacion.js"></script>
     <script src="../controller/js/registroProfesional.js"></script>
     <script src="../model/js/ajaxRegistroProfesional.js"></script>
 </body>

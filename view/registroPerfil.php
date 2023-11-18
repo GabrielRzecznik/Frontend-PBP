@@ -35,6 +35,11 @@
                             <br>
                             <input type="text" class="form-control inputs" name="apellido" id="apellido">
                             <br>
+                            <!--Campo DNI-->
+                            <span class="texto">DNI </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoDni" title="Campo Obligatorio"></i>
+                            <br>
+                            <input type="text" class="form-control inputs" name="dni" id="dni">
+                            <br>
                             <!--Campo Fecha de Nacimiento-->
                             <span class="texto">Fecha de nacimiento </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoFechaNacimiento" title="Campo Obligatorio"></i>
                             <br>
@@ -55,13 +60,13 @@
                             <br>
                             <input type="file" class="form-control inputs" name="foto" id="foto" accept="image/*">
                             <br>
+                        </div>
+                        <div class="col-md-6" id="contenedor-localidad">
                             <!--Campo Telefono-->
                             <span class="texto">Télefono </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoTelefono" title="Campo Obligatorio"></i>
                             <br>
                             <input type="text" class="form-control inputs" name="telefono" id="telefono">
                             <br>
-                        </div>
-                        <div class="col-md-6" id="contenedor-localidad">
                             <!--Campo Provincia-->
                             <span class="texto">Provincia </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoProvincia" title="Campo Obligatorio"></i><!--Campo obligatorio-->
                             <br>
@@ -103,10 +108,11 @@
         <span id="textoAlert"></span>
         <br>
     </div>
-    <script src="../controller/js/definirGeoLocalizacion.js"></script>
     <script src="../controller/js/controlAcceso.js"></script>
+    <script src="../controller/js/alertaSuperior.js"></script>
     <script src="../model/js/ajaxBuscarProvincias.js"></script>
     <script src="../model/js/ajaxBuscarLocalidades.js"></script>
+    <script src="../controller/js/definirGeoLocalizacion.js"></script>
     <script src="../controller/js/registroPaciente.js"></script>
     <script src="../model/js/ajaxRegistroPaciente.js"></script>
 </body>

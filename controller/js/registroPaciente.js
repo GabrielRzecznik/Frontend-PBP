@@ -1,6 +1,7 @@
+var instancia = "registroPaciente";
+
 window.addEventListener('pageshow', function() {
     document.getElementById('mostrar').style.display = 'none';
-    var instancia = "registroPaciente";
     controlAcceso(instancia);
     buscarProvincias(instancia);
 });
@@ -19,6 +20,7 @@ const expresiones = {
     nombre: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,30}$/,
     apellido: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,30}$/,
     telefono: /^[0-9\s]{5,15}$/,
+    dni: /^\d{7,8}$/,
     localidad: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü \s]{2,35}$/,
     calle: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü 0-9\s]{2,35}$/,
     altura: /^[a-zA-ZÑñÁáÉéÍíÓóÚúÜü/ 0-9\s]{1,6}$/,
@@ -28,6 +30,7 @@ const expresiones = {
 const campos = {
     nombre: false,
     apellido: false,
+    dni: false,
     fechaNacimiento: false,
     sexo: false,
     foto: false,
@@ -41,6 +44,7 @@ const campos = {
 
 var inputNombre = document.getElementById("nombre");
 var inputApellido = document.getElementById("apellido");
+var inputDni = document.getElementById("dni");
 var inputFechaNacimiento = document.getElementById("fechaNacimiento");
 var selectSexo = document.getElementById("sexo");
 var inputFoto = document.getElementById("foto");
@@ -53,6 +57,7 @@ var inputDepartamento = document.getElementById("departamento");
 
 var iconoNombre = document.getElementById('iconoNombre');
 var iconoApellido = document.getElementById('iconoApellido');
+var iconoDni = document.getElementById('iconoDni');
 var iconoFechaNacimiento = document.getElementById('iconoFechaNacimiento');
 var iconoSexo = document.getElementById('iconoSexo');
 var iconoFoto = document.getElementById('iconoFoto');
@@ -62,37 +67,6 @@ var iconoLocalidad = document.getElementById('iconoLocalidad');
 var iconoCalle = document.getElementById('iconoCalle');
 var iconoAltura = document.getElementById('iconoAltura');
 var iconoDepartamento = document.getElementById('iconoDepartamento');
-
-//#region Alerts
-var alertSuperior = document.getElementById('alertSuperior');
-var textoAlert = document.getElementById("textoAlert");
-var tituloAlert = document.getElementById("tituloAlert");
-let timeoutId;
-
-function mostrarAlertSuperior($tipoAlert, $textoAlert) {
-    const alertElement = alertSuperior;
-    
-    if (timeoutId) {
-        clearTimeout(timeoutId);
-    }
-    
-    if ($tipoAlert == "warning") {
-        alertSuperior.classList.remove("alert-danger");
-        alertSuperior.classList.add("alert-warning");
-    }else{
-        alertSuperior.classList.remove("alert-warning");
-        alertSuperior.classList.add("alert-danger");
-    }
-    
-    alertElement.classList.add('alertaError');
-
-    textoAlert.innerHTML = $textoAlert;
-    
-    timeoutId = setTimeout(() => {
-        alertElement.classList.remove('alertaError');
-    }, 7500);
-}
-//#endregion
 
 const validarFormulario = (e) => {
    switch (e.target.name) {
@@ -109,7 +83,7 @@ const validarFormulario = (e) => {
                 iconoNombre.classList.add('mostrar','bi-x-circle-fill','noValidado');
                 
                 const tipoAlert = "warning";
-                const textoAlert = '<strong>Nombre:</strong> ¡El nombre ingresado no es valido!<br>Debe tener de 2 a 30 caracteres los cuales no<br>puede ser numeros ni caracteres especiales.';
+                const textoAlert = '<strong>Nombre:</strong> ¡El nombre ingresado no es válido!<br>Debe tener de 2 a 30 caracteres los cuales no<br>puede ser numeros ni caracteres especiales.';
 
                 mostrarAlertSuperior(tipoAlert, textoAlert);
 
@@ -129,11 +103,31 @@ const validarFormulario = (e) => {
                 iconoApellido.classList.add('mostrar','bi-x-circle-fill','noValidado');
                 
                 const tipoAlert = "warning";
-                const textoAlert = '<strong>Apellido:</strong> ¡El apellido ingresado no es valido!<br>Debe tener de 2 a 30 caracteres los cuales no <br>puede ser numeros ni caracteres especiales.';
+                const textoAlert = '<strong>Apellido:</strong> ¡El apellido ingresado no es válido!<br>Debe tener de 2 a 30 caracteres los cuales no <br>puede ser numeros ni caracteres especiales.';
 
                 mostrarAlertSuperior(tipoAlert, textoAlert);
 
                 campos['apellido'] = false;
+            }
+            break;
+        case 'dni':
+            if (expresiones.dni.test(e.target.value)) {
+                iconoDni.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                iconoDni.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+                alertSuperior.classList.remove('alertaError');
+                
+                campos['dni'] = true;
+            }else{
+                iconoDni.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoDni.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>DNI:</strong> ¡El DNI ingresado no es válido!<br>Debe tener de 7 a 8 dígitos.';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
+                campos['dni'] = false;
             }
             break;
         case 'telefono':
@@ -149,7 +143,7 @@ const validarFormulario = (e) => {
                 iconoTelefono.classList.add('mostrar','bi-x-circle-fill','noValidado');
                 
                 const tipoAlert = "warning";
-                const textoAlert = '<strong>Télefono:</strong> ¡El télefono ingresado no es valido!';
+                const textoAlert = '<strong>Télefono:</strong> ¡El télefono ingresado no es válido!';
 
                 mostrarAlertSuperior(tipoAlert, textoAlert);
 
@@ -215,7 +209,7 @@ const validarFormulario = (e) => {
                 iconoDepartamento.classList.add('mostrar','bi-x-circle-fill','noValidado');
                 
                 const tipoAlert = "warning";
-                const textoAlert = '<strong>Departamento:</strong> ¡El departamento ingresado no es valido!Altura:</strong> ¡La altura ingresada no es vailida!';
+                const textoAlert = '<strong>Departamento:</strong> ¡El departamento ingresado no es válido!Altura:</strong> ¡La altura ingresada no es vailida!';
 
                 mostrarAlertSuperior(tipoAlert, textoAlert);
 
@@ -331,7 +325,7 @@ inputFoto.addEventListener('change', (event) => {
         } else {
             errorFoto();
 
-            const textoAlert = '<strong>Foto:</strong> ¡El formato no es valido!';
+            const textoAlert = '<strong>Foto:</strong> ¡El formato no es válido!';
 
             mensajeFoto(textoAlert);
         }
@@ -371,7 +365,7 @@ selectProvincia.addEventListener('change', (event) => {
         iconoProvincia.classList.add('mostrar','bi-x-circle-fill','noValidado');
         
         const tipoAlert = "warning";
-        const textoAlert = '<strong>Provincia</strong> ¡Debe seleccionar su provincia de residencia!';
+        const textoAlert = '<strong>Provincia</strong> ¡Debe ingresar una provincia de residencia!';
 
         mostrarAlertSuperior(tipoAlert, textoAlert);
 
@@ -379,7 +373,7 @@ selectProvincia.addEventListener('change', (event) => {
     }
 });
 
-if (provincia.value == 0) {
+if (selectProvincia.value === "0") {
     iconoProvincia.classList.add('mostrar');
     iconoProvincia.classList.remove('bi-check-circle-fill');
     
@@ -389,7 +383,7 @@ if (provincia.value == 0) {
 
 //#region Select Localidad
 document.getElementById("localidad").addEventListener('change', (event) => {
-    if (event.target.value != 0) {
+    if (event.target.value !== 0) {
         iconoLocalidad.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
         iconoLocalidad.classList.add('mostrar','bi-check-circle-fill','validado');
                 
@@ -401,7 +395,7 @@ document.getElementById("localidad").addEventListener('change', (event) => {
         iconoLocalidad.classList.add('mostrar','bi-x-circle-fill','noValidado');
         
         const tipoAlert = "warning";
-        const textoAlert = '<strong>Localidad</strong> ¡La localidad ingresada no es valida!';
+        const textoAlert = '<strong>Localidad</strong> ¡Debes ingresar una localidad de residencia!';
 
         mostrarAlertSuperior(tipoAlert, textoAlert);
 
@@ -409,7 +403,7 @@ document.getElementById("localidad").addEventListener('change', (event) => {
     }
 });
 
-if (localidad.value == 0) {
+if (selectLocalidad.value === "0") {
     iconoLocalidad.classList.add('mostrar');
     iconoLocalidad.classList.remove('bi-check-circle-fill');
     
@@ -418,8 +412,9 @@ if (localidad.value == 0) {
 //#endregion
 
 inputs.forEach((input) => {
-    input.addEventListener('keyup' , validarFormulario);//cuando levanto la tecla se ejecuta un codigo
-    input.addEventListener('blur' , validarFormulario);//cuando me salgo y preciono fuera del input
+    input.addEventListener('keyup' , validarFormulario);
+    input.addEventListener('keydown' , validarFormulario);
+    input.addEventListener('blur' , validarFormulario);
 });
 //#endregion
 
@@ -428,17 +423,17 @@ inputs.forEach((input) => {
 const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
-    const nombreValue = nombre.value.trim();
-    const apellidoValue = apellido.value.trim();
-    const fechaNacimientoValue = fechaNacimiento.value.trim();
-    const sexoValue = sexo.value.trim();
-    const fotoValue = foto.value.trim();
-    const telefonoValue = telefono.value.trim();
-    const provinciaValue = provincia.value.trim();
-    const localidadValue = localidad.value.trim();
-    const calleValue = calle.value.trim();
-    const alturaValue = altura.value.trim();
-    //const departamentoValue = departamento.value.trim();
+    const nombreValue = inputNombre.value.trim();
+    const apellidoValue = inputApellido.value.trim();
+    const dniValue = inputDni.value.trim();
+    const fechaNacimientoValue = inputFechaNacimiento.value.trim();
+    const sexoValue = selectSexo.value.trim();
+    const fotoValue = inputFoto.value.trim();
+    const telefonoValue = inputTelefono.value.trim();
+    const provinciaValue = selectProvincia.value.trim();
+    const localidadValue = selectLocalidad.value.trim();
+    const calleValue = inputCalle.value.trim();
+    const alturaValue = inputAltura.value.trim();
     
     e.preventDefault();
 
@@ -449,23 +444,24 @@ formulario.addEventListener('submit', (e) => {
         mostrarAlertSuperior(tipoAlert, textoAlert);
     }
 
-    if (nombreValue === "" || apellidoValue === "" || fechaNacimientoValue === "" || sexoValue === "0" || fotoValue === "" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "0" || calleValue === "" || alturaValue === "") {
+    if (nombreValue === "" || apellidoValue === "" || dniValue === "" || fechaNacimientoValue === "" || sexoValue === "0" || fotoValue === "" || telefonoValue === "" || provinciaValue === "0" || localidadValue === "0" || calleValue === "" || alturaValue === "") {
         const textoAlert = '<strong>Error al registrar datos personales:</strong> ¡Debe completar todos los campos obligatorios!';
 
         mensajeErrorFormulario(textoAlert);
     }else{
-        if ((campos.nombre === false && nombreValue !== "") || (campos.apellido === false && apellidoValue !== "") || (campos.fechaActual === false && fechaNacimientoValue !== "") || (campos.sexo === false && sexoValue !== "0") || (campos.foto === false && fotoValue !== "") || (campos.telefono === false && telefonoValue !== "") || (campos.provincia === false && provinciaValue !== "") || (campos.localidad === false && localidadValue !== "") || (campos.calle === false && calleValue !== "") || (campos.altura === false && alturaValue !== "") || campos.departamento === false) {
-            const textoAlert = '<strong>Error al registrar datos personales:</strong> Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!';
+        if ((campos.nombre === false && nombreValue !== "") || (campos.apellido === false && apellidoValue !== "") || (campos.dni === false && dniValue !== "") || (campos.fechaActual === false && fechaNacimientoValue !== "") || (campos.sexo === false && sexoValue !== "0") || (campos.foto === false && fotoValue !== "") || (campos.telefono === false && telefonoValue !== "") || (campos.provincia === false && provinciaValue !== "") || (campos.localidad === false && localidadValue !== "") || (campos.calle === false && calleValue !== "") || (campos.altura === false && alturaValue !== "") || campos.departamento === false) {
+            const textoAlert = '<strong>Error al registrar datos personales:</strong> Error al ingresar los datos: ¡Formato no válido, verifique los mismos e intente nuevamente!';
 
             mensajeErrorFormulario(textoAlert);
         }
     }
     
-    if (campos.nombre && campos.apellido && campos.fechaNacimiento && campos.sexo && campos.foto && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
+    if (campos.nombre && campos.apellido && campos.dni && campos.fechaNacimiento && campos.sexo && campos.foto && campos.telefono && campos.provincia && campos.localidad && campos.calle && campos.altura && campos.departamento) {
         //Enviar AJAX
         document.getElementById('tituloRegistrar').style.display = 'none';
         document.getElementById('cargandoRegistrar').style.display = 'block';
-        APP.doSearch();
+        
+        definirGeoLocalizacion(instancia);
     }
 }); 
 //#endregion

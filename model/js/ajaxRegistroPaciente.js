@@ -24,6 +24,7 @@ function registrarPaciente(formulario, $latitud, $longitud){
         }
     }
 
+    console.log(formJSON);
     xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Pacientes/crearPaciente',true);
     xmlhttp.send(formJSON);
 }

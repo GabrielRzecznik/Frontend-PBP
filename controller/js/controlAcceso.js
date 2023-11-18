@@ -41,8 +41,8 @@ function controlAcceso(instancia) {
             }
             break;
         case "registroProfesional":
-            if (!localStorage.getItem("id_usuario")) {
-                window.location.href = "../view/";
+            if (!localStorage.getItem("id_usuario") || localStorage.getItem("id_paciente") === "null") {
+                window.location.href = "../";
             }else if (!localStorage.getItem("estadoUsuario") === "Activo") {
                 window.location.href = "../view/registroPerfil.php";
             }else if (localStorage.getItem("id_profesional")) {
