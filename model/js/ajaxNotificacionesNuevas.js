@@ -25,10 +25,10 @@ function notificacionesNuevas(){
 											data.length +
                                         '</span>';
                 }
-                buscarProvincias();
+                //buscarProvincias();
             }else{
                 console.log("Ocurrio un error inesperado al cargar las notificaciones");
-                buscarProvincias();
+                //buscarProvincias();
             }
         }
     }

@@ -70,8 +70,7 @@
 		</div>
 	</div>
 	
-	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>
-	<script src="../model/js/ajaxMensajesNuevos.js"></script>
+
 	
 	<!--Verificar Chat Existe-->
 	<script src="../controller/js/verificarChatExistente.js"></script>
