@@ -70,13 +70,8 @@
 		</div>
 	</div>
 	
-	<script src="../model/js/ajaxBackupProvincias.js"></script>
-	<script src="../model/js/ajaxMostrarBackupProvincias.js"></script>
 	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>
 	<script src="../model/js/ajaxMensajesNuevos.js"></script>
-	
-	<script src="../model/js/ajaxBuscarProvincias.js"></script>
-	<script src="../controller/js/navegador.js"></script>
 	
 	<!--Verificar Chat Existe-->
 	<script src="../controller/js/verificarChatExistente.js"></script>
@@ -95,19 +90,18 @@
 	
 	<script src="../controller/js/chats.js"></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	
 	
-	<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
-	<script src="../model/js/ajaxEditarUsuario.js"></script>
-	<script src="../model/js/ajaxEditarPaciente.js"></script>
+	
+	
 	<script src="../model/js/ajaxConfirmarContraseña.js"></script>
 	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
 	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
-
+	
 	<!--Enviar Mensaje-->
 	<script src="../controller/js/enviarMensaje.js"></script>
 	<script src="../model/js/ajaxEnviarMensaje.js"></script>
-
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -605,6 +605,10 @@
 	<script src="../controller/js/editarUsuario.js"></script>
 	<script src="../controller/js/editarPerfil.js"></script>
 	<script src="../controller/js/configurarGrillaProfesional.js"></script>
+	
+	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>
+	<script src="../model/js/ajaxMensajesNuevos.js"></script>
+
 	<script src="../controller/js/navegador.js"></script>
 	<script src="../controller/js/deshabilitarUsuario.js"></script>
 </body>
