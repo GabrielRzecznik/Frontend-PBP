@@ -75,7 +75,12 @@ formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
 }); 
 //#endregion
 
-//Setear Inputs - Editar Usuario
+var inputNombreUsuario = document.getElementById('nombreUsuario');
+var inputPassword = document.getElementById('password');
+
+var iconoNombreUsuario = document.getElementById('iconoNombreUsuario');
+var iconoPassword = document.getElementById('iconoPassword');
+
 document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
 
 //#region Validación de Campos Editar Usuario
@@ -122,10 +127,14 @@ const validarFormulario = (e) => {
                 
                 camposEditar['password'] = true;
             }else{
-                document.getElementById('iconoPassword').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoPassword').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Mensaje de error
-                document.getElementById('alertPassword').classList.add('alertaError');
+                iconoPassword.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoPassword.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Contraseña:</strong> La contraseña debe tener de 8 a 16 caracteres. <br>Debe contener al menos una "mayúscula" y un "digito".';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+                
                 camposEditar['password'] = false;
             }
             break;
@@ -143,25 +152,30 @@ inputs.forEach((input) => {
 const formularioEditar = document.getElementById('formEditarUsuario');
 
 formularioEditar.addEventListener('submit', (e) => {
-    const nombreUsuarioValue = nombreUsuario.value.trim();
-    const contraseñaValue = password.value.trim();
+    const nombreUsuarioValue = inputNombreUsuario.value.trim();
+    const contraseñaValue = inputPassword.value.trim();
     
-    e.preventDefault();//evita que se envien los datos y se refresque la pagina
+    e.preventDefault();
     
     if (nombreUsuarioValue === "" || contraseñaValue === "") {
-        alert("¡Debe completar todos los campos!");
+        const tipoAlert = "danger";
+        const textoAlert = '<strong>Error al editar usuario:</strong> ¡Debe completar todos los campos!';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
     }else{
         if ((camposEditar.nombreUsuario == false && nombreUsuarioValue !== "") || (camposEditar.password == false && contraseñaValue !== "")) {
-            alert("Error al ingresar los datos: ¡Formato no valido, verifique los mismos e intente nuevamente!");
+            const tipoAlert = "danger";
+            const textoAlert = '<strong>Error al editar usuario:</strong> ¡Formato no valido, verifique los mismos e intente nuevamente!';
+
+            mostrarAlertSuperior(tipoAlert, textoAlert);
         }
     }
-
     
     if (camposEditar.nombreUsuario && camposEditar.password) {
         if (nombreUsuarioValue != localStorage.getItem("nombreUsuario") || contraseñaValue !=  passwordValidar.value.trim()) {   
-            //Enviar AJAX
             document.getElementById('cargandoEditar').style.display = 'block';
             document.getElementById('editarUsuario').style.display = 'none';
+            
             const correo = "No buscar";
             if (nombreUsuarioValue == localStorage.getItem("nombreUsuario")) {
                 editarUsuario(formularioEditar);
@@ -169,13 +183,16 @@ formularioEditar.addEventListener('submit', (e) => {
                 buscarUsuarioExistente(correo, nombreUsuarioValue);
             }
         }else{
-            document.getElementById('iconoNombreUsuario').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
-            document.getElementById('iconoNombreUsuario').classList.add('signo','bi-check-circle-fill','noValidado');
-            document.getElementById('iconoPassword').classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
-            document.getElementById('iconoPassword').classList.add('signo','bi-check-circle-fill','noValidado');
-            alert("¡No se registraron cambios!");
+            iconoNombreUsuario.classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            iconoNombreUsuario.classList.add('signo','bi-check-circle-fill','noValidado');
+            iconoPassword.classList.remove('validado','bi-exclamation-circle-fill','signo','mostrar','bi-x-circle-fill');
+            iconoPassword.classList.add('signo','bi-check-circle-fill','noValidado');
+
+            const tipoAlert = "danger";
+            const textoAlert = '<strong>Error al editar usuario:</strong> ¡No se registraron cambios!';
+
+            mostrarAlertSuperior(tipoAlert, textoAlert);
         }
     }
-
 }); 
 //#endregion
