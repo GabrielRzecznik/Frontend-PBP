@@ -103,18 +103,9 @@ function cargarNavegador(pestaña) {
     }   
 }
 
-//Setear inputs - Editar Usuario
-document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
-
 if (localStorage["departamento"] != "") {
     document.getElementById('iconoDepartamento').classList.add('signo','bi-check-circle-fill','noValidado');
     document.getElementById('departamento').value = localStorage["departamento"];
-}
-
-//Cerrar sesión
-function cerrarSesion() {
-    localStorage.clear();
-    window.location.href = "../";
 }
 
 //Modal configuración
@@ -153,71 +144,6 @@ document.getElementById("conf").addEventListener("click", function() {
         document.getElementById("confPro").classList.add('accordion-button', 'collapsed', 'rounded');
     }
 });
-
-
-
-//#region Validar Contraseña en editar usuario
-const inputsValidarContraseña = document.querySelectorAll('#formEditarUsuarioPreValidacion input');
-
-const expresionValidarContraseña = {
-    passwordValidar: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
-};
-
-const campoValidarContraseña = {
-    passwordValidar: false
-};
-
-const validarContraseña = (e) => {
-    switch (e.target.name) {
-        case 'passwordValidar':
-            if (expresionValidarContraseña.passwordValidar.test(e.target.value)) {
-                document.getElementById('iconoPasswordValidar').classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');//Borrar !,x
-                document.getElementById('iconoPasswordValidar').classList.add('mostrar','bi-check-circle-fill','validado');//Mostrar,✓,"Verde"
-                //Alerta de error
-                document.getElementById('alertPasswordValidar').classList.remove('alertaError');
-                //Validar
-                campoValidarContraseña['passwordValidar'] = true;
-            }else{
-                document.getElementById('iconoPasswordValidar').classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
-                document.getElementById('iconoPasswordValidar').classList.add('mostrar','bi-x-circle-fill','noValidado');
-                //Mensaje de error
-                document.getElementById('alertPasswordValidar').classList.add('alertaError');
-                campoValidarContraseña['passwordValidar'] = false;
-            }
-        break;
-    }
-};
-
-inputsValidarContraseña.forEach((input) => {
-    input.addEventListener('keyup' , validarContraseña);
-    input.addEventListener('blur' , validarContraseña);
-});
-
-const formEditarUsuarioPreValidacion = document.getElementById('formEditarUsuarioPreValidacion');
-
-formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
-    const passwordValidarValue = passwordValidar.value.trim();
-    
-    e.preventDefault();
-    
-    if (passwordValidarValue === "") {
-        alert("¡Debe completar el campo contraseña actual!");
-    }
-
-    if(campoValidarContraseña.passwordValidar == false && passwordValidarValue !== ""){
-        alert("Error al ingresar la contraseña actual: ¡Formato no valido, verifique el mismo e intente nuevamente!");
-    }
-    
-    if (campoValidarContraseña.passwordValidar) {
-        //Enviar AJAX
-        document.getElementById('cargandoPreValidacionEditar').style.display = 'block';
-        document.getElementById('textoPreValidacionEditar').style.display = 'none';
-        $ingreso = "Editar";
-        confirmarContraseña(formEditarUsuarioPreValidacion, $ingreso);
-    }
-}); 
-
-//#endregion
 
 //#region Opción Configuración profesional
 if (localStorage.getItem("id_profesional") != "" && localStorage.getItem("estadoProfesional") != "Activo") {

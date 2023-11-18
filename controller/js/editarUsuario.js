@@ -1,4 +1,84 @@
-//#region Validar Formulario Editar Cuenta Usuario
+//#region Validar Contraseña en editar usuario
+var inputPasswordValidar = document.getElementById('passwordValidar');
+var iconoPasswordValidar = document.getElementById('iconoPasswordValidar');
+
+const inputsValidarContraseña = document.querySelectorAll('#formEditarUsuarioPreValidacion input');
+
+const expresionValidarContraseña = {
+    passwordValidar: /^(?=\w*\d)(?=\w*[A-Z])\S{8,24}$/
+};
+
+const campoValidarContraseña = {
+    passwordValidar: false
+};
+
+const validarContraseña = (e) => {
+    switch (e.target.name) {
+        case 'passwordValidar':
+            if (expresionValidarContraseña.passwordValidar.test(e.target.value)) {
+                iconoPasswordValidar.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
+                iconoPasswordValidar.classList.add('mostrar','bi-check-circle-fill','validado');
+                
+                alertSuperior.classList.remove('alertaError');
+                
+                campoValidarContraseña['passwordValidar'] = true;
+            }else{
+                iconoPasswordValidar.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
+                iconoPasswordValidar.classList.add('mostrar','bi-x-circle-fill','noValidado');
+                
+                const tipoAlert = "warning";
+                const textoAlert = '<strong>Contraseña:</strong> La contraseña debe tener de 8 a 16 caracteres. <br>Debe contener al menos una "mayúscula" y un "digito".';
+
+                mostrarAlertSuperior(tipoAlert, textoAlert);
+
+                campoValidarContraseña['passwordValidar'] = false;
+            }
+        break;
+    }
+};
+
+inputsValidarContraseña.forEach((input) => {
+    input.addEventListener('keyup' , validarContraseña);
+    input.addEventListener('keydown' , validarContraseña);
+    input.addEventListener('blur' , validarContraseña);
+});
+
+const formEditarUsuarioPreValidacion = document.getElementById('formEditarUsuarioPreValidacion');
+
+formEditarUsuarioPreValidacion.addEventListener('submit', (e) => {
+    const passwordValidarValue = inputPasswordValidar.value.trim();
+    
+    e.preventDefault();
+    
+    if (passwordValidarValue === "") {
+        const tipoAlert = "danger";
+        const textoAlert = '<strong>Error al comprobar contraseña:</strong> ¡Debe completar el campo contraseña actual!';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
+    }
+
+    if(campoValidarContraseña.passwordValidar === false && passwordValidarValue !== ""){
+        const tipoAlert = "danger";
+        const textoAlert = '<strong>Error al comprobar contraseña:</strong> ¡Formato no valido, verifique el mismo e intente nuevamente!';
+
+        mostrarAlertSuperior(tipoAlert, textoAlert);
+    }
+    
+    if (campoValidarContraseña.passwordValidar) {
+        document.getElementById('cargandoPreValidacionEditar').style.display = 'block';
+        document.getElementById('textoPreValidacionEditar').style.display = 'none';
+        
+        var ingreso = "Editar";
+
+        confirmarContraseña(formEditarUsuarioPreValidacion, ingreso);
+    }
+}); 
+//#endregion
+
+//Setear Inputs - Editar Usuario
+document.getElementById('nombreUsuario').value = localStorage["nombreUsuario"];
+
+//#region Validación de Campos Editar Usuario
 const inputs = document.querySelectorAll('#formEditarUsuario input');
 
 const expresionesEditar = {

@@ -56,7 +56,7 @@ formDeshabilitarUsuarioPreValidacion.addEventListener('submit', (e) => {
         mostrarAlertSuperior(tipoAlert, textoAlert);
     }
     
-    if(campoValidarContraseñaDeshabilitar.passwordValidarDeshabilitar == false && passwordValidarDeshabilitarValue !== ""){
+    if(campoValidarContraseñaDeshabilitar.passwordValidarDeshabilitar === false && passwordValidarDeshabilitarValue !== ""){
         const tipoAlert = "danger";
         const textoAlert = '<strong>Error al comprobar contraseña:</strong> ¡Formato no valido, verifique el mismo e intente nuevamente!';
 
@@ -66,7 +66,9 @@ formDeshabilitarUsuarioPreValidacion.addEventListener('submit', (e) => {
     if (campoValidarContraseñaDeshabilitar.passwordValidarDeshabilitar) {
         document.getElementById('cargandoPreValidacionDeshabilitar').style.display = 'block';
         document.getElementById('textoPreValidacionDeshabilitar').style.display = 'none';
+        
         var ingreso = "Deshabilitar";
+        
         confirmarContraseña(formDeshabilitarUsuarioPreValidacion, ingreso);
     }
 });

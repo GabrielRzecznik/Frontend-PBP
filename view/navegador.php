@@ -512,7 +512,7 @@
 					</div>
 
 					
-					<strong>Contraseña:</strong> La contraseña debe tener de 8 a 16 caracteres. <br>Debe contener al menos una "mayúscula" y un "digito".
+					
 					<strong>Duración de consultas:</strong> Debes seleccionar la duración de tus consultas.
 					<strong>Días de atención:</strong> Debes seleccionar mínimo 1 día de atención a la semana.
 					<strong>Descanso entre consultas:</strong> Debes seleccionar la duración de tus descansos entre consultas.
@@ -603,6 +603,7 @@
 	<script src="../controller/js/alertaSuperior.js"></script>
 	<script src="../controller/js/editarUsuario.js"></script>
 	<script src="../controller/js/editarPerfil.js"></script>
+	<script src="../controller/js/cerrarSesion.js"></script>
 	<script src="../controller/js/navegador.js"></script>
 	<script src="../controller/js/deshabilitarUsuario.js"></script>
 </body>
