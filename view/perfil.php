@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Icono Página-->
-    <link rel="icon" href="../img/icono.png">
+    <link rel="icon" href="./img/icono.png">
 	<!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -45,14 +45,16 @@
 						<h5 class="colorGris"><b>Información personal</b></h5>
 						<div class="row">
 							<div class="col-6 colorGris">
-								Es <b><span id="mostrarSexoPerfil"></span></b>
+								DNI: <b><span id="mostrarDniPerfil"></span></b>
 								<br>
-								Tiene <b><span id="mostrarEdadPerfil"></span></b> años
+								Sexo: <b><span id="mostrarSexoPerfil"></span></b>
+								<br>
+								Edad: <b><span id="mostrarEdadPerfil"></span></b> años
 							</div>
 							<div class="col-6 colorGris">
 								<i class="bi bi-house-door-fill"></i> Vive en <b id="mostrarProvinciaPerfil"></b>
 								<br>
-								<i class="bi bi-geo-alt-fill"></i> De <b id="mostrarLocalidadPerfil"></b>
+								<i class="bi bi-geo-alt-fill"></i> Localidad de <b id="mostrarLocalidadPerfil"></b>
 							</div>
 						</div>
 						<span class="infoProfesional colorGris" id="infoProfesional">
@@ -100,25 +102,9 @@
 			</div>
 	</div>
 	<br>
-	<script src="../controller/js/controlAcceso.js"></script>
-	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>
-	<script src="../model/js/ajaxMensajesNuevos.js"></script>
-	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	
-	<script src="../model/js/ajaxBuscarProvincias.js"></script>
-	<script src="../controller/js/navegador.js"></script>
-	
-	<script src="../model/js/ajaxBuscarPerfil.js"></script>
+	<script src="../model/js/ajaxBuscarPorNombreUsuario.js"></script>
     <script src="../controller/js/perfil.js"></script>
-	
-	<script src="../model/js/ajaxDeshabilitarUsuario.js"></script>
-	<script src="../model/js/ajaxEditarUsuario.js"></script>
-	<script src="../model/js/ajaxEditarPaciente.js"></script>
-	<script src="../model/js/ajaxConfirmarContraseña.js"></script>
-	<script src="../model/js/ajaxBuscarUsuarioExistente.js"></script>
-	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
 </body>
 </html>
-
-<!--https://programacion.net/articulo/google_maps_con_multiples_marcadores_y_ventana_de_informacion_mediante_la_api_v3_1738-->

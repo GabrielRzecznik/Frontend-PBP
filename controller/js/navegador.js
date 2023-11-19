@@ -616,5 +616,8 @@ document.getElementById("deshabilitarCuentaUsuario").addEventListener("click", f
 });
 
 document.getElementById("editarPerfil").addEventListener("click", function() {
+    nombreUsuario = localStorage.getItem("nombreUsuario");
+    acceso = "navegador";
+    buscarPorNombreUsuario(nombreUsuario, acceso);
     alertSuperior.classList.remove('alertaError');
 });

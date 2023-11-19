@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Icono Página-->
-    <link rel="icon" href="./img/icono.png">
 	<!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -102,8 +100,8 @@
 											<br>
 											<span class="texto">Contraseña actual </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPasswordValidar" title="Campo Obligatorio"></i>
 											<br>
-											<input type="password" class="form-control inputs" name="passwordValidar" id="passwordValidar">
-											<button type="submit" class="btn btn-warning botonPreValidacionEditar" name="boton" id="boton">
+											<input type="password" class="form-control inputs" name="passwordValidar" id="passwordValidar" autocomplete="password">
+											<button type="submit" class="btn btn-warning botonPreValidacionEditar">
 												<span class="textoPreValidacionEditar" id="textoPreValidacionEditar">Validar</span>
 												<div class="spinner-border text-secondary cargandoPreValidacionEditar" id="cargandoPreValidacionEditar" role="status"></div>
 											</button>
@@ -120,8 +118,8 @@
 											<br>
 											<span class="texto">Contraseña </span><i class="signo bi bi-check-circle-fill noValidado" id="iconoPassword"></i>
 											<br>
-											<input type="password" class="form-control inputs" name="password" id="password">
-											<button type="submit" class="btn btn-warning botonEditar" name="boton" id="boton">
+											<input type="password" class="form-control inputs" name="password" id="password" autocomplete="new-password">
+											<button type="submit" class="btn btn-warning botonEditar">
 												<span class="editarUsuario" id="editarUsuario">Editar usuario</span>
 												<div class="spinner-border text-secondary cargandoEditar" id="cargandoEditar" role="status"></div>
 											</button>
@@ -142,8 +140,8 @@
 											<br>
 											<span class="texto">Contraseña actual </span><i class="signo bi bi-exclamation-circle-fill noValidado" id="iconoPasswordValidarDeshabilitar" title="Campo Obligatorio"></i>
 											<br>
-											<input type="password" class="form-control inputs" name="passwordValidarDeshabilitar" id="passwordValidarDeshabilitar">
-											<button type="submit" class="btn btn-warning botonPreValidacionDeshabilitar" name="boton" id="boton">
+											<input type="password" class="form-control inputs" name="passwordValidarDeshabilitar" id="passwordValidarDeshabilitar" autocomplete="password">
+											<button type="submit" class="btn btn-warning botonPreValidacionDeshabilitar">
 												<span class="textoPreValidacionDeshabilitar" id="textoPreValidacionDeshabilitar">Validar</span>
 												<div class="spinner-border text-secondary cargandoPreValidacionDeshabilitar" id="cargandoPreValidacionDeshabilitar" role="status"></div>
 											</button>

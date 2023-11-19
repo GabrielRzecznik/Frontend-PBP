@@ -52,6 +52,7 @@ body{
 	border-radius: 100%;
 	border: 7.5px solid white;
 	background-color: rgb(241, 241, 241);
+	object-fit: cover;
 }
 
 .contenedorPortada{

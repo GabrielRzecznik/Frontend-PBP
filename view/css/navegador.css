@@ -272,6 +272,7 @@
    height: 25px;
    position: relative;
    margin-top: -2px;
+   object-fit: cover;
 }
 
 .fotoUsuarioEditar{
@@ -281,6 +282,7 @@
    height: 130px;
    border-radius: 100%;
    background-color: rgb(180, 180, 180);
+   object-fit: cover;
 }
 
 .iconoEditar{

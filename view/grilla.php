@@ -343,7 +343,7 @@
 	<script src="../model/js/ajaxEnviarNotificacion.js"></script>
 
 	<!--Datos del Profesional-->
-	<script src="../model/js/ajaxBuscarPerfil.js"></script>
+	<script src="../model/js/ajaxBuscarPorNombreUsuario.js"></script>
 
 	<!--Descargar Grilla a PDF-->
 	<script src="../controller/js/libreriaPDF.bundle.min.js"></script>
