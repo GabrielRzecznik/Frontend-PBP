@@ -20,19 +20,9 @@ function buscarUsuario(formulario){
                     }
                     localStorage.setItem("nombre", data[0]["nombre"]);
                     localStorage.setItem("apellido", data[0]["apellido"]);
-                    localStorage.setItem("fechaNacimiento", data[0]["fechaNacimiento"]);
-                    localStorage.setItem("sexo", data[0]["sexo"]);
                     localStorage.setItem("foto", data[0]["foto"]);
-                    localStorage.setItem("telefono", data[0]["telefono"]);
-                    localStorage.setItem("provincia", data[0]["provincia"]);
-                    localStorage.setItem("localidad", data[0]["localidad"]);
-                    localStorage.setItem("calle", data[0]["calle"]);
-                    localStorage.setItem("altura", data[0]["altura"]);
-                    localStorage.setItem("departamento", data[0]["departamento"]);
                     localStorage.setItem("correo", data[0]["correo"]);
                     localStorage.setItem("nombreUsuario", data[0]["nombreUsuario"]);
-                    localStorage.setItem("latitud", data[0]["latitud"]);
-                    localStorage.setItem("longitud", data[0]["longitud"]);
                     localStorage.setItem("estadoProfesional", data[0]["estadoProfesional"]);
                     //Redirigir             
                     window.location.href = "./view/inicioBusqueda.php";

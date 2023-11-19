@@ -138,7 +138,17 @@ function buscarPorNombreUsuario(nombreUsuario, acceso){
                     //Acceso externo al navegador para edición de perfil
                     $accesoPerfil = true;
                 }else{
-                    console.log("Hola!");
+                    document.getElementById('nombre').value = data[0]["nombre"];
+                    document.getElementById('apellido').value = data[0]["apellido"];
+                    document.getElementById('dni').value = data[0]["dni"];
+                    document.getElementById('fechaNacimiento').value = data[0]["fechaNacimiento"];
+                    document.getElementById('sexoPaciente').value = data[0]["sexo"];
+                    document.getElementById('telefono').value = data[0]["telefono"];
+                    document.getElementById('provincia').value = data[0]["provincia"];
+                    document.getElementById('localidad').value = data[0]["localidad"];
+                    document.getElementById('calle').value = data[0]["calle"];
+                    document.getElementById('altura').value = data[0]["altura"];
+                    document.getElementById('departamento').value = data[0]["departamento"];
                 }
                 
             }else{
@@ -147,5 +157,5 @@ function buscarPorNombreUsuario(nombreUsuario, acceso){
         }
     }
     xmlhttp.open("GET",'http://localhost/phpapp/Backend-PBP/Usuarios/buscarPorNombreUsuario/'+nombreUsuario,false);
-    xmlhttp.send();//No le mando
+    xmlhttp.send();
 }
