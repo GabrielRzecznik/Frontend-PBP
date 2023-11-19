@@ -137,8 +137,10 @@ function buscarPorNombreUsuario(nombreUsuario, acceso){
                     }
                     //Acceso externo al navegador para edición de perfil
                     $accesoPerfil = true;
+                }else{
+                    console.log("Hola!");
                 }
-                //cargarNavegador();
+                
             }else{
                 alert("¡Ocurrió un error inesperado!");
             }   

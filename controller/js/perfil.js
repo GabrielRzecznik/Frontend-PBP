@@ -14,4 +14,5 @@ botonChat.innerHTML = '<a href="../view/chats.php#'+parametro+'" class="btn btn-
 
 document.getElementById("mostrarLapiz").addEventListener("click", function() {
     alertSuperior.classList.remove('alertaError');
+    dispararFormEditarPaciente();
 });
