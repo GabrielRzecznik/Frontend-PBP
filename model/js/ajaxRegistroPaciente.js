@@ -4,9 +4,11 @@ function registrarPaciente(formulario, $latitud, $longitud){
     formData.append("latitud", $latitud);
     formData.append("longitud", $longitud);
     var archivo = inputFoto.files[0];
-    var ruta = URL.createObjectURL(archivo);
-    formData.append("foto", ruta);
-    var formJSON=JSON.stringify(Object.fromEntries(formData));
+
+    //var ruta = URL.createObjectURL(archivo);
+    formData.append("foto", archivo);
+    
+    //var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
 
@@ -27,8 +29,8 @@ function registrarPaciente(formulario, $latitud, $longitud){
         }
     }
 
-    console.log(formJSON);
+    console.log(formData);
     xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Pacientes/crearPaciente',true);
-    xmlhttp.send(formJSON);
+    xmlhttp.send(formData);
 }
 
