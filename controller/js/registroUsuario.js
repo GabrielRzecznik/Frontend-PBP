@@ -21,7 +21,7 @@ const campos = {
     password2: false
 };
 
-var inputUsuario = document.getElementById('nombreUsuario');
+var inputNombreUsuario = document.getElementById('nombreUsuario');
 var inputCorreo = document.getElementById('correo');
 var inputPassword = document.getElementById('password');
 var inputPassword2 = document.getElementById('password2');
