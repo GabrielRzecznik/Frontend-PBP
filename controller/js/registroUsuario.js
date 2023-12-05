@@ -21,7 +21,7 @@ const campos = {
     password2: false
 };
 
-var inputNombreUsuario = document.getElementById('nombreUsuario');
+var inputUsuario = document.getElementById('nombreUsuario');
 var inputCorreo = document.getElementById('correo');
 var inputPassword = document.getElementById('password');
 var inputPassword2 = document.getElementById('password2');
@@ -151,7 +151,7 @@ inputs.forEach((input) => {
 const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', (e) => {
-    const nombreUsuarioValue = inputNombreUsuario.value.trim();
+    const nombreUsuarioValue = inputUsuario.value.trim();
     const correoValue = inputCorreo.value.trim();
     const passwordValue = inputPassword.value.trim();
     const password2Value = inputPassword2.value.trim();
