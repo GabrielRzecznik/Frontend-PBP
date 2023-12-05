@@ -115,6 +115,7 @@
     </div>
 
     <script src="../controller/js/controlAcceso.js"></script>
+    <script src="../controller/js/alertaSuperior.js"></script>
     <script src="../controller/js/registroUsuario.js"></script>
     <script src="../model/js/ajaxRegistroUsuario.js"></script>
     <script src="../model/js/ajaxBuscarUsuario.js"></script>
