@@ -181,7 +181,7 @@ formulario.addEventListener('submit', (e) => {
         //Enviar AJAX
         document.getElementById('tituloBuscar').style.display = 'none';
         document.getElementById('cargandoBuscar').style.display = 'block';
-        buscarUsuarioExistente(inputCorreo.value.trim(), inputNombreUsuario.value.trim());
+        buscarUsuarioExistente(inputCorreo.value.trim(), inputUsuario.value.trim());
     }
 });
 //#endregion
