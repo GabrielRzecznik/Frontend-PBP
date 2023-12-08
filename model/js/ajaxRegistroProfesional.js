@@ -5,6 +5,7 @@ function registrarProfesional(formulario, tc, os, $latitud, $longitud){
     formData.append("latitudConsultorio", $latitud);
     formData.append("longitudConsultorio", $longitud);
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
+    formData.delete("btnradio");
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
@@ -26,6 +27,7 @@ function registrarProfesional(formulario, tc, os, $latitud, $longitud){
             }
         }
     }
+
     xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Profesionales/crearProfesional',true);
     xmlhttp.send(formJSON);
 }

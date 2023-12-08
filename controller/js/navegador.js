@@ -3,6 +3,7 @@ var instancia = "navegador";
 window.addEventListener('pageshow', function() {
     document.getElementById('mostrar').style.display = 'none';
     controlAcceso(instancia);
+    buscarEspecialidades(instancia);
 });
 
 //Mostrar Usuario

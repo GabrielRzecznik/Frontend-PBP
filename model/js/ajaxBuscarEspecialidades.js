@@ -5,6 +5,7 @@ function buscarEspecialidades(instancia){
             if (xmlhttp.status == 200) {
                 switch (instancia) {
                     case "registroProfesional":
+                    case "navegador":
                         var selEsp = document.getElementById('especialidad');
                         generarCodigoHTML();
                         buscarObrasSociales(instancia);

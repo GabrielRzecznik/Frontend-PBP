@@ -511,10 +511,10 @@
 
 					
 					
-					<strong>Duración de consultas:</strong> Debes seleccionar la duración de tus consultas.
+					<!--<strong>Duración de consultas:</strong> Debes seleccionar la duración de tus consultas.
 					<strong>Días de atención:</strong> Debes seleccionar mínimo 1 día de atención a la semana.
 					<strong>Descanso entre consultas:</strong> Debes seleccionar la duración de tus descansos entre consultas.
-					</div>
+					</div>-->
 					<!--Alerta Rango Horario Dia Desde-->
 					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertRangoHorarioDiaDesde">
 						<i class="bi bi-info-circle-fill"></i>
@@ -598,6 +598,8 @@
 		</div>
 	</div>
 	<script src="../controller/js/controlAcceso.js"></script>
+	<script src="../model/js/ajaxBuscarEspecialidades.js"></script>
+    <script src="../model/js/ajaxBuscarObrasSociales.js"></script>
 	<script src="../controller/js/alertaSuperior.js"></script>
 	<script src="../controller/js/cerrarSesion.js"></script>
 	<script src="../controller/js/editarUsuario.js"></script>

@@ -25,7 +25,7 @@ function definirGeoLocalizacion(instancia) {
           var selectedIndexLocalidad = selectLocalidadConsultorio.selectedIndex;
           var selectedTextLocalidad = selectLocalidadConsultorio.options[selectedIndexLocalidad].text;
     
-          var ubicacion = selectedTextProvincia +" "+ selectedTextLocalidad +" "+ inputCalle.value +" "+ inputAltura.value;
+          var ubicacion = selectedTextProvincia +" "+ selectedTextLocalidad +" "+ inputCalleConsultorio.value +" "+ inputAlturaConsultorio.value;
           break;
         default:
           break;

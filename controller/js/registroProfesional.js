@@ -92,8 +92,8 @@ btnNacional.addEventListener('click', function() {
     inputMatriculaNacional.value = "";
     inputMatriculaProvincial.value = "";
 
-    campos['matriculaNacional'] = false;
-    campos['matriculaProvincial'] = true;
+    campos['matriculaNacional'] = true;
+    campos['matriculaProvincial'] = false;
 });
 
 btnProvincial.addEventListener('click', function() { 
@@ -106,8 +106,8 @@ btnProvincial.addEventListener('click', function() {
     inputMatriculaNacional.value = "";
     inputMatriculaProvincial.value = "";
 
-    campos['matriculaNacional'] = true;
-    campos['matriculaProvincial'] = false;
+    campos['matriculaNacional'] = false;
+    campos['matriculaProvincial'] = true;
 });
 
 const validarFormulario = (e) => {
@@ -357,8 +357,8 @@ botonAgregar.addEventListener("click", function() {
                 botonAgregar.disabled = true;
                 selectObraSocial.disabled = true;
             }
-                
-            ObrasSocialesIngresadas.push(selectObraSocial.value); 
+            
+            ObrasSocialesIngresadas.push(opcionSeleccionada.value); 
         
             cantidadDeOS++;
 
@@ -408,11 +408,11 @@ function validarTipoConsulta() {
     if (checkConsultorio.checked === true || checkDomicilio.checked === true || checkVirtual.checked === true) {
         tiposConsultas = [];
         if (checkConsultorio.checked === true) {
-            tiposConsultas.push('Consultorio');
+            tiposConsultas.push(1);
         }if (checkDomicilio.checked === true) {
-            tiposConsultas.push('Domicilio');
+            tiposConsultas.push(2);
         }if (checkVirtual.checked === true) {
-            tiposConsultas.push('Virtual'); 
+            tiposConsultas.push(3); 
         }
         
         iconoTipoConsulta.classList.remove('bi-exclamation-circle-fill','signo','bi-x-circle-fill','noValidado');
