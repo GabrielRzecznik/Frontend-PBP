@@ -25,24 +25,24 @@
 				<b>Buscar Profesionales</b>
 				<hr>
 				<form onsubmit="event.preventDefault()" action="#" method="post" id="formularioP" enctype="multipart/form-data">
-					<b class="titulos">Seleccione especialidad:</b>
+					<b class="titulos">Seleccione la especialidad:</b>
 					<select class="form-select campos" name="especialidad" id="especialidad" aria-label="Floating label select example"></select>
-					<b class="titulos">Seleccione modalidad de consulta:</b>
+					<b class="titulos">Seleccione la modalidad de consulta:</b>
 					<select class="form-select campos titulos" name="tipoConsulta" id="tipoConsulta" aria-label="Floating label select example">
-						<option value="0" selected>Modalidad</option>
-						<option value="Consultorio">Consultorio</option>
-						<option value="Virtual">Virtual</option>
-						<option value="Domicilio">Domicilio</option>
+						<option value="0" selected="true">Modalidad de consulta</option>
+						<option value="1">Consultorio</option>
+						<option value="2">Domicilio</option>
+						<option value="3">Virtual</option>
 					</select>
-					<b class="titulos">Seleccione el sexo:</b>
+					<b class="titulos">Seleccione su sexo:</b>
 					<select class="form-select campos titulos" name="sexo" id="sexo" aria-label="Floating label select example">
-						<option value="0" selected>Sexo</option>
+						<option value="0" selected="true">Sexo</option>
 						<option value="Masculino">Masculino</option>
 						<option value="Femenino">Femenino</option>
 						<option value="X">X</option>
 					</select>
 					<b class="titulos">Seleccione la obra social de atención:</b>
-					<input type="text" class="form-control campos titulos" name="obraSocial" id="obraSocial" placeholder="Obra social" aria-label="Obra social" aria-describedby="basic-addon1">
+					<select class="form-select campos" name="obraSocial" id="obraSocial"></select>
 					<b class="titulos">Seleccione su ubicación:</b>
 					<select class="form-select campos titulos" name="ubicacion" id="ubicacion" aria-label="Floating label select example">
 						<option value="0">Ubicación actual</option>

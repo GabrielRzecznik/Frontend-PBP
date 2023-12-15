@@ -4,6 +4,11 @@ function buscarObrasSociales(instancia){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
                 switch (instancia) {
+                    case "navegador":
+                        var selObr = document.getElementById('obraSocial');
+                        generarCodigoHTML();
+                        instancia = "provinciaMatricula";
+                        break;
                     case "registroProfesional":
                         var selObr = document.getElementById('obraSocial');
                         generarCodigoHTML();
@@ -15,7 +20,11 @@ function buscarObrasSociales(instancia){
                 }
 
                 function generarCodigoHTML() {
-                    selObr.innerHTML = '<option value="0" selected="true" disabled="disabled">Seleccione las obras sociales</option>';
+                    if (instancia === "navegador") {
+                        selObr.innerHTML = '<option value="0" selected="true">Obra social</option>';
+                    }else{
+                        selObr.innerHTML = '<option value="0" selected="true" disabled="disabled">Seleccione las obras sociales</option>';
+                    }
                     
                     var data=JSON.parse(xmlhttp.responseText);
                     

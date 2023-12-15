@@ -17,7 +17,11 @@ function buscarEspecialidades(instancia){
                 function generarCodigoHTML() {
                     var data=JSON.parse(xmlhttp.responseText);
                     
-                    selEsp.innerHTML = '<option value="0" selected="true" disabled="disabled">Seleccione su especialidades</option>';
+                    if (instancia === "navegador") {
+                        selEsp.innerHTML = '<option value="0" selected="true" disabled="disabled">Especialidades</option>';
+                    }else{
+                        selEsp.innerHTML = '<option value="0" selected="true" disabled="disabled">Seleccione su especialidades</option>';
+                    }
                     
                     for (var i = 0; i < data.length; i++) {
                         selEsp.innerHTML += '<option value="'+ data[i]["id_especialidad"] +'">'+ data[i]["descripcion"] +'</option>';

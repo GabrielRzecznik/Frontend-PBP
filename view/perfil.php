@@ -62,7 +62,7 @@
 							<h5><b>Información de profesional</b></h5>
 							Especializado en <b><span id="mostrarEspecialidadPerfil"></span></b> <i class="bi bi-file-medical-fill"></i>
 							<br>
-							Matricula: <b><span id="mostrarMatriculaPerfil"></span></b>
+							<span id="mostrarMatriculaPerfil"></span>
 							<br>
 							<span id="atiendePor"></span> <b id="mostrarObrasSocialesPerfil"></b>
 							Sus formatos de consulta son <b id="mostrarTipoConsultasPerfil"></b>

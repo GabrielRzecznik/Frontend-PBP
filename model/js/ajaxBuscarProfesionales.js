@@ -19,12 +19,12 @@ function buscarProfesionales(formulario, $valorUbicacion){
         formData.append("id_profesional", localStorage.getItem("id_profesional"));
     }
     //Según ubicación
-    if ($valorUbicacion == 1) {
+    if ($valorUbicacion === "1") {
         formData.append("latitud", localStorage.getItem("latitud"));
         formData.append("longitud", localStorage.getItem("longitud"));
         var formJSON=JSON.stringify(Object.fromEntries(formData));
         realizarBusqueda(formJSON);
-    }if($valorUbicacion == 0){
+    }if($valorUbicacion === "0"){
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}})=>{
                 const coords = {
@@ -44,12 +44,13 @@ function buscarProfesionales(formulario, $valorUbicacion){
     function realizarBusqueda(formJSON) {
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {//Cuando hay cambio de estado disparo la function
-            if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Volvio respuesta
-                if (xmlhttp.status == 200) {//Volvio Bien
+            if (xmlhttp.readyState === XMLHttpRequest.DONE) {//Volvio respuesta
+                if (xmlhttp.status === 200) {//Volvio Bien
                     var data = JSON.parse(xmlhttp.responseText);
+                    console.log(data);
                     con.innerHTML = "";
 
-                    if (data == "") {
+                    if (data === "") {
                         con.innerHTML = '<i class="bi bi-file-earmark-medical centrarMensaje"> No se encontraron profesionales por su zona.</i>';
                     }
                     //Creación de cartas profesionales
@@ -75,24 +76,26 @@ function buscarProfesionales(formulario, $valorUbicacion){
                         }
 
                         //Mostrar obras sociales
-                        $transformarArray = data[i].obraSocial;
-                        $transformarArray = $transformarArray.replace(/{/,'');
-                        $transformarArray = $transformarArray.replace(/}/,'');
-                        
-                        $arrayOS =  $transformarArray.split(','); 
-                        
-                        $obrasSociales = "";
-                        $arrayOS.forEach(function(elemento) {
-                            $obrasSociales += '<span class="badge rounded-pill bg-secondary margenSO">' + elemento + '</span>';
+                        var obrasSociales = "";
+                        data[i].obraSocial.forEach(function(elemento) {
+                            obrasSociales += '<span class="badge rounded-pill bg-secondary margenSO">' + elemento + '</span>';
                         });
+                        
+                        var recorrerTipoConsulta = data[i].tipoConsulta;
+                        
+                        var tipoConsulta = '';
+                        for (var z = 0; z < recorrerTipoConsulta.length; z++) {
+                            tipoConsulta += recorrerTipoConsulta[z];
+                        
+                            if (z < recorrerTipoConsulta.length - 1) {
+                                tipoConsulta += ', ';
+                            }
+                        }
 
-                        //Mostrar tipos consulta
-                        $transformarArray2 = data[i].tipoConsulta;
-                        $transformarArray2 = $transformarArray2.replace(/{/,'');
-                        $transformarArray2 = $transformarArray2.replace(/}/,'');
-                        $tiposConsulta = $transformarArray2.split(/,/).join(', ');
+                        var pd = data[i].provincia_descripcion
+                        var ld = data[i].localidad_descripcion
 
-                        if (data[i].localidadConsultorio != "") {
+                        if (data[i].localidad_descripcion != "") {
                             //Carta Profesional Con Consultorio
                             con.innerHTML = con.innerHTML +
                             '<div class="col-lg-6 margenCarta">' +
@@ -101,33 +104,44 @@ function buscarProfesionales(formulario, $valorUbicacion){
                                         '<div class="col-6">' +
                                             '<div class="card-body">' +
                                                     '<b>' +
+                                                        '<div class="contenedorEnc">' +
+                                                        '<div class="box">' +
+                                                        '<img class="fotoProf" src="' + data[i].foto + '" alt="Imagen ' + i + '">' +
+                                                        '</div>' +
+                                                        '<div class="box nombreApellidoProfesional">' +
                                                         '<span id="mostrarNombreProfesional">' + data[i].nombre + ' </span>' +
                                                         '<span id="mostrarApellidoProfesional">' + data[i].apellido + '</span>' +
-                                                        '<br>' +
+                                                        '<br>' +  
                                                     '</b>' +		
-                                                    '<span id="mostrarProfesion col12">' + data[i].especialidad + '</span>' +
+                                                    '<span id="mostrarProfesion col12">' + data[i].especialidad_descripcion + '</span>' +
+                                                    '</div>' +
+                                                    '</div>' +
                                                     '<hr>' +							
                                                 '<div class="row">' +
                                                     '<div class="col-sm-6 infoProfesional">' +
-                                                        '<span id="mostrarProvinciaProfesional">' + data[i].provinciaConsultorio + '</span>' +
-                                                        '<br>' +
-                                                        '<span id="mostrarLocalidadProfesional">' + data[i].localidadConsultorio + '</span>' +
-                                                        '<br>' +
+                                                        '<span id="mostrarPL">' + pd + '<br></span>' +
+                                                        '<span id="mostrarPL">' + ld + '<br></span>' +
                                                         '<span id="mostrarSexoProfesional">' + data[i].sexo + '</span>' +
                                                         '<br>' +
                                                         '<span id="mostrarEdadProfesional">' + edad + ' años</span>' +
                                                         '<br>' +
-                                                        '<span class="infoProfesional">' + $tiposConsulta + '</span>' + 
+                                                        '<span id="mostrarEdadProfesional">DNI: ' + data[i].dni + '</span>' +
+                                                        '<br>' +
+                                                        '<span id="mostrarEdadProfesional">Cel: ' + data[i].telefono + '</span>' +
+                                                        '<br>' +
                                                     '</div>' +
                                                     '<div class="col-sm-6 infoProfesional">' +
-                                                        $obrasSociales +
+                                                        obrasSociales +
                                                         '<br>' +
                                                         '<span class="badge fondoDistancia bg-secondary">Consultorio' +
                                                         '<br>' +
                                                         ' a ' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
-                                                '<a href="./view/perfil.php?'+data[i].nombreUsuario+'" class="btn btn-sm btn-primary botonProfesional">Ver perfil</a>' +
+                                                '<span id="mostrarEdadProfesional">' + data[i].correo + '</span>' +
+                                                '<br>' +
+                                                '<span class="infoProfesional">' + tipoConsulta + '</span>' + 
+                                                '<a href="../view/perfil.php?'+ data[i].nombreUsuario +'" class="btn btn-sm btn-primary botonProfesional">Ver perfil</a>' +
                                             '</div>' +
                                         '</div>' +
                                         '<div class="col-6">' +
@@ -142,39 +156,52 @@ function buscarProfesionales(formulario, $valorUbicacion){
                             '<div class="col-lg-6 margenCarta">' +
                                 '<div class="card bg-light carta">' +
                                     '<div class="row">' +
-                                        '<div class="col-6">' +
+                                    '<div class="col-6">' +
                                             '<div class="card-body">' +
-                                                '<b>' +
-                                                    '<span id="mostrarNombreProfesional">' + data[i].nombre + ' </span>' +
-                                                    '<span id="mostrarApellidoProfesional">' + data[i].apellido + '</span>' +
-                                                    '<br>' +
-                                                '</b>' +		
-                                                '<span id="mostrarProfesion col12">' + data[i].especialidad + '</span>' +
-                                                '<hr>' +									
+                                                    '<b>' +
+                                                        '<div class="contenedorEnc">' +
+                                                        '<div class="box">' +
+                                                        '<img class="fotoProf" src="' + data[i].foto + '" alt="Imagen ' + i + '">' +
+                                                        '</div>' +
+                                                        '<div class="box nombreApellidoProfesional">' +
+                                                        '<span id="mostrarNombreProfesional">' + data[i].nombre + ' </span>' +
+                                                        '<span id="mostrarApellidoProfesional">' + data[i].apellido + '</span>' +
+                                                        '<br>' +  
+                                                    '</b>' +		
+                                                    '<span id="mostrarProfesion col12">' + data[i].especialidad_descripcion + '</span>' +
+                                                    '</div>' +
+                                                    '</div>' +
+                                                    '<hr>' +							
                                                 '<div class="row">' +
                                                     '<div class="col-sm-6 infoProfesional">' +
-                                                        '<span id="mostrarProvinciaProfesional">' + data[i].provincia + '</span>' +
+                                                        '<span id="mostrarProvinciaProfesional">' + data[i].provincia_descripcion + '</span>' +
                                                         '<br>' +
-                                                        '<span id="mostrarLocalidadProfesional">' + data[i].localidad + '</span>' +
+                                                        '<span id="mostrarLocalidadProfesional">' + data[i].localidad_descripcion + '</span>' +
                                                         '<br>' +
                                                         '<span id="mostrarSexoProfesional">' + data[i].sexo + '</span>' +
                                                         '<br>' +
-                                                        '<span id="mostrarEdadProfesional">' + edad + ' años</span>' +//Pasar a años
+                                                        '<span id="mostrarEdadProfesional">' + edad + ' años</span>' +
                                                         '<br>' +
-                                                        '<span class="infoProfesional">' + $tiposConsulta + '</span>' + 
+                                                        '<span id="mostrarEdadProfesional">DNI: ' + data[i].dni + '</span>' +
+                                                        '<br>' +
+                                                        '<span id="mostrarEdadProfesional">Cel: ' + data[i].telefono + '</span>' +
+                                                        '<br>' +
                                                     '</div>' +
                                                     '<div class="col-sm-6 infoProfesional">' +
-                                                        $obrasSociales +
-                                                        '<span class="badge fondoDistancia bg-secondary">Profesional' +
+                                                        obrasSociales +
+                                                        '<br>' +
+                                                        '<span class="badge fondoDistancia bg-secondary">Consultorio' +
                                                         '<br>' +
                                                         ' a ' + data[i].distancia + ' km</span>' +
                                                     '</div>' +
                                                 '</div>' +
-                                                
-                                                '<a href="./view/perfil.php?'+data[i].nombreUsuario+'" class="btn btn-sm btn-primary botonProfesional">Ver perfil</a>' +
+                                                '<span id="mostrarEdadProfesional">' + data[i].correo + '</span>' +
+                                                '<br>' +
+                                                '<span class="infoProfesional">' + tipoConsulta + '</span>' + 
+                                                '<a href="../view/perfil.php?'+ data[i].nombreUsuario +'" class="btn btn-sm btn-primary botonProfesional">Ver perfil</a>' +
                                             '</div>' +
                                         '</div>' +
-                                        '<div class="col-6">' +
+                                        '<div class="col-6 over">' +
                                             '<div class="sinMapa">' +
                                                 '<span class="textoSinMapa">' +
                                                     '<b>El profesional no cuenta<br>con consultorio.</b> ' +
@@ -187,7 +214,7 @@ function buscarProfesionales(formulario, $valorUbicacion){
                             '</div>';
                         }
 
-                        if (data[i].localidadConsultorio != "") {
+                        if (data[i].localidad_descripcion !== null) {
                             //Mostrar Mapa
                             $calleAvenida = data[i].calleConsultorio;
                             $calleAvenida = $calleAvenida.replace(/calle/,'C.');
@@ -213,31 +240,31 @@ function buscarProfesionales(formulario, $valorUbicacion){
                             
                             $altura = $altura.split(/ /).join('%20');
     
-                            $codigoPostal = "B1871";//B1871 Analizar si vale la pena incorporar segun el impacto
+                            $codigoPostal = "";
                             
-                            $localidad = data[i].localidadConsultorio;
+                            $localidad = data[i].localidad_descripcion;
                             $localidad = $localidad.split(/ /).join('%20');
     
-                            $provincia = data[i].provinciaConsultorio;//"Provincia%20Buenos%20Aires"
+                            $provincia = data[i].provincia_descripcion;//"Provincia%20Buenos%20Aires"
                             $provincia = $provincia.split(/ /).join('%20');
                             $provincia = 'Provincia%20'+$provincia;
     
-    
-                            document.getElementById('visualizarMapa'+i).innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.8724279365922!2d-58.354048612043975!3d-34.66114596650525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2s'+$calleAvenida+'%2'+$altura+'%2C%20'+$codigoPostal+'DSF%20'+$localidad+'%2C%20'+$provincia+'!5e0!3m2!1ses-419!2sar" class="mapa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-                        }
-                    }
+                            $latitudConsultorio = data[i].latitudConsultorio;
+                            $longitudConsultorio = data[i].longitudConsultorio;
 
-                    document.getElementById('tituloCargando').style.display = 'block';
-                    document.getElementById('botonCargando').style.display = 'none';
-                }if (xmlhttp.status == 401) {
-                    alert("¡No se encontron profesionales!");
-                    //Corregir error sppiner
+                            document.getElementById('visualizarMapa'+i).innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.8724279365922!2d'+$longitudConsultorio+'!3d'+$latitudConsultorio+'5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2s'+$calleAvenida+'%2'+$altura+'%2C%20'+$codigoPostal+'DSF%20'+$localidad+'%2C%20'+$provincia+'!5e0!3m2!1ses-419!2sar" class="mapa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                        }else{
+                            document.getElementById('visualizarMapa'+i).innerHTML = '<img style="width: 100%; height: 100%" src="img/mapa.jpg" alt="Descripción de la foto">'
+                        }
+                    }; /* La imagen ocupa el 100% del ancho del contenedor */
+                   
+
                     document.getElementById('tituloCargando').style.display = 'block';
                     document.getElementById('botonCargando').style.display = 'none';
                 }
             }
         }
-        console.log(formJSON);
+
         xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Profesionales/buscarProfesionales',true);
         xmlhttp.send(formJSON);
     }

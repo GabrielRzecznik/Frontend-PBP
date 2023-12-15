@@ -295,6 +295,9 @@ selectProvinciaConsultorio.addEventListener('change', (event) => {
         alertSuperior.classList.remove('alertaError');
         
         campos['provinciaConsultorio'] = true;
+
+        campos['localidadConsultorio'] = false;
+        iconoLocalidadConsultorio.classList.add('bi-exclamation-circle-fill','signo');
     }else{
         iconoProvinciaConsultorio.classList.remove('bi-check-circle-fill','validado','bi-exclamation-circle-fill','signo');
         iconoProvinciaConsultorio.classList.add('mostrar','bi-x-circle-fill','noValidado');

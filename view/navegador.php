@@ -511,21 +511,11 @@
 
 					
 					
-					<!--<strong>Duración de consultas:</strong> Debes seleccionar la duración de tus consultas.
-					<strong>Días de atención:</strong> Debes seleccionar mínimo 1 día de atención a la semana.
-					<strong>Descanso entre consultas:</strong> Debes seleccionar la duración de tus descansos entre consultas.
-					</div>-->
-					<!--Alerta Rango Horario Dia Desde-->
-					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertRangoHorarioDiaDesde">
-						<i class="bi bi-info-circle-fill"></i>
-						<strong>Rango horario de atención por día - Inicio:</strong>
-						Debes seleccionar tu horario de inicio de atención diario.
-					</div>
+					
 					<!--Alerta Rango Horario Dia Hasta-->
 					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertRangoHorarioDiaHasta">
 						<i class="bi bi-info-circle-fill"></i>
-						<strong>Rango horario de atención por día - Finalización:</strong>
-						Debes seleccionar tu horario de finalización de atención diario.
+						
 					</div>
 					<!--Alerta Nombre-->
 					<div class="alert alert-warning alert-dismissible fade show alerta" role="alert" id="alertNombre">
@@ -604,6 +594,7 @@
 	<script src="../controller/js/cerrarSesion.js"></script>
 	<script src="../controller/js/editarUsuario.js"></script>
 	<script src="../controller/js/editarPerfil.js"></script>
+	<script src="../model/js/ajaxConfigurarGrillaProfesional.js"></script>
 	<script src="../controller/js/configurarGrillaProfesional.js"></script>
 	
 	<script src="../model/js/ajaxNotificacionesNuevas.js"></script>

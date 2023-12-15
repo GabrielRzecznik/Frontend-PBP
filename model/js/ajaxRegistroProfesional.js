@@ -6,6 +6,18 @@ function registrarProfesional(formulario, tc, os, $latitud, $longitud){
     formData.append("longitudConsultorio", $longitud);
     formData.append("id_usuario", localStorage.getItem("id_usuario"));
     formData.delete("btnradio");
+    
+    if (provinciaMatricula.value === "0") {
+        formData.append("provinciaMatricula", 0);
+    }
+
+    if (selectProvinciaConsultorio.value === "") {
+        formData.append("calleConsultorio", "");
+        formData.append("alturaConsultorio", "");
+        formData.append("departamentoConsultorio", "");
+        formData.append("provinciaConsultorio", 0);
+        formData.append("localidadConsultorio", 0);
+    }
     var formJSON=JSON.stringify(Object.fromEntries(formData));
 
     xmlhttp = new XMLHttpRequest();
@@ -28,6 +40,7 @@ function registrarProfesional(formulario, tc, os, $latitud, $longitud){
         }
     }
 
+    console.log(formJSON);
     xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Profesionales/crearProfesional',true);
     xmlhttp.send(formJSON);
 }

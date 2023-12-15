@@ -1,9 +1,12 @@
 var instancia = "navegador";
+var rutaActual = window.location.pathname;
 
 window.addEventListener('pageshow', function() {
     document.getElementById('mostrar').style.display = 'none';
     controlAcceso(instancia);
-    buscarEspecialidades(instancia);
+    if (rutaActual === "/phpapp/Frontend-PBP/view/inicioBusqueda.php") {
+        buscarEspecialidades(instancia);
+    }
 });
 
 //Mostrar Usuario

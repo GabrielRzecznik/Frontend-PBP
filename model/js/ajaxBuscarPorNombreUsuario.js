@@ -60,39 +60,57 @@ function buscarPorNombreUsuario(nombreUsuario, acceso){
                             document.getElementById('contenedorUsuario').style.height = '130px';
                         }
                         document.getElementById('infoProfesional').style.display = 'block';
-                        document.getElementById('mostrarEspecialidadPerfil').innerHTML = data[0]["especialidad"];
-                        document.getElementById('mostrarMatriculaPerfil').innerHTML = data[0]["matricula"] + ' <a href="https://sistemas.ms.gba.gov.ar/consultamatric/" target="_blank" class="interrogacion"">Corroborar validez <i class="bi bi-file-earmark-medical-fill"></i></a>';
+                        document.getElementById('mostrarEspecialidadPerfil').innerHTML = data[0]["especialidad_descripcion"];
+                        
+                        document.getElementById('mostrarMatriculaPerfil').innerHTML = "";
+
+                        if (data[0]["matriculaNacional"] !== undefined) {
+                            document.getElementById('mostrarMatriculaPerfil').innerHTML += "Matricula Nacional: <b>" + data[0]["matriculaNacional"] + "</b>";
+                        }
+
+                        if (data[0]["matriculaProvincial"] !== undefined) {
+                            document.getElementById('mostrarMatriculaPerfil').innerHTML += "<br>Matricula Provincial: <b>" + data[0]["matriculaProvincial"] + "</b>";
+                            document.getElementById('mostrarMatriculaPerfil').innerHTML += " de <b>" + data[0]["provinciaMatricula"] + "</b>";
+                        }
+                        
                         //Mostrar obras sociales
-                        if (data[0].obraSocial != "{}") {
-                            $transformarArray = data[0].obraSocial;
-                            $transformarArray = $transformarArray.replace(/{/,'');
-                            $transformarArray = $transformarArray.replace(/}/,'');
-                            var obrasSociales =  $transformarArray.split(/,/).join(', ');
+                        if (data[0].obraSocial != "") {
+                            var obrasSociales = "";
+                            data[0].obraSocial.forEach(function(elemento) {
+                                obrasSociales += '<span class="badge rounded-pill bg-secondary margenSO">' + elemento + '</span>';
+                            });
                             
                             document.getElementById('atiendePor').innerHTML = 'Atiende por';
                             document.getElementById('mostrarObrasSocialesPerfil').innerHTML = obrasSociales + '<br>';
                         }
 
                         //Mostrar tipo de consultas
-                        $transformarArray2 = data[0].tipoConsulta;
-                        $transformarArray2 = $transformarArray2.replace(/{/,'');
-                        $transformarArray2 = $transformarArray2.replace(/}/,'');
-                        var tipoConsultas =  $transformarArray2.split(/,/).join(', '); 
-                        document.getElementById('mostrarTipoConsultasPerfil').innerHTML = tipoConsultas;
+                        var recorrerTipoConsulta = data[0].tipoConsulta;
+                        
+                        var tipoConsulta = '';
+                        for (var z = 0; z < recorrerTipoConsulta.length; z++) {
+                            tipoConsulta += recorrerTipoConsulta[z];
+                        
+                            if (z < recorrerTipoConsulta.length - 1) {
+                                tipoConsulta += ', ';
+                            }
+                        }
+
+                        document.getElementById('mostrarTipoConsultasPerfil').innerHTML = tipoConsulta;
                         
                         //datos Profesional consultorio
-                        if(data[0]["provinciaConsultorio"] != ""){
-                            document.getElementById('mostrarProvinciaConsultorioPerfil').innerHTML = data[0]["provinciaConsultorio"];
-                            document.getElementById('mostrarLocalidadConsultorioPerfil').innerHTML = data[0]["localidadConsultorio"];
-                            document.getElementById('mostrarCalleConsultorioPerfil').innerHTML = data[0]["calleConsultorio"];
-                            document.getElementById('mostrarAlturaConsultorioPerfil').innerHTML = data[0]["alturaConsultorio"];
+                        if(data[0]["provinciaConsultorio"] !== ""){
+                            document.getElementById('mostrarProvinciaConsultorioPerfil').innerHTML = "Provincia: <b>" + data[0]["provincia_descripcion"] + "</b>";
+                            document.getElementById('mostrarLocalidadConsultorioPerfil').innerHTML = "Localidad: <b>" + data[0]["localidad_descripcion"] + "</b>";
+                            document.getElementById('mostrarCalleConsultorioPerfil').innerHTML = "Calle/Av.: <b>" + data[0]["calleConsultorio"] + "</b>";
+                            document.getElementById('mostrarAlturaConsultorioPerfil').innerHTML = "<b>" + data[0]["alturaConsultorio"] + "</b>";
                             if (data[0]["departamentoConsultorio"] != ""){
-                                document.getElementById('mostrarDepartamentoConsultorioPerfil').innerHTML = data[0]["departamentoConsultorio"];
+                                document.getElementById('mostrarDepartamentoConsultorioPerfil').innerHTML = "Depto: <b>" + data[0]["departamentoConsultorio"] + "</b>";
                             }
                         }
 
                         //Mostrar Mapa Portada
-                        if (data[0].localidadConsultorio != "") {
+                        if (data[0].localidadConsultorio !== "" && data[0].localidadConsultorio !== null) {
                             document.getElementById('informacionConsultorio').style.display = 'block';
                             //Mostrar Mapa
                             $calleAvenida = data[0].calleConsultorio;
@@ -121,14 +139,17 @@ function buscarPorNombreUsuario(nombreUsuario, acceso){
         
                             $codigoPostal = "B1871";//B1871 Analizar si vale la pena incorporar segun el impacto
                             
-                            $localidad = data[0].localidadConsultorio;
+                            $localidad = data[0].localidad_descripcion;
                             $localidad = $localidad.split(/ /).join('%20');
         
-                            $provincia = data[0].provinciaConsultorio;//"Provincia%20Buenos%20Aires"
+                            $provincia = data[0].provincia_descripcion;//"Provincia%20Buenos%20Aires"
                             $provincia = $provincia.split(/ /).join('%20');
                             $provincia = 'Provincia%20'+$provincia;
         
-                            document.getElementById('visualizarMapa').innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.8724279365922!2d-58.354048612043975!3d-34.66114596650525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2s'+$calleAvenida+'%2'+$altura+'%2C%20'+$codigoPostal+'DSF%20'+$localidad+'%2C%20'+$provincia+'!5e0!3m2!1ses-419!2sar" class="mapaPortada" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                            $latitudConsultorio = data[0].latitudConsultorio;
+                            $longitudConsultorio = data[0].longitudConsultorio;
+
+                            document.getElementById('visualizarMapa').innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.8724279365922!2d'+$longitudConsultorio+'!3d'+$latitudConsultorio+'5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s!2s'+$calleAvenida+'%2'+$altura+'%2C%20'+$codigoPostal+'DSF%20'+$localidad+'%2C%20'+$provincia+'!5e0!3m2!1ses-419!2sar" class="mapaPortada" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
                         }else{
                             document.getElementById('visualizarMapa').innerHTML = '<img  class="mapaPortada fotoPortada" src="../view/img/portadaSinConsultorio.jpg" alt="No se pudo cargar la portada">';
                         }

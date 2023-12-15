@@ -151,3 +151,29 @@ body{
 	margin-top: 3px;
 	border-radius: 10px;
 }
+
+.fotoProf {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+}
+
+.nombreApellidoProfesional{
+	margin-left: 10px;
+}
+
+.contenedorEnc{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.box{
+	flex: 1;
+  	margin: 5px;
+  	box-sizing: border-box;
+}
+
+.over{
+	overflow: hidden;
+}

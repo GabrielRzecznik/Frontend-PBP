@@ -8,46 +8,32 @@ function buscarDatosProfesionalCrearSolicitud(id_profesional){
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             if (xmlhttp.status == 200) {
-                data=JSON.parse(xmlhttp.responseText);
-                
-                var obraSocial = data["obraSocial"];
-                var tipoConsulta = data["tipoConsulta"];
+                data = JSON.parse(xmlhttp.responseText);
 
-                //Mostrar obras sociales  
+                // Mostrar obras sociales  
                 selectObraSocial.innerHTML = '<option value="Particular (Ninguna)" selected>Particular (Ninguna)</option>';
                 
-                if (data["obraSocial"] != "{}") {
-                    $transformarArray = obraSocial;
-                    $transformarArray = $transformarArray.replace(/{/,'');
-                    $transformarArray = $transformarArray.replace(/}/,'');
-                    
-                    var arrayOS =  $transformarArray.split(','); 
-                    
-                    
-                    //Estaba por acá
-                    arrayOS.forEach(function(elemento) {
-                        selectObraSocial.innerHTML += '<option value="' + elemento + '">' + elemento + '</option>';  
+                for (var i = 0; i < data.length; i++) {
+                    // Mostrar obras sociales
+                    if (data[i]["obraSocial"].length > 0) {
+                        data[i].obraSocial.forEach(function(elemento) {
+                            selectObraSocial.innerHTML += '<option value="' + elemento + '">' + elemento + '</option>';
+                        });
+                    }
+                
+                    // Mostrar tipos consultas
+                    selectTipoConsulta.innerHTML = '';  // Limpia el contenido antes de agregar opciones
+                
+                    data[i]["tipoConsulta"].forEach(function(elemento) {
+                        selectTipoConsulta.innerHTML += '<option value="' + elemento + '">' + elemento + '</option>';
                     });
                 }
-
-                //Mostrar tipos de consulta
-                $transformarArray = tipoConsulta;
-                $transformarArray = $transformarArray.replace(/{/,'');
-                $transformarArray = $transformarArray.replace(/}/,'');
-                
-                var arrayTC =  $transformarArray.split(','); 
-                
-                selectTipoConsulta.innerHTML = '';
-                
-                //Estaba por acá
-                arrayTC.forEach(function(elemento) {
-                    selectTipoConsulta.innerHTML += '<option value="' + elemento + '">' + elemento + '</option>';  
-                });
             }else{
                 alert("¡Ocurrio un error inesperado al traer ciertos datos del profesional!");
             }
         }
     }
+
     xmlhttp.open("POST",'http://localhost/phpapp/Backend-PBP/Profesionales/buscarDatosProfesionalCrearSolicitud',true);
     xmlhttp.send(formJSON);
 }
