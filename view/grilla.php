@@ -148,7 +148,7 @@
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-cancelar-solicitud">Atrás</span>
-					<span class="btn btn-warning botonEnviarSolicitud" data-dismiss="modal" id="cancelar-solicitud">Confirmar</span>
+					<span class="btn btn-warning botonEnviarSolicitud" data-dismiss="modal" id="cancelar-solicitud">Cancelar solicitud</span>
 				</div>             
 			</div>
 		</div>
@@ -175,7 +175,7 @@
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-cancelar-horario">Atrás</span>
-					<button class="btn btn-warning botonEnviarHorario" data-dismiss="modal" id="cancelar-horario">Confirmar</button>
+					<button class="btn btn-warning botonEnviarHorario" data-dismiss="modal" id="cancelar-horario">Deshabilitar</button>
 				</div>             
 			</div>
 		</div>
@@ -271,7 +271,7 @@
 				</div>
 				<div class="modal-footer">
 					<span class="btn btn-secondary" id="cancelar-cancelar-turno">Atrás</span>
-					<span class="btn btn-danger botonEnviarTurno" data-dismiss="modal" id="cancelar-turno">Confirmar</span>
+					<span class="btn btn-danger botonEnviarTurno" data-dismiss="modal" id="cancelar-turno">Cancelar turno</span>
 				</div>             
 			</div>
 		</div>
